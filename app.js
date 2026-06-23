@@ -474,6 +474,39 @@ function renderContentNotDownloaded(patchMeta) {
     const [year, month] = patchMeta.id.split('-');
     const autoUrl = `https://overwatch.blizzard.com/en-us/news/patch-notes/live/${year}/${month}`;
 
+    const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+
+    let actionHtml = '';
+    if (isStaticMode) {
+        actionHtml = `
+            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: var(--radius-sm); max-width: 550px; margin-left: auto; margin-right: auto;">
+                <p style="margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-2); line-height: 1.6;">
+                    El raspado automático y la descarga en vivo requieren ejecutar el servidor Node.js local. 
+                    En esta versión estática (GitHub Pages), solo se pueden visualizar los parches ya descargados.
+                </p>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                    Para descargar nuevos meses, clona el repositorio y ejecuta localmente:<br>
+                    <code style="display: inline-block; background: var(--bg-2); padding: 0.25rem 0.5rem; border-radius: 4px; margin-top: 0.5rem; font-family: monospace; color: var(--orange-light); font-size: 0.8rem;">npm install && npm start</code>
+                </p>
+            </div>
+        `;
+    } else {
+        actionHtml = `
+            <div style="margin-top: 1rem;">
+                <p style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem;">
+                    Se descargará y procesará automáticamente desde: <br>
+                    <a href="${autoUrl}" target="_blank" style="color: var(--accent-blue);">${autoUrl}</a>
+                </p>
+                <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+                    <button id="scrape-custom-btn" class="role-btn active" style="flex-shrink: 0; padding: 0.75rem 1.5rem;">
+                        <span class="role-dot" style="background:var(--accent-blue)"></span>
+                        📥 Descargar y procesar
+                    </button>
+                </div>
+            </div>
+        `;
+    }
+
     dom.content.innerHTML = `
         <div class="patch-header-card">
             <div class="patch-version-badge">
@@ -487,20 +520,11 @@ function renderContentNotDownloaded(patchMeta) {
             <div class="empty-section-icon">🌐</div>
             <div class="empty-section-title">Descargar Notas de Parche</div>
             <div class="empty-section-desc" style="max-width: 500px; margin: 0.5rem auto 1.5rem auto;">
-                Este parche se puede descargar automáticamente desde la URL oficial de Blizzard:
+                ${isStaticMode 
+                    ? 'La visualización de este parche requiere que haya sido descargado previamente en el repositorio.' 
+                    : 'Este parche se puede descargar automáticamente desde la URL oficial de Blizzard:'}
             </div>
-            <div style="margin-top: 1rem;">
-                <p style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem;">
-                    Se descargará y procesará automáticamente desde: <br>
-                    <a href="${autoUrl}" target="_blank" style="color: var(--accent-blue);">${autoUrl}</a>
-                </p>
-                <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
-                    <button id="scrape-custom-btn" class="role-btn active" style="flex-shrink: 0; padding: 0.75rem 1.5rem;">
-                        <span class="role-dot" style="background:var(--accent-blue)"></span>
-                        📥 Descargar y procesar
-                    </button>
-                </div>
-            </div>
+            ${actionHtml}
         </div>
     `;
 
@@ -774,6 +798,11 @@ async function init(skipLoadingPatch = false) {
         skipLoadingPatch = false;
     }
     initScrollProgress();
+
+    const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+    if (isStaticMode && dom.refreshBtn) {
+        dom.refreshBtn.style.display = 'none';
+    }
 
     try {
         // Load patches index

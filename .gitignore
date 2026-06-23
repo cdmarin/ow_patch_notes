@@ -1,0 +1,13 @@
+# Dependencias de Node
+scraper/node_modules/
+
+# Archivos temporales de scraping
+data/test_patch/
+
+# Logs y archivos de sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
