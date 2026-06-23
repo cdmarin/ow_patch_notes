@@ -206,7 +206,7 @@ function renderSidebar(patchData) {
         btn.innerHTML = `
             <span class="tab-icon">${sec.icon}</span>
             ${sec.label}
-            ${!hasContent ? '<span style="margin-left:auto;font-size:0.65rem;opacity:0.5">Pronto</span>' : ''}
+            ${!hasContent ? '<span style="margin-left:auto;font-size:0.65rem;opacity:0.5">Sin datos</span>' : ''}
         `;
         btn.onclick = () => switchSection(sec.id);
         sectionGroup.appendChild(btn);
@@ -520,9 +520,9 @@ function renderContentNotDownloaded(patchMeta) {
             <div class="empty-section-icon">🌐</div>
             <div class="empty-section-title">Descargar Notas de Parche</div>
             <div class="empty-section-desc" style="max-width: 500px; margin: 0.5rem auto 1.5rem auto;">
-                ${isStaticMode 
-                    ? 'La visualización de este parche requiere que haya sido descargado previamente en el repositorio.' 
-                    : 'Este parche se puede descargar automáticamente desde la URL oficial de Blizzard:'}
+                ${isStaticMode
+            ? 'La visualización de este parche requiere que haya sido descargado previamente en el repositorio.'
+            : 'Este parche se puede descargar automáticamente desde la URL oficial de Blizzard:'}
             </div>
             ${actionHtml}
         </div>
@@ -814,7 +814,7 @@ async function init(skipLoadingPatch = false) {
 
         // Construir allPatches a partir de los parches descargados
         const allPatches = [];
-        
+
         // Agregar los descargados
         state.patches.forEach(p => {
             allPatches.push({ ...p, isDownloaded: true });
@@ -896,7 +896,7 @@ async function init(skipLoadingPatch = false) {
                 if (data.success) {
                     console.log('[App] Raspado exitoso. Recargando datos en la interfaz...');
                     if (data.stdout) console.log(data.stdout);
-                    
+
                     // Recargar el index y luego volver a cargar el parche actual
                     const currentPatchId = state.currentPatch?.date || dom.patchSelect.value;
                     await init(true); // Recargar index sin reiniciar la UI al primer parche
