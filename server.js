@@ -60,10 +60,10 @@ const server = http.createServer((req, res) => {
         }
 
         console.log(`[Server] Ejecutando scraper con argumentos: ${args.join(' ') || '(ninguno)'}`);
-        
+
         const cmd = `node scraper.js ${args.join(' ')}`;
         const scraperDir = path.join(PUBLIC_DIR, 'scraper');
-        
+
         const child = exec(cmd, { cwd: scraperDir }, (error, stdout, stderr) => {
             if (error) {
                 console.error(`[Server] Error al ejecutar el scraper: ${error.message}`);
@@ -71,7 +71,7 @@ const server = http.createServer((req, res) => {
                 res.end(JSON.stringify({ success: false, error: error.message, stderr }));
                 return;
             }
-            
+
             console.log(`[Server] Scraper finalizado con éxito.`);
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ success: true, stdout }));
@@ -119,7 +119,7 @@ const server = http.createServer((req, res) => {
 
 function startServer(p) {
     server.listen(p, () => {
-        console.log(`\n🚀 Servidor de Overwatch 2 Patch Notes listo en http://localhost:${p}`);
+        console.log(`\n🚀 Servidor de Overwatch Patch Notes listo en http://localhost:${p}`);
         console.log(`Presiona Ctrl+C para detenerlo.\n`);
     });
 }

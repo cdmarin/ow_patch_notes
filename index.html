@@ -1,98 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overwatch 2 — Notas de Parche</title>
-    <meta name="description" content="Notas de parche de Overwatch 2 con visualización premium. Stadium, juego base, héroes y más.">
-    <meta property="og:title" content="Overwatch 2 — Notas de Parche">
+    <title>Overwatch — Notas de Parche</title>
+    <meta name="description"
+        content="Notas de parche de Overwatch con visualización premium. Stadium, juego base, héroes y más.">
+    <meta property="og:title" content="Overwatch — Notas de Parche">
     <meta property="og:description" content="Visualización premium de los parches de OW2">
 
-    <!-- Favicon OW2 -->
+    <!-- Favicon Overwatch-->
     <link rel="icon" href="logo.svg">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Scroll Progress Bar -->
-<div id="progress-bar" role="progressbar" aria-label="Progreso de lectura"></div>
+    <!-- Scroll Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Progreso de lectura"></div>
 
-<!-- Loading Overlay -->
-<div id="loading-overlay" role="status" aria-live="polite">
-    <img 
-        class="loader-logo" 
-        src="logo.svg"
-        alt="Overwatch 2"
-    >
-    <div class="loader-text">Cargando parche...</div>
-    <div class="loader-bar">
-        <div class="loader-bar-inner"></div>
-    </div>
-</div>
-
-<!-- Header -->
-<header role="banner">
-    <div class="header-brand">
-        <img 
-            class="header-logo" 
-            src="logo.svg"
-            alt="Overwatch 2 Logo"
-        >
-        <span class="header-title">OW2 Patch Notes</span>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" role="status" aria-live="polite">
+        <img class="loader-logo" src="logo.svg" alt="Overwatch">
+        <div class="loader-text">Cargando parche...</div>
+        <div class="loader-bar">
+            <div class="loader-bar-inner"></div>
+        </div>
     </div>
 
-    <!-- Patch Selector -->
-    <div class="patch-selector-wrap">
-        <span class="patch-label">Parche</span>
-        <select id="patch-select" aria-label="Seleccionar parche">
-            <option>Cargando...</option>
-        </select>
-        <button id="refresh-btn" class="refresh-btn" title="Refrescar datos de la sección activa"><span class="refresh-icon">🔄</span></button>
+    <!-- Header -->
+    <header role="banner">
+        <div class="header-brand">
+            <img class="header-logo" src="logo.svg" alt="Overwatch Logo">
+            <span class="header-title">Overwatch Patch Notes</span>
+        </div>
+
+        <!-- Patch Selector -->
+        <div class="patch-selector-wrap">
+            <span class="patch-label">Parche</span>
+            <select id="patch-select" aria-label="Seleccionar parche">
+                <option>Cargando...</option>
+            </select>
+            <button id="refresh-btn" class="refresh-btn" title="Refrescar datos de la sección activa"><span
+                    class="refresh-icon">🔄</span></button>
+        </div>
+
+        <!-- Search -->
+        <div class="search-wrap" role="search">
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input id="search-input" type="search" placeholder="Buscar héroe..." autocomplete="off"
+                aria-label="Buscar héroe">
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-wrap" role="group" aria-label="Filtrar por tipo de cambio">
+            <button class="filter-chip" data-filter="buff" id="filter-buff" aria-pressed="false">
+                <span>⬆</span> Buff
+            </button>
+            <button class="filter-chip" data-filter="nerf" id="filter-nerf" aria-pressed="false">
+                <span>⬇</span> Nerf
+            </button>
+            <button class="filter-chip" data-filter="new" id="filter-new" aria-pressed="false">
+                <span>✦</span> Nuevo
+            </button>
+            <button class="filter-chip" data-filter="rework" id="filter-rework" aria-pressed="false">
+                <span>↻</span> Rework
+            </button>
+        </div>
+    </header>
+
+    <!-- App Layout -->
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navegación de secciones">
+            <!-- Injected by app.js -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content" id="content" role="main">
+            <!-- Injected by app.js -->
+        </main>
     </div>
 
-    <!-- Search -->
-    <div class="search-wrap" role="search">
-        <span class="search-icon" aria-hidden="true">🔍</span>
-        <input 
-            id="search-input" 
-            type="search" 
-            placeholder="Buscar héroe..." 
-            autocomplete="off"
-            aria-label="Buscar héroe"
-        >
-    </div>
-
-    <!-- Filters -->
-    <div class="filter-wrap" role="group" aria-label="Filtrar por tipo de cambio">
-        <button class="filter-chip" data-filter="buff" id="filter-buff" aria-pressed="false">
-            <span>⬆</span> Buff
-        </button>
-        <button class="filter-chip" data-filter="nerf" id="filter-nerf" aria-pressed="false">
-            <span>⬇</span> Nerf
-        </button>
-        <button class="filter-chip" data-filter="new" id="filter-new" aria-pressed="false">
-            <span>✦</span> Nuevo
-        </button>
-        <button class="filter-chip" data-filter="rework" id="filter-rework" aria-pressed="false">
-            <span>↻</span> Rework
-        </button>
-    </div>
-</header>
-
-<!-- App Layout -->
-<div class="app-layout">
-    <!-- Sidebar -->
-    <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navegación de secciones">
-        <!-- Injected by app.js -->
-    </nav>
-
-    <!-- Main Content -->
-    <main class="content" id="content" role="main">
-        <!-- Injected by app.js -->
-    </main>
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

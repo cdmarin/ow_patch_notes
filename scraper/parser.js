@@ -1,7 +1,7 @@
 /**
  * parser.js — Parser de HTML de Blizzard → JSON estructurado
  * 
- * Parsea la página de patch notes de Overwatch 2:
+ * Parsea la página de patch notes de Overwatch:
  * https://overwatch.blizzard.com/en-us/news/patch-notes/
  * 
  * La estructura HTML de Blizzard puede cambiar en cualquier momento.
@@ -20,7 +20,7 @@ const CHANGE_TYPE_KEYWORDS = {
 
 // Palabras clave de contexto que invierten la lógica buff/nerf
 const NEGATIVE_CONTEXT_KEYWORDS = [
-    'cooldown', 'cost', 'delay', 'degeneration', 'spread', 'recoil', 
+    'cooldown', 'cost', 'delay', 'degeneration', 'spread', 'recoil',
     'penalty', 'charge required', 'reload time', 'recovery', 'cast time',
     'lock-on time'
 ];
@@ -32,18 +32,18 @@ const NEGATIVE_CONTEXT_KEYWORDS = [
  */
 function detectChangeType(text) {
     const lower = text.toLowerCase();
-    
+
     // 1. Absolutos: Rework y New
     if (CHANGE_TYPE_KEYWORDS.rework.some(k => lower.includes(k))) return 'rework';
     if (CHANGE_TYPE_KEYWORDS.new.some(k => lower.includes(k))) return 'new';
-    
+
     // 2. Buffs y Nerfs
     const isBuff = CHANGE_TYPE_KEYWORDS.buff.some(k => lower.includes(k));
     const isNerf = CHANGE_TYPE_KEYWORDS.nerf.some(k => lower.includes(k));
     const hasNegativeContext = NEGATIVE_CONTEXT_KEYWORDS.some(k => lower.includes(k));
-    
+
     if (isBuff && isNerf) return 'adjust'; // Conflicto
-    
+
     // 3. Invertir lógica si es un atributo negativo (ej: reducción de enfriamiento = buff)
     if (hasNegativeContext) {
         if (isNerf) return 'buff'; // "reduced" + "cooldown" = buff
@@ -52,7 +52,7 @@ function detectChangeType(text) {
         if (isBuff) return 'buff';
         if (isNerf) return 'nerf';
     }
-    
+
     return 'adjust'; // Tipo por defecto
 }
 
@@ -90,14 +90,14 @@ function parseSections($, container) {
         'mauga': 'Tanque', 'orisa': 'Tanque', 'ramattra': 'Tanque', 'reinhardt': 'Tanque', 'roadhog': 'Tanque',
         'sigma': 'Tanque', 'winston': 'Tanque', 'wrecking ball': 'Tanque', 'wrecking-ball': 'Tanque', 'zarya': 'Tanque',
         'hazard': 'Tanque', 'domina': 'Tanque',
-        
+
         // Damage
         'ashe': 'Daño', 'bastion': 'Daño', 'cassidy': 'Daño', 'echo': 'Daño', 'genji': 'Daño',
         'hanzo': 'Daño', 'junkrat': 'Daño', 'mei': 'Daño', 'pharah': 'Daño', 'reaper': 'Daño',
         'sojourn': 'Daño', 'soldier: 76': 'Daño', 'soldier-76': 'Daño', 'sombra': 'Daño', 'symmetra': 'Daño',
         'torbjörn': 'Daño', 'torbjorn': 'Daño', 'tracer': 'Daño', 'widowmaker': 'Daño', 'venture': 'Daño',
         'freja': 'Daño', 'vendetta': 'Daño', 'sierra': 'Daño', 'emre': 'Daño',
-        
+
         // Support
         'ana': 'Apoyo', 'baptiste': 'Apoyo', 'brigitte': 'Apoyo', 'illari': 'Apoyo', 'juno': 'Apoyo',
         'kiriko': 'Apoyo', 'lifeweaver': 'Apoyo', 'lúcio': 'Apoyo', 'lucio': 'Apoyo', 'mercy': 'Apoyo',
@@ -106,7 +106,7 @@ function parseSections($, container) {
     };
 
     const sections = container ? container.find('.PatchNotes-section') : $('.PatchNotes-section');
-    
+
     sections.each((i, el) => {
         const $el = $(el);
         const isGeneric = $el.hasClass('PatchNotes-section-generic_update');
@@ -147,7 +147,7 @@ function parseSections($, container) {
                         data.stadium.generalItems.push(item);
                     }
                 });
-                
+
                 if (data.stadium.generalItems.length === 0) {
                     descContainer.find('> ul > li').each((j, li) => {
                         const $li = $(li);
@@ -214,12 +214,12 @@ function parseHeroElement($, $hero) {
         portrait: portrait || null,
         changes: []
     };
-    
+
     // General / Perk updates
     const generalUpdatesContainer = $hero.find('.PatchNotesHeroUpdate-generalUpdates');
     if (generalUpdatesContainer.length > 0) {
         const hasParagraphs = generalUpdatesContainer.children('p').length > 0;
-        
+
         if (hasParagraphs) {
             // New sibling-based structure: <p>Title</p> followed by <ul><li>Detail</li></ul>
             let currentTitle = '';
@@ -233,7 +233,7 @@ function parseHeroElement($, $hero) {
                         const text = $(liEl).text().trim();
                         if (text) details.push(text);
                     });
-                    
+
                     if (currentTitle || details.length > 0) {
                         hero.changes.push({
                             title: currentTitle || (details.length > 0 ? details[0] : 'General'),
@@ -258,15 +258,15 @@ function parseHeroElement($, $hero) {
                 const $li = $(li);
                 let title = $li.contents().not('ul').text().trim();
                 title = title.replace(/[-:]$/, '').trim();
-                
+
                 const details = [];
                 $li.find('ul li').each((j, detailLi) => {
-                     const detailText = $(detailLi).text().trim();
-                     if (detailText) details.push(detailText);
+                    const detailText = $(detailLi).text().trim();
+                    if (detailText) details.push(detailText);
                 });
-                
+
                 if (!title && details.length === 0) {
-                     title = $li.text().trim();
+                    title = $li.text().trim();
                 }
 
                 if (title || details.length > 0) {
@@ -321,11 +321,11 @@ function parseVersion($, container) {
  * @returns {string|null}
  */
 function parseDateFromTitle(title) {
-    const months = { 
-        january:1, february:2, march:3, april:4, may:5, june:6, 
-        july:7, august:8, september:9, october:10, november:11, december:12,
-        enero:1, febrero:2, marzo:3, abril:4, mayo:5, junio:6,
-        julio:7, agosto:8, septiembre:9, octubre:10, noviembre:11, diciembre:12
+    const months = {
+        january: 1, february: 2, march: 3, april: 4, may: 5, june: 6,
+        july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
+        enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
+        julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12
     };
     const match = title.match(/\b(january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(\d{1,2}),?\s+(\d{4})/i);
     if (match) {
@@ -346,7 +346,7 @@ function parseDateFromTitle(title) {
 function parseHTML(html, defaultDate) {
     const $ = cheerio.load(html);
     const patches = [];
-    
+
     const patchElements = $('.PatchNotes-patch');
     if (patchElements.length > 0) {
         patchElements.each((i, patchEl) => {
@@ -354,10 +354,10 @@ function parseHTML(html, defaultDate) {
             const title = $patch.find('.PatchNotes-patchTitle, h3, h4').first().text().trim();
             const date = parseDateFromTitle(title) || defaultDate || new Date().toISOString().split('T')[0];
             const version = parseVersion($, $patch);
-            
+
             console.log(`🏟️  Parseando patch de fecha: ${date} (${title})...`);
             const sectionsData = parseSections($, $patch);
-            
+
             patches.push({
                 version,
                 date,
@@ -378,7 +378,7 @@ function parseHTML(html, defaultDate) {
             sections: sectionsData
         });
     }
-    
+
     return patches;
 }
 
@@ -387,7 +387,7 @@ function parseHTML(html, defaultDate) {
  */
 function formatDateDay(dateStr) {
     if (!dateStr) return 'Parche';
-    const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     const [year, month, day] = dateStr.split('-');
     return `${day ? parseInt(day, 10) + ' de ' : ''}${months[parseInt(month, 10) - 1]} ${year}`;
 }

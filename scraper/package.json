@@ -1,7 +1,7 @@
 {
   "name": "ow-patch-scraper",
   "version": "1.0.0",
-  "description": "Scraper de patch notes de Overwatch 2 con traducción automática via LibreTranslate",
+  "description": "Scraper de patch notes de Overwatch con traducción automática via LibreTranslate",
   "main": "scraper.js",
   "scripts": {
     "start": "node ../server.js",

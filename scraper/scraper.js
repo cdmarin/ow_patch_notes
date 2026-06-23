@@ -1,5 +1,5 @@
 /**
- * scraper.js — Scraper principal de notas de parche de Overwatch 2
+ * scraper.js — Scraper principal de notas de parche de Overwatch
  * 
  * Uso:
  *   node scraper.js                    → Descarga el parche más reciente
@@ -86,17 +86,17 @@ function extractLatestPatchDate($) {
     if (dateMatch) {
         return `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
     }
-    
+
     // Intentar extraer del texto de la página
     const bodyText = $('body').text();
     const bodyDateMatch = bodyText.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+(\d{4})\b/i);
     if (bodyDateMatch) {
-        const months = { january:1,february:2,march:3,april:4,may:5,june:6,july:7,august:8,september:9,october:10,november:11,december:12 };
+        const months = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12 };
         const month = months[bodyDateMatch[1].toLowerCase()];
         const year = bodyDateMatch[2];
-        return `${year}-${String(month).padStart(2,'0')}-01`;
+        return `${year}-${String(month).padStart(2, '0')}-01`;
     }
-    
+
     // Fallback: fecha actual
     return new Date().toISOString().split('T')[0];
 }
@@ -106,14 +106,14 @@ function extractLatestPatchDate($) {
  */
 async function updatePatchesIndex(patchMeta) {
     let index = { patches: [] };
-    
+
     if (await fs.pathExists(PATCHES_INDEX)) {
         index = await fs.readJson(PATCHES_INDEX);
     }
-    
+
     // Marcar todos como no-latest inicialmente
     index.patches = index.patches.map(p => ({ ...p, isLatest: false }));
-    
+
     // Verificar si ya existe
     const existingIdx = index.patches.findIndex(p => p.id === patchMeta.id);
     if (existingIdx >= 0) {
@@ -121,15 +121,15 @@ async function updatePatchesIndex(patchMeta) {
     } else {
         index.patches.unshift(patchMeta);
     }
-    
+
     // Ordenar por fecha descendente
     index.patches.sort((a, b) => b.date.localeCompare(a.date));
-    
+
     // Establecer el primero como el último (isLatest: true)
     if (index.patches.length > 0) {
         index.patches[0].isLatest = true;
     }
-    
+
     await fs.writeJson(PATCHES_INDEX, index, { spaces: 2 });
     log(`Índice actualizado: ${index.patches.length} parches`, 'success');
 }
@@ -147,20 +147,20 @@ async function main() {
         .option('output', { type: 'string', description: 'Directorio de salida personalizado' })
         .help()
         .argv;
-    
+
     const targetUrl = argv.url || BLIZZARD_PATCH_NOTES_URL;
     const translate = argv.translate;
     const skipStadium = argv.stadium === false;
     const skipGeneral = argv.general === false;
-    
-    console.log('\n🎮 Overwatch 2 Patch Notes Scraper');
+
+    console.log('\n🎮 Overwatch Patch Notes Scraper');
     console.log('================================\n');
-    
+
     try {
         // 1. Descargar HTML
         log('Paso 1/5: Descargando página de Blizzard...');
         const html = await fetchPatchPage(targetUrl);
-        
+
         // 2. Parsear HTML
         log('Paso 2/5: Parseando HTML...');
         const $ = cheerio.load(html);
@@ -172,21 +172,21 @@ async function main() {
         } else {
             defaultPatchDate = extractLatestPatchDate($);
         }
-        
+
         const patches = parseHTML(html, defaultPatchDate);
         log(`Se detectaron ${patches.length} parches en el documento.`, 'success');
-        
+
         // Procesar cada parche
         for (let i = 0; i < patches.length; i++) {
             const patchData = patches[i];
             const patchId = getPatchId(patchData.date);
-            
+
             console.log(`\n--------------------------------------------------`);
             log(`Procesando parche ${i + 1}/${patches.length}: ${patchId} (v${patchData.version})`);
-            
+
             const outputDir = argv.output || getPatchDir(patchId);
             const patchJsonPath = path.join(outputDir, 'patch.json');
-            
+
             let existingPatchData = null;
             if (await fs.pathExists(patchJsonPath)) {
                 try {
@@ -196,7 +196,7 @@ async function main() {
                     log(`No se pudo leer el archivo existente: ${err.message}`, 'warn');
                 }
             }
-            
+
             if (skipStadium) {
                 log('Ignorando cambios de Stadium por petición (--no-stadium). Preservando anteriores...', 'info');
                 if (existingPatchData && existingPatchData.sections && existingPatchData.sections.stadium) {
@@ -205,7 +205,7 @@ async function main() {
                     patchData.sections.stadium = { intro: 'Sección omitida por petición.', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] };
                 }
             }
-            
+
             if (skipGeneral) {
                 log('Ignorando cambios de Juego Base (General) por petición (--no-general). Preservando anteriores...', 'info');
                 if (existingPatchData && existingPatchData.sections) {
@@ -220,9 +220,9 @@ async function main() {
                     patchData.sections.bugFixes = [];
                 }
             }
-            
+
             const alreadyTranslated = !argv.force && existingPatchData && existingPatchData.translated;
-            
+
             // 3. Traducir (opcional)
             if (translate) {
                 if (alreadyTranslated) {
@@ -232,7 +232,7 @@ async function main() {
                 } else {
                     log('Traduciendo al español...');
                     await initTranslator();
-                    
+
                     try {
                         if (!skipStadium) {
                             patchData.sections.stadium = await translateSection(patchData.sections.stadium);
@@ -253,31 +253,31 @@ async function main() {
             } else {
                 log('Traducción desactivada (--no-translate)');
             }
-            
+
             // 4. Guardar archivos
             log('Guardando archivos de datos...');
             await fs.ensureDir(outputDir);
-            
+
             // patch.json
             await fs.writeJson(patchJsonPath, patchData, { spaces: 2 });
             log(`Guardado: ${patchJsonPath}`, 'success');
-            
+
             // meta.json
-            const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+            const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
             const [year, month, day] = patchData.date.split('-');
             const metaData = {
                 version: patchData.version,
                 date: patchData.date,
-                title: `Actualización del ${parseInt(day, 10)} de ${months[parseInt(month, 10)-1]} ${year}`,
-                subtitle: 'Notas de parche oficiales de Overwatch 2',
+                title: `Actualización del ${parseInt(day, 10)} de ${months[parseInt(month, 10) - 1]} ${year}`,
+                subtitle: 'Notas de parche oficiales de Overwatch',
                 url: targetUrl,
                 season: 'Temporada actual'
             };
-            
+
             const metaJsonPath = path.join(outputDir, 'meta.json');
             await fs.writeJson(metaJsonPath, metaData, { spaces: 2 });
             log(`Guardado: ${metaJsonPath}`, 'success');
-            
+
             // 5. Actualizar índice
             log('Actualizando índice de parches...');
             await updatePatchesIndex({
@@ -286,10 +286,10 @@ async function main() {
                 dataPath: `data/patches/${patchId}/patch.json`
             });
         }
-        
+
         console.log('\n🎉 ¡Proceso de scraping finalizado exitosamente!');
         console.log('\nAhora puedes abrir index.html en el navegador para ver los cambios.\n');
-        
+
     } catch (error) {
         log(`Error fatal: ${error.message}`, 'error');
         if (process.env.DEBUG) {
