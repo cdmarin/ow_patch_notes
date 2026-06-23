@@ -1,0 +1,158 @@
+{
+  "patches": [
+    {
+      "id": "2026-06-18",
+      "version": "unknown",
+      "date": "2026-06-18",
+      "title": "Actualización del 18 de Junio 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-06-18/patch.json",
+      "isLatest": true
+    },
+    {
+      "id": "2026-06-16",
+      "version": "unknown",
+      "date": "2026-06-16",
+      "title": "Actualización del 16 de Junio 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-06-16/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-05-26",
+      "version": "unknown",
+      "date": "2026-05-26",
+      "title": "Actualización del 26 de Mayo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/05",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-05-26/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-05-21",
+      "version": "unknown",
+      "date": "2026-05-21",
+      "title": "Actualización del 21 de Mayo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/05",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-05-21/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-05-14",
+      "version": "unknown",
+      "date": "2026-05-14",
+      "title": "Actualización del 14 de Mayo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/05",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-05-14/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-05-12",
+      "version": "unknown",
+      "date": "2026-05-12",
+      "title": "Actualización del 12 de Mayo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/05",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-05-12/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-04-28",
+      "version": "unknown",
+      "date": "2026-04-28",
+      "title": "Actualización del 28 de Abril 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/04",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-04-28/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-04-23",
+      "version": "unknown",
+      "date": "2026-04-23",
+      "title": "Actualización del 23 de Abril 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/04",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-04-23/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-04-17",
+      "version": "unknown",
+      "date": "2026-04-17",
+      "title": "Actualización del 17 de Abril 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/04",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-04-17/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-04-14",
+      "version": "unknown",
+      "date": "2026-04-14",
+      "title": "Actualización del 14 de Abril 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/04",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-04-14/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-04-01",
+      "version": "unknown",
+      "date": "2026-04-01",
+      "title": "Actualización del 1 de Abril 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/04",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-04-01/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-03-31",
+      "version": "unknown",
+      "date": "2026-03-31",
+      "title": "Actualización del 31 de Marzo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/03",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-03-31/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-03-12",
+      "version": "unknown",
+      "date": "2026-03-12",
+      "title": "Actualización del 12 de Marzo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/03",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-03-12/patch.json",
+      "isLatest": false
+    },
+    {
+      "id": "2026-03-10",
+      "version": "unknown",
+      "date": "2026-03-10",
+      "title": "Actualización del 10 de Marzo 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch 2",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/03",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-03-10/patch.json",
+      "isLatest": false
+    }
+  ]
+}

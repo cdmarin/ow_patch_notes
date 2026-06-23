@@ -1,0 +1,33 @@
+{
+  "version": "unknown",
+  "date": "2026-05-26",
+  "title": "Actualización del 26 de Mayo 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema que impedía a los usuarios seleccionar múltiples opciones de moneda en la tienda.",
+      "Se solucionó un problema que calculaba incorrectamente las estadísticas de Junker Queen en los elogios posteriores al partido.",
+      "Se solucionó un problema con el cálculo del tiempo restante en el Pase de batalla.",
+      "Se solucionó un problema por el cual los objetivos de Nano Boost no veían el VFX apropiado."
+    ]
+  },
+  "translated": true
+}

@@ -1,0 +1,31 @@
+{
+  "version": "unknown",
+  "date": "2026-03-12",
+  "title": "Actualización del 12 de Marzo 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Este es un parche de corrección de errores. Los códigos de repetición del parche del 10 de marzo de 2026 todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema que provocaba que el tiempo de reutilización de la ventaja Garras de gato Jetpack fuera de 8 segundos en lugar de los 6 segundos previstos.",
+      "Se solucionó un problema que causaba que algunos derribos o tirones tuvieran distancias reducidas."
+    ]
+  },
+  "translated": true
+}

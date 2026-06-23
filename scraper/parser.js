@@ -1,0 +1,395 @@
+/**
+ * parser.js — Parser de HTML de Blizzard → JSON estructurado
+ * 
+ * Parsea la página de patch notes de Overwatch 2:
+ * https://overwatch.blizzard.com/en-us/news/patch-notes/
+ * 
+ * La estructura HTML de Blizzard puede cambiar en cualquier momento.
+ * Si el scraper deja de funcionar, probablemente sea por esto.
+ */
+
+const cheerio = require('cheerio');
+
+// Palabras clave para clasificar el tipo de cambio automáticamente
+const CHANGE_TYPE_KEYWORDS = {
+    nerf: ['decreased', 'reduced', 'removed', 'no longer', 'lowered', 'nerfed', 'eliminated', 'deleted'],
+    buff: ['increased', 'improved', 'added', 'bonus', 'enhanced', 'boosted', 'buffed', 'now grants'],
+    new: ['new:', 'new ability', 'new power', 'new item', 'now:', 'introducing'],
+    rework: ['reworked', 'redesigned', 'overhauled', 'changed to', 'now functions', 'reformado', 'now:']
+};
+
+// Palabras clave de contexto que invierten la lógica buff/nerf
+const NEGATIVE_CONTEXT_KEYWORDS = [
+    'cooldown', 'cost', 'delay', 'degeneration', 'spread', 'recoil', 
+    'penalty', 'charge required', 'reload time', 'recovery', 'cast time',
+    'lock-on time'
+];
+
+/**
+ * Detecta el tipo de cambio basado en el texto.
+ * @param {string} text - Texto del cambio
+ * @returns {'buff'|'nerf'|'new'|'rework'|'adjust'} - Tipo de cambio
+ */
+function detectChangeType(text) {
+    const lower = text.toLowerCase();
+    
+    // 1. Absolutos: Rework y New
+    if (CHANGE_TYPE_KEYWORDS.rework.some(k => lower.includes(k))) return 'rework';
+    if (CHANGE_TYPE_KEYWORDS.new.some(k => lower.includes(k))) return 'new';
+    
+    // 2. Buffs y Nerfs
+    const isBuff = CHANGE_TYPE_KEYWORDS.buff.some(k => lower.includes(k));
+    const isNerf = CHANGE_TYPE_KEYWORDS.nerf.some(k => lower.includes(k));
+    const hasNegativeContext = NEGATIVE_CONTEXT_KEYWORDS.some(k => lower.includes(k));
+    
+    if (isBuff && isNerf) return 'adjust'; // Conflicto
+    
+    // 3. Invertir lógica si es un atributo negativo (ej: reducción de enfriamiento = buff)
+    if (hasNegativeContext) {
+        if (isNerf) return 'buff'; // "reduced" + "cooldown" = buff
+        if (isBuff) return 'nerf'; // "increased" + "cooldown" = nerf
+    } else {
+        if (isBuff) return 'buff';
+        if (isNerf) return 'nerf';
+    }
+    
+    return 'adjust'; // Tipo por defecto
+}
+
+/**
+ * Parsea las secciones del HTML secuencialmente.
+ * @param {CheerioAPI} $ - Instancia de Cheerio
+ * @returns {Object} - Datos de las diferentes secciones
+ */
+/**
+ * Parsea las secciones del HTML secuencialmente para un contenedor específico (un parche o todo el documento).
+ * @param {CheerioAPI} $ - Instancia de Cheerio
+ * @param {Cheerio} [container] - Contenedor del parche específico (si lo hay)
+ * @returns {Object} - Datos de las diferentes secciones
+ */
+function parseSections($, container) {
+    const data = {
+        stadium: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
+        gameBase: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] } },
+        maps: [],
+        system: [],
+        bugFixes: []
+    };
+
+    let currentContext = 'gameBase';
+
+    const roleMap = {
+        'tank': 'Tanque',
+        'damage': 'Daño',
+        'support': 'Apoyo'
+    };
+
+    const HERO_ROLE_MAP = {
+        // Tanks
+        'd.va': 'Tanque', 'dva': 'Tanque', 'doomfist': 'Tanque', 'junker queen': 'Tanque', 'junker-queen': 'Tanque',
+        'mauga': 'Tanque', 'orisa': 'Tanque', 'ramattra': 'Tanque', 'reinhardt': 'Tanque', 'roadhog': 'Tanque',
+        'sigma': 'Tanque', 'winston': 'Tanque', 'wrecking ball': 'Tanque', 'wrecking-ball': 'Tanque', 'zarya': 'Tanque',
+        'hazard': 'Tanque', 'domina': 'Tanque',
+        
+        // Damage
+        'ashe': 'Daño', 'bastion': 'Daño', 'cassidy': 'Daño', 'echo': 'Daño', 'genji': 'Daño',
+        'hanzo': 'Daño', 'junkrat': 'Daño', 'mei': 'Daño', 'pharah': 'Daño', 'reaper': 'Daño',
+        'sojourn': 'Daño', 'soldier: 76': 'Daño', 'soldier-76': 'Daño', 'sombra': 'Daño', 'symmetra': 'Daño',
+        'torbjörn': 'Daño', 'torbjorn': 'Daño', 'tracer': 'Daño', 'widowmaker': 'Daño', 'venture': 'Daño',
+        'freja': 'Daño', 'vendetta': 'Daño', 'sierra': 'Daño', 'emre': 'Daño',
+        
+        // Support
+        'ana': 'Apoyo', 'baptiste': 'Apoyo', 'brigitte': 'Apoyo', 'illari': 'Apoyo', 'juno': 'Apoyo',
+        'kiriko': 'Apoyo', 'lifeweaver': 'Apoyo', 'lúcio': 'Apoyo', 'lucio': 'Apoyo', 'mercy': 'Apoyo',
+        'moira': 'Apoyo', 'zenyatta': 'Apoyo', 'jetpack cat': 'Apoyo', 'jetpack-cat': 'Apoyo',
+        'wuyang': 'Apoyo', 'anran': 'Apoyo', 'mizuki': 'Apoyo', 'shion': 'Apoyo'
+    };
+
+    const sections = container ? container.find('.PatchNotes-section') : $('.PatchNotes-section');
+    
+    sections.each((i, el) => {
+        const $el = $(el);
+        const isGeneric = $el.hasClass('PatchNotes-section-generic_update');
+        const isHero = $el.hasClass('PatchNotes-section-hero_update');
+        const title = $el.find('h4.PatchNotes-sectionTitle').first().text().trim();
+        const titleLower = title.toLowerCase();
+
+        // Actualizar contexto basado en el título del encabezado (sin importar si es generic o hero)
+        if (titleLower.includes('bug fix') || titleLower.includes('bugfix')) {
+            currentContext = 'bugFixes';
+        } else if (titleLower.includes('stadium')) {
+            if (titleLower.includes('item')) {
+                currentContext = 'stadiumGeneral';
+            } else {
+                currentContext = 'stadium';
+            }
+        } else if (titleLower.includes('hero update') || titleLower.includes('balance update') || titleLower.includes('hotfix update')) {
+            currentContext = 'gameBase';
+        } else if (titleLower.includes('map update')) {
+            currentContext = 'maps';
+        }
+
+        if (isGeneric) {
+            const descContainer = $el.find('.PatchNotesGeneralUpdate-description, .PatchNotes-sectionDescription');
+            if (currentContext === 'stadium') {
+                data.stadium.intro = descContainer.text().trim();
+            } else if (currentContext === 'gameBase') {
+                data.gameBase.intro = descContainer.text().trim();
+            } else if (currentContext === 'bugFixes') {
+                descContainer.find('li').each((j, li) => {
+                    const text = $(li).text().trim();
+                    if (text) data.bugFixes.push(text);
+                });
+            } else if (currentContext === 'stadiumGeneral') {
+                $el.find('.PatchNotesHeroUpdate').each((j, heroEl) => {
+                    const item = parseHeroElement($, $(heroEl));
+                    if (item && item.name) {
+                        data.stadium.generalItems.push(item);
+                    }
+                });
+                
+                if (data.stadium.generalItems.length === 0) {
+                    descContainer.find('> ul > li').each((j, li) => {
+                        const $li = $(li);
+                        const hasUl = $li.find('ul').length > 0;
+                        if (hasUl) {
+                            const itemName = $li.contents().not('ul').text().trim().replace(/^-/, '').trim();
+                            const details = [];
+                            $li.find('ul li').each((k, detailLi) => details.push($(detailLi).text().trim()));
+                            if (itemName) {
+                                data.stadium.generalItems.push({
+                                    name: itemName,
+                                    changes: [{ title: itemName, type: 'adjust', details }]
+                                });
+                            }
+                        }
+                    });
+                }
+            }
+        } else if (isHero) {
+            const roleKey = titleLower; // "tank", "damage", "support"
+            const parsedRole = roleMap[roleKey];
+
+            $el.find('.PatchNotesHeroUpdate').each((j, heroEl) => {
+                const hero = parseHeroElement($, $(heroEl));
+                if (hero && hero.name) {
+                    // Determinar rol usando nuestro diccionario estricto
+                    const matchedRole = HERO_ROLE_MAP[hero.name.toLowerCase().trim()];
+                    const role = matchedRole || parsedRole || 'Daño';
+
+                    // Si no estamos en un contexto válido de héroes, inferir por el título
+                    let destContext = currentContext;
+                    if (destContext !== 'stadium' && destContext !== 'stadiumGeneral' && destContext !== 'gameBase') {
+                        if (titleLower.includes('stadium')) {
+                            destContext = 'stadium';
+                        } else {
+                            destContext = 'gameBase';
+                        }
+                    }
+
+                    if (destContext === 'stadium' || destContext === 'stadiumGeneral') {
+                        data.stadium.roles[role].push(hero);
+                    } else {
+                        data.gameBase.roles[role].push(hero);
+                    }
+                }
+            });
+        }
+    });
+
+    return data;
+}
+
+/**
+ * Parsea un elemento de héroe genérico.
+ * @param {CheerioAPI} $ 
+ * @param {Cheerio} $hero 
+ * @returns {Object} - Datos del héroe
+ */
+function parseHeroElement($, $hero) {
+    const portrait = $hero.find('.PatchNotesHeroUpdate-icon').first().attr('src');
+    const hero = {
+        name: $hero.find('.PatchNotesHeroUpdate-name').first().text().trim(),
+        desc: $hero.find('.PatchNotesHeroUpdate-dev').first().text().trim(),
+        portrait: portrait || null,
+        changes: []
+    };
+    
+    // General / Perk updates
+    const generalUpdatesContainer = $hero.find('.PatchNotesHeroUpdate-generalUpdates');
+    if (generalUpdatesContainer.length > 0) {
+        const hasParagraphs = generalUpdatesContainer.children('p').length > 0;
+        
+        if (hasParagraphs) {
+            // New sibling-based structure: <p>Title</p> followed by <ul><li>Detail</li></ul>
+            let currentTitle = '';
+            generalUpdatesContainer.children().each((idx, childEl) => {
+                const $child = $(childEl);
+                if ($child.is('p')) {
+                    currentTitle = $child.text().trim();
+                } else if ($child.is('ul')) {
+                    const details = [];
+                    $child.find('li').each((liIdx, liEl) => {
+                        const text = $(liEl).text().trim();
+                        if (text) details.push(text);
+                    });
+                    
+                    if (currentTitle || details.length > 0) {
+                        hero.changes.push({
+                            title: currentTitle || (details.length > 0 ? details[0] : 'General'),
+                            type: detectChangeType(currentTitle + ' ' + details.join(' ')),
+                            details: details.length > 0 ? details : [currentTitle]
+                        });
+                        currentTitle = ''; // consumed
+                    }
+                }
+            });
+            // If any leftover title
+            if (currentTitle) {
+                hero.changes.push({
+                    title: currentTitle,
+                    type: detectChangeType(currentTitle),
+                    details: [currentTitle]
+                });
+            }
+        } else {
+            // Old nested structure: ul > li > ul > li
+            generalUpdatesContainer.find('> ul > li').each((i, li) => {
+                const $li = $(li);
+                let title = $li.contents().not('ul').text().trim();
+                title = title.replace(/[-:]$/, '').trim();
+                
+                const details = [];
+                $li.find('ul li').each((j, detailLi) => {
+                     const detailText = $(detailLi).text().trim();
+                     if (detailText) details.push(detailText);
+                });
+                
+                if (!title && details.length === 0) {
+                     title = $li.text().trim();
+                }
+
+                if (title || details.length > 0) {
+                    hero.changes.push({
+                        title: title || (details.length > 0 ? details[0] : 'General'),
+                        type: detectChangeType(title + ' ' + details.join(' ')),
+                        details: details.length > 0 ? details : [title]
+                    });
+                }
+            });
+        }
+    }
+
+    // Ability updates
+    $hero.find('.PatchNotesAbilityUpdate').each((i, abilityEl) => {
+        const $ability = $(abilityEl);
+        const title = $ability.find('.PatchNotesAbilityUpdate-name').first().text().trim();
+        const details = [];
+        $ability.find('.PatchNotesAbilityUpdate-detailList ul li').each((j, detailLi) => {
+            const detailText = $(detailLi).text().trim();
+            if (detailText) details.push(detailText);
+        });
+
+        if (title || details.length > 0) {
+            hero.changes.push({
+                title: title || (details.length > 0 ? details[0] : 'Ability'),
+                type: detectChangeType(title + ' ' + details.join(' ')),
+                details: details.length > 0 ? details : [title]
+            });
+        }
+    });
+
+    return hero;
+}
+
+/**
+ * Extrae la versión del parche del HTML de forma acotada.
+ * @param {CheerioAPI} $ 
+ * @param {Cheerio} [container] - Contenedor del parche
+ * @returns {string} - Versión del parche
+ */
+function parseVersion($, container) {
+    const context = container || $('body');
+    const versionText = context.find('.patch-version, .PatchNotes-patchTitle, h1, h2, h3, h4').text() || $('title').text();
+    const match = versionText.match(/\d+\.\d+\.\d+/);
+    return match ? match[0] : 'unknown';
+}
+
+/**
+ * Extrae la fecha del parche desde el título del parche en formato YYYY-MM-DD.
+ * @param {string} title 
+ * @returns {string|null}
+ */
+function parseDateFromTitle(title) {
+    const months = { 
+        january:1, february:2, march:3, april:4, may:5, june:6, 
+        july:7, august:8, september:9, october:10, november:11, december:12,
+        enero:1, febrero:2, marzo:3, abril:4, mayo:5, junio:6,
+        julio:7, agosto:8, septiembre:9, octubre:10, noviembre:11, diciembre:12
+    };
+    const match = title.match(/\b(january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(\d{1,2}),?\s+(\d{4})/i);
+    if (match) {
+        const month = months[match[1].toLowerCase()];
+        const day = match[2].padStart(2, '0');
+        const year = match[3];
+        return `${year}-${String(month).padStart(2, '0')}-${day}`;
+    }
+    return null;
+}
+
+/**
+ * Función principal de parseo. Devuelve un array de parches encontrados en el HTML.
+ * @param {string} html - HTML de la página de Blizzard
+ * @param {string} [defaultDate] - Fecha por defecto
+ * @returns {Array<Object>} - Lista de objetos de parche
+ */
+function parseHTML(html, defaultDate) {
+    const $ = cheerio.load(html);
+    const patches = [];
+    
+    const patchElements = $('.PatchNotes-patch');
+    if (patchElements.length > 0) {
+        patchElements.each((i, patchEl) => {
+            const $patch = $(patchEl);
+            const title = $patch.find('.PatchNotes-patchTitle, h3, h4').first().text().trim();
+            const date = parseDateFromTitle(title) || defaultDate || new Date().toISOString().split('T')[0];
+            const version = parseVersion($, $patch);
+            
+            console.log(`🏟️  Parseando patch de fecha: ${date} (${title})...`);
+            const sectionsData = parseSections($, $patch);
+            
+            patches.push({
+                version,
+                date,
+                title: `Actualización del ${formatDateDay(date)}`,
+                sections: sectionsData
+            });
+        });
+    } else {
+        // Fallback: tratar toda la página como un solo parche
+        const date = defaultDate || new Date().toISOString().split('T')[0];
+        const version = parseVersion($);
+        console.log(`🏟️  Fallback: Parseando toda la página como un solo parche para fecha ${date}...`);
+        const sectionsData = parseSections($);
+        patches.push({
+            version,
+            date,
+            title: `Actualización del ${formatDateDay(date)}`,
+            sections: sectionsData
+        });
+    }
+    
+    return patches;
+}
+
+/**
+ * Formatea una fecha YYYY-MM-DD para mostrar día y mes en español.
+ */
+function formatDateDay(dateStr) {
+    if (!dateStr) return 'Parche';
+    const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const [year, month, day] = dateStr.split('-');
+    return `${day ? parseInt(day, 10) + ' de ' : ''}${months[parseInt(month, 10) - 1]} ${year}`;
+}
+
+module.exports = { parseHTML, detectChangeType };

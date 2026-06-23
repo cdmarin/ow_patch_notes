@@ -1,0 +1,1126 @@
+{
+  "version": "unknown",
+  "date": "2026-04-01",
+  "title": "Actualización del 1 de Abril 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "No mucho, ¿qué te pasa? De todos modos, descubrimos una nueva versión de Overwatch 5v5 después de accionar algunos interruptores y derribar parte del piso de la oficina. Lo llamamos 'Underwatch' porque lo encontramos debajo del piso y te permitimos jugarlo en Arcade. Pero ahora estamos en un aprieto porque golpeamos una línea de flotación y se está derramando sobre los escritorios de la gente. Por favor, prueba Underwatch para que valga la pena destrozar el suelo, porque ahora mismo se ve bastante mal: el agua me ha llegado a los tobillos. ¡Incluso hay algunos desafíos y recompensas especiales! Alguien vendrá a reparar las tuberías el 13 de abril, así que tendrás hasta entonces para probarlo.\n¿Consíguelo? ¿Subyacente? De todos modos, el agua ya me ha subido hasta la cintura y me han dicho que la única forma de reducirla es desactivando las ventajas en Underwatch. Espero que lo entiendas.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Va",
+            "desc": "D.Va se ha dado cuenta de que los micromisiles son demasiado pequeños, así que ¿por qué no los misiles gigantes?",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "Micromisiles",
+                "type": "adjust",
+                "details": [
+                  "Ahora dispara dos misiles gigantes de lento movimiento que explotan en un área más grande."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Domina",
+            "desc": "Domina ha asignado a los ingenieros de Vishkar la tarea de mostrar adecuadamente de lo que es capaz su tecnología: ¡formas divertidas!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/18e16658d096071a232fa4e11d1f2c968469c0f433a9ac41c5ca0ece87403e5a.png",
+            "changes": [
+              {
+                "title": "Matriz de barrera",
+                "type": "adjust",
+                "details": [
+                  "Seleccionará aleatoriamente una de las muchas configuraciones de Barrier Array predeterminadas.",
+                  "La salud del panel de barrera aumentó en 50.",
+                  "El tiempo de reutilización se redujo a 7 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Doomfist",
+            "desc": "Por alguna razón, Doomfist se tomó sorprendentemente personalmente ser usurpado como jefe de Talon, arrojado por una ventana y traicionado por antiguos aliados.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "Doomfist puede ver a todos los miembros activos de Talon a través de las paredes.",
+                "type": "adjust",
+                "details": [
+                  "Doomfist puede ver a todos los miembros activos de Talon a través de las paredes."
+                ]
+              },
+              {
+                "title": "Doomfist inflige y recibe un 50% más de daño de los miembros activos de Talon.",
+                "type": "adjust",
+                "details": [
+                  "Doomfist inflige y recibe un 50% más de daño de los miembros activos de Talon."
+                ]
+              },
+              {
+                "title": "Miembros activos de Talon: Vendetta, Emre, Sigma, Moira, Mauga, Freja.",
+                "type": "adjust",
+                "details": [
+                  "Miembros activos de Talon: Vendetta, Emre, Sigma, Moira, Mauga, Freja."
+                ]
+              },
+              {
+                "title": "Golpe de cohete",
+                "type": "nerf",
+                "details": [
+                  "El cargo se puede mantener indefinidamente.",
+                  "La velocidad de movimiento ya no se reduce cuando la carga se mantiene durante el tiempo suficiente."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hazard",
+            "desc": "Phreak Phuel",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "Pared irregular",
+                "type": "buff",
+                "details": [
+                  "Ya no dispara un proyectil que genera paredes.",
+                  "En cambio, Hazard se mejora a sí mismo durante 5 segundos, aumentando considerablemente su velocidad de ataque, velocidad de recarga, velocidad de movimiento, velocidad de enfriamiento y velocidad de salto.",
+                  "El tiempo de reutilización se redujo a 8 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "El ingenio infinito de Junkertown presenta: una escopeta llena de cuchillos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "pistola de dispersión",
+                "type": "adjust",
+                "details": [
+                  "Ahora dispara 7 cuchillos en lugar de balas."
+                ]
+              },
+              {
+                "title": "Hoja dentada",
+                "type": "adjust",
+                "details": [
+                  "Ahora lanza una escopeta normal en lugar de un cuchillo.",
+                  "Al empalar a un enemigo, la escopeta dispara al enemigo.",
+                  "Después de recordar, la escopeta dispara a tu punto de mira cuando Junker Queen la atrapa."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "¡Mauga está en llamas! ¡Todos están en llamas!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Invadir",
+                "type": "adjust",
+                "details": [
+                  "El exceso puede durar para siempre.",
+                  "Usar Overrun durante demasiado tiempo enciende a Mauga en llamas.",
+                  "Mientras estás en llamas por Overrun, chocar con enemigos les prende fuego."
+                ]
+              },
+              {
+                "title": "Sobremarcha cardiaca",
+                "type": "adjust",
+                "details": [
+                  "Ahora hace que las ametralladoras de Mauga disparen gotas de lava, que explotan e prenden fuego instantáneamente a los enemigos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "¡Sí, rodeo!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "Jabalina de energía",
+                "type": "adjust",
+                "details": [
+                  "Ahora lanza a Orisa en la dirección en la que se lanza la jabalina."
+                ]
+              },
+              {
+                "title": "Oleada de tierra",
+                "type": "nerf",
+                "details": [
+                  "Mientras carga Terra Surge, Orisa asciende hacia el cielo y puede moverse.",
+                  "Al desatar Terra Surge, Orisa se estrella contra el suelo debajo de ella, provocando su daño al impactar.",
+                  "Ya no otorga sobresalud.",
+                  "Daño máximo reducido a 400."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "Presentamos: ¡Ramattra! ¡El espectáculo único!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "La salud aumentó de 425 a 500.",
+                "type": "buff",
+                "details": [
+                  "La salud aumentó de 425 a 500."
+                ]
+              },
+              {
+                "title": "La armadura aumentó de 100 a 500.",
+                "type": "buff",
+                "details": [
+                  "La armadura aumentó de 100 a 500."
+                ]
+              },
+              {
+                "title": "Ramattra ahora está permanentemente anti-curado.",
+                "type": "adjust",
+                "details": [
+                  "Ramattra ahora está permanentemente anti-curado."
+                ]
+              },
+              {
+                "title": "Vórtice voraz",
+                "type": "adjust",
+                "details": [
+                  "Ravenous Vortex ahora cura a Ramattra por un 250% del daño infligido (sin pasar por anticuración)."
+                ]
+              },
+              {
+                "title": "Aniquilación",
+                "type": "adjust",
+                "details": [
+                  "La aniquilación ahora cura a Ramattra por el 100% del daño infligido (sin pasar por la anticuración).",
+                  "La aniquilación aplica anticuración a los enemigos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reinhardt",
+            "desc": "En su apogeo, Reinhardt fue nombrado \"rey de los bolos\" en su bolera local.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d7938a2e3629b8ba9982f32f0a6c2a9e4a342912d90cb1b93145d100d300458.png",
+            "changes": [
+              {
+                "title": "Cargar",
+                "type": "buff",
+                "details": [
+                  "La carga puede inmovilizar a varios enemigos a la vez.",
+                  "Mantener hacia adelante o hacia atrás acelera o ralentiza la velocidad de Charge.",
+                  "La duración de la carga aumentó de 3 segundos a 10 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Roadhog",
+            "desc": "¡Déjalo enganchar!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Gancho de cadena",
+                "type": "buff",
+                "details": [
+                  "Hook ya no atrae a los enemigos.",
+                  "Ahora ralentiza, piratea, anticura, quema y revela al enemigo enganchado durante 3 segundos.",
+                  "El tiempo de reutilización se redujo de 6 segundos a 4,5 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sigma",
+            "desc": "Sigma te va a mostrar su colección de rock, ¡y será mejor que seas amable!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/416f312608ac1d9f34509883daa0fa9486b15ceb112e4440b4c412e125390517.png",
+            "changes": [
+              {
+                "title": "Acreción",
+                "type": "adjust",
+                "details": [
+                  "Ahora dispara una andanada de escopeta de pequeñas piedras.",
+                  "Tiene 2 cargas."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Winston no está disponible actualmente debido a una reunión especial en Horizon Lunar Colony.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "Winston ha sido discapacitado.",
+                "type": "adjust",
+                "details": [
+                  "Winston ha sido discapacitado."
+                ]
+              },
+              {
+                "title": "En serio, no puedes jugar como Winston.",
+                "type": "adjust",
+                "details": [
+                  "En serio, no puedes jugar como Winston."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wrecking Ball",
+            "desc": "\"¿¡¿A QUIÉN LLAMAS 'PEQUEÑO DEMOSTRANDO'?!?\"",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
+            "changes": [
+              {
+                "title": "Rollo",
+                "type": "nerf",
+                "details": [
+                  "Aumenta considerablemente el tamaño de Wrecking Ball.",
+                  "Wrecking Ball es imparable y recibe un 30% menos de daño durante Roll, pero se mueve significativamente más lento."
+                ]
+              },
+              {
+                "title": "Buche de agarre",
+                "type": "adjust",
+                "details": [
+                  "Al retraer la garra de agarre ahora se lanza Wrecking Ball en la dirección en la que se mueve."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "Cuando era niña, Zarya hacía burbujas con sus amigos. De adulta, Zarya lanza burbujas a sus enemigos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Cañón de partículas",
+                "type": "adjust",
+                "details": [
+                  "El fuego secundario ahora produce burbujas explosivas."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Mei",
+            "desc": "Mei ha sido trasladada al rol de Tanque para ayudar a minimizar la confusión cuando de alguna manera no muere en combate.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dc5525ecbba3b254188f126ba0dd07571dee201d4ddc2f068c3e2f6907668cca.png",
+            "changes": [
+              {
+                "title": "Se pasó al rol de Tanque y al subrol de Bruiser.",
+                "type": "adjust",
+                "details": [
+                  "Se pasó al rol de Tanque y al subrol de Bruiser."
+                ]
+              },
+              {
+                "title": "Ya no tiene la subrol pasiva de Especialista.",
+                "type": "nerf",
+                "details": [
+                  "Ya no tiene la subrol pasiva de Especialista."
+                ]
+              },
+              {
+                "title": "Los escudos aumentaron de 0 a 200.",
+                "type": "buff",
+                "details": [
+                  "Los escudos aumentaron de 0 a 200."
+                ]
+              },
+              {
+                "title": "La escala de Mei se ha incrementado en un 25%.",
+                "type": "buff",
+                "details": [
+                  "La escala de Mei se ha incrementado en un 25%."
+                ]
+              },
+              {
+                "title": "pared de hielo",
+                "type": "buff",
+                "details": [
+                  "La escala de Ice Wall se ha incrementado en un 25%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ashe",
+            "desc": "¡Jalar!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
+            "changes": [
+              {
+                "title": "Dinamita",
+                "type": "adjust",
+                "details": [
+                  "Si Ashe dispara una dinamita en el aire, se lanzará una nueva dinamita hacia arriba desde la explosión."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bastion",
+            "desc": "Notamos que Bastion iba un poco lento mientras estaba en modo torreta, así que reemplazamos su arma con un ventilador grande para, con suerte, acelerarlo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/78a150dd7baf1d3dd87ad8b4bac9cb38b03bcb135e9b6fe70ad26092347739bb.png",
+            "changes": [
+              {
+                "title": "Configuración: Asalto",
+                "type": "adjust",
+                "details": [
+                  "Ahora dispara grandes ráfagas de viento con alcance limitado, derribando a los enemigos.",
+                  "Bastión ahora se mueve más rápido mientras está en esta configuración en lugar de moverse más lento."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cassidy",
+            "desc": "En el salvaje oeste, las pistolas se consideran un signo de hostilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Cassidy dispara una bala perforante que provoca sangrado cada vez que saluda.",
+                "type": "adjust",
+                "details": [
+                  "Cassidy dispara una bala perforante que provoca sangrado cada vez que saluda."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "Formas, vuelo, bombas saltarinas, ¡Dios mío!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "Tri-disparo",
+                "type": "adjust",
+                "details": [
+                  "Cada disparo sucesivo aumenta la cantidad de proyectiles disparados, creando nuevas formas para cada descarga."
+                ]
+              },
+              {
+                "title": "Vuelo",
+                "type": "adjust",
+                "details": [
+                  "Cancelar vuelo lanza a Echo en la dirección en la que se mueve."
+                ]
+              },
+              {
+                "title": "Bombas pegajosas",
+                "type": "adjust",
+                "details": [
+                  "Las bombas adhesivas ahora rebotan en el entorno hasta 3 veces antes de pegarse."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "Hemos evolucionado el combate de Emre para que los jugadores puedan alcanzar un mayor nivel de habilidad con su equipo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0e0618cd94b50deee7621f4a5f0b79e93f92d85d4aee348389d338c972f9377e.png",
+            "changes": [
+              {
+                "title": "La altura del salto de Emre ha aumentado.",
+                "type": "buff",
+                "details": [
+                  "La altura del salto de Emre ha aumentado."
+                ]
+              },
+              {
+                "title": "La gravedad de Emre ha disminuido.",
+                "type": "nerf",
+                "details": [
+                  "La gravedad de Emre ha disminuido."
+                ]
+              },
+              {
+                "title": "200 de la salud de Emre se han convertido en escudos.",
+                "type": "adjust",
+                "details": [
+                  "200 de la salud de Emre se han convertido en escudos."
+                ]
+              },
+              {
+                "title": "Fragmentación cibernética",
+                "type": "adjust",
+                "details": [
+                  "Se ha cambiado la física del proyectil.",
+                  "Ahora se adhiere a los enemigos e inflige más daño cuando está atrapado."
+                ]
+              },
+              {
+                "title": "Pistola Sifón",
+                "type": "adjust",
+                "details": [
+                  "La velocidad del proyectil aumentó.",
+                  "Ahora puedes disparar a la cabeza.",
+                  "Se eliminó el robo de vida.",
+                  "Ya no cambia el comportamiento de salto de Emre."
+                ]
+              },
+              {
+                "title": "Cuerpo a cuerpo rápido",
+                "type": "adjust",
+                "details": [
+                  "Ahora causa 60 de daño.",
+                  "Se lanzará contra los enemigos cercanos.",
+                  "Inflige daño crítico al golpear a los enemigos por la espalda."
+                ]
+              },
+              {
+                "title": "Anular protocolo",
+                "type": "adjust",
+                "details": [
+                  "El coste final se ha reducido en un 50%.",
+                  "Ahora sólo dispara 2 rondas pesadas.",
+                  "La velocidad de disparo ha aumentado.",
+                  "Ya no otorga vuelo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Freja",
+            "desc": "Con Emre acaparando todo el espacio aéreo, Freja está adoptando un enfoque más fundamentado.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6eb3ff52171f525f38f1b92989accd570ffe1e6ab589a935abfc2af5d7da27d7.png",
+            "changes": [
+              {
+                "title": "El movimiento regular de Freja es un 70% más lento.",
+                "type": "adjust",
+                "details": [
+                  "El movimiento regular de Freja es un 70% más lento."
+                ]
+              },
+              {
+                "title": "Los tiempos de reutilización de Freja se aceleran en un 300% mientras está en el suelo.",
+                "type": "adjust",
+                "details": [
+                  "Los tiempos de reutilización de Freja se aceleran en un 300% mientras está en el suelo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "Genji ha sido rediseñado para ser nuestro tercer primer DPS cuerpo a cuerpo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "hoja de dragón",
+                "type": "nerf",
+                "details": [
+                  "Pasó de su Ultimate a su arma.",
+                  "Daño reducido de 110 a 65."
+                ]
+              },
+              {
+                "title": "shuriken",
+                "type": "buff",
+                "details": [
+                  "Pasó de su arma a su Ultimate.",
+                  "La velocidad del proyectil Shuriken se triplicó.",
+                  "El fuego principal ahora continúa disparando cuando se mantiene presionado.",
+                  "El fuego secundario ahora dispara 9 proyectiles a una velocidad más rápida y en un arco más amplio.",
+                  "La duración máxima aumentó a 8 segundos."
+                ]
+              },
+              {
+                "title": "Corte de energía",
+                "type": "new",
+                "details": [
+                  "Nueva habilidad.",
+                  "Cuando se activa, Dragonblade de Genji disparará grandes proyectiles de energía con cada corte durante un breve período.",
+                  "Solo se puede utilizar con Dragonblade equipado.",
+                  "Tiene un tiempo de reutilización de 8 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hanzo",
+            "desc": "El Yokai reemplazó el carcaj de Hanzo por uno que encontraron en un almacén como broma.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/704527b17eaa3a0722cd151c7e2cddd878ae986e329a51059b5a0bc80b834746.png",
+            "changes": [
+              {
+                "title": "Flecha aleatoria",
+                "type": "adjust",
+                "details": [
+                  "Reemplaza a Sonic Arrow.",
+                  "Tiene un tiempo de reutilización de 6 segundos.",
+                  "Prepara una de las muchas flechas posibles al azar en el arco de Hanzo, que se puede ver antes de disparar."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "Después de ser expulsado de Junkertown, Junkrat fundó New Trap City.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Trampa de acero",
+                "type": "adjust",
+                "details": [
+                  "Se ha aumentado el número máximo de trampas de acero activas de 1 a 3.",
+                  "Ya no tiene tiempo de reutilización y, en cambio, su colocación cuesta 50 chatarra.",
+                  "Los héroes arrojan 25 chatarra al morir, que Junkrat puede recoger."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pharah",
+            "desc": "Pharah sabía que no podía competir con un querido gato en un jetpack, así que decidió castigarse también.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11bf5153c33d1f37f5d337046af63d7da6c634a0f1047da8fbb8610a14268f3a.png",
+            "changes": [
+              {
+                "title": "Jets flotantes",
+                "type": "nerf",
+                "details": [
+                  "Remoto."
+                ]
+              },
+              {
+                "title": "Lanzacohetes",
+                "type": "adjust",
+                "details": [
+                  "Tiene mayor autogolpe.",
+                  "Cuanto más se golpea Pharah con su lanzacohetes, más rápido se mueve.",
+                  "Ya no causa daño a Pharah."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "¡Reaper ha aprendido a jugar al pico-a-boo!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Paso de sombra",
+                "type": "buff",
+                "details": [
+                  "Durante Shadow Step, Reaper tiene 6 segundos para elegir si quiere teletransportarse allí o retirarse a su posición original.",
+                  "Si se retira, el tiempo de reutilización de Shadow Step se reduce a 5 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sojourn",
+            "desc": "Ella está tomando esa dosis de cafeína de Tom Beansons.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
+            "changes": [
+              {
+                "title": "Mientras tiene 100 de energía, las habilidades de Sojourn consumen 50 de energía para energizarse.",
+                "type": "adjust",
+                "details": [
+                  "Mientras tiene 100 de energía, las habilidades de Sojourn consumen 50 de energía para energizarse."
+                ]
+              },
+              {
+                "title": "Diapositiva de poder",
+                "type": "adjust",
+                "details": [
+                  "Energized Power Slide se mueve un 100% más rápido y derriba a los enemigos con los que choca Sojourn."
+                ]
+              },
+              {
+                "title": "Disparo disruptor",
+                "type": "adjust",
+                "details": [
+                  "El Disparo disruptor energizado deja dos ráfagas de energía más pequeñas a medida que viaja.",
+                  "Las ráfagas de energía más pequeñas tienen un radio de 2 metros y causan 60 daños por segundo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Soldier: 76",
+            "desc": "Soldadura: rutina de gimnasio de 76: día de piernas, todos los días, los 7 días de la semana.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/242f302975d1faf2cc820bee8ff8a37a501a88e49c146ceab1d383b8310ad51a.png",
+            "changes": [
+              {
+                "title": "Campo biótico",
+                "type": "adjust",
+                "details": [
+                  "Soldado: 76 puede causar un daño masivo a los enemigos si les coloca un campo biótico."
+                ]
+              },
+              {
+                "title": "Sprint",
+                "type": "buff",
+                "details": [
+                  "Los golpes finales aumentan el aumento de velocidad adicional de Sprint de Soldado: 76 en un 25%, hasta un 75% adicional.",
+                  "Esta bonificación se pierde al morir."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "Por razones no especificadas, han aparecido barriles en todos los mapas. Por favor ignoralos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Ocultar",
+                "type": "adjust",
+                "details": [
+                  "Translocador reemplazado.",
+                  "Transforma a Sombra en un objeto aleatorio.",
+                  "Sombra todavía puede moverse mientras está disfrazada.",
+                  "Al realizar cualquier acción, se elimina el disfraz de Sombra."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Symmetra",
+            "desc": "Las torretas centinela de Symmetra son muy pegajosas hoy en día.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2c620d948703d0ac5e6ee3dc30fda346b0c1644aa5b318e4c78f9feebf89b68.png",
+            "changes": [
+              {
+                "title": "Torreta centinela",
+                "type": "adjust",
+                "details": [
+                  "Las torretas centinela ahora se despliegan automáticamente alrededor de Symmetra y la siguen a donde quiera que vaya.",
+                  "El número de cargos aumentó de 3 a 4.",
+                  "El tiempo de reutilización se redujo a 7,5 segundos.",
+                  "Daño reducido de 30 a 15."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "¡¡El trabajo duro, el trabajo, el trabajo, da sus frutos!!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "Un segundo Torbjorn está encima de Torbjorn, imitando todas sus acciones.",
+                "type": "adjust",
+                "details": [
+                  "Un segundo Torbjorn está encima de Torbjorn, imitando todas sus acciones."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "El cronoacelerador de Tracer está acelerando su crono más que nunca.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "Parpadear",
+                "type": "buff",
+                "details": [
+                  "La distancia aumentó a 100 metros."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Nadie sabe realmente por lo que ha pasado Vendetta, especialmente ahora que movimos la cámara.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/53109fa61b9fcdd83ca94ceb96a1321253a744e1b1319e2645a29264812988b4.png",
+            "changes": [
+              {
+                "title": "La cámara de Vendetta siempre está en tercera persona, con su objetivo totalmente separado del del jugador.",
+                "type": "adjust",
+                "details": [
+                  "La cámara de Vendetta siempre está en tercera persona, con su objetivo totalmente separado del del jugador."
+                ]
+              },
+              {
+                "title": "Vendetta se fijará automáticamente en los enemigos cercanos y los enfrentará sin importar cómo se mueva el jugador.",
+                "type": "adjust",
+                "details": [
+                  "Vendetta se fijará automáticamente en los enemigos cercanos y los enfrentará sin importar cómo se mueva el jugador."
+                ]
+              },
+              {
+                "title": "Pulsa Interactuar para fijarte en el enemigo más cercano al que apunta tu punto de mira.",
+                "type": "adjust",
+                "details": [
+                  "Pulsa Interactuar para fijarte en el enemigo más cercano al que apunta tu punto de mira."
+                ]
+              },
+              {
+                "title": "Colmillo Palatino",
+                "type": "nerf",
+                "details": [
+                  "El daño aéreo se redujo en un 40%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Venture",
+            "desc": "¡Oh, tesoro enterrado!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7cab11e20f958ed3d369989e0ac96703fd2cda8c7abf237f75e12bf3549b066e.png",
+            "changes": [
+              {
+                "title": "Madriguera",
+                "type": "adjust",
+                "details": [
+                  "Al salir de Burrow, también se extrae del suelo una camioneta aleatoria.",
+                  "La recogida puede ser recogida por cualquier aliado."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Widowmaker",
+            "desc": "¿Crees que eres tan bueno apuntando? Pruébalo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/170aeb0ae3da053cbfd3b7db386db88a904745d692361a006048928cc9a1990a.png",
+            "changes": [
+              {
+                "title": "apuntar",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede cargar hasta el 150%.",
+                  "Cuando se carga por encima del 100%, la velocidad de carga es un 80% más lenta y el alcance se acerca aún más."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Anran",
+            "desc": "Caw caw, cloqueadores.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba10f1241fdd52603c7feff49eccc83d6ca21ba9a6545ed37db74f87270fa4e9.png",
+            "changes": [
+              {
+                "title": "Avivar las llamas",
+                "type": "adjust",
+                "details": [
+                  "Mientras está en el aire, el fuego secundario de Anran la empujará hacia atrás en la dirección a la que apunta."
+                ]
+              },
+              {
+                "title": "Renacimiento bermellón",
+                "type": "adjust",
+                "details": [
+                  "Anran puede moverse mientras está muerto antes de activar Vermillion Revival."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ana",
+            "desc": "Esto es lo que llamamos una siesta energética.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "dardo del sueño",
+                "type": "adjust",
+                "details": [
+                  "Ahora hace que Ana duerma hasta por 3 segundos.",
+                  "Al despertar, Ana se impulsará ella misma con Nano Boost.",
+                  "La duración del Nano Boost variará según cuánto tiempo estuvo dormida."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Baptiste",
+            "desc": "Baptiste parece bastante apuesto.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
+            "changes": [
+              {
+                "title": "Botas exo",
+                "type": "adjust",
+                "details": [
+                  "Ahora carga hasta 4 air-dashs.",
+                  "Los Air Dash se utilizan saltando en el aire, lanzando a Baptiste horizontalmente en la dirección en la que se mueve.",
+                  "Las cargas de Air Dash no decaen con el tiempo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "¿Por qué detenerse en 'shield bash' cuando también puedes 'shield surf'?",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "Golpe de escudo",
+                "type": "buff",
+                "details": [
+                  "Después de Shield Bashing, Brigitte comienza a surfear en otro escudo durante 3 segundos, aumentando su velocidad de movimiento y altura de salto.",
+                  "El tiempo de reutilización de Shield Bash comienza una vez que finaliza el uso del escudo.",
+                  "El tiempo de reutilización se redujo a 3 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Illari",
+            "desc": "¡Eso es lo que llamamos una erupción solar!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/536202d2d6a31cb4bd95405f5869df3227e53059257b9ee7bd0e0b2590e96637.png",
+            "changes": [
+              {
+                "title": "Pilón curativo",
+                "type": "buff",
+                "details": [
+                  "Ya no cura pasivamente a los aliados cercanos.",
+                  "Disparar al pilón con el fuego principal del Rifle Solar refleja el proyectil a todos los enemigos dentro del alcance.",
+                  "El fuego secundario del Rifle Solar puede curar el pilón.",
+                  "Disparar al pilón con el fuego secundario del Rifle Solar refleja el rayo hacia todos los aliados dañados dentro del alcance.",
+                  "El tiempo de construcción se redujo a 0,5 segundos.",
+                  "Illari puede lanzar el Pilón más lejos.",
+                  "El tiempo de reutilización es siempre de 7 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "¡¡¡Maullido!!! Miau mrOW mroW MROAR ROARRRR...",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d169a8d9c4875ebebb6e635801ab75345221cb21e875c6eb1ad2a884195f48bb.png",
+            "changes": [
+              {
+                "title": "Línea de vida",
+                "type": "nerf",
+                "details": [
+                  "Viene preinstalado con una bola de demolición que se puede usar para golpear a los enemigos.",
+                  "Ending Lifeline lanza la pelota a altas velocidades en la dirección en la que se mueve.",
+                  "Ahora tiene una duración de 12 segundos.",
+                  "El tiempo de reutilización aumentó a 6 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "Habiendo crecido en Marte, Juno nunca pudo experimentar la alegría de un trampolín... hasta ahora.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6fd15df25b419c58a4c11569a8bc76e14a8e8c89ea689614a7cf3e8f2294c50.png",
+            "changes": [
+              {
+                "title": "Hiperanillo",
+                "type": "adjust",
+                "details": [
+                  "Hyper Ring ahora se despliega de lado.",
+                  "Los aliados dentro de Hyper Ring pueden saltar más alto. ¡Vaya!"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "Cómete el corazón, Mizuki.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Escalada de pared",
+                "type": "adjust",
+                "details": [
+                  "Kiriko puede moverse a lo largo de las paredes horizontalmente mientras escala paredes.",
+                  "Después de escalar la pared, Kiriko puede volver a agarrarse a la pared sin necesidad de tocar el suelo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lifeweaver",
+            "desc": "El tamaño de Lifeweaver se redujo en un parche anterior. Creemos que no hemos ido lo suficientemente lejos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "La escala de Lifeweaver se ha reducido en un 50%.",
+                "type": "nerf",
+                "details": [
+                  "La escala de Lifeweaver se ha reducido en un 50%."
+                ]
+              },
+              {
+                "title": "Salud reducida de 200 a 75.",
+                "type": "nerf",
+                "details": [
+                  "Salud reducida de 200 a 75."
+                ]
+              },
+              {
+                "title": "Escudos reducidos de 50 a 25.",
+                "type": "nerf",
+                "details": [
+                  "Escudos reducidos de 50 a 25."
+                ]
+              },
+              {
+                "title": "Agarre de vida",
+                "type": "adjust",
+                "details": [
+                  "Los aliados arrastrados por Life Grip se reducen durante 5 segundos después de ser arrastrados."
+                ]
+              },
+              {
+                "title": "Plataforma de pétalos",
+                "type": "nerf",
+                "details": [
+                  "La escala de Petal Platform se ha reducido en un 50%.",
+                  "Salud reducida de 300 a 150."
+                ]
+              },
+              {
+                "title": "árbol de la vida",
+                "type": "nerf",
+                "details": [
+                  "La escala del Árbol de la Vida se ha reducido en un 50%.",
+                  "Salud reducida de 1200 a 600."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "Poniendo el salto en el hip hop.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "Los saltos sucesivos desde el suelo aumentan la altura del salto de Lucio, hasta 5 veces.",
+                "type": "adjust",
+                "details": [
+                  "Los saltos sucesivos desde el suelo aumentan la altura del salto de Lucio, hasta 5 veces."
+                ]
+              },
+              {
+                "title": "Si no se pueden encadenar saltos, la altura del salto de Lucio vuelve a la normalidad.",
+                "type": "adjust",
+                "details": [
+                  "Si no se pueden encadenar saltos, la altura del salto de Lucio vuelve a la normalidad."
+                ]
+              },
+              {
+                "title": "Cuando está a la altura máxima de salto, Lucio puede aterrizar sobre la cabeza de un enemigo, infligiendo daño y haciéndolo rebotar.",
+                "type": "adjust",
+                "details": [
+                  "Cuando está a la altura máxima de salto, Lucio puede aterrizar sobre la cabeza de un enemigo, infligiendo daño y haciéndolo rebotar."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "El equipo no necesitará curarse si el enemigo muere primero.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "Ángel custodio",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede apuntar a enemigos."
+                ]
+              },
+              {
+                "title": "Resucitar",
+                "type": "buff",
+                "details": [
+                  "Ahora solo apunta a enemigos.",
+                  "Usar \"Resurrect\" en un enemigo causa daño mientras se lanza, lo que termina en una explosión de daño cuando termina.",
+                  "Mercy cura el 50% del daño infligido con Resurrect.",
+                  "El tiempo de reutilización se redujo a 15 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mizuki",
+            "desc": "Hemos solucionado un problema con Mizuki por el que no llevaba su icónica pila de 3 sombreros.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8c5f25e135a5f200951caf4321be961a5ecbdfbe21a9c9fb96c6d17e0d887854.png",
+            "changes": [
+              {
+                "title": "Kasa curativa",
+                "type": "nerf",
+                "details": [
+                  "Healing Kasa tiene 3 cargas.",
+                  "Mizuki ahora usa un sombrero por cada carga de Healing Kasa disponible.",
+                  "Healing Kasa ya no regresa a Mizuki.",
+                  "Si bien Mizuki tiene 1 o más cargas de Healing Kasa, no se le puede disparar en la cabeza."
+                ]
+              },
+              {
+                "title": "El regreso de Katashiro",
+                "type": "adjust",
+                "details": [
+                  "Mizuki puede teletransportarse a su ubicación anterior 3 veces por uso."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Moira",
+            "desc": "Los orbes están orbitando.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/39b42cd8e183acb99ccac01cb8b43a4b7372350425a80f4444885800dd84ba28.png",
+            "changes": [
+              {
+                "title": "Orbe biótico",
+                "type": "buff",
+                "details": [
+                  "Ahora requiere apuntar a un aliado para lanzarlo.",
+                  "El orbe biótico se adherirá al aliado objetivo y se moverá con él.",
+                  "El alcance del orbe de daño aumentó de 4 metros a 8 metros.",
+                  "El alcance del orbe curativo aumentó de 5 metros a 10 metros."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "La Ola Guardiana de Wuyang se ha ajustado adecuadamente para mostrar cuán lavado está el equipo enemigo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a9c2038a0c0b85aff625cd316a6b32764618170e78bb3edfe8c31ecf1a2a073d.png",
+            "changes": [
+              {
+                "title": "Ola Guardiana",
+                "type": "adjust",
+                "details": [
+                  "Wuyang puede cargar Guardian Wave, potenciando su tamaño, daño, curación y retroceso."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "¡Gira para ganar!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Orbe de destrucción",
+                "type": "adjust",
+                "details": [
+                  "El fuego secundario ahora tiene un tiempo de reutilización de 6 segundos.",
+                  "Mientras carga el fuego secundario, los orbes comienzan a girar alrededor de Zenyatta, causando daño y derribando a los enemigos cercanos durante hasta 8 segundos.",
+                  "Al lanzar fuego secundario, los orbes se disparan alrededor de Zenyatta en lugar de hacerlo directamente.",
+                  "El daño y el retroceso del fuego secundario aumentan con cada orbe cargado.",
+                  "Zenyatta se mueve un 30% más rápido mientras carga Orbe de destrucción.",
+                  "Zenyatta gana 15 de sobresalud con cada orbe almacenado."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}

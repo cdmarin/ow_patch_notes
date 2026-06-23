@@ -1,0 +1,399 @@
+{
+  "version": "unknown",
+  "date": "2026-04-23",
+  "title": "Actualización del 23 de Abril 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Hazard",
+            "desc": "Estamos reduciendo el límite y el recurso total que obtienen las configuraciones orientadas a Spike Guard de Hazard, por lo que hay más ventanas de oportunidad para el contrajuego.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "El daño disminuyó de 60 a 40.",
+                "type": "nerf",
+                "details": [
+                  "El daño disminuyó de 60 a 40."
+                ]
+              },
+              {
+                "title": "Recurso adicional [Spike Guard] reducido del 30% al 15%.",
+                "type": "nerf",
+                "details": [
+                  "Recurso adicional [Spike Guard] reducido del 30% al 15%."
+                ]
+              },
+              {
+                "title": "[Salto violento] La energía adicional de golpe disminuyó del 15 % al 10 %.",
+                "type": "adjust",
+                "details": [
+                  "[Salto violento] La energía adicional de golpe disminuyó del 15 % al 10 %."
+                ]
+              },
+              {
+                "title": "La reducción de la penalización de la velocidad de movimiento disminuyó del 90% al 50%.",
+                "type": "buff",
+                "details": [
+                  "La reducción de la penalización de la velocidad de movimiento disminuyó del 90% al 50%."
+                ]
+              },
+              {
+                "title": "La bonificación de recursos adicional [Spike Guard] disminuyó del 50% al 25%.",
+                "type": "adjust",
+                "details": [
+                  "La bonificación de recursos adicional [Spike Guard] disminuyó del 50% al 25%."
+                ]
+              },
+              {
+                "title": "[Muro irregular] La energía adicional de los golpes disminuyó del 25% al ​​15%.",
+                "type": "adjust",
+                "details": [
+                  "[Muro irregular] La energía adicional de los golpes disminuyó del 25% al ​​15%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "Royal Bullets ha permitido que Junker Queen sea dominante durante varias temporadas, por lo que lo ajustaremos para que esté más en línea con otros tanques en Stadium.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "El daño de las heridas disminuyó de 40 a 25.",
+                "type": "nerf",
+                "details": [
+                  "El daño de las heridas disminuyó de 40 a 25."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "La curación se redujo del 8 % de la vida máxima por segundo al 5 % de la vida máxima por segundo.",
+                "type": "nerf",
+                "details": [
+                  "La curación se redujo del 8 % de la vida máxima por segundo al 5 % de la vida máxima por segundo."
+                ]
+              },
+              {
+                "title": "El daño adicional se redujo del 25% al ​​10%.",
+                "type": "adjust",
+                "details": [
+                  "El daño adicional se redujo del 25% al ​​10%."
+                ]
+              },
+              {
+                "title": "La bonificación de la estadística de velocidad de ataque se redujo del 10 % al 5 %.",
+                "type": "adjust",
+                "details": [
+                  "La bonificación de la estadística de velocidad de ataque se redujo del 10 % al 5 %."
+                ]
+              },
+              {
+                "title": "El costo aumentó de 4000 a 5000.",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó de 4000 a 5000."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "Ramattra comenzó con una tasa de victorias media en Stadium, pero a medida que sus configuraciones se optimizan, algunas de ellas han demostrado ser valores atípicos. Estamos ajustando algunos de sus poderes orientados a la Forma Voraz de Vórtice/Némesis, y estamos mejorando sus opciones orientadas al Poder de Arma.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "El daño máximo aumentó a 150.",
+                "type": "buff",
+                "details": [
+                  "El daño máximo aumentó a 150."
+                ]
+              },
+              {
+                "title": "[Aniquilación] La bonificación de duración disminuyó de 2 a 1 segundo.",
+                "type": "adjust",
+                "details": [
+                  "[Aniquilación] La bonificación de duración disminuyó de 2 a 1 segundo."
+                ]
+              },
+              {
+                "title": "La curación disminuyó del 50 % al 25 % del daño mitigado.",
+                "type": "nerf",
+                "details": [
+                  "La curación disminuyó del 50 % al 25 % del daño mitigado."
+                ]
+              },
+              {
+                "title": "[Forma Némesis] La reducción del tiempo de reutilización por enemigo golpeado por [Vórtice voraz] se redujo de 1 s a 0,5 s.",
+                "type": "buff",
+                "details": [
+                  "[Forma Némesis] La reducción del tiempo de reutilización por enemigo golpeado por [Vórtice voraz] se redujo de 1 s a 0,5 s."
+                ]
+              },
+              {
+                "title": "El daño de Void Blight aumentó de 20 a 30.",
+                "type": "buff",
+                "details": [
+                  "El daño de Void Blight aumentó de 20 a 30."
+                ]
+              },
+              {
+                "title": "El costo disminuyó de 12000 a 10000.",
+                "type": "buff",
+                "details": [
+                  "El costo disminuyó de 12000 a 10000."
+                ]
+              },
+              {
+                "title": "La amplificación del daño aumentó del 10% al 15%.",
+                "type": "buff",
+                "details": [
+                  "La amplificación del daño aumentó del 10% al 15%."
+                ]
+              },
+              {
+                "title": "La reducción del tiempo de reutilización de [Vórtice voraz] se redujo del 100% al 75%.",
+                "type": "buff",
+                "details": [
+                  "La reducción del tiempo de reutilización de [Vórtice voraz] se redujo del 100% al 75%."
+                ]
+              },
+              {
+                "title": "La curación de la forma final se redujo de 80 a 50.",
+                "type": "nerf",
+                "details": [
+                  "La curación de la forma final se redujo de 80 a 50."
+                ]
+              },
+              {
+                "title": "Reactivado.",
+                "type": "adjust",
+                "details": [
+                  "Reactivado."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Aumento del dinero obtenido por curación y daño en un 7,14 %.",
+                "type": "buff",
+                "details": [
+                  "Aumento del dinero obtenido por curación y daño en un 7,14 %."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Freja",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6eb3ff52171f525f38f1b92989accd570ffe1e6ab589a935abfc2af5d7da27d7.png",
+            "changes": [
+              {
+                "title": "El daño adicional del rayo se redujo de un 50 % de daño reducido a un 60 % de daño reducido.",
+                "type": "nerf",
+                "details": [
+                  "El daño adicional del rayo se redujo de un 50 % de daño reducido a un 60 % de daño reducido."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Reactivado.",
+                "type": "adjust",
+                "details": [
+                  "Reactivado."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "[Paquete de reparación] La bonificación de duración disminuyó del 50% al 25%.",
+                "type": "adjust",
+                "details": [
+                  "[Paquete de reparación] La bonificación de duración disminuyó del 50% al 25%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "Estamos solucionando algunos errores que surgieron con los cambios recientes en Juno y agregando un poco más de potencia de fuego a sus configuraciones orientadas al poder de las armas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6fd15df25b419c58a4c11569a8bc76e14a8e8c89ea689614a7cf3e8f2294c50.png",
+            "changes": [
+              {
+                "title": "El daño crítico aumentó del 175% al ​​200%.",
+                "type": "buff",
+                "details": [
+                  "El daño crítico aumentó del 175% al ​​200%."
+                ]
+              },
+              {
+                "title": "[Mediblaster] La bonificación del alcance de caída aumentó de 5 ma 15 m.",
+                "type": "buff",
+                "details": [
+                  "[Mediblaster] La bonificación del alcance de caída aumentó de 5 ma 15 m."
+                ]
+              },
+              {
+                "title": "Reactivado.",
+                "type": "adjust",
+                "details": [
+                  "Reactivado."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Water College Hat es demasiado eficiente para su costo, lo que hace que sea obligatorio para muchas construcciones de Wuyang. Lo estamos ajustando para dar un valor más acorde a su coste.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a9c2038a0c0b85aff625cd316a6b32764618170e78bb3edfe8c31ecf1a2a073d.png",
+            "changes": [
+              {
+                "title": "Bonificación de duración pasiva [Corriente de restauración] reducida del 50% al 25%.",
+                "type": "adjust",
+                "details": [
+                  "Bonificación de duración pasiva [Corriente de restauración] reducida del 50% al 25%."
+                ]
+              },
+              {
+                "title": "La sobresalud por segundo se redujo de 10 a 5.",
+                "type": "nerf",
+                "details": [
+                  "La sobresalud por segundo se redujo de 10 a 5."
+                ]
+              },
+              {
+                "title": "La sobresalud máxima disminuyó de 30 a 15.",
+                "type": "nerf",
+                "details": [
+                  "La sobresalud máxima disminuyó de 30 a 15."
+                ]
+              },
+              {
+                "title": "El costo aumentó de 4000 a 5000.",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó de 4000 a 5000."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Roadhog",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Gancho de cadena",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 8 a 7 segundos."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Sombra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Sigilo",
+                "type": "adjust",
+                "details": [
+                  "La reducción de la bonificación de velocidad de movimiento mientras se revela por daño se redujo del 50 % al 33 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/53109fa61b9fcdd83ca94ceb96a1321253a744e1b1319e2645a29264812988b4.png",
+            "changes": [
+              {
+                "title": "La salud aumentó de 175 a 200. (La salud total aumentó de 250 a 275).",
+                "type": "buff",
+                "details": [
+                  "La salud aumentó de 175 a 200. (La salud total aumentó de 250 a 275)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Mizuki",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8c5f25e135a5f200951caf4321be961a5ecbdfbe21a9c9fb96c6d17e0d887854.png",
+            "changes": [
+              {
+                "title": "El regreso de Katashiro",
+                "type": "nerf",
+                "details": [
+                  "Los enemigos ya no pueden evitar que Mizuki regrese colocándose en el punto de partida de Katashiro Return."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "En una actualización anterior, se solucionó un problema por el cual los enlaces personalizados no se guardaban.",
+      "En una actualización anterior, se solucionó un problema que causaba que el límite de cuadros por segundo en Nintendo Switch 2 fuera menor de lo previsto.",
+      "En una actualización anterior, se solucionó un problema con la ventaja Trigger Finger de Reaper que permitía una cancelación involuntaria de la animación.",
+      "En una actualización anterior, se corrigió un error con la ventaja Tight Grip de Sierra que otorgaba erróneamente una reducción del tiempo de reutilización en Tremor Charge.",
+      "En una actualización anterior, se solucionó un error por el cual el beneficio Doble dosis de Mercy no reducía correctamente la curación en Flash Heal.",
+      "Se solucionó un problema por el cual los jugadores podían ser expulsados ​​por inactividad durante la fase de armería.",
+      "Se corrigió un error por el cual el daño adicional de Espiral insaciable [Vórtice voraz] de Ramattra se calculaba de forma aditiva en lugar de multiplicada.",
+      "Se corrigió un error por el cual la plaga del vacío de Ramattra se aplicaba a las barreras.",
+      "Se corrigió un error por el cual la plaga del vacío de Ramattra no se podía limpiar.",
+      "Se solucionó un problema por el cual el Nano-Mender de Ramattra podía curar a los enemigos.",
+      "Se solucionó un problema por el cual la bonificación de estadística de daño cuerpo a cuerpo de Gloomgauntlet no se aplicaba a [Pummel] de Ramattra.",
+      "Se corrigió un error por el cual el golpe [Sundering Blade] del Golpe sobrecargado de Vendetta calculaba incorrectamente el daño adicional del 50 % de forma aditiva y no multiplicativa.",
+      "Se corrigió un error por el cual el elemento de héroe Cluster Core de Ana contaba ciertas entidades que no eran jugadores para la reducción del tiempo de reutilización de Cluster Core.",
+      "Se corrigió un error por el cual la Formación de curación de Juno curaba más de lo previsto."
+    ]
+  },
+  "translated": true
+}

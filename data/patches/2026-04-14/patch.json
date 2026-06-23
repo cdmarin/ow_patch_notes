@@ -1,0 +1,1388 @@
+{
+  "version": "unknown",
+  "date": "2026-04-14",
+  "title": "Actualización del 14 de Abril 2026",
+  "sections": {
+    "stadium": {
+      "intro": "Al comienzo de una nueva temporada competitiva, recibirás progreso clasificado según tu rango al final de la última temporada.\n\nContendiente: comienza desde principiante (5 divisiones menos).\nElite: comienza desde Contender (5 divisiones menos).\nPro: comienza desde Elite (5 divisiones menos).\nAll Star: comienza desde Elite (10 divisiones menos).\nLeyenda: Comienza desde Elite (15 divisiones hacia abajo).",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Ramattra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Agregado a la lista del Estadio.",
+                "type": "buff",
+                "details": [
+                  "Agregado a la lista del Estadio."
+                ]
+              },
+              {
+                "title": "Ruina del Vacío - Poder",
+                "type": "adjust",
+                "details": [
+                  "[Acelerador del Vacío] infecta a los enemigos con nanitos que explotan y causan 20 (WP) de daño después de infligir 100 de daño."
+                ]
+              },
+              {
+                "title": "Oleada de Vacío - Poder",
+                "type": "adjust",
+                "details": [
+                  "[Acelerador del Vacío] libera periódicamente una ráfaga de 6 proyectiles adicionales durante el fuego continuo."
+                ]
+              },
+              {
+                "title": "Murallas - Energía",
+                "type": "adjust",
+                "details": [
+                  "[Barrera del Vacío] gana una carga adicional."
+                ]
+              },
+              {
+                "title": "Relé de recursión: alimentación",
+                "type": "buff",
+                "details": [
+                  "+25% del tamaño de [Barrera del Vacío]. El proyectil [Acelerador del Vacío] y [Pummel] que atraviesa la [Barrera del Vacío] obtienen un 10% más de daño."
+                ]
+              },
+              {
+                "title": "Forma final - Poder",
+                "type": "adjust",
+                "details": [
+                  "Mientras la [Forma Némesis] está activa, Ramattra se cura 80 por segundo mientras está dentro del [Vórtice Voraz]."
+                ]
+              },
+              {
+                "title": "Segunda Fase - Energía",
+                "type": "adjust",
+                "details": [
+                  "Cuando se activa [Forma Némesis], reduce el tiempo de reutilización de [Vórtice voraz] en un 100%."
+                ]
+              },
+              {
+                "title": "Fuga - Poder",
+                "type": "adjust",
+                "details": [
+                  "Mientras bloqueas en [Forma Némesis], usa [Pummel] para realizar un golpe rápido. (4s de enfriamiento)"
+                ]
+              },
+              {
+                "title": "Protocolo de conversión: potencia",
+                "type": "adjust",
+                "details": [
+                  "[Bloquear] cura a Ramattra por un 50% del daño mitigado en 3 segundos."
+                ]
+              },
+              {
+                "title": "Represalias - Poder",
+                "type": "adjust",
+                "details": [
+                  "Liberar [Bloquear] inflige un daño equivalente al 100 % de la cantidad mitigada, hasta 100 a los enemigos en un radio de 6 m."
+                ]
+              },
+              {
+                "title": "Espiral insaciable - Poder",
+                "type": "adjust",
+                "details": [
+                  "+50% de radio de [Vórtice voraz], +30% de daño [Vórtice voraz]"
+                ]
+              },
+              {
+                "title": "Vórtice devastador: poder",
+                "type": "adjust",
+                "details": [
+                  "Cuando se detona [Vórtice voraz], inflige 50 de daño y obtiene un 2 % de carga definitiva por cada enemigo golpeado."
+                ]
+              },
+              {
+                "title": "Caballero aterrador - Poder",
+                "type": "adjust",
+                "details": [
+                  "+50 % de daño [Aniquilación], +2 s de duración [Aniquilación]"
+                ]
+              },
+              {
+                "title": "Núcleo de fusión: objeto de héroe de arma poco común",
+                "type": "adjust",
+                "details": [
+                  "5% de velocidad de ataque",
+                  "Cuando [Bloquear] mitiga el daño, obtienes un 15 % de velocidad de ataque durante 3 s.",
+                  "4000 Costo"
+                ]
+              },
+              {
+                "title": "Municiones fusionadas: objeto de héroe con arma poco común",
+                "type": "adjust",
+                "details": [
+                  "10% de poder de arma",
+                  "50% del tamaño del proyectil [Acelerador del Vacío]",
+                  "4500 Costo"
+                ]
+              },
+              {
+                "title": "Aumento Omnium: objeto de héroe de arma poco común",
+                "type": "adjust",
+                "details": [
+                  "10% de poder de arma",
+                  "25% de rango [golpear]",
+                  "4500 Costo"
+                ]
+              },
+              {
+                "title": "R-7000 Powercell: artículo de héroe con arma épica",
+                "type": "adjust",
+                "details": [
+                  "5% de poder de arma",
+                  "50% de velocidad de proyectil [Acelerador del Vacío]",
+                  "Mientras disparas continuamente [Acelerador del Vacío], obtienes hasta un 20% de poder de arma en 3 segundos.",
+                  "12500 Costo"
+                ]
+              },
+              {
+                "title": "Anima de Anubis: objeto de héroe con arma épica",
+                "type": "nerf",
+                "details": [
+                  "10% de poder de habilidad",
+                  "10% de velocidad de ataque",
+                  "El daño de [Pummel] también aumenta con el poder de habilidad.",
+                  "13000 Costo"
+                ]
+              },
+              {
+                "title": "Vorágine voraz: objeto de héroe de habilidad poco común",
+                "type": "adjust",
+                "details": [
+                  "5% de reducción de tiempo de reutilización",
+                  "Por cada enemigo golpeado por [Vortex voraz], reduce el tiempo de reutilización de [Forma Némesis] en 1 s.",
+                  "4000 Costo"
+                ]
+              },
+              {
+                "title": "Vector nulo: elemento de héroe de habilidad poco común",
+                "type": "adjust",
+                "details": [
+                  "5% de reducción de tiempo de reutilización",
+                  "100% [Vórtice voraz] Altura",
+                  "4000 Costo"
+                ]
+              },
+              {
+                "title": "Extensor abisal: objeto de héroe de habilidad épica",
+                "type": "adjust",
+                "details": [
+                  "25 escudos",
+                  "10% de reducción de tiempo de reutilización",
+                  "50% de duración de [Barrera del Vacío]",
+                  "10000 Costo"
+                ]
+              },
+              {
+                "title": "Swirling Ward: objeto de héroe de habilidad épica",
+                "type": "nerf",
+                "details": [
+                  "15% de poder de habilidad",
+                  "10% de reducción de tiempo de reutilización",
+                  "Todos los aliados dentro de [Vortex Voraz] obtienen un 300% más de altura de salto y un 25% más de velocidad de movimiento.",
+                  "10000 Costo"
+                ]
+              },
+              {
+                "title": "Eje Ultimátum: objeto de héroe de habilidad épica",
+                "type": "adjust",
+                "details": [
+                  "15% de cargo final inicial",
+                  "50% de rango de [Aniquilación]",
+                  "La activación de [Aniquilación] atrae a los enemigos en un radio de 6 m.",
+                  "9000 Costo"
+                ]
+              },
+              {
+                "title": "Escudo Shambali: objeto raro de héroe de supervivencia",
+                "type": "buff",
+                "details": [
+                  "25 escudos",
+                  "Recibe un 5% más de curación mientras estás en [Bloquear].",
+                  "Se elimina la penalización de velocidad de movimiento de [Bloquear].",
+                  "4500 Costo"
+                ]
+              },
+              {
+                "title": "Aura de Zenyatta: objeto raro de héroe de supervivencia",
+                "type": "adjust",
+                "details": [
+                  "25 Salud",
+                  "Gana 100 de sobresalud después de salir de [Forma Némesis].",
+                  "4000 Costo"
+                ]
+              },
+              {
+                "title": "Construcción colosal: objeto raro de héroe de supervivencia",
+                "type": "adjust",
+                "details": [
+                  "25 armadura",
+                  "Gana un 20 % del daño de [Aniquilación] como sobresalud.",
+                  "5000 Costo"
+                ]
+              },
+              {
+                "title": "Nano-reparador: objeto de héroe de supervivencia épico",
+                "type": "adjust",
+                "details": [
+                  "25 escudos",
+                  "35% de salud [Barrera del Vacío]",
+                  "[Barrera del vacío] cura a los aliados en un radio de 6 m en 100 al aparecer."
+                ]
+              },
+              {
+                "title": "Exoarmadura cáustica: objeto de héroe de supervivencia épico",
+                "type": "adjust",
+                "details": [
+                  "50 Salud",
+                  "10% de robo de vida de arma",
+                  "10% de robo de vida de habilidad",
+                  "+15 % de robo de vida mientras estás en [Forma Némesis]",
+                  "9000 Costo"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sigma",
+            "desc": "Estamos agregando una pequeña mejora aquí para ayudar a aumentar la viabilidad de este poder como una opción para las configuraciones orientadas al poder de las armas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/416f312608ac1d9f34509883daa0fa9486b15ceb112e4440b4c412e125390517.png",
+            "changes": [
+              {
+                "title": "Sizigia sinfónica - Poder",
+                "type": "nerf",
+                "details": [
+                  "El umbral de daño absorbido para la velocidad de ataque se redujo a 50 (en lugar de 100)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Winston ha estado luchando en la última temporada. Comenzaremos con algunas mejoras más pequeñas para algunos de sus poderes más débiles, así como una mejora monetaria, pero continuaremos monitoreando su desempeño.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "El dinero del daño y la curación aumentó en un 12,5%.",
+                "type": "buff",
+                "details": [
+                  "El dinero del daño y la curación aumentó en un 12,5%."
+                ]
+              },
+              {
+                "title": "Pararrayos - Poder",
+                "type": "buff",
+                "details": [
+                  "El daño de rebote aumentó al 75% (en lugar del 50%)."
+                ]
+              },
+              {
+                "title": "Voltio volátil - Potencia",
+                "type": "buff",
+                "details": [
+                  "El daño crítico aumentó al 200% (en lugar del 175%)."
+                ]
+              },
+              {
+                "title": "Piel gruesa - Poder",
+                "type": "buff",
+                "details": [
+                  "Se agregó \"+25% de cargo final inicial\"."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Freja",
+            "desc": "Las construcciones de Machine Gun Freja continúan teniendo un rendimiento superior, por lo que estamos recortando algo de potencia de las piezas de soporte.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6eb3ff52171f525f38f1b92989accd570ffe1e6ab589a935abfc2af5d7da27d7.png",
+            "changes": [
+              {
+                "title": "Bolsillos profundos - Poder",
+                "type": "nerf",
+                "details": [
+                  "La restauración de munición máxima se redujo al 30 % (en lugar del 40 %)."
+                ]
+              },
+              {
+                "title": "Recolector de alimentos - Poder",
+                "type": "nerf",
+                "details": [
+                  "La curación de vida máxima se redujo al 6 % (en lugar del 8 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "Recientemente se ha demostrado que esta combinación de elementos está fuera de los límites, por lo que estamos reduciendo algo de poder estadístico de cada uno de ellos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Zip Grease: artículo de héroe de arma épica",
+                "type": "nerf",
+                "details": [
+                  "Se eliminó el 5% del poder del arma."
+                ]
+              },
+              {
+                "title": "Radiación refrescante: objeto de héroe de supervivencia épico",
+                "type": "nerf",
+                "details": [
+                  "La escala de sobresalud máxima de vida se redujo al 6 % (en lugar del 8 %)."
+                ]
+              },
+              {
+                "title": "Jamison Jumpers: artículo de héroe de supervivencia épico",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó el 10% del poder del arma.",
+                  "El poder de habilidad aumentó al 15% (en lugar del 10%).",
+                  "La reducción del tiempo de reutilización tras la autodetonación de una mina de conmoción cerebral se redujo al 10 % (en lugar del 15 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Estamos mejorando algunas de las opciones más débiles de Vendetta para darle más variedad de construcción. Continuaremos vigilando de cerca el desempeño de su estructura más fuerte para asegurarnos de que no esté fuera de los límites.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/53109fa61b9fcdd83ca94ceb96a1321253a744e1b1319e2645a29264812988b4.png",
+            "changes": [
+              {
+                "title": "El dinero del daño y la curación aumentó en un 5%.",
+                "type": "buff",
+                "details": [
+                  "El dinero del daño y la curación aumentó en un 5%."
+                ]
+              },
+              {
+                "title": "Carga ciclónica: potencia",
+                "type": "buff",
+                "details": [
+                  "El daño de Whirlwind Dash durante la duración adicional aumentó a 75% (en lugar de 50%)."
+                ]
+              },
+              {
+                "title": "Doble Dash - Poder",
+                "type": "buff",
+                "details": [
+                  "El daño de reactivación de Whirlwind Dash aumentó al 75% (en lugar del 50%)."
+                ]
+              },
+              {
+                "title": "Skycut - Poder",
+                "type": "buff",
+                "details": [
+                  "El daño del borde proyectado libre aumentó al 75 % (en lugar del 50 %)."
+                ]
+              },
+              {
+                "title": "Golpe sobrecargado - Poder",
+                "type": "buff",
+                "details": [
+                  "El daño de Mini Sundering Blade aumentó a un 50% más de daño (en lugar de un 25%)."
+                ]
+              },
+              {
+                "title": "Cataclisma - Poder",
+                "type": "buff",
+                "details": [
+                  "El daño de explosión aumentó a 30 (en lugar de 20)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Fórmula perfeccionada: objeto raro de héroe de supervivencia",
+                "type": "buff",
+                "details": [
+                  "La duración del nanoimpulso aumentó al 25 % (en lugar del 15 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "Estamos mejorando las configuraciones orientadas al poder de las armas de Juno y mejorando la viabilidad de algunos poderes y elementos menos elegidos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6fd15df25b419c58a4c11569a8bc76e14a8e8c89ea689614a7cf3e8f2294c50.png",
+            "changes": [
+              {
+                "title": "Medimaster - Poder",
+                "type": "nerf",
+                "details": [
+                  "El multiplicador crítico se redujo al 175 % (en lugar del 200 %).",
+                  "La información sobre herramientas ahora indica correctamente que también te permite hacer críticos a los aliados."
+                ]
+              },
+              {
+                "title": "Cámara de Fisión - Energía",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Mientras está afectado por [Hyper Ring], [Medi-Blaster] tiene una velocidad de disparo completamente automática."
+                ]
+              },
+              {
+                "title": "Formación de curación - Poder",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Los aliados afectados por [Hyper Ring] se curan un 40% de cualquier daño que hagas."
+                ]
+              },
+              {
+                "title": "Enfoque estelar: poder",
+                "type": "buff",
+                "details": [
+                  "Se agregó \"Mientras usas [Glide Boost] o flotas, obtienes un 100 % más de carga definitiva por daño o curación\"."
+                ]
+              },
+              {
+                "title": "Anillo de rally - Potencia",
+                "type": "nerf",
+                "details": [
+                  "Remoto"
+                ]
+              },
+              {
+                "title": "Agujero negro - Poder",
+                "type": "nerf",
+                "details": [
+                  "Remoto"
+                ]
+              },
+              {
+                "title": "Pulse Spike: objeto de héroe con arma épica",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó la velocidad de ataque después de usar Pulsar Torpedoes.",
+                  "Se agregó \"+35 % de velocidad de bloqueo de aliados\".",
+                  "El costo disminuyó a 10000 (en lugar de 11000)."
+                ]
+              },
+              {
+                "title": "Blaster de largo alcance: objeto de héroe con arma épica",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó \"[Mediblaster] causa un 15% más de daño y curación a objetivos a más de 12 m de distancia\".",
+                  "Se agregó \"[Mediblaster] tiene un alcance de caída aumentado de 5 m\"."
+                ]
+              },
+              {
+                "title": "Empuje gravitacional: objeto de héroe con arma épica",
+                "type": "buff",
+                "details": [
+                  "El costo disminuyó a 9000 (en lugar de 10000)."
+                ]
+              },
+              {
+                "title": "Lux Loop: objeto de héroe de habilidad poco común",
+                "type": "adjust",
+                "details": [
+                  "El poder de habilidad se redujo al 5% (en lugar del 10%).",
+                  "Se agregó un 5% de poder de arma."
+                ]
+              },
+              {
+                "title": "Túnel de velocidad: objeto de héroe de habilidad poco común",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Activar Glide Boost al pasar por Hyper Ring reduce el tiempo de reutilización de Glide Boost en un 50%.",
+                  "5000 Costo"
+                ]
+              },
+              {
+                "title": "Cohetes impulsados: artículo de héroe de supervivencia épico",
+                "type": "adjust",
+                "details": [
+                  "El costo disminuyó a 9500 (en lugar de 12000)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Estamos mejorando algunos poderes subutilizados para ayudarlos a alinearse más con las otras opciones de Wuyang.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a9c2038a0c0b85aff625cd316a6b32764618170e78bb3edfe8c31ecf1a2a073d.png",
+            "changes": [
+              {
+                "title": "Lanza ondulada - Potencia",
+                "type": "buff",
+                "details": [
+                  "La velocidad del proyectil de fuego primario no potenciado aumentó al 150 % (antes era 100 %)."
+                ]
+              },
+              {
+                "title": "Apuntalar - Energía",
+                "type": "buff",
+                "details": [
+                  "La autocuración activa de Corriente Restaurativa aumentó al 100% (en lugar del 75%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "Estamos disminuyendo ligeramente el potencial de supervivencia de Zenyatta y continuaremos monitoreando su desempeño en esta área.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Iluminación - Poder",
+                "type": "nerf",
+                "details": [
+                  "La curación basada en el daño infligido se redujo al 30 % (en lugar del 35 %)."
+                ]
+              },
+              {
+                "title": "Buscando la salvación - Poder",
+                "type": "buff",
+                "details": [
+                  "El umbral de salud de origen aumentó al 50 % (en lugar del 35 %)."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Sierra ha sido agregada a la lista de daños.\n\n\nLa fuerza de Hitscan Auto Assist se redujo en un 4% para igualar más sus valores previos a la temporada 20.\nEste cambio no afecta el modo de fuerza heredado.\n\n\nLa duración de la visión en enemigos con poca salud se redujo de 5 a 3,5 segundos.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Sigma",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/416f312608ac1d9f34509883daa0fa9486b15ceb112e4440b4c412e125390517.png",
+            "changes": [
+              {
+                "title": "Hiperregeneración – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Ahora restaura la salud de la barrera solo cuando daña a los héroes enemigos."
+                ]
+              },
+              {
+                "title": "Barrera experimental",
+                "type": "nerf",
+                "details": [
+                  "(6v6) La salud máxima se redujo de 650 a 600."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "La ventaja Vengeful Vortex mejoró significativamente la flexibilidad de Ravenous Vortex, especialmente al interactuar con objetivos en el aire. Esa funcionalidad se ha agregado a la habilidad básica con daño reducido. Barrera prolongada regresa como una opción de beneficio menor, y Void Surge ha sido mejorado y trasladado a un beneficio mayor.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Vórtice voraz",
+                "type": "nerf",
+                "details": [
+                  "Vengeful Vortex pasó de la ventaja a la habilidad básica.",
+                  "El proyectil ahora explota al entrar en contacto con el suelo.",
+                  "La explosión ahora se puede detonar manualmente mientras se está en el aire.",
+                  "Daño de explosión reducido de 50 a 15."
+                ]
+              },
+              {
+                "title": "Barrera prolongada – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Agregado.",
+                  "La duración y el tamaño de la barrera del vacío aumentaron un 25%."
+                ]
+              },
+              {
+                "title": "Vórtice vengativo: beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Remoto."
+                ]
+              },
+              {
+                "title": "Oleada de vacío: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "Se pasó de beneficio menor a beneficio mayor.",
+                  "El retraso entre ráfagas se redujo de 0,75 a 0,6 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reinhardt",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d7938a2e3629b8ba9982f32f0a6c2a9e4a342912d90cb1b93145d100d300458.png",
+            "changes": [
+              {
+                "title": "Golpe de escudo – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Se agregó una configuración personalizada que permite que Embate con escudo se vincule a Cuerpo a cuerpo rápido, lo que permite mirar libremente mientras el beneficio está equipado."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Roadhog",
+            "desc": "A medida que el combo de Roadhog se vuelve más confiable, su efectividad general ha aumentado. Estos cambios reducen la frecuencia con la que se puede ejecutar el combo y requieren un uso más deliberado de Chain Hook. Vigorar también ha sido reemplazado debido a su superposición con la subfunción Bruiser.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Pistola de chatarra",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de recarga aumentó de 1,5 a 1,75 segundos."
+                ]
+              },
+              {
+                "title": "Gancho de cadena",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 6 a 8 segundos."
+                ]
+              },
+              {
+                "title": "Vigorizar – Beneficio importante",
+                "type": "nerf",
+                "details": [
+                  "Remoto."
+                ]
+              },
+              {
+                "title": "Exposición a Hogdrogen: beneficio importante",
+                "type": "buff",
+                "details": [
+                  "Agregado.",
+                  "Tomar un respiro ahora cura a los aliados cercanos un 50 % de su cantidad de curación."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Agregar mayor daño a los elementos desplegables al kit básico de Winston introduce interacciones únicas y mejora su efectividad dentro de ciertos enfrentamientos sin aumentar el poder del arma base.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "(6v6) La salud base se redujo de 350 a 325. (La salud total, incluidas armaduras y escudos, se redujo de 550 a 525).",
+                "type": "nerf",
+                "details": [
+                  "(6v6) La salud base se redujo de 350 a 325. (La salud total, incluidas armaduras y escudos, se redujo de 550 a 525)."
+                ]
+              },
+              {
+                "title": "Cañón Tesla",
+                "type": "buff",
+                "details": [
+                  "Inflige un 50% más de daño a los desplegables."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wrecking Ball",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
+            "changes": [
+              {
+                "title": "(6v6) La salud base se redujo de 475 a 450. (La salud total, incluidas armaduras y escudos, se redujo de 575 a 550).",
+                "type": "nerf",
+                "details": [
+                  "(6v6) La salud base se redujo de 475 a 450. (La salud total, incluidas armaduras y escudos, se redujo de 575 a 550)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Ashe",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
+            "changes": [
+              {
+                "title": "Doble cañón – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "El tiempo necesario para reactivar Coach Gun aumentó de 1 a 2 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bastion",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/78a150dd7baf1d3dd87ad8b4bac9cb38b03bcb135e9b6fe70ad26092347739bb.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores aumentó en un 10 %.",
+                "type": "nerf",
+                "details": [
+                  "El costo de los beneficios menores aumentó en un 10 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales aumentó en un 6 %.",
+                "type": "nerf",
+                "details": [
+                  "El costo de los beneficios principales aumentó en un 6 %."
+                ]
+              },
+              {
+                "title": "Recarga de configuración: ventaja menor",
+                "type": "buff",
+                "details": [
+                  "Ya no reembolsa completamente el tiempo de reutilización.",
+                  "Ahora reduce el tiempo de reutilización en 4 segundos."
+                ]
+              },
+              {
+                "title": "Artillería blindada – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "La degeneración por exceso de salud se redujo de 100 a 50 por segundo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "Permitir que Echo duplique héroes aliados abre nuevas opciones estratégicas y permite combinaciones definitivas más creativas para equipos coordinados.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "Duplicado",
+                "type": "adjust",
+                "details": [
+                  "Ahora puedes duplicar héroes aliados."
+                ]
+              },
+              {
+                "title": "Acometida enfocada – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "El alcance aumentó de 4 a 6 metros."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0e0618cd94b50deee7621f4a5f0b79e93f92d85d4aee348389d338c972f9377e.png",
+            "changes": [
+              {
+                "title": "Lanzador de sifón",
+                "type": "adjust",
+                "details": [
+                  "Se agregó una opción de accesibilidad que permite a los jugadores mantener presionado el fuego secundario para disparar automáticamente Syphon Blaster a una velocidad de disparo reducida."
+                ]
+              },
+              {
+                "title": "Disipador de calor: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "El calor generado por golpes directos se redujo del 100% al 60%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Reciclaje de minas: beneficio importante",
+                "type": "adjust",
+                "details": [
+                  "Se pasó de beneficio menor a beneficio mayor.",
+                  "Las eliminaciones con Concussion Mine restauran una carga."
+                ]
+              },
+              {
+                "title": "Viaje bomba: ventaja menor",
+                "type": "adjust",
+                "details": [
+                  "Se pasó de beneficio mayor a beneficio menor.",
+                  "La bonificación de velocidad de ataque se redujo del 35 % al 25 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pharah",
+            "desc": "La funcionalidad Drift Thrusters se ha agregado a Pharah's Barrage, lo que permite un movimiento limitado durante la habilidad definitiva para reducir la fricción al usarlo. El daño del bombardeo se ha reducido ligeramente para compensar la flexibilidad adicional.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11bf5153c33d1f37f5d337046af63d7da6c634a0f1047da8fbb8610a14268f3a.png",
+            "changes": [
+              {
+                "title": "Jets flotantes",
+                "type": "adjust",
+                "details": [
+                  "La velocidad de movimiento adicional se redujo del 40 % al 30 %."
+                ]
+              },
+              {
+                "title": "Bombardeo",
+                "type": "nerf",
+                "details": [
+                  "Pharah ahora puede moverse mientras usa Barrage.",
+                  "Daño de explosión reducido de 30 a 25."
+                ]
+              },
+              {
+                "title": "Propulsores de deriva: ventaja menor",
+                "type": "nerf",
+                "details": [
+                  "Remoto."
+                ]
+              },
+              {
+                "title": "Fuerza de conmoción – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Agregado.",
+                  "Concussive Blast causa hasta 50 daños por explosión."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "Dire Triggers se ha trasladado al kit básico de Reaper para brindarle opciones de rango medio más consistentes en un tiempo de reutilización. Este cambio añade capacidad adicional de toma de decisiones y expresión de habilidades a su juego.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Desencadenantes nefastos",
+                "type": "nerf",
+                "details": [
+                  "Se pasó de la ventaja a la habilidad básica.",
+                  "El tiempo de reutilización aumentó de 3 a 6 segundos."
+                ]
+              },
+              {
+                "title": "Dedo en gatillo: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "Agregado.",
+                  "Usar una habilidad o recargar actualiza el tiempo de reutilización de Dire Triggers."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Soldier: 76",
+            "desc": "Permitir que Soldier: 76 recargue mientras corre introduce nuevas oportunidades de estilo de juego y refuerza su identidad como distribuidor de daños móviles. Se agregó una penalización temporal de velocidad de movimiento durante la recarga para garantizar que la interacción tenga una compensación significativa.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/242f302975d1faf2cc820bee8ff8a37a501a88e49c146ceab1d383b8310ad51a.png",
+            "changes": [
+              {
+                "title": "Sprint",
+                "type": "buff",
+                "details": [
+                  "Ahora puedes recargar mientras corres.",
+                  "Recargar mientras corres reduce la bonificación de velocidad de movimiento de Sprint en un 50 %, disminuyendo con el tiempo.",
+                  "Se agregó una configuración personalizada que permite a Sprint cancelar la recarga."
+                ]
+              },
+              {
+                "title": "Entrenamiento de agilidad: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "Remoto."
+                ]
+              },
+              {
+                "title": "Paso a toda velocidad: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "Nuevo.",
+                  "La bonificación de velocidad de movimiento de Sprint aumenta gradualmente en un 25 % adicional durante 2 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios menores se redujo en un 6 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales se redujo en un 5 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios principales se redujo en un 5 %."
+                ]
+              },
+              {
+                "title": "Sigilo",
+                "type": "adjust",
+                "details": [
+                  "La bonificación de velocidad de movimiento se redujo en un 50 % mientras se revela por el daño."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores se redujo en un 10 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios menores se redujo en un 10 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales se redujo en un 7 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios principales se redujo en un 7 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Vendetta puede resultar difícil de mitigar una vez que acorta la distancia. Estos ajustes reducen su capacidad de supervivencia y hacen que le resulte más difícil permanecer dentro del alcance efectivo, lo que obliga a un posicionamiento y un uso del tiempo de reutilización más deliberados.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/53109fa61b9fcdd83ca94ceb96a1321253a744e1b1319e2645a29264812988b4.png",
+            "changes": [
+              {
+                "title": "Armadura reducida de 100 a 75.",
+                "type": "nerf",
+                "details": [
+                  "Armadura reducida de 100 a 75."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios menores se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios menores se redujo en un 6 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales se redujo en un 5 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios principales se redujo en un 5 %."
+                ]
+              },
+              {
+                "title": "Embestida (pasivo)",
+                "type": "nerf",
+                "details": [
+                  "La velocidad de movimiento por acumulación se redujo del 4% al 2%."
+                ]
+              },
+              {
+                "title": "Colmillo Palatino",
+                "type": "adjust",
+                "details": [
+                  "El alcance adicional del giro por encima de la cabeza se redujo de 2,5 a 2,0 metros."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Widowmaker",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/170aeb0ae3da053cbfd3b7db386db88a904745d692361a006048928cc9a1990a.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios menores se redujo en un 6 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales se redujo en un 4 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios principales se redujo en un 4 %."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Anran",
+            "desc": "El daño de Anran podría parecer insuficiente en relación con el tiempo necesario para encender a los enemigos. Aumentar el daño de Fan the Flames mejora su capacidad para asegurar eliminaciones, mientras que agregar curación al kit básico de Dancing Blaze recompensa el uso efectivo de la habilidad y mejora su capacidad de supervivencia.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c1c148e97e4139e1c25f3668189ed5f86f86713bd7ba16ed0fa7472ae2be537b.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores se redujo en un 7 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios menores se redujo en un 7 %."
+                ]
+              },
+              {
+                "title": "El costo de los beneficios principales se redujo en un 5 %.",
+                "type": "buff",
+                "details": [
+                  "El costo de los beneficios principales se redujo en un 5 %."
+                ]
+              },
+              {
+                "title": "Avivar las llamas",
+                "type": "buff",
+                "details": [
+                  "El daño por impacto aumentó de 5 a 6."
+                ]
+              },
+              {
+                "title": "Fiebre del infierno",
+                "type": "nerf",
+                "details": [
+                  "Daño de impacto reducido de 50 a 30."
+                ]
+              },
+              {
+                "title": "resplandor bailando",
+                "type": "adjust",
+                "details": [
+                  "Ahora cura a Anran 50 de salud en el primer objetivo alcanzado y 25 de salud por cada objetivo posterior."
+                ]
+              },
+              {
+                "title": "Llamarada hambrienta – Beneficio mayor",
+                "type": "adjust",
+                "details": [
+                  "Cambió.",
+                  "Aumenta la curación de los golpes posteriores de Dancing Blaze en 25."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ana",
+            "desc": "Con la eliminación de la pasiva de Apoyo, Ana se ha vuelto más dependiente de la Granada Biótica para su autocuración. Reducir su tiempo de reutilización le da un acceso más frecuente a la habilidad y al mismo tiempo admite casos de uso tanto ofensivos como defensivos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Granada biótica",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 14 a 12 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "La capacidad de supervivencia de Brigitte puede parecer baja a pesar de necesitar operar a corta distancia para ser eficaz. Aumentar la salud del Escudo de barrera le da más flexibilidad y respalda mejor su función defensiva.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "Escudo de barrera",
+                "type": "buff",
+                "details": [
+                  "La salud aumentó de 250 a 300."
+                ]
+              },
+              {
+                "title": "Médico de combate – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización reembolsado aumentó de 0,5 a 0,75 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d169a8d9c4875ebebb6e635801ab75345221cb21e875c6eb1ad2a884195f48bb.png",
+            "changes": [
+              {
+                "title": "Vuelo frenético",
+                "type": "nerf",
+                "details": [
+                  "La aceleración se redujo en un 11%."
+                ]
+              },
+              {
+                "title": "Garras hacia afuera: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Las reducciones de tiempo de reutilización ahora se aplican al tiempo de reutilización de Claws Out."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6fd15df25b419c58a4c11569a8bc76e14a8e8c89ea689614a7cf3e8f2294c50.png",
+            "changes": [
+              {
+                "title": "Torpedos púlsares",
+                "type": "nerf",
+                "details": [
+                  "(6v6) El tiempo de reutilización aumentó de 10 a 12 segundos."
+                ]
+              },
+              {
+                "title": "Impulso de planeo",
+                "type": "adjust",
+                "details": [
+                  "La bonificación de velocidad de movimiento se redujo del 50 % al 40 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lifeweaver",
+            "desc": "Lifeweaver ha luchado por encontrar efectividad luego de las reducciones en su capacidad de supervivencia y la introducción de la reducción de curación en combate. Aumentar su producción de curación general y agregar una limpieza a Life Grip le proporciona capacidad de supervivencia y utilidad adicionales en su kit básico.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "Flor curativa",
+                "type": "buff",
+                "details": [
+                  "La curación máxima aumentó de 80 a 90."
+                ]
+              },
+              {
+                "title": "Dash rejuvenecedor",
+                "type": "buff",
+                "details": [
+                  "La curación aumentó de 45 a 55."
+                ]
+              },
+              {
+                "title": "Agarre de vida",
+                "type": "adjust",
+                "details": [
+                  "Ahora limpia a los aliados cuando se tira."
+                ]
+              },
+              {
+                "title": "Siembra la semilla: beneficio importante",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 14 a 11 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "fundido cruzado",
+                "type": "nerf",
+                "details": [
+                  "(6v6) Curación reducida de 20 a 18."
+                ]
+              },
+              {
+                "title": "Accelerando – Beneficio mayor",
+                "type": "adjust",
+                "details": [
+                  "Cambió.",
+                  "Gana un 15% de velocidad de ataque mientras la canción de velocidad de Lucio está activa, triplicada durante Amp It Up."
+                ]
+              },
+              {
+                "title": "Jinete Soundwave – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Ya no se puede cargar antes de que comience una ronda."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "La movilidad de Kiriko se ha reducido para limitar su capacidad de escapar desde largas distancias y obligarla a jugar más cerca de sus compañeros de equipo. Para ayudar a compensar este cambio, estamos aumentando la cadencia de Healing Ofuda para respaldar su efectividad general a pesar de la reducción de movilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Paso rápido",
+                "type": "nerf",
+                "details": [
+                  "El alcance del teletransporte se redujo de 35 a 30 metros."
+                ]
+              },
+              {
+                "title": "Ofuda curativa",
+                "type": "buff",
+                "details": [
+                  "La velocidad de disparo aumentó de 5 a 7 por segundo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mizuki",
+            "desc": "Estos cambios suponen pequeños ajustes en el flujo del kit de Mizuki. Katashiro Return ahora se puede usar de manera más reactiva, mientras que otros ajustes ayudan a mantener su poder general dentro de los límites previstos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8c5f25e135a5f200951caf4321be961a5ecbdfbe21a9c9fb96c6d17e0d887854.png",
+            "changes": [
+              {
+                "title": "El costo de los beneficios menores aumentó en un 16%.",
+                "type": "nerf",
+                "details": [
+                  "El costo de los beneficios menores aumentó en un 16%."
+                ]
+              },
+              {
+                "title": "El costo del beneficio principal aumentó en un 10 %.",
+                "type": "nerf",
+                "details": [
+                  "El costo del beneficio principal aumentó en un 10 %."
+                ]
+              },
+              {
+                "title": "Aura de remedio",
+                "type": "nerf",
+                "details": [
+                  "(6v6) Curación mínima reducida de 5 a 4,5.",
+                  "(6v6) Curación máxima reducida de 20 a 18."
+                ]
+              },
+              {
+                "title": "Santuario Kekkai",
+                "type": "buff",
+                "details": [
+                  "Ya no aparece si Mizuki es eliminada durante el tiempo de lanzamiento."
+                ]
+              },
+              {
+                "title": "El regreso de Katashiro",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede activar el regreso mientras otras animaciones están activas, excepto la animación de reparto de Kekkai Sanctuary.",
+                  "La bonificación de velocidad de movimiento se redujo del 35 % al 30 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "Flash Heal ha demostrado ser una habilidad convincente y expresiva y ahora se está agregando al kit básico de Mercy. Esto le brinda una curación a pedido más confiable y, al mismo tiempo, recompensa una gestión cuidadosa del tiempo de reutilización. Para tener en cuenta el poder añadido, parte de la curación y la movilidad básicas de Mercy se han reducido ligeramente.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "Curación relámpago",
+                "type": "adjust",
+                "details": [
+                  "Flash Heal pasó de la ventaja a la habilidad básica.",
+                  "El tiempo de reutilización se redujo de 15 a 12 segundos.",
+                  "La curación base aumentó de 50 a 60.",
+                  "El multiplicador de curación en aliados con menos del 50 % de salud se redujo de 3x a 2x."
+                ]
+              },
+              {
+                "title": "Bastón de Caduceo",
+                "type": "nerf",
+                "details": [
+                  "Curación reducida de 60 a 55."
+                ]
+              },
+              {
+                "title": "Ángel custodio",
+                "type": "nerf",
+                "details": [
+                  "Velocidad de lanzamiento reducida en un 10%."
+                ]
+              },
+              {
+                "title": "Dosis doble: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "Nuevo.",
+                  "Flash Heal gana una carga adicional pero su curación base se reduce en 10."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a9c2038a0c0b85aff625cd316a6b32764618170e78bb3edfe8c31ecf1a2a073d.png",
+            "changes": [
+              {
+                "title": "Torrente precipitado",
+                "type": "nerf",
+                "details": [
+                  "Duración reducida de 4 a 3,5 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Orbe de discordia",
+                "type": "nerf",
+                "details": [
+                  "(6v6) La amplificación del daño se redujo del 30% al 25%."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema que causaba un retraso al cambiar entre las animaciones de fuego primarias y secundarias de Lifeweaver.",
+      "Se solucionó un problema por el cual Mizuki no recibía crédito por la estadística \"Enemigos obstaculizados\" cuando se usaba Binding Chain en un Zenyatta en Transcendence.",
+      "Se solucionó un problema por el cual el Santuario Kekkai de Mizuki podía desaparecer si se lanzaba y se modificaba su posición.",
+      "Se solucionó un problema que causaba que el tiempo de control del orbe de Wuyang fuera cero por defecto en juegos personalizados.",
+      "Se solucionó un problema por el cual los efectos de sonido de Juno no se reproducían en las eliminaciones cuando su arma mítica estaba equipada.",
+      "Se solucionó un problema por el cual la habilidad Ronroneo del Jetpack Cat se cancelaba después de soltar a los usuarios conectados a Lifeline.",
+      "Se solucionó un problema por el cual el texto del mensaje del beneficio Detonador remoto de Ashe permanecía en pantalla incluso cuando estaba muerto.",
+      "Se solucionó un problema por el cual el corte superior de Vendetta a veces no podía alinearse con la retícula mientras se movía en tercera persona.",
+      "Se solucionó un problema por el cual Ana aplicaba incorrectamente el efecto de revelación de The Closer cuando no realizaba un disparo a la cabeza.",
+      "Se solucionó un problema por el cual la sobresalud del elemento de dosis letal de Ana no aumentaba correctamente con el poder de habilidad.",
+      "Se solucionó un problema por el cual las granadas bióticas creadas a partir de la Fuente de poder calmante de Ana otorgaban la misma sobresalud que las granadas bióticas básicas con el poder de remedio casero equipado.",
+      "Se solucionó un problema por el cual el daño adicional del Blade Parade Power de Junker Queen persistía después de desequiparlo.",
+      "Se solucionó un problema por el cual el mensaje del poder del boom controlado de Ashe permanece en la pantalla después de que la dinamita principal explota cuando el poder Out With a Bang también está equipado.",
+      "Se solucionó un problema por el cual el objeto Incendiary Blastpaper de Ashe aplicaba daño adicional por quemaduras dos veces si golpeaban varios perdigones de Coach Gun.",
+      "Se solucionó un problema por el cual el mod Iron Eyes no reducía el daño crítico de Vendetta.",
+      "Se solucionó un problema por el cual el poder Cataclisma de Vendetta también dañaba a los compañeros de equipo.",
+      "Se solucionó un problema por el cual el mod Busan Blaster de D.Va generaba incorrectamente la carga máxima.",
+      "Se solucionó un problema por el cual el Círculo de lucha de Zenyatta no aplicaba Orbes de discordia a los enemigos dentro del radio adicional otorgado por la Solución de Satya.",
+      "Se solucionó un problema por el cual el objeto general Salvaged Slugs no curaba a Moira cuando dañaba las barreras.",
+      "Se solucionó un problema por el cual el poder multibola de Moira generaba orbes con menos capacidad de la prevista."
+    ]
+  },
+  "translated": true
+}

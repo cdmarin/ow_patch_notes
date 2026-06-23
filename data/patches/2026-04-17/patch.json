@@ -1,0 +1,72 @@
+{
+  "version": "unknown",
+  "date": "2026-04-17",
+  "title": "Actualización del 17 de Abril 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización de revisión de equilibrio. Los códigos de repetición del parche del 14 de abril de 2026 todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [
+          {
+            "name": "Sierra",
+            "desc": "Sierra no ha sido tan eficaz como se esperaba desde su lanzamiento. El daño de su arma se incrementa para mejorar el rendimiento general, mientras que el aumento del daño del Disparo de seguimiento recompensa mejor a los jugadores por lograrlo con éxito. Los cambios en Anchor Drone mejoran la capacidad de respuesta de la movilidad y la capacidad de supervivencia de los drones, lo que permite estilos de juego más agresivos. El costo final de Sierra también ha aumentado debido a su velocidad de carga ya rápida en combinación con su producción de daño mejorada.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
+            "changes": [
+              {
+                "title": "Pionero",
+                "type": "nerf",
+                "details": [
+                  "El costo final aumentó en un 30%."
+                ]
+              },
+              {
+                "title": "Rifle de hélice",
+                "type": "buff",
+                "details": [
+                  "El daño por proyectil aumentó de 7 a 9."
+                ]
+              },
+              {
+                "title": "Toma de seguimiento",
+                "type": "buff",
+                "details": [
+                  "El daño por proyectil aumentó de 7 a 9."
+                ]
+              },
+              {
+                "title": "Dron ancla",
+                "type": "buff",
+                "details": [
+                  "La salud aumentó de 30 a 80.",
+                  "La velocidad de movimiento de agarre aumentó de 20 a 22."
+                ]
+              },
+              {
+                "title": "Medi-Drone: beneficio importante",
+                "type": "buff",
+                "details": [
+                  "La curación aumentó de 75 a 100."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": []
+      }
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
