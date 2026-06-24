@@ -234,16 +234,56 @@ async function main() {
                     log('Traduciendo al español...');
                     await initTranslator();
 
+                    // Contar total de elementos a traducir para mostrar progreso
+                    let totalToTranslate = 0;
+                    let translatedCount = 0;
+
+                    function countSectionItems(section) {
+                        let count = 0;
+                        if (section) {
+                            if (section.intro) count++;
+                            if (section.roles) {
+                                for (const heroes of Object.values(section.roles)) {
+                                    count += heroes.length;
+                                }
+                            }
+                            if (section.generalItems) {
+                                count += section.generalItems.length;
+                            }
+                        }
+                        return count;
+                    }
+
+                    if (!skipStadium) {
+                        totalToTranslate += countSectionItems(patchData.sections.stadium);
+                    }
+                    if (!skipGeneral && patchData.sections.gameBase) {
+                        totalToTranslate += countSectionItems(patchData.sections.gameBase);
+                    }
+                    if (patchData.sections.bugFixes && patchData.sections.bugFixes.length > 0) {
+                        totalToTranslate += patchData.sections.bugFixes.length;
+                    }
+
+                    const onProgress = () => {
+                        translatedCount++;
+                        // Imprimir para control interno del progress bar (invisible en la consola del frontend)
+                        console.log(`TRADUCCION_PROGRESO: ${translatedCount}/${totalToTranslate}`);
+                        // Imprimir para mostrar en la consola amigable del usuario
+                        log(`Traducción: ${translatedCount}/${totalToTranslate} elementos (${Math.round((translatedCount / totalToTranslate) * 100)}%)`, 'info');
+                    };
+
+                    log(`Total de elementos a traducir: ${totalToTranslate}`, 'info');
+
                     try {
                         if (!skipStadium) {
-                            patchData.sections.stadium = await translateSection(patchData.sections.stadium);
+                            patchData.sections.stadium = await translateSection(patchData.sections.stadium, onProgress);
                         }
-                        if (!skipGeneral && patchData.sections.gameBase.roles) {
-                            patchData.sections.gameBase = await translateSection(patchData.sections.gameBase);
+                        if (!skipGeneral && patchData.sections.gameBase) {
+                            patchData.sections.gameBase = await translateSection(patchData.sections.gameBase, onProgress);
                         }
                         if (patchData.sections.bugFixes && patchData.sections.bugFixes.length > 0) {
                             log('Traduciendo corrección de errores (Bug Fixes)...');
-                            patchData.sections.bugFixes = await translateBatch(patchData.sections.bugFixes);
+                            patchData.sections.bugFixes = await translateBatch(patchData.sections.bugFixes, onProgress);
                         }
                         patchData.translated = true;
                         log('Traducción completada con éxito.', 'success');

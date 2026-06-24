@@ -12,7 +12,7 @@ let useGoogleTranslate = true; // Por defecto usar Google Translate
  */
 async function initTranslator() {
     if (useGoogleTranslate) {
-        console.log('🌐 Usando la API de Google Translate (Rápida, 0% CPU local)...');
+        console.log('🌐 Iniciando el traductor...');
     } else {
         console.log('ℹ️  Traducción automática desactivada.');
     }
@@ -26,7 +26,7 @@ async function initTranslator() {
  */
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
-    
+
     if (useGoogleTranslate) {
         try {
             const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=${encodeURIComponent(text)}`;
@@ -38,7 +38,7 @@ async function translateText(text) {
             console.warn(`⚠️  Error con Google Translate: "${text.substring(0, 50)}..."`, error.message);
         }
     }
-    
+
     return text; // Fallback al inglés original
 }
 
@@ -47,7 +47,7 @@ async function translateText(text) {
  * @param {string[]} texts - Array de textos a traducir
  * @returns {Promise<string[]>} - Array de textos traducidos o los originales
  */
-async function translateBatch(texts) {
+async function translateBatch(texts, onProgress) {
     if (!Array.isArray(texts) || texts.length === 0) return [];
 
     if (useGoogleTranslate) {
@@ -56,6 +56,7 @@ async function translateBatch(texts) {
             for (const text of texts) {
                 const translated = await translateText(text);
                 results.push(translated);
+                if (onProgress) onProgress();
                 await new Promise(resolve => setTimeout(resolve, 80)); // Pequeña espera para evitar rate limiting (429)
             }
             return results;
@@ -75,7 +76,7 @@ async function translateBatch(texts) {
  */
 async function translateHero(heroData) {
     console.log(`  🌐 Traduciendo: ${heroData.name}...`);
-    
+
     // Si no se usa traducción, retornar original
     if (!useGoogleTranslate) {
         return heroData;
@@ -85,17 +86,17 @@ async function translateHero(heroData) {
     try {
         const stringsToTranslate = [];
         const mapping = []; // Permite mapear los resultados de vuelta a su propiedad original
-        
+
         if (heroData.desc) {
             stringsToTranslate.push(heroData.desc);
             mapping.push({ type: 'desc' });
         }
-        
+
         if (heroData.changes) {
             heroData.changes.forEach((change, changeIdx) => {
                 stringsToTranslate.push(change.title);
                 mapping.push({ type: 'change_title', changeIdx });
-                
+
                 if (change.details) {
                     change.details.forEach((detail, detailIdx) => {
                         stringsToTranslate.push(detail);
@@ -104,14 +105,14 @@ async function translateHero(heroData) {
                 }
             });
         }
-        
+
         if (stringsToTranslate.length === 0) {
             return heroData;
         }
-        
+
         // Traducir todo de una sola vez
         const translatedStrings = await translateBatch(stringsToTranslate);
-        
+
         // Reconstruir el objeto traducido clonando en profundidad
         const translated = { ...heroData };
         if (heroData.changes) {
@@ -120,7 +121,7 @@ async function translateHero(heroData) {
                 details: c.details ? [...c.details] : []
             }));
         }
-        
+
         mapping.forEach((mapInfo, index) => {
             const translatedText = translatedStrings[index];
             if (mapInfo.type === 'desc') {
@@ -131,7 +132,7 @@ async function translateHero(heroData) {
                 translated.changes[mapInfo.changeIdx].details[mapInfo.detailIdx] = translatedText;
             }
         });
-        
+
         return translated;
     } catch (error) {
         console.warn(`⚠️  Error con traducción batch de héroe (${heroData.name}):`, error.message);
@@ -144,32 +145,39 @@ async function translateHero(heroData) {
  * @param {Object} section - Sección del parche
  * @returns {Promise<Object>} - Sección traducida
  */
-async function translateSection(section) {
+async function translateSection(section, onProgress) {
     const translated = { ...section };
-    
+
     if (section.intro) {
         translated.intro = await translateText(section.intro);
+        if (onProgress) onProgress();
     }
-    
+
     if (section.roles) {
         translated.roles = {};
         for (const [role, heroes] of Object.entries(section.roles)) {
-            console.log(`\n📁 Traduciendo rol: ${role}`);
+            if (heroes && heroes.length > 0) {
+                console.log(`\n📁 Traduciendo rol: ${role}`);
+            }
             translated.roles[role] = [];
             for (const hero of heroes) {
                 translated.roles[role].push(await translateHero(hero));
+                if (onProgress) onProgress();
             }
         }
     }
-    
+
     if (section.generalItems) {
-        console.log(`\n📦 Traduciendo objetos generales...`);
         translated.generalItems = [];
+        if (section.generalItems.length > 0) {
+            console.log(`\n📦 Traduciendo objetos generales...`);
+        }
         for (const item of section.generalItems) {
             translated.generalItems.push(await translateHero(item));
+            if (onProgress) onProgress();
         }
     }
-    
+
     return translated;
 }
 

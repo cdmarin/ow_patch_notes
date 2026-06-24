@@ -1,8 +1,56 @@
+let currentPatch = 1;
+let totalPatches = 1;
+let lastHeroName = '';
+
 export function appendConsoleLog(consoleEl, text, forceType) {
+    // Capturar el nombre del héroe actual en traducción
+    if (text.includes('🌐 Traduciendo:')) {
+        const parts = text.split('🌐 Traduciendo:');
+        if (parts.length > 1) {
+            lastHeroName = parts[1].replace(/\.+$/, '').trim();
+        }
+    }
+
+    // Si es un log de control de progreso de traducción, actualizar la línea de progreso en lugar de acumular líneas
+    if (text.includes('TRADUCCION_PROGRESO:')) {
+        const match = text.match(/TRADUCCION_PROGRESO:\s*(\d+)\/(\d+)/);
+        if (match) {
+            const count = match[1];
+            const total = match[2];
+            
+            let progressLine = consoleEl.querySelector('.console-translation-progress');
+            if (!progressLine) {
+                progressLine = document.createElement('div');
+                progressLine.className = 'console-line console-translation-progress';
+                progressLine.style.color = '#38bdf8'; // Celeste brillante
+                progressLine.style.fontWeight = '600';
+                consoleEl.appendChild(progressLine);
+            }
+            
+            if (lastHeroName) {
+                progressLine.textContent = `⏳ Traducción ${lastHeroName} (${count}/${total})`;
+            } else {
+                progressLine.textContent = `⏳ Traducción elementos (${count}/${total})`;
+            }
+            consoleEl.scrollTop = consoleEl.scrollHeight;
+        }
+        return;
+    }
+
+    // Filtrar otros logs de control detallados de traducción para no inundar la consola de la UI
+    // (Mantenemos los mensajes de héroe individual '🌐 Traduciendo: ...', '📁 Traduciendo rol: ...' y '📦 Traduciendo objetos...')
+    const lowerText = text.toLowerCase();
+    if (
+        text.includes('TRADUCCION_PROGRESO') ||
+        lowerText.includes('traducción:') ||
+        lowerText.includes('elementos a traducir') ||
+        lowerText.includes('traduciendo corrección de errores')
+    ) {
+        return;
+    }
+
     const logLine = document.createElement('div');
     logLine.className = 'console-line';
-    
-    // Limpiar marcadores especiales
     let cleanText = text.replace('SUCCESS:', '')
                         .replace('ERROR:', '')
                         .replace(' (vunknown)', '')
@@ -52,21 +100,50 @@ export function appendConsoleLog(consoleEl, text, forceType) {
 }
 
 export function updateProgressBar(line, progressBar, progressPercent) {
+    // Detectar si estamos procesando un parche específico en el bucle
+    if (line.includes('Procesando parche')) {
+        const match = line.match(/Procesando parche\s+(\d+)\/(\d+)/);
+        if (match) {
+            currentPatch = parseInt(match[1], 10);
+            totalPatches = parseInt(match[2], 10);
+        }
+    }
+
     let currentPct = parseInt(progressPercent.textContent) || 0;
-    let targetPct = currentPct;
+    let patchInternalPct = 0;
 
     if (line.includes('Paso 1/5')) {
-        targetPct = 20;
+        patchInternalPct = 10;
     } else if (line.includes('Paso 2/5')) {
-        targetPct = 40;
+        patchInternalPct = 20;
     } else if (line.includes('Traduciendo al español') || line.includes('Traduciendo corrección')) {
-        targetPct = 60;
+        patchInternalPct = 25;
+    } else if (line.includes('TRADUCCION_PROGRESO:')) {
+        const match = line.match(/TRADUCCION_PROGRESO:\s*(\d+)\/(\d+)/);
+        if (match) {
+            const count = parseInt(match[1], 10);
+            const total = parseInt(match[2], 10);
+            if (total > 0) {
+                // Escalar de 25% a 85% durante la traducción de este parche
+                const progressFraction = count / total;
+                patchInternalPct = Math.round(25 + progressFraction * (85 - 25));
+            }
+        }
     } else if (line.includes('Guardando archivos de datos')) {
-        targetPct = 80;
+        patchInternalPct = 90;
     } else if (line.includes('Actualizando índice')) {
-        targetPct = 90;
+        patchInternalPct = 95;
     } else if (line.includes('SUCCESS: Proceso finalizado') || line.includes('finalizado exitosamente')) {
-        targetPct = 100;
+        currentPatch = totalPatches;
+        patchInternalPct = 100;
+    }
+
+    // Calcular el porcentaje total acumulado (repartido entre todos los parches)
+    let targetPct = currentPct;
+    if (totalPatches > 0) {
+        const basePct = ((currentPatch - 1) / totalPatches) * 100;
+        const phaseContribution = (patchInternalPct / 100) * (100 / totalPatches);
+        targetPct = Math.round(basePct + phaseContribution);
     }
 
     if (targetPct > currentPct) {
@@ -87,6 +164,11 @@ export async function startScrapeStream(queryParams, onSuccess) {
         console.error('[App] No se encontraron elementos DOM para mostrar el progreso de refresco.');
         return;
     }
+
+    // Resetear variables globales de seguimiento de parches
+    currentPatch = 1;
+    totalPatches = 1;
+    lastHeroName = '';
 
     // Mostrar overlay, ocultar footer, resetear progreso
     overlay.classList.remove('hidden');
