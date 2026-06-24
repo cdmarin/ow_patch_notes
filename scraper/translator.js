@@ -1,58 +1,28 @@
 /**
- * translator.js — Módulo de traducción automática via LibreTranslate
- * 
- * LibreTranslate es open source y self-hosteable.
- * También hay instancias públicas gratuitas disponibles.
- * 
- * Instancia pública por defecto: https://libretranslate.com
- * Para self-host: https://github.com/LibreTranslate/LibreTranslate
+ * translator.js — Módulo de traducción automática via Google Translate
  */
 
 const axios = require('axios');
 
-// Configuración de LibreTranslate
-const LIBRETRANSLATE_URL = process.env.LIBRETRANSLATE_URL || 'https://libretranslate.com';
-const LIBRETRANSLATE_KEY = process.env.LIBRETRANSLATE_KEY || ''; // Vacío = sin autenticación
-
-// Configuración de traducción local (Transformers.js) y online (Google Translate)
-let localTranslator = null;
-let useLocalAI = false;
+// Configuración de traducción online (Google Translate)
 let useGoogleTranslate = true; // Por defecto usar Google Translate
 
-// Rate limiting: espera entre requests para no saturar la API externa (solo para LibreTranslate)
-const DELAY_MS = 500;
-const sleep = (ms) => {
-    if (useLocalAI || useGoogleTranslate) return Promise.resolve(); // Sin espera para traducción rápida
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
-
 /**
- * Inicializa el traductor. Si está en modo Google Translate, no requiere modelo local.
+ * Inicializa el traductor.
  */
 async function initTranslator() {
     if (useGoogleTranslate) {
         console.log('🌐 Usando la API de Google Translate (Rápida, 0% CPU local)...');
-        return;
-    }
-    
-    try {
-        // Intentar import dinámico (CommonJS compatible con ESM de transformers.js)
-        const { pipeline } = await import('@xenova/transformers');
-        console.log('🤖 Inicializando modelo de traducción local (Helsinki-NLP/opus-mt-en-es)...');
-        console.log('ℹ️  La primera vez se descargará el modelo (~120MB), espera un momento...');
-        localTranslator = await pipeline('translation', 'Xenova/opus-mt-en-es');
-        useLocalAI = true;
-        console.log('🤖 ¡Modelo local cargado exitosamente! Traducción 100% offline activada.');
-    } catch (e) {
-        console.warn('⚠️  No se pudo inicializar Transformers.js. Detalle del error:', e.message);
-        console.log('ℹ️  Usando LibreTranslate como fallback.');
+    } else {
+        console.log('ℹ️  Traducción automática desactivada.');
     }
 }
 
 /**
- * Traduce un texto de inglés a español.
+ * Traduce un texto de inglés a español usando Google Translate.
+ * Si falla, retorna el texto original en inglés.
  * @param {string} text - Texto a traducir
- * @returns {Promise<string>} - Texto traducido
+ * @returns {Promise<string>} - Texto traducido o el original
  */
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
@@ -69,46 +39,13 @@ async function translateText(text) {
         }
     }
     
-    // Si falla o no se usa Google Translate: Fallback a Local AI
-    if (useLocalAI && localTranslator) {
-        try {
-            const result = await localTranslator(text);
-            return result[0]?.translation_text || text;
-        } catch (error) {
-            console.warn(`⚠️  Error con traducción local: "${text.substring(0, 50)}..."`, error.message);
-            return text;
-        }
-    }
-    
-    // Fallback: LibreTranslate
-    try {
-        const payload = {
-            q: text,
-            source: 'en',
-            target: 'es',
-            format: 'text'
-        };
-        
-        if (LIBRETRANSLATE_KEY) {
-            payload.api_key = LIBRETRANSLATE_KEY;
-        }
-        
-        const response = await axios.post(`${LIBRETRANSLATE_URL}/translate`, payload, {
-            headers: { 'Content-Type': 'application/json' },
-            timeout: 10000
-        });
-        
-        return response.data.translatedText;
-    } catch (error) {
-        console.warn(`⚠️  Error traduciendo (LibreTranslate): "${text.substring(0, 50)}..."`, error.message);
-        return text; // Devuelve el original si falla
-    }
+    return text; // Fallback al inglés original
 }
 
 /**
  * Traduce un array de strings en batch.
  * @param {string[]} texts - Array de textos a traducir
- * @returns {Promise<string[]>} - Array de textos traducidos
+ * @returns {Promise<string[]>} - Array de textos traducidos o los originales
  */
 async function translateBatch(texts) {
     if (!Array.isArray(texts) || texts.length === 0) return [];
@@ -128,61 +65,23 @@ async function translateBatch(texts) {
         }
     }
 
-    if (useLocalAI && localTranslator) {
-        try {
-            const results = await localTranslator(texts);
-            return results.map(r => r?.translation_text || '');
-        } catch (error) {
-            console.warn(`⚠️  Error con traducción local batch:`, error.message);
-        }
-    }
-
-    const results = [];
-    for (const text of texts) {
-        const translated = await translateText(text);
-        results.push(translated);
-        await sleep(DELAY_MS);
-    }
-    return results;
+    return texts;
 }
 
 /**
  * Traduce un objeto de cambios de héroe completo.
  * @param {Object} heroData - Datos del héroe con cambios
- * @returns {Promise<Object>} - Datos del héroe traducidos
+ * @returns {Promise<Object>} - Datos del héroe traducidos o los originales
  */
 async function translateHero(heroData) {
     console.log(`  🌐 Traduciendo: ${heroData.name}...`);
     
-    // Si no se usa traducción rápida (Google o Local AI), comportamiento secuencial original con delay
-    if (!useGoogleTranslate && (!useLocalAI || !localTranslator)) {
-        const translated = { ...heroData };
-        
-        // Traducir descripción
-        if (heroData.desc) {
-            translated.desc = await translateText(heroData.desc);
-            await sleep(DELAY_MS);
-        }
-        
-        // Traducir cambios
-        if (heroData.changes) {
-            translated.changes = [];
-            for (const change of heroData.changes) {
-                const translatedChange = {
-                    ...change,
-                    title: await translateText(change.title),
-                };
-                await sleep(DELAY_MS);
-                
-                translatedChange.details = await translateBatch(change.details);
-                translated.changes.push(translatedChange);
-            }
-        }
-        
-        return translated;
+    // Si no se usa traducción, retornar original
+    if (!useGoogleTranslate) {
+        return heroData;
     }
 
-    // Con Google Translate o IA local: Agrupar todo el texto en un único batch/paralelo
+    // Con Google Translate: Agrupar todo el texto en un único batch
     try {
         const stringsToTranslate = [];
         const mapping = []; // Permite mapear los resultados de vuelta a su propiedad original
@@ -211,13 +110,7 @@ async function translateHero(heroData) {
         }
         
         // Traducir todo de una sola vez
-        let translatedStrings;
-        if (useLocalAI && localTranslator) {
-            const results = await localTranslator(stringsToTranslate);
-            translatedStrings = results.map(r => r?.translation_text || '');
-        } else {
-            translatedStrings = await translateBatch(stringsToTranslate);
-        }
+        const translatedStrings = await translateBatch(stringsToTranslate);
         
         // Reconstruir el objeto traducido clonando en profundidad
         const translated = { ...heroData };
@@ -241,7 +134,7 @@ async function translateHero(heroData) {
         
         return translated;
     } catch (error) {
-        console.warn(`⚠️  Error con traducción local batch de héroe (${heroData.name}):`, error.message);
+        console.warn(`⚠️  Error con traducción batch de héroe (${heroData.name}):`, error.message);
         return heroData; // Fallback al original sin traducir en caso de error fatal
     }
 }
@@ -256,7 +149,6 @@ async function translateSection(section) {
     
     if (section.intro) {
         translated.intro = await translateText(section.intro);
-        await sleep(DELAY_MS);
     }
     
     if (section.roles) {

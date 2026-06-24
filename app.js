@@ -140,10 +140,15 @@ function countAllChanges(patchData) {
     if (!patchData || !patchData.sections) return 0;
     let count = 0;
     const countSection = (section) => {
-        if (!section || !section.roles) return;
-        Object.values(section.roles).forEach(heroes => {
-            if (Array.isArray(heroes)) heroes.forEach(h => count += (h.changes || []).length);
-        });
+        if (!section) return;
+        if (section.roles) {
+            Object.values(section.roles).forEach(heroes => {
+                if (Array.isArray(heroes)) heroes.forEach(h => count += (h.changes || []).length);
+            });
+        }
+        if (Array.isArray(section.generalItems)) {
+            section.generalItems.forEach(item => count += (item.changes || []).length);
+        }
     };
     countSection(patchData.sections.stadium);
     countSection(patchData.sections.gameBase);
@@ -232,7 +237,7 @@ function renderSidebar(patchData) {
         ROLES.forEach(r => {
             totalHeroes += (sectionData?.roles?.[r] || []).length;
         });
-        if (state.currentSection === 'stadium' && sectionData?.generalItems?.length > 0) {
+        if (sectionData?.generalItems?.length > 0) {
             totalHeroes += sectionData.generalItems.length;
         }
 
@@ -262,8 +267,8 @@ function renderSidebar(patchData) {
             roleGroup.appendChild(btn);
         });
 
-        // Items generales (Stadium)
-        if (state.currentSection === 'stadium' && sectionData?.generalItems?.length > 0) {
+        // Items generales
+        if (sectionData?.generalItems?.length > 0) {
             const generalBtn = document.createElement('button');
             generalBtn.className = `role-btn ${state.currentRole === '__general__' ? 'active' : ''}`;
             generalBtn.dataset.role = '__general__';
@@ -410,8 +415,8 @@ function renderContent(patchData) {
             dom.content.appendChild(roleSection);
         });
 
-        // General items (Stadium only)
-        if (state.currentSection === 'stadium' && section.generalItems?.length > 0) {
+        // General items
+        if (section.generalItems?.length > 0) {
             const generalSection = document.createElement('div');
             generalSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === '__general__' ? 'active' : ''}`;
             generalSection.id = 'role-__general__';
@@ -533,31 +538,21 @@ function renderContentNotDownloaded(patchMeta) {
     if (scrapeBtn) {
         scrapeBtn.onclick = async () => {
             const urlVal = autoUrl;
+            const queryParams = `?url=${encodeURIComponent(urlVal)}`;
 
             scrapeBtn.disabled = true;
             scrapeBtn.textContent = '⏳ Descargando...';
             if (dom.refreshBtn) dom.refreshBtn.classList.add('spinning');
 
-            try {
-                const response = await fetch(`/api/scrape?url=${encodeURIComponent(urlVal)}`);
-                const data = await response.json();
+            await startScrapeStream(queryParams, async () => {
+                await init(true); // Recargar index sin cambiar a la última versión por defecto
+                dom.patchSelect.value = patchMeta.id; // Ajustar selector al parche descargado
+                await loadPatch(patchMeta.id); // Mostrar datos del parche descargado
+            });
 
-                if (data.success) {
-                    alert('¡Parche descargado con éxito!');
-                    await init(true); // Recargar index sin cambiar a la última versión por defecto
-                    dom.patchSelect.value = patchMeta.id; // Ajustar selector al parche descargado
-                    await loadPatch(patchMeta.id); // Mostrar datos del parche descargado
-                } else {
-                    alert(`Error al descargar el parche: ${data.error}`);
-                }
-            } catch (err) {
-                console.error(err);
-                alert(`Error de red al conectar con el servidor: ${err.message}`);
-            } finally {
-                scrapeBtn.disabled = false;
-                scrapeBtn.textContent = '📥 Descargar y procesar';
-                if (dom.refreshBtn) dom.refreshBtn.classList.remove('spinning');
-            }
+            scrapeBtn.disabled = false;
+            scrapeBtn.textContent = '📥 Descargar y procesar';
+            if (dom.refreshBtn) dom.refreshBtn.classList.remove('spinning');
         };
     }
 }
@@ -791,6 +786,151 @@ function generateAllMonths() {
     return monthsList;
 }
 
+// ─── Scrape Stream Helpers ────────────────────────────────────────────────────
+
+function appendConsoleLog(consoleEl, text, forceType) {
+    const logLine = document.createElement('div');
+    logLine.className = 'console-line';
+    
+    // Limpiar marcadores especiales
+    let cleanText = text.replace('SUCCESS:', '').replace('ERROR:', '').trim();
+    if (!cleanText) return;
+
+    logLine.textContent = cleanText;
+
+    if (forceType === 'error' || text.startsWith('ERROR:') || text.includes('❌') || text.includes('Error fatal:')) {
+        logLine.classList.add('log-error');
+    } else if (forceType === 'success' || text.startsWith('SUCCESS:') || text.includes('✅') || text.includes('exitosamente')) {
+        logLine.classList.add('log-success');
+    } else if (text.includes('⚠️')) {
+        logLine.classList.add('log-warn');
+    } else if (text.includes('ℹ️') || text.includes('Paso')) {
+        logLine.classList.add('log-info');
+    }
+
+    consoleEl.appendChild(logLine);
+    consoleEl.scrollTop = consoleEl.scrollHeight;
+}
+
+function updateProgressBar(line, progressBar, progressPercent) {
+    let currentPct = parseInt(progressPercent.textContent) || 0;
+    let targetPct = currentPct;
+
+    if (line.includes('Paso 1/5')) {
+        targetPct = 20;
+    } else if (line.includes('Paso 2/5')) {
+        targetPct = 40;
+    } else if (line.includes('Traduciendo al español') || line.includes('Traduciendo corrección')) {
+        targetPct = 60;
+    } else if (line.includes('Guardando archivos de datos')) {
+        targetPct = 80;
+    } else if (line.includes('Actualizando índice')) {
+        targetPct = 90;
+    } else if (line.includes('SUCCESS: Proceso finalizado') || line.includes('finalizado exitosamente')) {
+        targetPct = 100;
+    }
+
+    if (targetPct > currentPct) {
+        progressBar.style.width = `${targetPct}%`;
+        progressPercent.textContent = `${targetPct}%`;
+    }
+}
+
+async function startScrapeStream(queryParams, onSuccess) {
+    const overlay = document.getElementById('scrape-overlay');
+    const consoleEl = document.getElementById('scrape-console');
+    const progressBar = document.getElementById('scrape-progress-inner');
+    const progressPercent = document.getElementById('scrape-percent');
+    const footer = document.getElementById('scrape-footer');
+    const closeBtn = document.getElementById('scrape-close-btn');
+
+    if (!overlay || !consoleEl || !progressBar || !progressPercent || !footer || !closeBtn) {
+        console.error('[App] No se encontraron elementos DOM para mostrar el progreso de refresco.');
+        return;
+    }
+
+    // Mostrar overlay, ocultar footer, resetear progreso
+    overlay.classList.remove('hidden');
+    footer.classList.add('hidden');
+    progressBar.style.width = '0%';
+    progressPercent.textContent = '0%';
+    consoleEl.innerHTML = '';
+
+    let success = false;
+    let errorMsg = '';
+
+    try {
+        const response = await fetch(`/api/scrape${queryParams}`);
+        if (!response.ok) {
+            throw new Error(`Error de red HTTP ${response.status}`);
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        let buffer = '';
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop(); // Mantener la última línea incompleta en el buffer
+
+            for (const line of lines) {
+                const trimmed = line.trim();
+                if (trimmed) {
+                    appendConsoleLog(consoleEl, trimmed);
+                    updateProgressBar(trimmed, progressBar, progressPercent);
+
+                    if (trimmed.includes('SUCCESS: Proceso finalizado') || trimmed.includes('finalizado exitosamente')) {
+                        success = true;
+                    } else if (trimmed.startsWith('ERROR:') || trimmed.includes('Error fatal:')) {
+                        errorMsg = trimmed.replace('ERROR:', '').trim();
+                    }
+                }
+            }
+        }
+
+        // Procesar cualquier texto remanente en el buffer
+        if (buffer) {
+            const trimmed = buffer.trim();
+            if (trimmed) {
+                appendConsoleLog(consoleEl, trimmed);
+                updateProgressBar(trimmed, progressBar, progressPercent);
+                if (trimmed.includes('SUCCESS: Proceso finalizado') || trimmed.includes('finalizado exitosamente')) {
+                    success = true;
+                } else if (trimmed.startsWith('ERROR:') || trimmed.includes('Error fatal:')) {
+                    errorMsg = trimmed.replace('ERROR:', '').trim();
+                }
+            }
+        }
+
+    } catch (err) {
+        console.error('[App] Error en stream de scrape:', err);
+        appendConsoleLog(consoleEl, `ERROR: ${err.message}`, 'error');
+        errorMsg = err.message;
+    } finally {
+        // Finalizado el streaming de datos
+        footer.classList.remove('hidden');
+        if (success) {
+            progressBar.style.width = '100%';
+            progressPercent.textContent = '100%';
+            appendConsoleLog(consoleEl, '✅ Proceso completado con éxito', 'success');
+        } else {
+            appendConsoleLog(consoleEl, `❌ Error en el proceso: ${errorMsg || 'Desconocido'}`, 'error');
+        }
+
+        // Controlador del botón de cerrar
+        closeBtn.onclick = () => {
+            overlay.classList.add('hidden');
+            if (success && onSuccess) {
+                onSuccess();
+            }
+        };
+    }
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 async function init(skipLoadingPatch = false) {
@@ -890,27 +1030,15 @@ async function init(skipLoadingPatch = false) {
                 queryParams += '&url=' + encodeURIComponent(state.currentPatch.url);
             }
 
-            try {
-                const response = await fetch(`/api/scrape${queryParams}`);
-                const data = await response.json();
-                if (data.success) {
-                    console.log('[App] Raspado exitoso. Recargando datos en la interfaz...');
-                    if (data.stdout) console.log(data.stdout);
+            await startScrapeStream(queryParams, async () => {
+                console.log('[App] Raspado exitoso. Recargando datos en la interfaz...');
+                const currentPatchId = state.currentPatch?.date || dom.patchSelect.value;
+                await init(true); // Recargar index sin reiniciar la UI al primer parche
+                dom.patchSelect.value = currentPatchId;
+                await loadPatch(currentPatchId);
+            });
 
-                    // Recargar el index y luego volver a cargar el parche actual
-                    const currentPatchId = state.currentPatch?.date || dom.patchSelect.value;
-                    await init(true); // Recargar index sin reiniciar la UI al primer parche
-                    dom.patchSelect.value = currentPatchId;
-                    await loadPatch(currentPatchId);
-                } else {
-                    alert(`Error al refrescar los datos: ${data.error || 'Desconocido'}`);
-                }
-            } catch (err) {
-                console.error('[App] Error de red al solicitar el raspado:', err);
-                alert(`Error de red al conectar con el servidor: ${err.message}`);
-            } finally {
-                dom.refreshBtn.classList.remove('spinning');
-            }
+            dom.refreshBtn.classList.remove('spinning');
         });
     }
 

@@ -30,6 +30,37 @@
         </div>
     </div>
 
+    <!-- Scrape Progress Overlay -->
+    <div id="scrape-overlay" class="hidden" role="status" aria-live="polite">
+        <div class="scrape-card">
+            <div class="scrape-header">
+                <img class="scrape-logo" src="logo.svg" alt="Overwatch">
+                <div class="scrape-title-group">
+                    <div class="scrape-title">Actualizando Notas de Parche</div>
+                    <div class="scrape-subtitle">Ejecutando scraper y traductor automático...</div>
+                </div>
+            </div>
+            
+            <div class="scrape-body">
+                <div class="scrape-progress-container">
+                    <div class="scrape-progress-bar">
+                        <div class="scrape-progress-inner" id="scrape-progress-inner"></div>
+                    </div>
+                    <span class="scrape-percent" id="scrape-percent">0%</span>
+                </div>
+                
+                <div class="scrape-console" id="scrape-console">
+                    <!-- Los logs se escribirán aquí en tiempo real -->
+                </div>
+            </div>
+            
+            <div class="scrape-footer hidden" id="scrape-footer">
+                <button id="scrape-close-btn" class="scrape-btn">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Header -->
     <header role="banner">
         <div class="header-brand">

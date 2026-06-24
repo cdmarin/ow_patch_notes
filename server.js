@@ -64,26 +64,50 @@ const server = http.createServer((req, res) => {
         const cmd = `node scraper.js ${args.join(' ')}`;
         const scraperDir = path.join(PUBLIC_DIR, 'scraper');
 
-        const child = exec(cmd, { cwd: scraperDir }, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`[Server] Error al ejecutar el scraper: ${error.message}`);
-                res.writeHead(500, { 'Content-Type': 'application/json' });
-                res.end(JSON.stringify({ success: false, error: error.message, stderr }));
-                return;
-            }
-
-            console.log(`[Server] Scraper finalizado con éxito.`);
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ success: true, stdout }));
+        // Establecer cabeceras para respuesta en streaming chunked
+        res.writeHead(200, {
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Transfer-Encoding': 'chunked',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive'
         });
 
-        // Pipe the logs in real-time to the server console
+        const child = exec(cmd, { cwd: scraperDir });
+
         child.stdout.on('data', (data) => {
+            res.write(data);
             process.stdout.write(data);
         });
+
         child.stderr.on('data', (data) => {
+            res.write(data);
             process.stderr.write(data);
         });
+
+        child.on('close', (code) => {
+            if (code !== 0) {
+                console.error(`[Server] Error al ejecutar el scraper, código de salida: ${code}`);
+                res.write(`\nERROR: El proceso terminó con código ${code}\n`);
+            } else {
+                console.log(`[Server] Scraper finalizado con éxito.`);
+                res.write(`\nSUCCESS: Proceso finalizado\n`);
+            }
+            res.end();
+        });
+
+        child.on('error', (err) => {
+            console.error(`[Server] Error al iniciar el proceso: ${err.message}`);
+            res.write(`\nERROR: No se pudo iniciar el scraper: ${err.message}\n`);
+            res.end();
+        });
+
+        req.on('close', () => {
+            if (child.kill) {
+                child.kill();
+                console.log('[Server] Conexión cerrada por el cliente. Proceso scraper finalizado.');
+            }
+        });
+
         return;
     }
 

@@ -1026,6 +1026,201 @@ header {
     }
 }
 
+/* ─── Scrape Progress Overlay ───────────────────────────────────────────── */
+#scrape-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 9, 15, 0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9500;
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+#scrape-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scrape-card {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scrape-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scrape-logo {
+    width: 44px;
+    height: 44px;
+    filter: drop-shadow(0 0 10px var(--orange));
+}
+
+.scrape-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.scrape-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.scrape-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-3);
+}
+
+.scrape-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Progress bar inside overlay */
+.scrape-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scrape-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--surface-2);
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scrape-progress-inner {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, var(--orange), var(--gold));
+    border-radius: 100px;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px var(--orange-glow);
+}
+
+.scrape-percent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--orange-light);
+    min-width: 35px;
+    text-align: right;
+}
+
+/* Console window */
+.scrape-console {
+    background: #020408;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+    height: 380px;
+    overflow-y: auto;
+    padding: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.scrape-console::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrape-console::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 10px;
+}
+
+.console-line {
+    color: var(--text-2);
+    word-break: break-all;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+.console-line.log-info {
+    color: var(--blue);
+}
+
+.console-line.log-success {
+    color: var(--buff-color);
+}
+
+.console-line.log-error {
+    color: var(--nerf-color);
+    font-weight: 600;
+}
+
+.console-line.log-warn {
+    color: var(--gold);
+}
+
+.scrape-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scrape-btn {
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    border: none;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: var(--t);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.scrape-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
+}
+
+.scrape-btn:active {
+    transform: translateY(0);
+}
+
 /* ─── No Results ────────────────────────────────────────────────────────── */
 .no-results {
     text-align: center;

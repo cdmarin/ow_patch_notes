@@ -291,6 +291,57 @@ async function main() {
         console.log('\nAhora puedes abrir index.html en el navegador para ver los cambios.\n');
 
     } catch (error) {
+        // Verificar si es un error 404 de una URL mensual
+        const monthlyUrlMatch = targetUrl.match(/\/live\/(\d{4})\/(\d{2})/);
+        if (monthlyUrlMatch && error.message.includes('404')) {
+            const year = monthlyUrlMatch[1];
+            const month = monthlyUrlMatch[2];
+            const patchId = `${year}-${month}-01`;
+            const outputDir = argv.output || getPatchDir(patchId);
+            const patchJsonPath = path.join(outputDir, 'patch.json');
+            const metaJsonPath = path.join(outputDir, 'meta.json');
+            
+            log(`⚠️ No se encontraron notas de parche en Blizzard para ${year}-${month} (HTTP 404). Creando marcador de mes sin parches...`, 'warn');
+            
+            const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            const title = `Actualización de ${months[parseInt(month, 10) - 1]} ${year}`;
+            
+            const emptyPatch = {
+                version: "—",
+                date: patchId,
+                title: `${title} (Sin actualizaciones)`,
+                sections: {
+                    gameBase: { intro: "No hubo parches publicados por Blizzard en este mes.", roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] } },
+                    stadium: { intro: "", roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
+                    bugFixes: []
+                },
+                translated: true,
+                isEmptyPlaceholder: true
+            };
+            
+            const metaData = {
+                version: "—",
+                date: patchId,
+                title: `${title} (Sin actualizaciones)`,
+                subtitle: 'No se publicaron notas de parche en este mes.',
+                url: targetUrl,
+                season: '—'
+            };
+            
+            await fs.ensureDir(outputDir);
+            await fs.writeJson(patchJsonPath, emptyPatch, { spaces: 2 });
+            await fs.writeJson(metaJsonPath, metaData, { spaces: 2 });
+            
+            await updatePatchesIndex({
+                id: patchId,
+                ...metaData,
+                dataPath: `data/patches/${patchId}/patch.json`
+            });
+            
+            console.log('\n🎉 SUCCESS: Proceso finalizado (Creado marcador de mes sin parches)');
+            process.exit(0);
+        }
+
         log(`Error fatal: ${error.message}`, 'error');
         if (process.env.DEBUG) {
             console.error(error.stack);

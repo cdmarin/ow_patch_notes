@@ -67,10 +67,92 @@ function detectChangeType(text) {
  * @param {Cheerio} [container] - Contenedor del parche específico (si lo hay)
  * @returns {Object} - Datos de las diferentes secciones
  */
+/**
+ * Parsea sub-secciones genéricas (ej. mapas o actualizaciones generales que no son héroes directos)
+ * que tienen una estructura de título (h4, h5, p > strong) seguido de un ul/ol con los detalles del cambio.
+ * @param {CheerioAPI} $ 
+ * @param {Cheerio} $el 
+ * @returns {Array<Object>}
+ */
+function parseGenericUpdateSection($, $el) {
+    const items = [];
+    const descContainer = $el.find('.PatchNotesGeneralUpdate-description, .PatchNotes-sectionDescription');
+    const children = descContainer.children();
+    
+    let currentItem = null;
+    
+    children.each((idx, child) => {
+        const $child = $(child);
+        const tagName = child.tagName.toLowerCase();
+        
+        const isHeader = tagName === 'h4' || tagName === 'h5' || 
+                         (tagName === 'p' && $child.find('strong').length > 0 && $child.text().trim() === $child.find('strong').text().trim());
+        
+        if (isHeader) {
+            if (currentItem) {
+                items.push(currentItem);
+            }
+            currentItem = {
+                name: $child.text().trim().replace(/[-:]$/, '').trim(),
+                changes: []
+            };
+        } else if (tagName === 'ul' || tagName === 'ol') {
+            const details = [];
+            $child.find('li').each((liIdx, li) => {
+                const text = $(li).text().trim();
+                if (text) details.push(text);
+            });
+            
+            if (details.length > 0) {
+                const title = currentItem ? currentItem.name : 'General';
+                const change = {
+                    title: title,
+                    type: detectChangeType(title + ' ' + details.join(' ')),
+                    details: details
+                };
+                
+                if (!currentItem) {
+                    currentItem = {
+                        name: title,
+                        changes: [change]
+                    };
+                } else {
+                    currentItem.changes.push(change);
+                }
+            }
+        }
+    });
+    
+    if (currentItem) {
+        items.push(currentItem);
+    }
+    
+    // Fallback: si no detectó sub-encabezados pero hay listas de viñetas sueltas en la descripción
+    if (items.length === 0) {
+        const details = [];
+        descContainer.find('ul li, ol li').each((liIdx, li) => {
+            const text = $(li).text().trim();
+            if (text) details.push(text);
+        });
+        if (details.length > 0) {
+            items.push({
+                name: 'General',
+                changes: [{
+                    title: 'General',
+                    type: 'adjust',
+                    details: details
+                }]
+            });
+        }
+    }
+    
+    return items;
+}
+
 function parseSections($, container) {
     const data = {
         stadium: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
-        gameBase: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] } },
+        gameBase: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
         maps: [],
         system: [],
         bugFixes: []
@@ -114,56 +196,56 @@ function parseSections($, container) {
         const title = $el.find('h4.PatchNotes-sectionTitle').first().text().trim();
         const titleLower = title.toLowerCase();
 
-        // Actualizar contexto basado en el título del encabezado (sin importar si es generic o hero)
-        if (titleLower.includes('bug fix') || titleLower.includes('bugfix')) {
+        // Actualizar contexto basado en palabras clave del título
+        const hasBugFix = titleLower.includes('bug');
+        const hasStadium = titleLower.includes('stadium');
+        const hasHero = titleLower.includes('hero') || titleLower.includes('balance') || titleLower.includes('hotfix') || titleLower.includes('gameplay');
+        const hasMap = titleLower.includes('map');
+
+        if (hasBugFix) {
             currentContext = 'bugFixes';
-        } else if (titleLower.includes('stadium')) {
+        } else if (hasStadium) {
             if (titleLower.includes('item')) {
                 currentContext = 'stadiumGeneral';
             } else {
                 currentContext = 'stadium';
             }
-        } else if (titleLower.includes('hero update') || titleLower.includes('balance update') || titleLower.includes('hotfix update')) {
+        } else if (hasHero) {
             currentContext = 'gameBase';
-        } else if (titleLower.includes('map update')) {
+        } else if (hasMap) {
             currentContext = 'maps';
         }
 
         if (isGeneric) {
             const descContainer = $el.find('.PatchNotesGeneralUpdate-description, .PatchNotes-sectionDescription');
-            if (currentContext === 'stadium') {
-                data.stadium.intro = descContainer.text().trim();
-            } else if (currentContext === 'gameBase') {
-                data.gameBase.intro = descContainer.text().trim();
-            } else if (currentContext === 'bugFixes') {
+            if (currentContext === 'bugFixes') {
                 descContainer.find('li').each((j, li) => {
                     const text = $(li).text().trim();
                     if (text) data.bugFixes.push(text);
                 });
-            } else if (currentContext === 'stadiumGeneral') {
+            } else {
+                const parsedItems = parseGenericUpdateSection($, $el);
+                
+                // Conservar tarjetas de héroe internas si las hay
                 $el.find('.PatchNotesHeroUpdate').each((j, heroEl) => {
                     const item = parseHeroElement($, $(heroEl));
                     if (item && item.name) {
-                        data.stadium.generalItems.push(item);
+                        parsedItems.push(item);
                     }
                 });
 
-                if (data.stadium.generalItems.length === 0) {
-                    descContainer.find('> ul > li').each((j, li) => {
-                        const $li = $(li);
-                        const hasUl = $li.find('ul').length > 0;
-                        if (hasUl) {
-                            const itemName = $li.contents().not('ul').text().trim().replace(/^-/, '').trim();
-                            const details = [];
-                            $li.find('ul li').each((k, detailLi) => details.push($(detailLi).text().trim()));
-                            if (itemName) {
-                                data.stadium.generalItems.push({
-                                    name: itemName,
-                                    changes: [{ title: itemName, type: 'adjust', details }]
-                                });
-                            }
-                        }
-                    });
+                if (currentContext === 'stadium' || currentContext === 'stadiumGeneral') {
+                    data.stadium.generalItems.push(...parsedItems);
+                } else {
+                    data.gameBase.generalItems.push(...parsedItems);
+                }
+
+                // Guardar la intro
+                const firstParagraph = descContainer.find('> p').first().text().trim();
+                if (currentContext === 'stadium' || currentContext === 'stadiumGeneral') {
+                    data.stadium.intro = firstParagraph || descContainer.text().trim();
+                } else {
+                    data.gameBase.intro = firstParagraph || descContainer.text().trim();
                 }
             }
         } else if (isHero) {
