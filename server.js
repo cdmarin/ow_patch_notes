@@ -69,6 +69,7 @@ const server = http.createServer((req, res) => {
             'Content-Type': 'text/plain; charset=utf-8',
             'Transfer-Encoding': 'chunked',
             'Cache-Control': 'no-cache',
+            'X-Accel-Buffering': 'no', // Desactivar almacenamiento en búfer del proxy (ej. Nginx en Render)
             'Connection': 'keep-alive'
         });
 

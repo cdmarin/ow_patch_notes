@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "install-deps": "npm install --prefix scraper",
+    "build": "npm install --prefix scraper",
     "start": "node server.js"
   },
   "dependencies": {}
