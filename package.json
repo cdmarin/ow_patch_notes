@@ -1,0 +1,11 @@
+{
+  "name": "ow-patch-notes",
+  "version": "1.0.0",
+  "description": "Overwatch Patch Notes Viewer",
+  "main": "server.js",
+  "scripts": {
+    "install-deps": "npm install --prefix scraper",
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

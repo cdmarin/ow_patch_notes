@@ -4,7 +4,7 @@ const path = require('path');
 const { exec } = require('child_process');
 const url = require('url');
 
-let port = 3000;
+let port = process.env.PORT || 3000;
 const PUBLIC_DIR = __dirname;
 
 const MIME_TYPES = {
