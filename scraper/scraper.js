@@ -182,7 +182,8 @@ async function main() {
             const patchId = getPatchId(patchData.date);
 
             console.log(`\n--------------------------------------------------`);
-            log(`Procesando parche ${i + 1}/${patches.length}: ${patchId} (v${patchData.version})`);
+            const versionStr = patchData.version && patchData.version !== 'unknown' ? ` (v${patchData.version})` : '';
+            log(`Procesando parche ${i + 1}/${patches.length}: ${patchId}${versionStr}`);
 
             const outputDir = argv.output || getPatchDir(patchId);
             const patchJsonPath = path.join(outputDir, 'patch.json');
@@ -255,12 +256,12 @@ async function main() {
             }
 
             // 4. Guardar archivos
-            log('Guardando archivos de datos...');
+            log('Guardando archivos de datos...', 'info');
             await fs.ensureDir(outputDir);
 
             // patch.json
             await fs.writeJson(patchJsonPath, patchData, { spaces: 2 });
-            log(`Guardado: ${patchJsonPath}`, 'success');
+            log('Datos del parche guardados correctamente.', 'success');
 
             // meta.json
             const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -276,7 +277,7 @@ async function main() {
 
             const metaJsonPath = path.join(outputDir, 'meta.json');
             await fs.writeJson(metaJsonPath, metaData, { spaces: 2 });
-            log(`Guardado: ${metaJsonPath}`, 'success');
+            log('Metadatos e información general guardados.', 'success');
 
             // 5. Actualizar índice
             log('Actualizando índice de parches...');
@@ -288,7 +289,7 @@ async function main() {
         }
 
         console.log('\n🎉 ¡Proceso de scraping finalizado exitosamente!');
-        console.log('\nAhora puedes abrir index.html en el navegador para ver los cambios.\n');
+        console.log('\nLos cambios se han guardado y están listos para visualizar.\n');
 
     } catch (error) {
         // Verificar si es un error 404 de una URL mensual
