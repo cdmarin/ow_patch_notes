@@ -68,8 +68,9 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, {
             'Content-Type': 'text/plain; charset=utf-8',
             'Transfer-Encoding': 'chunked',
-            'Cache-Control': 'no-cache',
+            'Cache-Control': 'no-cache, no-transform', // Evita que proxies y CDNs alteren o compriman el stream
             'X-Accel-Buffering': 'no', // Desactivar almacenamiento en búfer del proxy (ej. Nginx en Render)
+            'Content-Encoding': 'identity', // Evita que se aplique compresión gzip/brotli que retiene los chunks
             'Connection': 'keep-alive'
         });
 
