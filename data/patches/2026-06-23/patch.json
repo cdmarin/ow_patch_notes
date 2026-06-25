@@ -1,0 +1,44 @@
+{
+  "version": "unknown",
+  "date": "2026-06-23",
+  "title": "Actualización del 23 de Junio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Velocidad de carga útil ligeramente reducida.\nMayor tiempo de desbloqueo de la carga útil después de la captura del punto.\nMayor tiempo de espera de carga útil al final del área 2.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "General",
+          "changes": [
+            {
+              "title": "General",
+              "type": "adjust",
+              "details": [
+                "Velocidad de carga útil ligeramente reducida.",
+                "Mayor tiempo de desbloqueo de la carga útil después de la captura del punto.",
+                "Mayor tiempo de espera de carga útil al final del área 2."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}

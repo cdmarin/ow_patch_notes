@@ -1,0 +1,50 @@
+{
+  "version": "unknown",
+  "date": "2026-05-14",
+  "title": "Actualización del 14 de Mayo 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": [
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d169a8d9c4875ebebb6e635801ab75345221cb21e875c6eb1ad2a884195f48bb.png",
+            "changes": [
+              {
+                "title": "Aumento de la ganancia de moneda por curación y daño en un 7,14%.",
+                "type": "buff",
+                "details": [
+                  "Aumento de la ganancia de moneda por curación y daño en un 7,14%."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema por el cual los destinatarios de Nano Boost del aspecto mítico 'Ra' de Ana no veían los efectos visuales apropiados.",
+      "Se solucionó un problema por el cual la Mini Bola de Freja de Lille Fælde hacía más daño del previsto. Lille Fælde ha sido reactivada.",
+      "Se solucionó un problema por el cual los Blink Boosts de Juno podían activar constantemente efectos de On Ability durante la última carga. Blink Boosts se ha vuelto a habilitar.",
+      "Se solucionó un problema por el cual Backstabber otorgaba procesos de sangrado adicionales en golpes críticos. Backstabber ha sido rehabilitado.",
+      "Se solucionó un problema por el cual alternar la Barrera del Vacío de Ramattra activaba efectos de activación de habilidad."
+    ]
+  },
+  "translated": true
+}

@@ -99,8 +99,9 @@ export async function init(skipLoadingPatch = false) {
     initScrollProgress();
 
     const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
-    if (isStaticMode && dom.refreshBtn) {
-        dom.refreshBtn.style.display = 'none';
+    if (isStaticMode) {
+        if (dom.refreshBtn) dom.refreshBtn.style.display = 'none';
+        if (dom.updateBtn) dom.updateBtn.style.display = 'none';
     }
 
     try {
@@ -210,6 +211,45 @@ function setupListeners() {
             });
 
             dom.refreshBtn.classList.remove('spinning');
+        });
+    }
+
+    // Update button click handler (solo buscar lo nuevo)
+    if (dom.updateBtn) {
+        dom.updateBtn.addEventListener('click', async () => {
+            if (dom.updateBtn.classList.contains('spinning')) return;
+
+            dom.updateBtn.classList.add('spinning');
+            console.log('[App] Buscando nuevas notas de parche (sin forzar)...');
+
+            const queryParams = ''; // Vacío para no forzar y buscar solo parches no descargados en la web principal
+
+            await startScrapeStream(queryParams, async () => {
+                console.log('[App] Búsqueda de actualizaciones completada. Recargando datos...');
+                const previousPatchId = state.currentPatch?.id || dom.patchSelect.value;
+                await init(true); // Recargar index
+                
+                // Intentar mantener seleccionado el mismo parche si todavía existe
+                if (previousPatchId) {
+                    const exists = state.allPatches.some(p => p.id === previousPatchId && p.isDownloaded);
+                    if (exists) {
+                        dom.patchSelect.value = previousPatchId;
+                        await loadPatch(previousPatchId);
+                    } else {
+                        // Si no, cargar el último parche disponible
+                        let defaultPatch = state.allPatches.find(p => p.isLatest && p.isDownloaded);
+                        if (!defaultPatch) {
+                            defaultPatch = state.allPatches.find(p => p.isDownloaded) || state.allPatches[0];
+                        }
+                        if (defaultPatch) {
+                            dom.patchSelect.value = defaultPatch.id;
+                            await loadPatch(defaultPatch.id);
+                        }
+                    }
+                }
+            });
+
+            dom.updateBtn.classList.remove('spinning');
         });
     }
 

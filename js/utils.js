@@ -55,8 +55,8 @@ export function countAllChanges(patchData) {
 }
 
 export function generateAllMonths() {
-    const startYear = 2022;
-    const startMonth = 10; // Octubre 2022
+    const startYear = 2026;
+    const startMonth = 5; // Mayo 2026
 
     const now = new Date();
     let endYear = now.getFullYear();

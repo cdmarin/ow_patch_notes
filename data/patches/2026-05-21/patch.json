@@ -1,0 +1,68 @@
+{
+  "version": "unknown",
+  "date": "2026-05-21",
+  "title": "Actualización del 21 de Mayo 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": [
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d169a8d9c4875ebebb6e635801ab75345221cb21e875c6eb1ad2a884195f48bb.png",
+            "changes": [
+              {
+                "title": "Galletas rebotantes",
+                "type": "buff",
+                "details": [
+                  "La curación por rebote aumentó al 35% (en lugar del 25%)."
+                ]
+              },
+              {
+                "title": "Ambidiestro",
+                "type": "buff",
+                "details": [
+                  "El daño adicional del disparo aumentó al 30 % (en lugar del 25 %)."
+                ]
+              },
+              {
+                "title": "Bomba de campana",
+                "type": "buff",
+                "details": [
+                  "El daño de explosión aumentó a 120 (en lugar de 100)."
+                ]
+              },
+              {
+                "title": "frijoles de remolque",
+                "type": "nerf",
+                "details": [
+                  "El daño de habilidad por cada 1 % de combustible se redujo a 7,5 (en lugar de 10)."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Este es un parche de revisión. Todos los códigos de repetición del parche del 12 de mayo todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema por el cual la campana bomba de Jetpack Cat permanecía activa cuando el poder no estaba equipado.",
+      "Se solucionó un problema por el cual el tiempo de reutilización de Glide Boost de Juno se restablecía a 0 permanentemente al usar Refresher y Red Promise Regulator."
+    ]
+  },
+  "translated": true
+}
