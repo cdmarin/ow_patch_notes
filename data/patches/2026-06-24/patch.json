@@ -1,0 +1,43 @@
+{
+  "version": "unknown",
+  "date": "2026-06-24",
+  "title": "Actualización del 24 de Junio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Los requisitos de misiones diarias para los juegos jugados se redujeron del 7/03/12 al 6/03/10.\nLos requisitos de misiones semanales para los juegos jugados se redujeron del 25/30/50 al 20/30/45.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "General",
+          "changes": [
+            {
+              "title": "General",
+              "type": "nerf",
+              "details": [
+                "Los requisitos de misiones diarias para los juegos jugados se redujeron del 7/03/12 al 6/03/10.",
+                "Los requisitos de misiones semanales para los juegos jugados se redujeron del 25/30/50 al 20/30/45."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
