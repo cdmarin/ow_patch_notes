@@ -1,0 +1,375 @@
+{
+  "version": "unknown",
+  "date": "2026-06-25",
+  "title": "Actualización del 25 de Junio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "Tras los recientes cambios radicales en el estadio, hemos estado siguiendo de cerca el desempeño de todos los héroes, sus poderes y objetos. Estamos reduciendo algunos de los primeros poderes con un rendimiento superior y mejorando algunos de los nuevos poderes con un rendimiento inferior para ayudarlos a encontrar un nicho más claro. Continuaremos monitoreando algunos de los poderes y elementos más frustrantes y haremos los ajustes necesarios.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Hazard",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "jugo",
+                "type": "nerf",
+                "details": [
+                  "Radio reducido a 8 m (antes 12 m).",
+                  "La curación se redujo al 20 % de tu vida máxima (en lugar del 30 %)."
+                ]
+              },
+              {
+                "title": "Bonerot",
+                "type": "buff",
+                "details": [
+                  "Daño aumentado a 60 (antes 50)"
+                ]
+              },
+              {
+                "title": "Colmillo gemelo",
+                "type": "buff",
+                "details": [
+                  "El daño adicional aumentó al 75 % (en lugar del 50 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "Cargador crítico",
+                "type": "buff",
+                "details": [
+                  "El daño crítico aumentó al 75% (en lugar del 50%)."
+                ]
+              },
+              {
+                "title": "Escalera Mecánica OR-15",
+                "type": "buff",
+                "details": [
+                  "El poder máximo del arma basado en el calor aumentó al 40 % (en lugar del 30 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Vórtice Volskaya",
+                "type": "nerf",
+                "details": [
+                  "Daño reducido a 60 (en lugar de 80)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Freja",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
+            "changes": [
+              {
+                "title": "tan cocinado",
+                "type": "nerf",
+                "details": [
+                  "La duración de la permanencia se redujo a 2 s (en lugar de 3 s)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Huelga de Iaido",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó al 75% (en lugar del 50%)."
+                ]
+              },
+              {
+                "title": "Golpe de dragón",
+                "type": "adjust",
+                "details": [
+                  "Daño adicional reducido al 100 % (en lugar del 120 %).",
+                  "La cuerda es ahora un 50% más rápida."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mei",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dc5525ecbba3b254188f126ba0dd07571dee201d4ddc2f068c3e2f6907668cca.png",
+            "changes": [
+              {
+                "title": "Escalofríos profundos",
+                "type": "nerf",
+                "details": [
+                  "La duración de congelación se redujo a 0,65 s (en lugar de 0,75 s)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Sudario Infernal",
+                "type": "nerf",
+                "details": [
+                  "Duración reducida a 2 s (en lugar de 3 s).",
+                  "Daño reducido al 20% de la vida máxima (en lugar del 25%).",
+                  "La ralentización y la velocidad de ataque se redujeron al 20 % (en lugar del 30 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sojourn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
+            "changes": [
+              {
+                "title": "El dinero obtenido por el daño y la curación aumentó un 11,1%.",
+                "type": "buff",
+                "details": [
+                  "El dinero obtenido por el daño y la curación aumentó un 11,1%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "Turripollos",
+                "type": "nerf",
+                "details": [
+                  "Velocidad de ataque reducida al 65% (en lugar del 75%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Golpe sobrecargado",
+                "type": "adjust",
+                "details": [
+                  "Daño reducido a 25% aumentado (en lugar de 50%)."
+                ]
+              },
+              {
+                "title": "Ápice sed de sangre",
+                "type": "buff",
+                "details": [
+                  "La reducción del tiempo de reutilización por acumulación de Embestida se redujo al 3 % (en lugar del 5 %)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Campo de ensueño",
+                "type": "buff",
+                "details": [
+                  "La curación por 1 s aumentó al 15 % de tu vida máxima (en lugar del 10 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
+            "changes": [
+              {
+                "title": "Aumenta el parpadeo",
+                "type": "buff",
+                "details": [
+                  "La reducción del tiempo de reutilización se redujo al 30 % (en lugar del 50 %)."
+                ]
+              },
+              {
+                "title": "Cámara de fisión",
+                "type": "buff",
+                "details": [
+                  "Los disparos por segundo aumentaron a 22 (en lugar de 20)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "reverberación",
+                "type": "adjust",
+                "details": [
+                  "La efectividad reducida aumentó a un 50 % de reducción (en lugar de un 60 % de reducción)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Moira",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/39b42cd8e183acb99ccac01cb8b43a4b7372350425a80f4444885800dd84ba28.png",
+            "changes": [
+              {
+                "title": "Reciprocidad Remota",
+                "type": "buff",
+                "details": [
+                  "La duración aumentó a 5 s (en lugar de 3 s)."
+                ]
+              },
+              {
+                "title": "Orbsplosión",
+                "type": "adjust",
+                "details": [
+                  "Daño hasta 30% (antes 25%).",
+                  "Curación hasta 45% (antes 35%)."
+                ]
+              },
+              {
+                "title": "Energía alternativa",
+                "type": "adjust",
+                "details": [
+                  "La duración de la mejora ahora se reinicia al ganar acumulaciones adicionales."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Stadium Updates",
+          "desc": "Tras los recientes cambios radicales en el estadio, hemos estado siguiendo de cerca el desempeño de todos los héroes, sus poderes y objetos. Estamos reduciendo algunos de los primeros poderes con un rendimiento superior y mejorando algunos de los nuevos poderes con un rendimiento inferior para ayudarlos a encontrar un nicho más claro. Continuaremos monitoreando algunos de los poderes y elementos más frustrantes y haremos los ajustes necesarios.",
+          "changes": [
+            {
+              "title": "Actualizaciones del estadio",
+              "type": "new",
+              "details": [
+                "Tras los recientes cambios radicales en el estadio, hemos estado siguiendo de cerca el desempeño de todos los héroes, sus poderes y objetos. Estamos reduciendo algunos de los primeros poderes con un rendimiento superior y mejorando algunos de los nuevos poderes con un rendimiento inferior para ayudarlos a encontrar un nicho más claro. Continuaremos monitoreando algunos de los poderes y elementos más frustrantes y haremos los ajustes necesarios."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "General",
+          "desc": "Pistola Tommy de tres toques",
+          "changes": [
+            {
+              "title": "Pistola Tommy de tres toques",
+              "type": "nerf",
+              "details": [
+                "El costo aumentó a 10500 (antes 10000)."
+              ]
+            },
+            {
+              "title": "Babosas rescatadas",
+              "type": "buff",
+              "details": [
+                "La probabilidad de restauración de munición aumentó al 60 % (en lugar del 50 %).",
+                "La curación aumentó al 20% (en lugar del 15%)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "gameBase": {
+      "intro": "Esta es una revisión que contiene actualizaciones del juego y correcciones de errores. Los códigos de repetición del parche del 16 de junio todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": [
+          {
+            "name": "Shion",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Ejecución",
+                "type": "adjust",
+                "details": [
+                  "El tamaño del proyectil se redujo de 0,17 a 0,07.",
+                  "El tiempo de recuperación aumentó de 0 a 0,4 s."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una revisión que contiene actualizaciones del juego y correcciones de errores. Los códigos de repetición del parche del 16 de junio todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una revisión que contiene actualizaciones del juego y correcciones de errores. Los códigos de repetición del parche del 16 de junio todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "En una actualización anterior, se corrigió un error que provocaba que el daño de Apuntar de Ashe cayera demasiado rápido.",
+      "Se corrigió un error por el cual el Muro de vida y el poder de la muerte de Reaper no curaban a los aliados si no estaban dentro del alcance durante el lanzamiento inicial.",
+      "Se corrigió un error por el cual lanzar Dragonblade mientras se desviaba con Dragon's Breath y Iaido Strike Powers equipados no activaba correctamente Dragon's Breath.",
+      "Se corrigió un error con el poder de calamidad de Ashe que permitía a los jugadores adquirir más munición de la prevista.",
+      "Se corrigió un error con el poder de agarre en cadena de Moira donde el agarre biótico solo se encadenaba a 1 objetivo adicional.",
+      "Se corrigió un error por el cual el objeto de héroe detonador Dae-Hyun de D.Va no otorgaba un 15% de carga máxima inicial.",
+      "Se corrigió un error por el cual el objeto héroe de la capa de hielo de Mei no otorgaba las estadísticas correctas.",
+      "Se corrigió un error por el cual el elemento central del grupo de Ana no otorgaba poder de habilidad.",
+      "Se corrigió un error por el cual el elemento de radio de respuesta rápida de Soldier: 76 no aumentaba la duración del campo biótico.",
+      "Se corrigió un error por el cual el poder de la buena fortuna de Kiriko no funcionaba con la velocidad del proyectil.",
+      "Se corrigió un error por el cual el efecto de Biotic Bullseye activaba el DOT de Three Tap Tommygun.",
+      "Se corrigió un error por el cual Exo Springs todavía contaba como Gadget para ciertos artículos.",
+      "Se corrigió un error por el cual Waveshatter de Wuyang no afectaba el daño de Splash Strike.",
+      "Se corrigió un error por el cual Dragon Strike de Genji impedía que se reprodujera el VO definitivo de Dragon Blade.",
+      "Se corrigió un error por el cual el poder de velocidad cibernética de Genji otorgaba menos velocidad de ataque de lo previsto.",
+      "Se corrigió un error por el cual Iron Drift de Reinhardt no derribaba adecuadamente a los enemigos al cancelar la Carga.",
+      "Se corrigió un error por el cual la Confluencia actual de Wuyang curaba a los aliados por menos de lo previsto.",
+      "Se corrigió un error por el cual el uso de Gadgets en D.Va no activaba ciertos efectos de elementos.",
+      "Se corrigió un error por el cual la combinación de Repelente necrótico y Grebas de repulsión causaba que el efecto de retroceso de Greave de repulsión también obstaculizara.",
+      "Se corrigió un error por el cual el poder del Rayo espectral de Moira acortaba la duración de la fusión si se usaba en rápida sucesión."
+    ]
+  },
+  "translated": true
+}

@@ -176,17 +176,33 @@ async function main() {
         const patches = parseHTML(html, defaultPatchDate);
         log(`Se detectaron ${patches.length} parches en el documento.`, 'success');
 
+        // Cargar el índice existente para verificar si el parche ya está registrado
+        let existingIndex = { patches: [] };
+        if (await fs.pathExists(PATCHES_INDEX)) {
+            try {
+                existingIndex = await fs.readJson(PATCHES_INDEX);
+            } catch (err) {
+                log(`No se pudo leer el índice de parches: ${err.message}`, 'warn');
+            }
+        }
+        const activePatchesInIndex = new Set((existingIndex.patches || []).map(p => p.id));
+
         // Procesar cada parche
         for (let i = 0; i < patches.length; i++) {
             const patchData = patches[i];
             const patchId = getPatchId(patchData.date);
+            const outputDir = argv.output || getPatchDir(patchId);
+            const patchJsonPath = path.join(outputDir, 'patch.json');
+
+            // Si no se fuerza la descarga, y el parche ya existe tanto en disco como en el índice, se omite
+            if (!argv.force && await fs.pathExists(patchJsonPath) && activePatchesInIndex.has(patchId)) {
+                log(`El parche ${patchId} ya está guardado e indexado. Omitiendo...`, 'success');
+                continue;
+            }
 
             console.log(`\n--------------------------------------------------`);
             const versionStr = patchData.version && patchData.version !== 'unknown' ? ` (v${patchData.version})` : '';
             log(`Procesando parche ${i + 1}/${patches.length}: ${patchId}${versionStr}`);
-
-            const outputDir = argv.output || getPatchDir(patchId);
-            const patchJsonPath = path.join(outputDir, 'patch.json');
 
             let existingPatchData = null;
             if (await fs.pathExists(patchJsonPath)) {
