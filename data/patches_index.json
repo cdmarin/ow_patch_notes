@@ -1,17 +1,6 @@
 {
   "patches": [
     {
-      "id": "2026-06-25",
-      "version": "unknown",
-      "date": "2026-06-25",
-      "title": "Actualización del 25 de Junio 2026",
-      "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
-      "season": "Temporada actual",
-      "dataPath": "data/patches/2026-06-25/patch.json",
-      "isLatest": true
-    },
-    {
       "id": "2026-06-24",
       "version": "unknown",
       "date": "2026-06-24",
