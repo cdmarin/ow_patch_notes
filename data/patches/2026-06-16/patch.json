@@ -333,7 +333,7 @@
                 "details": [
                   "El costo aumentó a 10500 (antes 9500).",
                   "Se agregaron 50 de salud.",
-                  "Se eliminó la reducción del tiempo de reutilización del 5%.",
+                  "Se eliminó la reducción del tiempo de reutilización del 5 %.",
                   "Se modificó de \"Los golpes de [Rampage] y [Carnage] otorgan un 10 % de velocidad de ataque durante 4 s\" a \"Los golpes de [Jagged Blade], [Rampage] y [Carnage] otorgan un 20 % de poder de habilidad durante 5 s\"."
                 ]
               },
@@ -467,7 +467,7 @@
                 "title": "Teorema de Efi: objeto de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Se eliminó el 20% de robo de vida de habilidad."
+                  "Se eliminó el 20 % de robo de vida de habilidad."
                 ]
               }
             ]
@@ -516,7 +516,7 @@
                 "title": "Reconstrucción de barreras - Energía",
                 "type": "adjust",
                 "details": [
-                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el daño del Martillo cohete."
+                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el Martillo cohete."
                 ]
               },
               {
@@ -648,7 +648,7 @@
                 "title": "Salto Lunar - Poder",
                 "type": "buff",
                 "details": [
-                  "La carga definitiva por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
+                  "La carga máxima por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
                 ]
               },
               {
@@ -815,10 +815,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
             "changes": [
               {
-                "title": "El dinero obtenido por daño y curación se redujo en un 5 %.",
+                "title": "El dinero obtenido por daño y curación se redujo en un 5%.",
                 "type": "nerf",
                 "details": [
-                  "El dinero obtenido por daño y curación se redujo en un 5 %.",
+                  "El dinero obtenido por daño y curación se redujo en un 5%.",
                   "El daño base de Viper Scoped se redujo a 72 (en lugar de 75)."
                 ]
               },
@@ -831,7 +831,7 @@
                 ]
               },
               {
-                "title": "Pin B.O.B - Energía",
+                "title": "Pin B.O.B - Poder",
                 "type": "nerf",
                 "details": [
                   "Se agregó un tiempo de reutilización de 3 segundos para que la carga se pueda reactivar sin eliminar a un enemigo.",
@@ -1103,7 +1103,7 @@
                 "title": "Forjado bajo fuego: poder",
                 "type": "nerf",
                 "details": [
-                  "Desviar la curación se redujo al 100% (en lugar del 125%)."
+                  "Desviar la curación se redujo al 100 % (en lugar del 125 %)."
                 ]
               },
               {
@@ -1516,7 +1516,7 @@
                 "title": "Despacho dinámico - Energía",
                 "type": "adjust",
                 "details": [
-                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50 % de tamaño de proyectil [Disparo cargado], un 35 % de velocidad de ataque y un 35 % de robo de vida con arma\"."
+                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50% de tamaño de proyectil [Disparo cargado], un 35% de velocidad de ataque y un 35% de robo de vida con arma\"."
                 ]
               },
               {
@@ -1582,7 +1582,7 @@
                 "type": "adjust",
                 "details": [
                   "Se agregó un 25% de longitud de deslizamiento eléctrico.",
-                  "Se eliminó la reducción del tiempo de reutilización del 5%."
+                  "Se eliminó la reducción del tiempo de reutilización del 5 %."
                 ]
               },
               {
@@ -1963,7 +1963,7 @@
                 "type": "buff",
                 "details": [
                   "El poder de habilidad aumentó al 15% (en lugar del 10%).",
-                  "La habilidad Robo de vida aumentó al 15 % (en lugar del 10 %)."
+                  "La habilidad Robo de vida aumentó al 15% (en lugar del 10%)."
                 ]
               },
               {
@@ -1992,10 +1992,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
             "changes": [
               {
-                "title": "El dinero del daño y la curación se redujo en un 10 %.",
+                "title": "El dinero del daño y la curación se redujo en un 10%.",
                 "type": "nerf",
                 "details": [
-                  "El dinero del daño y la curación se redujo en un 10 %."
+                  "El dinero del daño y la curación se redujo en un 10%."
                 ]
               },
               {
@@ -2049,7 +2049,7 @@
                 "type": "adjust",
                 "details": [
                   "Se eliminó +4 munición.",
-                  "Se agregó un 30% de munición máxima."
+                  "Se agregó un 30 % de munición máxima."
                 ]
               },
               {
@@ -2322,7 +2322,7 @@
                 "type": "rework",
                 "details": [
                   "Reelaborado a Poder (del artículo).",
-                  "Se eliminó la reducción del tiempo de reutilización del 5%."
+                  "Se eliminó la reducción del tiempo de reutilización del 5 %."
                 ]
               },
               {
@@ -2545,7 +2545,7 @@
                   "El costo aumentó a 11000 (antes 4000).",
                   "Se agregó un 15 % de robo de vida de habilidad.",
                   "La reducción del tiempo de reutilización aumentó al 10 % (en lugar del 5 %).",
-                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50% del daño de [Soundwave] si el objetivo golpea una pared\"."
+                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50 % del daño de [Soundwave] si el objetivo golpea una pared\"."
                 ]
               },
               {
@@ -2594,7 +2594,7 @@
                 ]
               },
               {
-                "title": "Doble Dosis - Poder",
+                "title": "Doble Dosis - Potencia",
                 "type": "adjust",
                 "details": [
                   "Nuevo",
@@ -2790,7 +2790,7 @@
                 "type": "adjust",
                 "details": [
                   "Nuevo",
-                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60%. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
+                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60 %. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
                 ]
               },
               {
@@ -3363,7 +3363,7 @@
       ]
     },
     "gameBase": {
-      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
+      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
       "roles": {
         "Tanque": [
           {
@@ -3614,7 +3614,7 @@
                 "title": "Anular protocolo",
                 "type": "nerf",
                 "details": [
-                  "El costo final aumentó un 10%."
+                  "El costo final aumentó un 10 %."
                 ]
               }
             ]
@@ -3646,7 +3646,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
             "changes": [
               {
-                "title": "Viaje bomba: ventaja menor",
+                "title": "Viaje bomba: beneficio menor",
                 "type": "buff",
                 "details": [
                   "La bonificación de velocidad de ataque aumentó del 25 % al 35 %."
@@ -3677,7 +3677,7 @@
           },
           {
             "name": "Reaper",
-            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su equipo. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
+            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su kit. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
             "changes": [
               {
@@ -3854,7 +3854,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
             "changes": [
               {
-                "title": "Blindaje de transporte: ventaja menor",
+                "title": "Blindaje de transporte: beneficio menor",
                 "type": "nerf",
                 "details": [
                   "Duración reducida de 5 a 3 segundos.",
@@ -3910,7 +3910,7 @@
                 "type": "adjust",
                 "details": [
                   "El coste final aumentó un 9%.",
-                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100% al 50%."
+                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100 % al 50 %."
                 ]
               }
             ]
@@ -3928,7 +3928,7 @@
                 ]
               },
               {
-                "title": "Bastón de caduceo",
+                "title": "Bastón de Caduceo",
                 "type": "nerf",
                 "details": [
                   "Aumento de daño reducido del 30% al 25%."
@@ -4133,7 +4133,7 @@
               "details": [
                 "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).",
                 "Los jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).",
-                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.",
+                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.",
                 "Los jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile."
               ]
             },
@@ -4176,7 +4176,7 @@
       "Se solucionó un problema que causaba que Ashe recibiera más daño del previsto cuando era golpeada por su propia dinamita.",
       "Se solucionó un problema que causaba que el indicador de la interfaz de usuario de Brigitte's Inspire no tuviera en cuenta el beneficio de aumento de moral.",
       "Se solucionó un problema por el cual las señales de audio de las ventajas de Lucio revelaban involuntariamente su ubicación.",
-      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la Carga de Reinhardt.",
+      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la carga de Reinhardt.",
       "Se solucionó un problema por el cual la curación pasiva del subrol de Superviviente se activaba incorrectamente si se usaba una habilidad de movimiento antes de recibir daño.",
       "Se solucionó un problema por el cual el combustible adicional del beneficio Almacén de combustible de Pharah no se activaba si su combustible se estaba descomponiendo antes de usar Jet Dash.",
       "Se solucionó un problema por el cual Sierra podía agarrar involuntariamente su dron cuando se perdía de vista.",
