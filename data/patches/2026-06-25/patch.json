@@ -145,10 +145,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
             "changes": [
               {
-                "title": "El dinero obtenido por el daño y la curación aumentó un 11,1%.",
+                "title": "El dinero obtenido por el daño y la curación aumentó un 11,1 %.",
                 "type": "buff",
                 "details": [
-                  "El dinero obtenido por el daño y la curación aumentó un 11,1%."
+                  "El dinero obtenido por el daño y la curación aumentó un 11,1 %."
                 ]
               }
             ]
@@ -199,7 +199,7 @@
                 "title": "Campo de ensueño",
                 "type": "buff",
                 "details": [
-                  "La curación por 1 s aumentó al 15 % de tu vida máxima (en lugar del 10 %)."
+                  "La curación por 1 segundo aumentó al 15 % de tu vida máxima (antes era del 10 %)."
                 ]
               }
             ]
@@ -354,7 +354,7 @@
       "Se corrigió un error por el cual lanzar Dragonblade mientras se desviaba con Dragon's Breath y Iaido Strike Powers equipados no activaba correctamente Dragon's Breath.",
       "Se corrigió un error con el poder de calamidad de Ashe que permitía a los jugadores adquirir más munición de la prevista.",
       "Se corrigió un error con el poder de agarre en cadena de Moira donde el agarre biótico solo se encadenaba a 1 objetivo adicional.",
-      "Se corrigió un error por el cual el objeto de héroe detonador Dae-Hyun de D.Va no otorgaba un 15% de carga máxima inicial.",
+      "Se corrigió un error por el cual el objeto de héroe detonador Dae-Hyun de D.Va no otorgaba un 15% de carga definitiva inicial.",
       "Se corrigió un error por el cual el objeto héroe de la capa de hielo de Mei no otorgaba las estadísticas correctas.",
       "Se corrigió un error por el cual el elemento central del grupo de Ana no otorgaba poder de habilidad.",
       "Se corrigió un error por el cual el elemento de radio de respuesta rápida de Soldier: 76 no aumentaba la duración del campo biótico.",
