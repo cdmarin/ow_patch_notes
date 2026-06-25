@@ -6,28 +6,83 @@ const axios = require('axios');
 
 // Configuración de traducción online (Google Translate)
 let useGoogleTranslate = true; // Por defecto usar Google Translate
+let googleTranslateBlocked = false; // Indica si Google Translate ha sido bloqueado temporalmente (429)
 
 /**
  * Inicializa el traductor.
  */
 async function initTranslator() {
     if (useGoogleTranslate) {
-        console.log('🌐 Iniciando el traductor...');
+        if (process.env.LIBRETRANSLATE_URL) {
+            console.log(`🌐 Iniciando el traductor (LibreTranslate en ${process.env.LIBRETRANSLATE_URL})...`);
+        } else {
+            console.log('🌐 Iniciando el traductor (Google Translate con fallback a MyMemory)...');
+        }
     } else {
         console.log('ℹ️  Traducción automática desactivada.');
     }
 }
 
 /**
+ * Traduce un texto de inglés a español usando la API de LibreTranslate.
+ */
+async function translateTextWithLibreTranslate(text) {
+    if (!text || text.trim() === '') return text;
+    const url = process.env.LIBRETRANSLATE_URL;
+    const apiKey = process.env.LIBRETRANSLATE_KEY;
+    try {
+        const response = await axios.post(`${url}/translate`, {
+            q: text,
+            source: 'en',
+            target: 'es',
+            format: 'text',
+            api_key: apiKey
+        }, { timeout: 15000 });
+        if (response.data && response.data.translatedText) {
+            return response.data.translatedText;
+        }
+    } catch (error) {
+        console.warn(`⚠️  Error con LibreTranslate: "${text.substring(0, 50)}..."`, error.message);
+    }
+    return text;
+}
+
+/**
+ * Traduce un texto de inglés a español usando la API de MyMemory.
+ */
+async function translateTextWithMyMemory(text) {
+    if (!text || text.trim() === '') return text;
+    try {
+        const email = process.env.MYMEMORY_EMAIL || 'carlosalcuadrado2@gmail.com';
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|es&de=${encodeURIComponent(email)}`;
+        const response = await axios.get(url, { timeout: 10000 });
+        if (response.data && response.data.responseData && response.data.responseData.translatedText) {
+            return response.data.responseData.translatedText;
+        }
+    } catch (error) {
+        console.warn(`⚠️  Error con MyMemory Translate: "${text.substring(0, 50)}..."`, error.message);
+    }
+    return text;
+}
+
+/**
  * Traduce un texto de inglés a español usando Google Translate.
- * Si falla, retorna el texto original en inglés.
+ * Si falla, hace fallback a MyMemory (o LibreTranslate si está configurado).
  * @param {string} text - Texto a traducir
  * @returns {Promise<string>} - Texto traducido o el original
  */
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
 
-    if (useGoogleTranslate) {
+    if (!useGoogleTranslate) return text;
+
+    // 1. Si está configurado LibreTranslate, usarlo como primera opción
+    if (process.env.LIBRETRANSLATE_URL) {
+        return await translateTextWithLibreTranslate(text);
+    }
+
+    // 2. Intentar Google Translate si no está bloqueado
+    if (!googleTranslateBlocked) {
         try {
             const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=${encodeURIComponent(text)}`;
             const response = await axios.get(url, { timeout: 10000 });
@@ -35,11 +90,19 @@ async function translateText(text) {
                 return response.data[0].map(item => item[0]).join('');
             }
         } catch (error) {
-            console.warn(`⚠️  Error con Google Translate: "${text.substring(0, 50)}..."`, error.message);
+            const is429 = error.response && (error.response.status === 429 || error.response.status === 403);
+            if (is429) {
+                console.warn(`⚠️  Google Translate bloqueado (Status ${error.response.status}). Activando fallback a MyMemory API...`);
+                googleTranslateBlocked = true;
+            } else {
+                console.warn(`⚠️  Error con Google Translate: "${text.substring(0, 50)}..."`, error.message);
+            }
+            return await translateTextWithMyMemory(text);
         }
     }
 
-    return text; // Fallback al inglés original
+    // 3. Fallback a MyMemory
+    return await translateTextWithMyMemory(text);
 }
 
 /**
