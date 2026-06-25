@@ -41,7 +41,8 @@
       "subtitle": "Notas de parche oficiales de Overwatch",
       "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
       "season": "Temporada actual",
-      "dataPath": "data/patches/2026-06-16/patch.json"
+      "dataPath": "data/patches/2026-06-16/patch.json",
+      "isLatest": false
     }
   ]
 }

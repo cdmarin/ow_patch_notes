@@ -298,26 +298,21 @@ export function renderContentNotDownloaded(patchMeta) {
     if (isStaticMode) {
         actionHtml = `
             <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: var(--radius-sm); max-width: 550px; margin-left: auto; margin-right: auto;">
-                <p style="margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-2); line-height: 1.6;">
-                    El raspado automático y la descarga en vivo requieren ejecutar el servidor Node.js local. 
-                    En esta versión estática (GitHub Pages), solo se pueden visualizar los parches ya descargados.
-                </p>
-                <p style="font-size: 0.85rem; color: var(--text-muted);">
-                    Para descargar nuevos meses, clona el repositorio y ejecuta localmente:<br>
-                    <code style="display: inline-block; background: var(--bg-2); padding: 0.25rem 0.5rem; border-radius: 4px; margin-top: 0.5rem; font-family: monospace; color: var(--orange-light); font-size: 0.8rem;">npm install && npm start</code>
+                <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--text-2); line-height: 1.6;">
+                    Este parche aún no se encuentra disponible. Las actualizaciones se ejecutan de forma automática diariamente en el servidor, por lo que se publicará en las próximas horas.
                 </p>
             </div>
         `;
     } else {
         actionHtml = `
-            <div style="margin-top: 1rem;">
-                <p style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem;">
+            <div style="margin-top: 1rem; padding: 0 1rem;">
+                <p style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem; word-break: break-all;">
                     Se descargará y procesará automáticamente desde: <br>
-                    <a href="${autoUrl}" target="_blank" style="color: var(--accent-blue);">${autoUrl}</a>
+                    <a href="${autoUrl}" target="_blank" style="color: var(--blue); word-break: break-all; text-decoration: underline;">${autoUrl}</a>
                 </p>
                 <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
-                    <button id="scrape-custom-btn" class="role-btn active" style="flex-shrink: 0; padding: 0.75rem 1.5rem;">
-                        <span class="role-dot" style="background:var(--accent-blue)"></span>
+                    <button id="scrape-custom-btn" class="role-btn active" style="flex-shrink: 0; padding: 0.75rem 1.5rem; width: 100%; max-width: 280px; justify-content: center;">
+                        <span class="role-dot" style="background:var(--blue)"></span>
                         📥 Descargar y procesar
                     </button>
                 </div>
