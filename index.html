@@ -13,7 +13,7 @@
     <!-- Favicon Overwatch-->
     <link rel="icon" href="logo.svg">
 
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
@@ -122,7 +122,41 @@
         </main>
     </div>
 
-    <script type="module" src="app.js?v=2"></script>
+    <script>
+        // Inline theme handler — runs immediately, independent of module loading
+        (function() {
+            function applyTheme(isLight) {
+                document.body.classList.toggle('light-theme', isLight);
+                var icon = document.querySelector('#theme-toggle-btn .theme-icon');
+                if (icon) icon.textContent = isLight ? '🌙' : '☀️';
+                // Swap logos (exclude header logo)
+                document.querySelectorAll('img').forEach(function(img) {
+                    if ((img.classList.contains('loader-logo') || img.classList.contains('scrape-logo') ||
+                         img.src.indexOf('logo.svg') !== -1 || img.src.indexOf('logo-light.svg') !== -1) &&
+                        !img.classList.contains('header-logo')) {
+                        img.src = isLight ? 'logo-light.svg' : 'logo.svg';
+                    }
+                });
+            }
+
+            // Apply saved theme immediately
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'light') applyTheme(true);
+            } catch(e) {}
+
+            // Attach click handler
+            var btn = document.getElementById('theme-toggle-btn');
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    var isLight = !document.body.classList.contains('light-theme');
+                    try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e) {}
+                    applyTheme(isLight);
+                });
+            }
+        })();
+    </script>
+    <script type="module" src="app.js?v=3"></script>
 </body>
 
 </html>

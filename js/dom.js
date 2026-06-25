@@ -1,13 +1,21 @@
+let _patchHeaderCard = null;
+
 export const dom = {
-    progressBar: document.getElementById('progress-bar'),
-    loadingOverlay: document.getElementById('loading-overlay'),
-    patchSelect: document.getElementById('patch-select'),
-    refreshBtn: document.getElementById('refresh-btn'),
-    updateBtn: document.getElementById('update-btn'),
-    searchInput: document.getElementById('search-input'),
-    filterChips: document.querySelectorAll('.filter-chip[data-filter]'),
-    sidebar: document.getElementById('sidebar'),
-    content: document.getElementById('content'),
-    patchHeaderCard: document.getElementById('patch-header-card'),
-    themeToggleBtn: document.getElementById('theme-toggle-btn'),
+    get progressBar() { return document.getElementById('progress-bar'); },
+    get loadingOverlay() { return document.getElementById('loading-overlay'); },
+    get patchSelect() { return document.getElementById('patch-select'); },
+    get refreshBtn() { return document.getElementById('refresh-btn'); },
+    get updateBtn() { return document.getElementById('update-btn'); },
+    get searchInput() { return document.getElementById('search-input'); },
+    get filterChips() { return document.querySelectorAll('.filter-chip[data-filter]'); },
+    get sidebar() { return document.getElementById('sidebar'); },
+    get content() { return document.getElementById('content'); },
+    get themeToggleBtn() { return document.getElementById('theme-toggle-btn'); },
+    
+    get patchHeaderCard() {
+        return _patchHeaderCard || document.getElementById('patch-header-card');
+    },
+    set patchHeaderCard(val) {
+        _patchHeaderCard = val;
+    }
 };

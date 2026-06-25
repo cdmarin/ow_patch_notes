@@ -125,7 +125,12 @@ export async function init(skipLoadingPatch = false) {
     }
     
     // Apply saved theme state
-    const savedTheme = localStorage.getItem('theme');
+    let savedTheme = null;
+    try {
+        savedTheme = localStorage.getItem('theme');
+    } catch (e) {
+        console.warn('localStorage no está disponible:', e);
+    }
     updateThemeUI(savedTheme === 'light');
 
     initScrollProgress();
@@ -211,9 +216,15 @@ function setupListeners() {
     if (dom.themeToggleBtn) {
         dom.themeToggleBtn.addEventListener('click', () => {
             const isLight = !document.body.classList.contains('light-theme');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            try {
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            } catch (e) {
+                console.warn('localStorage no está disponible:', e);
+            }
             updateThemeUI(isLight);
         });
+    } else {
+        console.error('[Theme] Toggle button NOT found in dom!');
     }
 
     // Patch selector
@@ -307,7 +318,17 @@ function setupListeners() {
 }
 
 // Start
-document.addEventListener('DOMContentLoaded', async () => {
-    await init();
+async function bootstrap() {
+    try {
+        await init();
+    } catch (err) {
+        console.error('Error durante la inicialización:', err);
+    }
     setupListeners();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrap);
+} else {
+    bootstrap();
+}
