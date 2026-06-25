@@ -250,6 +250,8 @@ async function main() {
                     log('Traduciendo al español...');
                     await initTranslator();
 
+                    const startTime = Date.now();
+
                     // Contar total de elementos a traducir para mostrar progreso
                     let totalToTranslate = 0;
                     let translatedCount = 0;
@@ -302,9 +304,16 @@ async function main() {
                             patchData.sections.bugFixes = await translateBatch(patchData.sections.bugFixes, onProgress);
                         }
                         patchData.translated = true;
-                        log('Traducción completada con éxito.', 'success');
+
+                        const durationMs = Date.now() - startTime;
+                        const seconds = Math.floor(durationMs / 1000);
+                        const milliseconds = durationMs % 1000;
+                        log(`Traducción completada con éxito en ${seconds} segundos y ${milliseconds} milisegundos.`, 'success');
                     } catch (transError) {
-                        log(`Error en traducción: ${transError.message}. Continuando sin traducir.`, 'warn');
+                        const durationMs = Date.now() - startTime;
+                        const seconds = Math.floor(durationMs / 1000);
+                        const milliseconds = durationMs % 1000;
+                        log(`Error en traducción tras ${seconds} segundos y ${milliseconds} milisegundos: ${transError.message}. Continuando sin traducir.`, 'warn');
                     }
                 }
             } else {

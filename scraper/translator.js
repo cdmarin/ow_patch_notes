@@ -4,6 +4,18 @@
 
 const axios = require('axios');
 
+function getFormattedTimestamp() {
+    const now = new Date();
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const ms = String(now.getMilliseconds()).padStart(3, '0').slice(0, 2);
+    return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}:${ms}`;
+}
+
 // Configuración de traducción online (Google Translate)
 let useGoogleTranslate = true; // Por defecto usar Google Translate
 let googleTranslateBlocked = false; // Indica si Google Translate ha sido bloqueado temporalmente (429)
@@ -138,7 +150,7 @@ async function translateBatch(texts, onProgress) {
  * @returns {Promise<Object>} - Datos del héroe traducidos o los originales
  */
 async function translateHero(heroData) {
-    console.log(`  🌐 Traduciendo: ${heroData.name}...`);
+    console.log(`  🌐 Traduciendo: ${heroData.name}... ${getFormattedTimestamp()}`);
 
     // Si no se usa traducción, retornar original
     if (!useGoogleTranslate) {
@@ -220,7 +232,7 @@ async function translateSection(section, onProgress) {
         translated.roles = {};
         for (const [role, heroes] of Object.entries(section.roles)) {
             if (heroes && heroes.length > 0) {
-                console.log(`\n📁 Traduciendo rol: ${role}`);
+                console.log(`\n📁 Traduciendo rol: ${role} ... ${getFormattedTimestamp()}`);
             }
             translated.roles[role] = [];
             for (const hero of heroes) {
@@ -233,7 +245,7 @@ async function translateSection(section, onProgress) {
     if (section.generalItems) {
         translated.generalItems = [];
         if (section.generalItems.length > 0) {
-            console.log(`\n📦 Traduciendo objetos generales...`);
+            console.log(`\n📦 Traduciendo objetos generales... ${getFormattedTimestamp()}`);
         }
         for (const item of section.generalItems) {
             translated.generalItems.push(await translateHero(item));

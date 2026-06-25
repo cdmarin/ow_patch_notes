@@ -21,10 +21,24 @@
       },
       "generalItems": [
         {
-          "name": "General",
+          "name": "Hotfix Gameplay Update",
+          "desc": "Esta es una revisión que contiene actualizaciones del juego. Los códigos de repetición del parche del 16 de junio todavía están disponibles.",
           "changes": [
             {
-              "title": "General",
+              "title": "Actualización del juego con revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una revisión que contiene actualizaciones del juego. Los códigos de repetición del parche del 16 de junio todavía están disponibles."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Neon Junction",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Unión de neón",
               "type": "adjust",
               "details": [
                 "Velocidad de carga útil ligeramente reducida.",

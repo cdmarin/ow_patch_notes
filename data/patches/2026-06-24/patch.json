@@ -21,10 +21,24 @@
       },
       "generalItems": [
         {
-          "name": "General",
+          "name": "Hotfix Gameplay Update",
+          "desc": "Esta es una revisión que contiene actualizaciones del juego. Los códigos de repetición del parche del 16 de junio todavía están disponibles.",
           "changes": [
             {
-              "title": "General",
+              "title": "Actualización del juego con revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una revisión que contiene actualizaciones del juego. Los códigos de repetición del parche del 16 de junio todavía están disponibles."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Anima Strike Event",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Evento de ataque de ánima",
               "type": "nerf",
               "details": [
                 "Los requisitos de misiones diarias para los juegos jugados se redujeron del 7/03/12 al 6/03/10.",
