@@ -169,7 +169,7 @@ export function renderHeroCard(hero, isOpen = false) {
             <summary class="hero-header">
                 <img class="hero-portrait" src="${portrait}" 
                      alt="${hero.name}"
-                     onerror="this.onerror=null; this.src='${FALLBACK_PORTRAIT}'">
+                     onerror="this.onerror=null; this.src=document.body.classList.contains('light-theme') ? 'logo-light.svg' : 'logo.svg'">
                 <div class="hero-header-info">
                     <div class="hero-name">${hero.name}</div>
                     <div class="hero-changes-preview">${badges}</div>

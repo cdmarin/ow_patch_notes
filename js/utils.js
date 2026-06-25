@@ -4,7 +4,8 @@ import { state } from './state.js';
 export function getPortrait(name, portraitUrl) {
     if (portraitUrl) return portraitUrl;
     const key = name.toLowerCase().trim();
-    return HERO_PORTRAITS[key] || FALLBACK_PORTRAIT;
+    if (HERO_PORTRAITS[key]) return HERO_PORTRAITS[key];
+    return document.body.classList.contains('light-theme') ? 'logo-light.svg' : 'logo.svg';
 }
 
 export function formatDate(dateStr) {

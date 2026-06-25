@@ -68,34 +68,35 @@ function detectChangeType(text) {
  * @returns {Object} - Datos de las diferentes secciones
  */
 /**
- * Parsea sub-secciones genéricas (ej. mapas o actualizaciones generales que no son héroes directos)
- * que tienen una estructura de título (h4, h5, p > strong) seguido de un ul/ol con los detalles del cambio.
+ * Parsea un bloque genérico único de actualización (sea el cuerpo principal de la sección o un bloque PatchNotesGeneralUpdate).
  * @param {CheerioAPI} $ 
- * @param {Cheerio} $el 
- * @returns {Array<Object>}
+ * @param {string} name - Nombre o título del bloque
+ * @param {Cheerio} $descContainer - Contenedor de la descripción/contenido del bloque
+ * @returns {Object|null}
  */
-function parseGenericUpdateSection($, $el) {
-    const items = [];
-    const descContainer = $el.find('.PatchNotesGeneralUpdate-description, .PatchNotes-sectionDescription');
-    const children = descContainer.children();
+function parseSingleGenericBlock($, name, $descContainer) {
+    if (!$descContainer || $descContainer.length === 0) return null;
     
-    let currentItem = null;
+    const changes = [];
+    const children = $descContainer.children();
+    
+    let lastParagraphText = '';
+    let introParagraphs = [];
     
     children.each((idx, child) => {
         const $child = $(child);
         const tagName = child.tagName.toLowerCase();
         
-        const isHeader = tagName === 'h4' || tagName === 'h5' || 
-                         (tagName === 'p' && $child.find('strong').length > 0 && $child.text().trim() === $child.find('strong').text().trim());
+        const isTextTag = ['p', 'h4', 'h5', 'h6', 'span', 'strong', 'em'].includes(tagName);
         
-        if (isHeader) {
-            if (currentItem) {
-                items.push(currentItem);
+        if (isTextTag) {
+            const text = $child.text().trim();
+            if (text) {
+                lastParagraphText = text;
+                if (changes.length === 0) {
+                    introParagraphs.push(text);
+                }
             }
-            currentItem = {
-                name: $child.text().trim().replace(/[-:]$/, '').trim(),
-                changes: []
-            };
         } else if (tagName === 'ul' || tagName === 'ol') {
             const details = [];
             $child.find('li').each((liIdx, li) => {
@@ -104,47 +105,75 @@ function parseGenericUpdateSection($, $el) {
             });
             
             if (details.length > 0) {
-                const title = currentItem ? currentItem.name : 'General';
-                const change = {
-                    title: title,
-                    type: detectChangeType(title + ' ' + details.join(' ')),
-                    details: details
-                };
-                
-                if (!currentItem) {
-                    currentItem = {
-                        name: title,
-                        changes: [change]
-                    };
-                } else {
-                    currentItem.changes.push(change);
+                let changeTitle = name;
+                if (lastParagraphText) {
+                    changeTitle = lastParagraphText;
+                    if (changeTitle.length > 120) {
+                        const sentences = changeTitle.split(/[.!?]\s+/);
+                        const lastSentence = sentences[sentences.length - 1] || sentences[0];
+                        if (lastSentence && lastSentence.length < 120) {
+                            changeTitle = lastSentence;
+                        } else {
+                            changeTitle = changeTitle.substring(0, 117) + '...';
+                        }
+                    }
+                    changeTitle = changeTitle.replace(/[-:]$/, '').trim();
                 }
+                
+                changes.push({
+                    title: changeTitle,
+                    type: detectChangeType(changeTitle + ' ' + details.join(' ')),
+                    details: details
+                });
             }
         }
     });
     
-    if (currentItem) {
-        items.push(currentItem);
+    if (changes.length === 0 && introParagraphs.length > 0) {
+        changes.push({
+            title: name,
+            type: detectChangeType(name + ' ' + introParagraphs.join(' ')),
+            details: introParagraphs
+        });
     }
     
-    // Fallback: si no detectó sub-encabezados pero hay listas de viñetas sueltas en la descripción
-    if (items.length === 0) {
-        const details = [];
-        descContainer.find('ul li, ol li').each((liIdx, li) => {
-            const text = $(li).text().trim();
-            if (text) details.push(text);
-        });
-        if (details.length > 0) {
-            items.push({
-                name: 'General',
-                changes: [{
-                    title: 'General',
-                    type: 'adjust',
-                    details: details
-                }]
-            });
+    return {
+        name: name,
+        desc: introParagraphs.join('\n\n'),
+        changes: changes
+    };
+}
+
+/**
+ * Parsea sub-secciones genéricas (ej. mapas o actualizaciones generales que no son héroes directos)
+ * @param {CheerioAPI} $ 
+ * @param {Cheerio} $el 
+ * @returns {Array<Object>}
+ */
+function parseGenericUpdateSection($, $el) {
+    const items = [];
+    
+    // 1. Parsea la descripción principal de la sección si tiene listas (ul/ol)
+    const sectionDesc = $el.find('> .PatchNotes-sectionDescription, > div > .PatchNotes-sectionDescription').first();
+    if (sectionDesc.length > 0) {
+        const sectionTitle = $el.find('h4.PatchNotes-sectionTitle').first().text().trim() || 'General';
+        const item = parseSingleGenericBlock($, sectionTitle, sectionDesc);
+        if (item && item.changes.length > 0) {
+            items.push(item);
         }
     }
+    
+    // 2. Parsea cada bloque PatchNotesGeneralUpdate
+    $el.find('.PatchNotesGeneralUpdate').each((idx, blockEl) => {
+        const $block = $(blockEl);
+        const title = $block.find('.PatchNotesGeneralUpdate-title').first().text().trim() || 'General';
+        const descContainer = $block.find('.PatchNotesGeneralUpdate-description').first();
+        
+        const item = parseSingleGenericBlock($, title, descContainer);
+        if (item) {
+            items.push(item);
+        }
+    });
     
     return items;
 }

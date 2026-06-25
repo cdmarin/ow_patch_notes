@@ -355,10 +355,11 @@
       },
       "generalItems": [
         {
-          "name": "General",
+          "name": "General Changes",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Cambios generales",
               "type": "buff",
               "details": [
                 "Se aumentó el cronómetro para que una partida termine automáticamente debido a que un jugador abandonó la partida a 3 minutos para cubrir el cronómetro de la Armería."
@@ -367,24 +368,25 @@
           ]
         },
         {
-          "name": "General",
+          "name": "General Item Changes",
+          "desc": "Skyline Nanites: objeto general de habilidad poco común",
           "changes": [
             {
-              "title": "General",
+              "title": "Skyline Nanites: objeto general de habilidad poco común",
               "type": "buff",
               "details": [
                 "El daño adicional a objetivos aéreos aumentó del 20 % al 25 %."
               ]
             },
             {
-              "title": "General",
+              "title": "Distresser aéreo: objeto general de arma épica",
               "type": "buff",
               "details": [
                 "El daño adicional a objetivos aéreos aumentó del 25 % al 30 %."
               ]
             },
             {
-              "title": "General",
+              "title": "Vial dividido: objeto general de supervivencia épica",
               "type": "adjust",
               "details": [
                 "El tiempo de reutilización interno de la reducción de sobresalud se redujo de 5 a 3 segundos.",
@@ -392,21 +394,21 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Repelente necrótico - Gadget épico",
               "type": "buff",
               "details": [
                 "El alcance aumentó de 6 ma 8 m."
               ]
             },
             {
-              "title": "General",
+              "title": "Núcleo Coloso - Gadget épico",
               "type": "nerf",
               "details": [
                 "La duración disminuyó de 5 segundos a 3 segundos."
               ]
             },
             {
-              "title": "General",
+              "title": "Actualización - Gadget épico",
               "type": "buff",
               "details": [
                 "El costo disminuyó de 13000 a 12000."
@@ -415,10 +417,11 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Website Updates",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Actualizaciones del sitio web",
               "type": "adjust",
               "details": [
                 "Las estadísticas de héroe ahora aparecen en Héroes → Estadísticas de héroe.",
@@ -738,10 +741,11 @@
       },
       "generalItems": [
         {
-          "name": "General",
+          "name": "10th Anniversary",
+          "desc": "Los últimos 10 años han estado llenos de innumerables recuerdos y partidos épicos, y no podríamos estar más agradecidos con esta increíble comunidad. Ya sea que hayas estado aquí desde el día 1 o desde nuestra temporada 1 más reciente, ¡gracias por jugar!\n\nPara celebrarlo, del 12 de mayo al 1 de junio, puedes completar desafíos para ganar cajas de botín de aniversario únicas repletas de cosméticos nuevos y nostálgicos, ¡muchos de ellos creados por jugadores como tú! Además de eso, cada desafío que completes contribuye a una barra de progreso de la comunidad global. Cada semana, la comunidad puede trabajar en conjunto para hacer avanzar la barra de recompensas más allá de cada punto de control, ¡actualizando la recompensa de esa semana de una única caja de botín normal para incluir también cajas épicas y legendarias!\n\nY para aquellos a quienes les gusta hacer un esfuerzo adicional, habrá desafíos de Prestigio especialmente difíciles de completar, que les brindarán aún más recompensas y progreso adicional para mejorar la recompensa de la comunidad.\n\nTambién publicaremos una tarjeta Arcade especial diferente cada semana, donde podrás adentrarte en el estado del juego tal como existía en épocas pasadas de Overwatch. Las tarjetas son las siguientes:",
           "changes": [
             {
-              "title": "General",
+              "title": "Las tarjetas son las siguientes.",
               "type": "adjust",
               "details": [
                 "Semana 1: Overwatch Classic 2016",
@@ -752,15 +756,35 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Junkrat's Loot Hunt",
+          "desc": "¡La búsqueda de botín de Junkrat está de regreso, del 5 al 8 de junio! ¡Gana cajas de botín completando desafíos que se desbloquean mientras juegas!",
           "changes": [
             {
-              "title": "General",
+              "title": "La búsqueda del botín de Junkrat",
+              "type": "adjust",
+              "details": [
+                "¡La búsqueda de botín de Junkrat está de regreso, del 5 al 8 de junio! ¡Gana cajas de botín completando desafíos que se desbloquean mientras juegas!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Progression",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Progresión",
               "type": "adjust",
               "details": [
                 "Todos los héroes ahora suben de nivel más rápido."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "General",
+          "desc": "",
+          "changes": [
             {
               "title": "General",
               "type": "adjust",
@@ -776,10 +800,11 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Competitive Play Updates",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Actualizaciones del juego competitivo",
               "type": "buff",
               "details": [
                 "Mayor requisito para desbloquear el juego competitivo de 20 victorias a 50 victorias."
@@ -788,10 +813,11 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Initiator Subrole",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Subrol del iniciador",
               "type": "nerf",
               "details": [
                 "Ya no se dispara mientras estás en el aire.",

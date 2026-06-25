@@ -55,7 +55,21 @@
         "Daño": [],
         "Apoyo": []
       },
-      "generalItems": []
+      "generalItems": [
+        {
+          "name": "Hotfix Patch",
+          "desc": "Este es un parche de revisión. Todos los códigos de repetición del parche del 12 de mayo todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Parche de revisión",
+              "type": "adjust",
+              "details": [
+                "Este es un parche de revisión. Todos los códigos de repetición del parche del 12 de mayo todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
     },
     "maps": [],
     "system": [],

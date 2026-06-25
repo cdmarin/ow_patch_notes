@@ -36,13 +36,19 @@ export function applyFiltersAndSearch() {
     const query = state.searchQuery.toLowerCase().trim();
     const filters = state.activeFilters;
 
-    const activeSections = document.querySelectorAll('.role-section.active');
-    if (activeSections.length === 0) return;
+    const sections = document.querySelectorAll('.role-section');
+    if (sections.length === 0) return;
 
     let overallVisibleCount = 0;
 
-    activeSections.forEach(activeSection => {
-        const heroCards = activeSection.querySelectorAll('.hero-card');
+    sections.forEach(section => {
+        const isActive = section.classList.contains('active');
+        if (!isActive) {
+            section.style.display = 'none';
+            return;
+        }
+
+        const heroCards = section.querySelectorAll('.hero-card');
         let visibleCount = 0;
 
         heroCards.forEach(card => {
@@ -78,21 +84,21 @@ export function applyFiltersAndSearch() {
         // Ocultar sección entera en modo "Todos" si no hay héroes que coincidan
         if (state.currentRole === 'Todos') {
             if (visibleCount === 0) {
-                activeSection.style.display = 'none';
+                section.style.display = 'none';
             } else {
-                activeSection.style.display = 'flex';
+                section.style.display = 'flex';
             }
         } else {
-            activeSection.style.display = 'flex';
+            section.style.display = 'flex';
         }
 
         // Show/hide no-results
-        let noResults = activeSection.querySelector('.no-results');
+        let noResults = section.querySelector('.no-results');
         if (state.currentRole !== 'Todos' && visibleCount === 0 && (query || filters.size > 0)) {
             if (!noResults) {
                 noResults = document.createElement('div');
                 noResults.className = 'no-results';
-                activeSection.appendChild(noResults);
+                section.appendChild(noResults);
             }
             noResults.textContent = `No se encontraron resultados para "${query || [...filters].join(', ')}"`;
         } else if (noResults) {

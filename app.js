@@ -29,6 +29,33 @@ function initScrollProgress() {
     });
 }
 
+// ─── Theme Management ─────────────────────────────────────────────────────────
+export function updateThemeUI(isLight) {
+    if (isLight) {
+        document.body.classList.add('light-theme');
+    } else {
+        document.body.classList.remove('light-theme');
+    }
+
+    // Toggle button icon
+    const iconSpan = dom.themeToggleBtn ? dom.themeToggleBtn.querySelector('.theme-icon') : null;
+    if (iconSpan) {
+        iconSpan.textContent = isLight ? '🌙' : '☀️';
+    }
+
+    // Swap logos (excluding header logo which stays as orange/white logo.svg for contrast on blue bg)
+    const logos = Array.from(document.querySelectorAll('img')).filter(img => 
+        (img.classList.contains('loader-logo') ||
+        img.classList.contains('scrape-logo') ||
+        img.src.endsWith('logo.svg') ||
+        img.src.endsWith('logo-light.svg')) &&
+        !img.classList.contains('header-logo')
+    );
+    logos.forEach(logo => {
+        logo.src = isLight ? 'logo-light.svg' : 'logo.svg';
+    });
+}
+
 // ─── Data Loading ─────────────────────────────────────────────────────────────
 async function loadPatchesIndex() {
     const resp = await fetch(`data/patches_index.json?t=${Date.now()}`);
@@ -96,6 +123,11 @@ export async function init(skipLoadingPatch = false) {
     if (skipLoadingPatch instanceof Event) {
         skipLoadingPatch = false;
     }
+    
+    // Apply saved theme state
+    const savedTheme = localStorage.getItem('theme');
+    updateThemeUI(savedTheme === 'light');
+
     initScrollProgress();
 
     const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
@@ -175,6 +207,15 @@ export async function init(skipLoadingPatch = false) {
 
 // ─── Setup Event Listeners ────────────────────────────────────────────────────
 function setupListeners() {
+    // Theme toggle button
+    if (dom.themeToggleBtn) {
+        dom.themeToggleBtn.addEventListener('click', () => {
+            const isLight = !document.body.classList.contains('light-theme');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateThemeUI(isLight);
+        });
+    }
+
     // Patch selector
     dom.patchSelect.addEventListener('change', () => {
         loadPatch(dom.patchSelect.value);

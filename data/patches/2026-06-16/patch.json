@@ -333,7 +333,7 @@
                 "details": [
                   "El costo aumentó a 10500 (antes 9500).",
                   "Se agregaron 50 de salud.",
-                  "Se eliminó la reducción del tiempo de reutilización del 5 %.",
+                  "Se eliminó la reducción del tiempo de reutilización del 5%.",
                   "Se modificó de \"Los golpes de [Rampage] y [Carnage] otorgan un 10 % de velocidad de ataque durante 4 s\" a \"Los golpes de [Jagged Blade], [Rampage] y [Carnage] otorgan un 20 % de poder de habilidad durante 5 s\"."
                 ]
               },
@@ -467,7 +467,7 @@
                 "title": "Teorema de Efi: objeto de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Se eliminó el 20 % de robo de vida de habilidad."
+                  "Se eliminó el 20% de robo de vida de habilidad."
                 ]
               }
             ]
@@ -516,7 +516,7 @@
                 "title": "Reconstrucción de barreras - Energía",
                 "type": "adjust",
                 "details": [
-                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el Martillo cohete."
+                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el daño del Martillo cohete."
                 ]
               },
               {
@@ -648,7 +648,7 @@
                 "title": "Salto Lunar - Poder",
                 "type": "buff",
                 "details": [
-                  "La carga máxima por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
+                  "La carga definitiva por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
                 ]
               },
               {
@@ -815,10 +815,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
             "changes": [
               {
-                "title": "El dinero obtenido por daño y curación se redujo en un 5%.",
+                "title": "El dinero obtenido por daño y curación se redujo en un 5 %.",
                 "type": "nerf",
                 "details": [
-                  "El dinero obtenido por daño y curación se redujo en un 5%.",
+                  "El dinero obtenido por daño y curación se redujo en un 5 %.",
                   "El daño base de Viper Scoped se redujo a 72 (en lugar de 75)."
                 ]
               },
@@ -831,7 +831,7 @@
                 ]
               },
               {
-                "title": "Pin B.O.B - Poder",
+                "title": "Pin B.O.B - Energía",
                 "type": "nerf",
                 "details": [
                   "Se agregó un tiempo de reutilización de 3 segundos para que la carga se pueda reactivar sin eliminar a un enemigo.",
@@ -1103,7 +1103,7 @@
                 "title": "Forjado bajo fuego: poder",
                 "type": "nerf",
                 "details": [
-                  "Desviar la curación se redujo al 100 % (en lugar del 125 %)."
+                  "Desviar la curación se redujo al 100% (en lugar del 125%)."
                 ]
               },
               {
@@ -1516,7 +1516,7 @@
                 "title": "Despacho dinámico - Energía",
                 "type": "adjust",
                 "details": [
-                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50% de tamaño de proyectil [Disparo cargado], un 35% de velocidad de ataque y un 35% de robo de vida con arma\"."
+                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50 % de tamaño de proyectil [Disparo cargado], un 35 % de velocidad de ataque y un 35 % de robo de vida con arma\"."
                 ]
               },
               {
@@ -1582,7 +1582,7 @@
                 "type": "adjust",
                 "details": [
                   "Se agregó un 25% de longitud de deslizamiento eléctrico.",
-                  "Se eliminó la reducción del tiempo de reutilización del 5 %."
+                  "Se eliminó la reducción del tiempo de reutilización del 5%."
                 ]
               },
               {
@@ -1963,7 +1963,7 @@
                 "type": "buff",
                 "details": [
                   "El poder de habilidad aumentó al 15% (en lugar del 10%).",
-                  "La habilidad Robo de vida aumentó al 15% (en lugar del 10%)."
+                  "La habilidad Robo de vida aumentó al 15 % (en lugar del 10 %)."
                 ]
               },
               {
@@ -1992,10 +1992,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
             "changes": [
               {
-                "title": "El dinero del daño y la curación se redujo en un 10%.",
+                "title": "El dinero del daño y la curación se redujo en un 10 %.",
                 "type": "nerf",
                 "details": [
-                  "El dinero del daño y la curación se redujo en un 10%."
+                  "El dinero del daño y la curación se redujo en un 10 %."
                 ]
               },
               {
@@ -2049,7 +2049,7 @@
                 "type": "adjust",
                 "details": [
                   "Se eliminó +4 munición.",
-                  "Se agregó un 30 % de munición máxima."
+                  "Se agregó un 30% de munición máxima."
                 ]
               },
               {
@@ -2322,7 +2322,7 @@
                 "type": "rework",
                 "details": [
                   "Reelaborado a Poder (del artículo).",
-                  "Se eliminó la reducción del tiempo de reutilización del 5 %."
+                  "Se eliminó la reducción del tiempo de reutilización del 5%."
                 ]
               },
               {
@@ -2545,7 +2545,7 @@
                   "El costo aumentó a 11000 (antes 4000).",
                   "Se agregó un 15 % de robo de vida de habilidad.",
                   "La reducción del tiempo de reutilización aumentó al 10 % (en lugar del 5 %).",
-                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50 % del daño de [Soundwave] si el objetivo golpea una pared\"."
+                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50% del daño de [Soundwave] si el objetivo golpea una pared\"."
                 ]
               },
               {
@@ -2790,7 +2790,7 @@
                 "type": "adjust",
                 "details": [
                   "Nuevo",
-                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60 %. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
+                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60%. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
                 ]
               },
               {
@@ -3168,10 +3168,11 @@
       },
       "generalItems": [
         {
-          "name": "General",
+          "name": "General Changes",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Cambios generales",
               "type": "nerf",
               "details": [
                 "Se eliminaron las restricciones de agrupación en las clasificatorias por estadio."
@@ -3180,10 +3181,11 @@
           ]
         },
         {
-          "name": "General",
+          "name": "General Item Changes",
+          "desc": "Amplificador de asesino: objeto de arma general épico",
           "changes": [
             {
-              "title": "General",
+              "title": "Amplificador de asesino: objeto de arma general épico",
               "type": "buff",
               "details": [
                 "Costo reducido a 13000 (en lugar de 14000).",
@@ -3191,42 +3193,42 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Supresor El-Saka",
               "type": "buff",
               "details": [
                 "La reducción de curación aumentó al 35% (en lugar del 30%)."
               ]
             },
             {
-              "title": "General",
+              "title": "Acelerador de luz dura: objeto de arma general épico",
               "type": "nerf",
               "details": [
                 "El costo aumentó a 12000 (antes 11000)."
               ]
             },
             {
-              "title": "General",
+              "title": "Artillería Volskaya: objeto de arma general épico",
               "type": "rework",
               "details": [
                 "Reelaborado de \"Inflige un 5 % más de daño de arma por cada 100 de vida máxima adicional que el objetivo tiene más que tú, hasta un 25 %\" a \"Inflige un 5 % más de daño de arma por cada 100 de vida máxima adicional que tiene el objetivo, hasta un 25 %\"."
               ]
             },
             {
-              "title": "General",
+              "title": "Maximizador de biotecnología: objeto de habilidad general épico",
               "type": "nerf",
               "details": [
                 "Remoto."
               ]
             },
             {
-              "title": "General",
+              "title": "Cybervenom: objeto de habilidad general épico",
               "type": "buff",
               "details": [
                 "La reducción de curación aumentó al 35% (en lugar del 30%)."
               ]
             },
             {
-              "title": "General",
+              "title": "Maximizador de gadgets: objeto de habilidad general épico",
               "type": "adjust",
               "details": [
                 "Nuevo",
@@ -3237,84 +3239,84 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Lumerico Fusion Drive: objeto de habilidad general épico",
               "type": "nerf",
               "details": [
                 "Poder de habilidad reducido al 10% (en lugar del 15%)."
               ]
             },
             {
-              "title": "General",
+              "title": "Sonic Recharger: objeto de habilidad general épico",
               "type": "buff",
               "details": [
                 "El límite de sobresalud aumentó a 100 (en lugar de 75)."
               ]
             },
             {
-              "title": "General",
+              "title": "Three Tap Tommygun - Objeto de habilidad general épica",
               "type": "rework",
               "details": [
                 "Se modificó de \"Cuando usas una habilidad o dispositivo, durante 3 s el daño del arma causa daño adicional igual al 1 % de la vida del objetivo. (Enfriamiento: 0,25 s)\" a \"Después de usar un enemigo o dispositivo, tus siguientes 3 instancias de daño del arma causan daño adicional equivalente al 5 % de la vida actual del objetivo durante 5 s\"."
               ]
             },
             {
-              "title": "General",
+              "title": "Exo Springs: artículo común de supervivencia general",
               "type": "rework",
               "details": [
                 "Cambiado a Artículo (de Gadget)."
               ]
             },
             {
-              "title": "General",
+              "title": "Hidráulica cruzada: objeto de supervivencia general épico",
               "type": "nerf",
               "details": [
                 "El costo aumentó a 11000 (antes 10500)."
               ]
             },
             {
-              "title": "General",
+              "title": "Campo de reducción de Ogundimu: objeto de supervivencia general épico",
               "type": "buff",
               "details": [
                 "Costo reducido a 10500 (en lugar de 11000)."
               ]
             },
             {
-              "title": "General",
+              "title": "Núcleo Overdrive: objeto de supervivencia general épico",
               "type": "nerf",
               "details": [
                 "Sobresalud reducida a 150 (en lugar de 300)."
               ]
             },
             {
-              "title": "General",
+              "title": "Inyección de vanadio: objeto de supervivencia general épico",
               "type": "nerf",
               "details": [
                 "El costo aumentó a 12000 (antes 10000)."
               ]
             },
             {
-              "title": "General",
+              "title": "Soporte de campo: artilugio poco común",
               "type": "nerf",
               "details": [
                 "La curación se redujo a 40 cada 1 s (en lugar de 50)."
               ]
             },
             {
-              "title": "General",
+              "title": "Patines veloces: artilugio poco común",
               "type": "nerf",
               "details": [
                 "Se eliminó el 5% de velocidad de movimiento."
               ]
             },
             {
-              "title": "General",
+              "title": "Fragmento de Kitsune: artilugio poco común",
               "type": "nerf",
               "details": [
                 "Remoto."
               ]
             },
             {
-              "title": "General",
+              "title": "Fragmento de sifón: artilugio poco común",
               "type": "adjust",
               "details": [
                 "Nuevo",
@@ -3325,7 +3327,7 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Núcleo Coloso - Gadget épico",
               "type": "adjust",
               "details": [
                 "El costo aumentó a 10000 (antes 9500).",
@@ -3333,7 +3335,7 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Patines Jet - Gadget épico",
               "type": "nerf",
               "details": [
                 "El costo aumentó a 10000 (antes 9500).",
@@ -3341,7 +3343,7 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Amuleto Kitsune - Gadget épico",
               "type": "nerf",
               "details": [
                 "El costo aumentó a 11000 (antes 10000).",
@@ -3349,7 +3351,7 @@
               ]
             },
             {
-              "title": "General",
+              "title": "Vial Vortex - Gadget épico",
               "type": "adjust",
               "details": [
                 "Nuevo",
@@ -3363,7 +3365,7 @@
       ]
     },
     "gameBase": {
-      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
+      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
       "roles": {
         "Tanque": [
           {
@@ -3614,7 +3616,7 @@
                 "title": "Anular protocolo",
                 "type": "nerf",
                 "details": [
-                  "El costo final aumentó un 10 %."
+                  "El costo final aumentó un 10%."
                 ]
               }
             ]
@@ -3646,7 +3648,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
             "changes": [
               {
-                "title": "Viaje bomba: beneficio menor",
+                "title": "Viaje bomba: ventaja menor",
                 "type": "buff",
                 "details": [
                   "La bonificación de velocidad de ataque aumentó del 25 % al 35 %."
@@ -3677,7 +3679,7 @@
           },
           {
             "name": "Reaper",
-            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su kit. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
+            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su equipo. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
             "changes": [
               {
@@ -3854,7 +3856,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
             "changes": [
               {
-                "title": "Blindaje de transporte: beneficio menor",
+                "title": "Blindaje de transporte: ventaja menor",
                 "type": "nerf",
                 "details": [
                   "Duración reducida de 5 a 3 segundos.",
@@ -3910,7 +3912,7 @@
                 "type": "adjust",
                 "details": [
                   "El coste final aumentó un 9%.",
-                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100 % al 50 %."
+                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100% al 50%."
                 ]
               }
             ]
@@ -3928,7 +3930,7 @@
                 ]
               },
               {
-                "title": "Bastón de Caduceo",
+                "title": "Bastón de caduceo",
                 "type": "nerf",
                 "details": [
                   "Aumento de daño reducido del 30% al 25%."
@@ -3992,10 +3994,50 @@
       },
       "generalItems": [
         {
-          "name": "A shadow looms over Tokyo...",
+          "name": "Reign of Talon: Season 3 - Into The Tiger's Den",
+          "desc": "Reign of Talon - Temporada 3: Into the Tiger's Den lleva a Overwatch a un lugar donde las luces brillantes atraviesan las sombras y con quién estás es lo más importante. Shion llega como un nuevo héroe de daño, rápido y mortal, que lidera el famoso clan Hashimoto y pone a prueba tu determinación en todo momento. Además, explora el primer mapa híbrido nuevo en el metaevento Anima Strike, descubriendo secretos y ganando recompensas mientras avanzas en la historia. Luego, lánzate a la batalla como el Fénix ascendente mítico Illari, empuña el arma mítica Tokyo Rebel de Hanzo y vístete con un nuevo nivel cosmético Ultra Skin para aportar más espectáculo y estilo a tu lucha por un futuro mejor.",
           "changes": [
             {
-              "title": "Una sombra se cierne sobre Tokio...",
+              "title": "Reign of Talon: Temporada 3 - En la guarida del tigre",
+              "type": "adjust",
+              "details": [
+                "Reign of Talon - Temporada 3: Into the Tiger's Den lleva a Overwatch a un lugar donde las luces brillantes atraviesan las sombras y con quién estás es lo más importante. Shion llega como un nuevo héroe de daño, rápido y mortal, que lidera el famoso clan Hashimoto y pone a prueba tu determinación en todo momento. Además, explora el primer mapa híbrido nuevo en el metaevento Anima Strike, descubriendo secretos y ganando recompensas mientras avanzas en la historia. Luego, lánzate a la batalla como el Fénix ascendente mítico Illari, empuña el arma mítica Tokyo Rebel de Hanzo y vístete con un nuevo nivel cosmético Ultra Skin para aportar más espectáculo y estilo a tu lucha por un futuro mejor."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "New Hero: Shion",
+          "desc": "Shion llega como un nuevo y llamativo héroe Omnic Damage, líder del famoso clan Hashimoto en Tokio. Una vez cautiva, aislada y controlada por aquellos que la temían, ahora domina todo con una confianza aterradora y un gusto por el exceso. El equipo de Shion se basa en sus movimientos agresivos, presión implacable y estilo desbordante, para llevar a tus enemigos a un viaje salvaje. Pistolas dobles semiautomáticas, tableros omnidireccionales y una motocicleta que puedes lanzar harán que las calles se pongan rojas cuando hayas terminado.",
+          "changes": [
+            {
+              "title": "Nuevo héroe: Shion",
+              "type": "adjust",
+              "details": [
+                "Shion llega como un nuevo y llamativo héroe Omnic Damage, líder del famoso clan Hashimoto en Tokio. Una vez cautiva, aislada y controlada por aquellos que la temían, ahora domina todo con una confianza aterradora y un gusto por el exceso. El equipo de Shion se basa en sus movimientos agresivos, presión implacable y estilo desbordante, para llevar a tus enemigos a un viaje salvaje. Pistolas dobles semiautomáticas, tableros omnidireccionales y una motocicleta que puedes lanzar harán que las calles se pongan rojas cuando hayas terminado."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "New Map: Neon Junction",
+          "desc": "El juego híbrido tiene un nuevo campo de batalla, ubicado debajo de brillantes escaparates en las calles de Tokio. Lucha en la vida nocturna para capturar Neon Junction, asegurándote de detenerte y explorar: ¡nunca sabes qué tesoros puedes encontrar! Luego escolta la única carga útil de ANDROMEDA III hacia Zuiko-za, donde la pulida superficie de la ciudad comienza a agrietarse. Cada sección del mapa cobra vida con detalles, desde robots gigantes hasta callejones sombreados que insinúan quién controla realmente las calles después del anochecer.",
+          "changes": [
+            {
+              "title": "Nuevo mapa: cruce de neón",
+              "type": "adjust",
+              "details": [
+                "El juego híbrido tiene un nuevo campo de batalla, ubicado debajo de brillantes escaparates en las calles de Tokio. Lucha en la vida nocturna para capturar Neon Junction, asegurándote de detenerte y explorar: ¡nunca sabes qué tesoros puedes encontrar! Luego escolta la única carga útil de ANDROMEDA III hacia Zuiko-za, donde la pulida superficie de la ciudad comienza a agrietarse. Cada sección del mapa cobra vida con detalles, desde robots gigantes hasta callejones sombreados que insinúan quién controla realmente las calles después del anochecer."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Anima Strike",
+          "desc": "Una sombra se cierne sobre Tokio...\n\nCon el apoyo de Overwatch, Kiriko y sus compañeros, los Yōkai, luchan para aflojar el control de la organización criminal Hashimoto sobre la ciudad. Para ello, deberán enfrentarse al cruel líder de Hashimoto, Shion.\n\nA lo largo de tres semanas, del 16 de junio al 6 de julio, los jugadores se abrirán camino a través de diferentes lugares de Tokio completando desafíos. Cada semana presenta un diseño de centro 2D único con el tema de una ubicación diferente:",
+          "changes": [
+            {
+              "title": "Cada semana presenta un diseño de centro 2D único temático en torno a una ubicación diferente",
               "type": "adjust",
               "details": [
                 "Unión de neón",
@@ -4004,7 +4046,7 @@
               ]
             },
             {
-              "title": "Una sombra se cierne sobre Tokio...",
+              "title": "En total, los jugadores pueden ganar",
               "type": "adjust",
               "details": [
                 "18 cajas de botín",
@@ -4020,9 +4062,15 @@
                 "2 amuletos",
                 "1 recuerdo"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Community Crafted",
+          "desc": "¿Y si Ana tuviera un jetpack? ¿Y si Junker Queen pudiera lanzar su hacha? ¿Qué pasaría si Widowmaker pudiera colocar un cable trampa explosivo? Bueno, no te preguntes más, porque hemos trabajado con cuatro de tus creadores favoritos (Guxue, Apply, Ocie y mL7support) para cambiar a cada héroe según sus ideas. Desde el 30 de junio hasta el 13 de julio, juega esta nueva versión de Overwatch en Arcade y gana las siguientes recompensas:",
+          "changes": [
             {
-              "title": "Una sombra se cierne sobre Tokio...",
+              "title": "Del 30 de junio al 13 de julio, juega esta nueva versión de Overwatch en Arcade y gana las siguientes recompensas",
               "type": "adjust",
               "details": [
                 "Icono Zenyatta Pachi",
@@ -4033,9 +4081,15 @@
                 "Encanto de arma Cassidy BAMF",
                 "Título raro de \"Doomscroller\""
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Excavation Initiative",
+          "desc": "¡Es hora de sacar la excavadora y encontrar un tesoro! Únase a nosotros en este nuevo evento de temporada del 16 de junio al 10 de agosto, ¡desbloqueando cajas de botín a lo largo del camino!",
+          "changes": [
             {
-              "title": "Una sombra se cierne sobre Tokio...",
+              "title": "Únase a nosotros en este nuevo evento de temporada del 16 de junio al 10 de agosto, ¡desbloqueando cajas de botín a lo largo del camino!",
               "type": "adjust",
               "details": [
                 "Gana un juego por día, en 3 días cualesquiera durante la semana para completar una excavación y ganar un botín. Los jugadores dedicados pueden completar dos excavaciones por semana para ganar un botín adicional.",
@@ -4049,41 +4103,79 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Junkrat's Loot Hunt",
+          "desc": "¡La búsqueda de botín de Junkrat está de regreso, del 10 al 14 de julio! ¡Gana cajas de botín completando desafíos que se desbloquean mientras juegas!",
           "changes": [
             {
-              "title": "General",
+              "title": "La búsqueda del botín de Junkrat",
+              "type": "adjust",
+              "details": [
+                "¡La búsqueda de botín de Junkrat está de regreso, del 10 al 14 de julio! ¡Gana cajas de botín completando desafíos que se desbloquean mientras juegas!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "General Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Actualizaciones generales",
               "type": "adjust",
               "details": [
                 "Nuestro cliente Nintendo Switch™ recibirá una nueva base, lo que resultará en tiempos de descarga más largos para los usuarios de esa plataforma.",
                 "Seguimos ampliando las palabras clave de nuestro Panel de información avanzada para algunas de las interacciones de habilidades más opacas con: Aplastar, Curar límite de amplificador, Ignorar energía, Límite de reducción y Reducción fuerte. ¡Léelos para obtener más información!"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Sound",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Sonido",
               "type": "adjust",
               "details": [
                 "Se agregó una nueva opción en Sonido → General → Sonidos para controlar el volumen de los efectos de sonido eliminados de compañeros de equipo/enemigos."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Controls",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Controles",
               "type": "nerf",
               "details": [
                 "Se eliminó la combinación de teclas predeterminada para alternar interfaz de usuario (anteriormente ALT+Z). Los jugadores que deseen utilizar esta función pueden reasignarla manualmente en Opciones > Controles."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Accessibility",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Accesibilidad",
               "type": "buff",
               "details": [
                 "Se agregaron dos nuevas opciones en Accesibilidad → General → Chat.",
                 "High Contrast Chat permite a los jugadores tener un fondo oscuro que hace que el chat sea más fácil de leer.",
                 "La opacidad del fondo del chat permite a los jugadores controlar qué tan oscuro es el fondo si el chat de alto contraste está desactivado."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Social",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Social",
               "type": "buff",
               "details": [
                 "En una actualización anterior, se agregó una categoría de Favoritos al Panel de amigos para ayudar a los jugadores a encontrar rápidamente amigos favoritos."
@@ -4092,10 +4184,11 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Hero Bans",
+          "desc": "",
           "changes": [
             {
-              "title": "General",
+              "title": "Prohibiciones de héroes",
               "type": "adjust",
               "details": [
                 "La lista (descrita con más detalle en las Actualizaciones principales del juego a continuación) brinda a los jugadores la posibilidad de compartir a sus héroes favoritos con sus equipos para permitir una mejor coordinación.",
@@ -4104,9 +4197,15 @@
                 "La página de resultados de prohibiciones de Hero Bans tiene nuevas actualizaciones visuales para ayudar a los jugadores a comprender el draft de serpientes y mostrar la prohibición del lobby.",
                 "La fase Hero Bans ahora muestra la cantidad de votos para cada una de tus elecciones (7 para el 1.er lugar, 5 para el 2.° lugar y 3 para el 3.er lugar) y la cantidad total de votos que tu equipo ha contribuido en conjunto para cada héroe."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Top 500 Challenger Live Replays",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Repeticiones en vivo de los 500 mejores Challenger",
               "type": "adjust",
               "details": [
                 "Todos los jugadores ahora pueden ver repeticiones en vivo de los partidos en curso para los jugadores en las tablas de clasificación de los 500 mejores retadores.",
@@ -4114,9 +4213,15 @@
                 "Las repeticiones en vivo comparten controles con la función de repetición existente.",
                 "Para los jugadores en cualquier tabla de clasificación, esta función se puede desactivar en Opciones en Social → Privacidad → Tablas de clasificación. La configuración se llama \"Ocultar repetición en vivo de la tabla de clasificación\" y está desactivada de forma predeterminada."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Cheater Compensation",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Compensación por tramposos",
               "type": "adjust",
               "details": [
                 "La compensación de progreso de rango otorgada a los jugadores de rango superior no se reduce al respetar el modificador de presión."
@@ -4125,41 +4230,79 @@
           ]
         },
         {
-          "name": "General",
+          "name": "Hero Updates",
+          "desc": "El sistema de beneficios ha seguido evolucionando desde la temporada 1, con adiciones continuas de héroes y beneficios en toda la lista. Este parche incluye ajustes específicos a las ventajas que están fuera de línea en cuanto a tasa de selección, tasa de victorias o efectividad general, con el objetivo de mejorar la viabilidad y mantener opciones significativas.",
           "changes": [
             {
-              "title": "General",
+              "title": "Actualizaciones de héroes",
+              "type": "adjust",
+              "details": [
+                "El sistema de beneficios ha seguido evolucionando desde la temporada 1, con adiciones continuas de héroes y beneficios en toda la lista. Este parche incluye ajustes específicos a las ventajas que están fuera de línea en cuanto a tasa de selección, tasa de victorias o efectividad general, con el objetivo de mejorar la viabilidad y mantener opciones significativas."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "The Roster",
+          "desc": "",
+          "changes": [
+            {
+              "title": "La lista",
               "type": "adjust",
               "details": [
                 "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).",
                 "Los jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).",
-                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.",
+                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.",
                 "Los jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Map Voting Updates",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Actualizaciones de votación del mapa",
               "type": "adjust",
               "details": [
                 "Es mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Practice Range",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Campo de práctica",
               "type": "adjust",
               "details": [
                 "Se ha habilitado el texto de combate flotante para el campo de práctica del juego principal."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Post-Match Accolades",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Elogios posteriores al partido",
               "type": "buff",
               "details": [
                 "Se reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas."
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Streamer Mode",
+          "desc": "",
+          "changes": [
             {
-              "title": "General",
+              "title": "Modo transmisor",
               "type": "buff",
               "details": [
                 "Se agregaron muchos nombres falsos nuevos..."
@@ -4176,7 +4319,7 @@
       "Se solucionó un problema que causaba que Ashe recibiera más daño del previsto cuando era golpeada por su propia dinamita.",
       "Se solucionó un problema que causaba que el indicador de la interfaz de usuario de Brigitte's Inspire no tuviera en cuenta el beneficio de aumento de moral.",
       "Se solucionó un problema por el cual las señales de audio de las ventajas de Lucio revelaban involuntariamente su ubicación.",
-      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la carga de Reinhardt.",
+      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la Carga de Reinhardt.",
       "Se solucionó un problema por el cual la curación pasiva del subrol de Superviviente se activaba incorrectamente si se usaba una habilidad de movimiento antes de recibir daño.",
       "Se solucionó un problema por el cual el combustible adicional del beneficio Almacén de combustible de Pharah no se activaba si su combustible se estaba descomponiendo antes de usar Jet Dash.",
       "Se solucionó un problema por el cual Sierra podía agarrar involuntariamente su dron cuando se perdía de vista.",

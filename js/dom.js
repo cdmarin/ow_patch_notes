@@ -9,4 +9,5 @@ export const dom = {
     sidebar: document.getElementById('sidebar'),
     content: document.getElementById('content'),
     patchHeaderCard: document.getElementById('patch-header-card'),
+    themeToggleBtn: document.getElementById('theme-toggle-btn'),
 };
