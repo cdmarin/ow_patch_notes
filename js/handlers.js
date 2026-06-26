@@ -34,43 +34,55 @@ export function switchRole(role) {
 
 export function applyFiltersAndSearch() {
     const query = state.searchQuery.toLowerCase().trim();
-    const filters = state.activeFilters;
+    const filters = Array.from(state.activeFilters);
 
-    const sections = document.querySelectorAll('.role-section');
+    const sections = dom.content.getElementsByClassName('role-section');
     if (sections.length === 0) return;
 
     let overallVisibleCount = 0;
 
-    sections.forEach(section => {
+    for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
         const isActive = section.classList.contains('active');
         if (!isActive) {
             section.style.display = 'none';
-            return;
+            continue;
         }
 
-        const heroCards = section.querySelectorAll('.hero-card');
+        const heroCards = section.getElementsByClassName('hero-card');
         let visibleCount = 0;
 
-        heroCards.forEach(card => {
-            const heroName = card.querySelector('.hero-name')?.textContent?.toLowerCase() || '';
+        for (let j = 0; j < heroCards.length; j++) {
+            const card = heroCards[j];
+            const heroName = card.dataset.hero || '';
             const matchesSearch = !query || heroName.includes(query);
 
             let matchesFilter = true;
-            if (filters.size > 0) {
-                const changeItems = card.querySelectorAll('.change-item');
-                const hasMatchingChange = Array.from(changeItems).some(item => {
-                    return Array.from(filters).some(f => item.classList.contains(f));
-                });
-                matchesFilter = hasMatchingChange;
-
-                // Filter individual change items
-                changeItems.forEach(item => {
-                    const typeMatch = Array.from(filters).some(f => item.classList.contains(f));
-                    item.style.display = typeMatch ? '' : 'none';
-                });
+            if (filters.length > 0) {
+                const cardTypes = card.dataset.types ? card.dataset.types.split(',') : [];
+                const hasMatchingType = cardTypes.some(type => filters.includes(type));
+                
+                if (!hasMatchingType) {
+                    matchesFilter = false;
+                } else {
+                    const changeItems = card.getElementsByClassName('change-item');
+                    for (let k = 0; k < changeItems.length; k++) {
+                        const item = changeItems[k];
+                        let typeMatch = false;
+                        for (let f = 0; f < filters.length; f++) {
+                            if (item.classList.contains(filters[f])) {
+                                typeMatch = true;
+                                break;
+                            }
+                        }
+                        item.style.display = typeMatch ? '' : 'none';
+                    }
+                }
             } else {
-                // Reset all change items visibility
-                card.querySelectorAll('.change-item').forEach(item => item.style.display = '');
+                const changeItems = card.getElementsByClassName('change-item');
+                for (let k = 0; k < changeItems.length; k++) {
+                    changeItems[k].style.display = '';
+                }
             }
 
             const visible = matchesSearch && matchesFilter;
@@ -79,36 +91,29 @@ export function applyFiltersAndSearch() {
                 visibleCount++;
                 overallVisibleCount++;
             }
-        });
+        }
 
-        // Ocultar sección entera en modo "Todos" si no hay héroes que coincidan
         if (state.currentRole === 'Todos') {
-            if (visibleCount === 0) {
-                section.style.display = 'none';
-            } else {
-                section.style.display = 'flex';
-            }
+            section.style.display = visibleCount === 0 ? 'none' : 'flex';
         } else {
             section.style.display = 'flex';
         }
 
-        // Show/hide no-results
-        let noResults = section.querySelector('.no-results');
-        if (state.currentRole !== 'Todos' && visibleCount === 0 && (query || filters.size > 0)) {
+        let noResults = section.getElementsByClassName('no-results')[0];
+        if (state.currentRole !== 'Todos' && visibleCount === 0 && (query || filters.length > 0)) {
             if (!noResults) {
                 noResults = document.createElement('div');
                 noResults.className = 'no-results';
                 section.appendChild(noResults);
             }
-            noResults.textContent = `No se encontraron resultados para "${query || [...filters].join(', ')}"`;
+            noResults.textContent = `No se encontraron resultados para "${query || filters.join(', ')}"`;
         } else if (noResults) {
             noResults.remove();
         }
-    });
+    }
 
-    // En modo "Todos", si el total de héroes visibles en todas las secciones es 0, mostrar no resultados global
-    let globalNoResults = dom.content.querySelector('.global-no-results');
-    if (state.currentRole === 'Todos' && overallVisibleCount === 0 && (query || filters.size > 0)) {
+    let globalNoResults = dom.content.getElementsByClassName('global-no-results')[0];
+    if (state.currentRole === 'Todos' && overallVisibleCount === 0 && (query || filters.length > 0)) {
         if (!globalNoResults) {
             globalNoResults = document.createElement('div');
             globalNoResults.className = 'no-results global-no-results';
@@ -117,7 +122,7 @@ export function applyFiltersAndSearch() {
             globalNoResults.style.padding = '3rem 2rem';
             dom.content.appendChild(globalNoResults);
         }
-        globalNoResults.textContent = `No se encontraron resultados para "${query || [...filters].join(', ')}" en ningún rol.`;
+        globalNoResults.textContent = `No se encontraron resultados para "${query || filters.join(', ')}" en ningún rol.`;
     } else if (globalNoResults) {
         globalNoResults.remove();
     }

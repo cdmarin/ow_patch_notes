@@ -137,10 +137,12 @@ export function renderChangeItem(change) {
     const type = change.type || 'adjust';
     const label = CHANGE_LABELS[type] || type;
     const details = (change.details || []).map(d => `<li>${d}</li>`).join('');
+    const iconHtml = change.icon ? `<img class="change-ability-icon" src="${change.icon}" alt="${change.title}" draggable="false">` : '';
 
     return `
         <li class="change-item ${type}">
             <div class="change-header">
+                ${iconHtml}
                 <span class="change-badge ${type}">${label}</span>
                 <span class="change-title">${change.title}</span>
             </div>
@@ -169,6 +171,7 @@ export function renderHeroCard(hero, isOpen = false) {
             <summary class="hero-header">
                 <img class="hero-portrait" src="${portrait}" 
                      alt="${hero.name}"
+                     draggable="false"
                      onerror="this.onerror=null; this.src=document.body.classList.contains('light-theme') ? 'logo-light.svg' : 'logo.svg'">
                 <div class="hero-header-info">
                     <div class="hero-name">${hero.name}</div>
@@ -187,17 +190,20 @@ export function renderHeroCard(hero, isOpen = false) {
 export function renderContent(patchData) {
     dom.content.innerHTML = '';
 
+    const fragment = document.createDocumentFragment();
+
     const headerCard = document.createElement('div');
     headerCard.id = 'patch-header-card';
     headerCard.className = 'patch-header-card';
     dom.patchHeaderCard = headerCard;
-    dom.content.appendChild(headerCard);
+    fragment.appendChild(headerCard);
 
     const section = patchData?.sections?.[state.currentSection];
     const currentSecConfig = SECTIONS.find(s => s.id === state.currentSection);
 
     if (!section || (currentSecConfig?.hasRoles && !section.roles)) {
-        dom.content.appendChild(createEmptySection('Próximamente', 'Esta sección se llenará automáticamente con el scraper en el próximo parche.'));
+        fragment.appendChild(createEmptySection('Próximamente', 'Esta sección se llenará automáticamente con el scraper en el próximo parche.'));
+        dom.content.appendChild(fragment);
         return;
     }
 
@@ -221,13 +227,14 @@ export function renderContent(patchData) {
                 heroes.forEach(hero => {
                     const el = document.createElement('div');
                     el.innerHTML = renderHeroCard(hero);
-                    el.dataset.hero = hero.name.toLowerCase();
-                    el.dataset.types = (hero.changes || []).map(c => c.type).join(',');
-                    roleSection.appendChild(el.firstElementChild);
+                    const card = el.firstElementChild;
+                    card.dataset.hero = hero.name.toLowerCase();
+                    card.dataset.types = (hero.changes || []).map(c => c.type).join(',');
+                    roleSection.appendChild(card);
                 });
             }
 
-            dom.content.appendChild(roleSection);
+            fragment.appendChild(roleSection);
         });
 
         if (section.generalItems?.length > 0) {
@@ -239,17 +246,19 @@ export function renderContent(patchData) {
             section.generalItems.forEach(item => {
                 const el = document.createElement('div');
                 el.innerHTML = renderHeroCard(item);
-                el.dataset.hero = item.name.toLowerCase();
-                generalSection.appendChild(el.firstElementChild);
+                const card = el.firstElementChild;
+                card.dataset.hero = item.name.toLowerCase();
+                card.dataset.types = (item.changes || []).map(c => c.type).join(',');
+                generalSection.appendChild(card);
             });
 
-            dom.content.appendChild(generalSection);
+            fragment.appendChild(generalSection);
         }
 
     } else {
         const flat = Array.isArray(section) ? section : [];
         if (flat.length === 0) {
-            dom.content.appendChild(createEmptySection('Próximamente', 'Esta sección se completará con el scraper.'));
+            fragment.appendChild(createEmptySection('Próximamente', 'Esta sección se completará con el scraper.'));
         } else {
             if (state.currentSection === 'bugFixes') {
                 const card = document.createElement('div');
@@ -265,16 +274,21 @@ export function renderContent(patchData) {
                         ${flat.map(bug => `<li style="margin-bottom:0.75rem;line-height:1.6;font-size:0.95rem">${bug}</li>`).join('')}
                     </ul>
                 `;
-                dom.content.appendChild(card);
+                fragment.appendChild(card);
             } else {
                 flat.forEach(item => {
                     const el = document.createElement('div');
                     el.innerHTML = renderHeroCard(item);
-                    dom.content.appendChild(el.firstElementChild);
+                    const card = el.firstElementChild;
+                    card.dataset.hero = item.name.toLowerCase();
+                    card.dataset.types = (item.changes || []).map(c => c.type).join(',');
+                    fragment.appendChild(card);
                 });
             }
         }
     }
+
+    dom.content.appendChild(fragment);
 }
 
 export function createEmptySection(title, desc) {

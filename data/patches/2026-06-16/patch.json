@@ -45,14 +45,14 @@
                 "title": "Protector de fiesta - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Matriz ultraancha: potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -87,7 +87,7 @@
                 "title": "Misil macro: objeto de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -156,7 +156,7 @@
                 "title": "Wing Clipper: objeto de habilidad de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -223,7 +223,7 @@
                 "title": "Golpéame de nuevo - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -259,7 +259,7 @@
                 "title": "Floración de brocheta: objeto de habilidad de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -373,7 +373,7 @@
                 "title": "Restablecimiento de fábrica - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -387,14 +387,14 @@
                 "title": "Rotación en caliente-O - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Overclock de jabalina - Potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -416,7 +416,7 @@
                 "title": "Energía optimizada: objeto de arma de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -509,14 +509,14 @@
                 "title": "Barrera de amplificación - Potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Reconstrucción de barreras - Energía",
                 "type": "adjust",
                 "details": [
-                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el daño del Martillo cohete."
+                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el Martillo cohete."
                 ]
               },
               {
@@ -539,7 +539,7 @@
                 "title": "Vanguardia - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -793,7 +793,7 @@
                 "title": "Haz más grande: objeto de arma de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -815,10 +815,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
             "changes": [
               {
-                "title": "El dinero obtenido por daño y curación se redujo en un 5 %.",
+                "title": "El dinero obtenido por daño y curación se redujo en un 5%.",
                 "type": "nerf",
                 "details": [
-                  "El dinero obtenido por daño y curación se redujo en un 5 %.",
+                  "El dinero obtenido por daño y curación se redujo en un 5%.",
                   "El daño base de Viper Scoped se redujo a 72 (en lugar de 75)."
                 ]
               },
@@ -930,7 +930,7 @@
                 "title": "Bang Bang - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -945,7 +945,7 @@
                 "title": "Casa llena - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -967,7 +967,7 @@
                 "title": "Simplemente sigue adelante - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1103,7 +1103,7 @@
                 "title": "Forjado bajo fuego: poder",
                 "type": "nerf",
                 "details": [
-                  "Desviar la curación se redujo al 100% (en lugar del 125%)."
+                  "Desviar la curación se redujo al 100 % (en lugar del 125 %)."
                 ]
               },
               {
@@ -1162,7 +1162,7 @@
                 "title": "Deflecting Dash - Objeto de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1239,14 +1239,14 @@
                 "title": "Explosivos improvisados: objeto de habilidad de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Saltadores de Jamison: artículo de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1275,7 +1275,7 @@
                 "title": "Blaster frío - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1359,7 +1359,7 @@
                 "title": "Conversión de combustible: potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1374,7 +1374,7 @@
                 "title": "Asistencia de puntería de Ana: objeto de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1399,7 +1399,7 @@
                 "title": "Fantasma - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1426,14 +1426,14 @@
                 "title": "Sifón compartido - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Silencioso como la tumba - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1516,7 +1516,7 @@
                 "title": "Despacho dinámico - Energía",
                 "type": "adjust",
                 "details": [
-                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50 % de tamaño de proyectil [Disparo cargado], un 35 % de velocidad de ataque y un 35 % de robo de vida con arma\"."
+                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50% de tamaño de proyectil [Disparo cargado], un 35% de velocidad de ataque y un 35% de robo de vida con arma\"."
                 ]
               },
               {
@@ -1537,14 +1537,14 @@
                 "title": "Bloqueado y cargado - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Rondas de reverberación: potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1641,7 +1641,7 @@
                 "title": "Hombre en fuga - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1689,7 +1689,7 @@
                 "title": "Ecualizador de final de juego: elemento de habilidad de héroe épico",
                 "type": "adjust",
                 "details": [
-                  "Ahora otorga un aumento del 300% en la frecuencia de actualización de habilidades en lugar de una reducción del tiempo de reutilización del 20%.",
+                  "Ahora otorga un aumento del 300 % en la frecuencia de actualización de habilidades en lugar de una reducción del tiempo de reutilización del 20 %.",
                   "Costo reducido a 9000 (en lugar de 10000)."
                 ]
               },
@@ -1735,14 +1735,14 @@
                 "title": "Dejar escapar un poco de vapor - Energía",
                 "type": "buff",
                 "details": [
-                  "La reducción del tiempo de reutilización de sobrecarga se redujo al 8% (en lugar del 10%)."
+                  "La reducción del tiempo de reutilización de sobrecarga se redujo al 8 % (en lugar del 10 %)."
                 ]
               },
               {
                 "title": "Refuerzo Positivo - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1767,7 +1767,7 @@
                 "title": "Lanzador Lindholm: objeto de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               }
             ]
@@ -1797,7 +1797,7 @@
                 "title": "Un abrir y cerrar de ojos - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1826,7 +1826,7 @@
                 "title": "Previsión - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto"
+                  "Eliminado"
                 ]
               },
               {
@@ -1863,7 +1863,7 @@
                 "title": "T.Racer - Potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1970,7 +1970,7 @@
                 "title": "Maestría de Marzia: objeto de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -1992,10 +1992,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
             "changes": [
               {
-                "title": "El dinero del daño y la curación se redujo en un 10 %.",
+                "title": "El dinero del daño y la curación se redujo en un 10%.",
                 "type": "nerf",
                 "details": [
-                  "El dinero del daño y la curación se redujo en un 10 %."
+                  "El dinero del daño y la curación se redujo en un 10%."
                 ]
               },
               {
@@ -2017,7 +2017,7 @@
                 "title": "Soñador - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2057,21 +2057,21 @@
                 "type": "adjust",
                 "details": [
                   "Se eliminó el 25% de robo de vida de habilidad.",
-                  "Se agregó 25 de salud y 10 % de poder de habilidad."
+                  "Se agregó 25 de salud y 10% de poder de habilidad."
                 ]
               },
               {
                 "title": "Pin de Grenadius: objeto de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Dosis letal: objeto de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2254,7 +2254,7 @@
                 "title": "Túnel de velocidad: objeto de habilidad de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2292,7 +2292,7 @@
                 "title": "Suero Sunburst: artículo de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               }
             ]
@@ -2314,7 +2314,7 @@
                 "title": "Guardia de cruce - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2377,14 +2377,14 @@
                 "title": "Triple amenaza: poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Dos-Zu - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2445,7 +2445,7 @@
                 "title": "Saltemos - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2490,7 +2490,7 @@
                 "title": "Estampido Sónico - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2545,7 +2545,7 @@
                   "El costo aumentó a 11000 (antes 4000).",
                   "Se agregó un 15 % de robo de vida de habilidad.",
                   "La reducción del tiempo de reutilización aumentó al 10 % (en lugar del 5 %).",
-                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50% del daño de [Soundwave] si el objetivo golpea una pared\"."
+                  "Se agregó \"[Soundwave] inflige daño adicional equivalente al 50 % del daño de [Soundwave] si el objetivo golpea una pared\"."
                 ]
               },
               {
@@ -2612,7 +2612,7 @@
                 "title": "Haz protector - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2641,14 +2641,14 @@
                 "title": "Vaso extra lleno: objeto de arma de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
                 "title": "Movilizador en el aire: objeto de arma de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2665,7 +2665,7 @@
                 "title": "Impulsores benditos: elemento de habilidad de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2715,7 +2715,7 @@
                 "title": "Deconstrucción - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2730,7 +2730,7 @@
                 "title": "Empoderándote - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2752,7 +2752,7 @@
                 "title": "Desbordamiento óptimo: potencia",
                 "type": "nerf",
                 "details": [
-                  "Remoto"
+                  "Eliminado"
                 ]
               },
               {
@@ -2782,7 +2782,7 @@
                 "title": "Deathod científico - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2790,7 +2790,7 @@
                 "type": "adjust",
                 "details": [
                   "Nuevo",
-                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60%. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
+                  "\"Si atraviesas a un enemigo durante [Desvanecimiento], lanza [Coalescencia] durante 1,25 segundos con una efectividad del 60 %. Por cada enemigo adicional, lanza durante 0,75 segundos más\"."
                 ]
               },
               {
@@ -2804,7 +2804,7 @@
                 "title": "Divisor subatómico: objeto de arma de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2908,7 +2908,7 @@
                 "title": "Apuntalar - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2922,7 +2922,7 @@
                 "title": "Marejada ciclónica - Energía",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2945,7 +2945,7 @@
                 "title": "Guardián de mareas - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -2967,7 +2967,7 @@
                 "title": "Actualización del depósito: objeto de arma de héroe poco común",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -3107,7 +3107,7 @@
                 "title": "Guantes galvánicos de Genji: objeto de arma de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -3217,7 +3217,7 @@
               "title": "Maximizador de biotecnología: objeto de habilidad general épico",
               "type": "nerf",
               "details": [
-                "Remoto."
+                "Eliminado."
               ]
             },
             {
@@ -3239,7 +3239,7 @@
               ]
             },
             {
-              "title": "Lumerico Fusion Drive: objeto de habilidad general épico",
+              "title": "Lumerico Fusion Drive: objeto de habilidad general épica",
               "type": "nerf",
               "details": [
                 "Poder de habilidad reducido al 10% (en lugar del 15%)."
@@ -3312,7 +3312,7 @@
               "title": "Fragmento de Kitsune: artilugio poco común",
               "type": "nerf",
               "details": [
-                "Remoto."
+                "Eliminado."
               ]
             },
             {
@@ -3365,7 +3365,7 @@
       ]
     },
     "gameBase": {
-      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
+      "intro": "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).\nLos jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).\nLos jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.\nLos jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile.\n\n\nEs mucho menos probable que los mapas que se ofrecen sean mapas que hayas jugado en los últimos 5 partidos. Este cambio ayudará a que los jugadores que juegan durante sesiones más cortas tengan muchas más probabilidades de experimentar una mayor variedad de mapas.\n\n\nSe ha habilitado el texto de combate flotante para el campo de práctica del juego principal.\n\n\nSe reajustaron muchas cartas que aparecían con demasiada frecuencia (mirándote, Echo Sticky Bombs) y se aumentaron las probabilidades de que aparecieran algunas cartas.\n\n\nSe agregaron muchos nombres falsos nuevos...",
       "roles": {
         "Tanque": [
           {
@@ -3391,7 +3391,7 @@
                 "title": "Retiro corporativo: beneficio importante",
                 "type": "buff",
                 "details": [
-                  "Agregado.",
+                  "Añadido.",
                   "Mientras Barrier Array está activo, se puede mover una vez a otra ubicación."
                 ]
               },
@@ -3399,7 +3399,7 @@
                 "title": "Movimiento de poder: ventaja importante",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               }
             ]
@@ -3458,7 +3458,8 @@
                 "type": "nerf",
                 "details": [
                   "La duración máxima se redujo de 3 a 2,5 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d1d1bb23a702a4e9f831b3acf5dd85f2da68459059f84f080b6c519f0f1db1d9.png"
               }
             ]
           },
@@ -3495,7 +3496,8 @@
                 "details": [
                   "El daño aumentó de 120 a 125.",
                   "La velocidad del proyectil aumentó de 30 a 33."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca90071b2e0c9cbf5a6e91e580682c73456298b88e34d40d7bf5eb5c098173a1.png"
               }
             ]
           },
@@ -3509,7 +3511,8 @@
                 "type": "buff",
                 "details": [
                   "La tasa de degeneración de energía se redujo de 2,5 a 2,0 energía por segundo."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/34d08df453dae3f8c01cabc9015e43ecfbb5fa764885a6f1f431ee90a98dcee2.png"
               }
             ]
           }
@@ -3552,11 +3555,11 @@
                 "title": "Artillería blindada – Beneficio menor",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
-                "title": "Bomba inteligente: ventaja menor",
+                "title": "Bomba inteligente: beneficio menor",
                 "type": "adjust",
                 "details": [
                   "El retroceso automático de la granada táctica A-36 aumenta en un 25% y ya no te daña."
@@ -3616,8 +3619,9 @@
                 "title": "Anular protocolo",
                 "type": "nerf",
                 "details": [
-                  "El costo final aumentó un 10%."
-                ]
+                  "El costo final aumentó un 10 %."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc8088a2968e2850ef438645fd2286ea7abe1779b2eae5cf85638168736ecddc.png"
               }
             ]
           },
@@ -3638,7 +3642,8 @@
                 "type": "buff",
                 "details": [
                   "El tiempo de reutilización se redujo de 10 a 8 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6947d8eeddce8d295ed96525cdabfe36c94b3b67b50baf87aabb8ae61d32495a.png"
               }
             ]
           },
@@ -3673,7 +3678,8 @@
                 "type": "buff",
                 "details": [
                   "El alcance aumentó de 10 a 12 metros."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/02f402130df2ecfcedb6c5bdb7dd3eea199d1d1e833c567bb810c7edd7a717e7.png"
               }
             ]
           },
@@ -3693,7 +3699,7 @@
                 "title": "Espectro persistente – Beneficio menor",
                 "type": "adjust",
                 "details": [
-                  "La bonificación de velocidad de movimiento se redujo del 40 % al 30 %."
+                  "La bonificación de velocidad de movimiento se redujo del 40% al 30%."
                 ]
               }
             ]
@@ -3722,7 +3728,8 @@
                 "type": "nerf",
                 "details": [
                   "El tamaño del proyectil base se redujo de 0,175 a 0,15 m."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d12e2bc19f1619b71d13816c01ef96ad54bb6a7cb4ee00ae8bea8be3d2e2102d.png"
               },
               {
                 "title": "Dron ancla",
@@ -3731,7 +3738,8 @@
                   "La velocidad de despliegue de los drones aumentó de 30 a 40 metros por segundo.",
                   "El alcance de despliegue del dron aumentó de 14 a 16 metros.",
                   "El alcance del agarre del dron aumentó de 17 a 19 metros."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f9e6fff99bff3c24a9ea9e57ae7c71b067982e6df9b0acb50529fe58131b6e7b.png"
               }
             ]
           },
@@ -3773,7 +3781,8 @@
                 "type": "buff",
                 "details": [
                   "El costo final se redujo en un 15 %."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/827e0c55b3d2f335f5950c676f1f52c8668ad33f34ea4c6052c4a122ac005ce8.png"
               },
               {
                 "title": "Embate",
@@ -3781,7 +3790,8 @@
                 "details": [
                   "El aumento de velocidad de movimiento por acumulación aumentó del 2% al 3%.",
                   "La duración máxima aumentó de 5,5 a 7,5 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1395ef28c410ae8de1000ecbc6af22c9c1d9506706cff45968efbfba7ed8adfd.png"
               }
             ]
           }
@@ -3797,14 +3807,16 @@
                 "type": "buff",
                 "details": [
                   "Se redujo la recuperación después de la habilidad de 0,3 a 0,1 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
               },
               {
                 "title": "resplandor bailando",
                 "type": "buff",
                 "details": [
                   "Se redujo la recuperación después de la habilidad de 0,2 a 0,1 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8a106a2acae1b9edf47495af102cf17fd7e8320c76b201d533f5723afc45d14.png"
               }
             ]
           },
@@ -3817,7 +3829,7 @@
                 "title": "Suero de velocidad – Beneficio menor",
                 "type": "adjust",
                 "details": [
-                  "La bonificación de velocidad de movimiento se redujo del 40 % al 30 %."
+                  "La bonificación de velocidad de movimiento se redujo del 40% al 30%."
                 ]
               }
             ]
@@ -3867,7 +3879,7 @@
                 "title": "Cabezazo – Beneficio mayor",
                 "type": "adjust",
                 "details": [
-                  "El umbral de velocidad para activar se redujo de 16,5 a 14 metros por segundo.",
+                  "El umbral de velocidad para activarse se redujo de 16,5 a 14 metros por segundo.",
                   "Ya no se reembolsa el combustible.",
                   "El daño aumentó de 30 a 50."
                 ]
@@ -3877,14 +3889,16 @@
                 "type": "nerf",
                 "details": [
                   "La penalización de regeneración de combustible mientras se lleva un objetivo aumentó de 2 a 3 veces más lenta."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f957b6f5803bd08a99eec642365c30f22e817ad33afb4b95d8e1856c87cba1b2.png"
               },
               {
                 "title": "Pawjectiles bióticos",
                 "type": "buff",
                 "details": [
                   "El daño y la curación aumentaron de 4 a 4,5 por bolita."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f69a07e928053431f7a1ac72a29c045d3eba5b6ae3bf29fdb21ee24e6f5d41e3.png"
               }
             ]
           },
@@ -3912,8 +3926,9 @@
                 "type": "adjust",
                 "details": [
                   "El coste final aumentó un 9%.",
-                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100% al 50%."
-                ]
+                  "La tasa de conversión de sobresalud por curación excesiva se redujo del 100 % al 50 %."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/03d294ff2fbd7cf4a66220be5734b3607bc5cfc57d3af2a0ce4ad823e1656b75.png"
               }
             ]
           },
@@ -3930,18 +3945,20 @@
                 ]
               },
               {
-                "title": "Bastón de caduceo",
+                "title": "Bastón de Caduceo",
                 "type": "nerf",
                 "details": [
                   "Aumento de daño reducido del 30% al 25%."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/149e46752f75bc9f6fece61f1a7b8e08bd1d3dbea8a723efd518f6b9aa4a70b0.png"
               },
               {
                 "title": "valquiria",
                 "type": "nerf",
                 "details": [
                   "El costo final aumentó un 7%."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8465f0b6e120a6cdbd7b4b0124adcfe6a1585e6b417275f9c6cf86d248318ffd.png"
               }
             ]
           },
@@ -3956,7 +3973,8 @@
                 "details": [
                   "El tiempo de reutilización se redujo de 12 a 11 segundos.",
                   "La duración aumentó de 4,5 a 5,5 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/291ad4dfccb3678979f4f5ca8c24d219b9bb61a383731057547760646dcd5c04.png"
               }
             ]
           },
@@ -3972,7 +3990,8 @@
                   "El daño por segundo aumentó de 50 a 60 daños por segundo.",
                   "La curación por segundo aumentó de 65 a 75 curaciones por segundo.",
                   "El daño máximo por orbe aumentó de 200 a 250."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/66a472473965ecbe525afb991bab0f950248542232a13a3d34607d9b71a8ddee.png"
               }
             ]
           },
@@ -4252,7 +4271,7 @@
               "details": [
                 "Los jugadores ahora pueden elegir sus 3 héroes preferidos en cada rol para mostrarlos a su equipo durante todas las fases previas al juego (votación de mapas, héroe preferido, prohibiciones de héroes).",
                 "Los jugadores pueden cambiar qué héroes aparecen en la lista desde el menú principal, mientras están en la cola y durante las fases previas al juego (los cambios realizados en el juego previo no se guardan, ya que a menudo responden a la elección de un mapa o de un héroe aliado).",
-                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de jugador.",
+                "Los jugadores pueden optar por mostrar solo 2, 1 o 0 héroes (sin preferencia), pero de forma predeterminada, los 3 héroes mostrados serán los mismos héroes utilizados en las Tarjetas de Jugador.",
                 "Los jugadores pueden ver la lista de héroes de los miembros de su grupo abriendo el menú contextual social que ofrece otras opciones sociales como Whisper y View Career Profile."
               ]
             }
@@ -4319,7 +4338,7 @@
       "Se solucionó un problema que causaba que Ashe recibiera más daño del previsto cuando era golpeada por su propia dinamita.",
       "Se solucionó un problema que causaba que el indicador de la interfaz de usuario de Brigitte's Inspire no tuviera en cuenta el beneficio de aumento de moral.",
       "Se solucionó un problema por el cual las señales de audio de las ventajas de Lucio revelaban involuntariamente su ubicación.",
-      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la Carga de Reinhardt.",
+      "Se solucionó un problema por el cual Orisa aún quedaba inmovilizada incluso si Fortify se activaba exactamente al mismo tiempo que era golpeada por la carga de Reinhardt.",
       "Se solucionó un problema por el cual la curación pasiva del subrol de Superviviente se activaba incorrectamente si se usaba una habilidad de movimiento antes de recibir daño.",
       "Se solucionó un problema por el cual el combustible adicional del beneficio Almacén de combustible de Pharah no se activaba si su combustible se estaba descomponiendo antes de usar Jet Dash.",
       "Se solucionó un problema por el cual Sierra podía agarrar involuntariamente su dron cuando se perdía de vista.",

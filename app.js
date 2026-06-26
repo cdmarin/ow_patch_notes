@@ -305,10 +305,14 @@ function setupListeners() {
         });
     }
 
-    // Search input
+    // Search input with 150ms debounce
+    let searchTimeout = null;
     dom.searchInput.addEventListener('input', (e) => {
         state.searchQuery = e.target.value;
-        applyFiltersAndSearch();
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            applyFiltersAndSearch();
+        }, 150);
     });
 
     // Filter chips

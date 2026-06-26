@@ -92,6 +92,15 @@ body {
     overflow-x: hidden;
 }
 
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+}
+
 /* Animated background */
 body::before {
     content: '';
@@ -817,9 +826,21 @@ header {
 
 .change-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.6rem;
     margin-bottom: 0.5rem;
+}
+
+.change-ability-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.24);
+    background-color: #1a1f2c; /* Fondo oscuro tipo slate para contrastar iconos blancos PNG */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 4px;
 }
 
 .change-badge {
@@ -830,7 +851,6 @@ header {
     border-radius: 100px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-top: 0.15rem;
 }
 
 .change-badge.buff {

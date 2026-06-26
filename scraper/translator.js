@@ -77,6 +77,17 @@ async function translateTextWithMyMemory(text) {
     return text;
 }
 
+const TRANSLATION_OVERRIDES = {
+    'removed.': 'Eliminado.',
+    'removed': 'Eliminado',
+    'added.': 'Añadido.',
+    'added': 'Añadido',
+    'reworked.': 'Reelaborado.',
+    'reworked': 'Reelaborado',
+    'new.': 'Nuevo.',
+    'new': 'Nuevo'
+};
+
 /**
  * Traduce un texto de inglés a español usando Google Translate.
  * Si falla, hace fallback a MyMemory (o LibreTranslate si está configurado).
@@ -85,6 +96,11 @@ async function translateTextWithMyMemory(text) {
  */
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
+
+    const trimmedLower = text.toLowerCase().trim();
+    if (TRANSLATION_OVERRIDES[trimmedLower]) {
+        return TRANSLATION_OVERRIDES[trimmedLower];
+    }
 
     if (!useGoogleTranslate) return text;
 

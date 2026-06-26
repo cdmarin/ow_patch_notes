@@ -395,6 +395,7 @@ function parseHeroElement($, $hero) {
     $hero.find('.PatchNotesAbilityUpdate').each((i, abilityEl) => {
         const $ability = $(abilityEl);
         const title = $ability.find('.PatchNotesAbilityUpdate-name').first().text().trim();
+        const icon = $ability.find('.PatchNotesAbilityUpdate-icon').first().attr('src');
         const details = [];
         $ability.find('.PatchNotesAbilityUpdate-detailList ul li').each((j, detailLi) => {
             const detailText = $(detailLi).text().trim();
@@ -405,7 +406,8 @@ function parseHeroElement($, $hero) {
             hero.changes.push({
                 title: title || (details.length > 0 ? details[0] : 'Ability'),
                 type: detectChangeType(title + ' ' + details.join(' ')),
-                details: details.length > 0 ? details : [title]
+                details: details.length > 0 ? details : [title],
+                icon: icon || null
             });
         }
     });
