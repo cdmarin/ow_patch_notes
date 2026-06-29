@@ -14,6 +14,12 @@ export function switchSection(sectionId) {
 
     applyFiltersAndSearch();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Close mobile drawer on section change
+    if (window.innerWidth <= 768) {
+        dom.sidebar.classList.remove('open');
+        dom.drawerOverlay.classList.remove('active');
+    }
 }
 
 export function switchRole(role) {
@@ -30,6 +36,12 @@ export function switchRole(role) {
     });
 
     applyFiltersAndSearch();
+
+    // Close mobile drawer on role change
+    if (window.innerWidth <= 768) {
+        dom.sidebar.classList.remove('open');
+        dom.drawerOverlay.classList.remove('active');
+    }
 }
 
 export function applyFiltersAndSearch() {

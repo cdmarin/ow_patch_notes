@@ -16,7 +16,14 @@ export function renderPatchSelector(patches) {
 }
 
 export function renderSidebar(patchData) {
-    dom.sidebar.innerHTML = '';
+    // Buscar o crear el contenedor de grupos de navegación para evitar destruir los elementos móviles movidos dinámicamente
+    let navGroups = dom.sidebar.querySelector('.sidebar-nav-groups');
+    if (!navGroups) {
+        navGroups = document.createElement('div');
+        navGroups.className = 'sidebar-nav-groups';
+        dom.sidebar.appendChild(navGroups);
+    }
+    navGroups.innerHTML = '';
 
     const sectionGroup = document.createElement('div');
     sectionGroup.className = 'sidebar-group';
@@ -44,14 +51,14 @@ export function renderSidebar(patchData) {
     });
 
     if (sectionGroup.children.length > 1) {
-        dom.sidebar.appendChild(sectionGroup);
+        navGroups.appendChild(sectionGroup);
     }
 
     const currentSec = SECTIONS.find(s => s.id === state.currentSection);
     if (currentSec?.hasRoles) {
         const divider = document.createElement('div');
         divider.className = 'sidebar-divider';
-        dom.sidebar.appendChild(divider);
+        navGroups.appendChild(divider);
 
         const roleGroup = document.createElement('div');
         roleGroup.className = 'sidebar-group';
@@ -105,8 +112,9 @@ export function renderSidebar(patchData) {
             roleGroup.appendChild(generalBtn);
         }
 
-        dom.sidebar.appendChild(roleGroup);
+        navGroups.appendChild(roleGroup);
     }
+    handleMobileLayout();
 }
 
 // Exponer la función de alternar descripción larga
@@ -485,5 +493,48 @@ export function renderContentNotDownloaded(patchMeta) {
             scrapeBtn.textContent = '📥 Descargar y procesar';
             if (dom.refreshBtn) dom.refreshBtn.classList.remove('spinning');
         };
+    }
+}
+
+export function handleMobileLayout() {
+    const isMobile = window.innerWidth <= 768;
+    const filterWrap = dom.filterWrap;
+    const searchWrap = document.querySelector('.search-wrap');
+    const patchSelectorWrap = document.querySelector('.patch-selector-wrap');
+    const sidebar = dom.sidebar;
+    const header = document.querySelector('header');
+
+    if (!sidebar || !header) return;
+
+    if (isMobile) {
+        // Move to sidebar in order: Patch Selector -> Search -> Section Tabs -> Role Tabs -> Filters
+        if (patchSelectorWrap && patchSelectorWrap.parentElement !== sidebar) {
+            sidebar.insertBefore(patchSelectorWrap, sidebar.firstChild);
+        }
+        if (searchWrap && searchWrap.parentElement !== sidebar) {
+            // Put it right after patchSelectorWrap
+            if (patchSelectorWrap && patchSelectorWrap.nextSibling) {
+                sidebar.insertBefore(searchWrap, patchSelectorWrap.nextSibling);
+            } else {
+                sidebar.appendChild(searchWrap);
+            }
+        }
+        if (filterWrap && filterWrap.parentElement !== sidebar) {
+            sidebar.appendChild(filterWrap);
+        }
+    } else {
+        // Move back to header in original order
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const mobileToggleBtn = document.getElementById('mobile-filter-toggle-btn');
+
+        if (patchSelectorWrap && patchSelectorWrap.parentElement !== header) {
+            header.insertBefore(patchSelectorWrap, mobileToggleBtn);
+        }
+        if (searchWrap && searchWrap.parentElement !== header) {
+            header.insertBefore(searchWrap, mobileToggleBtn);
+        }
+        if (filterWrap && filterWrap.parentElement !== header) {
+            header.insertBefore(filterWrap, themeToggleBtn);
+        }
     }
 }

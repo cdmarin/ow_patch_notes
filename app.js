@@ -12,7 +12,8 @@ import {
     renderSidebar, 
     renderPatchHeader, 
     renderContent, 
-    renderContentNotDownloaded 
+    renderContentNotDownloaded,
+    handleMobileLayout
 } from './js/render.js';
 import { 
     toggleFilter, 
@@ -316,26 +317,31 @@ function setupListeners() {
     });
 
     // Mobile filter drawer toggle
+    // Mobile filter drawer toggle (opens sidebar drawer containing sections, roles and filters)
     if (dom.mobileFilterToggleBtn) {
         dom.mobileFilterToggleBtn.addEventListener('click', () => {
-            dom.filterWrap.classList.add('open');
+            dom.sidebar.classList.add('open');
             dom.drawerOverlay.classList.add('active');
         });
     }
 
     if (dom.closeDrawerBtn) {
         dom.closeDrawerBtn.addEventListener('click', () => {
-            dom.filterWrap.classList.remove('open');
+            dom.sidebar.classList.remove('open');
             dom.drawerOverlay.classList.remove('active');
         });
     }
 
     if (dom.drawerOverlay) {
         dom.drawerOverlay.addEventListener('click', () => {
-            dom.filterWrap.classList.remove('open');
+            dom.sidebar.classList.remove('open');
             dom.drawerOverlay.classList.remove('active');
         });
     }
+
+    // Call layout adjustment on window resize
+    window.addEventListener('resize', handleMobileLayout);
+    handleMobileLayout();
 
     // Delegated click listener for smooth details open/close transition
     document.addEventListener('click', (e) => {

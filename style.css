@@ -426,10 +426,14 @@ header::after {
 /* Drawer Overlay */
 .drawer-overlay {
     position: fixed;
-    inset: 0;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - var(--header-h));
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(4px);
-    z-index: 999;
+    z-index: 180;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -1577,13 +1581,25 @@ header::after {
         flex-direction: column;
     }
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-        padding: 1.25rem;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        gap: 1rem;
+        position: fixed;
+        top: var(--header-h);
+        right: -320px; /* hidden offscreen */
+        width: 280px;
+        height: calc(100vh - var(--header-h));
+        background: var(--bg-sidebar);
+        border-left: 1px solid var(--border-color);
+        border-bottom: none;
+        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
+        z-index: 190;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        display: flex;
+    }
+    .sidebar.open {
+        right: 0; /* slide in */
     }
     .sidebar-divider {
         display: none;
@@ -1609,34 +1625,32 @@ header::after {
     }
     .filter-wrap {
         display: flex;
-        position: fixed;
-        top: 0;
-        right: -320px; /* hidden offscreen */
-        width: 280px;
-        height: 100vh;
-        background: var(--bg-sidebar);
-        border-left: 1px solid var(--border-color);
-        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
-        z-index: 1000;
         flex-direction: column;
-        padding: 6rem 1.5rem 2rem;
-        gap: 1.25rem;
-        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        gap: 0.75rem;
+        width: 100%;
         margin-left: 0;
-    }
-    .filter-wrap.open {
-        right: 0; /* slide in */
+        position: static;
+        height: auto;
+        background: none;
+        border-left: none;
+        box-shadow: none;
+        padding: 0;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1.5rem;
+        margin-top: 0.5rem;
     }
     .filter-wrap::before {
         content: 'Filtrar Cambios';
         display: block;
         font-family: 'Outfit', sans-serif;
         font-weight: 800;
-        font-size: 1.25rem;
-        color: var(--text-primary);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-muted);
         margin-bottom: 0.5rem;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 0.75rem;
+        border-bottom: none;
+        padding-bottom: 0;
     }
     .close-drawer-btn {
         display: block;
@@ -1661,35 +1675,33 @@ header::after {
         font-size: 0.85rem;
     }
     .search-wrap {
-        max-width: 200px;
-    }
-}
-
-@media (max-width: 576px) {
-    header {
-        height: auto;
-        padding: 0.75rem 1rem;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-    .header-brand {
         width: 100%;
-        justify-content: center;
+        max-width: none;
     }
     .patch-selector-wrap {
-        flex: 1;
-        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
     }
     #patch-select {
         flex: 1;
         max-width: none;
     }
-    .search-wrap {
-        width: 100%;
-        max-width: none;
+}
+
+@media (max-width: 576px) {
+    header {
+        height: var(--header-h);
+        padding: 0 1rem;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
     }
-    .theme-toggle-btn {
-        margin-left: auto;
+    .header-brand {
+        width: auto;
+        justify-content: flex-start;
+    }
+    .header-title {
+        display: none; /* Hide header text on tiny mobile screens to fit logo/toggle btns easily */
     }
     .content {
         padding: 1rem;
