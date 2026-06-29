@@ -11,6 +11,10 @@ export const dom = {
     get sidebar() { return document.getElementById('sidebar'); },
     get content() { return document.getElementById('content'); },
     get themeToggleBtn() { return document.getElementById('theme-toggle-btn'); },
+    get mobileFilterToggleBtn() { return document.getElementById('mobile-filter-toggle-btn'); },
+    get closeDrawerBtn() { return document.getElementById('close-drawer-btn'); },
+    get drawerOverlay() { return document.getElementById('drawer-overlay'); },
+    get filterWrap() { return document.querySelector('.filter-wrap'); },
     
     get patchHeaderCard() {
         return _patchHeaderCard || document.getElementById('patch-header-card');

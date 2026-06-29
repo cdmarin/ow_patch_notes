@@ -38,8 +38,17 @@ function detectChangeType(text) {
     if (CHANGE_TYPE_KEYWORDS.new.some(k => lower.includes(k))) return 'new';
 
     // 2. Buffs y Nerfs
-    const isBuff = CHANGE_TYPE_KEYWORDS.buff.some(k => lower.includes(k));
-    const isNerf = CHANGE_TYPE_KEYWORDS.nerf.some(k => lower.includes(k));
+    let isBuff = CHANGE_TYPE_KEYWORDS.buff.some(k => lower.includes(k));
+    let isNerf = CHANGE_TYPE_KEYWORDS.nerf.some(k => lower.includes(k));
+
+    // Si contiene "bonus" pero también un verbo de nerf claro, predomina el nerf
+    if (isBuff && isNerf && lower.includes('bonus')) {
+        const hasClearNerfVerb = ['reduced', 'decreased', 'lowered', 'removed'].some(v => lower.includes(v));
+        if (hasClearNerfVerb) {
+            isBuff = false;
+        }
+    }
+
     const hasNegativeContext = NEGATIVE_CONTEXT_KEYWORDS.some(k => lower.includes(k));
 
     if (isBuff && isNerf) return 'adjust'; // Conflicto
@@ -207,13 +216,13 @@ function parseSections($, container) {
         'hanzo': 'Daño', 'junkrat': 'Daño', 'mei': 'Daño', 'pharah': 'Daño', 'reaper': 'Daño',
         'sojourn': 'Daño', 'soldier: 76': 'Daño', 'soldier-76': 'Daño', 'sombra': 'Daño', 'symmetra': 'Daño',
         'torbjörn': 'Daño', 'torbjorn': 'Daño', 'tracer': 'Daño', 'widowmaker': 'Daño', 'venture': 'Daño',
-        'freja': 'Daño', 'vendetta': 'Daño', 'sierra': 'Daño', 'emre': 'Daño',
+        'freja': 'Daño', 'vendetta': 'Daño', 'sierra': 'Daño', 'emre': 'Daño', 'shion': 'Daño', 'anran': 'Daño',
 
         // Support
         'ana': 'Apoyo', 'baptiste': 'Apoyo', 'brigitte': 'Apoyo', 'illari': 'Apoyo', 'juno': 'Apoyo',
         'kiriko': 'Apoyo', 'lifeweaver': 'Apoyo', 'lúcio': 'Apoyo', 'lucio': 'Apoyo', 'mercy': 'Apoyo',
         'moira': 'Apoyo', 'zenyatta': 'Apoyo', 'jetpack cat': 'Apoyo', 'jetpack-cat': 'Apoyo',
-        'wuyang': 'Apoyo', 'anran': 'Apoyo', 'mizuki': 'Apoyo', 'shion': 'Apoyo'
+        'wuyang': 'Apoyo', 'mizuki': 'Apoyo'
     };
 
     const sections = container ? container.find('.PatchNotes-section') : $('.PatchNotes-section');

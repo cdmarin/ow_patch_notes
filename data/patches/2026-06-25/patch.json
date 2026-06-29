@@ -104,7 +104,7 @@
                 "type": "adjust",
                 "details": [
                   "Daño adicional reducido al 100 % (en lugar del 120 %).",
-                  "La cuerda ahora es un 50% más rápida."
+                  "La cuerda es ahora un 50% más rápida."
                 ]
               }
             ]
@@ -311,8 +311,7 @@
       "intro": "Esta es una revisión que contiene actualizaciones del juego y correcciones de errores. Los códigos de repetición del parche del 16 de junio todavía están disponibles.",
       "roles": {
         "Tanque": [],
-        "Daño": [],
-        "Apoyo": [
+        "Daño": [
           {
             "name": "Shion",
             "desc": "",
@@ -329,7 +328,8 @@
               }
             ]
           }
-        ]
+        ],
+        "Apoyo": []
       },
       "generalItems": [
         {
@@ -352,11 +352,11 @@
     "bugFixes": [
       "En una actualización anterior, se corrigió un error que provocaba que el daño de Apuntar de Ashe cayera demasiado rápido.",
       "Se corrigió un error por el cual el Muro de vida y el poder de la muerte de Reaper no curaban a los aliados si no estaban dentro del alcance durante el lanzamiento inicial.",
-      "Se corrigió un error por el cual lanzar Dragonblade mientras se desviaba con Dragon's Breath y Iaido Strike Powers equipados no activaba correctamente Dragon's Breath.",
+      "Se corrigió un error por el cual lanzar Dragonblade mientras se desvía con Dragon's Breath y Iaido Strike Powers equipados no activaba correctamente Dragon's Breath.",
       "Se corrigió un error con el poder de calamidad de Ashe que permitía a los jugadores adquirir más munición de la prevista.",
       "Se corrigió un error con el poder de agarre en cadena de Moira donde el agarre biótico solo se encadenaba a 1 objetivo adicional.",
       "Se corrigió un error por el cual el objeto de héroe detonador Dae-Hyun de D.Va no otorgaba un 15% de carga máxima inicial.",
-      "Se corrigió un error por el cual el objeto héroe de la capa de hielo de Mei no otorgaba las estadísticas correctas.",
+      "Se corrigió un error por el cual el elemento héroe de la capa de hielo de Mei no otorgaba las estadísticas correctas.",
       "Se corrigió un error por el cual el elemento central del grupo de Ana no otorgaba poder de habilidad.",
       "Se corrigió un error por el cual el elemento de radio de respuesta rápida de Soldier: 76 no aumentaba la duración del campo biótico.",
       "Se corrigió un error por el cual el poder de la buena fortuna de Kiriko no funcionaba con la velocidad del proyectil.",

@@ -98,7 +98,7 @@ export function renderSidebar(patchData) {
             generalBtn.dataset.role = '__general__';
             generalBtn.innerHTML = `
                 <span class="role-dot"></span>
-                General & Mapas
+                General y Mapas
                 <span class="hero-count">${sectionData.generalItems.length}</span>
             `;
             generalBtn.onclick = () => switchRole('__general__');
@@ -109,13 +109,47 @@ export function renderSidebar(patchData) {
     }
 }
 
+// Exponer la función de alternar descripción larga
+window.togglePatchDesc = function(btn) {
+    const span = btn.previousElementSibling;
+    const isExpanded = btn.textContent === 'Ver más';
+    if (isExpanded) {
+        span.innerHTML = span.getAttribute('data-full');
+        btn.textContent = 'Ver menos';
+    } else {
+        span.innerHTML = span.getAttribute('data-short');
+        btn.textContent = 'Ver más';
+    }
+};
+
 export function renderPatchHeader(patchData, patchMeta) {
     const heroCount = getAllHeroes(patchData);
     const changeCount = countAllChanges(patchData);
 
+    const currentIntro = patchData.sections?.[state.currentSection]?.intro
+        || patchData.sections?.gameBase?.intro
+        || patchData.sections?.stadium?.intro
+        || patchMeta?.subtitle
+        || '';
+
+    const maxLength = 220;
+    let descHtml = '';
+    
+    if (currentIntro.length > maxLength) {
+        const shortText = currentIntro.substring(0, maxLength).trim() + '...';
+        const safeFull = currentIntro.replace(/"/g, '&quot;');
+        const safeShort = shortText.replace(/"/g, '&quot;');
+        descHtml = `
+            <span class="desc-text" data-full="${safeFull}" data-short="${safeShort}">${shortText}</span>
+            <button class="toggle-desc-btn" onclick="togglePatchDesc(this)">Ver más</button>
+        `;
+    } else {
+        descHtml = `<span class="desc-text">${currentIntro}</span>`;
+    }
+
     dom.patchHeaderCard.innerHTML = `
         <h1 class="patch-card-title">${patchData.title || patchMeta?.title || 'Notas de Parche'}</h1>
-        <p class="patch-card-desc">${patchData.sections?.stadium?.intro || patchMeta?.subtitle || ''}</p>
+        <p class="patch-card-desc">${descHtml}</p>
         <div class="patch-stats">
             <div class="patch-stat">
                 <span class="patch-stat-value">${heroCount}</span>
@@ -134,7 +168,7 @@ export function renderPatchHeader(patchData, patchMeta) {
 }
 
 export function renderChangeItem(change) {
-    const type = change.type || 'adjust';
+    const type = (change.type === 'adjust') ? 'rework' : (change.type || 'rework');
     const label = CHANGE_LABELS[type] || type;
     const details = (change.details || []).map(d => `<li>${d}</li>`).join('');
     const iconHtml = change.icon ? `<img class="change-ability-icon" src="${change.icon}" alt="${change.title}" draggable="false">` : '';
@@ -156,7 +190,7 @@ export function renderHeroCard(hero, isOpen = false) {
 
     const typeCounts = {};
     (hero.changes || []).forEach(c => {
-        const t = c.type || 'adjust';
+        const t = c.type === 'adjust' ? 'rework' : (c.type || 'rework');
         typeCounts[t] = (typeCounts[t] || 0) + 1;
     });
 
@@ -180,12 +214,68 @@ export function renderHeroCard(hero, isOpen = false) {
                 <span class="hero-chevron">▼</span>
             </summary>
             <div class="hero-content">
-                ${hero.desc ? `<p class="hero-desc">${hero.desc}</p>` : ''}
-                <ul class="changes-list">${changesHtml}</ul>
+                <div class="hero-content-inner">
+                    ${hero.desc ? `<p class="hero-desc">${hero.desc}</p>` : ''}
+                    <ul class="changes-list">${changesHtml}</ul>
+                </div>
             </div>
         </details>
     `;
 }
+
+// Exponer la función global para expandir/colapsar todas las tarjetas de una sección
+window.toggleSectionCards = function(btn, shouldExpand) {
+    const section = btn.closest('.role-section') || btn.closest('.flat-grid-section') || btn.closest('.content');
+    if (!section) return;
+
+    const cards = section.querySelectorAll('.hero-card');
+    cards.forEach(card => {
+        const content = card.querySelector('.hero-content');
+        if (!content) return;
+
+        // Prevent interrupting existing transition
+        if (content.style.transition) return;
+
+        if (shouldExpand) {
+            if (!card.open) {
+                card.setAttribute('open', '');
+                const height = content.scrollHeight;
+                content.style.height = '0';
+                content.style.opacity = '0';
+                content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
+                content.offsetHeight; // Reflow
+                content.style.height = `${height}px`;
+                content.style.opacity = '1';
+
+                const onEnd = () => {
+                    content.style.height = '';
+                    content.style.opacity = '';
+                    content.style.transition = '';
+                    content.removeEventListener('transitionend', onEnd);
+                };
+                content.addEventListener('transitionend', onEnd);
+            }
+        } else {
+            if (card.open) {
+                const height = content.scrollHeight;
+                content.style.height = `${height}px`;
+                content.offsetHeight; // Reflow
+                content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
+                content.style.height = '0';
+                content.style.opacity = '0';
+
+                const onEnd = () => {
+                    card.removeAttribute('open');
+                    content.style.height = '';
+                    content.style.opacity = '';
+                    content.style.transition = '';
+                    content.removeEventListener('transitionend', onEnd);
+                };
+                content.addEventListener('transitionend', onEnd);
+            }
+        }
+    });
+};
 
 export function renderContent(patchData) {
     dom.content.innerHTML = '';
@@ -211,10 +301,6 @@ export function renderContent(patchData) {
         ROLES.forEach(role => {
             const heroes = section.roles?.[role] || [];
 
-            if (state.currentRole === 'Todos' && heroes.length === 0) {
-                return;
-            }
-
             const roleSection = document.createElement('div');
             roleSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === role ? 'active' : ''}`;
             roleSection.id = `role-${role}`;
@@ -223,13 +309,21 @@ export function renderContent(patchData) {
                 roleSection.innerHTML = `<h2 class="role-section-title">${role}</h2>`;
                 roleSection.appendChild(createEmptySection('Sin cambios', `No hay cambios de ${role} en este parche.`));
             } else {
-                roleSection.innerHTML = `<h2 class="role-section-title">${role}</h2>`;
+                roleSection.innerHTML = `
+                    <h2 class="role-section-title">
+                        <span>${role}</span>
+                        <div class="section-actions">
+                            <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
+                            <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
+                        </div>
+                    </h2>
+                `;
                 heroes.forEach(hero => {
                     const el = document.createElement('div');
                     el.innerHTML = renderHeroCard(hero);
                     const card = el.firstElementChild;
                     card.dataset.hero = hero.name.toLowerCase();
-                    card.dataset.types = (hero.changes || []).map(c => c.type).join(',');
+                    card.dataset.types = (hero.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
                     roleSection.appendChild(card);
                 });
             }
@@ -241,14 +335,22 @@ export function renderContent(patchData) {
             const generalSection = document.createElement('div');
             generalSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === '__general__' ? 'active' : ''}`;
             generalSection.id = 'role-__general__';
-            generalSection.innerHTML = `<h2 class="role-section-title">Objetos Generales y Mapas</h2>`;
+            generalSection.innerHTML = `
+                <h2 class="role-section-title">
+                    <span>Objetos Generales y Mapas</span>
+                    <div class="section-actions">
+                        <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
+                        <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
+                    </div>
+                </h2>
+            `;
 
             section.generalItems.forEach(item => {
                 const el = document.createElement('div');
                 el.innerHTML = renderHeroCard(item);
                 const card = el.firstElementChild;
                 card.dataset.hero = item.name.toLowerCase();
-                card.dataset.types = (item.changes || []).map(c => c.type).join(',');
+                card.dataset.types = (item.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
                 generalSection.appendChild(card);
             });
 
@@ -276,14 +378,17 @@ export function renderContent(patchData) {
                 `;
                 fragment.appendChild(card);
             } else {
+                const gridContainer = document.createElement('div');
+                gridContainer.className = 'flat-grid-section';
                 flat.forEach(item => {
                     const el = document.createElement('div');
                     el.innerHTML = renderHeroCard(item);
                     const card = el.firstElementChild;
                     card.dataset.hero = item.name.toLowerCase();
-                    card.dataset.types = (item.changes || []).map(c => c.type).join(',');
-                    fragment.appendChild(card);
+                    card.dataset.types = (item.changes || []).map(c => 'rework').join(',');
+                    gridContainer.appendChild(card);
                 });
+                fragment.appendChild(gridContainer);
             }
         }
     }

@@ -6,7 +6,7 @@
       "date": "2026-06-25",
       "title": "Actualización del 25 de Junio 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/06",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-06-25/patch.json",
       "isLatest": true
@@ -17,7 +17,7 @@
       "date": "2026-06-24",
       "title": "Actualización del 24 de Junio 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/06",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-06-24/patch.json",
       "isLatest": false
@@ -28,7 +28,7 @@
       "date": "2026-06-23",
       "title": "Actualización del 23 de Junio 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/06",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-06-23/patch.json",
       "isLatest": false
@@ -39,7 +39,7 @@
       "date": "2026-06-18",
       "title": "Actualización del 18 de Junio 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/06",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-06-18/patch.json",
       "isLatest": false
@@ -50,7 +50,7 @@
       "date": "2026-06-16",
       "title": "Actualización del 16 de Junio 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/06",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-06-16/patch.json",
       "isLatest": false
@@ -96,8 +96,7 @@
       "subtitle": "Notas de parche oficiales de Overwatch",
       "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/05",
       "season": "Temporada actual",
-      "dataPath": "data/patches/2026-05-12/patch.json",
-      "isLatest": false
+      "dataPath": "data/patches/2026-05-12/patch.json"
     }
   ]
 }

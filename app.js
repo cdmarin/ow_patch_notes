@@ -116,6 +116,7 @@ export async function loadPatch(patchId) {
     renderSidebar(patchData);
     renderContent(patchData);
     renderPatchHeader(patchData, patchMeta);
+    applyFiltersAndSearch();
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -211,21 +212,15 @@ export async function init(skipLoadingPatch = false) {
 }
 
 // ─── Setup Event Listeners ────────────────────────────────────────────────────
+let listenersSetup = false;
 function setupListeners() {
-    // Theme toggle button
-    if (dom.themeToggleBtn) {
-        dom.themeToggleBtn.addEventListener('click', () => {
-            const isLight = !document.body.classList.contains('light-theme');
-            try {
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            } catch (e) {
-                console.warn('localStorage no está disponible:', e);
-            }
-            updateThemeUI(isLight);
-        });
-    } else {
-        console.error('[Theme] Toggle button NOT found in dom!');
+    if (listenersSetup) {
+        console.log('[App] Los escuchadores ya han sido registrados anteriormente. Cancelando duplicado.');
+        return;
     }
+    listenersSetup = true;
+
+    // Theme toggle is handled inline in index.html to prevent flash of unstyled content and conflicts.
 
     // Patch selector
     dom.patchSelect.addEventListener('change', () => {
@@ -318,6 +313,86 @@ function setupListeners() {
     // Filter chips
     dom.filterChips.forEach(chip => {
         chip.addEventListener('click', () => toggleFilter(chip.dataset.filter));
+    });
+
+    // Mobile filter drawer toggle
+    if (dom.mobileFilterToggleBtn) {
+        dom.mobileFilterToggleBtn.addEventListener('click', () => {
+            dom.filterWrap.classList.add('open');
+            dom.drawerOverlay.classList.add('active');
+        });
+    }
+
+    if (dom.closeDrawerBtn) {
+        dom.closeDrawerBtn.addEventListener('click', () => {
+            dom.filterWrap.classList.remove('open');
+            dom.drawerOverlay.classList.remove('active');
+        });
+    }
+
+    if (dom.drawerOverlay) {
+        dom.drawerOverlay.addEventListener('click', () => {
+            dom.filterWrap.classList.remove('open');
+            dom.drawerOverlay.classList.remove('active');
+        });
+    }
+
+    // Delegated click listener for smooth details open/close transition
+    document.addEventListener('click', (e) => {
+        const summary = e.target.closest('.hero-header');
+        if (!summary) return;
+
+        const details = summary.parentElement;
+        if (!details || !details.classList.contains('hero-card')) return;
+
+        e.preventDefault();
+
+        const content = details.querySelector('.hero-content');
+        if (!content) return;
+
+        // Prevent interrupting existing transition
+        if (content.style.transition) return;
+
+        if (details.open) {
+            // Closing animation
+            const height = content.scrollHeight;
+            content.style.height = `${height}px`;
+            content.offsetHeight; // Reflow
+
+            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
+            content.style.height = '0';
+            content.style.opacity = '0';
+
+            const onEnd = () => {
+                details.removeAttribute('open');
+                content.style.height = '';
+                content.style.opacity = '';
+                content.style.transition = '';
+                content.removeEventListener('transitionend', onEnd);
+            };
+            content.addEventListener('transitionend', onEnd);
+        } else {
+            // Opening animation
+            details.setAttribute('open', '');
+            const height = content.scrollHeight;
+
+            content.style.height = '0';
+            content.style.opacity = '0';
+            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
+
+            content.offsetHeight; // Reflow
+
+            content.style.height = `${height}px`;
+            content.style.opacity = '1';
+
+            const onEnd = () => {
+                content.style.height = '';
+                content.style.opacity = '';
+                content.style.transition = '';
+                content.removeEventListener('transitionend', onEnd);
+            };
+            content.addEventListener('transitionend', onEnd);
+        }
     });
 }
 

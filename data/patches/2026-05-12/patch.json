@@ -124,7 +124,7 @@
                 "title": "Toque vampírico - Poder",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               }
             ]
@@ -448,7 +448,8 @@
                 "type": "adjust",
                 "details": [
                   "El tiempo de reutilización ahora es visible mientras la Forma Némesis está activa."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/94d29f925b938d4898f440d06d8543e49c772e09cb89ef9812826fb2be54f9c7.png"
               }
             ]
           },
@@ -462,7 +463,8 @@
                 "type": "nerf",
                 "details": [
                   "Daño de impacto reducido de 3 a 2."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/adcd1c898f2ab66779554711451303ee83ca15b70a0951e18964520f5f02566a.png"
               }
             ]
           },
@@ -476,14 +478,16 @@
                 "type": "adjust",
                 "details": [
                   "Los efectos de bloqueo de cámara y ondas de choque ahora se activan más tarde para alinearse mejor con la animación."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4bc170a43b0d19921079fefcf16e66d720019271e37303413971b12e0ced9eca.png"
               },
               {
                 "title": "Puñetazo potenciado",
                 "type": "buff",
                 "details": [
                   "Se agregaron nuevos efectos visuales y de sonido que se reproducen cuando Empowered Punch está a punto de expirar."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/79fa2ac1beeaaecc23735e2bc41068a99838c76ff626a12ac07fcdc5efd70bd9.png"
               }
             ]
           },
@@ -497,7 +501,8 @@
                 "type": "buff",
                 "details": [
                   "(Solo 5v5) El multiplicador de autocuración del daño por herida aumentó de 2,25x a 2,5x."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a05a31b7196b53d751219c5d4d0814cc58e37db5eeb37a1648b37327309f794.png"
               }
             ]
           }
@@ -513,14 +518,16 @@
                 "type": "nerf",
                 "details": [
                   "La conversión de curación se redujo del 80% al 60%."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9b955347a198a47d7acad1c1fbec46487167f69f89bf14c7a70e1239fc838238.png"
               },
               {
                 "title": "Fragmentación cibernética",
                 "type": "nerf",
                 "details": [
                   "Radio de daño máximo por explosión reducido de 2 a 1,5 metros."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58eeb3950828ceadc16565163bfc03231a0cecdf3a0a6ce78de34bdff4bf09bf.png"
               }
             ]
           },
@@ -541,14 +548,16 @@
                 "type": "buff",
                 "details": [
                   "El tiempo de reutilización se redujo de 12 a 10 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/cf6b96a730b9a772c6ff9320dfb0723dbb304c52b2ef666651739d8716d5f96e.png"
               },
               {
                 "title": "Caza de recompensas",
                 "type": "buff",
                 "details": [
                   "El cargo adicional de Ultimate aumentó del 25 % al 33 %."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a6d0cad4fe2ae30252617c982761578a4c5b6a535032f6d8f50b5d854f202123.png"
               }
             ]
           },
@@ -562,7 +571,8 @@
                 "type": "nerf",
                 "details": [
                   "Se redujo el volumen de disparo de armas."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d12e2bc19f1619b71d13816c01ef96ad54bb6a7cb4ee00ae8bea8be3d2e2102d.png"
               }
             ]
           },
@@ -600,7 +610,8 @@
                 "details": [
                   "Se agregó un elemento de interfaz de usuario personalizado que muestra cuántos aliados están siendo curados actualmente por Inspire.",
                   "Este elemento de la interfaz de usuario se puede activar o desactivar en las Opciones de héroe de Brigitte."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2d239f8ca1265f4c5f7be415edc5568481ca347e70a6e2dbf5790551fe63ea9b.png"
               }
             ]
           },
@@ -616,7 +627,8 @@
                   "La curación instantánea aumentó de 40 a 50.",
                   "La curación con el tiempo aumentó de 40 a 50.",
                   "El tiempo de reutilización se redujo de 14 a 12 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/995d4c830cd4d6d458333a645561fefb75aab4f5228fe6b7923ea55b29f0496d.png"
               }
             ]
           },
@@ -631,7 +643,8 @@
                 "details": [
                   "El tamaño del proyectil base se redujo de 0,05 a 0.",
                   "La bonificación por tamaño de proyectil global de Hitscan todavía se aplica (0,07)."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b5bbee12c4a45526f3ab0c73b0027eae88f4da57192e68e9b30bbc9da3e032a6.png"
               }
             ]
           },
@@ -645,7 +658,8 @@
                 "type": "nerf",
                 "details": [
                   "Se eliminó la curación adicional después de la limpieza del estado negativo (en lugar de 30)."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a5c1a2e74ccb598d376aac2c1cd255aa46570a08886e72b06d5a6f64203c8072.png"
               }
             ]
           },
@@ -660,7 +674,8 @@
                 "details": [
                   "La sobresalud concedida se redujo de 750 a 625.",
                   "Duración reducida de 6 a 5 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f84b670bff38d0b97c44a084159bb41c140b5cf7e52348782ab9755d47cdbb0a.png"
               }
             ]
           },
@@ -673,7 +688,7 @@
                 "title": "Impulso divino – Beneficio menor",
                 "type": "nerf",
                 "details": [
-                  "Remoto."
+                  "Eliminado."
                 ]
               },
               {
@@ -689,7 +704,8 @@
                 "type": "buff",
                 "details": [
                   "La velocidad de lanzamiento aumentó en un 10%. (Revertido al valor anterior)"
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8cee01a366f6c5fb1298426463aa27724bec1dd2b6a92a36b42b3884a73e8d5.png"
               }
             ]
           },
@@ -705,7 +721,8 @@
                   "Ahora absorbe los proyectiles enemigos que salen del Santuario además de los proyectiles enemigos que entran al Santuario.",
                   "La curación con el tiempo se redujo de 50/s a 40/s.",
                   "Duración reducida de 7 a 6 segundos."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/79d5017e5ae3c3fb8fa91b5ea13f890add3042c5b0ed9532e62fe4ee138ca033.png"
               }
             ]
           },
@@ -719,7 +736,8 @@
                 "type": "adjust",
                 "details": [
                   "La penalización de autocuración pasiva ahora es correctamente del 60 % (en lugar del 70 %)."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/452af9dde57a4c3c85c9089dd28b57738fe33e225048602196989bea672450bd.png"
               }
             ]
           },
@@ -733,7 +751,8 @@
                 "type": "adjust",
                 "details": [
                   "Se solucionó un problema por el cual la reducción de daño de la armadura se aplicaba dos veces a los orbes del Bastón de Xuanwu."
-                ]
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/51dee96ac9a92d773bfa56a45272db8cf94ade9c051981f7a240782b0d16f8ec.png"
               }
             ]
           }
@@ -789,8 +808,8 @@
               "title": "General",
               "type": "adjust",
               "details": [
-                "Se cambió la configuración predeterminada de \"Reproducir sonido cuando se elimina a un compañero de equipo\" y \"Reproducir sonido cuando se elimina un enemigo\" a \"Activado\".",
-                "Se agregó una nueva palabra clave \"Intercambiar recargas\" al Panel de información avanzada.\n\nDefinición: \"Recarga completamente el arma del héroe después de un retraso cuando usa otra arma, un modo alternativo o durante una Transformación\".\nEsta palabra clave ha reemplazado a la palabra clave \"Recargas\" en todas las relevantes, con la diferencia clave de que no son recargas instantáneas y tienen varios tiempos de recarga pasiva únicos que ahora también se muestran en las líneas del Panel de información avanzada para todas las habilidades relevantes.\nLas habilidades que recargan armas instantáneamente todavía usan la palabra clave \"Recargas\".",
+                "Se cambió la configuración predeterminada para \"Reproducir sonido cuando se elimina un compañero de equipo\" y \"Reproducir sonido cuando se elimina un enemigo\" a \"Activado\".",
+                "Se agregó una nueva palabra clave \"Swap Reloads\" al Panel de información avanzada.\n\nDefinición: \"Recarga completamente el arma del héroe después de un retraso cuando usa otra arma, un modo alternativo o durante una Transformación\".\nEsta palabra clave ha reemplazado a la palabra clave \"Recargas\" en todas las relevantes, con la diferencia clave de que no son recargas instantáneas y tienen varios tiempos de recarga pasiva únicos que ahora también se muestran en las líneas del Panel de información avanzada para todas las habilidades relevantes.\nLas habilidades que recargan armas instantáneamente todavía usan la palabra clave \"Recargas\".",
                 "Definición: \"Recarga completamente el arma del héroe después de un retraso cuando usa otra arma, un modo alternativo o durante una Transformación\".",
                 "Esta palabra clave ha reemplazado a la palabra clave \"Recargas\" en todas las relevantes, con la diferencia clave de que no son recargas instantáneas y tienen varios tiempos de recarga pasiva únicos que ahora también se muestran en las líneas del Panel de información avanzada para todas las habilidades relevantes.",
                 "Las habilidades que recargan armas instantáneamente todavía usan la palabra clave \"Recargas\".",

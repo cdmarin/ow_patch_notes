@@ -94,9 +94,9 @@ export function applyFiltersAndSearch() {
         }
 
         if (state.currentRole === 'Todos') {
-            section.style.display = visibleCount === 0 ? 'none' : 'flex';
+            section.style.display = visibleCount === 0 ? 'none' : 'grid';
         } else {
-            section.style.display = 'flex';
+            section.style.display = visibleCount === 0 ? 'block' : 'grid';
         }
 
         let noResults = section.getElementsByClassName('no-results')[0];

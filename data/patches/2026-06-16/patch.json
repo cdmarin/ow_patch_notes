@@ -9,7 +9,7 @@
         "Tanque": [
           {
             "name": "D.Va",
-            "desc": "Estos cambios tienen como objetivo darle a D.Va una opción más saludable orientada al piloto, mejorando su construcción de misiles y abriendo su desglose al reducir la dependencia de las características específicas del héroe y reducir la facilidad de valor de las estrategias orientadas a la Matriz de defensa.",
+            "desc": "Estos cambios tienen como objetivo darle a D.Va una opción más saludable orientada al piloto, mejorando su construcción de misiles y abriendo su desglose al reducir la dependencia de las características específicas del héroe y reducir la facilidad de valor de las estrategias orientadas a la Matriz de Defensa.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
             "changes": [
               {
@@ -301,7 +301,7 @@
                 "details": [
                   "Se puede mantener durante 1 segundo más después de cargarse completamente.",
                   "Daño adicional reducido al 75% (en lugar del 100%).",
-                  "Ahora también aumenta la velocidad del proyectil según el tiempo de carga hasta un 200%.",
+                  "Ahora también aumenta la velocidad del proyectil según el tiempo de carga hasta un 200 %.",
                   "Ya no hay retrocesos."
                 ]
               },
@@ -467,7 +467,7 @@
                 "title": "Teorema de Efi: objeto de supervivencia de héroe épico",
                 "type": "nerf",
                 "details": [
-                  "Se eliminó el 20% de robo de vida de habilidad."
+                  "Se eliminó el 20 % de robo de vida de habilidad."
                 ]
               }
             ]
@@ -516,7 +516,7 @@
                 "title": "Reconstrucción de barreras - Energía",
                 "type": "adjust",
                 "details": [
-                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el Martillo cohete."
+                  "La restauración de salud del Escudo de barrera ahora se activa con todo el daño cuerpo a cuerpo, no solo con el daño del Martillo cohete."
                 ]
               },
               {
@@ -596,7 +596,7 @@
                 "title": "Gravedad Cero - Poder",
                 "type": "adjust",
                 "details": [
-                  "Se eliminó la reducción de daño del 10%.",
+                  "Se eliminó la reducción de daño del 10 %.",
                   "La duración aumentó a 2,5 s (en lugar de 1,5 s).",
                   "El vuelo ahora también se activa al usar el gadget."
                 ]
@@ -648,7 +648,7 @@
                 "title": "Salto Lunar - Poder",
                 "type": "buff",
                 "details": [
-                  "La carga definitiva por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
+                  "La carga máxima por objetivo alcanzado aumentó al 3 % (en lugar del 2 %)."
                 ]
               },
               {
@@ -831,7 +831,7 @@
                 ]
               },
               {
-                "title": "Pin B.O.B - Energía",
+                "title": "Pin B.O.B - Poder",
                 "type": "nerf",
                 "details": [
                   "Se agregó un tiempo de reutilización de 3 segundos para que la carga se pueda reactivar sin eliminar a un enemigo.",
@@ -1516,7 +1516,7 @@
                 "title": "Despacho dinámico - Energía",
                 "type": "adjust",
                 "details": [
-                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50% de tamaño de proyectil [Disparo cargado], un 35% de velocidad de ataque y un 35% de robo de vida con arma\"."
+                  "\"Durante [Power Slide] y el salto posterior, obtienes un 50 % de tamaño de proyectil [Disparo cargado], un 35 % de velocidad de ataque y un 35 % de robo de vida con arma\"."
                 ]
               },
               {
@@ -1689,7 +1689,7 @@
                 "title": "Ecualizador de final de juego: elemento de habilidad de héroe épico",
                 "type": "adjust",
                 "details": [
-                  "Ahora otorga un aumento del 300 % en la frecuencia de actualización de habilidades en lugar de una reducción del tiempo de reutilización del 20 %.",
+                  "Ahora otorga un aumento del 300% en la frecuencia de actualización de habilidades en lugar de una reducción del tiempo de reutilización del 20%.",
                   "Costo reducido a 9000 (en lugar de 10000)."
                 ]
               },
@@ -1735,7 +1735,7 @@
                 "title": "Dejar escapar un poco de vapor - Energía",
                 "type": "buff",
                 "details": [
-                  "La reducción del tiempo de reutilización de sobrecarga se redujo al 8 % (en lugar del 10 %)."
+                  "La reducción del tiempo de reutilización de sobrecarga se redujo al 8% (en lugar del 10%)."
                 ]
               },
               {
@@ -2049,7 +2049,7 @@
                 "type": "adjust",
                 "details": [
                   "Se eliminó +4 munición.",
-                  "Se agregó un 30% de munición máxima."
+                  "Se agregó un 30 % de munición máxima."
                 ]
               },
               {
@@ -2594,7 +2594,7 @@
                 ]
               },
               {
-                "title": "Doble Dosis - Potencia",
+                "title": "Doble Dosis - Poder",
                 "type": "adjust",
                 "details": [
                   "Nuevo",
@@ -3519,6 +3519,30 @@
         ],
         "Daño": [
           {
+            "name": "Anran",
+            "desc": "Estos cambios mejoran la fluidez de las habilidades de Anran, lo que permite un flujo de habilidades más fluido sin aumentar significativamente su poder general.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
+            "changes": [
+              {
+                "title": "Fiebre del infierno",
+                "type": "buff",
+                "details": [
+                  "Se redujo la recuperación después de la habilidad de 0,3 a 0,1 segundos.",
+                  "La cuerda es ahora un 50% más rápida."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
+              },
+              {
+                "title": "resplandor bailando",
+                "type": "buff",
+                "details": [
+                  "Se redujo la recuperación después de la habilidad de 0,2 a 0,1 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8a106a2acae1b9edf47495af102cf17fd7e8320c76b201d533f5723afc45d14.png"
+              }
+            ]
+          },
+          {
             "name": "Ashe",
             "desc": "",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
@@ -3595,7 +3619,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
             "changes": [
               {
-                "title": "Escaneo parcial: ventaja menor",
+                "title": "Escaneo parcial: beneficio menor",
                 "type": "nerf",
                 "details": [
                   "La carga máxima obtenida se redujo del 50% al 30%."
@@ -3619,7 +3643,7 @@
                 "title": "Anular protocolo",
                 "type": "nerf",
                 "details": [
-                  "El costo final aumentó un 10 %."
+                  "El costo final aumentó un 10%."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc8088a2968e2850ef438645fd2286ea7abe1779b2eae5cf85638168736ecddc.png"
               }
@@ -3653,7 +3677,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
             "changes": [
               {
-                "title": "Viaje bomba: ventaja menor",
+                "title": "Viaje bomba: beneficio menor",
                 "type": "buff",
                 "details": [
                   "La bonificación de velocidad de ataque aumentó del 25 % al 35 %."
@@ -3685,7 +3709,7 @@
           },
           {
             "name": "Reaper",
-            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su equipo. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
+            "desc": "Dire Triggers ha aumentado las fortalezas de Reaper en muchos enfrentamientos y ha agregado más letalidad a su kit. Combinado con su capacidad de supervivencia, esto lo empuja más allá de la durabilidad prevista y el potencial de muerte. Reducir su salud reduce su capacidad de supervivencia y al mismo tiempo preserva la letalidad que proporciona Dire Triggers.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
             "changes": [
               {
@@ -3798,36 +3822,13 @@
         ],
         "Apoyo": [
           {
-            "name": "Anran",
-            "desc": "Estos cambios mejoran la fluidez de las habilidades de Anran, lo que permite un flujo de habilidades más fluido sin aumentar significativamente su poder general.",
-            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
-            "changes": [
-              {
-                "title": "Fiebre del infierno",
-                "type": "buff",
-                "details": [
-                  "Se redujo la recuperación después de la habilidad de 0,3 a 0,1 segundos."
-                ],
-                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
-              },
-              {
-                "title": "resplandor bailando",
-                "type": "buff",
-                "details": [
-                  "Se redujo la recuperación después de la habilidad de 0,2 a 0,1 segundos."
-                ],
-                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8a106a2acae1b9edf47495af102cf17fd7e8320c76b201d533f5723afc45d14.png"
-              }
-            ]
-          },
-          {
             "name": "Ana",
             "desc": "",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
             "changes": [
               {
                 "title": "Suero de velocidad – Beneficio menor",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "La bonificación de velocidad de movimiento se redujo del 40% al 30%."
                 ]
@@ -3918,7 +3919,7 @@
           },
           {
             "name": "Lifeweaver",
-            "desc": "Las mejoras en la curación de Lifeweaver han aumentado su tasa de carga máxima. Aumentar el costo final se ajusta a esto y, al mismo tiempo, se revierte un cambio anterior en la conversión de sobresalud del Árbol de la vida que hizo que lo último fuera demasiado fuerte en curación sostenida.",
+            "desc": "Las mejoras en la curación de Lifeweaver han aumentado su tasa de carga máxima. Aumentar el costo final se ajusta a esto, al mismo tiempo que se revierte un cambio anterior en la conversión de sobresalud del Árbol de la Vida que hizo que lo último fuera demasiado fuerte en curación sostenida.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
             "changes": [
               {
@@ -3945,7 +3946,7 @@
                 ]
               },
               {
-                "title": "Bastón de Caduceo",
+                "title": "Bastón de caduceo",
                 "type": "nerf",
                 "details": [
                   "Aumento de daño reducido del 30% al 25%."
@@ -3964,7 +3965,7 @@
           },
           {
             "name": "Mizuki",
-            "desc": "El regreso de Katashiro de Mizuki está limitado por su corta duración y su tiempo de reutilización más prolongado. Reducir el tiempo de reutilización y aumentar la duración mejora su disponibilidad y flexibilidad como herramienta de movilidad.",
+            "desc": "El regreso de Katashiro de Mizuki está limitado por su corta duración y su tiempo de reutilización más largo. Reducir el tiempo de reutilización y aumentar la duración mejora su disponibilidad y flexibilidad como herramienta de movilidad.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/192ba53e30db9ceaea964dc67a30351db1c2431033d827f0b9af0ab537be2bad.png",
             "changes": [
               {

@@ -75,5 +75,5 @@ export const CHANGE_LABELS = {
     nerf: 'Nerf',
     new: 'Nuevo',
     rework: 'Rework',
-    adjust: 'Ajuste'
+    adjust: 'Rework'
 };

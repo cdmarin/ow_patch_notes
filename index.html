@@ -89,6 +89,7 @@
 
         <!-- Filters -->
         <div class="filter-wrap" role="group" aria-label="Filtrar por tipo de cambio">
+            <button class="close-drawer-btn" id="close-drawer-btn" aria-label="Cerrar filtros">&times;</button>
             <button class="filter-chip" data-filter="buff" id="filter-buff" aria-pressed="false">
                 <span>⬆</span> Buff
             </button>
@@ -102,6 +103,11 @@
                 <span>↻</span> Rework
             </button>
         </div>
+
+        <!-- Mobile Filter Toggle -->
+        <button id="mobile-filter-toggle-btn" class="mobile-filter-toggle-btn" title="Filtrar cambios" aria-label="Filtrar cambios">
+            <span>⚙️</span>
+        </button>
 
         <!-- Theme Toggle -->
         <button id="theme-toggle-btn" class="theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar tema">
@@ -156,7 +162,8 @@
             }
         })();
     </script>
-    <script type="module" src="app.js?v=3"></script>
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
