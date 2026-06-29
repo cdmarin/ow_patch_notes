@@ -1163,7 +1163,8 @@ header::after {
     border-radius: 4px;
     object-fit: cover;
     border: 1px solid var(--border-color-hover);
-    background: var(--bg-app);
+    background: #1e293b; /* Dark background to ensure white ability icons are visible */
+    padding: 2px;
 }
 
 .change-badge {

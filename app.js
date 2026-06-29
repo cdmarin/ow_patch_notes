@@ -44,13 +44,13 @@ export function updateThemeUI(isLight) {
         iconSpan.textContent = isLight ? '🌙' : '☀️';
     }
 
-    // Swap logos (excluding header logo which stays as orange/white logo.svg for contrast on blue bg)
+    // Swap logos (including header logo)
     const logos = Array.from(document.querySelectorAll('img')).filter(img => 
-        (img.classList.contains('loader-logo') ||
+        img.classList.contains('loader-logo') ||
         img.classList.contains('scrape-logo') ||
+        img.classList.contains('header-logo') ||
         img.src.endsWith('logo.svg') ||
-        img.src.endsWith('logo-light.svg')) &&
-        !img.classList.contains('header-logo')
+        img.src.endsWith('logo-light.svg')
     );
     logos.forEach(logo => {
         logo.src = isLight ? 'logo-light.svg' : 'logo.svg';

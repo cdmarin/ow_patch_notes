@@ -137,11 +137,11 @@
                 document.body.classList.toggle('light-theme', isLight);
                 var icon = document.querySelector('#theme-toggle-btn .theme-icon');
                 if (icon) icon.textContent = isLight ? '🌙' : '☀️';
-                // Swap logos (exclude header logo)
+                // Swap logos (including header logo)
                 document.querySelectorAll('img').forEach(function(img) {
-                    if ((img.classList.contains('loader-logo') || img.classList.contains('scrape-logo') ||
-                         img.src.indexOf('logo.svg') !== -1 || img.src.indexOf('logo-light.svg') !== -1) &&
-                        !img.classList.contains('header-logo')) {
+                    if (img.classList.contains('loader-logo') || img.classList.contains('scrape-logo') ||
+                        img.classList.contains('header-logo') ||
+                        img.src.indexOf('logo.svg') !== -1 || img.src.indexOf('logo-light.svg') !== -1) {
                         img.src = isLight ? 'logo-light.svg' : 'logo.svg';
                     }
                 });
