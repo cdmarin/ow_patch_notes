@@ -158,6 +158,9 @@ body {
     position: relative;
     transition: background-color var(--t);
 }
+body.no-scroll {
+    overflow: hidden;
+}
 
 /* Ambient Radial Background Glimmers */
 body::before {
@@ -413,10 +416,7 @@ header::after {
     color: var(--blue);
 }
 
-/* Close Drawer Button (hidden on desktop) */
-.close-drawer-btn {
-    display: none;
-}
+
 
 /* Mobile Filter Toggle (hidden on desktop) */
 .mobile-filter-toggle-btn {
@@ -546,6 +546,7 @@ header::after {
     top: var(--header-h);
     height: calc(100vh - var(--header-h));
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 2rem 1.25rem;
     border-right: 1px solid var(--border-color);
     background: var(--bg-sidebar);
@@ -1592,10 +1593,11 @@ header::after {
         box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
         z-index: 190;
         flex-direction: column;
-        padding: 2rem 1.5rem;
-        gap: 1.5rem;
+        padding: 1.5rem 1.25rem;
+        gap: 1.25rem;
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         display: flex;
     }
     .sidebar.open {
@@ -1652,22 +1654,7 @@ header::after {
         border-bottom: none;
         padding-bottom: 0;
     }
-    .close-drawer-btn {
-        display: block;
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        background: none;
-        border: none;
-        color: var(--text-secondary);
-        font-size: 2rem;
-        line-height: 1;
-        cursor: pointer;
-        transition: color var(--t);
-    }
-    .close-drawer-btn:hover {
-        color: var(--orange);
-    }
+
     .filter-wrap .filter-chip {
         width: 100%;
         justify-content: center;

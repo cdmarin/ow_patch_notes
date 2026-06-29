@@ -317,11 +317,12 @@ function setupListeners() {
     });
 
     // Mobile filter drawer toggle
-    // Mobile filter drawer toggle (opens sidebar drawer containing sections, roles and filters)
+    // Mobile filter drawer toggle (opens/closes sidebar drawer containing sections, roles and filters)
     if (dom.mobileFilterToggleBtn) {
         dom.mobileFilterToggleBtn.addEventListener('click', () => {
-            dom.sidebar.classList.add('open');
-            dom.drawerOverlay.classList.add('active');
+            const isOpen = dom.sidebar.classList.toggle('open');
+            dom.drawerOverlay.classList.toggle('active', isOpen);
+            document.body.classList.toggle('no-scroll', isOpen);
         });
     }
 
@@ -329,6 +330,7 @@ function setupListeners() {
         dom.closeDrawerBtn.addEventListener('click', () => {
             dom.sidebar.classList.remove('open');
             dom.drawerOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
     }
 
@@ -336,6 +338,7 @@ function setupListeners() {
         dom.drawerOverlay.addEventListener('click', () => {
             dom.sidebar.classList.remove('open');
             dom.drawerOverlay.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         });
     }
 

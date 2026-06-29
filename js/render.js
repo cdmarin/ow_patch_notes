@@ -140,7 +140,8 @@ export function renderPatchHeader(patchData, patchMeta) {
         || patchMeta?.subtitle
         || '';
 
-    const maxLength = 220;
+    const isMobile = window.innerWidth <= 768;
+    const maxLength = isMobile ? 80 : 220;
     let descHtml = '';
     
     if (currentIntro.length > maxLength) {

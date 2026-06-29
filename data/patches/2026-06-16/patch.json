@@ -123,7 +123,7 @@
               },
               {
                 "title": "Jab cruzado - Poder",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "Ahora otorga velocidad de ataque adicional (en lugar de solo velocidad de ataque cuerpo a cuerpo).",
                   "La duración se redujo a 0,75 s (en lugar de 3 s)."
@@ -192,7 +192,7 @@
             "changes": [
               {
                 "title": "Tiro con púas - Poder",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "El daño adicional ahora aumenta con el poder del arma (en lugar del poder de habilidad).",
                   "Daño adicional reducido a 8 (en lugar de 10)."
@@ -297,7 +297,7 @@
             "changes": [
               {
                 "title": "Desfile de cuchillas - Poder",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "Se puede mantener durante 1 segundo más después de cargarse completamente.",
                   "Daño adicional reducido al 75% (en lugar del 100%).",
@@ -1695,7 +1695,7 @@
               },
               {
                 "title": "Radio de respuesta rápida: elemento de habilidad de héroe épico",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "Se eliminó +40 % del radio del campo biótico.",
                   "Se agregó +40 % de duración del campo biótico.",
@@ -2212,7 +2212,7 @@
               },
               {
                 "title": "Misiles medicinales",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "Se eliminó la curación adicional."
                 ]
@@ -2396,7 +2396,7 @@
               },
               {
                 "title": "Guantes de ciclista: objeto de habilidad de héroe poco común",
-                "type": "adjust",
+                "type": "buff",
                 "details": [
                   "Costo reducido a 4500 (en lugar de 5000).",
                   "Se agregó un 5% de velocidad de ataque.",
@@ -3527,8 +3527,7 @@
                 "title": "Fiebre del infierno",
                 "type": "buff",
                 "details": [
-                  "Se redujo la recuperación después de la habilidad de 0,3 a 0,1 segundos.",
-                  "La cuerda es ahora un 50% más rápida."
+                  "Se redujo la recuperación después de la habilidad de 0,3 a 0,1 segundos."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
               },
@@ -3721,7 +3720,7 @@
               },
               {
                 "title": "Espectro persistente – Beneficio menor",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "La bonificación de velocidad de movimiento se redujo del 40% al 30%."
                 ]

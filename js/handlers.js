@@ -19,6 +19,7 @@ export function switchSection(sectionId) {
     if (window.innerWidth <= 768) {
         dom.sidebar.classList.remove('open');
         dom.drawerOverlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
     }
 }
 
@@ -41,6 +42,7 @@ export function switchRole(role) {
     if (window.innerWidth <= 768) {
         dom.sidebar.classList.remove('open');
         dom.drawerOverlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
     }
 }
 

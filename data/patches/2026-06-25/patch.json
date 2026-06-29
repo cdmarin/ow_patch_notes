@@ -101,7 +101,7 @@
               },
               {
                 "title": "Golpe de dragón",
-                "type": "adjust",
+                "type": "nerf",
                 "details": [
                   "Daño adicional reducido al 100 % (en lugar del 120 %).",
                   "La cuerda es ahora un 50% más rápida."
