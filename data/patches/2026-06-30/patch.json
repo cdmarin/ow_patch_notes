@@ -1,0 +1,1874 @@
+{
+  "version": "unknown",
+  "date": "2026-06-30",
+  "title": "Actualización del 30 de Junio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Ya no permite el almacenamiento del exceso de carga final.\nLos tácticos ahora cuentan como un aliado adicional a la hora de avanzar en el objetivo.\n\n\nYa no proporciona autocuración al curar a un aliado.\nAhora proporciona un 2,5% más de curación por héroe médico aliado a todos los aliados de todas las fuentes.\n\n\nLas habilidades de movimiento ya no inician inmediatamente la regeneración de salud pasiva.\nAhora proporciona 10 puntos de salud máximos adicionales por cada minuto que un Superviviente permanece con vida, hasta un máximo de 100 puntos de salud adicionales.\nLa salud máxima adicional se reinicia al morir.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Va",
+            "desc": "Quiero que D.Va tenga más incentivos para usar Defense Matrix para proteger a sus compañeros de equipo, y quiero que D.Va sea recompensado a su vez con más daño de autodestrucción. A D.Va fuera del robot le falta demasiado poder, por lo que hemos mejorado su capacidad de supervivencia y letalidad en forma piloto.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "Bunny Power – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Se pasó de beneficio menor a kit básico."
+                ]
+              },
+              {
+                "title": "Líder de equipo – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Después de llamar al mech, los compañeros de equipo cercanos obtienen 50 de sobresalud temporal."
+                ]
+              },
+              {
+                "title": "Matriz de defensa",
+                "type": "adjust",
+                "details": [
+                  "Ahora convierte cada 100 de daño absorbido en 10 de daño de autodestrucción adicional."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e3806878b38cbab585c4d48e05f2dd63817a36a4f69cedbaf62fd3af6ca5bbd2.png"
+              },
+              {
+                "title": "pistola ligera",
+                "type": "adjust",
+                "details": [
+                  "El fuego secundario ahora lanza una granada."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969a72050f376bf6ee5ed5550a8033cdd661f2f9883c1229e9ee70dd3ae58ec4.png"
+              },
+              {
+                "title": "Autodestrucción",
+                "type": "buff",
+                "details": [
+                  "La tasa de generación de carga final aumentó en un 20%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3ae91694dd2901ced5b3c6789b686fbda4175f807abe602101df6a26bfdf3491.png"
+              }
+            ]
+          },
+          {
+            "name": "Domina",
+            "desc": "Sonic Repulsors ahora le da a Domina la capacidad de acceder a terrenos elevados más fácilmente, mientras que Panopticon ahora tiene más flexibilidad para usarse tanto defensiva como ofensivamente.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
+            "changes": [
+              {
+                "title": "Repulsores sónicos",
+                "type": "buff",
+                "details": [
+                  "Ahora impulsa a Domina hacia atrás en relación con la dirección en la que mira.",
+                  "La fuerza de retroceso del enemigo aumentó en un 40%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7f54ab0fa0be464fe670b61ee5665e5b3b562909f2e9afa7ad1b95e568e91b1f.png"
+              },
+              {
+                "title": "Panóptico",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede envolver a los aliados con una barrera de salud de 200."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5685ed099de9b6438a493e6060d692bd10ce08424cff88a767dc5b13a7edcb5e.png"
+              }
+            ]
+          },
+          {
+            "name": "Doomfist",
+            "desc": "Uppercut siempre ha sido muy popular y la comunidad bromea mucho acerca de volver a agregarlo. Agregar la capacidad de potenciar todas las habilidades, combinado con Uppercut, le da a Doomfist un potencial de juego mucho mayor.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "Bloque de energía",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede potenciar el siguiente uso de cualquier otra habilidad, no solo Rocket Punch."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2af34b2442543da4b3a588ae8791c2b9f8a24cf5e17c935f146a7c88b0d02bd4.png"
+              },
+              {
+                "title": "Uppercut ascendente",
+                "type": "buff",
+                "details": [
+                  "Reagregado.",
+                  "Uppercut potenciado aturde a los enemigos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3456b2f2eb30921845a76cba46f6257b92ba7b0a0106bc6a8028aaaa8c7ff28c.png"
+              },
+              {
+                "title": "Golpe sísmico",
+                "type": "adjust",
+                "details": [
+                  "Empowered Seismic Slam ralentiza a los enemigos en un 40% durante 2 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4bc170a43b0d19921079fefcf16e66d720019271e37303413971b12e0ced9eca.png"
+              },
+              {
+                "title": "Golpe de meteorito",
+                "type": "nerf",
+                "details": [
+                  "Se eliminó el efecto de desaceleración.",
+                  "Ahora derriba a los enemigos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dd68ed0cdc85d2bd688a487dc0778cd64e7dc1d11f8e4d5e7bbf421fb1144315.png"
+              }
+            ]
+          },
+          {
+            "name": "Hazard",
+            "desc": "El adhesivo de pared le presenta a Hazard más opciones de juego de estilo asesino. Actualmente, el aguacero es demasiado fácil de esquivar, por lo que se ha modificado para que sea más sencillo de usar.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "Bóveda",
+                "type": "adjust",
+                "details": [
+                  "Cuando se alcanza la altura máxima para escalar la pared, continuar manteniendo presionado Saltar ahora permite que Hazard se aferre a la pared en lugar de caerse de la pared.",
+                  "La cámara de Hazard cambia a tercera persona mientras se aferra a una pared.",
+                  "Usar cualquier habilidad mientras te aferras a una pared inmediatamente separa a Hazard de la pared."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d006aeb97a48941414492f160bf22b9a5c129ddb6e1956275752953eb1b0472e.png"
+              },
+              {
+                "title": "Aguacero",
+                "type": "adjust",
+                "details": [
+                  "Mayor ancho y alcance.",
+                  "Ya no arraiga a los enemigos.",
+                  "El daño por impacto aumentó de 90 a 270."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/85894376fb7803b87f71e900d73606e2daa14c0ca11122c100871b3d20bd2024.png"
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "Este conjunto de cambios fortalece la presión de largo alcance de Junker Queen al permitirle alternar el lanzamiento de Gracie y Carnage para reprimir a los enemigos a distancia.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "Carnicería",
+                "type": "buff",
+                "details": [
+                  "Ahora se lanza el hacha en lugar de blandirla.",
+                  "Las hachas arrojadas pueden golpear críticamente a los enemigos.",
+                  "Las hachas arrojadizas se adhieren a los enemigos al impactar durante el sangrado.",
+                  "Cuando un hacha arrojada impacta el entorno, o cuando un enemigo es eliminado mientras tiene un hacha pegada, el hacha cae al suelo.",
+                  "Recoger un hacha caída reduce el tiempo de reutilización de Carnage en 3 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/85c3796fdb062e1038fb130450f1586ce1f3c047886b0baf13f937d93a4e05d4.png"
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "Mauga finalmente entendió algo: como una bestia samoana de 2,2 metros de alto y media tonelada, honestamente es demasiado \"gentil\" y demasiado con espíritu de equipo para brindarles a sus compañeros reducción de daño y robo de vida en el campo de batalla. Así que decidió ser egoísta hasta el final: su corazón ahora sólo late por sí mismo. Él sufre el daño más desagradable y acumula la mayor salud. Mauga ahora también usa su tamaño para pisotear y aplastar a sus enemigos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Invadir",
+                "type": "adjust",
+                "details": [
+                  "El daño del pisotón ahora aumenta con la altura, hasta un máximo de 250 de daño."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/10f358f93cd59c2f2b31278cd09bfc7a986c7af6e9a15cdf96db16375b596cee.png"
+              },
+              {
+                "title": "Sobremarcha cardiaca",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó el robo de vida y la reducción de daño.",
+                  "Ya no afecta a los aliados.",
+                  "La duración aumentó de 3 a 5 segundos.",
+                  "Ahora le otorga a Mauga un 20% de velocidad de movimiento durante 3 segundos cuando recibe daño.",
+                  "Ahora convierte cada daño recibido en 1 recurso de curación.",
+                  "El recurso de curación almacenado persiste hasta que se completa el tiempo de reutilización de Cardiac Overdrive.",
+                  "La reactivación de Cardiac Overdrive convierte los recursos curativos almacenados para curar a Mauga."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/33ccf2e8708d8625137b15c81528efd8b5c5100dcb29d137ab9a4750be3c9229.png"
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "Orisa siempre ha sido un héroe corpulento e incondicional, por lo que estos cambios tienen como objetivo explorar cómo sería un Orisa más móvil.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "Jabalina de energía",
+                "type": "buff",
+                "details": [
+                  "Ahora puede impactar a los aliados.",
+                  "Al impactar a los aliados, el objetivo recibe 100 de curación y su velocidad de movimiento aumenta en un 25% durante 3 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/50c5f92db1d3688b0395c88270a04f9730e468d0ca63f1c13c259b848b6e1b49.png"
+              },
+              {
+                "title": "Fortalecer",
+                "type": "adjust",
+                "details": [
+                  "Cuando se activa, Orisa carga hacia adelante mientras aún está Fortificado.",
+                  "Reactivar Fortify pone fin a la carga de Orisa.",
+                  "Fortificar dura 1 segundo adicional después de que finaliza la carga.",
+                  "La carga aparta a los enemigos del camino."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2003ee5e140d12cf850a0e5f1092e47f78b8111464d55489abb194bbbfa5523.png"
+              },
+              {
+                "title": "Giro de jabalina",
+                "type": "adjust",
+                "details": [
+                  "Cuando se apunta hacia arriba, le permite a Orisa volar hacia arriba."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3d688c6c6361f15ec3f83e6e42a39accb5b498f4e1fd8de9cd8d7daf805be759.png"
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "Ramattra ha estado corriendo por el vestíbulo gritándoles a todos que \"sufran como yo\". Así que decidimos convertir su Barrera del Vacío en una habilidad de duración permanente y darle su máximo robo de vida del 100%, para que pueda hacer que todos sientan su sufrimiento por más tiempo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Barrera del vacío",
+                "type": "buff",
+                "details": [
+                  "La barrera ahora dura indefinidamente.",
+                  "Se puede recuperar presionando nuevamente el fuego secundario. La recuperación coloca la Barrera del Vacío en tiempo de reutilización.",
+                  "El tiempo de reutilización se redujo a 2,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/94d29f925b938d4898f440d06d8543e49c772e09cb89ef9812826fb2be54f9c7.png"
+              },
+              {
+                "title": "Vórtice voraz",
+                "type": "adjust",
+                "details": [
+                  "Ahora obstaculiza a los enemigos en el despliegue inicial."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/80e96eddbc10af5e1b08c7392f4f61aabc0e5408e31e72961595a936ccceabcc.png"
+              },
+              {
+                "title": "Aniquilación",
+                "type": "nerf",
+                "details": [
+                  "Daño por segundo reducido de 35 a 20.",
+                  "Ahora roba vida con una efectividad del 100%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/283267c35bf45ecfaf8f8fdeee5f8b29e36ab6937fda9112f730dce85e963213.png"
+              }
+            ]
+          },
+          {
+            "name": "Reinhardt",
+            "desc": "Reinhardt debería poder pasar menos tiempo sosteniendo su escudo y más tiempo atacando a los enemigos con su martillo con estos cambios.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d7938a2e3629b8ba9982f32f0a6c2a9e4a342912d90cb1b93145d100d300458.png",
+            "changes": [
+              {
+                "title": "Berserker - Pasivo",
+                "type": "buff",
+                "details": [
+                  "Nuevo",
+                  "A medida que Reinhardt pierde salud, su movimiento y velocidad de ataque aumentan.",
+                  "Por cada 100 HP perdidos, Reinhardt gana un 8% de velocidad de movimiento y velocidad de ataque.",
+                  "Bonificación máxima alcanzada cuando quedan 200 HP."
+                ]
+              },
+              {
+                "title": "Campo de barrera",
+                "type": "nerf",
+                "details": [
+                  "La salud de la barrera se redujo de 1500 a 1100."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/423dec435587464e24a663cdd4f35178020854e1f924af5902eebba5be9607f2.png"
+              },
+              {
+                "title": "Cargar",
+                "type": "buff",
+                "details": [
+                  "La duración máxima aumentó de 3 a 20 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6b7b226ab508dc7a45908b0613dc889558cf2cc217c04d072940e0a539ac56aa.png"
+              }
+            ]
+          },
+          {
+            "name": "Roadhog",
+            "desc": "Agregué más movilidad a Roadhog, permitiéndole llegar rápidamente a sus compañeros de equipo para protegerlos. Los cambios de Take a Breather garantizan que Roadhog no se quede atascado simplemente recibiendo daño mientras usa la habilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Gancho de cadena",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede golpear a sus compañeros de equipo.",
+                  "Si Chain Hook golpea a un compañero de equipo, Roadhog es atraído hacia el compañero de equipo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7edc1cdef13c2fd21e279043816aa1d2975dc784298502fd121b927729e1e86d.png"
+              },
+              {
+                "title": "Toma un respiro",
+                "type": "adjust",
+                "details": [
+                  "Genera gas venenoso alrededor de Roadhog, causando 50 daños/s a los enemigos cercanos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/064bde1e9f9f65e2a1ca0898abe09432394dca3b0729da0dcccff41b5f5be69b.png"
+              }
+            ]
+          },
+          {
+            "name": "Sigma",
+            "desc": "Levántate con el nuevo control de la gravedad de Sigma y luego aplasta a tus enemigos contra el suelo con Gravitic Flux.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/416f312608ac1d9f34509883daa0fa9486b15ceb112e4440b4c412e125390517.png",
+            "changes": [
+              {
+                "title": "Agarre cinético",
+                "type": "buff",
+                "details": [
+                  "Ahora otorga vuelo libre mientras esté activo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8af801acf16c796c38a8aa8abb571eda481d6490f0562105aa20f319cccdf41.png"
+              },
+              {
+                "title": "Acreción",
+                "type": "adjust",
+                "details": [
+                  "La duración del derribo aumenta con la distancia."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f7fd30ad038cc989f39b28bac6744b6ab0215e9817adfd67d077f3b40bc10fdf.png"
+              },
+              {
+                "title": "Flujo gravitacional",
+                "type": "adjust",
+                "details": [
+                  "Ya no levanta enemigos.",
+                  "Ahora inmoviliza a los enemigos en el suelo, impidiendo sus habilidades de movimiento y movilidad durante 3 segundos.",
+                  "Ahora causa 25 daños por segundo.",
+                  "El daño del golpe cambió del 50% de la salud máxima al 75.",
+                  "Ahora otorga 4 segundos adicionales de vuelo libre."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0a5cda51d0e802e9adbdedefee7461c5abe2b6c6a7027d55903ac9a28281b2e4.png"
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Agregar la opción de usar Jump Pack dos veces en cada salto le brinda a Winston más opciones de movilidad, incluido girar esquinas más fácilmente y extender el salto para llegar más lejos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "Paquete de salto",
+                "type": "adjust",
+                "details": [
+                  "Dentro de 1 segundo de la primera activación, se puede activar nuevamente con un 50% de efectividad."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2bdebd912f34716becf022295dd66d83abd6d156dde2aad43c87498445050f62.png"
+              },
+              {
+                "title": "Proyector de barrera",
+                "type": "nerf",
+                "details": [
+                  "Ahora se puede lanzar hacia adelante",
+                  "La barrera ya no se despliega inmediatamente.",
+                  "La barrera se despliega cuando Winston presiona el botón de habilidad nuevamente o después de 2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/37fc72590a04cbcc4d8ddc3b839e853640a617bad0b6ce8904f6ebe8f07400ba.png"
+              }
+            ]
+          },
+          {
+            "name": "Wrecking Ball",
+            "desc": "A menudo, cuando tu compañero de equipo elige Wrecking Ball, puede resultar difícil saber qué está haciendo o cómo apoyarlo. Estos nuevos cambios deberían ayudar a todos a trabajar mejor juntos con Wrecking Ball.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
+            "changes": [
+              {
+                "title": "Los enemigos golpeados por el daño de habilidad se revelan a los compañeros de equipo de Wrecking Ball durante 1,5 segundos.",
+                "type": "adjust",
+                "details": [
+                  "Los enemigos golpeados por el daño de habilidad se revelan a los compañeros de equipo de Wrecking Ball durante 1,5 segundos."
+                ]
+              },
+              {
+                "title": "Garra de agarre",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede fijar al suelo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/59622a0a190adb30f2ac004485b44e1956cd5fd7a984df1bb4b0e0c156878ed6.png"
+              },
+              {
+                "title": "Campo de minas",
+                "type": "adjust",
+                "details": [
+                  "Las minas ahora se pueden detonar manualmente después de 2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3477845322ea7befaff326fd662ff07eda2d7d49cb1a3518d27ec9531d10afaa.png"
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Los cambios en la barrera proyectada le dan a Zarya la opción de permitir que sus aliados que carecen de herramientas de movilidad alcancen terrenos elevados más fácilmente.",
+                "type": "adjust",
+                "details": [
+                  "Los cambios en la barrera proyectada le dan a Zarya la opción de permitir que sus aliados que carecen de herramientas de movilidad alcancen terrenos elevados más fácilmente."
+                ]
+              },
+              {
+                "title": "Barrera proyectada",
+                "type": "adjust",
+                "details": [
+                  "Los aliados con barreras ahora pueden saltar más alto."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/80f5c53f2835ef60c6527802de36a603b90ea212af41bce469664817692fc97e.png"
+              },
+              {
+                "title": "Oleada de gravitones",
+                "type": "adjust",
+                "details": [
+                  "Ahora tiene un rango de atracción exterior que es un 50% mayor.",
+                  "Los enemigos dentro del rango de atracción exterior no tienen sus habilidades de movimiento desactivadas."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9a3f92c4af25b973f82ea2d8ea9a2ec266e0ccd387b053b317eb3cd977f10073.png"
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Anran",
+            "desc": "Anran lucha por prender fuego a sus oponentes para asegurar muertes, y a menudo tiene que optar por comerciar para obtener muertes. Estos cambios hacen que sea mucho más fácil prender fuego a los oponentes y le permiten a Anran infligir un daño ligeramente mayor desde el alcance, y su rango de movimiento con Inferno Rush se ha incrementado para permitirle más opciones de escape.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
+            "changes": [
+              {
+                "title": "La velocidad de movimiento base aumentó de 6 m/s a 6,5 ​​m/s.",
+                "type": "buff",
+                "details": [
+                  "La velocidad de movimiento base aumentó de 6 m/s a 6,5 ​​m/s."
+                ]
+              },
+              {
+                "title": "Fanáticos de Zhuque",
+                "type": "buff",
+                "details": [
+                  "La velocidad de disparo aumentó en un 50%.",
+                  "La velocidad del proyectil aumentó de 90 a 150 m/s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b575eb7daebdb64b81b0942c466b00117b31925678d10ab8739781e0ccf1bd69.png"
+              },
+              {
+                "title": "Fiebre del infierno",
+                "type": "buff",
+                "details": [
+                  "Anran ahora puede mantenerse hacia atrás para correr hacia atrás.",
+                  "La velocidad de lanzamiento inicial aumentó en un 27%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
+              }
+            ]
+          },
+          {
+            "name": "Ashe",
+            "desc": "B.O.B es ahora una amenaza. Nadie considera a B.O.B una amenaza en el campo de batalla, pero ahora lo harán. También apuesto a que todos estamos cansados ​​de que D.VA se coma nuestras dinamitas, así que con una planificación cuidadosa, Ashe puede pegar dinamita en la pared antes de que comience la pelea, y eso ya no es un problema.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
+            "changes": [
+              {
+                "title": "Dinamita",
+                "type": "buff",
+                "details": [
+                  "Ahora se adhiere a las superficies.",
+                  "El temporizador del fusible aumentó de 5 segundos a 20 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0e2cc18253fc824f3eac3df4623dfb03210937e27901cc868a8694a4a65e68ad.png"
+              },
+              {
+                "title": "CHELÍN.",
+                "type": "adjust",
+                "details": [
+                  "Cuando B.O.B. muere antes de que se agote el tiempo, B.O.B. explota después de un breve retraso."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/224dd7fd039ee71e2633520cac81186fddabe4d399a64650263514829b936295.png"
+              }
+            ]
+          },
+          {
+            "name": "Bastion",
+            "desc": "¿Te gustan los coches de carreras? Bastion es ahora un demonio de la velocidad en forma de configuración. Ya no es un blanco lento y fácil. Ahora es un demonio de la velocidad. También eliminamos el 2 de Overwatch, así que ¿por qué no recuperar también su habilidad definitiva original?",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/78a150dd7baf1d3dd87ad8b4bac9cb38b03bcb135e9b6fe70ad26092347739bb.png",
+            "changes": [
+              {
+                "title": "Explosivos Lindholm: ventaja importante",
+                "type": "rework",
+                "details": [
+                  "Reelaborado en pisadas afinadas.",
+                  "Muévete un 35 % más rápido en Configuración: Asalto o Configuración: Tanque."
+                ]
+              },
+              {
+                "title": "Configuración: Artillería",
+                "type": "rework",
+                "details": [
+                  "Reelaborado en Configuración: Tanque - Configuración: El arma del tanque dispara proyectiles de movimiento rápido que causan 205 de daño explosivo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/891396b354d31ef404bf525651f8f95048da8f8816a381021ce8d6e8ccabfafa.png"
+              }
+            ]
+          },
+          {
+            "name": "Cassidy",
+            "desc": "Quiero que el enemigo tenga MIEDO de ver las 12 en el reloj. Además, sé que te gusta esconderte detrás de escudos cuando escuchas que es mediodía... buena suerte con eso.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Beneficio menor: incluso las probabilidades",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con True Shot: las balas de Deadeye perforan barreras."
+                ]
+              },
+              {
+                "title": "Tirada de combate",
+                "type": "buff",
+                "details": [
+                  "Ahora otorga invencibilidad durante la tirada de combate."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b22144e644a4a63963e063fc8cc969cfb9061e29993d713b0c64a89b1ac9f280.png"
+              },
+              {
+                "title": "Vigota",
+                "type": "adjust",
+                "details": [
+                  "Cada golpe final obtenido a través de Deadeye otorga 1 munición máxima adicional para la ronda, hasta un límite de 18 munición máxima."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6b78a5cb96040a70e6b41e767a6ea59c2af4e773521b8b4e0bf2c6fd642a3824.png"
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "El duplicado de Echo a menudo tiene objetivos muy obvios, generalmente un tanque o ciertos héroes DPS (como Tracer o Reaper). Para intentar brindar opciones de copia más efectivas, se realizan cambios que brindan ventajas para copiar ciertos tipos de héroes. Focusing Beam ahora también es una utilidad más controlable para acabar con los objetivos como medidor de recursos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "Haz de enfoque",
+                "type": "rework",
+                "details": [
+                  "La entrada cambió a Fuego secundario.",
+                  "El tiempo de reutilización disminuyó de 8 segundos a 1 segundo.",
+                  "Ahora funciona con un recurso en regeneración."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/864e210890c8ac666d29fdda118a2a8c0ae16fc5471812ef4da4ab322d11bb8e.png"
+              },
+              {
+                "title": "Bombas pegajosas",
+                "type": "buff",
+                "details": [
+                  "La velocidad del proyectil aumentó en un 60%.",
+                  "Los enemigos con bombas adhesivas adheridas se revelan a Echo durante 5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5dd1a8e7c4097e3822db4a36d6bb5277203da4ba6bfd1ebe5ecab0311d199dbc.png"
+              },
+              {
+                "title": "Duplicado",
+                "type": "adjust",
+                "details": [
+                  "Echo causa un 20% más de daño al duplicar un héroe de apoyo.",
+                  "Echo tiene un 20% más de salud al duplicar un héroe de daño.",
+                  "Echo se mueve un 20% más rápido al duplicar un héroe Tanque."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d374c55bb34248543dc4b63b73738fd17a488afa29eaa63f800008edda7f3907.png"
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "¡¡¡MÁS GRANADAS!!! Además, cuando escuchas a Emre usar su habilidad máxima, apuesto a que piensas que es un blanco fácil en el cielo... ya no.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0d6d4d3713969eb9d56b1f99b7c031fd47e023efe5efa242ad849a8c94e79c9.png",
+            "changes": [
+              {
+                "title": "Adhesión cibernética: ventaja importante",
+                "type": "rework",
+                "details": [
+                  "Reelaborado en orientación optimizada: cuando se apunta, realizar los 3 disparos en ráfaga aumenta el daño de los siguientes disparos en ráfaga sin alcance en un 35%."
+                ]
+              },
+              {
+                "title": "Fragmentación cibernética",
+                "type": "adjust",
+                "details": [
+                  "Los golpes finales de Cyber ​​Frag reembolsan 1 carga de Cyber ​​Frag."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58eeb3950828ceadc16565163bfc03231a0cecdf3a0a6ce78de34bdff4bf09bf.png"
+              },
+              {
+                "title": "Anular protocolo",
+                "type": "adjust",
+                "details": [
+                  "Ahora tiene un 30% de robo de vida."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc8088a2968e2850ef438645fd2286ea7abe1779b2eae5cf85638168736ecddc.png"
+              }
+            ]
+          },
+          {
+            "name": "Freja",
+            "desc": "Estos cambios aumentan ligeramente el poder de Bola Shot y al mismo tiempo reducen ligeramente el daño instantáneo que Freja puede causar y, por lo tanto, la explosión en general. La mecánica de cazarrecompensas presenta algunos objetivos interesantes que Freja debe perseguir.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
+            "changes": [
+              {
+                "title": "apuntar",
+                "type": "nerf",
+                "details": [
+                  "Daño de explosión reducido de 80 a 40.",
+                  "La explosión hace que el objetivo atascado sangre y cause 40 daños durante 2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a86fa2849d7ab515d256e390e75387e4ae306f5d64c5cf24a1ba33038da91e45.png"
+              },
+              {
+                "title": "Disparo de bola",
+                "type": "buff",
+                "details": [
+                  "La ralentización del área aumentó del 45 % al 75 %."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f3b485b68fdf2b703537b38d2c9a30a6377772ca42e5ae6442c3cad5c3cc98be.png"
+              },
+              {
+                "title": "Caza de recompensas",
+                "type": "adjust",
+                "details": [
+                  "Ahora marca a un jugador enemigo aleatorio como recompensa.",
+                  "Eliminar el objetivo de la recompensa otorga un 15% de carga máxima.",
+                  "Tiempo de reutilización de 6 s entre recompensas."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a6d0cad4fe2ae30252617c982761578a4c5b6a535032f6d8f50b5d854f202123.png"
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "Dragonblade se usa a menudo para provocar ataques definitivos de apoyo como Sound Barrier o Rally. Permitir que Genji cancele Dragonblade le da al jugador mucha más autoridad sobre el kit en su conjunto. Estos cambios también influyen en la fuerza de Genji como opción anti-Double Hitscan con su mayor daño de desvío a distancia.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Sed del dragón – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Movido al kit base."
+                ]
+              },
+              {
+                "title": "Tapa trasera rápida – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo: Genji avanza en los objetivos más rápido."
+                ]
+              },
+              {
+                "title": "Cambiar",
+                "type": "adjust",
+                "details": [
+                  "El daño desviado aumenta con la distancia a la víctima.",
+                  "Desviar los golpes finales le otorga a Genji un aumento de daño del 15% durante 5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6947d8eeddce8d295ed96525cdabfe36c94b3b67b50baf87aabb8ae61d32495a.png"
+              },
+              {
+                "title": "hoja de dragón",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede cancelar.",
+                  "Cancelar Dragonblade anticipadamente envía un gran proyectil de energía y reembolsa los tiempos de reutilización de Genji."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/12e6d44381805e22db2b69679028bdf5ee626586663d44e8deb20e96ae7657c2.png"
+              }
+            ]
+          },
+          {
+            "name": "Hanzo",
+            "desc": "A Hanzo le falta consistencia, por lo que los cambios en la velocidad de disparo y el daño deberían mitigar eso y permitir realizar más disparos. Los cambios finales permiten encontrar más valor en Dragonstrike. El caso de uso principal de Hanzo es en mapas con más verticalidad, por lo que su salto vertical le permite más flexibilidad de movimiento en esos mapas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/704527b17eaa3a0722cd151c7e2cddd878ae986e329a51059b5a0bc80b834746.png",
+            "changes": [
+              {
+                "title": "Arco de tormenta",
+                "type": "buff",
+                "details": [
+                  "Daño reducido de 125 a 85.",
+                  "El tiempo de recuperación entre disparos se redujo de 0,5 s a 0,25 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e38382e38d83492de12d3428bc30ef2f8833f8cef89298daa5a5a6d0b4420269.png"
+              },
+              {
+                "title": "Flechas de tormenta",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede rebotar dos veces."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5b2a2a02cf8087005216db110ab5aba37112eeca29c32f4491abb29caeb1910b.png"
+              },
+              {
+                "title": "Estocada",
+                "type": "adjust",
+                "details": [
+                  "Estocada"
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8b0423ecd27436f808b99254ad57bc453a839c5590c6a5b925855f13dd4ecc18.png"
+              },
+              {
+                "title": "Golpe de dragón",
+                "type": "adjust",
+                "details": [
+                  "El costo final disminuyó en un 12%.",
+                  "La velocidad de viaje de los dragones aumentó en un 20%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ec52a328bd2febd049dddd9f61a0004b0688688d3254929002ef22338e205366.png"
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "Aunque el kit existente de Junkrat es interesante, le cuesta encontrar valor en niveles de juego más altos y, al mismo tiempo, es frustrante jugar contra él en niveles de juego más bajos. Proporcionar a Junkrat un kit con una temática similar y al mismo tiempo cambiar su funcionamiento fundamental podría permitir una mayor calidad de juego para Junkrat en todos los niveles de juego.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Salud reducida de 250 a 200.",
+                "type": "nerf",
+                "details": [
+                  "Salud reducida de 250 a 200."
+                ]
+              },
+              {
+                "title": "Lanzador de fragmentos",
+                "type": "adjust",
+                "details": [
+                  "La velocidad del proyectil aumentó de 30 a 112,5 m/s.",
+                  "Daño de impacto reducido de 45 a 30.",
+                  "Daño de explosión reducido de 80 a 50.",
+                  "Los proyectiles ahora detonan al impactar."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8ba613f23c771523b25caf8db1d43f518c9267b13fea2a684a2610ae46585f1.png"
+              },
+              {
+                "title": "Trampa de acero",
+                "type": "nerf",
+                "details": [
+                  "Ahora tiene 2 cargas.",
+                  "El tiempo de reutilización aumentó de 10 a 13 segundos.",
+                  "Ahora se puede lanzar mucho más lejos.",
+                  "La trampa desplegada tarda 1 segundo en armarse y dura 6 segundos.",
+                  "Todos los enemigos dentro de un radio de 6 m de una trampa armada sangran y son revelados a Junkrat.",
+                  "La salud de la trampa aumentó de 100 a 120 de salud."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3b231767363675405aeda173403c44740cca76b8d3653730c075f561e513f935.png"
+              },
+              {
+                "title": "Mina de conmoción cerebral",
+                "type": "nerf",
+                "details": [
+                  "Ya no lanza un proyectil.",
+                  "Ahora desencadena una explosión de conmoción cerebral bajo Junkrat.",
+                  "Daño reducido de 120 a 90."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11dd2b5573ebc5ec231911d443733507e5d92822ff5b6d5dd93cd69c9827c92a.png"
+              }
+            ]
+          },
+          {
+            "name": "Mei",
+            "desc": "Es frustrante jugar contra la principal fuente de lentitud de Mei vinculada a su disparo principal, por lo que trasladar la capacidad de Mei para ralentizar a los enemigos a un disparo de habilidad (disparo secundario) añade justicia en ese sentido. Permitir que Mei potencie su fuego secundario introduce una expresión de habilidad adicional en el kit al permitirle cambiar entre priorizar el daño (menos carga, se pueden realizar más disparos) o priorizar la lentitud (más carga, menos disparos se pueden realizar).",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dc5525ecbba3b254188f126ba0dd07571dee201d4ddc2f068c3e2f6907668cca.png",
+            "changes": [
+              {
+                "title": "Congelación profunda: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con Ice Spikes: los enemigos cerca del muro de hielo de Mei resultan dañados y ralentizados."
+                ]
+              },
+              {
+                "title": "Blaster endotérmico",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó el efecto de desaceleración.",
+                  "El alcance aumentó de 12 a 14."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/02f402130df2ecfcedb6c5bdb7dd3eea199d1d1e833c567bb810c7edd7a717e7.png"
+              },
+              {
+                "title": "Carámbano",
+                "type": "rework",
+                "details": [
+                  "Ahora ralentiza a los enemigos impactados.",
+                  "Ahora se puede mantener presionado el fuego secundario para cargar el carámbano. Los carámbanos cargados causan más daño e infligen una ralentización más fuerte durante un período más prolongado.",
+                  "El daño cambió para variar de 15 a 95.",
+                  "La velocidad lenta escala desde un mínimo del 5 % durante 0,25 s hasta un máximo del 30 % durante 1,5 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/87db1b1ce463611c0ba89fbe5f18ee75af4fd667927e58a40ec3fa4ab127da5d.png"
+              }
+            ]
+          },
+          {
+            "name": "Pharah",
+            "desc": "Concussive Blast de Pharah es una utilidad que normalmente es difícil de usar. Proporcionarle una utilidad muy clara, en este caso ralentizar a los enemigos que no son tanques, permite que Concussive Blast se use agresivamente con más frecuencia.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11bf5153c33d1f37f5d337046af63d7da6c634a0f1047da8fbb8610a14268f3a.png",
+            "changes": [
+              {
+                "title": "Explosión de conmoción cerebral",
+                "type": "adjust",
+                "details": [
+                  "Ahora atrae a los enemigos después de un breve retraso en lugar de expulsarlos.",
+                  "Ralentiza temporalmente a los enemigos que no son tanques."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/666c55a0b7810194a486e73fddac9dac6b64eb0303a14be8d1453c9f29c210df.png"
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "A todos nos da miedo escuchar Morir... Morir... Morir... pero ¿y si eso se prolongara aún más por cada muerte que consiguiera? Reaper ya no es un objetivo fácil si lo ves usar Wraith Form; los orbes de su alma se han convertido en orbes que alargan su forma de espectro, así que buena suerte persiguiéndolo...",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Saqueo de almas: ventaja menor",
+                "type": "adjust",
+                "details": [
+                  "Recolectar un orbe de alma ahora también extiende el temporizador de Wraith Form en 1 s."
+                ]
+              },
+              {
+                "title": "Forma de espectro",
+                "type": "adjust",
+                "details": [
+                  "Inflige 40 de daño por segundo a los enemigos en un radio de 4 m."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b85663ad878344ecf1de8037ff96b4df699d003db95c409b8de46485cdae47c2.png"
+              },
+              {
+                "title": "Flor de la muerte",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede cancelar manualmente.",
+                  "Cada eliminación obtenida con Death Blossom extiende la duración en 1 segundo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/01b5c2f0f26e964707ff9e382a639a402f9f7b3fff3025dadd79f8e6a3f902d1.png"
+              }
+            ]
+          },
+          {
+            "name": "Sierra",
+            "desc": "Sierra ahora recompensa la puntería de precisión al disparar Tracking Dart con aún más daño, lo que, cuando se combina con el nuevo beneficio importante \"Redeployment de Dart\", llevará a Sierra a convertirse en una máquina de matar con daño guiado.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
+            "changes": [
+              {
+                "title": "Vuelo completo – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Movido al kit base."
+                ]
+              },
+              {
+                "title": "Bloqueado: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Movido a beneficio menor."
+                ]
+              },
+              {
+                "title": "Redistribución de dardos: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Nuevo: cuando un objetivo muere con un Tracking Dart sobre él, se reembolsa el tiempo de reutilización de Tracking Dart."
+                ]
+              },
+              {
+                "title": "Toma de seguimiento",
+                "type": "adjust",
+                "details": [
+                  "Dar un golpe crítico con el disparo inicial hará que los disparos posteriores también impacten críticamente."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6c77d58daaeaae211088786b8bf9bff92178ef2df3f0ca6ec9a721d6b4258e55.png"
+              }
+            ]
+          },
+          {
+            "name": "Sojourn",
+            "desc": "Sé que todos estamos acostumbrados a jugar Sojourn desde un lugar seguro y matar jugadores. ¡Ese es un estilo de juego del pasado! ¡¡Entra y deslízate!!",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
+            "changes": [
+              {
+                "title": "La salud base aumentó a 250.",
+                "type": "buff",
+                "details": [
+                  "La salud base aumentó a 250."
+                ]
+              },
+              {
+                "title": "Propulsores dobles: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Movido al kit base."
+                ]
+              },
+              {
+                "title": "Campo de desaceleración – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Ahora cura a los aliados dentro de él por 30 de salud/s."
+                ]
+              },
+              {
+                "title": "Disruptor dual: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Nuevo: otorga una segunda carga de Disparo disruptor."
+                ]
+              },
+              {
+                "title": "Cañón de riel",
+                "type": "buff",
+                "details": [
+                  "La velocidad de disparo aumentó en un 25%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e5b9de0193dfaf675dd1cd1cbfe4ac96c8cc62059b376a728da56f59f639ee25.png"
+              },
+              {
+                "title": "Disparo cargado",
+                "type": "nerf",
+                "details": [
+                  "Daño reducido de 120 a 80.",
+                  "El alcance de caída (mínimo y máximo) se redujo en 20 m."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0f7727846412b19b525b596c69a6ea6e9dda8227963f8c34529d2cee33dbbf47.png"
+              },
+              {
+                "title": "Diapositiva de poder",
+                "type": "adjust",
+                "details": [
+                  "Deslizarse hacia los enemigos los derriba por el aire."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/96315794f51b0dd88c540803fc3930472d75dca3cf00c02ad89dda1b0551493c.png"
+              }
+            ]
+          },
+          {
+            "name": "Soldier: 76",
+            "desc": "El enemigo temerá a la estación de curación. También nos estamos tomando muy en serio \"Te tengo en la mira\": el Soldado 76 ahora daña a todos los jugadores en su mira al MISMO tiempo mientras usa el Visor táctico.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/242f302975d1faf2cc820bee8ff8a37a501a88e49c146ceab1d383b8310ad51a.png",
+            "changes": [
+              {
+                "title": "Campo biótico",
+                "type": "adjust",
+                "details": [
+                  "Ahora sigue Soldado: 76 alrededor.",
+                  "Ahora empuja repetidamente a los enemigos dentro del campo biótico lejos del Soldado: 76."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a7ff449a9b1d26894358265bedbe1f6cbb75707359f9b5b86266e2ce5d1aa3a3.png"
+              },
+              {
+                "title": "Visera táctica",
+                "type": "adjust",
+                "details": [
+                  "Ahora apunta a todos los enemigos a la vista simultáneamente."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/be3396e23ba0199441cfa6f3b1ed92400031c662b933c2354288111070210e6f.png"
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "La reelaboración de Sombra esencialmente eliminó el estilo de juego de flanqueador de Sombra, y ya no es capaz de preparar inmersiones para su equipo en composiciones de inmersiones. Estos cambios buscan recuperar esa identidad de ala y darle más poder como exploradora (con su carga máxima única que revela su pasiva).",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Carga cifrada: ventaja menor",
+                "type": "rework",
+                "details": [
+                  "Modificado: Sombra ahora puede lanzar Virus sin romper el sigilo. Sombra se revela durante 3 segundos después de lanzar Virus mientras está en sigilo."
+                ]
+              },
+              {
+                "title": "Replicación viral: ventaja importante",
+                "type": "rework",
+                "details": [
+                  "Reelaborado: los golpes finales reducen el tiempo de reutilización de Virus en 4 segundos."
+                ]
+              },
+              {
+                "title": "Cortar",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8ab2253eef852a5a038df53fe84ff1dfff0dfea2224bddf881797093695f2261.png"
+              },
+              {
+                "title": "Sigilo",
+                "type": "buff",
+                "details": [
+                  "Movido a la habilidad 1.",
+                  "La duración máxima aumentó de 5 a 8 segundos.",
+                  "La bonificación de velocidad de movimiento aumentó del 60 % al 75 %."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0f96522357295d6f474c6f0a691785d7480b4e6264b75e0e24f9cc4c28be248.png"
+              },
+              {
+                "title": "Translocador",
+                "type": "nerf",
+                "details": [
+                  "Se modificó la física del proyectil: ahora traza arcos en el aire más lentamente.",
+                  "Ya no tiene un tiempo máximo de vuelo.",
+                  "Ya no teletransporta inmediatamente a Sombra tras el impacto o el tiempo de espera.",
+                  "Translocator ahora persiste indefinidamente en el terreno. Translocator tiene 5 de salud cuando está en el suelo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/13259eeec8db36c3158d1d4bd4fe99667067ee7bf678349eec5cbd0d32da3a7f.png"
+              },
+              {
+                "title": "Virus",
+                "type": "nerf",
+                "details": [
+                  "Ahora aplica el efecto de estado Hackeado a los enemigos impactados.",
+                  "Ahora piratea los paquetes de salud cercanos cuando impacta el medio ambiente.",
+                  "El tiempo de reutilización aumentó de 6 a 8 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2e933c2c42fea37400c5e296cfc9ea1fc2958071b04bde8960c0fa7ca17f3251.png"
+              }
+            ]
+          },
+          {
+            "name": "Symmetra",
+            "desc": "Comentarios de los desarrolladores: El teletransportador es el aspecto más fuerte del kit de Symmetra, pero los compañeros de equipo a menudo lo subutilizan. Proporcionar protección a los compañeros de equipo como “recompensa” los anima a agruparse alrededor del teletransportador de Symmetra y usarlo con más frecuencia. El cambio a las torretas se realiza con el objetivo de permitirle a Symmetra una utilidad más práctica con una capacidad que de otro modo sería débil.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2c620d948703d0ac5e6ee3dc30fda346b0c1644aa5b318e4c78f9feebf89b68.png",
+            "changes": [
+              {
+                "title": "Batería protectora: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Movido al kit base.",
+                  "Ahora afecta a todos los aliados cercanos.",
+                  "Ahora funciona en todo tipo de salud."
+                ]
+              },
+              {
+                "title": "Acceleporter – Beneficio mayor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo: los aliados reciben un aumento de velocidad del 30% durante 2 segundos después de usar Teleporter."
+                ]
+              },
+              {
+                "title": "Torretas centinela",
+                "type": "adjust",
+                "details": [
+                  "Puede apuntar a enemigos en pleno vuelo antes de ser desplegado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2b4544ab4d75b4499b7cb6b1b6b44e8487b6d3d3857ee119ebbf29d59e903d45.png"
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "El nuevo disparo de escaneo de impacto de Torbjorn durante la sobrecarga le brinda la capacidad de competir con otros héroes que se juegan con más frecuencia y le brinda un nuevo nivel de utilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "Implementar torreta",
+                "type": "adjust",
+                "details": [
+                  "Ahora dispara cohetes rápidos en lugar de balas."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/856576a7a6b8bc93e8024a152a8a300178ed4030c869edebaaf61469cdbc330c.png"
+              },
+              {
+                "title": "Sobrecarga",
+                "type": "adjust",
+                "details": [
+                  "Ahora aumenta la velocidad del proyectil de fuego principal en un 100%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9751ee2ad26041a274f60dab106a3d52eb0f0d7941b4bc48cd14e737e05dc6bd.png"
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "¿Alguna vez has visto a tus compañeros de equipo en problemas y has querido compartir tu retiro con ellos? Bueno, ¡ahora puedes hacer justamente eso! Además, cuando veas que tu compañero de equipo se queda atascado con una bomba de pulso, ayúdalo disparándola... o si no.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "Paquetes de parpadeo: ventaja importante",
+                "type": "rework",
+                "details": [
+                  "Reelaborado en Ult Packs: recolectar un paquete de salud otorga 10 cargas definitivas."
+                ]
+              },
+              {
+                "title": "Recordar",
+                "type": "adjust",
+                "details": [
+                  "Cuando se activa, otorga a todos los aliados dentro de 5 m la opción de Retirarse durante los próximos 5 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/cfa2264173c1d8a365c514972412fbb802d78cd70451b1d38f37579cea500872.png"
+              },
+              {
+                "title": "Bomba de pulso",
+                "type": "nerf",
+                "details": [
+                  "Los enemigos ahora pueden soltar una bomba de pulso atascada disparándola. La bomba de pulso se desprende después de que se le infligen 150 de daño.",
+                  "El retraso de la explosión aumentó de 1 a 3 segundos.",
+                  "El radio de explosión aumentó de 4 ma 7 m.",
+                  "El daño a enemigos atrapados aumentó de 350 a 9999.",
+                  "El daño a enemigos atascados ignora la reducción de daño."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2613e52845b252aee119c75e1b527cd0dd1c6d4c0605b3d48983188268d3581.png"
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Deja de dar vueltas sin pensar y concéntrate en formar tu equipo. Whirlwind Dash de Vendetta ahora atrae a los enemigos, convirtiéndolos en un blanco fácil para los compañeros de equipo. Además de eso, los enemigos tendrán que pensarlo dos veces antes de colocar tiempos de reutilización y balas en Warding Stance ahora que puede reflejar proyectiles. Ah, y una cosa más... no se lo digas a tus enemigos, pero Sundering Blade ahora golpea tanto por detrás como por delante de Vendetta.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Colmillo Palatino",
+                "type": "nerf",
+                "details": [
+                  "El daño del swing disminuyó de 45 a 30.",
+                  "El daño aéreo se redujo de 120 a 90."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9754a770516c07712b3cbababb825972eec78c08b3fbc141dbcee31d9c58c137.png"
+              },
+              {
+                "title": "Rebanada altísima",
+                "type": "adjust",
+                "details": [
+                  "Daños aéreos sin cambios en 120."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/785bffa90ccf067fbfd86c7a6d6729ed12566a02554f28d76974b573d3a5c6a0.png"
+              },
+              {
+                "title": "Postura protectora",
+                "type": "adjust",
+                "details": [
+                  "Ahora drena energía pasivamente mientras está activo.",
+                  "Ahora puede reflejar proyectiles."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fa9a88278d46e3fc49aad27df9a0b70541f16fb517e96711514e7c736c377243.png"
+              },
+              {
+                "title": "Carrera torbellino",
+                "type": "adjust",
+                "details": [
+                  "Ahora atrae a los enemigos en lugar de expulsarlos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/646af7a4d6b6b65adee6543ec70b33c9ffd36989c8dd4e8b22079c6b9e074c79.png"
+              },
+              {
+                "title": "Hoja divisoria",
+                "type": "adjust",
+                "details": [
+                  "El indicador de objetivo ahora es visible para los enemigos mientras se carga.",
+                  "Ahora ataca tanto por detrás como por delante de Vendetta."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/827e0c55b3d2f335f5950c676f1f52c8668ad33f34ea4c6052c4a122ac005ce8.png"
+              }
+            ]
+          },
+          {
+            "name": "Venture",
+            "desc": "Los cambios de Venture están destinados a brindarles más flexibilidad en mitad de la pelea. Venture puede quedar un poco indefenso después de usar Drill Dash y puede ser difícil decidir cuándo usarlo, por lo que el objetivo es brindar más flexibilidad. Debería permitir que Venture utilice el tablero de perforación más fácilmente para fines de movimiento. El retroceso adicional proporciona un poco más de interrupción al excavar agresivamente en el equipo enemigo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7cab11e20f958ed3d369989e0ac96703fd2cda8c7abf237f75e12bf3549b066e.png",
+            "changes": [
+              {
+                "title": "HP base reducido a 225",
+                "type": "nerf",
+                "details": [
+                  "HP base reducido a 225",
+                  "Los golpes finales regeneran 1 carga de Drill Dash."
+                ]
+              },
+              {
+                "title": "Emoción de excavación: beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Reemplazado con Daylight Dash: la distancia de Drill Dash mientras está sobre el suelo aumentó en un 30%."
+                ]
+              },
+              {
+                "title": "Excavadora INTELIGENTE",
+                "type": "buff",
+                "details": [
+                  "El daño por incendio primario aumentó de 75 a 85."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b2cc1eb839f7e907defe189101077716373a30e6ee17859521ab558a907a7925.png"
+              },
+              {
+                "title": "tablero de perforación",
+                "type": "adjust",
+                "details": [
+                  "Los cargos aumentaron de 1 a 2.",
+                  "El tiempo de reutilización disminuyó de 8 a 6 segundos.",
+                  "El alcance horizontal disminuyó en un 50%.",
+                  "Rango vertical sin cambios.",
+                  "El daño disminuyó de 90 a 35."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dd98f66d96b860803bd144bb4376d236275bf994228de6f9bd7826ec5c4522e6.png"
+              },
+              {
+                "title": "Madriguera",
+                "type": "buff",
+                "details": [
+                  "La fuerza del retroceso aumentó en un 20%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/725f02ba7e5bba99db26300cdf1d7478e111b2a4049b7fd41b6ef3a4a6cb0e57.png"
+              },
+              {
+                "title": "La determinación del explorador",
+                "type": "nerf",
+                "details": [
+                  "Los escudos de bonificación se redujeron de 25 a 15."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/323b0a92e65fec4684a6d3483d8bf01c85788646ac5cb5105565726d2508d540.png"
+              }
+            ]
+          },
+          {
+            "name": "Widowmaker",
+            "desc": "Se acabaron los días de intentar flanquear a Widowmaker. Widowmaker ya no es una araña asustada. Ella está a la caza, se acerca más a la pelea y usa más su rifle automático.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/170aeb0ae3da053cbfd3b7db386db88a904745d692361a006048928cc9a1990a.png",
+            "changes": [
+              {
+                "title": "Mina buscadora: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con Vengeful Web: al morir, arroja mini minas de veneno en forma de red."
+                ]
+              },
+              {
+                "title": "El beso de la viuda",
+                "type": "adjust",
+                "details": [
+                  "La tasa de cargo con alcance disminuyó en un 70%.",
+                  "La propagación del incendio primario disminuyó en un 40%.",
+                  "Los disparos de fuego primario hasta la propagación máxima aumentaron de 11 a 18."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/da5b161187088a765de4a40df65e8737bd9b6b09c896c9cc960f8fa322a78f22.png"
+              },
+              {
+                "title": "Gancho de agarre",
+                "type": "adjust",
+                "details": [
+                  "Ahora almacena hasta 2 cargas.",
+                  "Widowmaker gana 1 carga de gancho de agarre por cada golpe final."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9984591b905b66ab69c48c04e2f2829e32ffce04941b57403f1ec21c125fe573.png"
+              },
+              {
+                "title": "Mina de veneno",
+                "type": "buff",
+                "details": [
+                  "Ahora almacena hasta 2 cargas.",
+                  "El número de minas venenosas que se pueden colocar aumentó de 1 a 2.",
+                  "Si se coloca 1 mina venenosa, la mina causa 75 de daño y derriba a los jugadores cuando se activa.",
+                  "Si se colocan 2 minas de veneno a una distancia de 15 m entre sí y se puede trazar una línea sin obstáculos entre ellas, se forma un cable trampa entre las dos minas. Cuando se activa, el cable trampa causa 180 de daño a los enemigos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/800b4cd6b00024479ac681dc160a50030a3883a334499da6c6918d7c239bec55.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "Ana Banana no se puede lograr en esto, así que nos decantamos por la segunda mejor opción: la movilidad. Todo lo que Ana quiere es una forma de movilidad (un jetpack no parecería demasiado, ¿verdad?). El cambio de Granada Biótica hará que se desperdicien menos granadas y creará nuevos usos para ellas. La curación de disparos en la cabeza con rifle biótico merece ser probada para ver si es viable.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Ahora tiene un jetpack.",
+                "type": "adjust",
+                "details": [
+                  "Ahora tiene un jetpack."
+                ]
+              },
+              {
+                "title": "Rebote biótico: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con Detonación biótica: detona una granada biótica en el aire presionando su botón de habilidad nuevamente."
+                ]
+              },
+              {
+                "title": "Rifle biótico",
+                "type": "adjust",
+                "details": [
+                  "Los disparos curativos ahora pueden curar críticamente a los aliados (multiplicador 2x)."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db33c39f25d96a2cabcacb778cf784535279180f6d9119ef56311bdcdf6077df.png"
+              },
+              {
+                "title": "Nanoimpulso",
+                "type": "buff",
+                "details": [
+                  "Se eliminó el tiempo de lanzamiento."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/726f2fa5b149e5ac58310f11893db1850a7312270db4f88c164bb43a84f962cf.png"
+              }
+            ]
+          },
+          {
+            "name": "Baptiste",
+            "desc": "Immortality Field siempre ha sido un punto débil de su equipo, por lo que convertirlo en una habilidad definitiva debería sentirse mejor porque incluso si verás menos, será más fuerte. Amplification Matrix como habilidad debería tener más flexibilidad ahora con su cambio a habilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
+            "changes": [
+              {
+                "title": "Campo de inmortalidad",
+                "type": "buff",
+                "details": [
+                  "Movido a Ultimate.",
+                  "El umbral mínimo de salud aumentó del 20% al 40%.",
+                  "La salud aumentó de 125 a 300.",
+                  "El ancho del campo aumentó en un 50%.",
+                  "Los aliados afectados reciben un 25% más de curación."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8e586114b79ae8281255d8e5a5a48d3a855be6e88b3d7abeda93288f4fffe909.png"
+              },
+              {
+                "title": "Matriz de amplificación",
+                "type": "buff",
+                "details": [
+                  "Movido a la habilidad 2.",
+                  "Tamaño reducido en un 65%.",
+                  "Duración reducida de 10 a 6 segundos.",
+                  "Amplificación de daño reducida en un 75%.",
+                  "La amplificación de curación se redujo en un 65%.",
+                  "Tiempo de reutilización de 15 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/35311fd3b5a6bdd90d9e58101685675e0ee3562b2d63eb0c5775dd1f7b86cc3b.png"
+              },
+              {
+                "title": "Exo-Botas",
+                "type": "adjust",
+                "details": [
+                  "Ahora se aplica el rastreo a las granadas bióticas mientras Baptiste está en el aire. La fuerza de referencia aumenta con la carga de Exo-Boots."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b3451a608be2eea1a38669721c9cd96ef9114172cec10b06c27e8048f42614bd.png"
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "No tiene mucho sentido jugar con Brigitte si no puedes acortar la distancia con los enemigos, por lo que todos sus cambios tienen como objetivo hacerla no solo viable, sino también una amenaza en todos los mapas y contra todas las competiciones.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "látigo",
+                "type": "adjust",
+                "details": [
+                  "Ahora impulsa a Brigitte hacia atrás en su dirección cuando impacta el medio ambiente."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1f72a2f8c1c8df901af39ec7fa33ab69d79c8b92d7bf3319e4a2081e4712dac.png"
+              },
+              {
+                "title": "Golpe de escudo",
+                "type": "adjust",
+                "details": [
+                  "Ahora permite a Brigitte lanzarse por los aires."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/da7bcc6cd41e74adbe68450d5afc7809745717e8bdac3fd9cba22f12d6419297.png"
+              },
+              {
+                "title": "Reunión",
+                "type": "adjust",
+                "details": [
+                  "Cuando se usa, Brigitte es primero levantada en el aire por un Jetpack Cat invisible y desaparece del campo de batalla. Luego, Brigitte puede seleccionar un lugar donde caer. Después del aterrizaje, Rally se activa automáticamente."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/28664c18171b484aefc61836b34d749dac8971f1393c6a17c88ccb60b8c2d0b3.png"
+              }
+            ]
+          },
+          {
+            "name": "Illari",
+            "desc": "Proporcionando un poco más de utilidad de equipo al estallido, al mismo tiempo que se apoya en gran medida en sus poderes solares precisos de la tradición.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/536202d2d6a31cb4bd95405f5869df3227e53059257b9ee7bd0e0b2590e96637.png",
+            "changes": [
+              {
+                "title": "Quemaduras de sol: beneficio importante",
+                "type": "adjust",
+                "details": [
+                  "Evita que Outburst cure a los aliados.",
+                  "Illari ahora gira 2 veces más, creando una explosión adicional con cada giro."
+                ]
+              },
+              {
+                "title": "Explosión",
+                "type": "adjust",
+                "details": [
+                  "Ahora proporciona 75 de curación a los aliados dentro del alcance."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fa2fa52626c761a91588ac62d835ddc7ec2f9a1d9034d06587e39129b8c2a94b.png"
+              },
+              {
+                "title": "Sol cautivo",
+                "type": "adjust",
+                "details": [
+                  "Los enemigos que apunten a Illari mientras Captive Sun está activo ahora están obstaculizados."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/853a9ed59d241e1fd477a7c36dc826a1cf3321114b5ee3095780aa800649ff8e.png"
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "Jetpack Cat prospera cuando está en todo el campo de batalla, por lo que cambiar HP por más movilidad siempre es una mejora bienvenida. Su definitiva no fue bien recibida (especialmente por los tanques), así que intenté cambiarla por una definitiva más basada en equipos. Además, hacerla llevar torretas a los enemigos suena divertido y fomenta las sinergias entre héroes.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "Las torretas de Torbjörn y Symmetra ahora se pueden colocar en Jetpack Cat.",
+                "type": "adjust",
+                "details": [
+                  "Las torretas de Torbjörn y Symmetra ahora se pueden colocar en Jetpack Cat."
+                ]
+              },
+              {
+                "title": "Blindaje de transporte: ventaja menor",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado por Zoomies: aumenta la velocidad de movimiento en un 50 % y la capacidad de combustible en un 100 %. Reduce la salud base en 75."
+                ]
+              },
+              {
+                "title": "Línea de vida",
+                "type": "nerf",
+                "details": [
+                  "La duración máxima disminuyó de infinita a 10 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0c899ac61aa5b72e7de931b014b02176605fba7c9f022cc7a968b6cc6ebf19b.png"
+              },
+              {
+                "title": "secuestrador",
+                "type": "rework",
+                "details": [
+                  "Reelaborado: ahora equipa a Jetpack Cat con un lanzagranadas que cura a los aliados y daña a los enemigos.",
+                  "Dura 8s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/01fd22b375088be5c2b0e3a00a8e09c97de48d634d939627d3d46b13a2428c28.png"
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "El anillo de velocidad de Juno siempre se ve como una alternativa a la velocidad de Lucio, por lo que introducir una ralentización en el kit de apoyo podría hacerla más distinguible como heroína. Además, su habilidad máxima es literalmente un rayo del cielo, por lo que debería causar daño y ser controlable.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
+            "changes": [
+              {
+                "title": "Bloqueado: ventaja menor",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con Wormhole: aumenta la distancia de despliegue del Hyper Ring en un 50%. Al atravesarlo, los aliados obtienen un 25 % menos de aumento de velocidad, pero los enemigos se ralentizan un 35 %."
+                ]
+              },
+              {
+                "title": "Rayo orbital",
+                "type": "adjust",
+                "details": [
+                  "Ahora causa 60 daños/s a los enemigos dentro del alcance.",
+                  "Ahora viaja hacia la ubicación de Juno en lugar de viajar siempre hacia adelante."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5723182cddc6719ee19a5b35d840d2fb3ed933c861f3f66514d66fc29630c84a.png"
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "Los cambios se realizan con la intención de mantener la identidad y el factor de diversión de Kiriko y, al mismo tiempo, eliminar las frustraciones de jugar contra ella al impedirle hacer mucho daño desde el otro lado del mapa. La curación de Kunai será un nuevo desafío para Kiriko Mains que creo que será muy divertido y muy gratificante con el multiplicador de disparos a la cabeza. El cambio de Suzu es una compensación por la falta de daño de largo alcance que puede crear oportunidades para los enfrentamientos de su equipo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Atención de urgencia: beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con instintos depredadores: Ofuda viaja un 50% más rápido cuando busca enemigos con menos de la mitad de salud."
+                ]
+              },
+              {
+                "title": "Adivino – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado con Kunai Mastery: después de golpear 3 kunai seguidos, el siguiente kunai lanzado es un golpe crítico garantizado."
+                ]
+              },
+              {
+                "title": "Ofuda curativa",
+                "type": "adjust",
+                "details": [
+                  "Ahora busca enemigos en lugar de aliados e inflige 10 de daño por Ofuda."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4ebf8c956da05591160da7416299bb3b641a268fbf334debf7892b8c7b3c326d.png"
+              },
+              {
+                "title": "Kunai",
+                "type": "adjust",
+                "details": [
+                  "Ahora cura a los aliados en lugar de dañar a los enemigos.",
+                  "Puede golpear críticamente a los aliados."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/81466ccd866d29b1edc9884cd0842b2e32ef0b5712198ea137ae212494feb1f4.png"
+              },
+              {
+                "title": "Protección Suzu",
+                "type": "adjust",
+                "details": [
+                  "Ahora derriba a los enemigos dentro del alcance.",
+                  "El retroceso escala con la distancia lanzada."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a5c1a2e74ccb598d376aac2c1cd255aa46570a08886e72b06d5a6f64203c8072.png"
+              }
+            ]
+          },
+          {
+            "name": "Lifeweaver",
+            "desc": "Lifeweaver siempre se ha sentido un poco torpe, por lo que estos cambios en sus armas deberían ayudar. El control mejorado de Petal Platform debería permitir que la plataforma se utilice para alcanzar ángulos más interesantes. Tree of Life debería poder usarse tanto de manera ofensiva como defensiva para mejorar su potencial de transporte. En este momento se siente como una versión más débil de otras definitivas de apoyo defensivo, por lo que estos cambios le dan a la definitiva su propia identidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "Superfloración: ventaja importante",
+                "type": "adjust",
+                "details": [
+                  "Movido al kit base."
+                ]
+              },
+              {
+                "title": "Aflicción arbórea – Beneficio mayor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo: los enemigos atrapados con explosiones de Superflores ahora reciben un 20 % menos de curación durante 1 segundo."
+                ]
+              },
+              {
+                "title": "Descarga de espinas",
+                "type": "buff",
+                "details": [
+                  "El tiempo de recarga se redujo de 1,5 s a 0,75 s."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6f96b55eaf1922f2ea57166062c4cd7f7c373cbcc1795888def7a9aa24abb258.png"
+              },
+              {
+                "title": "Plataforma de pétalos",
+                "type": "adjust",
+                "details": [
+                  "Ahora pueden ser controlados por aliados que viajen en la plataforma presionando Interactuar."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/040f6c05bfe6a0540c0139034d13ac09f3a4f6e2c611ff75113ac70596a65da7.png"
+              },
+              {
+                "title": "árbol de la vida",
+                "type": "adjust",
+                "details": [
+                  "Los pulsos de curación ahora también reducen los tiempos de reutilización de los aliados en 2 segundos por pulso y aumentan los tiempos de reutilización de los enemigos en 2 segundos. Sólo se ven afectadas las habilidades que están en tiempo de reutilización."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/03d294ff2fbd7cf4a66220be5734b3607bc5cfc57d3af2a0ce4ad823e1656b75.png"
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "El boop de Lúcio es una gran parte de su identidad, por lo que recompensar a los jugadores por ser más intencionales en cuanto a hasta qué punto quieren golpear a los enemigos debería hacerlo sentir aún mejor. Que su habilidad máxima sea cancelable es necesaria para un juego justo y equilibrado, pero intenté verlo desde una perspectiva diferente: no le afecta a él, sino solo a los aliados y enemigos (todos los principales de Lúcio temen que se cancele su habilidad máxima, por lo que esto alivia la presión y al mismo tiempo mantiene un elemento de riesgo). El aumento de velocidad para la carga útil y el push bot es algo que pensé que realmente sucedió cuando comencé a jugar Overwatch y me decepcionó un poco que no fuera así.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "Lúcio ahora puede acelerar la carga útil y TS-1 (el robot Push).",
+                "type": "adjust",
+                "details": [
+                  "Lúcio ahora puede acelerar la carga útil y TS-1 (el robot Push)."
+                ]
+              },
+              {
+                "title": "Jinete Soundwave – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Reemplazado con Bass Buildup: mantener el fuego secundario carga gradualmente una onda sonora potenciada. Las ondas sonoras potenciadas causan hasta un 50 % más de daño y un 25 % más de retroceso. El tiempo de reutilización de Soundwave aumentó en 1 s."
+                ]
+              },
+              {
+                "title": "Barrera del sonido",
+                "type": "nerf",
+                "details": [
+                  "Ya no aplica Sobresalud a Lúcio.",
+                  "La carga máxima no se consume hasta que se lanza con éxito Barrera de sonido.",
+                  "Ahora derriba a los enemigos dentro del alcance."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f84b670bff38d0b97c44a084159bb41c140b5cf7e52348782ab9755d47cdbb0a.png"
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "Mercy's Resurrect es un elemento básico de su equipo, por lo que con estos cambios nos inclinamos mucho hacia la nostalgia al recuperar un poco de cómo solía funcionar el antiguo Resurrect. También necesita más capacidades de transporte fuera de su habilidad definitiva, por lo que el sangrado en las alas junto con la capacidad de Guardian Angel para apuntar a los enemigos debería proporcionar un poco más de potencial para un juego agresivo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "Resurrección angelical – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado por Resurrección remota: el alcance de Resurrección aumenta a 10 m y ya no requiere línea de visión para iniciarse."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mizuki",
+            "desc": "Los cambios de Mizuki son el resultado de los comentarios de la comunidad sobre el héroe y alentarían a los jugadores a experimentar más con él, ya que le da más fluidez. Si no puede escalar paredes, déjele al menos usar las paredes para moverse y reposicionarse.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/192ba53e30db9ceaea964dc67a30351db1c2431033d827f0b9af0ab537be2bad.png",
+            "changes": [
+              {
+                "title": "Retorno resonante: beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Reemplazado por la Regla de Tres: Curar a Kasa gana 1 carga adicional. Cada rebote ahora aumenta la curación en 10, y el máximo de rebotes se reduce a 3."
+                ]
+              },
+              {
+                "title": "Aura de remedio",
+                "type": "adjust",
+                "details": [
+                  "Los aliados ahora pueden ver el alcance del aura."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11ba949531e0cf7d2fab159f0806c08c31a9e770836ec5efcc408df043b72995.png"
+              },
+              {
+                "title": "Guja espiritual",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede cargar manteniendo presionado el fuego principal.",
+                  "Los proyectiles cargados perforan a los enemigos y viajan más lejos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/407d795518aaf89ffd41fda4c392421c7e783c3486292bcabd412274ae8bfe6d.png"
+              },
+              {
+                "title": "Cadena vinculante",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede fijar a las paredes. Tira de Mizuki hacia el punto de contacto si la cadena impacta el medio ambiente.",
+                  "Mizuki puede cancelar la lucha antes de tiempo saltando."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3404150b1babd17665ceced735828eedb701ee1d276debcedcd1a5d95d8d1cf7.png"
+              },
+              {
+                "title": "El regreso de Katashiro",
+                "type": "nerf",
+                "details": [
+                  "Los enemigos ya no pueden ver el muñeco de papel que indica el lugar de regreso de Mizuki.",
+                  "La muñeca de papel ahora cura a los aliados que estén cerca de ella."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/291ad4dfccb3678979f4f5ca8c24d219b9bb61a383731057547760646dcd5c04.png"
+              }
+            ]
+          },
+          {
+            "name": "Moira",
+            "desc": "Los cambios de Moira tienen como objetivo darle más control sobre su equipo, porque aunque sus números son fuertes, a menudo puede ser difícil capitalizar plenamente sus habilidades y su habilidad definitiva.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/39b42cd8e183acb99ccac01cb8b43a4b7372350425a80f4444885800dd84ba28.png",
+            "changes": [
+              {
+                "title": "Agarre biótico",
+                "type": "buff",
+                "details": [
+                  "El rango de curación aumentó en un 100%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e74ba239c376cb9de7a0f82418f4713e3183092d48988198825dd376da0b0a12.png"
+              },
+              {
+                "title": "Orbe biótico",
+                "type": "adjust",
+                "details": [
+                  "La trayectoria de Biotic Orb ahora se controla a través de la dirección de Moira hasta el primer rebote."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/66a472473965ecbe525afb991bab0f950248542232a13a3d34607d9b71a8ddee.png"
+              },
+              {
+                "title": "Fusión",
+                "type": "adjust",
+                "details": [
+                  "La carga máxima ahora se consume gradualmente durante la duración de la fusión.",
+                  "Moira ahora puede cancelar manualmente Coalescent antes de tiempo después de consumir al menos el 25 % de la carga máxima, conservando la carga máxima restante.",
+                  "Toda la carga máxima se pierde inmediatamente al morir mientras se usa Coalescencia."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8791876838df722d9153ecc6d1c7a76445892d13fcec304609435b2f91fcc2c1.png"
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Cuando vi la animación de la ola de Wuyang, sentí que debería afectar más a los enemigos, así que quise darle este efecto. Además, con todos los efectos de combustión en el juego en este momento, se necesita algo para extinguir las llamas que no sea Suzu.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "Flujo y reflujo: beneficio importante",
+                "type": "adjust",
+                "details": [
+                  "Reemplazado por Corriente poderosa: Guardian Wave es más ancha y transporta a los enemigos por el aire."
+                ]
+              },
+              {
+                "title": "Bastón de Xuanwu",
+                "type": "adjust",
+                "details": [
+                  "Los orbes ahora son visibles para Wuyang a través de las paredes."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/51dee96ac9a92d773bfa56a45272db8cf94ade9c051981f7a240782b0d16f8ec.png"
+              },
+              {
+                "title": "Ola Guardiana",
+                "type": "adjust",
+                "details": [
+                  "Ahora extingue el estado Ardiente."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a1a3efdb2c0db62876f6e39dc82b6095a1058803e3f428ca12c912391f818d35.png"
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "La intención de estos cambios es cambiar el flujo de juego de Zen. En lugar de poner un orbe en un aliado y olvidarte de él mientras disparas sin parar al enemigo, ahora tienes que administrar tu munición entre enemigos y aliados y al mismo tiempo tener efectos más fuertes en tus orbes de Armonía y Discord.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Armonía dual: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "Reemplazado por Momento armónico: Zenyatta ya no puede colocar Orbe de armonía en los aliados. En cambio, mantener presionado el botón Orbe de la Armonía ahora permite a Zenyatta moverse un 50% más rápido, pero prohíbe realizar algunas acciones."
+                ]
+              },
+              {
+                "title": "Orbe de destrucción",
+                "type": "adjust",
+                "details": [
+                  "Ahora puede curar a los aliados además de dañar a los enemigos.",
+                  "Sólo puede dañar a los enemigos (sin cambios)."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9aaea64b6fd5f024741aab112dea6ef5e3adc706af58122a6beb92505889a5f1.png"
+              },
+              {
+                "title": "Orbe de armonía",
+                "type": "nerf",
+                "details": [
+                  "Ya no proporciona curación a los aliados.",
+                  "Ahora aumenta la velocidad de ataque y la velocidad de movimiento en un 20%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8e37e2f3e147fde823bb9566b57e3e20d238430f0cb4f8aa8b581525a4f225e.png"
+              },
+              {
+                "title": "Orbe de discordia",
+                "type": "buff",
+                "details": [
+                  "Ya no se adhiere automáticamente a los enemigos.",
+                  "Ya no se desprende cuando Zenyatta pierde su línea de visión durante demasiado tiempo.",
+                  "Al presionar el botón ahora se activa el siguiente orbe de fuego principal.",
+                  "El orbe potenciado viaja un 200% más rápido y une el Orbe de la discordia a los enemigos durante 4 segundos al golpear.",
+                  "Orbe de discordia ahora ralentiza a los objetivos en un 30% mientras está conectado.",
+                  "Tiempo de reutilización de 12 segundos al disparar un orbe potenciado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4000886b6906480f519f4a87c167bc1877b131f1dc43e8583bfc0fcf7e415904.png"
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Game Client Update",
+          "desc": "Este es un parche del cliente del juego que presenta el nuevo modo de juego Community Crafted, junto con varias correcciones de errores. Los códigos de repetición han sido borrados.",
+          "changes": [
+            {
+              "title": "Actualización del cliente del juego",
+              "type": "new",
+              "details": [
+                "Este es un parche del cliente del juego que presenta el nuevo modo de juego Community Crafted, junto con varias correcciones de errores. Los códigos de repetición han sido borrados."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Community Crafted",
+          "desc": "Experimenta una versión completamente nueva de Overwatch creada con la ayuda de cuatro de tus creadores favoritos: Guxue, Apply, Ocie y mL7support. Cada héroe (excepto Shion) tiene cambios que puedes probar según cómo nuestros creadores querían que jugaran estos héroes, ¡así que ingresa al Arcade para probar este nuevo modo de juego desde el 30 de junio hasta el 13 de julio!",
+          "changes": [
+            {
+              "title": "Creado por la comunidad",
+              "type": "adjust",
+              "details": [
+                "Experimenta una versión completamente nueva de Overwatch creada con la ayuda de cuatro de tus creadores favoritos: Guxue, Apply, Ocie y mL7support. Cada héroe (excepto Shion) tiene cambios que puedes probar según cómo nuestros creadores querían que jugaran estos héroes, ¡así que ingresa al Arcade para probar este nuevo modo de juego desde el 30 de junio hasta el 13 de julio!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tactician Subrole",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Subrol táctico",
+              "type": "nerf",
+              "details": [
+                "Ya no permite el almacenamiento del exceso de carga final.",
+                "Los tácticos ahora cuentan como un aliado adicional a la hora de avanzar en el objetivo."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Medic Subrole",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Subrol médico",
+              "type": "adjust",
+              "details": [
+                "Ya no proporciona autocuración al curar a un aliado.",
+                "Ahora proporciona un 2,5% más de curación por héroe médico aliado a todos los aliados de todas las fuentes."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Survivor Subrole",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Subrol de superviviente",
+              "type": "adjust",
+              "details": [
+                "Las habilidades de movimiento ya no inician inmediatamente la regeneración de salud pasiva.",
+                "Ahora proporciona 10 puntos de salud máximos adicionales por cada minuto que un Superviviente permanece con vida, hasta un máximo de 100 puntos de salud adicionales.",
+                "La salud máxima adicional se reinicia al morir."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema por el cual el precio mostrado de 1000 monedas de Overwatch aparecía incorrectamente en algunos idiomas.",
+      "Se solucionó un problema que causaba que el temporizador AFK se comportara incorrectamente en el mapa de Neon Junction.",
+      "Se solucionó un problema por el cual las prohibiciones de héroes no se mostraban cuando se alcanzaba el límite de funciones de prohibición.",
+      "Se solucionó un problema que impedía que Shion's Burst se usara durante Satsuriku Spree mientras estaba pirateado o con movilidad bloqueada, a pesar de estar gobernado por la lógica de Transformación.",
+      "Se solucionó un problema que causaba que nuestra iluminación hiciera que algunos héroes brillaran más de lo previsto.",
+      "En una actualización anterior, se produjo un problema por el cual la Barrera del Vacío de Ramattra podía lanzarse con más frecuencia de lo previsto cuando el poder \"Murallas\" estaba equipado."
+    ]
+  },
+  "translated": true
+}
