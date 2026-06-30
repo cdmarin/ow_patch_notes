@@ -12,7 +12,17 @@
       },
       "generalItems": []
     },
-    "gameBase": {
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema por el cual el precio mostrado de 1000 monedas de Overwatch aparecía incorrectamente en algunos idiomas.",
+      "Se solucionó un problema que causaba que el temporizador AFK se comportara incorrectamente en el mapa de Neon Junction.",
+      "Se solucionó un problema por el cual las prohibiciones de héroes no se mostraban cuando se alcanzaba el límite de funciones de prohibición.",
+      "Se solucionó un problema que impedía que Shion's Burst se usara durante Satsuriku Spree mientras estaba pirateado o con movilidad bloqueada, a pesar de estar gobernado por la lógica de Transformación.",
+      "Se solucionó un problema que causaba que nuestra iluminación hiciera que algunos héroes brillaran más de lo previsto.",
+      "En una actualización anterior, se produjo un problema por el cual la Barrera del Vacío de Ramattra podía lanzarse con más frecuencia de lo previsto cuando el poder \"Murallas\" estaba equipado."
+    ],
+    "arcade": {
       "intro": "Ya no permite el almacenamiento del exceso de carga final.\nLos tácticos ahora cuentan como un aliado adicional a la hora de avanzar en el objetivo.\n\n\nYa no proporciona autocuración al curar a un aliado.\nAhora proporciona un 2,5% más de curación por héroe médico aliado a todos los aliados de todas las fuentes.\n\n\nLas habilidades de movimiento ya no inician inmediatamente la regeneración de salud pasiva.\nAhora proporciona 10 puntos de salud máximos adicionales por cada minuto que un Superviviente permanece con vida, hasta un máximo de 100 puntos de salud adicionales.\nLa salud máxima adicional se reinicia al morir.",
       "roles": {
         "Tanque": [
@@ -1858,17 +1868,7 @@
           ]
         }
       ]
-    },
-    "maps": [],
-    "system": [],
-    "bugFixes": [
-      "Se solucionó un problema por el cual el precio mostrado de 1000 monedas de Overwatch aparecía incorrectamente en algunos idiomas.",
-      "Se solucionó un problema que causaba que el temporizador AFK se comportara incorrectamente en el mapa de Neon Junction.",
-      "Se solucionó un problema por el cual las prohibiciones de héroes no se mostraban cuando se alcanzaba el límite de funciones de prohibición.",
-      "Se solucionó un problema que impedía que Shion's Burst se usara durante Satsuriku Spree mientras estaba pirateado o con movilidad bloqueada, a pesar de estar gobernado por la lógica de Transformación.",
-      "Se solucionó un problema que causaba que nuestra iluminación hiciera que algunos héroes brillaran más de lo previsto.",
-      "En una actualización anterior, se produjo un problema por el cual la Barrera del Vacío de Ramattra podía lanzarse con más frecuencia de lo previsto cuando el poder \"Murallas\" estaba equipado."
-    ]
+    }
   },
   "translated": true
 }

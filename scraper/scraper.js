@@ -334,7 +334,7 @@ async function main() {
             const metaData = {
                 version: patchData.version,
                 date: patchData.date,
-                title: `Actualización del ${parseInt(day, 10)} de ${months[parseInt(month, 10) - 1]} ${year}`,
+                title: `${parseInt(day, 10)} de ${months[parseInt(month, 10) - 1]} ${year}`,
                 subtitle: 'Notas de parche oficiales de Overwatch',
                 url: targetUrl,
                 season: 'Temporada actual'

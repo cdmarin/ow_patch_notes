@@ -65,6 +65,7 @@ export const FALLBACK_PORTRAIT = 'logo.svg';
 export const SECTIONS = [
     { id: 'gameBase', label: 'Juego Base', icon: '🎮', hasRoles: true },
     { id: 'stadium', label: 'Stadium', icon: '🏟️', hasRoles: true },
+    { id: 'arcade', label: 'Arcade', icon: '🎨', hasRoles: true },
     { id: 'bugFixes', label: 'Bug Fixes', icon: '🐛', hasRoles: false }
 ];
 

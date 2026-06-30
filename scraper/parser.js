@@ -190,6 +190,7 @@ function parseGenericUpdateSection($, $el) {
 function parseSections($, container) {
     const data = {
         stadium: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
+        arcade: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
         gameBase: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
         maps: [],
         system: [],
@@ -237,6 +238,17 @@ function parseSections($, container) {
         // Actualizar contexto basado en palabras clave del título
         const hasBugFix = titleLower.includes('bug');
         const hasStadium = titleLower.includes('stadium');
+        const hasArcade = titleLower.includes('community') || 
+                          titleLower.includes('crafted') ||
+                          titleLower.includes('arcade') ||
+                          titleLower.includes('experimental') ||
+                          titleLower.includes('creator') ||
+                          titleLower.includes('junkenstein') ||
+                          titleLower.includes('laboratorio') ||
+                          titleLower.includes('laboratory') ||
+                          titleLower.includes('lab') ||
+                          titleLower.includes('hacked') ||
+                          titleLower.includes('classic');
         const hasHero = titleLower.includes('hero') || titleLower.includes('balance') || titleLower.includes('hotfix') || titleLower.includes('gameplay');
         const hasMap = titleLower.includes('map');
 
@@ -248,6 +260,8 @@ function parseSections($, container) {
             } else {
                 currentContext = 'stadium';
             }
+        } else if (hasArcade) {
+            currentContext = 'arcade';
         } else if (hasHero) {
             currentContext = 'gameBase';
         } else if (hasMap) {
@@ -274,6 +288,8 @@ function parseSections($, container) {
 
                 if (currentContext === 'stadium' || currentContext === 'stadiumGeneral') {
                     data.stadium.generalItems.push(...parsedItems);
+                } else if (currentContext === 'arcade') {
+                    data.arcade.generalItems.push(...parsedItems);
                 } else {
                     data.gameBase.generalItems.push(...parsedItems);
                 }
@@ -282,6 +298,8 @@ function parseSections($, container) {
                 const firstParagraph = descContainer.find('> p').first().text().trim();
                 if (currentContext === 'stadium' || currentContext === 'stadiumGeneral') {
                     data.stadium.intro = firstParagraph || descContainer.text().trim();
+                } else if (currentContext === 'arcade') {
+                    data.arcade.intro = firstParagraph || descContainer.text().trim();
                 } else {
                     data.gameBase.intro = firstParagraph || descContainer.text().trim();
                 }
@@ -299,9 +317,11 @@ function parseSections($, container) {
 
                     // Si no estamos en un contexto válido de héroes, inferir por el título
                     let destContext = currentContext;
-                    if (destContext !== 'stadium' && destContext !== 'stadiumGeneral' && destContext !== 'gameBase') {
+                    if (destContext !== 'stadium' && destContext !== 'stadiumGeneral' && destContext !== 'arcade' && destContext !== 'gameBase') {
                         if (titleLower.includes('stadium')) {
                             destContext = 'stadium';
+                        } else if (titleLower.includes('community') || titleLower.includes('crafted') || titleLower.includes('arcade') || titleLower.includes('experimental') || titleLower.includes('creator') || titleLower.includes('junkenstein') || titleLower.includes('laboratorio') || titleLower.includes('laboratory') || titleLower.includes('lab') || titleLower.includes('hacked') || titleLower.includes('classic')) {
+                            destContext = 'arcade';
                         } else {
                             destContext = 'gameBase';
                         }
@@ -309,6 +329,8 @@ function parseSections($, container) {
 
                     if (destContext === 'stadium' || destContext === 'stadiumGeneral') {
                         data.stadium.roles[role].push(hero);
+                    } else if (destContext === 'arcade') {
+                        data.arcade.roles[role].push(hero);
                     } else {
                         data.gameBase.roles[role].push(hero);
                     }
@@ -483,7 +505,7 @@ function parseHTML(html, defaultDate) {
             patches.push({
                 version,
                 date,
-                title: `Actualización del ${formatDateDay(date)}`,
+                title: formatDateDay(date),
                 sections: sectionsData
             });
         });
@@ -496,7 +518,7 @@ function parseHTML(html, defaultDate) {
         patches.push({
             version,
             date,
-            title: `Actualización del ${formatDateDay(date)}`,
+            title: formatDateDay(date),
             sections: sectionsData
         });
     }
