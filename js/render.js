@@ -498,7 +498,7 @@ export function renderContentNotDownloaded(patchMeta) {
 }
 
 export function handleMobileLayout() {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
     const filterWrap = dom.filterWrap;
     const searchWrap = document.querySelector('.search-wrap');
     const patchSelectorWrap = document.querySelector('.patch-selector-wrap');
