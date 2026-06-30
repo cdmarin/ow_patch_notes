@@ -13,7 +13,8 @@ import {
     renderPatchHeader, 
     renderContent, 
     renderContentNotDownloaded,
-    handleMobileLayout
+    handleMobileLayout,
+    clearContentSafely
 } from './js/render.js';
 import { 
     toggleFilter, 
@@ -82,6 +83,7 @@ export async function loadPatch(patchId) {
     }
 
     // Show skeleton
+    clearContentSafely();
     dom.content.innerHTML = `
         <div class="patch-header-card" style="min-height:120px">
             <div class="skeleton-line" style="width:20%;height:16px;margin-bottom:1rem"></div>

@@ -348,11 +348,13 @@ header::after {
     justify-content: center;
 }
 
-.refresh-btn:hover {
-    border-color: var(--orange);
-    color: var(--orange);
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px var(--orange-glow);
+@media (hover: hover) {
+    .refresh-btn:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+        transform: translateY(-2px);
+        box-shadow: 0 0 12px var(--orange-glow);
+    }
 }
 
 .refresh-btn:active {
@@ -381,7 +383,7 @@ header::after {
 
 .search-icon {
     position: absolute;
-    left: 0.85rem;
+    left: 1.15rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
@@ -398,7 +400,7 @@ header::after {
     color: var(--text-primary);
     font-family: inherit;
     font-size: 0.875rem;
-    padding: 0.5rem 1rem 0.5rem 2.35rem;
+    padding: 0.5rem 1rem 0.5rem 2.65rem;
     transition: var(--t);
 }
 
@@ -412,7 +414,7 @@ header::after {
     box-shadow: 0 0 12px var(--blue-glow);
 }
 
-#search-input:focus + .search-icon {
+.search-wrap:focus-within .search-icon {
     color: var(--blue);
 }
 
@@ -470,10 +472,12 @@ header::after {
     white-space: nowrap;
 }
 
-.filter-chip:hover {
-    border-color: var(--border-color-hover);
-    color: var(--text-primary);
-    transform: translateY(-1px);
+@media (hover: hover) {
+    .filter-chip:hover {
+        border-color: var(--border-color-hover);
+        color: var(--text-primary);
+        transform: translateY(-1px);
+    }
 }
 
 .filter-chip.active[data-filter="buff"] {
@@ -516,10 +520,12 @@ header::after {
     justify-content: center;
 }
 
-.theme-toggle-btn:hover {
-    border-color: var(--orange);
-    transform: rotate(15deg) translateY(-2px);
-    box-shadow: 0 0 12px var(--orange-glow);
+@media (hover: hover) {
+    .theme-toggle-btn:hover {
+        border-color: var(--orange);
+        transform: rotate(15deg) translateY(-2px);
+        box-shadow: 0 0 12px var(--orange-glow);
+    }
 }
 
 .theme-icon {
@@ -768,6 +774,46 @@ header::after {
     border: 1px solid rgba(249, 115, 22, 0.2);
 }
 
+.patch-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.minimize-header-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: var(--t);
+    align-items: center;
+    justify-content: center;
+}
+
+.minimize-header-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+.minimize-icon {
+    transition: transform var(--t);
+}
+
+.patch-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-height: 1000px;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease, transform 0.4s ease;
+    transform-origin: top;
+    overflow: hidden;
+}
+
 .patch-card-title {
     font-family: 'Outfit', sans-serif;
     font-size: 2.25rem;
@@ -959,28 +1005,30 @@ header::after {
     border-left: 4px solid var(--role-general-color);
 }
 
-.hero-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--border-color-hover);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-}
+@media (hover: hover) {
+    .hero-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-color-hover);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    }
 
-/* Hover Accent glows */
-#role-Tanque .hero-card:hover {
-    box-shadow: 0 10px 24px var(--role-tank-glow);
-    border-color: rgba(56, 189, 248, 0.4);
-}
-#role-Daño .hero-card:hover {
-    box-shadow: 0 10px 24px var(--role-damage-glow);
-    border-color: rgba(244, 63, 94, 0.4);
-}
-#role-Apoyo .hero-card:hover {
-    box-shadow: 0 10px 24px var(--role-support-glow);
-    border-color: rgba(234, 179, 8, 0.4);
-}
-#role-__general__ .hero-card:hover {
-    box-shadow: 0 10px 24px var(--role-general-glow);
-    border-color: rgba(167, 139, 250, 0.4);
+    /* Hover Accent glows */
+    #role-Tanque .hero-card:hover {
+        box-shadow: 0 10px 24px var(--role-tank-glow);
+        border-color: rgba(56, 189, 248, 0.4);
+    }
+    #role-Daño .hero-card:hover {
+        box-shadow: 0 10px 24px var(--role-damage-glow);
+        border-color: rgba(244, 63, 94, 0.4);
+    }
+    #role-Apoyo .hero-card:hover {
+        box-shadow: 0 10px 24px var(--role-support-glow);
+        border-color: rgba(234, 179, 8, 0.4);
+    }
+    #role-__general__ .hero-card:hover {
+        box-shadow: 0 10px 24px var(--role-general-glow);
+        border-color: rgba(167, 139, 250, 0.4);
+    }
 }
 
 /* Open Card State */
@@ -1594,7 +1642,7 @@ header::after {
         box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
         z-index: 190;
         flex-direction: column;
-        padding: 1.5rem 1.25rem;
+        padding: 1.5rem 1.25rem calc(4.5rem + env(safe-area-inset-bottom));
         gap: 1.25rem;
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-y: auto;
@@ -1666,6 +1714,7 @@ header::after {
     .search-wrap {
         width: 100%;
         max-width: none;
+        flex: none;
     }
     .patch-selector-wrap {
         width: 100%;
@@ -1724,13 +1773,11 @@ header::after {
 }
 .sidebar .patch-selector-wrap {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     gap: 0.5rem;
 }
 .sidebar #patch-select {
-    flex: 1;
-    min-width: 0;
     width: 100%;
     max-width: 100%;
 }
@@ -1764,5 +1811,42 @@ header::after {
     }
     .hero-name {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .minimize-header-btn {
+        display: flex;
+    }
+    .patch-header-card {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+    .patch-card-title {
+        font-size: 1.35rem;
+    }
+    .patch-card-desc {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .patch-stats {
+        gap: 0.75rem;
+        padding-top: 1rem;
+        margin-top: 0.75rem;
+    }
+    .patch-stat-value {
+        font-size: 1.5rem;
+    }
+    .patch-stat-label {
+        font-size: 0.65rem;
+    }
+    .patch-header-card.collapsed .patch-header-content {
+        max-height: 0;
+        opacity: 0;
+        margin-top: -1rem;
+        transform: scaleY(0);
+    }
+    .patch-header-card.collapsed .minimize-icon {
+        transform: rotate(180deg);
     }
 }

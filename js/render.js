@@ -118,7 +118,7 @@ export function renderSidebar(patchData) {
 }
 
 // Exponer la función de alternar descripción larga
-window.togglePatchDesc = function(btn) {
+window.togglePatchDesc = function (btn) {
     const span = btn.previousElementSibling;
     const isExpanded = btn.textContent === 'Ver más';
     if (isExpanded) {
@@ -127,6 +127,13 @@ window.togglePatchDesc = function(btn) {
     } else {
         span.innerHTML = span.getAttribute('data-short');
         btn.textContent = 'Ver más';
+    }
+};
+
+window.togglePatchHeader = function () {
+    const headerCard = document.getElementById('patch-header-card');
+    if (headerCard) {
+        headerCard.classList.toggle('collapsed');
     }
 };
 
@@ -143,7 +150,7 @@ export function renderPatchHeader(patchData, patchMeta) {
     const isMobile = window.innerWidth <= 768;
     const maxLength = isMobile ? 80 : 220;
     let descHtml = '';
-    
+
     if (currentIntro.length > maxLength) {
         const shortText = currentIntro.substring(0, maxLength).trim() + '...';
         const safeFull = currentIntro.replace(/"/g, '&quot;');
@@ -157,20 +164,29 @@ export function renderPatchHeader(patchData, patchMeta) {
     }
 
     dom.patchHeaderCard.innerHTML = `
-        <h1 class="patch-card-title">${patchData.title || patchMeta?.title || 'Notas de Parche'}</h1>
-        <p class="patch-card-desc">${descHtml}</p>
-        <div class="patch-stats">
-            <div class="patch-stat">
-                <span class="patch-stat-value">${heroCount}</span>
-                <span class="patch-stat-label">Héroes afectados</span>
-            </div>
-            <div class="patch-stat">
-                <span class="patch-stat-value">${changeCount}</span>
-                <span class="patch-stat-label">Cambios totales</span>
-            </div>
-            <div class="patch-stat">
-                <span class="patch-stat-value">${patchData.date ? formatDate(patchData.date) : '—'}</span>
-                <span class="patch-stat-label">Fecha de actualización de datos</span>
+        <div class="patch-header-top">
+            <h1 class="patch-card-title">${patchData.title || patchMeta?.title || 'Notas de Parche'}</h1>
+            <button class="minimize-header-btn" onclick="togglePatchHeader()" aria-label="Minimizar cabecera" title="Minimizar cabecera">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="minimize-icon">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="patch-header-content">
+            <p class="patch-card-desc">${descHtml}</p>
+            <div class="patch-stats">
+                <div class="patch-stat">
+                    <span class="patch-stat-value">${heroCount}</span>
+                    <span class="patch-stat-label">Héroes afectados</span>
+                </div>
+                <div class="patch-stat">
+                    <span class="patch-stat-value">${changeCount}</span>
+                    <span class="patch-stat-label">Cambios totales</span>
+                </div>
+                <div class="patch-stat">
+                    <span class="patch-stat-value">${patchData.date ? formatDate(patchData.date) : '—'}</span>
+                    <span class="patch-stat-label">Fecha de actualización de datos</span>
+                </div>
             </div>
         </div>
     `;
@@ -233,7 +249,7 @@ export function renderHeroCard(hero, isOpen = false) {
 }
 
 // Exponer la función global para expandir/colapsar todas las tarjetas de una sección
-window.toggleSectionCards = function(btn, shouldExpand) {
+window.toggleSectionCards = function (btn, shouldExpand) {
     const section = btn.closest('.role-section') || btn.closest('.flat-grid-section') || btn.closest('.content');
     if (!section) return;
 
@@ -286,14 +302,27 @@ window.toggleSectionCards = function(btn, shouldExpand) {
     });
 };
 
-export function renderContent(patchData) {
+export function clearContentSafely() {
+    const searchWrap = document.querySelector('.search-wrap');
+    if (searchWrap && searchWrap.parentElement === dom.content) {
+        document.body.appendChild(searchWrap);
+    }
     dom.content.innerHTML = '';
+}
+
+export function renderContent(patchData) {
+    const isMobile = window.innerWidth <= 768;
+    const wasCollapsed = dom.patchHeaderCard
+        ? dom.patchHeaderCard.classList.contains('collapsed')
+        : isMobile;
+
+    clearContentSafely();
 
     const fragment = document.createDocumentFragment();
 
     const headerCard = document.createElement('div');
     headerCard.id = 'patch-header-card';
-    headerCard.className = 'patch-header-card';
+    headerCard.className = `patch-header-card${wasCollapsed ? ' collapsed' : ''}`;
     dom.patchHeaderCard = headerCard;
     fragment.appendChild(headerCard);
 
@@ -403,6 +432,7 @@ export function renderContent(patchData) {
     }
 
     dom.content.appendChild(fragment);
+    handleMobileLayout();
 }
 
 export function createEmptySection(title, desc) {
@@ -448,6 +478,7 @@ export function renderContentNotDownloaded(patchMeta) {
         `;
     }
 
+    clearContentSafely();
     dom.content.innerHTML = `
         <div class="patch-header-card">
             <div class="patch-version-badge">
@@ -495,6 +526,7 @@ export function renderContentNotDownloaded(patchMeta) {
             if (dom.refreshBtn) dom.refreshBtn.classList.remove('spinning');
         };
     }
+    handleMobileLayout();
 }
 
 export function handleMobileLayout() {
@@ -508,16 +540,20 @@ export function handleMobileLayout() {
     if (!sidebar || !header) return;
 
     if (isMobile) {
-        // Move to sidebar in order: Patch Selector -> Search -> Section Tabs -> Role Tabs -> Filters
+        // Move to sidebar in order: Patch Selector -> Section Tabs -> Role Tabs -> Filters
         if (patchSelectorWrap && patchSelectorWrap.parentElement !== sidebar) {
             sidebar.insertBefore(patchSelectorWrap, sidebar.firstChild);
         }
-        if (searchWrap && searchWrap.parentElement !== sidebar) {
-            // Put it right after patchSelectorWrap
-            if (patchSelectorWrap && patchSelectorWrap.nextSibling) {
-                sidebar.insertBefore(searchWrap, patchSelectorWrap.nextSibling);
-            } else {
-                sidebar.appendChild(searchWrap);
+        // Move search to main content container, below the header card
+        if (searchWrap) {
+            const content = dom.content;
+            const headerCard = document.getElementById('patch-header-card');
+            if (content && searchWrap.parentElement !== content) {
+                if (headerCard && headerCard.parentElement === content) {
+                    content.insertBefore(searchWrap, headerCard.nextSibling);
+                } else {
+                    content.insertBefore(searchWrap, content.firstChild);
+                }
             }
         }
         if (filterWrap && filterWrap.parentElement !== sidebar) {
