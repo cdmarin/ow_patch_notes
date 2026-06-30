@@ -23,7 +23,7 @@ export function countByType(heroes, type) {
 }
 
 export function getAllHeroes(patchData) {
-    if (!patchData || !patchData.sections) return [];
+    if (!patchData || !patchData.sections) return 0;
     const heroes = new Set();
     const addFromSection = (section) => {
         if (!section || !section.roles) return;
@@ -31,8 +31,9 @@ export function getAllHeroes(patchData) {
             if (Array.isArray(roleHeroes)) roleHeroes.forEach(h => heroes.add(h.name));
         });
     };
-    addFromSection(patchData.sections.stadium);
-    addFromSection(patchData.sections.gameBase);
+    Object.values(patchData.sections).forEach(section => {
+        addFromSection(section);
+    });
     return heroes.size;
 }
 
@@ -50,8 +51,9 @@ export function countAllChanges(patchData) {
             section.generalItems.forEach(item => count += (item.changes || []).length);
         }
     };
-    countSection(patchData.sections.stadium);
-    countSection(patchData.sections.gameBase);
+    Object.values(patchData.sections).forEach(section => {
+        countSection(section);
+    });
     return count;
 }
 
