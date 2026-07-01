@@ -87,6 +87,8 @@ export function renderSidebar(patchData) {
 
         ROLES.forEach(role => {
             const heroes = sectionData?.roles?.[role] || [];
+            if (heroes.length === 0) return;
+
             const btn = document.createElement('button');
             btn.className = `role-btn ${state.currentRole === role ? 'active' : ''}`;
             btn.dataset.role = role;
@@ -338,33 +340,29 @@ export function renderContent(patchData) {
     if (currentSecConfig?.hasRoles) {
         ROLES.forEach(role => {
             const heroes = section.roles?.[role] || [];
+            if (heroes.length === 0) return;
 
             const roleSection = document.createElement('div');
             roleSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === role ? 'active' : ''}`;
             roleSection.id = `role-${role}`;
 
-            if (heroes.length === 0) {
-                roleSection.innerHTML = `<h2 class="role-section-title">${role}</h2>`;
-                roleSection.appendChild(createEmptySection('Sin cambios', `No hay cambios de ${role} en este parche.`));
-            } else {
-                roleSection.innerHTML = `
-                    <h2 class="role-section-title">
-                        <span>${role}</span>
-                        <div class="section-actions">
-                            <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
-                            <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
-                        </div>
-                    </h2>
-                `;
-                heroes.forEach(hero => {
-                    const el = document.createElement('div');
-                    el.innerHTML = renderHeroCard(hero);
-                    const card = el.firstElementChild;
-                    card.dataset.hero = hero.name.toLowerCase();
-                    card.dataset.types = (hero.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
-                    roleSection.appendChild(card);
-                });
-            }
+            roleSection.innerHTML = `
+                <h2 class="role-section-title">
+                    <span>${role}</span>
+                    <div class="section-actions">
+                        <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
+                        <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
+                    </div>
+                </h2>
+            `;
+            heroes.forEach(hero => {
+                const el = document.createElement('div');
+                el.innerHTML = renderHeroCard(hero);
+                const card = el.firstElementChild;
+                card.dataset.hero = hero.name.toLowerCase();
+                card.dataset.types = (hero.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
+                roleSection.appendChild(card);
+            });
 
             fragment.appendChild(roleSection);
         });

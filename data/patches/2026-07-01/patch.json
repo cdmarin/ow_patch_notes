@@ -1,0 +1,68 @@
+{
+  "version": "unknown",
+  "date": "2026-07-01",
+  "title": "1 de Julio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "\"Streamer Luck\" (Win with different heroes in Community Crafted) challenge requirement reduced from 20 to 3.\n\"Chat, Are We Cooked?\" meta challenge challenges completed requirement reduced from 14 to 13.\n\"Clickbait Mitigation\" damage mitigation requirement reduced from 15,000 to 5,000.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Community Crafted Event",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Community Crafted Event",
+              "type": "nerf",
+              "details": [
+                "\"Streamer Luck\" (Win with different heroes in Community Crafted) challenge requirement reduced from 20 to 3.",
+                "\"Chat, Are We Cooked?\" meta challenge challenges completed requirement reduced from 14 to 13.",
+                "\"Clickbait Mitigation\" damage mitigation requirement reduced from 15,000 to 5,000."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización de revisión. Los códigos de repetición del parche del 30 de junio todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una actualización de revisión. Los códigos de repetición del parche del 30 de junio todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una actualización de revisión. Los códigos de repetición del parche del 30 de junio todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
