@@ -1,0 +1,68 @@
+{
+  "version": "unknown",
+  "date": "2026-07-02",
+  "title": "2 de Julio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización hotifx. Los códigos de repetición del parche del 30 de junio todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [
+          {
+            "name": "Shion",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Ejecución",
+                "type": "adjust",
+                "details": [
+                  "Se solucionó un problema que impedía que Shion usara Ejecución durante la recarga."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbd96d63564e1d99cfa5593f86796c9e5ab360214eb0e50c18d6a9503093c7c5.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una actualización hotifx. Los códigos de repetición del parche del 30 de junio todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una actualización hotifx. Los códigos de repetición del parche del 30 de junio todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
