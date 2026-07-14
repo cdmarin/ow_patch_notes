@@ -1,6 +1,17 @@
 {
   "patches": [
     {
+      "id": "2026-07-14",
+      "version": "unknown",
+      "date": "2026-07-14",
+      "title": "14 de Julio 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-07-14/patch.json",
+      "isLatest": true
+    },
+    {
       "id": "2026-07-02",
       "version": "unknown",
       "date": "2026-07-02",
@@ -9,7 +20,7 @@
       "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-07-02/patch.json",
-      "isLatest": true
+      "isLatest": false
     },
     {
       "id": "2026-07-01",

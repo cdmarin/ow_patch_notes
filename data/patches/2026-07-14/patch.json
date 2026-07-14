@@ -1,0 +1,678 @@
+{
+  "version": "unknown",
+  "date": "2026-07-14",
+  "title": "14 de Julio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "Se agregó una opción infinita de Joyride para Shion en Configuración > Héroes > Shion.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Junker Queen",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "Balas reales - Poder",
+                "type": "nerf",
+                "details": [
+                  "Daño reducido a 20 (en lugar de 25)."
+                ]
+              },
+              {
+                "title": "Inclinarse - Poder",
+                "type": "nerf",
+                "details": [
+                  "La duración se redujo a 1,5 s (en lugar de 2 s)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Cassidy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Grito de pistolero - Poder",
+                "type": "buff",
+                "details": [
+                  "La curación de vida máxima por bala recargada aumentó a 2,5% (antes era 2%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Grasa Zip - Potencia",
+                "type": "buff",
+                "details": [
+                  "El daño aumentado a objetivos en el aire aumentó al 25% (en lugar del 10%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mei",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dc5525ecbba3b254188f126ba0dd07571dee201d4ddc2f068c3e2f6907668cca.png",
+            "changes": [
+              {
+                "title": "Bola lenta - Poder",
+                "type": "adjust",
+                "details": [
+                  "Se eliminó el aumento del tamaño del hitbox en el proyectil Slowball."
+                ]
+              },
+              {
+                "title": "Armadura de Escarcha - Poder",
+                "type": "nerf",
+                "details": [
+                  "El daño convertido en armadura se redujo al 3% (en lugar del 5%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Cosecha acelerada - Poder",
+                "type": "buff",
+                "details": [
+                  "La velocidad de ataque por acumulación aumentó al 5% (en lugar del 4%)."
+                ]
+              },
+              {
+                "title": "Draft intrépido: artículo de héroe de supervivencia épico",
+                "type": "nerf",
+                "details": [
+                  "La duración de la forma de espectro se redujo al 33 % (en lugar del 50 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "Lanzamiento de martillo - Potencia",
+                "type": "buff",
+                "details": [
+                  "Se agregó un rastro VFX para mayor claridad."
+                ]
+              },
+              {
+                "title": "Herrero - Poder",
+                "type": "buff",
+                "details": [
+                  "La curación aumentó al 100 % del daño del martillo (en lugar del 75 %)."
+                ]
+              },
+              {
+                "title": "Ven a buscar tu armadura - Poder",
+                "type": "nerf",
+                "details": [
+                  "La escala de armadura se redujo al 15 % de tu vida máxima (en lugar del 20 %)."
+                ]
+              },
+              {
+                "title": "Pernos de anclaje: objeto de héroe de habilidad épica",
+                "type": "nerf",
+                "details": [
+                  "Poder de habilidad reducido al 10% (en lugar del 15%)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Juno",
+            "desc": "Este cambio debería reducir el límite de Blink Boost cuando se combina con muchos otros elementos de reducción de tiempo de reutilización. Continuaremos monitoreando la sinergia de Blink Boost con los elementos On Ability.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
+            "changes": [
+              {
+                "title": "Aumentos de parpadeo: potencia",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización reducido ahora cuenta como un tiempo de reutilización base reducido en lugar de obtener una reducción del tiempo de reutilización. Ahora escala multiplicativamente con reducción de tiempo de reutilización en lugar de aditivamente."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Conjuración de clones - Poder",
+                "type": "adjust",
+                "details": [
+                  "La efectividad del clon aumentó a un 65 % reducida (en lugar de un 75 % reducido)."
+                ]
+              },
+              {
+                "title": "Keen Kunai - Poder",
+                "type": "nerf",
+                "details": [
+                  "La reducción del tiempo de reutilización por golpe crítico aumentó al 20 % (en lugar del 15 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "Ritmo Rail - Potencia",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó al 100% (en lugar del 75%)."
+                ]
+              },
+              {
+                "title": "Deleita al público - Poder",
+                "type": "buff",
+                "details": [
+                  "La curación aumentó al 40 % del daño de las ondas sonoras (en lugar del 33 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "Distorsión - Potencia",
+                "type": "nerf",
+                "details": [
+                  "La sobresalud máxima de vida se redujo al 25 % (en lugar del 30 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "El dinero por daño y curación aumentó un 8,33%.",
+                "type": "buff",
+                "details": [
+                  "El dinero por daño y curación aumentó un 8,33%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Iluminación - Poder",
+                "type": "nerf",
+                "details": [
+                  "La curación se redujo al 30 % del daño infligido (en lugar del 40 %)."
+                ]
+              },
+              {
+                "title": "Paz Interior - Poder",
+                "type": "nerf",
+                "details": [
+                  "La curación se redujo al 80 % (en lugar del 75 % reducido)."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "General Changes",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Cambios generales",
+              "type": "buff",
+              "details": [
+                "La velocidad de captura de choque ahora aumentó hasta un 300 % a medida que pasa el tiempo (antes era 200 %).",
+                "La velocidad a la que aumenta la velocidad de captura de Clash aumentó al 2% cada 1 segundo (en lugar del 1%)."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Item Changes",
+          "desc": "Artillería Volskaya: objeto general de arma épica",
+          "changes": [
+            {
+              "title": "Artillería Volskaya: objeto general de arma épica",
+              "type": "buff",
+              "details": [
+                "El daño adicional por cada 100 de vida adicional en el objetivo aumentó al 6 % (en lugar del 5 %)."
+              ]
+            },
+            {
+              "title": "Maximizador de gadgets: elemento general de habilidad épica",
+              "type": "nerf",
+              "details": [
+                "La reducción del tiempo de reutilización del dispositivo aumentó al 35 % (en lugar del 25 %)."
+              ]
+            },
+            {
+              "title": "Three Tap Tommygun - Objeto general de habilidad épica",
+              "type": "adjust",
+              "details": [
+                "Se agregó un tiempo de reutilización interno de 0,5 s para aplicaciones posteriores.",
+                "Daño reducido al 3% de la vida actual del objetivo (en lugar del 5%).",
+                "La duración del daño se redujo a 3 s (en lugar de 5 s)."
+              ]
+            },
+            {
+              "title": "Vial Vortex - Gadget",
+              "type": "buff",
+              "details": [
+                "Costo reducido a 9000 (antes 9500).",
+                "El tiempo de reutilización se redujo a 15 s (en lugar de 25 s)."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Custom Game Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Actualizaciones de juegos personalizados",
+              "type": "buff",
+              "details": [
+                "Se agregó una opción infinita de Joyride para Shion en Configuración > Héroes > Shion."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Doomfist",
+            "desc": "El tamaño de seguimiento aumentado del Puño Cohete Potenciado golpeaba objetivos muy alejados del objetivo inicial. Estamos reduciendo el tamaño de la bonificación y al mismo tiempo mantenemos algo de alcance y radio adicionales para preservar su fantasía de poder.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "Golpe de cohete",
+                "type": "nerf",
+                "details": [
+                  "La ganancia de alcance colateral de Puño potenciado se redujo del 75 % al 40 %.",
+                  "La ganancia de radio colateral de Puño potenciado se redujo del 50% al 40%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/79fa2ac1beeaaecc23735e2bc41068a99838c76ff626a12ac07fcdc5efd70bd9.png"
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "Commanding Shout es la principal fuente de supervivencia y protección del equipo de Junker Queen. Su tiempo de reutilización comienza después de que expira el efecto, lo que resulta en un tiempo más largo entre usos. Estamos reduciendo el tiempo de reutilización para aumentar su disponibilidad durante los enfrentamientos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "Grito de mando",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 12 a 10 segundos. (5v5)",
+                  "El tiempo de reutilización se redujo de 15 a 13 segundos. (6v6)"
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ef3c2fb9bdb4c913d2b048ef4363fce335553c8f4ee74524f2af86af961ba648.png"
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "Mauga podía mantener una alta precisión al disparar un solo Chaingun durante períodos prolongados. Agregar propagación dinámica a Chainguns individuales fomenta el cambio entre armas para gestionar la propagación. Este cambio no afecta la precisión al disparar ambas armas simultáneamente.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Metralletas",
+                "type": "nerf",
+                "details": [
+                  "La dispersión máxima al disparar Chainguns individuales aumentó de 1 a 1,5.",
+                  "El número de disparos hasta la dispersión máxima aumentó de 0 a 30 disparos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/394d59489428fba7664bdf61e3bec0798b12c2957f2a733fb54a213848db4282.png"
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "Aumentar el daño de explosión de Ravenous Vortex recompensa detonaciones más precisas. También estamos reduciendo el tiempo de reutilización de Bloquear para permitir que Ramattra bloquee inmediatamente después de un solo golpe en lugar de dos, mejorando el flujo de Forma Némesis.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Vórtice voraz",
+                "type": "buff",
+                "details": [
+                  "El daño de explosión aumentó de 15 a 30."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/80e96eddbc10af5e1b08c7392f4f61aabc0e5408e31e72961595a936ccceabcc.png"
+              },
+              {
+                "title": "Bloque (forma Némesis)",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 1 a 0,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4cb568671658d74807d20bd5fa6e1b790b9bb21b1f2111ccda30b48e8f49d7b3.png"
+              }
+            ]
+          },
+          {
+            "name": "Sigma",
+            "desc": "Sigma sigue siendo duradero cuando rota con éxito a través de sus herramientas defensivas. Reducir la salud de su escudo reduce su capacidad de supervivencia cuando los oponentes pueden atravesar sus defensas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/416f312608ac1d9f34509883daa0fa9486b15ceb112e4440b4c412e125390517.png",
+            "changes": [
+              {
+                "title": "La salud del escudo se redujo de 275 a 250.",
+                "type": "nerf",
+                "details": [
+                  "La salud del escudo se redujo de 275 a 250."
+                ]
+              },
+              {
+                "title": "Hiperregeneración – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "La conversión de daño se redujo del 40% al 30%."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Cassidy",
+            "desc": "El tamaño adicional del proyectil de Silver Bullet mejoró la efectividad del beneficio al hacer que el disparo potenciado fuera significativamente más fácil de realizar. Eliminaremos esa bonificación y conservaremos su daño potencial.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Bala de Plata – Beneficio importante",
+                "type": "nerf",
+                "details": [
+                  "El tamaño del proyectil se redujo de 0,17 a 0,07."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Freja",
+            "desc": "Reducir el retraso de la explosión de Take Aim reduce el tiempo entre el impacto y el daño, lo que crea oportunidades de seguimiento más consistentes y, al mismo tiempo, reduce el potencial disruptivo del rayo cuando lo golpea. Los otros cambios tienen como objetivo mejorar el flujo entre el disparo principal de Take Aim y Revdraw Crossbow.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
+            "changes": [
+              {
+                "title": "Ballesta Revdraw",
+                "type": "buff",
+                "details": [
+                  "La cadencia de fuego aumentó de 5 a 5,5."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6a0087882feb24e09ab4827fbadb87f34ef570a1dad65373e2c8ee9e3808e77.png"
+              },
+              {
+                "title": "apuntar",
+                "type": "buff",
+                "details": [
+                  "La recuperación se redujo de 0,5 a 0,4.",
+                  "El retraso de la explosión se redujo de 1 a 0,8 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a86fa2849d7ab515d256e390e75387e4ae306f5d64c5cf24a1ba33038da91e45.png"
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "La reducida reserva de salud de Reaper ha limitado su capacidad de mantenerse en combates prolongados. Aumentar la efectividad de su pasiva restaura parte de esa durabilidad y al mismo tiempo recompensa el juego agresivo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "Saqueo de almas – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "El radio de recogida de Soul Globes aumentó de 5 a 8 metros."
+                ]
+              },
+              {
+                "title": "La cosecha",
+                "type": "buff",
+                "details": [
+                  "El robo de vida aumentó del 25% al ​​30%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6efc2a1bddf6bdafd95d6bf650bea70fe83d45000c400a1eaa6a86b042ef0a5.png"
+              }
+            ]
+          },
+          {
+            "name": "Shion",
+            "desc": "Reducir el tiempo de recuperación de Ejecución alinea mejor el tiempo de inactividad después de usar la habilidad con el momento en que Shion puede disparar nuevamente. El daño por impacto de Joyride también se está reduciendo para reducir la efectividad de embestir objetivos continuamente y el potencial combinado de detonar inmediatamente la bicicleta después del impacto.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Ejecución",
+                "type": "buff",
+                "details": [
+                  "El tiempo de recuperación se redujo de 0,4 a 0,3 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbd96d63564e1d99cfa5593f86796c9e5ab360214eb0e50c18d6a9503093c7c5.png"
+              },
+              {
+                "title": "Excursión en coche",
+                "type": "nerf",
+                "details": [
+                  "El daño por impacto mientras se conduce se redujo de 60 a 30."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a0279c43c165fe4f240c61baa6b7a721e73b84d7f940809e2a1897d94b2302ef.png"
+              }
+            ]
+          },
+          {
+            "name": "Sierra",
+            "desc": "Anchor Drone se está ajustando para admitir oportunidades de implementación y reposicionamiento más frecuentes. Su tiempo de reutilización y duración se están reduciendo, mientras que se aumenta su salud para mejorar su capacidad de supervivencia en combate.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
+            "changes": [
+              {
+                "title": "Dron ancla",
+                "type": "adjust",
+                "details": [
+                  "El tiempo de reutilización se redujo de 12 a 11 segundos.",
+                  "Duración reducida de 10 a 9 segundos.",
+                  "La salud aumentó de 80 a 125."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f9e6fff99bff3c24a9ea9e57ae7c71b067982e6df9b0acb50529fe58131b6e7b.png"
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Vendetta ha seguido teniendo un rendimiento inferior desde los cambios significativos realizados hace varias temporadas. Revertir el rango de movimiento por encima de la cabeza de Palatine Fang restaura parte de su capacidad para acortar la distancia y asegurar eliminaciones.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Colmillo palatino",
+                "type": "buff",
+                "details": [
+                  "El alcance adicional del giro por encima de la cabeza aumentó de 2,0 a 2,5 metros."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9754a770516c07712b3cbababb825972eec78c08b3fbc141dbcee31d9c58c137.png"
+              }
+            ]
+          },
+          {
+            "name": "Venture",
+            "desc": "El tiempo de reutilización de Clobber se está reduciendo para acortar el retraso antes de que Venture pueda usar la habilidad nuevamente y alinearla mejor con su tiempo de recuperación. Esto aumenta la frecuencia con la que Clobber se puede utilizar en los enfrentamientos y mejora su sinergia con la ventaja principal Cubierto de suciedad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7cab11e20f958ed3d369989e0ac96703fd2cda8c7abf237f75e12bf3549b066e.png",
+            "changes": [
+              {
+                "title": "Clobber (cuerpo a cuerpo rápido)",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización/recuperación se redujo de 1,6 a 1,2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8e2f8c4b09eba3ef9d37f5d27b5996f5846e6a7555ec73a1f915267278efefb8.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "El autosustento de Ana ha disminuido luego de la eliminación del retraso reducido en la regeneración de salud de la pasiva de Apoyo. Aumentar la curación de Biotic Grenade fortalece su utilidad defensiva y al mismo tiempo aumenta su impacto ofensivo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Granada biótica",
+                "type": "buff",
+                "details": [
+                  "El daño de explosión y la curación aumentaron de 75 a 90."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/886454bdb7df9ad8a47c4a3a8fa5dd488f5b2996e311f16d42a5f022942c4d18.png"
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "Agregar una ráfaga de curación instantánea cuando se activa Inspire le permite a Brigitte brindar una curación más inmediata mientras recompensa a los jugadores por activaciones consistentes de Inspire.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "Inspirar",
+                "type": "adjust",
+                "details": [
+                  "Ahora otorga 12 de curación instantánea al activarse.",
+                  "La curación con el tiempo se redujo de 60 a 45."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2d239f8ca1265f4c5f7be415edc5568481ca347e70a6e2dbf5790551fe63ea9b.png"
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "El tiempo de recuperación reducido en Healing Ofuda mejoró la sensación y la consistencia de la curación de Kiriko. Sin embargo, su capacidad de curación general se ha vuelto demasiado alta, por lo que reduciremos la curación base y al mismo tiempo conservaremos la capacidad de respuesta mejorada.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Ofuda curativa",
+                "type": "nerf",
+                "details": [
+                  "La curación por proyectil se redujo de 13 a 12."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4ebf8c956da05591160da7416299bb3b641a268fbf334debf7892b8c7b3c326d.png"
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "La efectividad general de Lúcio se ha reducido con el tiempo para dar cuenta de su utilidad de velocidad excepcionalmente poderosa. Aumentar el daño de su arma fortalece sus capacidades ofensivas sin aumentar la fuerza de su utilidad.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "Amplificador sónico",
+                "type": "buff",
+                "details": [
+                  "El daño por proyectil aumentó de 20 a 22."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5dc58c552d2b8ee4018f166b7a1c7eeda839c631fa09fb3bfac3e413e2a6e47d.png"
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Summer Games 2026",
+          "desc": "¡Los Juegos de Verano 2026 están EN VIVO y traen tus peleas playeras favoritas de regreso a la sala de juegos! Entra en Lucioball, mejora las cosas con Lucioball Remix o diviértete en Winston's Beach Volleyball mientras completas desafíos para ganar un botín de verano. ¡Toma el sol y consigue una brillante victoria en los Juegos de Verano 2026, del 14 al 30 de julio!",
+          "changes": [
+            {
+              "title": "Juegos de Verano 2026",
+              "type": "adjust",
+              "details": [
+                "¡Los Juegos de Verano 2026 están EN VIVO y traen tus peleas playeras favoritas de regreso a la sala de juegos! Entra en Lucioball, mejora las cosas con Lucioball Remix o diviértete en Winston's Beach Volleyball mientras completas desafíos para ganar un botín de verano. ¡Toma el sol y consigue una brillante victoria en los Juegos de Verano 2026, del 14 al 30 de julio!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Junkrat's Loot Hunt",
+          "desc": "¡Junkrat's Loot Hunt regresa del 31 de julio al 3 de agosto para un fin de semana lleno de recompensas! Cada partida que juegas te acerca a las cajas de botín, con desafíos flexibles que te permiten ir con todo o controlar tu propio ritmo. Además, el progreso no se reiniciará, no hay presión diaria ni tonterías... ¡solo explosiones y montones de botín para desempaquetar!",
+          "changes": [
+            {
+              "title": "La búsqueda del botín de Junkrat",
+              "type": "adjust",
+              "details": [
+                "¡Junkrat's Loot Hunt regresa del 31 de julio al 3 de agosto para un fin de semana lleno de recompensas! Cada partida que juegas te acerca a las cajas de botín, con desafíos flexibles que te permiten ir con todo o controlar tu propio ritmo. Además, el progreso no se reiniciará, no hay presión diaria ni tonterías... ¡solo explosiones y montones de botín para desempaquetar!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Excavation Initiative",
+          "desc": "La Iniciativa de Excavación continúa y te recompensa por hacer lo que ya estarías haciendo: jugar Overwatch. Durante el resto de la temporada, ganarás cajas de botín simplemente iniciando sesión, completando desafíos, ganando juegos y manteniéndote activo semana tras semana. Cuanto más juegues, más oportunidades tendrás de descubrir cajas de botín básicas, épicas y legendarias repletas de recompensas.",
+          "changes": [
+            {
+              "title": "Iniciativa de excavación",
+              "type": "adjust",
+              "details": [
+                "La Iniciativa de Excavación continúa y te recompensa por hacer lo que ya estarías haciendo: jugar Overwatch. Durante el resto de la temporada, ganarás cajas de botín simplemente iniciando sesión, completando desafíos, ganando juegos y manteniéndote activo semana tras semana. Cuanto más juegues, más oportunidades tendrás de descubrir cajas de botín básicas, épicas y legendarias repletas de recompensas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema que causaba que los desafíos de héroe de Shion no estuvieran ordenados alfabéticamente.",
+      "Se solucionó un problema con Mauga por el cual la extensión de su retícula podía volverse inexacta al cambiar entre sus armas.",
+      "Se solucionó un problema por el cual el dron Trailblazer de Sierra podía ser interrumpido por habilidades de aturdimiento.",
+      "Se corrigieron varios errores de texto en el Panel de información avanzada.",
+      "Se solucionó un problema por el cual la máscara de sabueso de Junker Queen no otorgaba correctamente poder de arma adicional por heridas.",
+      "Se solucionó un problema por el cual la Fisura amistosa de Doomfist causaba que Meteor Strike causara daño total sin importar la distancia.",
+      "Se solucionó un problema por el cual Gunslinger Grit de Cassidy se activaba antes de que se completara la recarga.",
+      "Se solucionó un problema por el cual curar críticamente a un aliado después de infligir daño de habilidad con Cybervenom aplicaba reducción de curación a los aliados.",
+      "Se solucionó un problema por el cual el Hip Hop de Lucio no funcionaba correctamente con la opción Wall Jump on Release desactivada.",
+      "Se solucionó un problema por el cual Mei's Frosting no otorgaba correctamente la Carga máxima.",
+      "Se solucionó un problema por el cual la barrera de Ramattra no escalaba con el poder de habilidad.",
+      "Se solucionó un problema por el cual la bola lenta de Mei aparecía visualmente como si siempre fuera el proyectil potenciado si el poder se vendía mientras el beneficio estaba activo.",
+      "Se solucionó un problema por el cual la Hoja en el viento de Kiriko a veces apuntaba a enemigos.",
+      "En una actualización anterior, se solucionó un problema por el cual el rayo espectral de Moira tenía un valor de efectividad incorrecto."
+    ]
+  },
+  "translated": true
+}
