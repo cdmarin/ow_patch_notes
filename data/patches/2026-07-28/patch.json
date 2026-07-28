@@ -1,0 +1,85 @@
+{
+  "version": "unknown",
+  "date": "2026-07-28",
+  "title": "28 de Julio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "Se corrigió un error con Three Tap Tommy Gun en D.Va.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Stadium",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Estadio",
+              "type": "adjust",
+              "details": [
+                "Se corrigió un error con Three Tap Tommy Gun en D.Va."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": [
+          {
+            "name": "Lifeweaver",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "Flor curativa",
+                "type": "adjust",
+                "details": [
+                  "Se corrigió un error por el cual Healing Blossom se liberaba inesperadamente al cambiar de arma."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd2fde345ddbf726922a007add13188566a2810aee2fe14773c5dedf2778d34f.png"
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "Se solucionó un problema por el cual Mercy obtenía una mayor autocuración del Subrole Médico.",
+                "type": "buff",
+                "details": [
+                  "Se solucionó un problema por el cual Mercy obtenía una mayor autocuración del Subrole Médico."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "En una actualización anterior, se agregó una nueva pestaña a la página de Información competitiva que explica las mecánicas y reglas de Hero Bans.",
+      "Se corrigió un error por el cual los desafíos de eventos completados previamente a veces aparecían en el menú de desafíos."
+    ]
+  },
+  "translated": true
+}
