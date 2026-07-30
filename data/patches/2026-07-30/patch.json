@@ -1,0 +1,191 @@
+{
+  "version": "unknown",
+  "date": "2026-07-30",
+  "title": "30 de Julio 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Matón",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Domina",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
+            "changes": [
+              {
+                "title": "Matriz de barrera",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización de la barrera se redujo de 17 a 15 segundos.",
+                  "Duración de la barrera reducida de 8 a 7 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/909e0bb235934d7961a51fe41f90fadafaee33784b8199f62c92f3dd946da76f.png"
+              }
+            ]
+          },
+          {
+            "name": "Doomfist",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "La mejor defensa",
+                "type": "buff",
+                "details": [
+                  "La ganancia de escudo aumentó de 25 a 30."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e93462033f27c94365dcdc4ced958791f8164d8e4f9a61b3af34418f8e29001.png"
+              }
+            ]
+          },
+          {
+            "name": "Hazard",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "Pared irregular",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 15 a 13 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8c82b489f5d8756f98a6671e445d394e93ee5658135c9a54122d079d5d59995b.png"
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Invadir",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 7 a 6 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/10f358f93cd59c2f2b31278cd09bfc7a986c7af6e9a15cdf96db16375b596cee.png"
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Barrera del vacío",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 16 a 13 segundos.",
+                  "Duración reducida de 4 a 3 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/94d29f925b938d4898f440d06d8543e49c772e09cb89ef9812826fb2be54f9c7.png"
+              }
+            ]
+          }
+        ],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Limited-Time Mode Specific Updates",
+          "desc": "Las siguientes notas del parche se aplican solo a un modo de juego específico por tiempo limitado. Los cambios documentados no se aplican a las colas preexistentes, a menos que se indique lo contrario.",
+          "changes": [
+            {
+              "title": "Actualizaciones específicas del modo por tiempo limitado",
+              "type": "adjust",
+              "details": [
+                "Las siguientes notas del parche se aplican solo a un modo de juego específico por tiempo limitado. Los cambios documentados no se aplican a las colas preexistentes, a menos que se indique lo contrario."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "General Changes",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Cambios generales",
+              "type": "nerf",
+              "details": [
+                "Reducción de curación en combate reducida del 30 % al 15 % para todos los héroes."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tank Role Passive",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Rol de tanque pasivo",
+              "type": "buff",
+              "details": [
+                "La reducción de la carga máxima al dañar o curar objetivos de tanques aumentó del 20% al 40%."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Subrole Passives",
+          "desc": "Matón",
+          "changes": [
+            {
+              "title": "Matón",
+              "type": "nerf",
+              "details": [
+                "La mejora de velocidad de movimiento se redujo del 20 % al 15 %."
+              ]
+            },
+            {
+              "title": "Iniciador",
+              "type": "buff",
+              "details": [
+                "Curación reducida de 50 a 40.",
+                "El tiempo de reutilización se redujo de 5 a 4 segundos."
+              ]
+            },
+            {
+              "title": "Flanqueador",
+              "type": "nerf",
+              "details": [
+                "La salud adicional de los paquetes de salud se redujo de 75 a 50."
+              ]
+            },
+            {
+              "title": "Médico",
+              "type": "nerf",
+              "details": [
+                "La conversión de curación se redujo del 40 % al 30 %."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
