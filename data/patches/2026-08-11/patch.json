@@ -1,0 +1,1141 @@
+{
+  "version": "unknown",
+  "date": "2026-08-11",
+  "title": "11 de Agosto 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Va",
+            "desc": "Estos cambios tienen como objetivo agregar más variedad de configuraciones a los poderes de D.Va, haciendo que algunas de sus configuraciones más débiles sean más transformadoras y emocionantes, al tiempo que reducen algunas de sus opciones genéricamente más poderosas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "Facetanking - Poder",
+                "type": "rework",
+                "details": [
+                  "Se modificó de \"[Defense Matrix] te cura el 30 % del daño que bloquea\" a \"Cuando mitigas 150 de daño con [Defense Matrix], te curas a ti mismo el 15 % de ese daño y a todos los demás aliados dentro de 6 m el 25 % de ese daño\"."
+                ]
+              },
+              {
+                "title": "Fusión enfocada - Poder",
+                "type": "buff",
+                "details": [
+                  "Se agregó \"al infligir daño con arma a enemigos más allá de 8 m, [Matriz de defensa] se recupera un 33% más rápido\"."
+                ]
+              },
+              {
+                "title": "Ráfaga de encendido - Potencia",
+                "type": "nerf",
+                "details": [
+                  "Daño reducido a 40 (en lugar de 60).",
+                  "Duración reducida a 2 s (en lugar de 3 s)."
+                ]
+              },
+              {
+                "title": "Escudo de evacuación MEKA - Energía",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "\"+50% del radio de [Call Mech]. Al expulsar o volver a ingresar a tu [Mech], otorga sobresalud equivalente al 20% de la vida máxima durante 5 s\"."
+                ]
+              },
+              {
+                "title": "Eyector MEKA - Potencia",
+                "type": "rework",
+                "details": [
+                  "Reelaborado de Detonación Rápida.",
+                  "Se cambió de \"+50 % de radio de [Call Mech]. [Autodestrucción] explota un 15 % más rápido\" a \"[Autodestrucción] explota un 25 % más rápido y cuesta un 50 % menos de carga definitiva, pero inflige un 75 % menos de daño y solo otorga un 75 % de carga definitiva después de la detonación\"."
+                ]
+              },
+              {
+                "title": "Aumento de estadísticas: poder",
+                "type": "adjust",
+                "details": [
+                  "Se cambió de \"Durante los primeros 2 segundos de [Impulsores], [Matriz de defensa] se recupera un 125 % más rápido\" a \"El daño de [Impulsores] otorga 0,5 s de duración [Impulsor] y restaura el 5 % de los recursos de [Matriz de defensa] y cura un 5 % de vida máxima\"."
+                ]
+              },
+              {
+                "title": "Tokki Slam - Poder",
+                "type": "nerf",
+                "details": [
+                  "Ahora escala desde Max Life en lugar de Max Shields y Armor.",
+                  "Escala reducida al 15% (en lugar del 25%).",
+                  "Ahora cuenta como daño [potenciadores]."
+                ]
+              },
+              {
+                "title": "Nano Cola™ Nitroso: objeto de héroe con arma poco común",
+                "type": "adjust",
+                "details": [
+                  "25 Salud.",
+                  "5% de poder de arma.",
+                  "\"Mientras estás expulsado de tu [Mech], obtienes un 20 % de velocidad de movimiento, un 10 % de velocidad de ataque y un 50 % de munición máxima\".",
+                  "Costo 5000."
+                ]
+              },
+              {
+                "title": "Empoderamiento de Matrix: objeto de héroe con arma épica",
+                "type": "buff",
+                "details": [
+                  "Nuevo",
+                  "10% de velocidad de ataque",
+                  "\"Cuando mitigas 150 de daño con [Defense Matrix], infliges un 20% más de daño con arma durante 3 s\"."
+                ]
+              },
+              {
+                "title": "Protocolo del Vesubio: objeto de héroe de habilidad poco común",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Detonador de D.Mon: objeto de héroe de habilidad épica",
+                "type": "rework",
+                "details": [
+                  "Reelaborado del Detonador de Dae-Hyun.",
+                  "Se cambió de \"Si tu [Mech] detona mientras está en el aire, aumenta el daño y el alcance de la explosión de [Autodestrucción] en un 100 %\" a \"Durante la [Autodestrucción], si tu [Mech] detona mientras está en el aire o causa daño [de refuerzo], [Autodestrucción] explota un 100 % más grande y hace que los enemigos reciban un 50 % más de daño durante 5 s\"."
+                ]
+              },
+              {
+                "title": "Robo-Bowling: objeto de héroe de habilidad épica",
+                "type": "buff",
+                "details": [
+                  "Nuevo",
+                  "25 Armadura.",
+                  "15% de poder de habilidad.",
+                  "Durante la [Autodestrucción], los [Impulsores] se mueven un 50 % más rápido, infligen un 300 % de daño adicional y derriban a los enemigos."
+                ]
+              },
+              {
+                "title": "Especificaciones individuales: objeto raro de héroe de supervivencia",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Traje MEKA Exo: artículo de héroe de supervivencia épico",
+                "type": "rework",
+                "details": [
+                  "Reelaborado de Busan Blaster.",
+                  "Se cambió de \"Habilidad: usa [Fuego secundario] mientras estás desmechado para disparar un tiro explosivo y penetrante que causa 80 de daño\" a \"Mientras estás expulsado de tu [Mech], mantén presionado [Saltar] para volar y mantén presionado [Fuego secundario] para disparar un tiro explosivo que causa hasta 80 de daño y ralentiza a los enemigos en un 30 % durante 3 s\"."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "Cargador crítico: energía",
+                "type": "buff",
+                "details": [
+                  "El daño crítico aumentó al 100% (en lugar del 75%)."
+                ]
+              },
+              {
+                "title": "Escalera Mecánica OR-15 - Energía",
+                "type": "rework",
+                "details": [
+                  "Reelaborado al poder.",
+                  "Ahora aumenta el daño del arma en lugar de otorgar poder del arma.",
+                  "Daño máximo reducido al 30% (en lugar del 40%)."
+                ]
+              },
+              {
+                "title": "Enfriamiento del núcleo: objeto de héroe de arma épica",
+                "type": "rework",
+                "details": [
+                  "Reelaborado como artículo.",
+                  "Se agregó un 15 % de robo de vida de armas.",
+                  "La velocidad de ataque durante Fortificar aumentó al 15% (en lugar del 10%).",
+                  "Se agregó un costo de 10000."
+                ]
+              },
+              {
+                "title": "Lanza impresa en 3D: objeto de héroe de habilidad épica",
+                "type": "buff",
+                "details": [
+                  "Se agregó \"Los golpes críticos de [Energy Javelin] reducen 1,5 s adicionales\"."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Vórtice vengativo",
+                "type": "nerf",
+                "details": [
+                  "El daño adicional por detonación se redujo a 25 (en lugar de 50)."
+                ]
+              },
+              {
+                "title": "Espiral insaciable",
+                "type": "nerf",
+                "details": [
+                  "El daño adicional del Vórtice voraz se redujo al 15 % (en lugar del 30 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "Zarya se ha vuelto más frecuente, especialmente en niveles superiores y en el juego coordinado. Estamos recortando la eficiencia de su opción más atípica y seguiremos vigilándola.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Botas a prueba de explosiones: artículo de héroe de supervivencia épico",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó a 9000 (antes 3750)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Ashe",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
+            "changes": [
+              {
+                "title": "BOB Jr. - Poder",
+                "type": "nerf",
+                "details": [
+                  "La reducción del coste final aumentó al 60 % (en lugar del 50 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Bingo: objeto de héroe con arma épica.",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "10% de poder de arma",
+                  "\"[Lanzador de fragmentos] Los golpes directos sin rebotar reducen el tiempo de reutilización de todas las habilidades en un 20%\".",
+                  "11000 Costo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "Este cambio tiene como objetivo reducir la efectividad de la construcción de bomba de pulso orientada a la recuperación de Tracer. Seguiremos atentos a esta configuración, particularmente a Temportal, para cambios futuros que aumenten su contrajuego.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "Impulsivo - Poder",
+                "type": "nerf",
+                "details": [
+                  "El daño de la bomba de pulso se redujo a un 70 % (en lugar de un 60 % reducido)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Artsy Dartsy - Poder",
+                "type": "nerf",
+                "details": [
+                  "Se agregó \"Aterrizar un [Sleep Dart] con mira reduce su tiempo de reutilización en 5 s\".",
+                  "El daño base de 75 ahora solo se aplica al [Sleep Dart] con mira.",
+                  "El daño base aumentado ahora funciona con Comfy Cloud."
+                ]
+              },
+              {
+                "title": "Campo de ensueño - Poder",
+                "type": "buff",
+                "details": [
+                  "La curación de vida máxima aumentó al 20 % (en lugar del 15 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "Estos cambios tienen como objetivo reducir la efectividad de las configuraciones de Ability Power Purr y al mismo tiempo potenciar sus opciones orientadas al Weapon Power.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "Ronroneo-resistencia - Poder",
+                "type": "adjust",
+                "details": [
+                  "La duración aumentada para cada objetivo de Purr se redujo al 10 % (en lugar del 15 %).",
+                  "La duración máxima aumentada se redujo al 50 % (en lugar del 75 %)."
+                ]
+              },
+              {
+                "title": "Frijoles de remolque - Potencia",
+                "type": "adjust",
+                "details": [
+                  "Ahora se activa con cualquier daño en lugar de solo con el daño de habilidad."
+                ]
+              },
+              {
+                "title": "Rondas de reciclaje: artículo de héroe con arma épica",
+                "type": "nerf",
+                "details": [
+                  "Se agregó un 20 % de reducción de tiempo de reutilización de [ronroneo]."
+                ]
+              },
+              {
+                "title": "Expansor de ronroneo: objeto de héroe de habilidad épica",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó a 11000 (antes 10000)."
+                ]
+              },
+              {
+                "title": "Cápsula de combustible: objeto raro de héroe de supervivencia",
+                "type": "buff",
+                "details": [
+                  "Costo reducido a 5000 (en lugar de 10000)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Pie Flotante - Potencia",
+                "type": "adjust",
+                "details": [
+                  "Se agregó \"el tiempo de reutilización se reduce en un 20% cuando se usa sin un objetivo\"."
+                ]
+              },
+              {
+                "title": "Fuegos artificiales astutos - poder",
+                "type": "buff",
+                "details": [
+                  "Los disparos potenciados aumentaron a 5 (en lugar de 3)."
+                ]
+              },
+              {
+                "title": "Keen Kunai - Poder",
+                "type": "nerf",
+                "details": [
+                  "El reembolso del tiempo de reutilización aumentó al 25 % (en lugar del 20 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Estos cambios tienen como objetivo fortalecer las opciones que tiene Wuyang para mantenerse y aumentar sus poderes de bajo rendimiento.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "Bifurcación - Potencia",
+                "type": "buff",
+                "details": [
+                  "La duración aumentó a 5 s (en lugar de 4 s)."
+                ]
+              },
+              {
+                "title": "Gotas de dolor - Poder",
+                "type": "buff",
+                "details": [
+                  "Los disparos potenciados aumentaron a 3 (en lugar de 2).",
+                  "El daño por orbe adicional aumentó al 30 % (en lugar del 20 %)."
+                ]
+              },
+              {
+                "title": "Amplificador Aquajet: artículo de héroe con arma épica",
+                "type": "buff",
+                "details": [
+                  "Costo reducido a 10000 (en lugar de 12000)."
+                ]
+              },
+              {
+                "title": "Conector de guardián de mareas: objeto de héroe con arma épica",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó a 11000 (antes 10000).",
+                  "Se agregó un 10% de poder de habilidad.",
+                  "La reducción del tiempo de reutilización cada 1 s aumentó a 0,5 s (en lugar de 0,3 s)."
+                ]
+              },
+              {
+                "title": "Lanza ondulada: objeto de héroe con arma épica",
+                "type": "nerf",
+                "details": [
+                  "El costo aumentó a 12000 (antes 10000).",
+                  "El poder del arma aumentó al 20% (en lugar del 10%)."
+                ]
+              },
+              {
+                "title": "Hydro Mender: objeto raro de héroe de supervivencia",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Ungüento oceánico: objeto raro de héroe de supervivencia",
+                "type": "buff",
+                "details": [
+                  "Costo reducido a 3750 (en lugar de 4000)."
+                ]
+              },
+              {
+                "title": "Descanso de hidratación: artículo de héroe de supervivencia épico",
+                "type": "buff",
+                "details": [
+                  "Nuevo.",
+                  "50 escudos.",
+                  "\"Cuando uses [Rushing Torrent], coloca la Pasiva [Restorative Stream] sobre ti mismo con un 25% de curación reducida\".",
+                  "Costo 9000."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Domina",
+            "desc": "La salud de Panopticon Barrier se está incrementando para mejorar su confiabilidad. Una reserva de salud más alta hace que sea más difícil para los enemigos liberarse, lo que aumenta la probabilidad de una detonación o los obliga a pasar más tiempo lidiando con lo último.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
+            "changes": [
+              {
+                "title": "Panóptico",
+                "type": "buff",
+                "details": [
+                  "La salud de la barrera aumentó de 450 a 500."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5685ed099de9b6438a493e6060d692bd10ce08424cff88a767dc5b13a7edcb5e.png"
+              }
+            ]
+          },
+          {
+            "name": "Doomfist",
+            "desc": "El aumento del daño de Seismic Slam lo convierte en una herramienta más efectiva para debilitar a los objetivos antes de continuar con las otras habilidades de Doomfist.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "Golpe sísmico",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó de 50 a 60."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4bc170a43b0d19921079fefcf16e66d720019271e37303413971b12e0ced9eca.png"
+              }
+            ]
+          },
+          {
+            "name": "Hazard",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "El coste final aumentó un 7%.",
+                "type": "nerf",
+                "details": [
+                  "El coste final aumentó un 7%."
+                ]
+              },
+              {
+                "title": "Empalamientos explosivos: beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Se redujo la cantidad de golpes de Bonespur necesarios de 14 a 12."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "Aumentar el tiempo de reutilización de Invasión alarga la ventana en la que Mauga debe comprometerse a luchar antes de poder retirarse, lo que reduce su movilidad sin afectar directamente su capacidad de participar.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Combustible de combate: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "La sobresalud obtenida por disparo aumentó de 3 a 4."
+                ]
+              },
+              {
+                "title": "Invadir",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 5 a 6 segundos. (5v5)"
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/10f358f93cd59c2f2b31278cd09bfc7a986c7af6e9a15cdf96db16375b596cee.png"
+              }
+            ]
+          },
+          {
+            "name": "Orisa",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76707145df847f90e838e93b33979d5a275d1702a6e800dc6abb6a40652c1a82.png",
+            "changes": [
+              {
+                "title": "Jabalina cargada – Beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Jabalina pesada: beneficio mayor",
+                "type": "buff",
+                "details": [
+                  "Nuevo",
+                  "El retroceso de Energy Javelin aumenta en un 25% y su daño por impacto en la pared aumenta en 15."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "El costo final se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo final se redujo en un 6 %."
+                ]
+              },
+              {
+                "title": "Barrera revitalizante: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "La curación aumentó de 30 a 35."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Cassidy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Incluso las probabilidades: beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Giddy Up - Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Después de usar Combat Roll, Cassidy obtiene un aumento de velocidad de movimiento del 60 % que disminuye en 1,5 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "Municiones aéreas: beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Echo tiene munición infinita durante el vuelo."
+                ]
+              },
+              {
+                "title": "Luces altas: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Acometida enfocada: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "Se pasó de beneficio menor a beneficio mayor.",
+                  "El alcance de Focusing Beam aumenta en 8 metros y la velocidad de movimiento aumenta en un 25% cuando está activo.",
+                  "El alcance aumentó de 6 a 8 metros.",
+                  "La velocidad de movimiento aumentó del 15% al ​​25%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0d6d4d3713969eb9d56b1f99b7c031fd47e023efe5efa242ad849a8c94e79c9.png",
+            "changes": [
+              {
+                "title": "El costo final se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo final se redujo en un 6 %."
+                ]
+              },
+              {
+                "title": "Seguridad supresiva: beneficio menor",
+                "type": "buff",
+                "details": [
+                  "La duración de la ralentización aumentó de 1 a 1,5 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "El costo final se redujo en un 6 %.",
+                "type": "buff",
+                "details": [
+                  "El costo final se redujo en un 6 %."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Pharah",
+            "desc": "Concussive Blast le proporciona a Pharah movilidad y desplazamiento. Aumentar su tiempo de reutilización reduce la frecuencia con la que puede reposicionarse e interrumpir el movimiento del enemigo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11bf5153c33d1f37f5d337046af63d7da6c634a0f1047da8fbb8610a14268f3a.png",
+            "changes": [
+              {
+                "title": "Explosión de conmoción cerebral",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 7 a 8 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/666c55a0b7810194a486e73fddac9dac6b64eb0303a14be8d1453c9f29c210df.png"
+              }
+            ]
+          },
+          {
+            "name": "Shion",
+            "desc": "Este cambio alinea mejor el radio de impacto con el tamaño de la motocicleta, lo que requiere que los jugadores sean más precisos con el lanzamiento desde tierra o confíen en el lanzamiento desde el aire.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Excursión en coche",
+                "type": "nerf",
+                "details": [
+                  "Radio de detección de lanzamiento desde tierra reducido de 1,5 a 1 metro."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a0279c43c165fe4f240c61baa6b7a721e73b84d7f940809e2a1897d94b2302ef.png"
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "Si bien el daño de Tracer ha aterrizado en un lugar efectivo luego de ajustes recientes, reducir el tiempo de reutilización de Recall le permite desconectarse con más frecuencia.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "Chronal Dash – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Regeneración temporal: ventaja menor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "La regeneración de salud pasiva se activa un 50% más rápido."
+                ]
+              },
+              {
+                "title": "Recordar",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 13 a 12 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/cfa2264173c1d8a365c514972412fbb802d78cd70451b1d38f37579cea500872.png"
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Reducir el tiempo de reutilización de Soaring Slice al reaparecer reduce el tiempo de inactividad después de reaparecer mientras mantiene la capacidad reducida de regresar rápidamente a la pelea.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Rebanada altísima",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización al aparecer se redujo de 7 a 3 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/785bffa90ccf067fbfd86c7a6d6729ed12566a02554f28d76974b573d3a5c6a0.png"
+              }
+            ]
+          },
+          {
+            "name": "Venture",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7cab11e20f958ed3d369989e0ac96703fd2cda8c7abf237f75e12bf3549b066e.png",
+            "changes": [
+              {
+                "title": "El costo final se redujo en un 8%.",
+                "type": "buff",
+                "details": [
+                  "El costo final se redujo en un 8%."
+                ]
+              },
+              {
+                "title": "Madriguera profunda – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "La distancia de Drill Dash aumenta del 50 % al 75 %."
+                ]
+              },
+              {
+                "title": "Cubierto de tierra: ventaja importante",
+                "type": "buff",
+                "details": [
+                  "La cantidad total de escudos obtenidos aumentó de 30 a 40."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Jetpack Cat",
+            "desc": "Estos cambios tienen como objetivo hacer que el movimiento de Jetpack Cat sea más receptivo y, al mismo tiempo, mantener las velocidades de movimiento de Lifeline similares a las anteriores. Las velocidades de movimiento de Frenetic Flight permanecen sin cambios.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "El coste final aumentó un 7%.",
+                "type": "nerf",
+                "details": [
+                  "El coste final aumentó un 7%.",
+                  "La velocidad de movimiento base aumentó de 5,5 a 6 metros por segundo.",
+                  "La aceleración del aire aumentó de 7,7 a 9,5."
+                ]
+              },
+              {
+                "title": "Cabezazo – Beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Forma perfecta: beneficio mayor",
+                "type": "adjust",
+                "details": [
+                  "Nuevo",
+                  "Cada pulso de Purr contiene 3 ondas."
+                ]
+              },
+              {
+                "title": "Línea de vida",
+                "type": "nerf",
+                "details": [
+                  "La bonificación de velocidad de movimiento se redujo del 40% al 30%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0c899ac61aa5b72e7de931b014b02176605fba7c9f022cc7a968b6cc6ebf19b.png"
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "Este cambio reduce el tiempo mínimo de fijación para objetivos cercanos, lo que permite que Pulsar Torpedoes se use de manera más reactiva y, al mismo tiempo, crea una distinción más clara en los tiempos de fijación en diferentes rangos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
+            "changes": [
+              {
+                "title": "Torpedos púlsares",
+                "type": "nerf",
+                "details": [
+                  "El tiempo mínimo de bloqueo del objetivo se redujo de 0,5 a 0,35 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/24ad567c5400d4eb7a5d7b9f938a197654e5465dfd2e881754e8f4f699f84088.png"
+              }
+            ]
+          },
+          {
+            "name": "Lifeweaver",
+            "desc": "Estos cambios dan a los jugadores Life Gripped un mayor control sobre si son arrastrados hasta la posición de Lifeweaver. El tirón ahora comienza de forma más gradual, creando una ventana más grande para reaccionar y cancelar el movimiento si se desea. También se ha agregado una nueva configuración de héroe para los jugadores que prefieren desactivar la opción de cancelación por completo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "Agarre de vida",
+                "type": "adjust",
+                "details": [
+                  "Ahora se puede cancelar manualmente con la entrada Salto después de 0,6 segundos.",
+                  "La velocidad de tracción base se redujo de 30 a 25 metros por segundo.",
+                  "Los objetivos disparados desde más de 15 metros se mueven más lento y aceleran con el tiempo.",
+                  "Se agregó una nueva configuración de héroe general para deshabilitar los controles de cancelación de Life Grip."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7202804f05ffb9fce9f66f7dabfd4104981671fe1d632326c4b3a04a5bbfe2ad.png"
+              }
+            ]
+          },
+          {
+            "name": "Mizuki",
+            "desc": "El tiempo de actividad de movilidad de Mizuki ha aumentado significativamente luego de los cambios recientes en la duración y el tiempo de reutilización de Katashiro Return. Si bien el aumento de la duración ha mejorado su usabilidad, el tiempo de reutilización se revertirá parcialmente para reducir el tiempo de actividad general. El tamaño del proyectil de Binding Chain también se está reduciendo para que su poderoso efecto de obstáculo requiera una puntería más precisa.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/192ba53e30db9ceaea964dc67a30351db1c2431033d827f0b9af0ab537be2bad.png",
+            "changes": [
+              {
+                "title": "Paso rápido: ventaja importante",
+                "type": "nerf",
+                "details": [
+                  "La velocidad de movimiento obtenida se redujo del 25% al ​​20%."
+                ]
+              },
+              {
+                "title": "Cadena vinculante",
+                "type": "nerf",
+                "details": [
+                  "El tamaño del proyectil se redujo de 0,35 a 0,3."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3404150b1babd17665ceced735828eedb701ee1d276debcedcd1a5d95d8d1cf7.png"
+              },
+              {
+                "title": "El regreso de Katashiro",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 11 a 12 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/291ad4dfccb3678979f4f5ca8c24d219b9bb61a383731057547760646dcd5c04.png"
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Aumentar el ancho de Guardian Wave hace que sea más fácil posicionar la capacidad de afectar a múltiples aliados y enemigos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "Ola Guardiana",
+                "type": "buff",
+                "details": [
+                  "Los grados máximos aumentaron de 10 a 15 grados."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a1a3efdb2c0db62876f6e39dc82b6095a1058803e3f428ca12c912391f818d35.png"
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Reparación discordante – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "El robo de vida aumentó del 10 al 15%."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Reign of Talon - Season 4: Heroes of Busan",
+          "desc": "Los Junkers y Talon descienden sobre Busan, por lo que el nuevo Tank Hero D.Mon se une a D.Va y al resto del escuadrón MEKA para proteger su hogar. Elige a tu piloto favorito en el evento Shooting Stars: My MEKA Mania, gana estrellas y desbloquea la historia del equipo mientras tu apoyo les ayuda a ascender en la clasificación mundial. Luego lucha a través de un Pase de batalla renovado con progresión flexible y la opción de intercambiar una recompensa legendaria elegible. Además, explora versiones revitalizadas de Busan, Paraíso y Eichenwalde antes de enfrentarte a Team Drives, donde los equipos progresan juntos y la retroalimentación mejorada en combate hace que el impacto de cada jugador sea más fácil de ver. ¡Termina desbloqueando Mythic Genji o el arma mítica de Sojourn, y otros cosméticos para completar tu colección!",
+          "changes": [
+            {
+              "title": "El reinado de Talon - Temporada 4: Héroes de Busan",
+              "type": "buff",
+              "details": [
+                "Los Junkers y Talon descienden sobre Busan, por lo que el nuevo Tank Hero D.Mon se une a D.Va y al resto del escuadrón MEKA para proteger su hogar. Elige a tu piloto favorito en el evento Shooting Stars: My MEKA Mania, gana estrellas y desbloquea la historia del equipo mientras tu apoyo les ayuda a ascender en la clasificación mundial. Luego lucha a través de un Pase de batalla renovado con progresión flexible y la opción de intercambiar una recompensa legendaria elegible. Además, explora versiones revitalizadas de Busan, Paraíso y Eichenwalde antes de enfrentarte a Team Drives, donde los equipos progresan juntos y la retroalimentación mejorada en combate hace que el impacto de cada jugador sea más fácil de ver. ¡Termina desbloqueando Mythic Genji o el arma mítica de Sojourn, y otros cosméticos para completar tu colección!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "New Tank Hero: D.Mon",
+          "desc": "Yuna Lee ha pasado años defendiendo Busan desde el interior de su robot, Beast. ¡Ahora es tu turno! El tan esperado piloto de MEKA sale de la historia y llega a tus manos como D.Mon, un nuevo tanque que lidera desde el frente. Atraviesa las líneas enemigas con su Plasma Sabre, toma uno para tu equipo con una barrera de energía estratégica, muévete con propulsores y luego cambia la presión a corta distancia por el alcance de un repetidor de fusión. ¡Estarás en tu mejor momento cuando todo el equipo se mueva contigo, así que MEKA Squad forma parte de D.Mon y saca el héroe que hay en cada uno!",
+          "changes": [
+            {
+              "title": "Nuevo héroe de tanque: D.Mon",
+              "type": "adjust",
+              "details": [
+                "Yuna Lee ha pasado años defendiendo Busan desde el interior de su robot, Beast. ¡Ahora es tu turno! El tan esperado piloto de MEKA sale de la historia y llega a tus manos como D.Mon, un nuevo tanque que lidera desde el frente. Atraviesa las líneas enemigas con su Plasma Sabre, toma uno para tu equipo con una barrera de energía estratégica, muévete con propulsores y luego cambia la presión a corta distancia por el alcance de un repetidor de fusión. ¡Estarás en tu mejor momento cuando todo el equipo se mueva contigo, así que MEKA Squad forma parte de D.Mon y saca el héroe que hay en cada uno!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Map Reworks: Paraíso, Eichenwalde, Busan",
+          "desc": "Tres campos de batalla familiares se revitalizan y actualizan para darles una sensación nueva. Busan lleva las cicatrices del asalto Junker y el ataque de Talon a la base MEKA, con nuevos espacios, paisajes de verano y recuerdos de la vida de D.Mon escondidos por todas partes. Paraíso se está preparando para la fiesta a pesar de que Domina se cierne sobre la ciudad, mientras que Lúcio tiene sus propios planes. Eichenwalde completa las cosas con nuevas rutas y opciones de recorrido diseñadas para mantener fluida su lucha clásica.",
+          "changes": [
+            {
+              "title": "Reelaboración de mapas: Paraíso, Eichenwalde, Busan",
+              "type": "adjust",
+              "details": [
+                "Tres campos de batalla familiares se revitalizan y actualizan para darles una sensación nueva. Busan lleva las cicatrices del asalto Junker y el ataque de Talon a la base MEKA, con nuevos espacios, paisajes de verano y recuerdos de la vida de D.Mon escondidos por todas partes. Paraíso se está preparando para la fiesta a pesar de que Domina se cierne sobre la ciudad, mientras que Lúcio tiene sus propios planes. Eichenwalde completa las cosas con nuevas rutas y opciones de recorrido diseñadas para mantener fluida su lucha clásica."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Battle Pass Revamp",
+          "desc": "Una actualización más flexible y amigable para los jugadores de la experiencia del Pase de Batalla, que les permite elegir qué recompensas buscar primero, cambiar un aspecto del Pase de Batalla por un aspecto seleccionado del Swap Pool de temporada y participar con una interfaz de usuario actualizada que hace que la progresión sea más clara y gratificante.",
+          "changes": [
+            {
+              "title": "Una actualización más flexible y amigable para los jugadores de la experiencia del Pase de Batalla, que permite a los jugadores elegir qué recompensas obtener...",
+              "type": "nerf",
+              "details": [
+                "Elige tu camino a través del Pase de Batalla. Ya no es necesario desbloquear todas las recompensas en un orden lineal fijo.  Puede elegir qué recompensas desea obtener primero y cambiar de pista en cualquier momento después de completar la pista de introducción.",
+                "Cambia por una piel que quieras más. Una vez por Pase de batalla, cambia un aspecto del Pase de batalla por un aspecto seleccionado del grupo de intercambio de temporada.",
+                "Una experiencia de Pase de Batalla más moderna. Una interfaz de usuario renovada ayuda a modernizar la progresión del Pase de batalla y sumergirte en el mundo de Overwatch con temas y apariencia personalizados.",
+                "Más flexibilidad, mismo valor estacional. Battle Pass Revamp mantiene intacta la búsqueda de recompensas principales y al mismo tiempo te brinda más libertad sobre cómo progresar y qué priorizar."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shooting Star: My MEKA Mania",
+          "desc": "¡Apoye a sus favoritos de MEKA en un escenario global!",
+          "changes": [
+            {
+              "title": "¡Apoye a sus favoritos de MEKA en un escenario global!",
+              "type": "buff",
+              "details": [
+                "El MEKA Squad ha sido durante mucho tiempo el orgullo de Corea del Sur y de la ciudad de Busan, ¡y ahora sus estrellas están en ascenso!",
+                "¡Elige un miembro del MEKA Squad para apoyar! ¡Obtenga acceso a su pase de recompensas que incluye cosméticos temáticos, cajas de botín y más!",
+                "Completar un pase de recompensa para un piloto de MEKA contribuye a votar por él en la tabla de clasificación global. Al final del evento, se desbloqueará una tarjeta de jugador especial, que se regalará a todos los jugadores que participaron en el evento y que presenta al piloto que obtuvo la mayor cantidad de votos.",
+                "¡Completa los cinco pases de recompensa de los pilotos del MEKA Squad para desbloquear un sexto pase de recompensa adicional!",
+                "¡Sintoniza Shooting Star: My MEKA Mania y haz que tu voto cuente del 11 al 31 de agosto!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "World Cup Cheer Rally",
+          "desc": "Completa desafíos y recoge alegría",
+          "changes": [
+            {
+              "title": "Completa desafíos y recoge alegría",
+              "type": "adjust",
+              "details": [
+                "Juega partidos para ganar Cheers completando desafíos del 1 al 14 de septiembre.",
+                "Consulta la página del evento World Cup Cheer Rally donde puedes animar a tu conferencia favorita: AMER, ASIA o EMEA. Cada conferencia tiene sus propias recompensas para ganar como agradecimiento por apoyarlas: cajas de botín, XP del Pase de batalla y cosméticos increíbles.",
+                "Al final del evento, la Conferencia con más aplausos será declarada ganadora global. La conferencia ganadora desbloqueará un amuleto de arma temático para cualquiera que haya participado en el evento. ¡Esté atento a un huevo de Pascua especial en mapas futuros!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "In-Combat Feedback Improvements",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Mejoras en los comentarios en combate",
+              "type": "adjust",
+              "details": [
+                "Indicador de estado del equipo: un nuevo contador encima del Kill Feed muestra cuántos compañeros de equipo y enemigos están vivos en el campo de batalla. Para los aliados, una barra de progreso muestra cuándo reaparecen después de ser eliminados. Esta función se puede desactivar en Juego -> HUD -> Mostrar indicador de estado del equipo.  Esta característica también tiene una configuración experimental que está configurada en \"Tiempo de reaparición\" de forma predeterminada llamada \"Barra de progreso del cálculo de retroceso\". Si te sientes aventurero, intenta cambiar esta configuración a \"Dinámica\", que incluye una estimación de cuánto tiempo les tomará a tus aliados volver a la pelea. ¡Asegúrate de contarnos lo que piensas!",
+                "Nueva estadística: Protege: se agregó una nueva estadística al juego similar a Guardadas que rastrea cuándo un jugador ha mitigado un daño significativo cerca de sus aliados. Los jugadores serán notificados con un nuevo mensaje de actividad cuando protejan exitosamente (o sean protegidos por) un compañero de equipo. Además, habrá un nuevo desafío diario centrado en Protege.",
+                "Estadísticas actualizadas: partidas guardadas: hemos incluido habilidades y situaciones adicionales como partidas guardadas que no se rastreaban anteriormente. El exceso de salud de las habilidades ahora contará para una salvación si evita que un compañero de equipo sea eliminado. Jetpack Cat también puede anotar una salvación con una correa de último segundo después de que un compañero de equipo haya sido empujado por un precipicio. Además, estamos reduciendo el requisito del desafío diario para partidas guardadas de 12 a 10.",
+                "Actualizaciones visuales del HUD de curación y estado: se realizaron algunas mejoras en la forma en que se muestran la curación y el estado del jugador en el HUD. Los efectos visuales mejorados para la curación, los íconos de efectos de estado y el daño crítico brindarán a los jugadores una indicación mucho más clara de cuándo su salud se ve afectada por la curación y las habilidades. Los efectos visuales mejorados de la barra de salud para los apoyos les darán una mejor indicación de cómo su curación y sus habilidades están ayudando a los aliados.",
+                "Celebración de muertes múltiples: se agregaron nuevos avisos y nuevos VO para celebrar cuando alguien logra una muerte múltiple (de 2x en adelante). Se mostrarán nuevos iconos en el feed de actividades y en el feed de muertes.",
+                "Porcentaje de daño infligido: se recuperó un indicador en el feed de actividades que le indica qué porcentaje del daño contribuyó a una eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ping System Refactor",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Refactorización del sistema de ping",
+              "type": "adjust",
+              "details": [
+                "El sistema de ping se ha sometido a una importante refactorización técnica interna que hace que el sistema sea aproximadamente 1,5 veces más eficiente en promedio, pero hasta 30 veces más eficiente en algunos casos extremos, y al mismo tiempo utiliza considerablemente menos memoria."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Challenges Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Actualizaciones de desafíos",
+              "type": "nerf",
+              "details": [
+                "Los requisitos para el desafío diario \"Intocable\" se han reducido a 5 eliminaciones en lugar de 10."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Movie Player Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Actualizaciones del reproductor de películas",
+              "type": "adjust",
+              "details": [
+                "Varios reproductores de películas (incluido el espectador narrativo) ahora tienen la capacidad de buscar.",
+                "Con un mouse, puede buscar cualquier punto de una película y con un controlador/teclado puede saltar +- 10 s.",
+                "Muchos reproductores de películas ahora también recordarán su progreso después de salir y regresar al mismo video."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "New Skill Tier - Emerald (Ranks Redistributed)",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Nuevo nivel de habilidad: Esmeralda (rango redistribuido)",
+              "type": "buff",
+              "details": [
+                "Se ha agregado un nuevo rango entre Platino y Diamante llamado Esmeralda. Como hemos demostrado en el pasado, la mayoría de nuestros jugadores están en Oro y Platino, por lo que agregar un nuevo Rango más cerca de la mitad de la curva de habilidades les da a muchos jugadores un mejor sentido de identidad de Rango, un nuevo objetivo a alcanzar y aumenta la fidelidad en la evaluación de habilidades para muchos jugadores.",
+                "Se han agregado títulos y amuletos de armas para Esmeralda.",
+                "Esta redistribución de rango se centra principalmente en mover jugadores que eran Platino y Diamante a Esmeralda, pero las Divisiones más altas de Campeón ahora también serán más exclusivas."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rank Distribution Indicator",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Indicador de distribución de rango",
+              "type": "buff",
+              "details": [
+                "Se agregó un nuevo elemento de interfaz de usuario a la descripción general competitiva que muestra cómo se compara tu rango con el de todos los demás jugadores en una cola determinada."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Team Drives (Experimental)",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Unidades de equipo (experimentales)",
+              "type": "buff",
+              "details": [
+                "Al igual que los Drives, los Team Drives son eventos de tiempo limitado que otorgan puntos competitivos y una nueva recompensa visual única. A diferencia de los Drives, cada vez que ganes una partida en un Team Drive, se te agrupará automáticamente con todos los jugadores ganadores. ¿Por qué seguir encadenado a los demás gladiadores y no simplemente abandonar el grupo? Porque cada victoria consecutiva como equipo otorga una gran bonificación creciente a la fama (similar a Drive Score) que te llevará a través de los rangos de Gladiador hasta completarlo. Conservarás tu bonificación individual si abandonas el grupo para volver a hacer cola solo, pero no te beneficiarás de las bonificaciones de todos los demás ganadores con los que acabas de jugar. También puedes crear tus propias pilas completas y jugar solo con amigos si así lo deseas. También hay una opción que se encuentra en Social → General → Grupos llamada \"Habilitar agrupación automática en victorias de Team Drive\" que puedes desactivar si prefieres evitar la agrupación por completo, pero el evento será mucho más difícil de completar solo ya que no te beneficiarás de otros ganadores con tanta frecuencia.",
+                "Si bien los rangos de Gladiator son muy similares a los puntos de control de las unidades, una unidad de equipo solo se puede completar pasando The Trail, lo que requiere que los jugadores ganen 3 de sus últimos 4 partidos.",
+                "En lugar de otorgar firmas que se adjuntan a su placa de identificación, las unidades de equipo otorgan marcos de tarjetas de jugador que son visibles donde se ve su tarjeta de jugador.",
+                "Los primeros 10,000 jugadores que completen Team Drive al terminar The Trial desbloquearán un título dinámico temporal que muestra el orden en el que completaron el evento. ¿Puede tu pila ser los Gladiadores número 1? Estos títulos se desbloquearán al final del Team Drive.",
+                "El primer Team Drive se llevará a cabo del 4 de septiembre a las 11 a. m. PT al 7 de septiembre a las 11 a. m. PT, en los días previos al parche de mitad de temporada."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Challenger Score Tuning",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Ajuste de puntuación del Challenger",
+              "type": "buff",
+              "details": [
+                "Gran maestro 2: aumentado de 175 a 200",
+                "Gran maestro 1: aumentado de 200 a 250",
+                "Campeón 5: aumentado de 250 a 350",
+                "Campeón 4: aumentado de 300 a 450",
+                "Campeón 3: aumentado de 400 a 550",
+                "Campeón 2: aumentado de 550 a 700",
+                "Campeón 1: aumentado de 700 a 900"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Roster Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Actualizaciones de la lista",
+              "type": "buff",
+              "details": [
+                "Se agregó D.Mon a la lista de tanques (subrol: incondicional)."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Subroles",
+          "desc": "Flanqueador",
+          "changes": [
+            {
+              "title": "Flanqueador",
+              "type": "nerf",
+              "details": [
+                "La curación adicional de los paquetes de salud se redujo de 75 a 50."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema por el cual la ventaja Golpe inspirador de Brigitte no lograba proporcionar el efecto de curación instantánea previsto.",
+      "Se solucionó un problema que causaba que el regreso de Katashiro de Mizuki no se activara cuando el punto de retorno estaba ubicado demasiado cerca de la carga útil.",
+      "Se solucionó un problema que impedía que Ejecución apareciera como una opción alternable en la configuración de Juego personalizado.",
+      "Se solucionó un problema por el cual el desafío \"A Wee Minidin\" se había vuelto involuntariamente difícil de completar.",
+      "Se solucionó un problema que impedía que Reaper pusiera en cola una recarga mientras disparaba activamente Dire Triggers.",
+      "Se solucionó un problema por el cual la función secundaria de Superviviente activaba incorrectamente su efecto de curación pasiva sin una habilidad de movimiento correspondiente.",
+      "Se solucionó un problema por el cual el beneficio Supervivencia del más apto de Doomfist no otorgaba la cantidad correcta de sobresalud máxima.",
+      "Se solucionó un problema con la ventaja Flecha helada de Hanzo que ocurría cuando se activaba en un controlador.",
+      "En una actualización anterior, se solucionó un problema por el cual Vortex Vial no otorgaba la cantidad adecuada de salud.",
+      "En una actualización anterior, se solucionó un problema por el cual Three Tap Tommygun no funcionaba correctamente en D.Va.",
+      "En una actualización anterior, se solucionó un problema por el cual Friendly Fissure con Asteroid Smash no tendría ningún daño por caída.",
+      "En una actualización anterior, se solucionó un problema por el cual el elemento Nano Boop de Lucio combinado con Reverb causaba más daño del previsto.",
+      "Se solucionó un problema por el cual D.Va podía restablecer el tiempo de reutilización de sus impulsores al destruir barreras y desplegarse cuando usaba MEKA Punch.",
+      "Se solucionó un problema por el cual Bango Power de Junkrat anulaba la combustión de la aleación de litio.",
+      "Se solucionó un problema por el cual el elemento Radiación refrescante de Junkrat eliminaba la reducción del tiempo de reutilización de Successful Heist.",
+      "Se solucionó un problema por el cual Skyline Nanite no funcionaba correctamente con los DOT."
+    ]
+  },
+  "translated": true
+}
