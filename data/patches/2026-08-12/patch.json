@@ -1,0 +1,57 @@
+{
+  "version": "unknown",
+  "date": "2026-08-12",
+  "title": "12 de Agosto 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se corrigió un error por el cual se eliminaba Nano Boost de Moira cuando usaba Fade.",
+      "Se solucionó un problema que impedía que la barrera de energía de D.Mon protegiera completamente a D.Mon si se implementaba mientras el repetidor Fusion estaba activo.",
+      "Se corrigió un error por el cual el segundo atacante se extendía a áreas jugables en Paraíso.",
+      "Se corrigió un error por el cual D.Mon podía volverse invulnerable temporalmente."
+    ]
+  },
+  "translated": true
+}
