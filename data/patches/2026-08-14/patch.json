@@ -1,0 +1,119 @@
+{
+  "version": "unknown",
+  "date": "2026-08-14",
+  "title": "14 de Agosto 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [
+          {
+            "name": "D.Mon",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Se corrigió un error con el repetidor Fusion portátil que podía provocar que los accesos no se registraran.",
+                "type": "adjust",
+                "details": [
+                  "Se corrigió un error con el repetidor Fusion portátil que podía provocar que los accesos no se registraran.",
+                  "Se corrigió un error con Limit Break que no otorgaba correctamente Overhealth a los objetivos alcanzados.",
+                  "Solucionado en una actualización anterior: se resolvió un problema que impedía que se aplicara Sobresalud cuando se activaba Limit Break.",
+                  "Se corrigió un error por el cual Toggle Propulsors no funcionaba en plataformas de consola."
+                ]
+              },
+              {
+                "title": "Cambios en la caja de impacto",
+                "type": "adjust",
+                "details": [
+                  "Se solucionó un problema que provocaba daños desde el frente mientras se desplegaba Power Barrier.",
+                  "Se ajustó la altura del hitbox del cabezal mecánico para que esté más al ras con el modelo."
+                ]
+              },
+              {
+                "title": "Huelga creciente",
+                "type": "buff",
+                "details": [
+                  "El tiempo de lanzamiento se redujo de 0,15 a 0,05 segundos.",
+                  "La recuperación se redujo de 0,25 a 0,15 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e2027a7ba82448e64bf82f5714adaaeafea76d9c6c8ef461e226300a060a7fa8.png"
+              },
+              {
+                "title": "Repetidor de fusión",
+                "type": "buff",
+                "details": [
+                  "El tiempo de lanzamiento se redujo de 0,3 a 0,2 segundos.",
+                  "Tiempo de recuperación reducido de 0,5 a 0,2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "La velocidad de movimiento base se redujo de 6 a 5,5 metros por segundo.",
+                "type": "nerf",
+                "details": [
+                  "La velocidad de movimiento base se redujo de 6 a 5,5 metros por segundo."
+                ]
+              },
+              {
+                "title": "Ronroneo",
+                "type": "nerf",
+                "details": [
+                  "La penalización de autocuración aumentó del 25% al ​​40%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4632fb81d5af7bcac3502108fa283f614b98cbeb18e3149808dcc2e50042f927.png"
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true
+}
