@@ -1,0 +1,56 @@
+{
+  "version": "unknown",
+  "date": "2026-09-10",
+  "title": "10 de Septiembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Patch",
+          "desc": "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles.",
+          "changes": [
+            {
+              "title": "Parche de revisión",
+              "type": "adjust",
+              "details": [
+                "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se resolvió un problema con el Vórtice Voraz de Ramattra que causaba un retraso adicional involuntario antes de que pudiera detonarse.",
+      "Se corrigió un error con Jetpack Cat que permitía a Purr atravesar las barreras enemigas.",
+      "Se solucionó un problema que afectaba el alcance del Colmillo Palatino de Vendetta en algunos casos."
+    ]
+  },
+  "translated": true
+}
