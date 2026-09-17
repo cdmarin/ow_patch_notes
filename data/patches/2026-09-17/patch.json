@@ -1,0 +1,94 @@
+{
+  "version": "unknown",
+  "date": "2026-09-17",
+  "title": "17 de Septiembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Esta es una actualización de revisión. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [
+          {
+            "name": "D.Mon",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Armadura reducida de 325 a 275 (5v5).",
+                "type": "nerf",
+                "details": [
+                  "Armadura reducida de 325 a 275 (5v5).",
+                  "Armadura reducida de 300 a 250 (6v6)."
+                ]
+              },
+              {
+                "title": "Fusión enfocada - Beneficio principal",
+                "type": "nerf",
+                "details": [
+                  "Daño por bala reducido de 45 a 36."
+                ]
+              },
+              {
+                "title": "Propulsores",
+                "type": "buff",
+                "details": [
+                  "La tasa de drenaje de combustible aumentó de 25 a 30."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
+              },
+              {
+                "title": "Repetidor de fusión",
+                "type": "adjust",
+                "details": [
+                  "Daño reducido de 16 a 15.",
+                  "El enfriamiento aumentó de 4 a 5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "Esta es una actualización de revisión. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
+          "changes": [
+            {
+              "title": "Actualización de revisión",
+              "type": "adjust",
+              "details": [
+                "Esta es una actualización de revisión. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se ha solucionado un problema de juego con Mercy en Stadium. Se le ha vuelto a habilitar en todas las colas del estadio."
+    ]
+  },
+  "translated": true
+}
