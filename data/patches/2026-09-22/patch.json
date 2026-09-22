@@ -1,0 +1,42 @@
+{
+  "version": "unknown",
+  "date": "2026-09-22",
+  "title": "22 de Septiembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se ha corregido un error por el que los títulos de las unidades de equipo mostraban texto de marcador de posición.",
+      "Se ha corregido un error por el que los niveles de prestigio de Drive Signature podían haber cambiado después de las unidades de equipo.",
+      "Se ha corregido un error con el alcance en el skin Metalcore de Ashe."
+    ]
+  },
+  "translated": true
+}
