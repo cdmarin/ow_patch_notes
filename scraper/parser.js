@@ -187,7 +187,16 @@ function parseGenericUpdateSection($, $el) {
     return items;
 }
 
-function parseSections($, container) {
+/**
+ * @param {Object} [trace] - Registro de contextos (por sección) y roles (por héroe).
+ *   Si trace.replay es true, se reutilizan los valores registrados en lugar de deducirlos
+ *   de los títulos. Sirve para parsear la página oficial en español con la misma
+ *   estructura que la inglesa (los títulos en español no contienen "stadium", "bug"...).
+ */
+function parseSections($, container, trace) {
+    const replay = !!(trace && trace.replay);
+    let sectionIdx = 0;
+    let heroIdx = 0;
     const data = {
         stadium: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
         arcade: { intro: '', roles: { 'Tanque': [], 'Daño': [], 'Apoyo': [] }, generalItems: [] },
@@ -252,7 +261,9 @@ function parseSections($, container) {
         const hasHero = titleLower.includes('hero') || titleLower.includes('balance') || titleLower.includes('hotfix') || titleLower.includes('gameplay');
         const hasMap = titleLower.includes('map');
 
-        if (hasBugFix) {
+        if (replay) {
+            currentContext = trace.contexts[sectionIdx] || currentContext;
+        } else if (hasBugFix) {
             currentContext = 'bugFixes';
         } else if (hasStadium) {
             if (titleLower.includes('item')) {
@@ -267,6 +278,8 @@ function parseSections($, container) {
         } else if (hasMap) {
             currentContext = 'maps';
         }
+        if (trace && !replay) trace.contexts[sectionIdx] = currentContext;
+        sectionIdx++;
 
         if (isGeneric) {
             const descContainer = $el.find('.PatchNotesGeneralUpdate-description, .PatchNotes-sectionDescription');
@@ -313,7 +326,13 @@ function parseSections($, container) {
                 if (hero && hero.name) {
                     // Determinar rol usando nuestro diccionario estricto
                     const matchedRole = HERO_ROLE_MAP[hero.name.toLowerCase().trim()];
-                    const role = matchedRole || parsedRole || 'Daño';
+                    let role = matchedRole || parsedRole || 'Daño';
+                    if (replay) {
+                        role = trace.heroRoles[heroIdx] || role;
+                    } else if (trace) {
+                        trace.heroRoles[heroIdx] = role;
+                    }
+                    heroIdx++;
 
                     // Si no estamos en un contexto válido de héroes, inferir por el título
                     let destContext = currentContext;
@@ -471,6 +490,12 @@ function parseDateFromTitle(title) {
         enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
         julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12
     };
+    const esMonths = 'enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre';
+    const esMatch = title.match(new RegExp(`\\b(\\d{1,2})\\s+de\\s+(${esMonths})(?:\\s+de)?,?\\s+(\\d{4})`, 'i'));
+    if (esMatch) {
+        const monthName = esMatch[2].toLowerCase() === 'setiembre' ? 'septiembre' : esMatch[2].toLowerCase();
+        return `${esMatch[3]}-${String(months[monthName]).padStart(2, '0')}-${esMatch[1].padStart(2, '0')}`;
+    }
     const match = title.match(/\b(january|february|march|april|may|june|july|august|september|october|november|december|enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(\d{1,2}),?\s+(\d{4})/i);
     if (match) {
         const month = months[match[1].toLowerCase()];
@@ -487,7 +512,17 @@ function parseDateFromTitle(title) {
  * @param {string} [defaultDate] - Fecha por defecto
  * @returns {Array<Object>} - Lista de objetos de parche
  */
-function parseHTML(html, defaultDate) {
+function parseHTML(html, defaultDate, options = {}) {
+    // options.traces: array de trazas por parche (ver parseSections). Si está vacío se rellena
+    // (modo registro); si ya trae trazas con replay=true se reutilizan (modo réplica).
+    // options.traceLookup(i, date, dateFromTitle): alternativa para elegir la traza de cada parche.
+    const traces = options.traces || null;
+    const traceFor = (i, date, dateFromTitle) => {
+        if (options.traceLookup) return options.traceLookup(i, date, dateFromTitle);
+        if (!traces) return undefined;
+        if (!traces[i]) traces[i] = { contexts: [], heroRoles: [] };
+        return traces[i];
+    };
     const $ = cheerio.load(html);
     const patches = [];
 
@@ -496,15 +531,17 @@ function parseHTML(html, defaultDate) {
         patchElements.each((i, patchEl) => {
             const $patch = $(patchEl);
             const title = $patch.find('.PatchNotes-patchTitle, h3, h4').first().text().trim();
-            const date = parseDateFromTitle(title) || defaultDate || new Date().toISOString().split('T')[0];
+            const titleDate = parseDateFromTitle(title);
+            const date = titleDate || defaultDate || new Date().toISOString().split('T')[0];
             const version = parseVersion($, $patch);
 
             console.log(`🏟️  Parseando patch de fecha: ${date} (${title})...`);
-            const sectionsData = parseSections($, $patch);
+            const sectionsData = parseSections($, $patch, traceFor(i, date, !!titleDate));
 
             patches.push({
                 version,
                 date,
+                dateFromTitle: !!titleDate,
                 title: formatDateDay(date),
                 sections: sectionsData
             });
@@ -514,7 +551,7 @@ function parseHTML(html, defaultDate) {
         const date = defaultDate || new Date().toISOString().split('T')[0];
         const version = parseVersion($);
         console.log(`🏟️  Fallback: Parseando toda la página como un solo parche para fecha ${date}...`);
-        const sectionsData = parseSections($);
+        const sectionsData = parseSections($, undefined, traceFor(0, date, false));
         patches.push({
             version,
             date,

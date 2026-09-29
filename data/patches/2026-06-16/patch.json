@@ -2192,7 +2192,7 @@
           },
           {
             "name": "Juno",
-            "desc": "Estos cambios tienen como objetivo brindarle a Juno más opciones para brindarle utilidad a su Speed ​​Ring y reducir algunos de sus poderes atípicos.",
+            "desc": "Estos cambios tienen como objetivo brindarle a Juno más opciones para brindarle utilidad a su Speed Ring y reducir algunos de sus poderes atípicos.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
             "changes": [
               {
@@ -2590,7 +2590,7 @@
                 "title": "Distorsión - Potencia",
                 "type": "rework",
                 "details": [
-                  "Se modificó de \"Los aliados impulsados ​​por tu bastón Caduceo obtienen +20 % de robo de vida\" a \"Cuando usas [Sanación rápida], otorga al objetivo una sobresalud equivalente al 30 % de tu vida máxima durante 2 s y empuja a los enemigos a 5 m alrededor del objetivo\"."
+                  "Se modificó de \"Los aliados impulsados por tu bastón Caduceo obtienen +20 % de robo de vida\" a \"Cuando usas [Sanación rápida], otorga al objetivo una sobresalud equivalente al 30 % de tu vida máxima durante 2 s y empuja a los enemigos a 5 m alrededor del objetivo\"."
                 ]
               },
               {
@@ -3532,7 +3532,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
               },
               {
-                "title": "resplandor bailando",
+                "title": "Resplandor bailando",
                 "type": "buff",
                 "details": [
                   "Se redujo la recuperación después de la habilidad de 0,2 a 0,1 segundos."
@@ -3922,7 +3922,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
             "changes": [
               {
-                "title": "árbol de la vida",
+                "title": "Árbol de la vida",
                 "type": "adjust",
                 "details": [
                   "El coste final aumentó un 9%.",
@@ -3953,7 +3953,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/149e46752f75bc9f6fece61f1a7b8e08bd1d3dbea8a723efd518f6b9aa4a70b0.png"
               },
               {
-                "title": "valquiria",
+                "title": "Valquiria",
                 "type": "nerf",
                 "details": [
                   "El costo final aumentó un 7%."
@@ -4358,7 +4358,7 @@
       "Se solucionó un problema por el cual la cámara de fisión de Juno no escalaba correctamente con la velocidad de ataque.",
       "Se solucionó un problema por el cual los Blink Boosts de Juno le permitían usar Glide Boost mientras estaba bajo control de masas.",
       "Se solucionó un problema por el cual los Blink Boosts de Juno impedían que Glide Boost escalara correctamente con la reducción de tiempo de reutilización.",
-      "Se solucionó un problema por el cual los cohetes impulsados ​​de Juno otorgaban más duración de Glide Boost de lo previsto cuando se combinaban con Blink Boosts.",
+      "Se solucionó un problema por el cual los cohetes impulsados de Juno otorgaban más duración de Glide Boost de lo previsto cuando se combinaban con Blink Boosts.",
       "Se solucionó un problema por el cual el goteo intravenoso de Ana no tenía un exceso de salud reducido cuando se combinaba con la Fuente de calma.",
       "Se solucionó un problema por el cual el Optimizador de Brigitte otorgaba más autocuración de lo esperado.",
       "Se solucionó un problema por el cual la Iluminación de Zenyatta curaba incorrectamente más de 1 y no otorgaba carga máxima ni moneda.",

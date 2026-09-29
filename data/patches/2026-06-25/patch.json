@@ -13,7 +13,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
             "changes": [
               {
-                "title": "jugo",
+                "title": "Jugo",
                 "type": "nerf",
                 "details": [
                   "Radio reducido a 8 m (antes 12 m).",
@@ -79,7 +79,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
             "changes": [
               {
-                "title": "tan cocinado",
+                "title": "Tan cocinado",
                 "type": "nerf",
                 "details": [
                   "La duración de la permanencia se redujo a 2 s (en lugar de 3 s)."
@@ -231,7 +231,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
             "changes": [
               {
-                "title": "reverberación",
+                "title": "Reverberación",
                 "type": "adjust",
                 "details": [
                   "La efectividad reducida aumentó a un 50 % de reducción (en lugar de un 60 % de reducción)."

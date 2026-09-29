@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '10 18 * * *' # Se ejecuta automáticamente todos los días a las 18:10 UTC (20:10 hora de España)
   workflow_dispatch: # Permite que ejecutes el scraper manualmente desde el panel de GitHub en cualquier momento
+    inputs:
+      months:
+        description: 'Meses anteriores a reprocesar, separados por espacios (ej: "2026/05 2026/06"). Los parches con traducción automática se sustituyen por la oficial de Blizzard. Vacío = solo el parche actual.'
+        required: false
+        default: ''
 
 jobs:
   scrape-and-update:
@@ -24,6 +29,19 @@ jobs:
 
       - name: Run scraper
         run: node scraper/scraper.js
+
+      - name: Reprocess previous months
+        if: ${{ github.event.inputs.months != '' }}
+        env:
+          MONTHS: ${{ github.event.inputs.months }}
+        run: |
+          for month in $MONTHS; do
+            if [[ ! "$month" =~ ^[0-9]{4}/[0-9]{2}$ ]]; then
+              echo "Formato de mes no válido: $month (usa AAAA/MM)"
+              exit 1
+            fi
+            node scraper/scraper.js --url="https://overwatch.blizzard.com/en-us/news/patch-notes/live/$month"
+          done
 
       - name: Commit and Push changes
         run: |

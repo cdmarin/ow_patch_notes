@@ -510,7 +510,7 @@
         "Daño": [
           {
             "name": "Emre",
-            "desc": "La capacidad de Emre para sostenerse mientras aplicaba una presión constante a corta distancia excedía los niveles previstos. Reducir la conversión curativa de Syphon Blaster reduce la capacidad de supervivencia. El radio mínimo de Cyber ​​Frag también se ha reducido para requerir mayor precisión para obtener el máximo valor.",
+            "desc": "La capacidad de Emre para sostenerse mientras aplicaba una presión constante a corta distancia excedía los niveles previstos. Reducir la conversión curativa de Syphon Blaster reduce la capacidad de supervivencia. El radio mínimo de Cyber Frag también se ha reducido para requerir mayor precisión para obtener el máximo valor.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0e0618cd94b50deee7621f4a5f0b79e93f92d85d4aee348389d338c972f9377e.png",
             "changes": [
               {
@@ -544,7 +544,7 @@
                 ]
               },
               {
-                "title": "corriente ascendente",
+                "title": "Corriente ascendente",
                 "type": "buff",
                 "details": [
                   "El tiempo de reutilización se redujo de 12 a 10 segundos."
@@ -732,7 +732,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
             "changes": [
               {
-                "title": "fundido cruzado",
+                "title": "Fundido cruzado",
                 "type": "adjust",
                 "details": [
                   "La penalización de autocuración pasiva ahora es correctamente del 60 % (en lugar del 70 %)."

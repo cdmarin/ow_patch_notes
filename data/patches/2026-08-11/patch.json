@@ -599,7 +599,7 @@
                   "Se pasó de beneficio menor a beneficio mayor.",
                   "El alcance de Focusing Beam aumenta en 8 metros y la velocidad de movimiento aumenta en un 25% cuando está activo.",
                   "El alcance aumentó de 6 a 8 metros.",
-                  "La velocidad de movimiento aumentó del 15% al ​​25%."
+                  "La velocidad de movimiento aumentó del 15% al 25%."
                 ]
               }
             ]
@@ -825,7 +825,7 @@
                 "title": "Paso rápido: ventaja importante",
                 "type": "nerf",
                 "details": [
-                  "La velocidad de movimiento obtenida se redujo del 25% al ​​20%."
+                  "La velocidad de movimiento obtenida se redujo del 25% al 20%."
                 ]
               },
               {

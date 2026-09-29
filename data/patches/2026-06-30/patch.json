@@ -55,7 +55,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e3806878b38cbab585c4d48e05f2dd63817a36a4f69cedbaf62fd3af6ca5bbd2.png"
               },
               {
-                "title": "pistola ligera",
+                "title": "Pistola ligera",
                 "type": "adjust",
                 "details": [
                   "El fuego secundario ahora lanza una granada."
@@ -467,10 +467,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
             "changes": [
               {
-                "title": "La velocidad de movimiento base aumentó de 6 m/s a 6,5 ​​m/s.",
+                "title": "La velocidad de movimiento base aumentó de 6 m/s a 6,5 m/s.",
                 "type": "buff",
                 "details": [
-                  "La velocidad de movimiento base aumentó de 6 m/s a 6,5 ​​m/s."
+                  "La velocidad de movimiento base aumentó de 6 m/s a 6,5 m/s."
                 ]
               },
               {
@@ -495,7 +495,7 @@
           },
           {
             "name": "Ashe",
-            "desc": "B.O.B es ahora una amenaza. Nadie considera a B.O.B una amenaza en el campo de batalla, pero ahora lo harán. También apuesto a que todos estamos cansados ​​de que D.VA se coma nuestras dinamitas, así que con una planificación cuidadosa, Ashe puede pegar dinamita en la pared antes de que comience la pelea, y eso ya no es un problema.",
+            "desc": "B.O.B es ahora una amenaza. Nadie considera a B.O.B una amenaza en el campo de batalla, pero ahora lo harán. También apuesto a que todos estamos cansados de que D.VA se coma nuestras dinamitas, así que con una planificación cuidadosa, Ashe puede pegar dinamita en la pared antes de que comience la pelea, y eso ya no es un problema.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
             "changes": [
               {
@@ -622,7 +622,7 @@
                 "title": "Fragmentación cibernética",
                 "type": "adjust",
                 "details": [
-                  "Los golpes finales de Cyber ​​Frag reembolsan 1 carga de Cyber ​​Frag."
+                  "Los golpes finales de Cyber Frag reembolsan 1 carga de Cyber Frag."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58eeb3950828ceadc16565163bfc03231a0cecdf3a0a6ce78de34bdff4bf09bf.png"
               },
@@ -642,7 +642,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
             "changes": [
               {
-                "title": "apuntar",
+                "title": "Apuntar",
                 "type": "nerf",
                 "details": [
                   "Daño de explosión reducido de 80 a 40.",
@@ -699,7 +699,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6947d8eeddce8d295ed96525cdabfe36c94b3b67b50baf87aabb8ae61d32495a.png"
               },
               {
-                "title": "hoja de dragón",
+                "title": "Hoja de dragón",
                 "type": "adjust",
                 "details": [
                   "Ahora se puede cancelar.",
@@ -1226,7 +1226,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b2cc1eb839f7e907defe189101077716373a30e6ee17859521ab558a907a7925.png"
               },
               {
-                "title": "tablero de perforación",
+                "title": "Tablero de perforación",
                 "type": "adjust",
                 "details": [
                   "Los cargos aumentaron de 1 a 2.",
@@ -1384,7 +1384,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
             "changes": [
               {
-                "title": "látigo",
+                "title": "Látigo",
                 "type": "adjust",
                 "details": [
                   "Ahora impulsa a Brigitte hacia atrás en su dirección cuando impacta el medio ambiente."
@@ -1468,7 +1468,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0c899ac61aa5b72e7de931b014b02176605fba7c9f022cc7a968b6cc6ebf19b.png"
               },
               {
-                "title": "secuestrador",
+                "title": "Secuestrador",
                 "type": "rework",
                 "details": [
                   "Reelaborado: ahora equipa a Jetpack Cat con un lanzagranadas que cura a los aliados y daña a los enemigos.",
@@ -1584,7 +1584,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/040f6c05bfe6a0540c0139034d13ac09f3a4f6e2c611ff75113ac70596a65da7.png"
               },
               {
-                "title": "árbol de la vida",
+                "title": "Árbol de la vida",
                 "type": "adjust",
                 "details": [
                   "Los pulsos de curación ahora también reducen los tiempos de reutilización de los aliados en 2 segundos por pulso y aumentan los tiempos de reutilización de los enemigos en 2 segundos. Sólo se ven afectadas las habilidades que están en tiempo de reutilización."

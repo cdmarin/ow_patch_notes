@@ -27,6 +27,29 @@ node scraper.js --no-translate
 node scraper.js --url="https://overwatch.blizzard.com/en-us/news/patch-notes/overwatch/2"
 ```
 
+## Traducción
+
+1. **Traducción oficial de Blizzard (preferida).** El scraper descarga también la página
+   española (`/es-es/`) y, si su estructura coincide exactamente con la inglesa, usa ese texto
+   (nombres oficiales de habilidades, poderes y objetos). Se guarda `"translationSource": "official"`.
+2. **Traducción automática (respaldo).** Si Blizzard todavía no ha publicado la versión
+   española de un parche, o su estructura no coincide, se traduce con Google Translate /
+   MyMemory / LibreTranslate (`"translationSource": "machine"`). En la siguiente ejecución en la
+   que la versión oficial esté disponible, el parche se sustituye automáticamente.
+
+Si algún texto no se pudo traducir, el parche se guarda con `"translated": false` y se
+reintenta en la siguiente ejecución.
+
+Para regenerar meses anteriores con la traducción oficial, lanza el workflow
+*Scrape Overwatch Patch Notes* manualmente indicando los meses (ej. `2026/05 2026/06`), o en local:
+
+```bash
+node scraper.js --url="https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08"
+```
+
+Opciones: `--no-official` desactiva la traducción oficial; `OFFICIAL_LOCALE=es-mx` usa la
+versión latinoamericana en lugar de la de España.
+
 ## Configuración de LibreTranslate
 
 El scraper usa [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) para traducir automáticamente los textos al español.

@@ -13,6 +13,10 @@
  * Variables de entorno opcionales:
  *   LIBRETRANSLATE_URL  → URL de tu instancia de LibreTranslate (default: https://libretranslate.com)
  *   LIBRETRANSLATE_KEY  → API key (opcional para instancias públicas)
+ *   OFFICIAL_LOCALE     → Idioma de la traducción oficial de Blizzard (default: es-es)
+ *
+ * Traducción: primero se intenta usar el texto oficial en español de Blizzard
+ * (ver official.js). Solo si no está disponible se usa traducción automática.
  */
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
@@ -24,7 +28,8 @@ const path = require('path');
 const yargs = require('yargs');
 
 const { parseHTML } = require('./parser');
-const { translateSection, translateBatch, initTranslator } = require('./translator');
+const { translateSection, translateBatch, initTranslator, resetTranslationFailures, getTranslationFailures } = require('./translator');
+const { getOfficialSpanishUrl, buildOfficialSpanishPatches, applySpanishText } = require('./official');
 
 // ─── Configuración ────────────────────────────────────────────────────────────
 
@@ -58,11 +63,11 @@ function getPatchDir(patchId) {
 /**
  * Descarga la página de patch notes de Blizzard.
  */
-async function fetchPatchPage(url) {
+async function fetchPatchPage(url, headers = HEADERS) {
     log(`Descargando: ${url}`);
     try {
         const response = await axios.get(url, {
-            headers: HEADERS,
+            headers,
             timeout: 30000,
             // Algunos sitios requieren esto para evitar redirecciones
             maxRedirects: 5
@@ -141,6 +146,7 @@ async function main() {
         .option('url', { type: 'string', description: 'URL específica del parche' })
         .option('patch', { type: 'string', default: 'latest', description: 'ID del parche (ej: 2026-06-23) o "latest"' })
         .option('translate', { type: 'boolean', default: true, description: 'Traducción automática al español' })
+        .option('official', { type: 'boolean', default: true, description: 'Usar la traducción oficial de Blizzard (página es-es) cuando esté disponible' })
         .option('stadium', { type: 'boolean', default: true, description: 'Incluir cambios de Stadium' })
         .option('general', { type: 'boolean', default: true, description: 'Incluir cambios de Juego Base / General' })
         .option('force', { type: 'boolean', default: false, description: 'Forzar descarga y traducción completa ignorando la caché' })
@@ -173,8 +179,28 @@ async function main() {
             defaultPatchDate = extractLatestPatchDate($);
         }
 
-        const patches = parseHTML(html, defaultPatchDate);
+        const traces = [];
+        const patches = parseHTML(html, defaultPatchDate, { traces });
         log(`Se detectaron ${patches.length} parches en el documento.`, 'success');
+
+        // 2b. Descargar la versión oficial en español de Blizzard (si se puede)
+        let officialPatches = new Map();
+        if (translate && argv.official) {
+            const esUrl = getOfficialSpanishUrl(targetUrl);
+            if (esUrl) {
+                try {
+                    const esHtml = await fetchPatchPage(esUrl, { ...HEADERS, 'Accept-Language': 'es-ES,es;q=0.9' });
+                    const official = buildOfficialSpanishPatches(esHtml, traces, patches, defaultPatchDate);
+                    officialPatches = official.patches;
+                    log(`Traducción oficial de Blizzard disponible para ${officialPatches.size}/${patches.length} parches.`, 'success');
+                    for (const [date, reason] of official.reasons) {
+                        log(`Sin traducción oficial para ${date}: ${reason}. Se usará traducción automática.`, 'warn');
+                    }
+                } catch (err) {
+                    log(`No se pudo obtener la página oficial en español (${err.message}). Se usará traducción automática.`, 'warn');
+                }
+            }
+        }
 
         // Cargar el índice existente para verificar si el parche ya está registrado
         let existingIndex = { patches: [] };
@@ -194,10 +220,31 @@ async function main() {
             const outputDir = argv.output || getPatchDir(patchId);
             const patchJsonPath = path.join(outputDir, 'patch.json');
 
-            // Si no se fuerza la descarga, y el parche ya existe tanto en disco como en el índice, se omite
+            const officialPatch = officialPatches.get(patchData.date);
+            delete patchData.dateFromTitle;
+
+            // Si no se fuerza la descarga, y el parche ya existe tanto en disco como en el índice, se omite.
+            // Excepciones: si la traducción anterior falló (translated: false) se reintenta, y si estaba
+            // traducido automáticamente y ahora hay traducción oficial, se reprocesa para sustituirla.
             if (!argv.force && await fs.pathExists(patchJsonPath) && activePatchesInIndex.has(patchId)) {
-                log(`El parche ${patchId} ya está guardado e indexado. Omitiendo...`, 'success');
-                continue;
+                let reason = null;
+                if (translate) {
+                    try {
+                        const saved = await fs.readJson(patchJsonPath);
+                        if (officialPatch && saved.translationSource !== 'official') {
+                            reason = 'tenía traducción automática: se sustituye por la oficial de Blizzard';
+                        } else if (!saved.translated) {
+                            reason = 'no estaba traducido del todo: se reintenta la traducción';
+                        }
+                    } catch (err) {
+                        reason = 'no se pudo leer el archivo guardado: se regenera';
+                    }
+                }
+                if (!reason) {
+                    log(`El parche ${patchId} ya está guardado e indexado. Omitiendo...`, 'success');
+                    continue;
+                }
+                log(`El parche ${patchId} ${reason}.`, 'info');
             }
 
             console.log(`\n--------------------------------------------------`);
@@ -241,14 +288,24 @@ async function main() {
             const alreadyTranslated = !argv.force && existingPatchData && existingPatchData.translated;
 
             // 3. Traducir (opcional)
-            if (translate) {
+            if (translate && officialPatch) {
+                log('Usando el texto oficial en español de Blizzard.', 'success');
+                const skipSections = [];
+                if (skipStadium) skipSections.push('stadium');
+                if (skipGeneral) skipSections.push('gameBase', 'bugFixes');
+                applySpanishText(patchData, officialPatch, skipSections);
+                patchData.translated = true;
+                patchData.translationSource = 'official';
+            } else if (translate) {
                 if (alreadyTranslated) {
                     log(`El parche ${patchId} ya está traducido en el archivo local. Reutilizando traducción...`, 'success');
                     patchData.sections = existingPatchData.sections;
                     patchData.translated = true;
+                    patchData.translationSource = existingPatchData.translationSource || 'machine';
                 } else {
                     log('Traduciendo al español...');
                     await initTranslator();
+                    resetTranslationFailures();
 
                     const startTime = Date.now();
 
@@ -275,6 +332,9 @@ async function main() {
                     if (!skipStadium) {
                         totalToTranslate += countSectionItems(patchData.sections.stadium);
                     }
+                    if (patchData.sections.arcade) {
+                        totalToTranslate += countSectionItems(patchData.sections.arcade);
+                    }
                     if (!skipGeneral && patchData.sections.gameBase) {
                         totalToTranslate += countSectionItems(patchData.sections.gameBase);
                     }
@@ -296,6 +356,9 @@ async function main() {
                         if (!skipStadium) {
                             patchData.sections.stadium = await translateSection(patchData.sections.stadium, onProgress);
                         }
+                        if (patchData.sections.arcade) {
+                            patchData.sections.arcade = await translateSection(patchData.sections.arcade, onProgress);
+                        }
                         if (!skipGeneral && patchData.sections.gameBase) {
                             patchData.sections.gameBase = await translateSection(patchData.sections.gameBase, onProgress);
                         }
@@ -303,7 +366,13 @@ async function main() {
                             log('Traduciendo corrección de errores (Bug Fixes)...');
                             patchData.sections.bugFixes = await translateBatch(patchData.sections.bugFixes, onProgress);
                         }
-                        patchData.translated = true;
+                        const failures = getTranslationFailures();
+                        // Si algún texto se quedó en inglés, no marcar como traducido para reintentarlo en la próxima ejecución
+                        patchData.translated = failures === 0;
+                        patchData.translationSource = 'machine';
+                        if (failures > 0) {
+                            log(`${failures} textos no se pudieron traducir y se quedan en inglés. Se reintentará en la próxima ejecución.`, 'warn');
+                        }
 
                         const durationMs = Date.now() - startTime;
                         const seconds = Math.floor(durationMs / 1000);

@@ -446,7 +446,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6a0087882feb24e09ab4827fbadb87f34ef570a1dad65373e2c8ee9e3808e77.png"
               },
               {
-                "title": "apuntar",
+                "title": "Apuntar",
                 "type": "buff",
                 "details": [
                   "La recuperación se redujo de 0,5 a 0,4.",
@@ -472,7 +472,7 @@
                 "title": "La cosecha",
                 "type": "buff",
                 "details": [
-                  "El robo de vida aumentó del 25% al ​​30%."
+                  "El robo de vida aumentó del 25% al 30%."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6efc2a1bddf6bdafd95d6bf650bea70fe83d45000c400a1eaa6a86b042ef0a5.png"
               }

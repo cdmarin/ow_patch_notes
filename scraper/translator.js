@@ -20,6 +20,70 @@ function getFormattedTimestamp() {
 let useGoogleTranslate = true; // Por defecto usar Google Translate
 let googleTranslateBlocked = false; // Indica si Google Translate ha sido bloqueado temporalmente (429)
 
+// Número de textos que no se pudieron traducir (se devolvió el original en inglés).
+// El scraper lo usa para no marcar un parche como traducido si algo falló.
+let translationFailures = 0;
+
+function resetTranslationFailures() {
+    translationFailures = 0;
+}
+
+function getTranslationFailures() {
+    return translationFailures;
+}
+
+const MYMEMORY_MAX_CHARS = 450; // MyMemory rechaza consultas de más de 500 bytes
+
+/**
+ * Limpia la salida del traductor automático:
+ * - Elimina caracteres invisibles (U+200B...) que Google inserta, sobre todo junto a números.
+ * - Colapsa espacios repetidos.
+ * - Conserva la mayúscula inicial del original (Google devuelve "apuntar" para "Take Aim").
+ */
+function normalizeTranslation(original, translated) {
+    if (typeof translated !== 'string') return translated;
+    let out = translated
+        .replace(/[\u200B-\u200D\u2060\uFEFF]/g, '')
+        .replace(/[ \t\u00A0]{2,}/g, ' ')
+        .trim();
+
+    const firstOriginal = (original || '').trim().charAt(0);
+    if (firstOriginal && firstOriginal === firstOriginal.toUpperCase() && firstOriginal !== firstOriginal.toLowerCase()) {
+        out = out.charAt(0).toUpperCase() + out.slice(1);
+    }
+    return out;
+}
+
+/**
+ * Divide un texto en trozos de como máximo maxLen caracteres, cortando por frases.
+ */
+function splitIntoChunks(text, maxLen) {
+    if (text.length <= maxLen) return [text];
+    const sentences = text.match(/[^.!?\n]+[.!?]*\s*|\n+/g) || [text];
+    const chunks = [];
+    let current = '';
+    for (const sentence of sentences) {
+        if ((current + sentence).length > maxLen && current) {
+            chunks.push(current);
+            current = '';
+        }
+        if (sentence.length > maxLen) {
+            // Frase demasiado larga: cortar por palabras
+            for (const word of sentence.split(/(\s+)/)) {
+                if ((current + word).length > maxLen && current) {
+                    chunks.push(current);
+                    current = '';
+                }
+                current += word;
+            }
+        } else {
+            current += sentence;
+        }
+    }
+    if (current) chunks.push(current);
+    return chunks;
+}
+
 /**
  * Inicializa el traductor.
  */
@@ -37,6 +101,7 @@ async function initTranslator() {
 
 /**
  * Traduce un texto de inglés a español usando la API de LibreTranslate.
+ * Devuelve null si falla.
  */
 async function translateTextWithLibreTranslate(text) {
     if (!text || text.trim() === '') return text;
@@ -56,25 +121,42 @@ async function translateTextWithLibreTranslate(text) {
     } catch (error) {
         console.warn(`⚠️  Error con LibreTranslate: "${text.substring(0, 50)}..."`, error.message);
     }
-    return text;
+    return null;
 }
 
 /**
  * Traduce un texto de inglés a español usando la API de MyMemory.
+ * Devuelve null si falla (incluye cuota agotada o texto demasiado largo, que MyMemory
+ * devuelve como si fueran la traducción: "MYMEMORY WARNING...", "QUERY LENGTH LIMIT...").
  */
 async function translateTextWithMyMemory(text) {
     if (!text || text.trim() === '') return text;
-    try {
-        const email = process.env.MYMEMORY_EMAIL || 'carlosalcuadrado2@gmail.com';
-        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|es&de=${encodeURIComponent(email)}`;
-        const response = await axios.get(url, { timeout: 10000 });
-        if (response.data && response.data.responseData && response.data.responseData.translatedText) {
-            return response.data.responseData.translatedText;
+    const email = process.env.MYMEMORY_EMAIL || 'carlosalcuadrado2@gmail.com';
+    const parts = [];
+    for (const chunk of splitIntoChunks(text, MYMEMORY_MAX_CHARS)) {
+        if (chunk.trim() === '') {
+            parts.push(chunk);
+            continue;
         }
-    } catch (error) {
-        console.warn(`⚠️  Error con MyMemory Translate: "${text.substring(0, 50)}..."`, error.message);
+        try {
+            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk.trim())}&langpair=en|es&de=${encodeURIComponent(email)}`;
+            const response = await axios.get(url, { timeout: 10000 });
+            const data = response.data || {};
+            const translated = data.responseData && data.responseData.translatedText;
+            const status = Number(data.responseStatus);
+            if (!translated || (status && status !== 200) || /MYMEMORY WARNING|QUERY LENGTH LIMIT|INVALID LANGUAGE PAIR/i.test(translated)) {
+                console.warn(`⚠️  MyMemory no devolvió una traducción válida (status ${data.responseStatus}): "${chunk.substring(0, 50)}..."`);
+                return null;
+            }
+            const leading = chunk.match(/^\s*/)[0];
+            const trailing = chunk.match(/\s*$/)[0];
+            parts.push(leading + translated + trailing);
+        } catch (error) {
+            console.warn(`⚠️  Error con MyMemory Translate: "${chunk.substring(0, 50)}..."`, error.message);
+            return null;
+        }
     }
-    return text;
+    return parts.join('');
 }
 
 const TRANSLATION_OVERRIDES = {
@@ -97,6 +179,19 @@ const TRANSLATION_OVERRIDES = {
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
 
+    const translated = await translateTextRaw(text);
+    if (translated === null || translated === undefined) {
+        translationFailures++;
+        return text;
+    }
+    return normalizeTranslation(text, translated);
+}
+
+/**
+ * Pide la traducción a los servicios disponibles. Devuelve null si ninguno funcionó.
+ */
+async function translateTextRaw(text) {
+
     const trimmedLower = text.toLowerCase().trim();
     if (TRANSLATION_OVERRIDES[trimmedLower]) {
         return TRANSLATION_OVERRIDES[trimmedLower];
@@ -114,8 +209,9 @@ async function translateText(text) {
         try {
             const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=es&dt=t&q=${encodeURIComponent(text)}`;
             const response = await axios.get(url, { timeout: 10000 });
-            if (response.data && response.data[0]) {
-                return response.data[0].map(item => item[0]).join('');
+            if (response.data && Array.isArray(response.data[0])) {
+                const joined = response.data[0].map(item => item[0]).filter(Boolean).join('');
+                if (joined.trim()) return joined;
             }
         } catch (error) {
             const is429 = error.response && (error.response.status === 429 || error.response.status === 403);
@@ -153,6 +249,7 @@ async function translateBatch(texts, onProgress) {
             return results;
         } catch (error) {
             console.warn(`⚠️  Error en traducción batch con Google Translate:`, error.message);
+            translationFailures += texts.length;
             return texts; // Retornar originales en caso de error
         }
     }
@@ -227,6 +324,7 @@ async function translateHero(heroData) {
         return translated;
     } catch (error) {
         console.warn(`⚠️  Error con traducción batch de héroe (${heroData.name}):`, error.message);
+        translationFailures++;
         return heroData; // Fallback al original sin traducir en caso de error fatal
     }
 }
@@ -272,4 +370,13 @@ async function translateSection(section, onProgress) {
     return translated;
 }
 
-module.exports = { translateText, translateBatch, translateHero, translateSection, initTranslator };
+module.exports = {
+    translateText,
+    translateBatch,
+    translateHero,
+    translateSection,
+    initTranslator,
+    normalizeTranslation,
+    resetTranslationFailures,
+    getTranslationFailures
+};

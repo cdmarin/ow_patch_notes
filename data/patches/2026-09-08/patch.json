@@ -267,7 +267,7 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
             "changes": [
               {
-                "title": "resplandor bailando",
+                "title": "Resplandor bailando",
                 "type": "nerf",
                 "details": [
                   "Se redujo la cantidad de efectos visuales que ven los enemigos cuando son impactados por Dancing Blaze."
@@ -293,7 +293,7 @@
                 "title": "Aluvión implacable – Beneficio menor",
                 "type": "nerf",
                 "details": [
-                  "Los pernos automáticos reembolsados ​​se redujeron de 8 a 5."
+                  "Los pernos automáticos reembolsados se redujeron de 8 a 5."
                 ]
               },
               {
@@ -305,7 +305,7 @@
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6a0087882feb24e09ab4827fbadb87f34ef570a1dad65373e2c8ee9e3808e77.png"
               },
               {
-                "title": "apuntar",
+                "title": "Apuntar",
                 "type": "nerf",
                 "details": [
                   "El daño de explosión del rayo explosivo se redujo de 80 a 75.",
@@ -324,7 +324,7 @@
                 "title": "Nitro Boost – Beneficio menor",
                 "type": "nerf",
                 "details": [
-                  "La velocidad adicional se redujo del 125% al ​​100%."
+                  "La velocidad adicional se redujo del 125% al 100%."
                 ]
               },
               {
@@ -546,7 +546,7 @@
                 "title": "Corriente Restaurativa",
                 "type": "adjust",
                 "details": [
-                  "La tasa de regeneración aumentó del 12,5% al ​​15% por segundo.",
+                  "La tasa de regeneración aumentó del 12,5% al 15% por segundo.",
                   "El tiempo de espera de la línea de visión se redujo de 5 a 3 segundos."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f4d4b3abcf4581b0cfb268f571aa1e657533c294d475043b8ef0ca0d3e9696b0.png"
