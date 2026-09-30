@@ -206,6 +206,15 @@ export async function loadPatch(patchId) {
     state.translatedPatch = await loadPatchData(patchId);
     state.originalPatch = null;
     await applyLanguage(patchId);
+    if (state.originalPatch === null) {
+        // Comprobar en segundo plano si hay original en inglés para activar/desactivar el botón
+        const translatedPatch = state.translatedPatch;
+        loadOriginalPatchData(patchId).then(original => {
+            if (state.translatedPatch !== translatedPatch) return; // Se cambió de parche mientras tanto
+            state.originalPatch = original || false;
+            updateLangToggleUI();
+        });
+    }
     const patchData = state.currentPatch;
 
     // Seleccionar por defecto la primera sección que tenga contenido
