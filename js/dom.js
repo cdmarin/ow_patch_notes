@@ -1,7 +1,6 @@
 let _patchHeaderCard = null;
 
 export const dom = {
-    get progressBar() { return document.getElementById('progress-bar'); },
     get loadingOverlay() { return document.getElementById('loading-overlay'); },
     get patchSelect() { return document.getElementById('patch-select'); },
     get refreshBtn() { return document.getElementById('refresh-btn'); },

@@ -23,16 +23,6 @@ import {
     switchRole
 } from './js/handlers.js';
 
-// ─── Scroll Progress Bar ──────────────────────────────────────────────────────
-function initScrollProgress() {
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        dom.progressBar.style.width = `${pct}%`;
-    });
-}
-
 // ─── Theme Management ─────────────────────────────────────────────────────────
 export function updateThemeUI(isLight) {
     if (isLight) {
@@ -246,8 +236,6 @@ export async function init(skipLoadingPatch = false) {
     }
     updateThemeUI(savedTheme === 'light');
     state.language = getSavedLanguage();
-
-    initScrollProgress();
 
     const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
     if (isStaticMode) {

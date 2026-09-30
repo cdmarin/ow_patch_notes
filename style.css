@@ -130,20 +130,6 @@ a { color: var(--accent); }
 .role-support { --rc: var(--support); }
 .role-general { --rc: var(--accent); }
 
-/* ─── Barra de progreso de lectura ──────────────────────────────────────── */
-
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    height: 2px;
-    width: 0;
-    background: var(--accent);
-    box-shadow: 0 0 10px var(--accent);
-    transition: width 0.1s linear;
-}
-
 /* ─── Cabecera ──────────────────────────────────────────────────────────── */
 
 header {
