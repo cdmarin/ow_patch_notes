@@ -33,11 +33,11 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se ha corregido un error que provocaba que los títulos de las Ofensivas por equipos incluyesen texto provisional.",
-      "Se ha corregido un error que podía provocaba que los niveles de prestigio de los distintivos de Ofensivas cambiasen tras las Ofensivas por equipos.",
-      "Se ha corregido un error que afectaba a la mira del aspecto Metalcore de Ashe."
+      "Fixed a bug where Team Drives titles showed placeholder text.",
+      "Fixed a bug where Drive Signature prestige levels may have changed after Team Drives.",
+      "Fixed a bug with the scope on Ashe's Metalcore skin."
     ]
   },
-  "translated": true,
-  "translationSource": "official"
+  "translated": false,
+  "language": "en"
 }

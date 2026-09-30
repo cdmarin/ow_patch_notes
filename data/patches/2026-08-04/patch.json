@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "¡Hola héroes! Estamos aquí hoy para informarles a todos sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados dentro de nuestras comunidades de consolas, a menudo denominados uso de XIM o Ximming. Si bien nuestros esfuerzos para combatir esta forma de ventaja injusta en el juego son constantes y continuos, hoy marca la culminación de un esfuerzo de meses para identificar y prohibir más de 6000 cuentas que hemos identificado por utilizar periféricos no autorizados.",
+      "intro": "Saludos, Estamos aquí para informaros sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados en la comunidad de consolas, una práctica conocida como XIM o Ximming. Aunque no descansamos en nuestra lucha contra esta práctica injusta, hoy culmina un esfuerzo de varios meses que nos han permitido identificar y suspender más de 6000 cuentas que utilizaban este tipo de periféricos no autorizados.",
       "roles": {
         "Tanque": [],
         "Daño": [],
@@ -31,15 +31,15 @@
       "generalItems": [
         {
           "name": "General",
-          "desc": "¡Hola héroes! Estamos aquí hoy para informarles a todos sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados dentro de nuestras comunidades de consolas, a menudo denominados uso de XIM o Ximming. Si bien nuestros esfuerzos para combatir esta forma de ventaja injusta en el juego son constantes y continuos, hoy marca la culminación de un esfuerzo de meses para identificar y prohibir más de 6000 cuentas que hemos identificado por utilizar periféricos no autorizados.\n\nParte de lo que dificulta la identificación de los periféricos no autorizados utilizados por estas cuentas es que estos dispositivos fraudulentos a menudo abusan intencionalmente de las asignaciones que hacemos para los dispositivos centrados en la accesibilidad utilizados por jugadores legítimos con discapacidades. Este problema significaba que queríamos tomarnos nuestro tiempo y asegurarnos de identificar con precisión los dispositivos no autorizados. Ahora estamos seguros de haberlo hecho y hemos puesto fin a los jugadores que utilizan estos dispositivos.\n\nGracias por tomarse el tiempo hoy para escuchar nuestra actualización sobre periféricos no autorizados. ¡Hasta la próxima, juega bien, juega limpio y nos vemos en el juego!",
+          "desc": "Saludos, Estamos aquí para informaros sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados en la comunidad de consolas, una práctica conocida como XIM o Ximming. Aunque no descansamos en nuestra lucha contra esta práctica injusta, hoy culmina un esfuerzo de varios meses que nos han permitido identificar y suspender más de 6000 cuentas que utilizaban este tipo de periféricos no autorizados.\n\nParte de la dificultad para identificar los periféricos empleados por estas cuentas radica en que estos dispositivos de trampas suelen aprovecharse deliberadamente de las excepciones que permitimos para los dispositivos para una mejor accesibilidad que usan los jugadores con algún tipo de discapacidad. Este hecho ha hecho que quisiéramos tomarnos el tiempo necesario para asegurarnos de identificar con precisión cuáles eran los dispositivos no autorizados. Ahora, ya sabemos a ciencia cierta que lo hemos conseguido y hemos tomado medidas contundentes contra los jugadores que usaban este tipo de dispositivos.\n\nGracias por dedicar un momento a leer esta actualización sobre periféricos no autorizados. Nos vemos a la próxima, jugad limpio, con deportividad ¡y nos vemos en el juego!",
           "changes": [
             {
               "title": "General",
               "type": "adjust",
               "details": [
-                "¡Hola héroes! Estamos aquí hoy para informarles a todos sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados dentro de nuestras comunidades de consolas, a menudo denominados uso de XIM o Ximming. Si bien nuestros esfuerzos para combatir esta forma de ventaja injusta en el juego son constantes y continuos, hoy marca la culminación de un esfuerzo de meses para identificar y prohibir más de 6000 cuentas que hemos identificado por utilizar periféricos no autorizados.",
-                "Parte de lo que dificulta la identificación de los periféricos no autorizados utilizados por estas cuentas es que estos dispositivos fraudulentos a menudo abusan intencionalmente de las asignaciones que hacemos para los dispositivos centrados en la accesibilidad utilizados por jugadores legítimos con discapacidades. Este problema significaba que queríamos tomarnos nuestro tiempo y asegurarnos de identificar con precisión los dispositivos no autorizados. Ahora estamos seguros de haberlo hecho y hemos puesto fin a los jugadores que utilizan estos dispositivos.",
-                "Gracias por tomarse el tiempo hoy para escuchar nuestra actualización sobre periféricos no autorizados. ¡Hasta la próxima, juega bien, juega limpio y nos vemos en el juego!"
+                "Saludos, Estamos aquí para informaros sobre nuestros esfuerzos para combatir el uso de periféricos no autorizados en la comunidad de consolas, una práctica conocida como XIM o Ximming. Aunque no descansamos en nuestra lucha contra esta práctica injusta, hoy culmina un esfuerzo de varios meses que nos han permitido identificar y suspender más de 6000 cuentas que utilizaban este tipo de periféricos no autorizados.",
+                "Parte de la dificultad para identificar los periféricos empleados por estas cuentas radica en que estos dispositivos de trampas suelen aprovecharse deliberadamente de las excepciones que permitimos para los dispositivos para una mejor accesibilidad que usan los jugadores con algún tipo de discapacidad. Este hecho ha hecho que quisiéramos tomarnos el tiempo necesario para asegurarnos de identificar con precisión cuáles eran los dispositivos no autorizados. Ahora, ya sabemos a ciencia cierta que lo hemos conseguido y hemos tomado medidas contundentes contra los jugadores que usaban este tipo de dispositivos.",
+                "Gracias por dedicar un momento a leer esta actualización sobre periféricos no autorizados. Nos vemos a la próxima, jugad limpio, con deportividad ¡y nos vemos en el juego!"
               ]
             }
           ]
@@ -50,5 +50,6 @@
     "system": [],
     "bugFixes": []
   },
-  "translated": true
+  "translated": true,
+  "translationSource": "official"
 }

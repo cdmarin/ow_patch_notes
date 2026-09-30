@@ -219,7 +219,7 @@ function parseSections($, container, trace) {
         'd.va': 'Tanque', 'dva': 'Tanque', 'doomfist': 'Tanque', 'junker queen': 'Tanque', 'junker-queen': 'Tanque',
         'mauga': 'Tanque', 'orisa': 'Tanque', 'ramattra': 'Tanque', 'reinhardt': 'Tanque', 'roadhog': 'Tanque',
         'sigma': 'Tanque', 'winston': 'Tanque', 'wrecking ball': 'Tanque', 'wrecking-ball': 'Tanque', 'zarya': 'Tanque',
-        'hazard': 'Tanque', 'domina': 'Tanque',
+        'hazard': 'Tanque', 'domina': 'Tanque', 'd.mon': 'Tanque', 'dmon': 'Tanque',
 
         // Damage
         'ashe': 'Daño', 'bastion': 'Daño', 'cassidy': 'Daño', 'echo': 'Daño', 'genji': 'Daño',
@@ -532,6 +532,13 @@ function parseHTML(html, defaultDate, options = {}) {
             const $patch = $(patchEl);
             const title = $patch.find('.PatchNotes-patchTitle, h3, h4').first().text().trim();
             const titleDate = parseDateFromTitle(title);
+            // Un bloque sin fecha en una página con varios parches suele ser un comunicado
+            // ("Update on Unauthorized Peripheral Usage..."). Inventarle una fecha creaba una
+            // copia "nueva" en cada ejecución diaria, así que se omite.
+            if (!titleDate && patchElements.length > 1) {
+                console.log(`⚠️  Se omite "${title}": no tiene fecha en el título.`);
+                return;
+            }
             const date = titleDate || defaultDate || new Date().toISOString().split('T')[0];
             const version = parseVersion($, $patch);
 

@@ -13,10 +13,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
             "changes": [
               {
-                "title": "Eyector MEKA - Potencia",
+                "title": "Eyector de MEKA (poder)",
                 "type": "nerf",
                 "details": [
-                  "La reducción del coste de la Carga definitiva aumentó al 60 % (en lugar del 50 %)."
+                  "Se ha aumentado la reducción del coste de carga de la definitiva del 50 % a un 60 %."
                 ]
               }
             ]
@@ -27,10 +27,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
             "changes": [
               {
-                "title": "Córtalos Gracie - Poder",
+                "title": "¡Raja, Gracie, raja! (poder)",
                 "type": "nerf",
                 "details": [
-                  "El daño de retorno se redujo a 30 (en lugar de 40)."
+                  "Se ha reducido el daño al recuperar el arma de 40 a 30."
                 ]
               }
             ]
@@ -43,10 +43,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
             "changes": [
               {
-                "title": "Laceración - Poder",
+                "title": "Laceración (poder)",
                 "type": "nerf",
                 "details": [
-                  "La reducción del tiempo de reutilización por objetivo aumentó a 2,5 s (en lugar de 2 s)."
+                  "Se ha aumentado la reducción del tiempo de reutilización de 2 s a 2,5 s."
                 ]
               }
             ]
@@ -57,10 +57,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
             "changes": [
               {
-                "title": "Sed de sangre de Apex - Poder",
+                "title": "Sed de sangre suprema (poder)",
                 "type": "nerf",
                 "details": [
-                  "El robo de vida por acumulación se redujo al 4% (en lugar del 5%)."
+                  "Se ha reducido el robo de salud por acumulación del 5 % a un 4 %."
                 ]
               }
             ]
@@ -73,11 +73,11 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
             "changes": [
               {
-                "title": "Halconero - Poder",
+                "title": "Halconero (poder)",
                 "type": "nerf",
                 "details": [
-                  "La bonificación de velocidad de ataque aumentó al 50% (en lugar del 30%).",
-                  "La ganancia de carga definitiva se redujo al 10 % (en lugar del 25 %)."
+                  "Se ha aumentado la bonificación de velocidad de ataque del 30 % a un 50 %.",
+                  "Se ha reducido la carga de la definitiva del 25 % a un 10 %."
                 ]
               }
             ]
@@ -88,10 +88,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
             "changes": [
               {
-                "title": "Territorial - Poder",
+                "title": "Territorial (poder)",
                 "type": "nerf",
                 "details": [
-                  "Daño reducido al 20% de la curación (en lugar del 30%)."
+                  "Se ha reducido el daño del 30 % a un 20 %."
                 ]
               }
             ]
@@ -115,48 +115,48 @@
         "Tanque": [
           {
             "name": "D.Mon",
-            "desc": "Comentarios de los desarrolladores: D.Mon se ha posicionado en una posición sólida desde su lanzamiento. Estamos reduciendo el tiempo de transformación de Call Mech para que coincida con el de D.Va mientras ajustamos el Repetidor Fusion portátil para mejorar la precisión y reducir la efectividad a distancias más largas. También estamos reduciendo el daño de Plasma Sabre para ayudar a compensar estas mejoras.",
+            "desc": "Comentarios de los desarrolladores: D.Mon se ha colocado en una posición fuerte desde el lanzamiento. Vamos a reducir el tiempo de transformación del meca para igualarlo con el de D.Va, además de ajustar Cañón automático de fusión portátil para mejorar la puntería y reducir su eficacia a grandes distancias. También reducimos el daño de Sable de plasma para compensar estas mejoras.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
             "changes": [
               {
-                "title": "Armadura reducida de 325 a 300. (6v6)",
+                "title": "Se ha reducido la armadura base de 325 a 300. (6c6)",
                 "type": "nerf",
                 "details": [
-                  "Armadura reducida de 325 a 300. (6v6)"
+                  "Se ha reducido la armadura base de 325 a 300. (6c6)"
                 ]
               },
               {
                 "title": "Sable de plasma",
                 "type": "nerf",
                 "details": [
-                  "Daño reducido de 65 a 60."
+                  "Se ha reducido el daño de 65 a 60."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5b8ae7f23071c20d472d55243ddebe666c361bab598c18e12161b8415ee058de.png"
               },
               {
-                "title": "Barrera de poder",
+                "title": "Barrera de energía",
                 "type": "buff",
                 "details": [
-                  "El tiempo de lanzamiento disminuyó de 0,065 s a 0,016 s.",
-                  "Muescas en el costado del escudo de tamaño reducido."
+                  "Se ha reducido el tiempo de lanzamiento de 0,065 s a 0,016 s.",
+                  "Se ha reducido el tamaño de las muescas laterales del escudo."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc4fc3dc561102b6469a81771190f915f07ac7186b1c9597451018f885c6b99c.png"
               },
               {
-                "title": "Llamar mecánico",
+                "title": "Meca",
                 "type": "adjust",
                 "details": [
-                  "La duración de la transformación se ha reducido de 1,95 a 0,95 segundos.",
-                  "Se agregó una nueva animación de inicio en primera persona que dura 1 segundo."
+                  "Se ha reducido la duración de la transformación de 1,95 s a 0,95 s.",
+                  "Se ha añadido una animación del arranque en primera persona de 1 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/751219a659df8c345ade932ed66dea60bdc844c71c2c185d64bcea83ea8c1ae2.png"
               },
               {
-                "title": "Repetidor de fusión portátil",
+                "title": "Cañón automático de fusión portátil",
                 "type": "buff",
                 "details": [
-                  "La extensión se redujo de 2 a 1,75 grados.",
-                  "El alcance mínimo de caída se redujo de 30 a 20 metros."
+                  "Se ha reducido la dispersión de 2 a 1,75 grados.",
+                  "Se ha reducido la distancia mínima de declive de 30 m a 20 m."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bedcca9c4d45135065757cd2f5ff48137b9694159ea5929959efa63e9a45dac7.png"
               }
@@ -164,51 +164,51 @@
           },
           {
             "name": "D.Va",
-            "desc": "Comentarios de los desarrolladores: Estamos aumentando la salud base de D.Va para mejorar su durabilidad sin hacer ajustes a su matriz de defensa.",
+            "desc": "Comentarios de los desarrolladores: Vamos a aumentar la salud base de D.Va para mejorar su resistencia sin aplicar ajustes a su Matriz de defensa.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
             "changes": [
               {
-                "title": "La salud base del Mech aumentó de 175 a 200. (5v5)",
+                "title": "Se ha aumentado la salud base del meca de 175 a 200. (5c5)",
                 "type": "buff",
                 "details": [
-                  "La salud base del Mech aumentó de 175 a 200. (5v5)"
+                  "Se ha aumentado la salud base del meca de 175 a 200. (5c5)"
                 ]
               }
             ]
           },
           {
             "name": "Domina",
-            "desc": "Comentarios de los desarrolladores: La habilidad definitiva de Domina es disruptiva, pero no siempre tiene consecuencias en relación con el tiempo necesario para conseguirla. Estamos reduciendo su costo para que esté disponible con mayor frecuencia.",
+            "desc": "Comentarios de los desarrolladores: La definitiva de Domina es muy potente, pero no siempre guarda relación con el tiempo que se tarda en conseguirla. Vamos a reducir su coste para que esté disponible con más frecuencia.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
             "changes": [
               {
-                "title": "El costo final se redujo en un 6 %.",
+                "title": "Se ha reducido el coste de la definitiva un 6 %.",
                 "type": "buff",
                 "details": [
-                  "El costo final se redujo en un 6 %."
+                  "Se ha reducido el coste de la definitiva un 6 %."
                 ]
               }
             ]
           },
           {
             "name": "Mauga",
-            "desc": "Comentarios de los desarrolladores: Mauga sigue teniendo una gran durabilidad y daño. Revertiremos el ajuste de dispersión realizado en las Chainguns de un solo disparo y, al mismo tiempo, reduciremos la efectividad de disparar ambas armas a distancias más largas. Además de la reducción de su armadura, estos cambios reducirán tanto la capacidad de supervivencia como la letalidad.",
+            "desc": "Comentarios de los desarrolladores: Mauga sigue teniendo gran resistencia y daño. Vamos a deshacer el ajuste de dispersión que aplicamos a un solo disparo de las metralletas y a reducir la eficacia al disparar ambas armas a grandes distancias. Estos cambios, junto con la reducción de su armadura, rebajarán tanto su supervivencia como su peligrosidad.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
             "changes": [
               {
-                "title": "Armadura base reducida de 150 a 125.",
+                "title": "Se ha reducido la armadura base de 150 a 125.",
                 "type": "nerf",
                 "details": [
-                  "Armadura base reducida de 150 a 125."
+                  "Se ha reducido la armadura base de 150 a 125."
                 ]
               },
               {
                 "title": "Metralletas",
                 "type": "adjust",
                 "details": [
-                  "La dispersión máxima al disparar un solo arma volvió de 1,5 a 1 grado.",
-                  "La dispersión máxima al disparar ambas armas aumentó de 4 a 5 grados.",
-                  "El alcance mínimo de caída de daño al disparar ambas armas se redujo de 15 a 10 metros."
+                  "Se ha vuelto a reducir la dispersión máxima al disparar una sola arma de 1,5 a 1 grado.",
+                  "Se ha aumentado la dispersión máxima al disparar ambas armas de 4 a 5 grados.",
+                  "Se ha reducido la distancia mínima de declive al disparar ambas armas de 15 m a 10 m."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/394d59489428fba7664bdf61e3bec0798b12c2957f2a733fb54a213848db4282.png"
               }
@@ -216,15 +216,15 @@
           },
           {
             "name": "Winston",
-            "desc": "Comentarios de los desarrolladores: El tiempo de reutilización del Proyector de barrera de Winston se está reduciendo para acortar el tiempo de inactividad entre enfrentamientos. Para compensar la mayor disponibilidad, también se reducirá su duración.",
+            "desc": "Comentarios de los desarrolladores: El tiempo de reutilización de Campo de fuerza de Winston se va a reducir para disminuir la inactividad entre usos. Para compensar esta mayor disponibilidad, también se reducirá su duración.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
             "changes": [
               {
-                "title": "Proyector de barrera",
+                "title": "Campo de fuerza",
                 "type": "buff",
                 "details": [
-                  "El tiempo de reutilización se redujo de 12 a 10 segundos. (5v5)",
-                  "Duración reducida de 8 a 7 segundos."
+                  "Se ha reducido el tiempo de reutilización de 12 s a 10 s. (5c5)",
+                  "Se ha reducido la duración de 8 s a 7 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/37fc72590a04cbcc4d8ddc3b839e853640a617bad0b6ce8904f6ebe8f07400ba.png"
               }
@@ -232,28 +232,28 @@
           },
           {
             "name": "wrecking Ball",
-            "desc": "Comentarios de los desarrolladores: La barrera adaptable le ha proporcionado a Wrecking Ball una ventana de protección demasiado larga. Estamos reduciendo su duración para poner mayor énfasis en el momento de su uso.",
+            "desc": "Comentarios de los desarrolladores: Barrera adaptativa ofrecía a Wrecking Ball un tiempo de protección demasiado prolongado. Vamos a reducir su duración para poner más énfasis en calcular su momento de uso.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
             "changes": [
               {
-                "title": "Barrera adaptativa: ventaja importante",
+                "title": "Barrera adaptativa (ventaja mayor)",
                 "type": "nerf",
                 "details": [
-                  "Duración reducida de 1,5 a 1 segundo."
+                  "Se ha reducido la duración de 1,5 s a 1 s."
                 ]
               }
             ]
           },
           {
             "name": "Zarya",
-            "desc": "Comentarios de los desarrolladores: El tiempo de reutilización de Barrera de partículas se está incrementando para reducir el tiempo de actividad de la barrera personal y la generación de energía de Zarya. La barrera proyectada permanece sin cambios, lo que fomenta un uso más proactivo por parte de los aliados.",
+            "desc": "Comentarios de los desarrolladores: El tiempo de reutilización de Barrera de partículas se va a aumentar para reducir el tiempo activo de la barrera personal de Zarya y su generación de energía. Barrera proyectada seguirá igual para estimular un uso más proactivo con los aliados.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
             "changes": [
               {
                 "title": "Barrera de partículas",
                 "type": "nerf",
                 "details": [
-                  "El tiempo de reutilización aumentó de 11 a 12 segundos. (5v5)"
+                  "Se ha aumentado el tiempo de reutilización de 11 s a 12 s. (5c5)"
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2311738a2f08aa2e72198b01ef5131337d39275fe0722143e53509592b22612a.png"
               }
@@ -263,14 +263,14 @@
         "Daño": [
           {
             "name": "Anran",
-            "desc": "Comentarios de los desarrolladores: Dancing Blaze puede generar un desorden visual significativo, lo que hace que sea difícil seguir a Anran durante el combate. Estamos eliminando los clones visuales visibles para los oponentes para mejorar la claridad. El tiempo de lanzamiento de Vermillion Revival también se reducirá para acortar la ventana que tienen los oponentes para reaccionar.",
+            "desc": "Comentarios de los desarrolladores: Llama danzante puede generar bastante ruido visual, y eso impide ver bien a Anran durante el combate. Vamos a eliminar los clones que ven los oponentes para mejorar la visibilidad. También se reduce el tiempo de lanzamiento de Renacimiento bermellón para que los oponentes tengan menos ocasión de reaccionar.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
             "changes": [
               {
-                "title": "Resplandor bailando",
+                "title": "Llama danzante",
                 "type": "nerf",
                 "details": [
-                  "Se redujo la cantidad de efectos visuales que ven los enemigos cuando son impactados por Dancing Blaze."
+                  "Se ha reducido la cantidad de efectos visuales que ven los enemigos cuando les afecta Llama danzante."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8a106a2acae1b9edf47495af102cf17fd7e8320c76b201d533f5723afc45d14.png"
               },
@@ -278,7 +278,7 @@
                 "title": "Renacimiento bermellón",
                 "type": "buff",
                 "details": [
-                  "El tiempo de lanzamiento se redujo de 3 a 2,5 segundos."
+                  "Se ha reducido el tiempo de lanzamiento de 3 s a 2,5 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9060d9e2e407a31ab95948e6512373a4318ebd8883aefa91e9f2fa9bbffb7076.png"
               }
@@ -286,30 +286,30 @@
           },
           {
             "name": "Freja",
-            "desc": "Comentarios de los desarrolladores: Los cambios recientes han aumentado significativamente el daño producido por Freja. Estamos reduciendo el daño de Revdraw Crossbow y Take Aim, al mismo tiempo que reducimos la efectividad de Relentless Barrage. Los efectos de sonido de impacto de Explosive Bolt también se han reducido para disminuir el desorden de audio cuando se golpea repetidamente.",
+            "desc": "Comentarios de los desarrolladores: Los últimos cambios han aumentado considerablemente el daño de Freja. Vamos a reducir el daño de la ballesta rapaz y de Apuntado, además de disminuir la eficacia de Andanada implacable. También se han reducido los efectos de sonido del impacto del virote explosivo para evitar el amontonamiento de sonidos cuando hay varios impactos.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
             "changes": [
               {
-                "title": "Aluvión implacable – Beneficio menor",
+                "title": "Andanada implacable (ventaja menor)",
                 "type": "nerf",
                 "details": [
-                  "Los pernos automáticos reembolsados se redujeron de 8 a 5."
+                  "Se ha reducido la cantidad de virotes automáticos recargados de 8 a 5."
                 ]
               },
               {
-                "title": "Ballesta Revdraw",
+                "title": "Ballesta rapaz",
                 "type": "nerf",
                 "details": [
-                  "Daño reducido de 30 a 28."
+                  "Se ha reducido el daño de 30 a 28."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6a0087882feb24e09ab4827fbadb87f34ef570a1dad65373e2c8ee9e3808e77.png"
               },
               {
-                "title": "Apuntar",
+                "title": "Apuntado",
                 "type": "nerf",
                 "details": [
-                  "El daño de explosión del rayo explosivo se redujo de 80 a 75.",
-                  "Se redujeron los efectos de sonido del impacto de pernos explosivos."
+                  "Se ha reducido el daño del virote explosivo de 80 a 75.",
+                  "Se han reducido los efectos de sonido del impacto del virote explosivo."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a86fa2849d7ab515d256e390e75387e4ae306f5d64c5cf24a1ba33038da91e45.png"
               }
@@ -317,21 +317,21 @@
           },
           {
             "name": "Junkrat",
-            "desc": "Comentarios de los desarrolladores: Junkrat ha tenido dificultades para seguir siendo efectivo desde que se debilitó su combo Mina de conmoción cerebral. Estamos reduciendo el tiempo de reutilización de Concussion Mine para aumentar tanto el daño como la movilidad. La bonificación de velocidad de movimiento de Nitro Boost también se reduce para limitar las altas velocidades del máximo con el beneficio equipado.",
+            "desc": "Comentarios de los desarrolladores: Desde que debilitamos su combo con Mina de conmoción, a Junkrat le ha costado mantener su eficacia. Vamos a reducir el enfriamiento de Mina de conmoción para mejorar su daño y su movilidad. También vamos a reducir la velocidad de movimiento de Nitro para que la definitiva no alcance tanta velocidad cuando la ventaja está equipada.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
             "changes": [
               {
-                "title": "Nitro Boost – Beneficio menor",
+                "title": "Nitro (ventaja menor)",
                 "type": "nerf",
                 "details": [
-                  "La velocidad adicional se redujo del 125% al 100%."
+                  "Se ha reducido la bonificación de velocidad del 125 % a un 100 %."
                 ]
               },
               {
-                "title": "Mina de conmoción cerebral",
+                "title": "Mina de conmoción",
                 "type": "buff",
                 "details": [
-                  "El tiempo de reutilización se redujo de 8 a 7 segundos."
+                  "Tiempo de reutilización reducido de 8 a 7 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11dd2b5573ebc5ec231911d443733507e5d92822ff5b6d5dd93cd69c9827c92a.png"
               }
@@ -339,31 +339,31 @@
           },
           {
             "name": "Sierra",
-            "desc": "Comentarios de los desarrolladores: El daño producido por Sierra se ha mantenido alto desde su lanzamiento, pero la confiabilidad de su arma se ha visto limitada por el tiempo de viaje del proyectil a distancias más largas. Estamos reduciendo el daño tanto del Helix Rifle como del Tracking Shot mientras aumentamos la velocidad del proyectil para mejorar la respuesta y la consistencia del arma. El tiempo de reutilización de Tremor Charge también se reduce para que esté disponible con más frecuencia.",
+            "desc": "Comentarios de los desarrolladores: Desde el lanzamiento, Sierra siempre ha tenido un buen daño, pero la fiabilidad de sus armas estaba limitada por la duración de la trayectoria del proyectil a grandes distancias. Hemos reducido el daño del rifle hélice y de Disparo rastreador a cambio de aumentar la velocidad de proyectil para mejorar la respuesta y la regularidad del arma. También hemos reducido el tiempo de reutilización de Carga sísmica para que se pueda activar con más frecuencia.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
             "changes": [
               {
-                "title": "Rifle de hélice",
+                "title": "Rifle hélice",
                 "type": "adjust",
                 "details": [
-                  "La velocidad del proyectil del arma aumentó de 90 a 120.",
-                  "Daño reducido de 9 a 8,5."
+                  "Se ha aumentado la velocidad de proyectil de 90 a 120.",
+                  "Se ha reducido el daño de 9 a 8,5."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d12e2bc19f1619b71d13816c01ef96ad54bb6a7cb4ee00ae8bea8be3d2e2102d.png"
               },
               {
-                "title": "Toma de seguimiento",
+                "title": "Disparo rastreador",
                 "type": "nerf",
                 "details": [
-                  "Daño reducido de 9 a 8,5."
+                  "Se ha reducido el daño de 9 a 8,5."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6c77d58daaeaae211088786b8bf9bff92178ef2df3f0ca6ec9a721d6b4258e55.png"
               },
               {
-                "title": "Carga de temblor",
+                "title": "Carga sísmica",
                 "type": "buff",
                 "details": [
-                  "El tiempo de reutilización se redujo de 8,5 a 7 segundos."
+                  "Se ha reducido el tiempo de reutilización de 8,5 s a 7 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f4b141af6f5e6b6c392cdde07083f29d1b5374303c7fc39e37c3f4ed51985e52.png"
               }
@@ -371,15 +371,15 @@
           },
           {
             "name": "Symmetra",
-            "desc": "Comentarios de los desarrolladores: El teletransportador de Symmetra puede ser extremadamente efectivo en equipos coordinados, permitiendo reposicionamiento a larga distancia con oportunidades limitadas para que los oponentes respondan. Estamos reduciendo su rango de ubicación para limitar qué tan lejos pueden viajar los equipos con él, mientras aumentamos el tiempo de reutilización para que Teletransportador use un mayor compromiso.",
+            "desc": "Comentarios de los desarrolladores: La habilidad Teletransportador de Symmetra puede ser tremendamente eficaz en equipos coordinados, ya que le permite saltar grandes distancias y deja a los oponentes pocas oportunidades de respuesta. Vamos a reducir el alcance del teletransporte para que los equipos no puedan desplazarse tan lejos, además de aumentar el tiempo de reutilización para que no sea tan sencillo usar Teletransportador.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2c620d948703d0ac5e6ee3dc30fda346b0c1644aa5b318e4c78f9feebf89b68.png",
             "changes": [
               {
                 "title": "Teletransportador",
                 "type": "adjust",
                 "details": [
-                  "Rango de colocación reducido de 30 a 25 metros.",
-                  "El tiempo de reutilización de teletransporte aumentó de 1 a 1,25 segundos."
+                  "Se ha reducido el alcance del teletransporte de 30 m a 25 m.",
+                  "Se ha aumentado el tiempo de reutilización del teletransporte de 1 s a 1,25 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1c4fb9dbd9b6d02c2e75c3ad142b79955ba3e6e73469d676c79bdaef7f7a610f.png"
               }
@@ -387,21 +387,21 @@
           },
           {
             "name": "Torbjörn",
-            "desc": "Comentarios de los desarrolladores: Se está mejorando el disparo secundario de Torbjörn para aumentar su consistencia a distancias más cortas. También estamos reduciendo el alcance de lanzamiento de la torreta de Anchor Bolts para preservar la flexibilidad de la ventaja y al mismo tiempo limitar la ubicación de las torretas extremadamente distantes.",
+            "desc": "Comentarios de los desarrolladores: Vamos a mejorar el disparo secundario de Torbjörn para aumentar su fiabilidad en las distancias cortas. También vamos a reducir el alcance de lanzamiento de torretas de Pernos de anclaje para conservar la flexibilidad de esta ventaja, sin dejar que la torreta se coloque a demasiada distancia.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
             "changes": [
               {
-                "title": "Pernos de anclaje: ventaja principal",
+                "title": "Pernos de anclaje (ventaja mayor)",
                 "type": "adjust",
                 "details": [
-                  "El aumento del alcance de lanzamiento de las torretas se redujo del 50% al 25%."
+                  "Se ha reducido el aumento de distancia de lanzamiento de Desplegar torreta del 50 % a un 25 %."
                 ]
               },
               {
-                "title": "Pistola remachadora",
+                "title": "Remachadora",
                 "type": "buff",
                 "details": [
-                  "La propagación del fuego secundario se redujo de 4,5 a 4 grados."
+                  "Se ha reducido la dispersión del disparo secundario de 4,5 a 4 grados."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2020ce8ffa1d19edbfa7097499ed5763ac18500a0f76cde75cc37243fd6aab27.png"
               }
@@ -409,35 +409,50 @@
           },
           {
             "name": "Vendetta",
-            "desc": "Comentarios de los desarrolladores: Estos cambios tienen como objetivo mejorar la capacidad de respuesta del disparo principal de Vendetta sin aumentar significativamente la velocidad de su combo general. Hemos reducido los retrasos en Palatine Fang y al mismo tiempo hemos aumentado los tiempos de recuperación de Whirlwind Dash y Sundering Blade para preservar el ritmo general.",
+            "desc": "Comentarios de los desarrolladores: El propósito de estos cambios es mejorar la respuesta del disparo principal de Vendetta sin aumentar demasiado la velocidad de todo su combo. Hemos reducido los retardos de Colmillo palatino, al tiempo que aumentamos el tiempo de recuperación de Espiral de tajos y Partemundos para conservar el ritmo general.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
             "changes": [
               {
-                "title": "Colmillo Palatino",
+                "title": "Colmillo palatino",
                 "type": "adjust",
                 "details": [
-                  "El retraso del giro inicial se redujo de 0,3 a 0,15 segundos.",
-                  "La duración del movimiento horizontal se redujo de 0,25 a 0,2 segundos.",
-                  "La duración del enlace combinado aumentó de 0,75 a 0,9 segundos."
+                  "Se ha reducido el retardo del primer tajo de 0,3 s a 0,15 s.",
+                  "Se ha reducido la duración del tajo horizontal de 0,25 a 0,2 s.",
+                  "Se ha aumentado la duración del combo encadenado de 0,75 s a 0,9 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9754a770516c07712b3cbababb825972eec78c08b3fbc141dbcee31d9c58c137.png"
               },
               {
-                "title": "Carrera torbellino",
+                "title": "Espiral de tajos",
                 "type": "nerf",
                 "details": [
-                  "La recuperación aumentó de 0,5 a 0,75 segundos."
+                  "Se ha aumentado el tiempo de recuperación de 0,5 s a 0,75 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/646af7a4d6b6b65adee6543ec70b33c9ffd36989c8dd4e8b22079c6b9e074c79.png"
               },
               {
-                "title": "Hoja divisoria",
+                "title": "Partemundos",
                 "type": "adjust",
                 "details": [
-                  "La recuperación aumentó de 0,2 a 0,5 segundos.",
-                  "El paso de la cámara ya no está completamente bloqueado durante la barra."
+                  "Se ha aumentado el tiempo de recuperación de 0,2 s a 0,5 s.",
+                  "Ya no se bloquea por completo el movimiento de la cámara durante el mandoble."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/827e0c55b3d2f335f5950c676f1f52c8668ad33f34ea4c6052c4a122ac005ce8.png"
+              }
+            ]
+          },
+          {
+            "name": "Widowmaker",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/170aeb0ae3da053cbfd3b7db386db88a904745d692361a006048928cc9a1990a.png",
+            "changes": [
+              {
+                "title": "Apuntado",
+                "type": "adjust",
+                "details": [
+                  "Se han actualizado los efectos de sonido de la carga de Apuntado de Widowmaker con las armas predeterminada, mítica y de Hello Kitty. Ahora estos efectos cobran más intensidad cuando el nivel de carga pasa del 50 %."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d1a1ab39ce64160b3bd5473ad5ece8115648580158514c006c9ba1398e9a8d49.png"
               }
             ]
           }
@@ -445,16 +460,16 @@
         "Apoyo": [
           {
             "name": "Baptiste",
-            "desc": "Comentarios de los desarrolladores: El largo tiempo de reutilización de Immortality Field y su vulnerabilidad a ser destruido pueden limitar su efectividad. Estamos aumentando su salud, reduciendo su tiempo de reutilización y aumentando su umbral mínimo de salud para mejorar su confiabilidad general.",
+            "desc": "Comentarios de los desarrolladores: Campo de inmortalidad podría tener una eficacia limitada por su prolongado tiempo de reutilización y su vulnerabilidad. Vamos a aumentar su salud, reducir el tiempo de reutilización y aumentar el umbral mínimo de salud para mejorar su fiabilidad general.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
             "changes": [
               {
                 "title": "Campo de inmortalidad",
                 "type": "adjust",
                 "details": [
-                  "El umbral de salud imposible de matar aumentó del 20% al 25%.",
-                  "El tiempo de reutilización se redujo de 22 a 20 segundos.",
-                  "La salud aumentó de 125 a 150."
+                  "Se ha aumentado el umbral de salud para la inmortalidad del 20 % a un 25 %.",
+                  "Se ha reducido el tiempo de reutilización de 22 s a 20 s.",
+                  "Se ha aumentado la salud de 125 a 150."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8e586114b79ae8281255d8e5a5a48d3a855be6e88b3d7abeda93288f4fffe909.png"
               }
@@ -462,42 +477,42 @@
           },
           {
             "name": "Brigitte",
-            "desc": "Comentarios de los desarrolladores: La durabilidad de Brigitte puede verse limitada debido a que opera a corta distancia. Estamos transfiriendo una parte de su salud a una armadura para mejorar la capacidad de supervivencia.",
+            "desc": "Comentarios de los desarrolladores: La resistencia de Brigitte puede resultar limitada debido a que lucha a corta distancia. Vamos a transferir a la armadura una parte de su salud para mejorar su supervivencia.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
             "changes": [
               {
-                "title": "Salud reducida de 200 a 175.",
+                "title": "Se ha reducido la salud de 200 a 175.",
                 "type": "nerf",
                 "details": [
-                  "Salud reducida de 200 a 175."
+                  "Se ha reducido la salud de 200 a 175."
                 ]
               },
               {
-                "title": "La armadura aumentó de 50 a 75.",
+                "title": "Se ha aumentado la armadura de 50 a 75.",
                 "type": "buff",
                 "details": [
-                  "La armadura aumentó de 50 a 75."
+                  "Se ha aumentado la armadura de 50 a 75."
                 ]
               }
             ]
           },
           {
             "name": "Jetpack Cat",
-            "desc": "Comentarios de los desarrolladores: Los cambios de movimiento recientes han mejorado significativamente la movilidad y la efectividad general de Jetpack Cat. Estamos reduciendo el daño y la curación de los proyectiles de patas bióticas para reducir la producción general. Lifeline también se está ajustando para brindar contrajuego adicional contra objetivos transportados y al mismo tiempo mejorar su confiabilidad al rescatar a los aliados de muertes ambientales.",
+            "desc": "Comentarios de los desarrolladores: Los últimos cambios de movimiento han aumentado considerablemente la movilidad de Jetpack Cat y su eficacia en general. Queremos reducir el daño y la sanación de Patiproyectiles bióticos para rebajar su efectividad global. También vamos a ajustar Línea de vida para que ofrezca más capacidad de contrarrestar objetivos remolcados y resulte más fiable al rescatar aliados de muertes por entorno.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
             "changes": [
               {
-                "title": "Mayor prioridad de sonido y volumen de movimiento base y vuelo frenético.",
+                "title": "Se han aumentado el volumen y la prioridad del sonido del movimiento base y de Vuelo frenético.",
                 "type": "buff",
                 "details": [
-                  "Mayor prioridad de sonido y volumen de movimiento base y vuelo frenético."
+                  "Se han aumentado el volumen y la prioridad del sonido del movimiento base y de Vuelo frenético."
                 ]
               },
               {
-                "title": "Pawjectiles bióticos",
+                "title": "Patiproyectiles bióticos",
                 "type": "nerf",
                 "details": [
-                  "El daño y la curación por proyectil se redujeron de 4,5 a 4."
+                  "Se han reducido el daño y la sanación por proyectil de 4,5 a 4."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f69a07e928053431f7a1ac72a29c045d3eba5b6ae3bf29fdb21ee24e6f5d41e3.png"
               },
@@ -505,8 +520,8 @@
                 "title": "Línea de vida",
                 "type": "adjust",
                 "details": [
-                  "Los efectos de aturdimiento y bloqueo de movilidad en un objetivo transportado ahora desconectan Lifeline.",
-                  "Los aliados ahora aceptan automáticamente Lifeline cuando están sobre un avión de la muerte."
+                  "Ahora, si el objetivo remolcado sufre efectos de aturdimiento y bloqueo de movimiento, Línea de vida se desconecta.",
+                  "Los aliados aceptarán automáticamente Línea de vida cuando estén en una zona de muerte."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0c899ac61aa5b72e7de931b014b02176605fba7c9f022cc7a968b6cc6ebf19b.png"
               }
@@ -514,24 +529,24 @@
           },
           {
             "name": "Kiriko",
-            "desc": "Comentarios de los desarrolladores: Kiriko se ha vuelto muy eficaz como sanadora y al mismo tiempo conserva la utilidad y movilidad de su equipo. Estamos reduciendo la velocidad y el alcance de Healing Ofuda para reducir su consistencia curativa a distancias más largas. La protección Suzu también se está ajustando para reducir la efectividad de su invulnerabilidad y requerir un uso más preciso.",
+            "desc": "Comentarios de los desarrolladores: Kiriko ha conseguido ser muy eficaz como sanadora sin perder la utilidad y la movilidad de su conjunto de habilidades. Vamos a recortar la velocidad y el alcance de Ofuda de sanación para reducir la eficacia de su sanación a grandes distancias. También ajustaremos Suzu de protección para disminuir su invulnerabilidad y hacer que requiera más precisión.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
             "changes": [
               {
-                "title": "Healing Ofuda",
+                "title": "Ofuda de sanación",
                 "type": "nerf",
                 "details": [
-                  "La velocidad de desplazamiento del proyectil se redujo de 24 a 18 metros por segundo.",
-                  "El alcance máximo de búsqueda se redujo de 35 a 30 metros."
+                  "Se ha reducido la velocidad del proyectil de 24 a 18 m/s.",
+                  "Se ha reducido la distancia máxima de rastreo de 35 m a 30 m."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4ebf8c956da05591160da7416299bb3b641a268fbf334debf7892b8c7b3c326d.png"
               },
               {
-                "title": "Protección Suzu",
+                "title": "Suzu de protección",
                 "type": "nerf",
                 "details": [
-                  "La duración de la invulnerabilidad eliminada se redujo de 0,65 a 0,5 segundos.",
-                  "Radio de explosión reducido de 5 a 4 metros."
+                  "Se ha reducido la duración de la invulnerabilidad al cambiar de fase de 0,65 s a 0,5 s.",
+                  "Se ha reducido el radio de explosión de 5 m a 4 m."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a5c1a2e74ccb598d376aac2c1cd255aa46570a08886e72b06d5a6f64203c8072.png"
               }
@@ -539,15 +554,15 @@
           },
           {
             "name": "Wuyang",
-            "desc": "Comentarios de los desarrolladores: El recurso de curación potenciado de Wuyang puede ser limitante a la hora de responder a un daño sostenido. Estamos aumentando su tasa de regeneración para brindar un acceso más frecuente a una curación potenciada.",
+            "desc": "Comentarios de los desarrolladores: La sanación potenciada de Wuyang puede resultar limitada en su respuesta al daño sostenido. Vamos a aumentar su índice de regeneración para que se pueda acceder con más frecuencia a la sanación potenciada.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
             "changes": [
               {
-                "title": "Corriente Restaurativa",
+                "title": "Flujo restaurativo",
                 "type": "adjust",
                 "details": [
-                  "La tasa de regeneración aumentó del 12,5% al 15% por segundo.",
-                  "El tiempo de espera de la línea de visión se redujo de 5 a 3 segundos."
+                  "Se ha aumentado el índice de regeneración del 12,5 % a un 15 % por segundo.",
+                  "Se ha reducido el tiempo de espera de la línea de visión de 5 s a 3 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f4d4b3abcf4581b0cfb268f571aa1e657533c294d475043b8ef0ca0d3e9696b0.png"
               }
@@ -555,14 +570,14 @@
           },
           {
             "name": "Zenyatta",
-            "desc": "Comentarios de los desarrolladores: Harmony Orb puede permanecer activo en objetivos durante períodos prolongados con un mantenimiento mínimo. Estamos reduciendo su período de gracia de la línea de visión para poner mayor énfasis en mantener el conocimiento de los objetivos del orbe y reposicionarlo cuando sea necesario.",
+            "desc": "Comentarios de los desarrolladores: Orbe de armonía puede estar activa mucho tiempo sobre el objetivo sin demasiado esfuerzo. Vamos a reducir el periodo de gracia de su línea de visión para que haya que prestar más atención a los objetivos del orbe y a reposicionarlo cuando haga falta.",
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
             "changes": [
               {
                 "title": "Orbe de armonía",
                 "type": "nerf",
                 "details": [
-                  "El tiempo de espera de la línea de visión se redujo de 5 a 3 segundos."
+                  "Se ha reducido el tiempo de espera de la línea de visión de 5 s a 3 s."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8e37e2f3e147fde823bb9566b57e3e20d238430f0cb4f8aa8b581525a4f225e.png"
               }
@@ -572,14 +587,14 @@
       },
       "generalItems": [
         {
-          "name": "Junkrat's Loot Hunt",
-          "desc": "¡La búsqueda de botín de Junkrat se vuelve legendaria, con un toque temático especial! Únase a Junkrat para disfrutar de una combinación única pero familiar durante tres semanas a partir del 12 de septiembre y hasta el 29 de septiembre.",
+          "name": "Caza del botín de Junkrat",
+          "desc": "¡La Caza del botín de Junkrat se vuelve legendaria con un giro de temática especial! Del 12 al 29 de septiembre, acompaña a Junkrat en tres semanas de jaleo tan único como familiar.",
           "changes": [
             {
-              "title": "La búsqueda del botín de Junkrat",
+              "title": "Caza del botín de Junkrat",
               "type": "adjust",
               "details": [
-                "¡La búsqueda de botín de Junkrat se vuelve legendaria, con un toque temático especial! Únase a Junkrat para disfrutar de una combinación única pero familiar durante tres semanas a partir del 12 de septiembre y hasta el 29 de septiembre."
+                "¡La Caza del botín de Junkrat se vuelve legendaria con un giro de temática especial! Del 12 al 29 de septiembre, acompaña a Junkrat en tres semanas de jaleo tan único como familiar."
               ]
             }
           ]
@@ -589,18 +604,19 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se corrigió un error por el cual Battlepass XP no se otorgaba para las partidas de juego rápido en el estadio.",
-      "Se corrigió un error con el spray \"Solus Victorem 2026 Finals\".",
-      "Se corrigió un error por el cual la transmisión de muertes a veces no funcionaba.",
-      "Se solucionaron varios problemas con el resumen de recompensas posteriores al partido.",
-      "Se corrigieron varios problemas con el sistema de ping.",
-      "Se eliminó la configuración de entrada de mouse de alta precisión, ya que el problema para el cual fue creado ahora se ha abordado por otros medios. La eliminación de esta configuración no cambia la forma en que funciona la entrada del mouse en el juego.",
-      "Se solucionó un problema que causaba que la habilidad Flash Heal de Mercy no se contara para los desafíos diarios \"Dominio de habilidades de apoyo\" o \"Maestro de la vida y la muerte\".",
-      "Se solucionó un problema con la configuración \"Alternar potenciadores\".",
-      "Se corrigió un error con el mapa de la Selva Negra. Ahora está nuevamente habilitado.",
-      "Se solucionó un problema por el cual la pasiva Recuperación simpática de Mercy no funcionaba correctamente en el estadio.",
-      "Se solucionó un problema por el cual Cut 'Em Gracie a veces tiraba de objetivos que no estaban atrapados por la hoja."
+      "Se ha corregido un error que impedía recibir los PE del pase de batalla en partidas rápidas de Estadio.",
+      "Se ha corregido un error relacionado con el grafiti «Final 2026 de Solus Victorem».",
+      "Se ha corregido un error que impedía que funcionara bien el resumen de muertes.",
+      "Se han corregido varios errores que afectaban al resumen de recompensas tras la partida.",
+      "Se han corregido varios errores que afectaban al sistema de avisos.",
+      "Se ha eliminado el ajuste de entrada de alta precisión del ratón, dado que el problema que corregía se ha resuelto ya por otros medios. La desaparición de este ajuste no afecta al funcionamiento de las entradas del ratón en el juego.",
+      "Se ha corregido un error que provocaba que se tuviera en cuenta la habilidad Sanación instantánea de Mercy en los desafíos diarios «Maestría en habilidades de apoyo» y «Dominio de la vida y la muerte».",
+      "Se ha corregido un error relacionado con el ajuste para alternar los impulsores.",
+      "Se ha corregido un error en el mapa Selva Negra. Vuelve a estar habilitado.",
+      "Se ha corregido un error que impedía que la pasiva Recuperación compasiva de Mercy funcionara correctamente en Estadio.",
+      "Se ha corregido un error que podía hacer que ¡Raja, Gracie, raja! atrajera objetivos que no había enganchado la cuchilla."
     ]
   },
-  "translated": true
+  "translated": true,
+  "translationSource": "official"
 }

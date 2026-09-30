@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
+      "intro": "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available.",
       "roles": {
         "Tanque": [
           {
@@ -31,34 +31,34 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
             "changes": [
               {
-                "title": "Se ha reducido la armadura base de 325 a 275 (5c5).",
+                "title": "Armor reduced from 325 to 275 (5v5).",
                 "type": "nerf",
                 "details": [
-                  "Se ha reducido la armadura base de 325 a 275 (5c5).",
-                  "Se ha reducido la armadura base de 300 a 250 (6c6)."
+                  "Armor reduced from 325 to 275 (5v5).",
+                  "Armor reduced from 300 to 250 (6v6)."
                 ]
               },
               {
-                "title": "Fusión concentrada (ventaja mayor)",
+                "title": "Focused Fusion - Major Perk",
                 "type": "nerf",
                 "details": [
-                  "Se ha reducido el daño por bala de 45 a 36."
+                  "Damage per bullet reduced from 45 to 36."
                 ]
               },
               {
-                "title": "Propulsores",
+                "title": "Propulsors",
                 "type": "buff",
                 "details": [
-                  "Se ha aumentado el ritmo de gasto de combustible de 25 a 30."
+                  "Fuel drain rate increased from 25 to 30."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
               },
               {
-                "title": "Cañón automático de fusión",
+                "title": "Fusion Repeater",
                 "type": "adjust",
                 "details": [
-                  "Se ha reducido el daño de 16 a 15.",
-                  "Se ha aumentado el tiempo de reutilización de 4 a 5 segundos."
+                  "Damage reduced from 16 to 15.",
+                  "Cooldown increased from 4 to 5 seconds."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
               }
@@ -70,14 +70,14 @@
       },
       "generalItems": [
         {
-          "name": "Actualización rápida",
-          "desc": "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available.",
           "changes": [
             {
-              "title": "Actualización rápida",
+              "title": "Hotfix Update",
               "type": "adjust",
               "details": [
-                "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles."
+                "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available."
               ]
             }
           ]
@@ -87,9 +87,9 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se ha corregido un problema de jugabilidad con Mercy en Estadio. Ahora vuelve a estar disponible en todas las colas de Estadio."
+      "Fixed a gameplay issue with Mercy in Stadium. She has been re-enabled in all Stadium queues."
     ]
   },
-  "translated": true,
-  "translationSource": "official"
+  "translated": false,
+  "language": "en"
 }

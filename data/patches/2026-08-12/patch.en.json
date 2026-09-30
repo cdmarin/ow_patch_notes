@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles.",
+      "intro": "This is a hotfix update. Replay codes from the August 11 patch are still available.",
       "roles": {
         "Tanque": [
           {
@@ -31,28 +31,28 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
             "changes": [
               {
-                "title": "Sable de plasma",
+                "title": "Plasma Saber",
                 "type": "buff",
                 "details": [
-                  "Se ha aumentado el daño de 60 a 65."
+                  "Damage increased from 60 to 65."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5b8ae7f23071c20d472d55243ddebe666c361bab598c18e12161b8415ee058de.png"
               },
               {
-                "title": "Propulsores",
+                "title": "Propulsors",
                 "type": "adjust",
                 "details": [
-                  "Se ha reducido el ritmo de gasto de combustible de 40 a 25.",
-                  "Se ha aumentado el ritmo de regeneración de combustible de 15 a 22,5."
+                  "Fuel drain rate reduced from 40 to 25.",
+                  "Fuel regen rate increased from 15 to 22.5."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
               },
               {
-                "title": "Cañón automático de fusión",
+                "title": "Fusion Repeater",
                 "type": "adjust",
                 "details": [
-                  "Se ha aumentado el daño de 15 a 16.",
-                  "Se ha reducido el tiempo de reutilización de 6 a 4 s."
+                  "Damage increased from 15 to 16.",
+                  "Cooldown reduced from 6 to 4 seconds."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
               }
@@ -64,14 +64,14 @@
       },
       "generalItems": [
         {
-          "name": "Actualización rápida",
-          "desc": "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles.",
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the August 11 patch are still available.",
           "changes": [
             {
-              "title": "Actualización rápida",
+              "title": "Hotfix Update",
               "type": "adjust",
               "details": [
-                "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles."
+                "This is a hotfix update. Replay codes from the August 11 patch are still available."
               ]
             }
           ]
@@ -81,12 +81,12 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se ha corregido un error que provocaba que Moira perdiese Nanoestimulantes al usar Evanescencia.",
-      "Se ha corregido un error que impedía que Barrera de energía protegiese por completo a D. Mon si la desplegaba con Cañón automático de fusión activo.",
-      "Se ha corregido un error que provocaba que la segunda zona de aparición de los atacantes se extendiese hasta el área de juego en Paraíso.",
-      "Se ha corregido un error que volvía invulnerable temporalmente a D.Mon."
+      "Fixed a bug where Nano Boost was removed from Moira when she used Fade.",
+      "Fixed an issue preventing D.Mon's Power Barrier from fully protecting D.Mon if deployed while Fusion Repeater was active.",
+      "Fixed a bug where the second attacker spawn extended into playable areas on Paraíso.",
+      "Fixed a bug where D.Mon could become invulnerable temporarily."
     ]
   },
-  "translated": true,
-  "translationSource": "official"
+  "translated": false,
+  "language": "en"
 }
