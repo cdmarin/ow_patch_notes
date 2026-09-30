@@ -7,9 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-    --bg: #f7f5f0; --paper: #ffffff; --ink: #1c1b19; --ink-2: #4a4843; --muted: #8a867d; --line: #e6e2d8;
+    /* Oscuro por defecto: carbón cálido para conservar el tono de papel/revista */
+    --bg: #141311; --paper: #1d1c19; --chip: #282621; --ink: #f2eee6; --ink-2: #c9c3b7; --muted: #8e887c; --line: #2f2d28;
+    --accent: #f5902a; --buff: #45c48c; --nerf: #f2646e; --new: #a38cf7; --rework: #e3aa45;
+    --tank: #72a6ff; --damage: #ff7f66; --support: #3fcfb3; --on-role: #141311; --shadow: rgba(0,0,0,.4);
+    color-scheme: dark;
+}
+:root[data-theme="light"] {
+    --bg: #f7f5f0; --paper: #ffffff; --chip: #ece8de; --ink: #1c1b19; --ink-2: #4a4843; --muted: #8a867d; --line: #e6e2d8;
     --accent: #e8710a; --buff: #1f8a5b; --nerf: #c8323f; --new: #6b4bd6; --rework: #a86b00;
-    --tank: #2f6fd6; --damage: #d6452f; --support: #13917a;
+    --tank: #2f6fd6; --damage: #d6452f; --support: #13917a; --on-role: #ffffff; --shadow: rgba(0,0,0,.08);
+    color-scheme: light;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Inter', system-ui, sans-serif; }
@@ -22,10 +30,11 @@ header { display: flex; align-items: center; gap: 16px; max-width: 1360px; margi
 .spacer { flex: 1; }
 .search { display: flex; align-items: center; gap: 10px; width: 300px; padding: 9px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 .btn { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 14px; font-weight: 600; color: var(--ink-2); }
-.btn.icon { width: 38px; padding: 0; justify-content: center; }
-.seg { display: inline-flex; padding: 3px; border-radius: 999px; background: #ece8de; font-size: 13px; font-weight: 700; }
+.btn.icon { width: 38px; padding: 0; justify-content: center; cursor: pointer; font: inherit; }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--chip); font-size: 13px; font-weight: 700; }
 .seg span { padding: 4px 10px; border-radius: 999px; color: var(--muted); }
-.seg span.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.seg span.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px var(--shadow); }
 
 .layout { display: grid; grid-template-columns: 200px minmax(0, 720px) 240px; gap: 56px; justify-content: center; max-width: 1360px; margin: 0 auto; padding: 24px 32px 80px; }
 aside h6 { margin: 0 0 14px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
@@ -44,7 +53,7 @@ h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.
 .tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); margin: 30px 0 18px; }
 .tab { display: flex; align-items: center; gap: 8px; padding: 10px 0; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
 .tab.on { color: var(--ink); border-color: var(--ink); }
-.tab em { font-style: normal; font-size: 12px; background: #ece8de; border-radius: 999px; padding: 1px 8px; color: var(--ink-2); }
+.tab em { font-style: normal; font-size: 12px; background: var(--chip); border-radius: 999px; padding: 1px 8px; color: var(--ink-2); }
 .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
 .pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .pill.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -56,8 +65,8 @@ h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.
 .role-title::after { content: ''; flex: 1; height: 1px; background: var(--line); }
 .hero { padding: 26px 0; border-bottom: 1px solid var(--line); }
 .hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-.avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: #ece8de; }
-.avatar--fallback { display: grid; place-items: center; font-weight: 700; color: #fff; background: var(--rc); font-size: 18px; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: var(--chip); }
+.avatar--fallback { display: grid; place-items: center; font-weight: 700; color: var(--on-role); background: var(--rc); font-size: 18px; }
 .hero h2 { margin: 0; font-size: 30px; line-height: 1.1; }
 .hero .meta { font-size: 13px; color: var(--muted); }
 .quote { margin: 8px 0 18px; padding-left: 18px; border-left: 3px solid var(--accent); font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.55; color: var(--ink-2); font-style: italic; font-weight: 400; }
@@ -74,7 +83,7 @@ h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.
 .toc { position: sticky; top: 24px; }
 .toc a { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 14px; color: var(--ink-2); text-decoration: none; }
 .toc a .ic { color: var(--rc); }
-.bar { margin-left: auto; display: flex; height: 6px; width: 60px; border-radius: 3px; overflow: hidden; background: #ece8de; }
+.bar { margin-left: auto; display: flex; height: 6px; width: 60px; border-radius: 3px; overflow: hidden; background: var(--chip); }
 .bar i { display: block; }
 .legend { display: flex; gap: 12px; margin-top: 14px; font-size: 12px; color: var(--muted); }
 .legend span::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; background: var(--c); }
@@ -84,7 +93,7 @@ h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.
     header { padding: 14px 16px; } .search, .hide-m { display: none; }
     .layout { padding: 8px 16px 60px; } h1 { font-size: 40px; } .lede { font-size: 17px; }
     .tabs { gap: 18px; overflow-x: auto; } .tab { white-space: nowrap; }
-    .change { grid-template-columns: 1fr; gap: 6px; } .hero h2 { font-size: 26px; } .quote { font-size: 16px; }
+    .change { grid-template-columns: 1fr; gap: 6px; } .hero h2 { font-size: 26px; } .quote { font-size: 16px; } .pills .sep { display: none; }
 }
 </style>
 </head>
@@ -95,7 +104,7 @@ h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.
     <div class="search" id="search"></div>
     <span class="seg" title="Traducción / original"><span class="on">ES</span><span>EN</span></span>
     <span class="btn icon hide-m" id="refresh"></span>
-    <span class="btn icon" id="theme"></span>
+    <button class="btn icon" id="theme" type="button"></button>
 </header>
 <div class="layout">
     <aside><h6>Parches</h6><ul class="timeline" id="timeline"></ul></aside>
@@ -117,7 +126,21 @@ const counts = countTypes(heroes);
 $('logo').innerHTML = icon('damage', { size: 17, stroke: 2 });
 $('search').innerHTML = `${icon('search', { size: 17 })} Buscar héroe o habilidad…`;
 $('refresh').innerHTML = icon('refresh', { size: 17 });
-$('theme').innerHTML = icon('moon', { size: 17 });
+// Tema: oscuro por defecto, claro opcional (se recuerda la elección)
+const applyTheme = (light) => {
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+    $('theme').innerHTML = icon(light ? 'moon' : 'sun', { size: 17 });
+    $('theme').title = light ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro';
+    $('theme').setAttribute('aria-label', $('theme').title);
+};
+let light = false;
+try { light = localStorage.getItem('mockupTheme') === 'light'; } catch (e) {}
+applyTheme(light);
+$('theme').addEventListener('click', () => {
+    light = !light;
+    applyTheme(light);
+    try { localStorage.setItem('mockupTheme', light ? 'light' : 'dark'); } catch (e) {}
+});
 
 const recent = index.filter(p => !p.id.endsWith('-01') || p.id === PATCH_ID).slice(0, 9);
 $('timeline').innerHTML = recent.map(p => `<li class="${p.id === PATCH_ID ? 'on' : ''}">${p.title.replace(/ \d{4}$/, '')}<small>${new Date(p.id + 'T12:00').toLocaleDateString('es-ES', { weekday: 'long' })}</small></li>`).join('');
