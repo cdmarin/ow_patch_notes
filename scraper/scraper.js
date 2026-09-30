@@ -230,9 +230,12 @@ async function main() {
             const patchId = getPatchId(patchData.date);
             const outputDir = argv.output || getPatchDir(patchId);
             const patchJsonPath = path.join(outputDir, 'patch.json');
+            const originalJsonPath = path.join(outputDir, 'patch.en.json'); // Texto original en inglés
 
             const officialPatch = officialPatches.get(patchData.date);
             delete patchData.dateFromTitle;
+            // Copia del texto original en inglés (antes de traducir), para el botón ES/EN del frontend
+            const originalPatchData = JSON.parse(JSON.stringify(patchData));
 
             // Si no se fuerza la descarga, y el parche ya existe tanto en disco como en el índice, se omite.
             // Excepciones: si la traducción anterior falló (translated: false) se reintenta, y si estaba
@@ -246,6 +249,8 @@ async function main() {
                             reason = 'tenía traducción automática: se sustituye por la oficial de Blizzard';
                         } else if (!saved.translated) {
                             reason = 'no estaba traducido del todo: se reintenta la traducción';
+                        } else if (!(await fs.pathExists(originalJsonPath))) {
+                            reason = 'no tenía guardado el texto original en inglés: se añade (reutilizando la traducción)';
                         }
                     } catch (err) {
                         reason = 'no se pudo leer el archivo guardado: se regenera';
@@ -409,7 +414,8 @@ async function main() {
 
             // patch.json
             await fs.writeJson(patchJsonPath, patchData, { spaces: 2 });
-            log('Datos del parche guardados correctamente.', 'success');
+            await fs.writeJson(originalJsonPath, { ...originalPatchData, translated: false, language: 'en' }, { spaces: 2 });
+            log('Datos del parche guardados correctamente (traducción y original en inglés).', 'success');
 
             // meta.json
             const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];

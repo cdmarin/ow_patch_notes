@@ -56,6 +56,13 @@ node scraper.js --url="https://overwatch.blizzard.com/en-us/news/patch-notes/liv
 Opciones: `--no-official` desactiva la traducción oficial; `OFFICIAL_LOCALE=es-mx` usa la
 versión latinoamericana en lugar de la de España.
 
+### Texto original en inglés
+
+Junto a cada `patch.json` (traducido) se guarda `patch.en.json` con el texto original de
+Blizzard. La web tiene un botón **ES / EN** en la cabecera para cambiar entre ambos. Los
+parches descargados antes de este cambio no tienen original: el scraper lo añade la próxima
+vez que los procese (reutilizando la traducción ya hecha), o reprocesa sus meses con el workflow.
+
 ## Configuración de LibreTranslate
 
 El scraper usa [LibreTranslate](https://github.com/LibreTranslate/LibreTranslate) para traducir automáticamente los textos al español.

@@ -533,6 +533,39 @@ header::after {
     line-height: 1;
 }
 
+/* Botón de idioma: traducción (ES) / texto original (EN) */
+.lang-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    font-family: inherit;
+    transform: translateY(1px); /* Las mayúsculas sin descendentes quedan visualmente altas */
+}
+
+.lang-toggle-btn.active {
+    border-color: var(--orange);
+    color: var(--orange);
+    box-shadow: 0 0 10px var(--orange-glow);
+}
+
+.lang-toggle-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (hover: hover) {
+    .lang-toggle-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .lang-toggle-btn:disabled:hover {
+        border-color: var(--border-color);
+        transform: none;
+        box-shadow: none;
+    }
+}
+
 /* ─── App Layout ────────────────────────────────────────────────────────── */
 .app-layout {
     display: flex;

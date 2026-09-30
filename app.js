@@ -18,7 +18,8 @@ import {
 } from './js/render.js';
 import { 
     toggleFilter, 
-    applyFiltersAndSearch 
+    applyFiltersAndSearch,
+    switchRole
 } from './js/handlers.js';
 
 // ─── Scroll Progress Bar ──────────────────────────────────────────────────────
@@ -71,12 +72,113 @@ async function loadPatchData(patchId) {
     return resp.json();
 }
 
+/**
+ * Carga el texto original en inglés del parche. Devuelve null si no existe
+ * (parches descargados antes de que el scraper guardara el original).
+ */
+async function loadOriginalPatchData(patchId) {
+    try {
+        const resp = await fetch(`data/patches/${patchId}/patch.en.json?t=${Date.now()}`);
+        if (!resp.ok) return null;
+        const data = await resp.json();
+        // Mantener el título en español (es solo la fecha)
+        return { ...data, title: state.translatedPatch?.title || data.title };
+    } catch (e) {
+        return null;
+    }
+}
+
+// ─── Idioma: traducción / original en inglés ──────────────────────────────────
+function getSavedLanguage() {
+    try {
+        return localStorage.getItem('patchLanguage') === 'en' ? 'en' : 'es';
+    } catch (e) {
+        return 'es';
+    }
+}
+
+function saveLanguage(lang) {
+    try {
+        localStorage.setItem('patchLanguage', lang);
+    } catch (e) { /* localStorage no disponible */ }
+}
+
+function updateLangToggleUI() {
+    const btn = dom.langToggleBtn;
+    if (!btn) return;
+    const label = btn.querySelector('.lang-label');
+    // Idioma que se está mostrando de verdad (la preferencia puede ser 'en' pero sin original disponible)
+    const isEnglish = !!state.originalPatch && state.currentPatch === state.originalPatch;
+    const unavailable = state.originalPatch === false || !state.translatedPatch;
+
+    if (label) label.textContent = isEnglish ? 'EN' : 'ES';
+    btn.classList.toggle('active', isEnglish);
+    btn.setAttribute('aria-pressed', String(isEnglish));
+    btn.disabled = unavailable;
+
+    let title;
+    if (!state.translatedPatch) {
+        title = 'Selecciona un parche descargado';
+    } else if (unavailable) {
+        title = 'El texto original en inglés no está disponible para este parche (vuelve a descargarlo para obtenerlo)';
+    } else if (isEnglish) {
+        title = 'Mostrando el texto original en inglés. Pulsa para ver la traducción';
+    } else {
+        title = 'Mostrando la traducción. Pulsa para ver el texto original en inglés';
+    }
+    btn.title = title;
+    btn.setAttribute('aria-label', title);
+}
+
+/**
+ * Asegura que state.currentPatch corresponde al idioma elegido, cargando el original si hace falta.
+ */
+async function applyLanguage(patchId) {
+    if (state.language === 'en' && state.originalPatch === null) {
+        state.originalPatch = (await loadOriginalPatchData(patchId)) || false;
+    }
+    state.currentPatch = state.language === 'en' && state.originalPatch
+        ? state.originalPatch
+        : state.translatedPatch;
+    updateLangToggleUI();
+}
+
+/**
+ * Vuelve a pintar el parche actual conservando sección, rol, filtros, búsqueda y scroll.
+ */
+function rerenderCurrentPatch() {
+    const scrollY = window.scrollY;
+    const currentRole = state.currentRole;
+    const patchMeta = state.allPatches.find(p => p.id === dom.patchSelect.value);
+    renderSidebar(state.currentPatch);
+    renderContent(state.currentPatch);
+    renderPatchHeader(state.currentPatch, patchMeta);
+    if (currentRole && currentRole !== 'Todos') {
+        switchRole(currentRole);
+    }
+    applyFiltersAndSearch();
+    handleMobileLayout();
+    window.scrollTo({ top: scrollY });
+}
+
+async function toggleLanguage() {
+    if (!state.translatedPatch) return;
+    const showingEnglish = !!state.originalPatch && state.currentPatch === state.originalPatch;
+    state.language = showingEnglish ? 'es' : 'en';
+    await applyLanguage(dom.patchSelect.value);
+    saveLanguage(state.language);
+    rerenderCurrentPatch();
+}
+
 // ─── Patch Loading ────────────────────────────────────────────────────────────
 export async function loadPatch(patchId) {
     const patchMeta = state.allPatches.find(p => p.id === patchId);
 
     if (patchMeta && patchMeta.isDownloaded === false) {
         state.currentPatch = patchMeta;
+        state.translatedPatch = null;
+        state.originalPatch = null;
+        updateLangToggleUI();
         renderSidebar(null);
         renderContentNotDownloaded(patchMeta);
         return;
@@ -101,8 +203,10 @@ export async function loadPatch(patchId) {
         `).join('')}
     `;
 
-    const patchData = await loadPatchData(patchId);
-    state.currentPatch = patchData;
+    state.translatedPatch = await loadPatchData(patchId);
+    state.originalPatch = null;
+    await applyLanguage(patchId);
+    const patchData = state.currentPatch;
 
     // Seleccionar por defecto la primera sección que tenga contenido
     const defaultSection = SECTIONS.find(sec => {
@@ -136,6 +240,7 @@ export async function init(skipLoadingPatch = false) {
         console.warn('localStorage no está disponible:', e);
     }
     updateThemeUI(savedTheme === 'light');
+    state.language = getSavedLanguage();
 
     initScrollProgress();
 
@@ -224,6 +329,11 @@ function setupListeners() {
     listenersSetup = true;
 
     // Theme toggle is handled inline in index.html to prevent flash of unstyled content and conflicts.
+
+    // Botón de idioma (traducción / original en inglés)
+    if (dom.langToggleBtn) {
+        dom.langToggleBtn.addEventListener('click', toggleLanguage);
+    }
 
     // Patch selector
     dom.patchSelect.addEventListener('change', () => {
