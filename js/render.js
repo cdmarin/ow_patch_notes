@@ -170,16 +170,11 @@ export function renderPatchHeader(patchData, patchMeta) {
         }
     }
 
-    const sourceBadge = state.currentPatch === state.originalPatch && state.originalPatch
-        ? '<span class="kicker-chip cut">Original en inglés</span>'
-        : (patchData.translationSource === 'official' ? '<span class="kicker-chip cut">Traducción oficial</span>' : '');
-
     dom.patchHeaderCard.innerHTML = `
         <div class="kicker">
             ${icon('calendar', { size: 15 })}
             <span>${escapeHtml(title)}</span>
             <span class="kicker-chip cut">${icon(secConfig?.icon || 'gameBase', { size: 13 })}${escapeHtml(secConfig?.label || '')}</span>
-            ${sourceBadge}
         </div>
         <h1 class="patch-card-title">${heading}</h1>
         ${lede ? `<p class="patch-lede">${lede}</p>` : ''}
