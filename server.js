@@ -128,6 +128,17 @@ const server = http.createServer((req, res) => {
     }
 
     fs.stat(filePath, (err, stats) => {
+        // Carpetas: redirigir a la versión con "/" final y servir su index.html
+        if (!err && stats.isDirectory()) {
+            if (!pathname.endsWith('/')) {
+                res.writeHead(301, { Location: pathname + '/' + (parsedUrl.search || '') });
+                res.end();
+                return;
+            }
+            req.url = pathname + 'index.html' + (parsedUrl.search || '');
+            server.emit('request', req, res);
+            return;
+        }
         if (err || !stats.isFile()) {
             res.writeHead(404, { 'Content-Type': 'text/plain' });
             res.end('Not Found');

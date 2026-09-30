@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta B · Editorial</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #f7f5f0; --paper: #ffffff; --ink: #1c1b19; --ink-2: #4a4843; --muted: #8a867d; --line: #e6e2d8;
+    --accent: #e8710a; --buff: #1f8a5b; --nerf: #c8323f; --new: #6b4bd6; --rework: #a86b00;
+    --tank: #2f6fd6; --damage: #d6452f; --support: #13917a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 'Inter', system-ui, sans-serif; }
+.serif { font-family: 'Fraunces', Georgia, serif; }
+.ic { flex-shrink: 0; }
+
+header { display: flex; align-items: center; gap: 16px; max-width: 1360px; margin: 0 auto; padding: 18px 32px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; }
+.brand .mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); }
+.spacer { flex: 1; }
+.search { display: flex; align-items: center; gap: 10px; width: 300px; padding: 9px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 14px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.btn.icon { width: 38px; padding: 0; justify-content: center; }
+.seg { display: inline-flex; padding: 3px; border-radius: 999px; background: #ece8de; font-size: 13px; font-weight: 700; }
+.seg span { padding: 4px 10px; border-radius: 999px; color: var(--muted); }
+.seg span.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+
+.layout { display: grid; grid-template-columns: 200px minmax(0, 720px) 240px; gap: 56px; justify-content: center; max-width: 1360px; margin: 0 auto; padding: 24px 32px 80px; }
+aside h6 { margin: 0 0 14px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.timeline { position: relative; margin: 0; padding: 0 0 0 18px; list-style: none; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 6px 0 12px; font-size: 14px; color: var(--ink-2); }
+.timeline li::before { content: ''; position: absolute; left: -24px; top: 12px; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line); }
+.timeline li.on { color: var(--ink); font-weight: 700; }
+.timeline li.on::before { background: var(--accent); border-color: var(--accent); }
+.timeline small { display: block; color: var(--muted); font-weight: 400; font-size: 12px; }
+
+.kicker { display: flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+h1 { margin: 10px 0 12px; font-size: 56px; line-height: 1.02; letter-spacing: -.02em; }
+.lede { font-size: 19px; color: var(--ink-2); margin: 0 0 22px; }
+.lede b { font-weight: 700; }
+.lede .b { color: var(--buff); } .lede .n { color: var(--nerf); }
+.tabs { display: flex; gap: 26px; border-bottom: 1px solid var(--line); margin: 30px 0 18px; }
+.tab { display: flex; align-items: center; gap: 8px; padding: 10px 0; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tab.on { color: var(--ink); border-color: var(--ink); }
+.tab em { font-style: normal; font-size: 12px; background: #ece8de; border-radius: 999px; padding: 1px 8px; color: var(--ink-2); }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font-size: 13px; font-weight: 600; color: var(--ink-2); }
+.pill.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pill .ic { color: var(--c, currentColor); }
+.pill.on .ic { color: inherit; }
+.pills .sep { width: 1px; background: var(--line); margin: 0 2px; } .pill { font-size: 12.5px; }
+
+.role-title { display: flex; align-items: center; gap: 10px; margin: 44px 0 6px; color: var(--rc); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.role-title::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.hero { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: #ece8de; }
+.avatar--fallback { display: grid; place-items: center; font-weight: 700; color: #fff; background: var(--rc); font-size: 18px; }
+.hero h2 { margin: 0; font-size: 30px; line-height: 1.1; }
+.hero .meta { font-size: 13px; color: var(--muted); }
+.quote { margin: 8px 0 18px; padding-left: 18px; border-left: 3px solid var(--accent); font-family: 'Fraunces', serif; font-size: 18px; line-height: 1.55; color: var(--ink-2); font-style: italic; font-weight: 400; }
+.change { display: grid; grid-template-columns: 200px 1fr; gap: 20px; padding: 14px 0; border-top: 1px dashed var(--line); }
+.change:first-of-type { border-top: 0; }
+.change.solo h4 { grid-column: 1 / -1; } .change.solo ul { display: none; }
+.change h4 { margin: 0; font-size: 15px; display: flex; gap: 8px; align-items: flex-start; }
+.change h4 .ic { color: var(--c); margin-top: 3px; }
+.change ul { margin: 0; padding: 0; list-style: none; }
+.change li { padding: 2px 0 6px; color: var(--ink-2); }
+.diff { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; padding: 1px 8px; border-radius: 6px; font-size: 13px; font-weight: 700; background: color-mix(in srgb, var(--c) 10%, transparent); color: var(--c); white-space: nowrap; vertical-align: 1px; }
+.diff s { color: var(--muted); font-weight: 500; }
+
+.toc { position: sticky; top: 24px; }
+.toc a { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 14px; color: var(--ink-2); text-decoration: none; }
+.toc a .ic { color: var(--rc); }
+.bar { margin-left: auto; display: flex; height: 6px; width: 60px; border-radius: 3px; overflow: hidden; background: #ece8de; }
+.bar i { display: block; }
+.legend { display: flex; gap: 12px; margin-top: 14px; font-size: 12px; color: var(--muted); }
+.legend span::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; background: var(--c); }
+
+@media (max-width: 1100px) { .layout { grid-template-columns: minmax(0, 720px); } aside { display: none; } }
+@media (max-width: 700px) {
+    header { padding: 14px 16px; } .search, .hide-m { display: none; }
+    .layout { padding: 8px 16px 60px; } h1 { font-size: 40px; } .lede { font-size: 17px; }
+    .tabs { gap: 18px; overflow-x: auto; } .tab { white-space: nowrap; }
+    .change { grid-template-columns: 1fr; gap: 6px; } .hero h2 { font-size: 26px; } .quote { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="brand"><span class="mark" id="logo"></span>Notas de parche</div>
+    <div class="spacer"></div>
+    <div class="search" id="search"></div>
+    <span class="seg" title="Traducción / original"><span class="on">ES</span><span>EN</span></span>
+    <span class="btn icon hide-m" id="refresh"></span>
+    <span class="btn icon" id="theme"></span>
+</header>
+<div class="layout">
+    <aside><h6>Parches</h6><ul class="timeline" id="timeline"></ul></aside>
+    <main id="main"></main>
+    <aside><div class="toc" id="toc"></div></aside>
+</div>
+<script type="module">
+import { icon } from './icons.js';
+import { loadPatch, heroesOf, countTypes, avatar, extractDiff, escapeHtml, ROLE_META, TYPE_META, PATCH_ID } from './data.js';
+
+const TC = { buff: 'var(--buff)', nerf: 'var(--nerf)', new: 'var(--new)', rework: 'var(--rework)', adjust: 'var(--rework)' };
+const RC = { Tanque: 'var(--tank)', 'Daño': 'var(--damage)', Apoyo: 'var(--support)' };
+const $ = id => document.getElementById(id);
+const { patch, index } = await loadPatch();
+const section = patch.sections.gameBase;
+const heroes = heroesOf(section);
+const counts = countTypes(heroes);
+
+$('logo').innerHTML = icon('damage', { size: 17, stroke: 2 });
+$('search').innerHTML = `${icon('search', { size: 17 })} Buscar héroe o habilidad…`;
+$('refresh').innerHTML = icon('refresh', { size: 17 });
+$('theme').innerHTML = icon('moon', { size: 17 });
+
+const recent = index.filter(p => !p.id.endsWith('-01') || p.id === PATCH_ID).slice(0, 9);
+$('timeline').innerHTML = recent.map(p => `<li class="${p.id === PATCH_ID ? 'on' : ''}">${p.title.replace(/ \d{4}$/, '')}<small>${new Date(p.id + 'T12:00').toLocaleDateString('es-ES', { weekday: 'long' })}</small></li>`).join('');
+
+$('main').innerHTML = `
+  <div class="kicker">${icon('calendar', { size: 15 })} Parche · ${patch.title}</div>
+  <h1 class="serif">Ajustes de balance para ${heroes.length} héroes</h1>
+  <p class="lede">Esta actualización trae <b class="b">${counts.buff} mejoras</b>, <b class="n">${counts.nerf} debilitaciones</b> y ${counts.adjust + counts.rework} ajustes, además de ${patch.sections.bugFixes.length} correcciones de errores.</p>
+  <div class="tabs">
+    <span class="tab on">${icon('gameBase', { size: 18 })} Juego base <em>${heroes.length}</em></span>
+    <span class="tab">${icon('stadium', { size: 18 })} Stadium <em>${heroesOf(patch.sections.stadium).length}</em></span>
+    <span class="tab">${icon('bugFixes', { size: 18 })} Correcciones <em>${patch.sections.bugFixes.length}</em></span>
+  </div>
+  <div class="pills">
+    <span class="pill on">${icon('allRoles', { size: 15 })} Todos</span>
+    ${Object.entries(ROLE_META).map(([r, m]) => `<span class="pill" style="--c:${RC[r]}">${icon(m.key, { size: 15 })} ${m.label}</span>`).join('')}
+    <span class="sep"></span>
+    ${['buff', 'nerf', 'new', 'rework'].map(t => `<span class="pill" style="--c:${TC[t]}">${icon(TYPE_META[t].icon, { size: 15, stroke: 2.2 })} ${TYPE_META[t].short}</span>`).join('')}
+  </div>
+  ${Object.entries(section.roles).filter(([, hs]) => hs.length).map(([role, hs]) => `
+    <div class="role-title" style="--rc:${RC[role]}">${icon(ROLE_META[role].key, { size: 18 })} ${role}</div>
+    ${hs.map(h => `
+      <article class="hero" style="--rc:${RC[role]}">
+        <div class="hero-head">${avatar({ ...h, role })}<div><h2 class="serif">${escapeHtml(h.name)}</h2><div class="meta">${h.changes.length} cambios</div></div></div>
+        ${h.desc ? `<blockquote class="quote">${escapeHtml(h.desc.replace(/^Comentarios de los desarrolladores:\s*/, ''))}</blockquote>` : ''}
+        ${h.changes.map(c => `
+          <div class="change ${c.details.every(d => d === c.title) ? 'solo' : ''}" style="--c:${TC[c.type]}">
+            <h4>${icon(TYPE_META[c.type].icon, { size: 16, stroke: 2.4 })}<span>${escapeHtml(c.title)}</span></h4>
+            <ul>${c.details.filter(d => d !== c.title).map(d => { const df = extractDiff(d); return `<li>${escapeHtml(d)}${df ? `<span class="diff"><s>${df.from}</s>→ ${df.to}</span>` : ''}</li>`; }).join('')}</ul>
+          </div>`).join('')}
+      </article>`).join('')}
+  `).join('')}`;
+
+$('toc').innerHTML = `<h6 style="margin:0 0 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">En este parche</h6>
+  ${heroes.map(h => { const t = countTypes([h]); const tot = h.changes.length;
+    return `<a href="#" style="--rc:${RC[h.role]}">${icon(ROLE_META[h.role].key, { size: 14 })}${escapeHtml(h.name)}<span class="bar">${['buff', 'nerf', 'adjust', 'rework', 'new'].map(k => t[k] ? `<i style="width:${t[k] / tot * 100}%;background:${TC[k]}"></i>` : '').join('')}</span></a>`; }).join('')}
+  <div class="legend"><span style="--c:var(--buff)">Mejora</span><span style="--c:var(--nerf)">Nerf</span><span style="--c:var(--rework)">Ajuste</span></div>`;
+</script>
+</body>
+</html>

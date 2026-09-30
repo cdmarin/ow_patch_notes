@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuestas de rediseño</title>
+<style>
+:root { --bg: #0d1117; --card: #161b22; --line: #30363d; --text: #e6edf3; --muted: #8b949e; --accent: #f99e1a; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 48px 24px; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 960px; margin: 0 auto; }
+h1 { margin: 0 0 6px; font-size: 32px; }
+p.sub { margin: 0 0 32px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+a.card { display: block; padding: 22px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); color: inherit; text-decoration: none; transition: border-color .15s, transform .15s; }
+a.card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card .tag { color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.card h2 { margin: 6px 0 8px; font-size: 22px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.icons { margin-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+    <h1>Propuestas de rediseño</h1>
+    <p class="sub">Tres direcciones visuales con datos reales del parche del 8 de septiembre de 2026. Todas usan el mismo set de iconos propio.</p>
+    <div class="grid">
+        <a class="card" href="a-tactico.html">
+            <div class="tag">Propuesta A</div>
+            <h2>Táctico</h2>
+            <p>Estética de videojuego: oscura, esquinas biseladas, títulos condensados y "antes → después" destacado en cada cambio.</p>
+        </a>
+        <a class="card" href="b-editorial.html">
+            <div class="tag">Propuesta B</div>
+            <h2>Editorial</h2>
+            <p>Pensada para leer: tema claro, titulares con serifa, línea temporal de parches e índice de héroes con balance.</p>
+        </a>
+        <a class="card" href="c-panel.html">
+            <div class="tag">Propuesta C</div>
+            <h2>Panel</h2>
+            <p>Resumen visual arriba (balanza de mejoras/nerfs, cambios por rol) y héroes en una cuadrícula de tarjetas.</p>
+        </a>
+    </div>
+    <a class="card icons" href="icons.html">
+        <div class="tag">Común</div>
+        <h2>Set de iconos</h2>
+        <p>Los 33 iconos SVG propios que sustituyen a los emojis del sistema.</p>
+    </a>
+</main>
+</body>
+</html>

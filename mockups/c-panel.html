@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta C · Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0b0d12; --card: #131722; --card-2: #1a1f2d; --line: #232a3a; --text: #eef1f7; --muted: #8790a6;
+    --accent: #ff9c2a; --buff: #34d399; --nerf: #fb7185; --new: #a78bfa; --rework: #fbbf24;
+    --tank: #60a5fa; --damage: #f87171; --support: #2dd4bf; --r: 16px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(1200px 500px at 70% -10%, rgba(255,156,42,.10), transparent 60%), var(--bg); color: var(--text); font: 14px/1.5 'Inter', system-ui, sans-serif; min-height: 100vh; }
+.g { font-family: 'Space Grotesk', sans-serif; }
+.ic { flex-shrink: 0; }
+
+.shell { display: grid; grid-template-columns: 76px 1fr; min-height: 100vh; }
+.rail { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 0; border-right: 1px solid var(--line); background: rgba(11,13,18,.7); }
+.rail .logo { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), #ff5f2a); color: #120a00; margin-bottom: 14px; }
+.rail a { width: 52px; padding: 10px 0 8px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--muted); font-size: 10px; font-weight: 600; text-decoration: none; }
+.rail a.on { background: var(--card-2); color: var(--accent); }
+.rail .bottom { margin-top: auto; }
+
+main { padding: 22px 32px 60px; max-width: 1400px; }
+.top { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.select { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); font-weight: 600; }
+.select .ic:first-child { color: var(--accent); }
+.search { flex: 1; max-width: 420px; display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); color: var(--muted); }
+.spacer { flex: 1; }
+.toggle { display: flex; padding: 3px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); font-weight: 700; font-size: 12px; }
+.toggle span { padding: 5px 10px; border-radius: 8px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+.toggle span.on { background: var(--card-2); color: var(--text); }
+.ibtn { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--card); border: 1px solid var(--line); color: var(--text); }
+
+/* Bento */
+.bento { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; }
+.title-card h1 { margin: 6px 0 4px; font-size: 34px; line-height: 1.1; }
+.title-card .sub { color: var(--muted); }
+.eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.kpis { display: flex; gap: 22px; margin-top: 16px; }
+.kpi b { display: block; font: 700 30px/1 'Space Grotesk'; }
+.kpi span { font-size: 12px; color: var(--muted); }
+.balance { margin-top: 14px; }
+.balance .track { display: flex; height: 10px; border-radius: 6px; overflow: hidden; gap: 2px; }
+.balance .track i { display: block; }
+.balance .lbl { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.balance .lbl b { color: var(--c); }
+.roles-card .row { display: grid; grid-template-columns: 90px 1fr 26px; align-items: center; gap: 10px; margin-top: 12px; font-weight: 600; }
+.roles-card .row .name { display: flex; gap: 8px; align-items: center; color: var(--rc); }
+.roles-card .row .name span { color: var(--text); }
+.stack { display: flex; height: 22px; border-radius: 6px; overflow: hidden; background: var(--card-2); }
+.stack i { display: block; }
+.roles-card .n { text-align: right; color: var(--muted); }
+
+.tabs { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+.tab { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; color: var(--muted); font-weight: 600; border: 1px solid transparent; }
+.tab.on { background: var(--card-2); border-color: var(--line); color: var(--text); }
+.tab.on .ic { color: var(--accent); }
+.tab em { font-style: normal; font-size: 11px; color: var(--muted); }
+.filters { margin-left: auto; display: flex; gap: 6px; }
+.f { display: inline-flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--c); font-size: 12px; font-weight: 700; }
+.f.on { background: color-mix(in srgb, var(--c) 16%, transparent); border-color: color-mix(in srgb, var(--c) 50%, transparent); }
+
+/* Grid de héroes */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; align-items: start; }
+.hero { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--rc); }
+.hero-head { display: flex; align-items: center; gap: 12px; padding: 16px 16px 12px; }
+.avatar { width: 48px; height: 48px; border-radius: 14px; object-fit: cover; background: var(--card-2); }
+.avatar--fallback { display: grid; place-items: center; font: 700 16px 'Space Grotesk'; color: #0b0d12; background: var(--rc); }
+.hero h3 { margin: 0; font-size: 18px; }
+.hero .role { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--rc); font-weight: 600; }
+.hero .score { margin-left: auto; display: flex; gap: 4px; }
+.dot { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); }
+.lines { padding: 0 16px 14px; }
+.line { display: grid; grid-template-columns: 18px 1fr auto; gap: 8px; align-items: baseline; padding: 7px 0; border-top: 1px solid var(--line); }
+.line .ic { color: var(--c); position: relative; top: 3px; }
+.line .t { font-weight: 600; }
+.line .d { color: var(--muted); font-size: 13px; }
+.pillnum { font: 700 12px 'Space Grotesk'; color: var(--c); background: color-mix(in srgb, var(--c) 12%, transparent); padding: 2px 7px; border-radius: 6px; white-space: nowrap; }
+.pillnum s { color: var(--muted); font-weight: 500; }
+.more { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600; }
+.hero.featured { grid-column: span 2; }
+.hero.featured .dev { margin: 0 16px 12px; padding: 12px 14px; border-radius: 12px; background: var(--card-2); color: #c3cadb; font-size: 13px; }
+
+@media (max-width: 1100px) { .bento { grid-template-columns: 1fr 1fr; } .title-card { grid-column: 1 / -1; } }
+@media (max-width: 700px) {
+    .shell { grid-template-columns: 1fr; }
+    .rail { position: fixed; bottom: 0; left: 0; right: 0; flex-direction: row; justify-content: space-around; padding: 6px 8px; border-right: 0; border-top: 1px solid var(--line); z-index: 5; backdrop-filter: blur(10px); }
+    .rail .logo, .rail .bottom { display: none; }
+    main { padding: 14px 14px 90px; }
+    .top .search, .top .select .lbl-long, .hide-m { display: none; }
+    .bento { grid-template-columns: 1fr; } .roles-card { display: none; }
+    .title-card h1 { font-size: 28px; }
+    .filters { margin-left: 0; overflow-x: auto; }
+    .tabs .tab:not(.on) { display: none; }
+    .hero.featured { grid-column: auto; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+    <nav class="rail" id="rail"></nav>
+    <main>
+        <div class="top" id="top"></div>
+        <section class="bento" id="bento"></section>
+        <div class="tabs" id="tabs"></div>
+        <section class="grid" id="grid"></section>
+    </main>
+</div>
+<script type="module">
+import { icon } from './icons.js';
+import { loadPatch, heroesOf, countTypes, avatar, extractDiff, escapeHtml, ROLE_META, TYPE_META } from './data.js';
+
+const TC = { buff: 'var(--buff)', nerf: 'var(--nerf)', new: 'var(--new)', rework: 'var(--rework)', adjust: 'var(--rework)' };
+const RC = { Tanque: 'var(--tank)', 'Daño': 'var(--damage)', Apoyo: 'var(--support)' };
+const $ = id => document.getElementById(id);
+const { patch } = await loadPatch();
+const section = patch.sections.gameBase;
+const heroes = heroesOf(section);
+const c = countTypes(heroes);
+const adj = c.adjust + c.rework;
+const total = c.buff + c.nerf + adj + c.new;
+
+$('rail').innerHTML = `
+  <div class="logo">${icon('damage', { size: 22, stroke: 2.2 })}</div>
+  <a class="on" href="#">${icon('gameBase', { size: 22 })}Base</a>
+  <a href="#">${icon('stadium', { size: 22 })}Stadium</a>
+  <a href="#">${icon('arcade', { size: 22 })}Arcade</a>
+  <a href="#">${icon('bugFixes', { size: 22 })}Errores</a>
+  <a class="bottom" href="#">${icon('sun', { size: 20 })}Tema</a>`;
+
+$('top').innerHTML = `
+  <div class="select">${icon('calendar', { size: 17 })}<span>${patch.title}</span>${icon('chevronDown', { size: 16 })}</div>
+  <div class="search">${icon('search', { size: 17 })} Buscar héroe, habilidad o cambio…</div>
+  <div class="spacer"></div>
+  <div class="toggle"><span class="on">${icon('language', { size: 14 })}ES</span><span>EN</span></div>
+  <span class="ibtn hide-m">${icon('refresh', { size: 17 })}</span>
+  <span class="ibtn hide-m">${icon('download', { size: 17 })}</span>`;
+
+const roleStack = (r) => {
+    const rc = countTypes(section.roles[r].map(h => ({ ...h, role: r })));
+    const tot = Object.values(rc).reduce((a, b) => a + b, 0) || 1;
+    return ['buff', 'nerf', 'adjust', 'rework', 'new'].filter(k => rc[k]).map(k => `<i style="width:${rc[k] / tot * 100}%;background:${TC[k]}"></i>`).join('');
+};
+
+$('bento').innerHTML = `
+  <div class="card title-card">
+    <div class="eyebrow">${icon('gameBase', { size: 14 })} Juego base · Parche de balance</div>
+    <h1 class="g">${patch.title}</h1>
+    <div class="sub">Cambios de balance en los tres roles y ${patch.sections.bugFixes.length} correcciones de errores.</div>
+    <div class="kpis">
+      <div class="kpi"><b>${heroes.length}</b><span>Héroes</span></div>
+      <div class="kpi"><b>${total}</b><span>Cambios</span></div>
+      <div class="kpi"><b style="color:var(--accent)">${patch.sections.bugFixes.length}</b><span>Correcciones</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="eyebrow">${icon('buff', { size: 14 })} Balanza del parche</div>
+    <div class="kpis" style="margin-top:12px">
+      <div class="kpi"><b style="color:var(--buff)">${c.buff}</b><span>Mejoras</span></div>
+      <div class="kpi"><b style="color:var(--nerf)">${c.nerf}</b><span>Nerfs</span></div>
+      <div class="kpi"><b style="color:var(--rework)">${adj}</b><span>Ajustes</span></div>
+    </div>
+    <div class="balance"><div class="track"><i style="width:${c.buff / total * 100}%;background:var(--buff)"></i><i style="width:${adj / total * 100}%;background:var(--rework)"></i><i style="width:${c.nerf / total * 100}%;background:var(--nerf)"></i></div>
+      <div class="lbl"><span>Más fuerte <b style="--c:var(--buff)">${Math.round(c.buff / total * 100)}%</b></span><span>Más débil <b style="--c:var(--nerf)">${Math.round(c.nerf / total * 100)}%</b></span></div></div>
+  </div>
+  <div class="card roles-card">
+    <div class="eyebrow">${icon('allRoles', { size: 14 })} Cambios por rol</div>
+    ${Object.entries(ROLE_META).map(([r, m]) => `<div class="row" style="--rc:${RC[r]}"><div class="name">${icon(m.key, { size: 16 })}<span>${m.label}</span></div><div class="stack">${roleStack(r)}</div><div class="n">${section.roles[r].length}</div></div>`).join('')}
+  </div>`;
+
+$('tabs').innerHTML = `
+  <span class="tab on">${icon('allRoles', { size: 16 })} Todos <em>${heroes.length}</em></span>
+  ${Object.entries(ROLE_META).map(([r, m]) => `<span class="tab">${icon(m.key, { size: 16 })} ${m.label} <em>${section.roles[r].length}</em></span>`).join('')}
+  <div class="filters">${['buff', 'nerf', 'new', 'rework'].map(t => `<span class="f" style="--c:${TC[t]}">${icon(TYPE_META[t].icon, { size: 13, stroke: 2.4 })}${TYPE_META[t].short}</span>`).join('')}</div>`;
+
+const line = (ch) => {
+    const d = ch.details.find(x => x !== ch.title);
+    const df = d && extractDiff(d);
+    return `<div class="line" style="--c:${TC[ch.type]}">${icon(TYPE_META[ch.type].icon, { size: 15, stroke: 2.4 })}
+      <div><div class="t">${escapeHtml(ch.title)}</div>${d && !df ? `<div class="d">${escapeHtml(d)}</div>` : ''}</div>
+      ${df ? `<span class="pillnum"><s>${df.from}</s> → ${df.to}</span>` : '<span></span>'}</div>`;
+};
+
+$('grid').innerHTML = heroes.map((h, i) => {
+    const t = countTypes([h]);
+    const featured = i === 0;
+    const shown = featured ? h.changes : h.changes.slice(0, 3);
+    return `<article class="hero ${featured ? 'featured' : ''}" style="--rc:${RC[h.role]}">
+      <div class="hero-head">${avatar(h)}<div><h3 class="g">${escapeHtml(h.name)}</h3><div class="role">${icon(ROLE_META[h.role].key, { size: 13 })}${ROLE_META[h.role].label}</div></div>
+        <div class="score">${['buff', 'nerf', 'adjust', 'rework', 'new'].filter(k => t[k]).map(k => `<span class="dot" style="--c:${TC[k]}" title="${TYPE_META[k].label}">${icon(TYPE_META[k].icon, { size: 14, stroke: 2.4 })}</span>`).join('')}</div></div>
+      ${featured && h.desc ? `<div class="dev">${escapeHtml(h.desc)}</div>` : ''}
+      <div class="lines">${shown.map(line).join('')}</div>
+      ${h.changes.length > shown.length ? `<div class="more">${icon('chevronDown', { size: 14 })} ${h.changes.length - shown.length} cambios más</div>` : ''}
+    </article>`;
+}).join('');
+</script>
+</body>
+</html>

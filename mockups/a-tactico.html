@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta A · Táctico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #07090e; --panel: #0e131c; --panel-2: #141b27; --line: #1f2a3a; --line-2: #2b3a50;
+    --text: #e8eef7; --muted: #7d8ca3; --accent: #f99e1a; --accent-2: #ffc46b;
+    --buff: #3ddc97; --nerf: #ff5470; --new: #b98cff; --rework: #ffd23f;
+    --tank: #4fa3ff; --damage: #ff6b5e; --support: #4ee2c0;
+    --cut: 12px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 'Barlow', system-ui, sans-serif;
+    background-image: linear-gradient(rgba(79,163,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(79,163,255,.04) 1px, transparent 1px);
+    background-size: 32px 32px; }
+.ic { flex-shrink: 0; }
+.cut { clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut)); }
+.display { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+
+/* Header */
+header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 20px; padding: 0 28px; height: 64px;
+    background: rgba(7,9,14,.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
+.brand-mark { width: 34px; height: 34px; display: grid; place-items: center; background: var(--accent); color: #111; }
+.brand small { color: var(--accent); }
+.patch-pick { display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--panel); border: 1px solid var(--line-2); font-weight: 600; }
+.patch-pick .ic { color: var(--accent); }
+.spacer { flex: 1; }
+.search { display: flex; align-items: center; gap: 10px; width: 260px; padding: 9px 14px; background: var(--panel); border: 1px solid var(--line); color: var(--muted); }
+.icon-btn { width: 40px; height: 40px; display: grid; place-items: center; background: var(--panel); border: 1px solid var(--line); color: var(--text); }
+.icon-btn.lang { width: auto; padding: 0 12px; gap: 6px; display: flex; font-weight: 700; }
+.icon-btn.lang b { color: var(--accent); }
+
+/* Layout */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 28px; max-width: 1440px; margin: 0 auto; padding: 28px; }
+nav .group { margin-bottom: 26px; }
+nav h6 { margin: 0 0 10px; color: var(--muted); font-size: 12px; font-weight: 600; }
+.nav-item { display: flex; align-items: center; gap: 12px; padding: 11px 14px; margin-bottom: 6px; color: var(--muted);
+    border-left: 3px solid transparent; font-weight: 600; font-size: 16px; }
+.nav-item.active { color: var(--text); background: linear-gradient(90deg, rgba(249,158,26,.16), transparent); border-left-color: var(--accent); }
+.nav-item.active .ic { color: var(--accent); }
+.nav-item .count { margin-left: auto; font-size: 13px; color: var(--muted); font-family: 'Barlow'; }
+.nav-item[data-role] .ic { color: var(--rc); }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; font-size: 13px; font-weight: 700; border: 1px solid var(--line-2); color: var(--c); }
+.chip.on { background: color-mix(in srgb, var(--c) 18%, transparent); border-color: var(--c); }
+
+/* Hero banner */
+.banner { position: relative; padding: 28px 32px; background: linear-gradient(120deg, #1b2335, #0e131c 60%); border: 1px solid var(--line-2); overflow: hidden; }
+.banner::after { content: ''; position: absolute; right: -60px; top: -60px; width: 260px; height: 260px; border: 2px solid rgba(249,158,26,.25); transform: rotate(45deg); }
+.banner .kicker { color: var(--accent); font-size: 14px; font-weight: 700; display: flex; gap: 8px; align-items: center; }
+.banner h1 { margin: 6px 0 18px; font-size: 44px; line-height: 1; font-weight: 700; }
+.stats { display: flex; gap: 12px; flex-wrap: wrap; }
+.stat { min-width: 120px; padding: 10px 16px; background: rgba(0,0,0,.35); border-left: 3px solid var(--c); }
+.stat b { display: block; font: 700 28px/1 'Rajdhani'; color: var(--c); }
+.stat span { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+
+/* Role block */
+.role-head { display: flex; align-items: center; gap: 12px; margin: 34px 0 14px; color: var(--rc); }
+.role-head h2 { margin: 0; font-size: 26px; color: var(--text); }
+.role-head .line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--rc), transparent); }
+.role-head .tools { display: flex; gap: 6px; color: var(--muted); }
+
+/* Hero card */
+.hero { background: var(--panel); border: 1px solid var(--line); margin-bottom: 12px; border-left: 3px solid var(--rc); }
+.hero-top { display: flex; align-items: center; gap: 16px; padding: 14px 18px; }
+.avatar { width: 52px; height: 52px; object-fit: cover; background: var(--panel-2); clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px); }
+.avatar--fallback { display: grid; place-items: center; font: 700 18px 'Rajdhani'; color: #0b0f16; background: var(--rc); }
+.hero-name { font-size: 22px; font-weight: 700; line-height: 1; }
+.hero-sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.tally { margin-left: auto; display: flex; gap: 6px; }
+.tally .chip { padding: 4px 8px; }
+.chev { color: var(--muted); }
+.hero.open .chev { transform: rotate(180deg); color: var(--accent); }
+.hero-body { border-top: 1px solid var(--line); padding: 16px 18px 18px; }
+.dev { margin: 0 0 16px; padding: 12px 16px; background: var(--panel-2); color: #b9c6d8; font-size: 14px; border-left: 2px solid var(--accent); }
+.dev b { color: var(--accent); font-family: 'Rajdhani'; letter-spacing: .06em; }
+.change { display: grid; grid-template-columns: 34px 1fr; gap: 14px; padding: 12px 0; border-top: 1px dashed var(--line); }
+.change:first-of-type { border-top: 0; }
+.type-badge { width: 34px; height: 34px; display: grid; place-items: center; color: var(--c); background: color-mix(in srgb, var(--c) 15%, transparent); }
+.change h4 { margin: 2px 0 6px; font-size: 18px; }
+.change ul { margin: 0; padding: 0; list-style: none; }
+.change li { display: flex; justify-content: space-between; gap: 16px; padding: 3px 0; color: #c9d4e4; }
+.diff { flex-shrink: 0; font: 700 15px 'Rajdhani'; display: inline-flex; align-items: center; gap: 6px; }
+.diff s { color: var(--muted); text-decoration-thickness: 1px; }
+.diff b { color: var(--c); }
+@media (max-width: 800px) {
+    header { padding: 0 16px; gap: 10px; } .search, .patch-pick, .brand small, .hide-m { display: none; }
+    .layout { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
+    nav { display: flex; gap: 8px; overflow-x: auto; } nav .group { margin: 0; display: flex; gap: 6px; } nav h6, .nav-item .count { display: none; }
+    .nav-item { white-space: nowrap; margin: 0; border: 1px solid var(--line); border-left-width: 1px; padding: 8px 12px; font-size: 14px; }
+    .nav-item.active { border-color: var(--accent); }
+    nav .group.filters { display: none; }
+    .banner { padding: 20px; } .banner h1 { font-size: 32px; } .stats { display: grid; grid-template-columns: 1fr 1fr; } .stat { min-width: 0; }
+    .tally { display: none; } .change li { flex-direction: column; gap: 2px; }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="brand display"><span class="brand-mark cut" id="logo"></span><span>Patch Notes <small>OW</small></span></div>
+    <div class="patch-pick cut display" id="pick"></div>
+    <div class="spacer"></div>
+    <div class="search cut" id="search"></div>
+    <div class="icon-btn lang cut display" id="lang"></div>
+    <div class="icon-btn cut hide-m" id="refresh"></div>
+    <div class="icon-btn cut" id="theme"></div>
+</header>
+<div class="layout">
+    <nav id="nav"></nav>
+    <main id="main"></main>
+</div>
+<script type="module">
+import { icon } from './icons.js';
+import { loadPatch, heroesOf, countTypes, avatar, extractDiff, escapeHtml, ROLE_META, TYPE_META } from './data.js';
+
+const TYPE_COLORS = { buff: 'var(--buff)', nerf: 'var(--nerf)', new: 'var(--new)', rework: 'var(--rework)', adjust: 'var(--rework)' };
+const ROLE_COLORS = { Tanque: 'var(--tank)', 'Daño': 'var(--damage)', Apoyo: 'var(--support)' };
+const $ = id => document.getElementById(id);
+
+const { patch } = await loadPatch();
+const section = patch.sections.gameBase;
+const heroes = heroesOf(section);
+const counts = countTypes(heroes);
+
+$('logo').innerHTML = icon('damage', { size: 20, stroke: 2.2 });
+$('pick').innerHTML = `${icon('calendar', { size: 18 })} ${patch.title} ${icon('chevronDown', { size: 16 })}`;
+$('search').innerHTML = `${icon('search', { size: 18 })} Buscar héroe o habilidad`;
+$('lang').innerHTML = `${icon('language', { size: 18 })} <b>ES</b>`;
+$('refresh').innerHTML = icon('refresh', { size: 18 });
+$('theme').innerHTML = icon('sun', { size: 18 });
+
+const sections = [['gameBase', 'Juego base', heroes.length], ['stadium', 'Stadium', heroesOf(patch.sections.stadium).length], ['bugFixes', 'Correcciones', patch.sections.bugFixes.length]];
+$('nav').innerHTML = `
+  <div class="group"><h6 class="display">Sección</h6>
+    ${sections.map(([id, label, n], i) => `<div class="nav-item display ${i === 0 ? 'active' : ''}">${icon(id)}${label}<span class="count">${n}</span></div>`).join('')}
+  </div>
+  <div class="group"><h6 class="display">Rol</h6>
+    <div class="nav-item display active">${icon('allRoles')}Todos<span class="count">${heroes.length}</span></div>
+    ${Object.entries(ROLE_META).map(([r, m]) => `<div class="nav-item display" data-role style="--rc:${ROLE_COLORS[r]}">${icon(m.key)}${m.label}<span class="count">${section.roles[r].length}</span></div>`).join('')}
+  </div>
+  <div class="group filters"><h6 class="display">Tipo de cambio</h6>
+    <div class="chip-row">${['buff', 'nerf', 'new', 'rework'].map(t => `<span class="chip cut display ${t === 'nerf' ? '' : ''}" style="--c:${TYPE_COLORS[t]}">${icon(t, { size: 14, stroke: 2.4 })}${TYPE_META[t].short}</span>`).join('')}</div>
+  </div>`;
+
+const renderChange = (c) => `
+  <div class="change">
+    <span class="type-badge cut" style="--c:${TYPE_COLORS[c.type]}" title="${TYPE_META[c.type].label}">${icon(TYPE_META[c.type].icon, { size: 18, stroke: 2.2 })}</span>
+    <div><h4 class="display">${escapeHtml(c.title)}</h4>
+      <ul>${c.details.filter(d => d !== c.title).map(d => {
+          const diff = extractDiff(d);
+          return `<li><span>${escapeHtml(d)}</span>${diff ? `<span class="diff" style="--c:${TYPE_COLORS[c.type]}"><s>${diff.from}</s>→ <b>${diff.to}</b></span>` : ''}</li>`;
+      }).join('')}</ul>
+    </div>
+  </div>`;
+
+const renderHero = (h, open) => {
+    const t = countTypes([h]);
+    return `
+  <article class="hero ${open ? 'open' : ''}" style="--rc:${ROLE_COLORS[h.role]}">
+    <div class="hero-top">
+      ${avatar(h)}
+      <div><div class="hero-name display">${escapeHtml(h.name)}</div><div class="hero-sub">${h.changes.length} cambios · ${ROLE_META[h.role].label}</div></div>
+      <div class="tally">${Object.entries(t).filter(([, n]) => n).map(([k, n]) => `<span class="chip cut display" style="--c:${TYPE_COLORS[k]}">${icon(TYPE_META[k].icon, { size: 13, stroke: 2.4 })}${n}</span>`).join('')}</div>
+      <span class="chev">${icon('chevronDown')}</span>
+    </div>
+    ${open ? `<div class="hero-body">${h.desc ? `<p class="dev"><b>NOTA DEL EQUIPO · </b>${escapeHtml(h.desc)}</p>` : ''}${h.changes.map(renderChange).join('')}</div>` : ''}
+  </article>`;
+};
+
+let first = true;
+$('main').innerHTML = `
+  <section class="banner cut">
+    <div class="kicker display">${icon('gameBase', { size: 16 })} Juego base · Actualización</div>
+    <h1 class="display">${patch.title}</h1>
+    <div class="stats">
+      <div class="stat" style="--c:var(--accent)"><b>${heroes.length}</b><span>Héroes</span></div>
+      <div class="stat" style="--c:var(--buff)"><b>${counts.buff}</b><span>Mejoras</span></div>
+      <div class="stat" style="--c:var(--nerf)"><b>${counts.nerf}</b><span>Debilitaciones</span></div>
+      <div class="stat" style="--c:var(--rework)"><b>${counts.adjust + counts.rework}</b><span>Ajustes</span></div>
+    </div>
+  </section>
+  ${Object.entries(section.roles).filter(([, hs]) => hs.length).map(([role, hs]) => `
+    <div class="role-head" style="--rc:${ROLE_COLORS[role]}">${icon(ROLE_META[role].key, { size: 26 })}<h2 class="display">${role}</h2><span class="line"></span>
+      <span class="tools">${icon('expandAll', { size: 18 })}${icon('collapseAll', { size: 18 })}</span></div>
+    ${hs.map(h => { const o = first; first = false; return renderHero({ ...h, role }, o); }).join('')}
+  `).join('')}`;
+</script>
+</body>
+</html>

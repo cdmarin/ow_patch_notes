@@ -1,0 +1,8 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Iconos</title>
+<style>body{margin:0;padding:32px;background:#0d1117;color:#e6edf3;font:13px system-ui}
+h1{font-size:18px;margin:0 0 20px}.g{display:grid;grid-template-columns:repeat(8,1fr);gap:14px}
+.c{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 6px;border:1px solid #30363d;border-radius:10px;background:#161b22}
+.c span{color:#8b949e;font-size:11px}.big .ic{color:#f99e1a}.light{background:#f6f7f9;color:#1f2328}.light .c{background:#fff;border-color:#d0d7de}</style></head>
+<body><h1>Set de iconos propio · 24×24 · trazo 1.75</h1><div class="g" id="g"></div>
+<script type="module">import {icon,ICON_NAMES} from './icons.js';
+document.getElementById('g').innerHTML=ICON_NAMES.map(n=>`<div class="c">${icon(n,{size:32})}<span>${n}</span></div>`).join('');</script></body></html>
