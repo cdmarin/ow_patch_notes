@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Esta es una actualización que requiere una actualización del cliente del juego. Los códigos de repetición han sido borrados.",
+      "intro": "Esta es una actualización que requiere actualizar el cliente del juego. Se han eliminado los códigos de repetición.",
       "roles": {
         "Tanque": [],
         "Daño": [],
@@ -30,14 +30,14 @@
       },
       "generalItems": [
         {
-          "name": "Client Update",
-          "desc": "Esta es una actualización que requiere una actualización del cliente del juego. Los códigos de repetición han sido borrados.",
+          "name": "Actualización del cliente",
+          "desc": "Esta es una actualización que requiere actualizar el cliente del juego. Se han eliminado los códigos de repetición.",
           "changes": [
             {
               "title": "Actualización del cliente",
               "type": "adjust",
               "details": [
-                "Esta es una actualización que requiere una actualización del cliente del juego. Los códigos de repetición han sido borrados."
+                "Esta es una actualización que requiere actualizar el cliente del juego. Se han eliminado los códigos de repetición."
               ]
             }
           ]
@@ -47,11 +47,12 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se solucionó un problema con el mapa de Eichenwalde; Este mapa se ha vuelto a habilitar en la rotación competitiva.",
-      "Se solucionó un problema con las líneas de voz de Genji Mythic que les impedía reproducir.",
-      "Se solucionó un problema por el cual los saltos de niveles acumulados obtenidos antes de la temporada 4 no se aplicaban al Pase de batalla de la temporada 4.",
-      "Se solucionó un problema por el cual no se otorgaban artículos no reclamados de temporadas anteriores."
+      "Se ha corregido un error que afectaba al mapa de Eichenwalde. Este mapa ya se puede volver a escoger en la rotación competitiva.",
+      "Se ha corregido un error que impedía que se reprodujesen frases míticas de Genji.",
+      "Se ha corregido un error que impedía que se aplicasen los niveles acumulados que se habían obtenido antes de la temporada 4 a su pase de batalla.",
+      "Se ha corregido un error que impedía que se otorgasen objetos no reclamados de temporadas anteriores."
     ]
   },
-  "translated": true
+  "translated": true,
+  "translationSource": "official"
 }

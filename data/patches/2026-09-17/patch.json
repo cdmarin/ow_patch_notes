@@ -1,7 +1,7 @@
 {
   "version": "unknown",
-  "date": "2026-08-12",
-  "title": "12 de Agosto 2026",
+  "date": "2026-09-17",
+  "title": "17 de Septiembre 2026",
   "sections": {
     "stadium": {
       "intro": "",
@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles.",
+      "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
       "roles": {
         "Tanque": [],
         "Daño": [
@@ -32,19 +32,25 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
             "changes": [
               {
-                "title": "Sable de plasma",
-                "type": "buff",
+                "title": "Se ha reducido la armadura base de 325 a 275 (5c5).",
+                "type": "nerf",
                 "details": [
-                  "Se ha aumentado el daño de 60 a 65."
-                ],
-                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5b8ae7f23071c20d472d55243ddebe666c361bab598c18e12161b8415ee058de.png"
+                  "Se ha reducido la armadura base de 325 a 275 (5c5).",
+                  "Se ha reducido la armadura base de 300 a 250 (6c6)."
+                ]
+              },
+              {
+                "title": "Fusión concentrada (ventaja mayor)",
+                "type": "nerf",
+                "details": [
+                  "Se ha reducido el daño por bala de 45 a 36."
+                ]
               },
               {
                 "title": "Propulsores",
-                "type": "adjust",
+                "type": "buff",
                 "details": [
-                  "Se ha reducido el ritmo de gasto de combustible de 40 a 25.",
-                  "Se ha aumentado el ritmo de regeneración de combustible de 15 a 22,5."
+                  "Se ha aumentado el ritmo de gasto de combustible de 25 a 30."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
               },
@@ -52,8 +58,8 @@
                 "title": "Cañón automático de fusión",
                 "type": "adjust",
                 "details": [
-                  "Se ha aumentado el daño de 15 a 16.",
-                  "Se ha reducido el tiempo de reutilización de 6 a 4 s."
+                  "Se ha reducido el daño de 16 a 15.",
+                  "Se ha aumentado el tiempo de reutilización de 4 a 5 segundos."
                 ],
                 "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
               }
@@ -65,13 +71,13 @@
       "generalItems": [
         {
           "name": "Actualización rápida",
-          "desc": "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles.",
+          "desc": "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
           "changes": [
             {
               "title": "Actualización rápida",
               "type": "adjust",
               "details": [
-                "Esta es una actualización rápida. Los códigos de repetición del parche del 11 de agosto aún están disponibles."
+                "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles."
               ]
             }
           ]
@@ -81,10 +87,7 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se ha corregido un error que provocaba que Moira perdiese Nanoestimulantes al usar Evanescencia.",
-      "Se ha corregido un error que impedía que Barrera de energía protegiese por completo a D. Mon si la desplegaba con Cañón automático de fusión activo.",
-      "Se ha corregido un error que provocaba que la segunda zona de aparición de los atacantes se extendiese hasta el área de juego en Paraíso.",
-      "Se ha corregido un error que volvía invulnerable temporalmente a D.Mon."
+      "Se ha corregido un problema de jugabilidad con Mercy en Estadio. Ahora vuelve a estar disponible en todas las colas de Estadio."
     ]
   },
   "translated": true,

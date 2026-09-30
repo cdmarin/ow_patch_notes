@@ -1,0 +1,95 @@
+{
+  "version": "unknown",
+  "date": "2026-09-17",
+  "title": "17 de Septiembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [
+          {
+            "name": "D.Mon",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Armor reduced from 325 to 275 (5v5).",
+                "type": "nerf",
+                "details": [
+                  "Armor reduced from 325 to 275 (5v5).",
+                  "Armor reduced from 300 to 250 (6v6)."
+                ]
+              },
+              {
+                "title": "Focused Fusion - Major Perk",
+                "type": "nerf",
+                "details": [
+                  "Damage per bullet reduced from 45 to 36."
+                ]
+              },
+              {
+                "title": "Propulsors",
+                "type": "buff",
+                "details": [
+                  "Fuel drain rate increased from 25 to 30."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
+              },
+              {
+                "title": "Fusion Repeater",
+                "type": "adjust",
+                "details": [
+                  "Damage reduced from 16 to 15.",
+                  "Cooldown increased from 4 to 5 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/db227e82342a3b2f97f3223616ffc5923999ea9d3badf019a341f2ba1b38843f.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available.",
+          "changes": [
+            {
+              "title": "Hotfix Update",
+              "type": "adjust",
+              "details": [
+                "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Fixed a gameplay issue with Mercy in Stadium. She has been re-enabled in all Stadium queues."
+    ]
+  },
+  "translated": false,
+  "language": "en"
+}

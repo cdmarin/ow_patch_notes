@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles.",
+      "intro": "Este es un parche rápido. Los códigos de repetición del parche del 8 de septiembre aún están disponibles.",
       "roles": {
         "Tanque": [],
         "Daño": [],
@@ -30,14 +30,14 @@
       },
       "generalItems": [
         {
-          "name": "Hotfix Patch",
-          "desc": "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles.",
+          "name": "Parche rápido",
+          "desc": "Este es un parche rápido. Los códigos de repetición del parche del 8 de septiembre aún están disponibles.",
           "changes": [
             {
-              "title": "Parche de revisión",
+              "title": "Parche rápido",
               "type": "adjust",
               "details": [
-                "Este es un parche de revisión. Los códigos de repetición del parche del 8 de septiembre todavía están disponibles."
+                "Este es un parche rápido. Los códigos de repetición del parche del 8 de septiembre aún están disponibles."
               ]
             }
           ]
@@ -47,10 +47,11 @@
     "maps": [],
     "system": [],
     "bugFixes": [
-      "Se resolvió un problema con el Vórtice Voraz de Ramattra que causaba un retraso adicional involuntario antes de que pudiera detonarse.",
-      "Se corrigió un error con Jetpack Cat que permitía a Purr atravesar las barreras enemigas.",
-      "Se solucionó un problema que afectaba el alcance del Colmillo Palatino de Vendetta en algunos casos."
+      "Se ha corregido un error con Vórtice voraz de Ramattra que provocaba que hubiera un retraso extra no intencionado antes de poder detonarlo.",
+      "Se ha corregido un error con Jetpack Cat que permitía que Ronroneo atravesara las barreras enemigas.",
+      "Se ha corregido un error que, en algunos casos, afectaba al alcance de Colmillo palatino de Vendetta."
     ]
   },
-  "translated": true
+  "translated": true,
+  "translationSource": "official"
 }

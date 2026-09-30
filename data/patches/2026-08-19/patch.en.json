@@ -1,0 +1,58 @@
+{
+  "version": "unknown",
+  "date": "2026-08-19",
+  "title": "19 de Agosto 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "This is an update requiring an update to the game client. Replay codes have been wiped.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Client Update",
+          "desc": "This is an update requiring an update to the game client. Replay codes have been wiped.",
+          "changes": [
+            {
+              "title": "Client Update",
+              "type": "adjust",
+              "details": [
+                "This is an update requiring an update to the game client. Replay codes have been wiped."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Fixed an issue with the Eichenwalde map; this map has been re‑enabled in the competitive rotation.",
+      "Fixed an issue with the Genji Mythic voice lines that prevented them from playing.",
+      "Fixed an issue where banked tier skips earned prior to Season 4 were not applying to the Season 4 Battle Pass.",
+      "Fixed an issue where unclaimed items from previous seasons were not being granted."
+    ]
+  },
+  "translated": false,
+  "language": "en"
+}

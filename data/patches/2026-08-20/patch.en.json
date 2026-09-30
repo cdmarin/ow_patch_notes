@@ -22,7 +22,7 @@
       "generalItems": []
     },
     "gameBase": {
-      "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 19 de agosto aún están disponibles.",
+      "intro": "This is a hotfix update. Replay codes from the August 19 update are still available.",
       "roles": {
         "Tanque": [],
         "Daño": [],
@@ -33,10 +33,10 @@
             "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/192ba53e30db9ceaea964dc67a30351db1c2431033d827f0b9af0ab537be2bad.png",
             "changes": [
               {
-                "title": "Se ha corregido un error que permitía a Mizuki alcanzar ubicaciones imprevistas.",
+                "title": "Fixed an issue where Mizuki could reach unintended locations.",
                 "type": "adjust",
                 "details": [
-                  "Se ha corregido un error que permitía a Mizuki alcanzar ubicaciones imprevistas."
+                  "Fixed an issue where Mizuki could reach unintended locations."
                 ]
               }
             ]
@@ -45,14 +45,14 @@
       },
       "generalItems": [
         {
-          "name": "Actualización rápida",
-          "desc": "Esta es una actualización rápida. Los códigos de repetición del parche del 19 de agosto aún están disponibles.",
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the August 19 update are still available.",
           "changes": [
             {
-              "title": "Actualización rápida",
+              "title": "Hotfix Update",
               "type": "adjust",
               "details": [
-                "Esta es una actualización rápida. Los códigos de repetición del parche del 19 de agosto aún están disponibles."
+                "This is a hotfix update. Replay codes from the August 19 update are still available."
               ]
             }
           ]
@@ -63,6 +63,6 @@
     "system": [],
     "bugFixes": []
   },
-  "translated": true,
-  "translationSource": "official"
+  "translated": false,
+  "language": "en"
 }

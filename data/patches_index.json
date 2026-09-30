@@ -1,6 +1,28 @@
 {
   "patches": [
     {
+      "id": "2026-09-22",
+      "version": "unknown",
+      "date": "2026-09-22",
+      "title": "22 de Septiembre 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-09-22/patch.json",
+      "isLatest": true
+    },
+    {
+      "id": "2026-09-17",
+      "version": "unknown",
+      "date": "2026-09-17",
+      "title": "17 de Septiembre 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-09-17/patch.json",
+      "isLatest": false
+    },
+    {
       "id": "2026-09-10",
       "version": "unknown",
       "date": "2026-09-10",
@@ -9,7 +31,7 @@
       "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-09-10/patch.json",
-      "isLatest": true
+      "isLatest": false
     },
     {
       "id": "2026-09-08",
@@ -215,7 +237,7 @@
       "date": "2026-08-20",
       "title": "20 de Agosto 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-20/patch.json",
       "isLatest": false
@@ -226,7 +248,7 @@
       "date": "2026-08-19",
       "title": "19 de Agosto 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-19/patch.json",
       "isLatest": false
@@ -281,7 +303,7 @@
       "date": "2026-08-14",
       "title": "14 de Agosto 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-14/patch.json",
       "isLatest": false
@@ -303,7 +325,7 @@
       "date": "2026-08-12",
       "title": "12 de Agosto 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-12/patch.json",
       "isLatest": false
@@ -314,7 +336,7 @@
       "date": "2026-08-11",
       "title": "11 de Agosto 2026",
       "subtitle": "Notas de parche oficiales de Overwatch",
-      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-11/patch.json",
       "isLatest": false
@@ -384,6 +406,16 @@
       "season": "Temporada actual",
       "dataPath": "data/patches/2026-08-04/patch.json",
       "isLatest": false
+    },
+    {
+      "id": "2026-08-01",
+      "version": "unknown",
+      "date": "2026-08-01",
+      "title": "1 de Agosto 2026",
+      "subtitle": "Notas de parche oficiales de Overwatch",
+      "url": "https://overwatch.blizzard.com/en-us/news/patch-notes/live/2026/08",
+      "season": "Temporada actual",
+      "dataPath": "data/patches/2026-08-01/patch.json"
     },
     {
       "id": "2026-07-30",

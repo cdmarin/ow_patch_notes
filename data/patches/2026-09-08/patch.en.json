@@ -1,0 +1,622 @@
+{
+  "version": "unknown",
+  "date": "2026-09-08",
+  "title": "8 de Septiembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Va",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "MEKA Ejector - Power",
+                "type": "nerf",
+                "details": [
+                  "Ultimate Charge cost reduction increased to 60% (Up from 50%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "Cut 'Em Gracie - Power",
+                "type": "nerf",
+                "details": [
+                  "Return damage reduced to 30 (Down from 40)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Genji",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Laceration - Power",
+                "type": "nerf",
+                "details": [
+                  "Cooldown reduction per target increased to 2.5s (Up from 2s)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Apex Bloodlust - Power",
+                "type": "nerf",
+                "details": [
+                  "Lifesteal per stack reduced to 4% (Down from 5%)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Falconer - Power",
+                "type": "nerf",
+                "details": [
+                  "Attack speed bonus increased to 50% (Up from 30%).",
+                  "Ultimate Charge gain reduced to 10% (Down from 25%)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "Territorial - Power",
+                "type": "nerf",
+                "details": [
+                  "Damage reduced to 20% of healing (Down from 30%)."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Mon",
+            "desc": "Developer Comments: D.Mon has settled into a strong position since launch. We're reducing Call Mech's transformation time to match D.Va's while adjusting Portable Fusion Repeater to improve accuracy and reduce effectiveness at longer distances. We're also reducing Plasma Saber's damage to help offset these improvements.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Armor reduced from 325 to 300. (6v6)",
+                "type": "nerf",
+                "details": [
+                  "Armor reduced from 325 to 300. (6v6)"
+                ]
+              },
+              {
+                "title": "Plasma Saber",
+                "type": "nerf",
+                "details": [
+                  "Damage reduced from 65 to 60."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5b8ae7f23071c20d472d55243ddebe666c361bab598c18e12161b8415ee058de.png"
+              },
+              {
+                "title": "Power Barrier",
+                "type": "buff",
+                "details": [
+                  "Cast time decreased from 0.065s to 0.016s.",
+                  "Notches on side of shield reduced in size."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc4fc3dc561102b6469a81771190f915f07ac7186b1c9597451018f885c6b99c.png"
+              },
+              {
+                "title": "Call Mech",
+                "type": "adjust",
+                "details": [
+                  "Transformation duration has been reduced from 1.95 to 0.95 seconds.",
+                  "A new first-person bootup animation lasting 1 second has been added."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/751219a659df8c345ade932ed66dea60bdc844c71c2c185d64bcea83ea8c1ae2.png"
+              },
+              {
+                "title": "Portable Fusion Repeater",
+                "type": "buff",
+                "details": [
+                  "Spread reduced from 2 to 1.75 degrees.",
+                  "Minimum falloff range reduced from 30 to 20 meters."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bedcca9c4d45135065757cd2f5ff48137b9694159ea5929959efa63e9a45dac7.png"
+              }
+            ]
+          },
+          {
+            "name": "D.Va",
+            "desc": "Developer Comments: We're increasing D.Va's base health to improve her durability without making adjustments to her Defense Matrix.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "Mech base health increased from 175 to 200. (5v5)",
+                "type": "buff",
+                "details": [
+                  "Mech base health increased from 175 to 200. (5v5)"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Domina",
+            "desc": "Developer Comments: Domina's ultimate is disruptive but not always consequential relative to the time required to earn it. We're reducing its cost to make it available more frequently.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
+            "changes": [
+              {
+                "title": "Ultimate Cost reduced by 6%.",
+                "type": "buff",
+                "details": [
+                  "Ultimate Cost reduced by 6%."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "Developer Comments: Mauga continues to have high durability and damage output. We're reverting the spread adjustment made to single-fire Chainguns while reducing the effectiveness of firing both weapons at longer ranges. Alongside his armor reduction, these changes will lower both survivability and lethality.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "Base armor reduced from 150 to 125.",
+                "type": "nerf",
+                "details": [
+                  "Base armor reduced from 150 to 125."
+                ]
+              },
+              {
+                "title": "Chainguns",
+                "type": "adjust",
+                "details": [
+                  "Maximum spread when firing a single gun reverted from 1.5 to 1 degree.",
+                  "Maximum spread when firing both guns increased from 4 to 5 degrees.",
+                  "Damage falloff minimum range when firing both guns reduced from 15 to 10 meters."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/394d59489428fba7664bdf61e3bec0798b12c2957f2a733fb54a213848db4282.png"
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Developer Comments: Winston's Barrier Projector cooldown is being reduced to shorten the downtime between engagements. To offset the increased availability, its duration is also being reduced.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "Barrier Projector",
+                "type": "buff",
+                "details": [
+                  "Cooldown reduced from 12 to 10 seconds. (5v5)",
+                  "Duration reduced from 8 to 7 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/37fc72590a04cbcc4d8ddc3b839e853640a617bad0b6ce8904f6ebe8f07400ba.png"
+              }
+            ]
+          },
+          {
+            "name": "wrecking Ball",
+            "desc": "Developer Comments: Adaptive Barrier has provided Wrecking Ball with too long a protection window. We're reducing its duration to place greater emphasis on timing its use.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
+            "changes": [
+              {
+                "title": "Adaptive Barrier – Major Perk",
+                "type": "nerf",
+                "details": [
+                  "Duration reduced from 1.5 to 1 second."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zarya",
+            "desc": "Developer Comments: The cooldown of Particle Barrier is being increased to reduce Zarya's personal barrier uptime and energy generation. Projected Barrier remains unchanged, encouraging more proactive use on allies.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bdc3fb8aa2c87debc3d4565197b969c5c7b4f0c9059dd8ad3335c8e536a91e0f.png",
+            "changes": [
+              {
+                "title": "Particle Barrier",
+                "type": "nerf",
+                "details": [
+                  "Cooldown increased from 11 to 12 seconds. (5v5)"
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2311738a2f08aa2e72198b01ef5131337d39275fe0722143e53509592b22612a.png"
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Anran",
+            "desc": "Developer Comments: Dancing Blaze can generate significant visual clutter, making Anran difficult to track during combat. We're removing the visual clones visible to opponents to improve clarity. Vermillion Revival's cast time is also being reduced to shorten the window opponents have to react.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
+            "changes": [
+              {
+                "title": "Dancing Blaze",
+                "type": "nerf",
+                "details": [
+                  "Reduced the amount of visual effects enemies see when impacted by Dancing Blaze."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8a106a2acae1b9edf47495af102cf17fd7e8320c76b201d533f5723afc45d14.png"
+              },
+              {
+                "title": "Vermillion Revival",
+                "type": "buff",
+                "details": [
+                  "Cast time reduced from 3 to 2.5 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9060d9e2e407a31ab95948e6512373a4318ebd8883aefa91e9f2fa9bbffb7076.png"
+              }
+            ]
+          },
+          {
+            "name": "Freja",
+            "desc": "Developer Comments: Recent changes have significantly increased Freja's damage output. We're reducing the damage of both Revdraw Crossbow and Take Aim, while also lowering the effectiveness of Relentless Barrage. Explosive Bolt's impact sound effects have also been reduced to lessen audio clutter when repeatedly hit.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7c5a9c6437d89f4703646a934c6a27098dd340abcb6f965bf1335bc10b60e1ae.png",
+            "changes": [
+              {
+                "title": "Relentless Barrage – Minor Perk",
+                "type": "nerf",
+                "details": [
+                  "Refunded automatic bolts reduced from 8 to 5."
+                ]
+              },
+              {
+                "title": "Revdraw Crossbow",
+                "type": "nerf",
+                "details": [
+                  "Damage reduced from 30 to 28."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c6a0087882feb24e09ab4827fbadb87f34ef570a1dad65373e2c8ee9e3808e77.png"
+              },
+              {
+                "title": "Take Aim",
+                "type": "nerf",
+                "details": [
+                  "Explosive Bolt explosion damage reduced from 80 to 75.",
+                  "Explosive bolt impact sound effects reduced."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a86fa2849d7ab515d256e390e75387e4ae306f5d64c5cf24a1ba33038da91e45.png"
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "Developer Comments: Junkrat has struggled to remain effective since the weakening of his Concussion Mine combo. We're reducing Concussion Mine's cooldown to increase both damage output and mobility. Nitro Boost's movement speed bonus is also being reduced to limit the high speeds of the ultimate with the perk equipped.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "Nitro Boost – Minor Perk",
+                "type": "nerf",
+                "details": [
+                  "Bonus speed reduced from 125% to 100%."
+                ]
+              },
+              {
+                "title": "Concussion Mine",
+                "type": "buff",
+                "details": [
+                  "Cooldown reduced from 8 to 7 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/11dd2b5573ebc5ec231911d443733507e5d92822ff5b6d5dd93cd69c9827c92a.png"
+              }
+            ]
+          },
+          {
+            "name": "Sierra",
+            "desc": "Developer Comments: Sierra's damage output has remained high since release, but her weapon reliability has been limited by projectile travel time at longer ranges. We're reducing the damage of both Helix Rifle and Tracking Shot while increasing projectile speed to improve weapon responsiveness and consistency. Tremor Charge's cooldown is also being reduced to make it available more frequently.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
+            "changes": [
+              {
+                "title": "Helix Rifle",
+                "type": "adjust",
+                "details": [
+                  "Weapon projectile speed increased from 90 to 120.",
+                  "Damage reduced from 9 to 8.5."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d12e2bc19f1619b71d13816c01ef96ad54bb6a7cb4ee00ae8bea8be3d2e2102d.png"
+              },
+              {
+                "title": "Tracking Shot",
+                "type": "nerf",
+                "details": [
+                  "Damage reduced from 9 to 8.5."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6c77d58daaeaae211088786b8bf9bff92178ef2df3f0ca6ec9a721d6b4258e55.png"
+              },
+              {
+                "title": "Tremor Charge",
+                "type": "buff",
+                "details": [
+                  "Cooldown reduced from 8.5 to 7 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f4b141af6f5e6b6c392cdde07083f29d1b5374303c7fc39e37c3f4ed51985e52.png"
+              }
+            ]
+          },
+          {
+            "name": "Symmetra",
+            "desc": "Developer Comments: Symmetra's Teleporter can be extremely effective in coordinated teams, enabling long-distance repositioning with limited opportunities for opponents to respond. We're reducing its placement range to limit how far teams can travel with it, while increasing the reuse cooldown to make Teleporter use a greater commitment.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2c620d948703d0ac5e6ee3dc30fda346b0c1644aa5b318e4c78f9feebf89b68.png",
+            "changes": [
+              {
+                "title": "Teleporter",
+                "type": "adjust",
+                "details": [
+                  "Placement range reduced from 30 to 25 meters.",
+                  "Teleport reuse cooldown increased from 1 to 1.25 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1c4fb9dbd9b6d02c2e75c3ad142b79955ba3e6e73469d676c79bdaef7f7a610f.png"
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "Developer Comments: Torbjörn's secondary fire is being improved to increase its consistency at closer ranges. We're also reducing Anchor Bolts' turret throw range to preserve the perk's flexibility while limiting extremely distant turret placements.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "Anchor Bolts – Major Perk",
+                "type": "adjust",
+                "details": [
+                  "Deploy turrets increased throw range reduced from 50% to 25%."
+                ]
+              },
+              {
+                "title": "Rivet Gun",
+                "type": "buff",
+                "details": [
+                  "Secondary fire spread reduced from 4.5 to 4 degrees."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2020ce8ffa1d19edbfa7097499ed5763ac18500a0f76cde75cc37243fd6aab27.png"
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Developer Comments: These changes are intended to improve the responsiveness of Vendetta's primary fire without significantly increasing the speed of her overall combo. We've reduced delays within Palatine Fang while increasing the recovery times of Whirlwind Dash and Sundering Blade to preserve overall pacing.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Palatine Fang",
+                "type": "adjust",
+                "details": [
+                  "Initial Swing delay reduced from 0.3 to 0.15 seconds.",
+                  "Horizontal swing duration reduced from 0.25 to 0.2 seconds.",
+                  "Combo link duration increased from 0.75 to 0.9 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9754a770516c07712b3cbababb825972eec78c08b3fbc141dbcee31d9c58c137.png"
+              },
+              {
+                "title": "Whirlwind Dash",
+                "type": "nerf",
+                "details": [
+                  "Recovery increased from 0.5 to 0.75 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/646af7a4d6b6b65adee6543ec70b33c9ffd36989c8dd4e8b22079c6b9e074c79.png"
+              },
+              {
+                "title": "Sundering Blade",
+                "type": "adjust",
+                "details": [
+                  "Recovery increased from 0.2 to 0.5 seconds.",
+                  "Camera pitch is no longer fully locked during the slash."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/827e0c55b3d2f335f5950c676f1f52c8668ad33f34ea4c6052c4a122ac005ce8.png"
+              }
+            ]
+          },
+          {
+            "name": "Widowmaker",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/170aeb0ae3da053cbfd3b7db386db88a904745d692361a006048928cc9a1990a.png",
+            "changes": [
+              {
+                "title": "Take Aim",
+                "type": "adjust",
+                "details": [
+                  "Updated Widowmaker's Take Aim charge sound effects for the default, Mythic, and Hello Kitty weapons. These sound effects now increase in intensity when the charge level is above 50%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d1a1ab39ce64160b3bd5473ad5ece8115648580158514c006c9ba1398e9a8d49.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Baptiste",
+            "desc": "Developer Comments: Immortality Field's long cooldown and vulnerability to being destroyed can limit its effectiveness. We're increasing its health, lowering its cooldown, and raising its minimum health threshold to improve its overall reliability.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
+            "changes": [
+              {
+                "title": "Immortality Field",
+                "type": "adjust",
+                "details": [
+                  "Unkillable health threshold increased from 20% to 25%.",
+                  "Cooldown reduced from 22 to 20 seconds.",
+                  "Health increased from 125 to 150."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8e586114b79ae8281255d8e5a5a48d3a855be6e88b3d7abeda93288f4fffe909.png"
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "Developer Comments: Brigitte's durability can be limited due to operating at close range. We're shifting a portion of her health into armor to improve survivability.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "Health reduced from 200 to 175.",
+                "type": "nerf",
+                "details": [
+                  "Health reduced from 200 to 175."
+                ]
+              },
+              {
+                "title": "Armor increased from 50 to 75.",
+                "type": "buff",
+                "details": [
+                  "Armor increased from 50 to 75."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "Developer Comments: Recent movement changes have significantly improved Jetpack Cat's mobility and overall effectiveness. We're reducing the damage and healing of Biotic Pawjectiles to lower overall output. Lifeline is also being adjusted to provide additional counterplay against carried targets while improving its reliability when rescuing allies from environmental deaths.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "Increased sound priority and volume of base movement and Frenetic Flight.",
+                "type": "buff",
+                "details": [
+                  "Increased sound priority and volume of base movement and Frenetic Flight."
+                ]
+              },
+              {
+                "title": "Biotic Pawjectiles",
+                "type": "nerf",
+                "details": [
+                  "Damage and healing per projectile reduced from 4.5 to 4."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f69a07e928053431f7a1ac72a29c045d3eba5b6ae3bf29fdb21ee24e6f5d41e3.png"
+              },
+              {
+                "title": "Lifeline",
+                "type": "adjust",
+                "details": [
+                  "Stuns and mobility locking effects on a carried target now disconnect Lifeline.",
+                  "Allies now automatically accept Lifeline when over a death plane."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d0c899ac61aa5b72e7de931b014b02176605fba7c9f022cc7a968b6cc6ebf19b.png"
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "Developer Comments: Kiriko has become highly effective as a healer while retaining the utility and mobility of her kit. We're reducing the speed and range of Healing Ofuda to lower her healing consistency at longer distances. Protection Suzu is also being adjusted to reduce the effectiveness of its invulnerability and require more precise use.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Healing Ofuda",
+                "type": "nerf",
+                "details": [
+                  "Projectile travel speed reduced from 24 to 18 meters per second.",
+                  "Maximum seeking range reduced from 35 to 30 meters."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4ebf8c956da05591160da7416299bb3b641a268fbf334debf7892b8c7b3c326d.png"
+              },
+              {
+                "title": "Protection Suzu",
+                "type": "nerf",
+                "details": [
+                  "Phased out invulnerability duration reduced from 0.65 to 0.5 seconds.",
+                  "Explosion radius reduced from 5 to 4 meters."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a5c1a2e74ccb598d376aac2c1cd255aa46570a08886e72b06d5a6f64203c8072.png"
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "Developer Comments: Wuyang's empowered healing resource can be limiting when responding to sustained damage. We're increasing its regeneration rate to provide more frequent access to empowered healing.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "Restorative Stream",
+                "type": "adjust",
+                "details": [
+                  "Regeneration rate increased from 12.5% to 15% per second.",
+                  "Line of sight timeout reduced from 5 to 3 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f4d4b3abcf4581b0cfb268f571aa1e657533c294d475043b8ef0ca0d3e9696b0.png"
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "Developer Comments: Harmony Orb can remain active on targets for extended periods with minimal upkeep. We're reducing its line-of-sight grace period to place greater emphasis on maintaining awareness of orb targets and repositioning it when needed.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Harmony Orb",
+                "type": "nerf",
+                "details": [
+                  "Line of sight timeout reduced from 5 to 3 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8e37e2f3e147fde823bb9566b57e3e20d238430f0cb4f8aa8b581525a4f225e.png"
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Junkrat's Loot Hunt",
+          "desc": "Junkrat's Loot Hunt goes Legendary, with a specially themed twist! Join Junkrat for a unique yet familiar mixup for three weeks starting September 12 and running until September 29.",
+          "changes": [
+            {
+              "title": "Junkrat's Loot Hunt",
+              "type": "adjust",
+              "details": [
+                "Junkrat's Loot Hunt goes Legendary, with a specially themed twist! Join Junkrat for a unique yet familiar mixup for three weeks starting September 12 and running until September 29."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Fixed a bug where Battlepass XP was not granted for Stadium Quick Play Matches.",
+      "Fixed a bug with the \"Solus Victorem 2026 Finals\" Spray.",
+      "Fixed a bug where the kill feed would sometimes be out of order.",
+      "Fixed several issues with the After Match Rewards summary.",
+      "Fixed several issues with the ping system.",
+      "Removed the High Precision Mouse Input setting, as the problem it was built to solve has now been addressed through other means. The setting's removal does not change how mouse input functions in-game.",
+      "Fixed an issue causing Mercy's Flash Heal ability to not be counted for the \"Support Ability Mastery\" or \"Master of Life and Death\" daily challenges.",
+      "Fixed an issue with the \"Toggle Boosters\" setting.",
+      "Fixed a bug with the Black Forest map. It is now re-enabled.",
+      "Fixed an issue where Mercy's Sympathetic Recovery passive wasn't properly working in Stadium.",
+      "Fixed an issue where Cut 'Em Gracie would sometimes pull targets not stuck by the blade."
+    ]
+  },
+  "translated": false,
+  "language": "en"
+}
