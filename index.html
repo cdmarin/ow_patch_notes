@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overwatch — Notas de Parche</title>
     <meta name="description"
-        content="Notas de parche de Overwatch con visualización premium. Stadium, juego base, héroes y más.">
+        content="Notas de parche de Overwatch traducidas al español: juego base, Stadium, Arcade y corrección de errores.">
     <meta property="og:title" content="Overwatch — Notas de Parche">
     <meta property="og:description" content="Visualización de los parches de Overwatch">
+    <meta name="theme-color" content="#080c14">
 
     <!-- Favicon Overwatch-->
     <link rel="icon" href="logo.svg">
 
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -24,7 +28,7 @@
     <!-- Loading Overlay -->
     <div id="loading-overlay" role="status" aria-live="polite">
         <img class="loader-logo" src="logo.svg" alt="Overwatch" draggable="false">
-        <div class="loader-text">Cargando parche...</div>
+        <div class="loader-text">Cargando parche</div>
         <div class="loader-bar">
             <div class="loader-bar-inner"></div>
         </div>
@@ -32,13 +36,12 @@
 
     <!-- Scrape Progress Overlay -->
     <div id="scrape-overlay" class="hidden" role="status" aria-live="polite">
-        <div class="scrape-card">
+        <div class="scrape-card cut">
             <div class="scrape-header">
                 <img class="scrape-logo" src="logo.svg" alt="Overwatch" draggable="false">
                 <div class="scrape-title-group">
-                    <div class="scrape-title">Actualizando Notas de Parche</div>
-                    <div class="scrape-subtitle">Ejecutando proceso de descarga de parches y traductor automático...
-                    </div>
+                    <div class="scrape-title">Actualizando notas de parche</div>
+                    <div class="scrape-subtitle">Descargando parches de Blizzard y traduciéndolos al español</div>
                 </div>
             </div>
 
@@ -56,7 +59,7 @@
             </div>
 
             <div class="scrape-footer hidden" id="scrape-footer">
-                <button id="scrape-close-btn" class="scrape-btn">Aceptar</button>
+                <button id="scrape-close-btn" class="scrape-btn cut">Aceptar</button>
             </div>
         </div>
     </div>
@@ -65,101 +68,89 @@
     <!-- Header -->
     <header role="banner">
         <div class="header-brand">
-            <img class="header-logo" src="logo.svg" alt="Overwatch Logo" draggable="false">
-            <span class="header-title">Overwatch Patch Notes</span>
+            <img class="header-logo" src="logo.svg" alt="" draggable="false">
+            <span class="header-title">Patch Notes <small>OW</small></span>
         </div>
 
         <!-- Patch Selector -->
         <div class="patch-selector-wrap">
-            <select id="patch-select" aria-label="Seleccionar parche">
-                <option>Cargando...</option>
-            </select>
-            <button id="refresh-btn" class="refresh-btn" title="Refrescar y forzar descarga completa del parche actual"><span
-                    class="refresh-icon">🔄</span></button>
-            <button id="update-btn" class="refresh-btn" title="Buscar nuevos parches (descarga y traduce solo lo nuevo)"><span
-                    class="refresh-icon">📥</span></button>
+            <div class="patch-select-box cut">
+                <i data-icon="calendar" data-size="16"></i>
+                <select id="patch-select" aria-label="Seleccionar parche">
+                    <option>Cargando...</option>
+                </select>
+                <i data-icon="chevronDown" data-size="16" class="select-chevron"></i>
+            </div>
+            <button id="refresh-btn" class="icon-btn refresh-btn cut" title="Refrescar y forzar descarga completa del parche actual"
+                aria-label="Refrescar el parche actual"><i data-icon="refresh" data-size="17"></i></button>
+            <button id="update-btn" class="icon-btn refresh-btn cut" title="Buscar nuevos parches (descarga y traduce solo lo nuevo)"
+                aria-label="Buscar nuevos parches"><i data-icon="download" data-size="17"></i></button>
         </div>
 
+        <div class="header-spacer"></div>
+
         <!-- Search -->
-        <div class="search-wrap" role="search">
-            <span class="search-icon" aria-hidden="true">🔍</span>
+        <div class="search-wrap cut" role="search">
+            <i data-icon="search" data-size="17" class="search-icon"></i>
             <input id="search-input" type="search" placeholder="Buscar héroe..." autocomplete="off"
                 aria-label="Buscar héroe">
         </div>
 
-        <!-- Filters -->
-        <div class="filter-wrap" role="group" aria-label="Filtrar por tipo de cambio">
-            <button class="filter-chip" data-filter="buff" id="filter-buff" aria-pressed="false">
-                <span>⬆</span> Buff
-            </button>
-            <button class="filter-chip" data-filter="nerf" id="filter-nerf" aria-pressed="false">
-                <span>⬇</span> Nerf
-            </button>
-            <button class="filter-chip" data-filter="new" id="filter-new" aria-pressed="false">
-                <span>✦</span> Nuevo
-            </button>
-            <button class="filter-chip" data-filter="rework" id="filter-rework" aria-pressed="false">
-                <span>↻</span> Rework
-            </button>
-        </div>
-
-        <!-- Mobile Filter Toggle -->
-        <button id="mobile-filter-toggle-btn" class="mobile-filter-toggle-btn" title="Menú y Filtros" aria-label="Menú y Filtros">
-            <span>☰</span>
-        </button>
-
         <!-- Language Toggle: traducción / texto original en inglés -->
-        <button id="lang-toggle-btn" class="theme-toggle-btn lang-toggle-btn" title="Ver el texto original en inglés"
+        <button id="lang-toggle-btn" class="lang-toggle-btn cut" title="Ver el texto original en inglés"
             aria-label="Ver el texto original en inglés" aria-pressed="false" disabled>
-            <span class="lang-label">ES</span>
+            <span class="lang-opt" data-lang="es">ES</span><span class="lang-opt" data-lang="en">EN</span>
         </button>
 
         <!-- Theme Toggle -->
-        <button id="theme-toggle-btn" class="theme-toggle-btn" title="Cambiar tema" aria-label="Cambiar tema">
-            <span class="theme-icon">☀️</span>
+        <button id="theme-toggle-btn" class="icon-btn theme-toggle-btn cut" title="Cambiar tema" aria-label="Cambiar tema">
+            <i data-icon="sun" data-size="17" class="theme-ic-sun"></i>
+            <i data-icon="moon" data-size="17" class="theme-ic-moon"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-filter-toggle-btn" class="icon-btn mobile-filter-toggle-btn cut" title="Parches" aria-label="Abrir la lista de parches">
+            <i data-icon="menu" data-size="18"></i>
         </button>
     </header>
 
-    <!-- App Layout -->
+    <!-- App Layout: línea temporal · contenido · índice -->
     <div class="app-layout">
-        <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar" role="navigation" aria-label="Navegación de secciones">
+        <nav class="sidebar" id="sidebar" role="navigation" aria-label="Parches">
             <!-- Injected by app.js -->
         </nav>
 
-        <!-- Main Content -->
         <main class="content" id="content" role="main">
             <!-- Injected by app.js -->
         </main>
-        
+
+        <aside class="toc" id="toc" aria-label="Héroes de este parche">
+            <!-- Injected by app.js -->
+        </aside>
+
         <!-- Drawer Overlay -->
         <div id="drawer-overlay" class="drawer-overlay"></div>
     </div>
 
     <script>
-        // Inline theme handler — runs immediately, independent of module loading
+        // Tema: oscuro por defecto. Se aplica antes de cargar los módulos para evitar parpadeos.
         (function() {
             function applyTheme(isLight) {
                 document.body.classList.toggle('light-theme', isLight);
-                var icon = document.querySelector('#theme-toggle-btn .theme-icon');
-                if (icon) icon.textContent = isLight ? '🌙' : '☀️';
-                // Swap logos (including header logo)
+                document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
                 document.querySelectorAll('img').forEach(function(img) {
                     if (img.classList.contains('loader-logo') || img.classList.contains('scrape-logo') ||
-                        img.classList.contains('header-logo') ||
-                        img.src.indexOf('logo.svg') !== -1 || img.src.indexOf('logo-light.svg') !== -1) {
+                        img.classList.contains('header-logo')) {
                         img.src = isLight ? 'logo-light.svg' : 'logo.svg';
                     }
                 });
             }
 
-            // Apply saved theme immediately
             try {
                 var saved = localStorage.getItem('theme');
                 if (saved === 'light') applyTheme(true);
             } catch(e) {}
 
-            // Attach click handler
             var btn = document.getElementById('theme-toggle-btn');
             if (btn) {
                 btn.addEventListener('click', function() {

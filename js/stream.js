@@ -1,3 +1,5 @@
+import { icon } from './icons.js';
+
 let currentPatch = 1;
 let totalPatches = 1;
 let lastHeroName = '';
@@ -22,16 +24,12 @@ export function appendConsoleLog(consoleEl, text, forceType) {
             if (!progressLine) {
                 progressLine = document.createElement('div');
                 progressLine.className = 'console-line console-translation-progress';
-                progressLine.style.color = '#38bdf8'; // Celeste brillante
-                progressLine.style.fontWeight = '600';
                 consoleEl.appendChild(progressLine);
             }
-            
-            if (lastHeroName) {
-                progressLine.textContent = `⏳ Traducción ${lastHeroName} (${count}/${total})`;
-            } else {
-                progressLine.textContent = `⏳ Traducción elementos (${count}/${total})`;
-            }
+
+            const what = lastHeroName ? lastHeroName : 'elementos';
+            progressLine.innerHTML = `${icon('hourglass', { size: 14 })}<span></span>`;
+            progressLine.querySelector('span').textContent = `Traducción ${what} (${count}/${total})`;
             consoleEl.scrollTop = consoleEl.scrollHeight;
         }
         return;
@@ -67,33 +65,48 @@ export function appendConsoleLog(consoleEl, text, forceType) {
 
     // Reemplazar referencias a index.html por texto amigable
     if (cleanText.includes('index.html')) {
-        cleanText = '✅ Los cambios están listos para visualizar en la aplicación.';
+        cleanText = 'Los cambios están listos para visualizar en la aplicación.';
+        forceType = forceType || 'success';
     }
 
     // No mostrar rutas de archivos locales al usuario por seguridad/estética
     if (cleanText.includes(':\\') || (cleanText.includes('/') && cleanText.includes('.json')) || cleanText.includes('\\data\\')) {
         if (cleanText.includes('patch.json')) {
-            cleanText = '✅ Datos del parche guardados correctamente.';
+            cleanText = 'Datos del parche guardados correctamente.';
         } else if (cleanText.includes('meta.json')) {
-            cleanText = '✅ Metadatos e información general guardados.';
+            cleanText = 'Metadatos e información general guardados.';
         } else if (cleanText.includes('patches_index') || cleanText.includes('Índice actualizado')) {
-            cleanText = '✅ Lista de parches actualizada.';
+            cleanText = 'Lista de parches actualizada.';
         } else {
             return; // Omitir cualquier otra línea que filtre rutas internas
         }
+        forceType = forceType || 'success';
     }
 
-    logLine.textContent = cleanText;
-
+    // Tipo de línea (según las marcas que imprime el scraper) → clase e icono propio
+    let type = null;
     if (forceType === 'error' || text.startsWith('ERROR:') || text.includes('❌') || text.includes('Error fatal:')) {
-        logLine.classList.add('log-error');
+        type = 'error';
     } else if (forceType === 'success' || text.startsWith('SUCCESS:') || text.includes('✅') || text.includes('exitosamente')) {
-        logLine.classList.add('log-success');
+        type = 'success';
     } else if (text.includes('⚠️')) {
-        logLine.classList.add('log-warn');
+        type = 'warn';
+    } else if (text.includes('🌐')) {
+        type = 'translate';
+    } else if (text.includes('📁') || text.includes('📦')) {
+        type = 'group';
     } else if (text.includes('ℹ️') || text.includes('Paso')) {
-        logLine.classList.add('log-info');
+        type = 'info';
     }
+    const ICONS = { error: 'error', success: 'check', warn: 'warning', translate: 'globe', group: 'folder', info: 'info' };
+
+    // Quitar los emojis del texto: la interfaz usa sus propios iconos
+    cleanText = cleanText.replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu, '').replace(/\s{2,}/g, ' ').trim();
+    if (!cleanText) return;
+
+    if (type && type !== 'translate' && type !== 'group') logLine.classList.add(`log-${type === 'warn' ? 'warn' : type}`);
+    logLine.innerHTML = `${type ? icon(ICONS[type], { size: 14 }) : '<span class="log-bullet"></span>'}<span></span>`;
+    logLine.querySelector('span:last-child').textContent = cleanText;
 
     consoleEl.appendChild(logLine);
     consoleEl.scrollTop = consoleEl.scrollHeight;
@@ -237,9 +250,9 @@ export async function startScrapeStream(queryParams, onSuccess) {
         if (success) {
             progressBar.style.width = '100%';
             progressPercent.textContent = '100%';
-            appendConsoleLog(consoleEl, '✅ Proceso completado con éxito', 'success');
+            appendConsoleLog(consoleEl, 'Proceso completado con éxito', 'success');
         } else {
-            appendConsoleLog(consoleEl, `❌ Error en el proceso: ${errorMsg || 'Desconocido'}`, 'error');
+            appendConsoleLog(consoleEl, `Error en el proceso: ${errorMsg || 'Desconocido'}`, 'error');
         }
 
         // Controlador del botón de cerrar

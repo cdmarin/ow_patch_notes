@@ -3,6 +3,7 @@
  */
 
 import { state } from './js/state.js';
+import { icon, hydrateIcons } from './js/icons.js';
 import { dom } from './js/dom.js';
 import { SECTIONS } from './js/config.js';
 import { generateAllMonths } from './js/utils.js';
@@ -40,19 +41,13 @@ export function updateThemeUI(isLight) {
         document.body.classList.remove('light-theme');
     }
 
-    // Toggle button icon
-    const iconSpan = dom.themeToggleBtn ? dom.themeToggleBtn.querySelector('.theme-icon') : null;
-    if (iconSpan) {
-        iconSpan.textContent = isLight ? '🌙' : '☀️';
-    }
+    document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
 
     // Swap logos (including header logo)
-    const logos = Array.from(document.querySelectorAll('img')).filter(img => 
+    const logos = Array.from(document.querySelectorAll('img')).filter(img =>
         img.classList.contains('loader-logo') ||
         img.classList.contains('scrape-logo') ||
-        img.classList.contains('header-logo') ||
-        img.src.endsWith('logo.svg') ||
-        img.src.endsWith('logo-light.svg')
+        img.classList.contains('header-logo')
     );
     logos.forEach(logo => {
         logo.src = isLight ? 'logo-light.svg' : 'logo.svg';
@@ -106,12 +101,13 @@ function saveLanguage(lang) {
 function updateLangToggleUI() {
     const btn = dom.langToggleBtn;
     if (!btn) return;
-    const label = btn.querySelector('.lang-label');
     // Idioma que se está mostrando de verdad (la preferencia puede ser 'en' pero sin original disponible)
     const isEnglish = !!state.originalPatch && state.currentPatch === state.originalPatch;
     const unavailable = state.originalPatch === false || !state.translatedPatch;
 
-    if (label) label.textContent = isEnglish ? 'EN' : 'ES';
+    btn.querySelectorAll('.lang-opt').forEach(opt => {
+        opt.classList.toggle('on', opt.dataset.lang === (isEnglish ? 'en' : 'es'));
+    });
     btn.classList.toggle('active', isEnglish);
     btn.setAttribute('aria-pressed', String(isEnglish));
     btn.disabled = unavailable;
@@ -319,7 +315,7 @@ export async function init(skipLoadingPatch = false) {
         console.error('Error al inicializar:', err);
         dom.loadingOverlay.innerHTML = `
             <div style="text-align:center;color:#f87171">
-                <div style="font-size:3rem;margin-bottom:1rem">⚠️</div>
+                <div style="margin-bottom:1rem">${icon('warning', { size: 44, stroke: 1.5 })}</div>
                 <div style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem">Error al cargar</div>
                 <div style="font-size:0.875rem;color:#94a3b8">${err.message}</div>
                 <div style="font-size:0.8rem;color:#64748b;margin-top:0.5rem">Asegúrate de servir desde un servidor local (no abrir index.html directamente)</div>
@@ -432,9 +428,10 @@ function setupListeners() {
         }, 150);
     });
 
-    // Filter chips
-    dom.filterChips.forEach(chip => {
-        chip.addEventListener('click', () => toggleFilter(chip.dataset.filter));
+    // Filtros por tipo de cambio: se pintan con el contenido, así que se usa delegación
+    document.addEventListener('click', (e) => {
+        const chip = e.target.closest('.filter-chip[data-filter]');
+        if (chip) toggleFilter(chip.dataset.filter);
     });
 
     // Mobile filter drawer toggle
@@ -528,6 +525,7 @@ function setupListeners() {
 
 // Start
 async function bootstrap() {
+    hydrateIcons();
     try {
         await init();
     } catch (err) {

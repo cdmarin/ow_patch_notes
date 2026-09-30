@@ -1,445 +1,483 @@
 import { dom } from './dom.js';
 import { state } from './state.js';
-import { SECTIONS, ROLES, CHANGE_LABELS, FALLBACK_PORTRAIT } from './config.js';
-import { getPortrait, getAllHeroes, countAllChanges, formatDate } from './utils.js';
+import { SECTIONS, ROLES, ROLE_META, CHANGE_LABELS, CHANGE_ICONS } from './config.js';
+import { getPortrait, formatDate, escapeHtml, initials, slugify, extractDiff } from './utils.js';
+import { icon } from './icons.js';
 import { startScrapeStream } from './stream.js';
 import { switchSection, switchRole } from './handlers.js';
 import { init, loadPatch } from '../app.js';
 
+const TYPE_ORDER = ['buff', 'nerf', 'rework', 'new'];
+const MAX_TIMELINE_ITEMS = 12;
+
+/** 'adjust' se trata como 'rework' en filtros y colores */
+const normType = (type) => (type === 'adjust' || !type ? 'rework' : type);
+
+function sectionHasContent(sec, secData) {
+    return !!secData && (
+        (sec.hasRoles && secData.roles && Object.values(secData.roles).some(r => r.length > 0)) ||
+        (sec.hasRoles && Array.isArray(secData.generalItems) && secData.generalItems.length > 0) ||
+        (!sec.hasRoles && Array.isArray(secData) && secData.length > 0)
+    );
+}
+
+/** Héroes (y objetos generales) de la sección actual, con su rol */
+function entriesOf(section) {
+    if (!section || !section.roles) return [];
+    const entries = [];
+    ROLES.forEach(role => (section.roles[role] || []).forEach(h => entries.push({ ...h, role })));
+    (section.generalItems || []).forEach(item => entries.push({ ...item, role: '__general__' }));
+    return entries;
+}
+
+function countTypes(entries) {
+    const counts = { buff: 0, nerf: 0, rework: 0, new: 0 };
+    entries.forEach(e => (e.changes || []).forEach(c => { counts[normType(c.type)]++; }));
+    return counts;
+}
+
+// ─── Selector y línea temporal de parches ─────────────────────────────────────
+
 export function renderPatchSelector(patches) {
     dom.patchSelect.innerHTML = patches.map(p => {
-        const marker = p.isDownloaded !== false ? '' : ' 📥 (No descargado)';
-        return `<option value="${p.id}" ${p.isLatest ? 'selected' : ''}>
-            ${p.title}${p.isLatest ? ' ✦' : ''}${marker}
-        </option>`;
+        const marker = p.isDownloaded !== false ? '' : ' · No descargado';
+        return `<option value="${p.id}" ${p.isLatest ? 'selected' : ''}>${escapeHtml(p.title)}${p.isLatest ? ' · Último' : ''}${marker}</option>`;
     }).join('');
 }
 
-export function renderSidebar(patchData) {
-    // Buscar o crear el contenedor de grupos de navegación para evitar destruir los elementos móviles movidos dinámicamente
-    let navGroups = dom.sidebar.querySelector('.sidebar-nav-groups');
-    if (!navGroups) {
-        navGroups = document.createElement('div');
-        navGroups.className = 'sidebar-nav-groups';
-        dom.sidebar.appendChild(navGroups);
+/**
+ * Barra lateral: línea temporal con los parches descargados más recientes.
+ */
+export function renderSidebar() {
+    let timelineWrap = dom.sidebar.querySelector('.sidebar-timeline');
+    if (!timelineWrap) {
+        timelineWrap = document.createElement('div');
+        timelineWrap.className = 'sidebar-timeline';
+        dom.sidebar.appendChild(timelineWrap);
     }
-    navGroups.innerHTML = '';
 
-    const sectionGroup = document.createElement('div');
-    sectionGroup.className = 'sidebar-group';
-    sectionGroup.innerHTML = '<div class="sidebar-group-label">Sección</div>';
+    const currentId = dom.patchSelect.value;
+    const downloaded = (state.allPatches || []).filter(p => p.isDownloaded);
+    let items = downloaded.slice(0, MAX_TIMELINE_ITEMS);
+    const current = downloaded.find(p => p.id === currentId);
+    if (current && !items.includes(current)) items = [...items.slice(0, MAX_TIMELINE_ITEMS - 1), current];
 
-    SECTIONS.forEach(sec => {
-        const secData = patchData?.sections?.[sec.id];
-        const hasContent = secData && (
-            (sec.hasRoles && secData.roles && Object.values(secData.roles).some(r => r.length > 0)) ||
-            (sec.hasRoles && Array.isArray(secData.generalItems) && secData.generalItems.length > 0) ||
-            (!sec.hasRoles && Array.isArray(secData) && secData.length > 0)
-        );
+    timelineWrap.innerHTML = `
+        <div class="sidebar-label">Parches</div>
+        <ol class="timeline">
+            ${items.map(p => {
+                const date = p.date || p.id;
+                const weekday = /^\d{4}-\d{2}-\d{2}$/.test(date)
+                    ? new Date(`${date}T12:00:00`).toLocaleDateString('es-ES', { weekday: 'long' })
+                    : '';
+                return `<li><button class="timeline-item ${p.id === currentId ? 'active' : ''}" data-patch-id="${p.id}" ${p.id === currentId ? 'aria-current="true"' : ''}>
+                    <span class="timeline-title">${escapeHtml(p.title.replace(/ \d{4}$/, ''))}</span>
+                    <span class="timeline-sub">${weekday}${p.isLatest ? ' · Último' : ''}</span>
+                </button></li>`;
+            }).join('')}
+        </ol>
+        <p class="sidebar-hint">Los parches anteriores están en el selector de arriba.</p>
+    `;
 
-        if (!hasContent) return;
-
-        const btn = document.createElement('button');
-        btn.className = `section-tab ${state.currentSection === sec.id ? 'active' : ''}`;
-        btn.dataset.section = sec.id;
-        btn.innerHTML = `
-            <span class="tab-icon">${sec.icon}</span>
-            ${sec.label}
-        `;
-        btn.onclick = () => switchSection(sec.id);
-        sectionGroup.appendChild(btn);
+    timelineWrap.querySelectorAll('.timeline-item').forEach(btn => {
+        btn.onclick = () => {
+            const id = btn.dataset.patchId;
+            if (id === dom.patchSelect.value) return;
+            dom.patchSelect.value = id;
+            closeDrawer();
+            loadPatch(id);
+        };
     });
-
-    if (sectionGroup.children.length > 1) {
-        navGroups.appendChild(sectionGroup);
-    }
-
-    const currentSec = SECTIONS.find(s => s.id === state.currentSection);
-    if (currentSec?.hasRoles) {
-        const divider = document.createElement('div');
-        divider.className = 'sidebar-divider';
-        navGroups.appendChild(divider);
-
-        const roleGroup = document.createElement('div');
-        roleGroup.className = 'sidebar-group';
-        roleGroup.innerHTML = '<div class="sidebar-group-label">Rol</div>';
-
-        const sectionData = patchData?.sections?.[state.currentSection];
-
-        let totalHeroes = 0;
-        ROLES.forEach(r => {
-            totalHeroes += (sectionData?.roles?.[r] || []).length;
-        });
-        if (sectionData?.generalItems?.length > 0) {
-            totalHeroes += sectionData.generalItems.length;
-        }
-
-        const todosBtn = document.createElement('button');
-        todosBtn.className = `role-btn ${state.currentRole === 'Todos' ? 'active' : ''}`;
-        todosBtn.dataset.role = 'Todos';
-        todosBtn.innerHTML = `
-            <span class="role-dot"></span>
-            Todos
-            <span class="hero-count">${totalHeroes}</span>
-        `;
-        todosBtn.onclick = () => switchRole('Todos');
-        roleGroup.appendChild(todosBtn);
-
-        ROLES.forEach(role => {
-            const heroes = sectionData?.roles?.[role] || [];
-            if (heroes.length === 0) return;
-
-            const btn = document.createElement('button');
-            btn.className = `role-btn ${state.currentRole === role ? 'active' : ''}`;
-            btn.dataset.role = role;
-            btn.innerHTML = `
-                <span class="role-dot"></span>
-                ${role}
-                <span class="hero-count">${heroes.length}</span>
-            `;
-            btn.onclick = () => switchRole(role);
-            roleGroup.appendChild(btn);
-        });
-
-        if (sectionData?.generalItems?.length > 0) {
-            const generalBtn = document.createElement('button');
-            generalBtn.className = `role-btn ${state.currentRole === '__general__' ? 'active' : ''}`;
-            generalBtn.dataset.role = '__general__';
-            generalBtn.innerHTML = `
-                <span class="role-dot"></span>
-                General y Mapas
-                <span class="hero-count">${sectionData.generalItems.length}</span>
-            `;
-            generalBtn.onclick = () => switchRole('__general__');
-            roleGroup.appendChild(generalBtn);
-        }
-
-        navGroups.appendChild(roleGroup);
-    }
     handleMobileLayout();
 }
 
-// Exponer la función de alternar descripción larga
+function closeDrawer() {
+    dom.sidebar.classList.remove('open');
+    dom.drawerOverlay?.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+}
+
+// ─── Cabecera del parche ──────────────────────────────────────────────────────
+
 window.togglePatchDesc = function (btn) {
     const span = btn.previousElementSibling;
-    const isExpanded = btn.textContent === 'Ver más';
-    if (isExpanded) {
-        span.innerHTML = span.getAttribute('data-full');
-        btn.textContent = 'Ver menos';
-    } else {
-        span.innerHTML = span.getAttribute('data-short');
-        btn.textContent = 'Ver más';
-    }
+    const expand = btn.dataset.expanded !== 'true';
+    span.textContent = expand ? span.dataset.full : span.dataset.short;
+    btn.textContent = expand ? 'Ver menos' : 'Ver más';
+    btn.dataset.expanded = String(expand);
 };
 
-window.togglePatchHeader = function () {
-    const headerCard = document.getElementById('patch-header-card');
-    if (headerCard) {
-        headerCard.classList.toggle('collapsed');
-    }
-};
+function meter(label, value, share, cls) {
+    return `<div class="meter cut ${cls}" style="--p:${Math.round(share * 100)}%">
+        <b>${value}</b><span>${label}</span><i></i>
+    </div>`;
+}
 
 export function renderPatchHeader(patchData, patchMeta) {
-    const heroCount = getAllHeroes(patchData);
-    const changeCount = countAllChanges(patchData);
+    if (!dom.patchHeaderCard) return;
+    const secConfig = SECTIONS.find(s => s.id === state.currentSection);
+    const section = patchData.sections?.[state.currentSection];
+    const bugFixes = patchData.sections?.bugFixes || [];
+    const title = patchData.title || patchMeta?.title || 'Notas de parche';
 
-    const currentIntro = patchData.sections?.[state.currentSection]?.intro
-        || patchData.sections?.gameBase?.intro
-        || patchData.sections?.stadium?.intro
-        || patchMeta?.subtitle
-        || '';
+    let heading;
+    let lede = '';
+    let meters = '';
 
-    const isMobile = window.innerWidth <= 768;
-    const maxLength = isMobile ? 80 : 220;
-    let descHtml = '';
+    if (secConfig?.hasRoles) {
+        const entries = entriesOf(section);
+        const heroes = entries.filter(e => e.role !== '__general__');
+        const counts = countTypes(entries);
+        const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
 
-    if (currentIntro.length > maxLength) {
-        const shortText = currentIntro.substring(0, maxLength).trim() + '...';
-        const safeFull = currentIntro.replace(/"/g, '&quot;');
-        const safeShort = shortText.replace(/"/g, '&quot;');
-        descHtml = `
-            <span class="desc-text" data-full="${safeFull}" data-short="${safeShort}">${shortText}</span>
-            <button class="toggle-desc-btn" onclick="togglePatchDesc(this)">Ver más</button>
-        `;
+        heading = heroes.length > 0
+            ? `Cambios para <em>${heroes.length} ${heroes.length === 1 ? 'héroe' : 'héroes'}</em>`
+            : `<em>${entries.length}</em> ${entries.length === 1 ? 'cambio general' : 'cambios generales'}`;
+
+        const parts = [];
+        if (counts.buff) parts.push(`<b class="t-buff">${counts.buff} ${counts.buff === 1 ? 'mejora' : 'mejoras'}</b>`);
+        if (counts.nerf) parts.push(`<b class="t-nerf">${counts.nerf} ${counts.nerf === 1 ? 'debilitación' : 'debilitaciones'}</b>`);
+        if (counts.rework) parts.push(`${counts.rework} ${counts.rework === 1 ? 'ajuste' : 'ajustes'}`);
+        if (counts.new) parts.push(`<b class="t-new">${counts.new} ${counts.new === 1 ? 'novedad' : 'novedades'}</b>`);
+        if (parts.length) {
+            const list = parts.length > 1 ? `${parts.slice(0, -1).join(', ')} y ${parts[parts.length - 1]}` : parts[0];
+            lede = `En ${secConfig.label.toLowerCase()}: ${list}${bugFixes.length ? `, además de ${bugFixes.length} ${bugFixes.length === 1 ? 'corrección' : 'correcciones'} de errores` : ''}.`;
+        }
+
+        meters = [
+            meter('Mejoras', counts.buff, counts.buff / total, 't-buff'),
+            meter('Debilitaciones', counts.nerf, counts.nerf / total, 't-nerf'),
+            meter('Ajustes', counts.rework, counts.rework / total, 't-rework'),
+            counts.new ? meter('Novedades', counts.new, counts.new / total, 't-new') : '',
+            bugFixes.length ? meter('Correcciones', bugFixes.length, 1, 't-accent') : ''
+        ].join('');
     } else {
-        descHtml = `<span class="desc-text">${currentIntro}</span>`;
+        const n = Array.isArray(section) ? section.length : 0;
+        heading = `<em>${n}</em> ${n === 1 ? 'corrección de errores' : 'correcciones de errores'}`;
     }
 
+    // Introducción de la sección (texto de Blizzard), recortada si es larga
+    const intro = (secConfig?.hasRoles ? section?.intro : '') || '';
+    const maxLength = window.innerWidth <= 768 ? 140 : 320;
+    let introHtml = '';
+    if (intro) {
+        if (intro.length > maxLength) {
+            const short = intro.substring(0, maxLength).trim() + '…';
+            introHtml = `<p class="patch-intro"><span class="desc-text" data-full="${escapeHtml(intro)}" data-short="${escapeHtml(short)}">${escapeHtml(short)}</span>
+                <button class="toggle-desc-btn" onclick="togglePatchDesc(this)">Ver más</button></p>`;
+        } else {
+            introHtml = `<p class="patch-intro">${escapeHtml(intro)}</p>`;
+        }
+    }
+
+    const sourceBadge = state.currentPatch === state.originalPatch && state.originalPatch
+        ? '<span class="kicker-chip cut">Original en inglés</span>'
+        : (patchData.translationSource === 'official' ? '<span class="kicker-chip cut">Traducción oficial</span>' : '');
+
     dom.patchHeaderCard.innerHTML = `
-        <div class="patch-header-top">
-            <h1 class="patch-card-title">${patchData.title || patchMeta?.title || 'Notas de Parche'}</h1>
-            <button class="minimize-header-btn" onclick="togglePatchHeader()" aria-label="Minimizar cabecera" title="Minimizar cabecera">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="minimize-icon">
-                    <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-            </button>
+        <div class="kicker">
+            ${icon('calendar', { size: 15 })}
+            <span>${escapeHtml(title)}</span>
+            <span class="kicker-chip cut">${icon(secConfig?.icon || 'gameBase', { size: 13 })}${escapeHtml(secConfig?.label || '')}</span>
+            ${sourceBadge}
         </div>
-        <div class="patch-header-content">
-            <p class="patch-card-desc">${descHtml}</p>
-            <div class="patch-stats">
-                <div class="patch-stat">
-                    <span class="patch-stat-value">${heroCount}</span>
-                    <span class="patch-stat-label">Héroes afectados</span>
-                </div>
-                <div class="patch-stat">
-                    <span class="patch-stat-value">${changeCount}</span>
-                    <span class="patch-stat-label">Cambios totales</span>
-                </div>
-                <div class="patch-stat">
-                    <span class="patch-stat-value">${patchData.date ? formatDate(patchData.date) : '—'}</span>
-                    <span class="patch-stat-label">Fecha de actualización de datos</span>
-                </div>
-            </div>
-        </div>
+        <h1 class="patch-card-title">${heading}</h1>
+        ${lede ? `<p class="patch-lede">${lede}</p>` : ''}
+        ${introHtml}
+        ${meters ? `<div class="meters">${meters}</div>` : ''}
     `;
 }
 
+// ─── Tarjetas ─────────────────────────────────────────────────────────────────
+
+function portraitHtml(hero) {
+    const src = getPortrait(hero.name, hero.portrait);
+    const fallback = `<span class="hero-portrait hero-portrait--fallback" aria-hidden="true">${escapeHtml(initials(hero.name))}</span>`;
+    if (!src) return fallback;
+    return `<img class="hero-portrait" src="${escapeHtml(src)}" alt="" draggable="false" loading="lazy"
+        data-fb="${escapeHtml(fallback)}" onerror="this.outerHTML=this.dataset.fb">`;
+}
+
+function abilityIconHtml(change, type) {
+    const typeIcon = icon(CHANGE_ICONS[type], { size: 20, stroke: 2.2 });
+    if (!change.icon) return `<span class="abil" aria-hidden="true">${typeIcon}</span>`;
+    const badge = `<span class="abil-type">${icon(CHANGE_ICONS[type], { size: 11, stroke: 3 })}</span>`;
+    return `<span class="abil" aria-hidden="true"><img src="${escapeHtml(change.icon)}" alt="" draggable="false" loading="lazy"
+        data-fb="${escapeHtml(typeIcon)}" onerror="this.parentNode.innerHTML=this.dataset.fb">${badge}</span>`;
+}
+
 export function renderChangeItem(change) {
-    const type = (change.type === 'adjust') ? 'rework' : (change.type || 'rework');
+    const type = normType(change.type);
     const label = CHANGE_LABELS[type] || type;
-    const details = (change.details || []).map(d => `<li>${d}</li>`).join('');
-    const iconHtml = change.icon ? `<img class="change-ability-icon" src="${change.icon}" alt="${change.title}" draggable="false">` : '';
+    const details = (change.details || []).filter(d => d && d !== change.title);
 
     return `
         <li class="change-item ${type}">
-            <div class="change-header">
-                ${iconHtml}
-                <span class="change-badge ${type}">${label}</span>
-                <span class="change-title">${change.title}</span>
+            ${abilityIconHtml(change, type)}
+            <div class="change-body">
+                <h4 class="change-title"><span class="sr-only">${label}: </span>${escapeHtml(change.title)}</h4>
+                ${details.length ? `<ul class="change-details">${details.map(d => {
+                    const diff = extractDiff(d);
+                    return `<li><span>${escapeHtml(d)}</span>${diff ? `<span class="diff cut"><s>${escapeHtml(diff.from)}</s>${icon('chevronDown', { size: 12, stroke: 2.4, className: 'diff-arrow' })}<b>${escapeHtml(diff.to)}</b></span>` : ''}</li>`;
+                }).join('')}</ul>` : ''}
             </div>
-            ${details ? `<ul class="change-details">${details}</ul>` : ''}
         </li>
     `;
 }
 
-export function renderHeroCard(hero, isOpen = false) {
-    const portrait = getPortrait(hero.name, hero.portrait);
-
-    const typeCounts = {};
-    (hero.changes || []).forEach(c => {
-        const t = c.type === 'adjust' ? 'rework' : (c.type || 'rework');
-        typeCounts[t] = (typeCounts[t] || 0) + 1;
-    });
-
-    const badges = Object.entries(typeCounts)
-        .map(([type, count]) => `<span class="mini-badge ${type}">${CHANGE_LABELS[type] || type} ×${count}</span>`)
+export function renderHeroCard(hero, isOpen = true) {
+    const roleMeta = ROLE_META[hero.role] || ROLE_META.__general__;
+    const counts = countTypes([hero]);
+    const tally = TYPE_ORDER.filter(t => counts[t])
+        .map(t => `<span class="tally-chip cut ${t}" title="${CHANGE_LABELS[t]}">${icon(CHANGE_ICONS[t], { size: 12, stroke: 2.6 })}${counts[t]}</span>`)
         .join('');
-
-    const changesHtml = (hero.changes || []).map(c => renderChangeItem(c)).join('');
+    const nChanges = (hero.changes || []).length;
+    const desc = (hero.desc || '').replace(/^Comentarios de los desarrolladores:\s*/i, '').replace(/^Developer comments?:\s*/i, '');
 
     return `
-        <details class="hero-card" ${isOpen ? 'open' : ''}>
+        <details class="hero-card cut role-${roleMeta.key}" id="hero-${slugify(hero.name)}" ${isOpen ? 'open' : ''}>
             <summary class="hero-header">
-                <img class="hero-portrait" src="${portrait}" 
-                     alt="${hero.name}"
-                     draggable="false"
-                     onerror="this.onerror=null; this.src=document.body.classList.contains('light-theme') ? 'logo-light.svg' : 'logo.svg'">
+                ${portraitHtml(hero)}
                 <div class="hero-header-info">
-                    <div class="hero-name">${hero.name}</div>
-                    <div class="hero-changes-preview">${badges}</div>
+                    <div class="hero-name">${escapeHtml(hero.name)}</div>
+                    <div class="hero-meta">${icon(roleMeta.icon, { size: 13 })}${hero.role === '__general__' ? 'General' : escapeHtml(hero.role)} · ${nChanges} ${nChanges === 1 ? 'cambio' : 'cambios'}</div>
                 </div>
-                <span class="hero-chevron">▼</span>
+                <div class="hero-changes-preview">${tally}</div>
+                <span class="hero-chevron">${icon('chevronDown', { size: 18 })}</span>
             </summary>
             <div class="hero-content">
                 <div class="hero-content-inner">
-                    ${hero.desc ? `<p class="hero-desc">${hero.desc}</p>` : ''}
-                    <ul class="changes-list">${changesHtml}</ul>
+                    ${desc ? `<div class="hero-desc cut"><div class="hero-desc-label">${icon('info', { size: 14 })}Nota de los desarrolladores</div><p>${escapeHtml(desc)}</p></div>` : ''}
+                    <ul class="changes-list">${(hero.changes || []).map(renderChangeItem).join('')}</ul>
                 </div>
             </div>
         </details>
     `;
 }
 
-// Exponer la función global para expandir/colapsar todas las tarjetas de una sección
+// Expandir/colapsar todas las tarjetas de un rol
 window.toggleSectionCards = function (btn, shouldExpand) {
-    const section = btn.closest('.role-section') || btn.closest('.flat-grid-section') || btn.closest('.content');
+    const section = btn.closest('.role-section') || btn.closest('.content');
     if (!section) return;
 
-    const cards = section.querySelectorAll('.hero-card');
-    cards.forEach(card => {
+    section.querySelectorAll('.hero-card').forEach(card => {
         const content = card.querySelector('.hero-content');
-        if (!content) return;
+        if (!content || content.style.transition) return;
 
-        // Prevent interrupting existing transition
-        if (content.style.transition) return;
-
-        if (shouldExpand) {
-            if (!card.open) {
-                card.setAttribute('open', '');
-                const height = content.scrollHeight;
-                content.style.height = '0';
-                content.style.opacity = '0';
-                content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
-                content.offsetHeight; // Reflow
-                content.style.height = `${height}px`;
-                content.style.opacity = '1';
-
-                const onEnd = () => {
-                    content.style.height = '';
-                    content.style.opacity = '';
-                    content.style.transition = '';
-                    content.removeEventListener('transitionend', onEnd);
-                };
-                content.addEventListener('transitionend', onEnd);
-            }
-        } else {
-            if (card.open) {
-                const height = content.scrollHeight;
-                content.style.height = `${height}px`;
-                content.offsetHeight; // Reflow
-                content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
-                content.style.height = '0';
-                content.style.opacity = '0';
-
-                const onEnd = () => {
-                    card.removeAttribute('open');
-                    content.style.height = '';
-                    content.style.opacity = '';
-                    content.style.transition = '';
-                    content.removeEventListener('transitionend', onEnd);
-                };
-                content.addEventListener('transitionend', onEnd);
-            }
+        if (shouldExpand && !card.open) {
+            card.setAttribute('open', '');
+            const height = content.scrollHeight;
+            content.style.height = '0';
+            content.style.opacity = '0';
+            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
+            content.offsetHeight; // Reflow
+            content.style.height = `${height}px`;
+            content.style.opacity = '1';
+            const onEnd = () => {
+                content.style.height = '';
+                content.style.opacity = '';
+                content.style.transition = '';
+                content.removeEventListener('transitionend', onEnd);
+            };
+            content.addEventListener('transitionend', onEnd);
+        } else if (!shouldExpand && card.open) {
+            const height = content.scrollHeight;
+            content.style.height = `${height}px`;
+            content.offsetHeight; // Reflow
+            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
+            content.style.height = '0';
+            content.style.opacity = '0';
+            const onEnd = () => {
+                card.removeAttribute('open');
+                content.style.height = '';
+                content.style.opacity = '';
+                content.style.transition = '';
+                content.removeEventListener('transitionend', onEnd);
+            };
+            content.addEventListener('transitionend', onEnd);
         }
     });
 };
 
+// ─── Contenido ────────────────────────────────────────────────────────────────
+
 export function clearContentSafely() {
     const searchWrap = document.querySelector('.search-wrap');
     if (searchWrap && searchWrap.parentElement === dom.content) {
-        document.body.appendChild(searchWrap);
+        document.querySelector('header')?.insertBefore(searchWrap, document.getElementById('lang-toggle-btn'));
     }
     dom.content.innerHTML = '';
 }
 
-export function renderContent(patchData) {
-    const isMobile = window.innerWidth <= 768;
-    const wasCollapsed = dom.patchHeaderCard
-        ? dom.patchHeaderCard.classList.contains('collapsed')
-        : isMobile;
+/** Pestañas de sección + filtros por rol y tipo de cambio */
+function renderSectionBar(patchData) {
+    const bar = document.createElement('div');
+    bar.className = 'section-bar';
 
+    const tabs = SECTIONS.filter(sec => sectionHasContent(sec, patchData?.sections?.[sec.id])).map(sec => {
+        const secData = patchData.sections[sec.id];
+        const n = sec.hasRoles ? entriesOf(secData).length : secData.length;
+        return `<button class="section-tab ${state.currentSection === sec.id ? 'active' : ''}" data-section="${sec.id}">
+            ${icon(sec.icon, { size: 18 })}<span>${sec.label}</span><em>${n}</em></button>`;
+    }).join('');
+
+    const secConfig = SECTIONS.find(s => s.id === state.currentSection);
+    let pills = '';
+    if (secConfig?.hasRoles) {
+        const section = patchData?.sections?.[state.currentSection];
+        const roleBtn = (role, label, iconName, n) =>
+            `<button class="pill role-btn cut ${state.currentRole === role ? 'active' : ''}" data-role="${role}">${icon(iconName, { size: 15 })}${label}<span class="hero-count">${n}</span></button>`;
+        const roles = [roleBtn('Todos', 'Todos', 'allRoles', entriesOf(section).length)];
+        ROLES.forEach(role => {
+            const n = (section?.roles?.[role] || []).length;
+            if (n) roles.push(roleBtn(role, ROLE_META[role].label, ROLE_META[role].icon, n));
+        });
+        if (section?.generalItems?.length) roles.push(roleBtn('__general__', 'General', 'maps', section.generalItems.length));
+
+        const filters = TYPE_ORDER.map(t =>
+            `<button class="pill filter-chip cut ${t} ${state.activeFilters.has(t) ? 'active' : ''}" data-filter="${t}" aria-pressed="${state.activeFilters.has(t)}">${icon(CHANGE_ICONS[t], { size: 15, stroke: 2.4 })}${CHANGE_LABELS[t]}</button>`
+        ).join('');
+
+        pills = `<div class="pills"><div class="pill-group" role="group" aria-label="Filtrar por rol">${roles.join('')}</div>
+            <span class="pill-sep" aria-hidden="true"></span>
+            <div class="pill-group filter-wrap" role="group" aria-label="Filtrar por tipo de cambio">${filters}</div></div>`;
+    }
+
+    bar.innerHTML = `${tabs ? `<div class="section-tabs" role="tablist">${tabs}</div>` : ''}${pills}`;
+    bar.querySelectorAll('.section-tab').forEach(btn => { btn.onclick = () => switchSection(btn.dataset.section); });
+    bar.querySelectorAll('.role-btn').forEach(btn => { btn.onclick = () => switchRole(btn.dataset.role); });
+    return bar;
+}
+
+function renderRoleSection(role, entries) {
+    const meta = ROLE_META[role];
+    const roleSection = document.createElement('section');
+    roleSection.className = `role-section role-${meta.key} ${state.currentRole === 'Todos' || state.currentRole === role ? 'active' : ''}`;
+    roleSection.id = `role-${role}`;
+    roleSection.innerHTML = `
+        <h2 class="role-section-title">
+            <span class="role-plate cut">${icon(meta.icon, { size: 19 })}</span>
+            <span class="role-name">${role === '__general__' ? 'Objetos generales y mapas' : meta.label}</span>
+            <span class="role-line" aria-hidden="true"></span>
+            <span class="section-actions">
+                <button class="action-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo" aria-label="Expandir todas las tarjetas">${icon('expandAll', { size: 16 })}</button>
+                <button class="action-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo" aria-label="Colapsar todas las tarjetas">${icon('collapseAll', { size: 16 })}</button>
+            </span>
+        </h2>
+    `;
+    entries.forEach(entry => {
+        const el = document.createElement('div');
+        el.innerHTML = renderHeroCard(entry).trim();
+        const card = el.firstElementChild;
+        card.dataset.hero = entry.name.toLowerCase();
+        card.dataset.types = (entry.changes || []).map(c => normType(c.type)).join(',');
+        roleSection.appendChild(card);
+    });
+    return roleSection;
+}
+
+export function renderContent(patchData) {
     clearContentSafely();
 
     const fragment = document.createDocumentFragment();
 
     const headerCard = document.createElement('div');
     headerCard.id = 'patch-header-card';
-    headerCard.className = `patch-header-card${wasCollapsed ? ' collapsed' : ''}`;
+    headerCard.className = 'patch-header-card';
     dom.patchHeaderCard = headerCard;
     fragment.appendChild(headerCard);
+    fragment.appendChild(renderSectionBar(patchData));
 
     const section = patchData?.sections?.[state.currentSection];
     const currentSecConfig = SECTIONS.find(s => s.id === state.currentSection);
 
     if (!section || (currentSecConfig?.hasRoles && !section.roles)) {
         fragment.appendChild(createEmptySection('Próximamente', 'Esta sección se llenará automáticamente con el scraper en el próximo parche.'));
-        dom.content.appendChild(fragment);
-        return;
-    }
-
-    if (currentSecConfig?.hasRoles) {
+    } else if (currentSecConfig?.hasRoles) {
         ROLES.forEach(role => {
-            const heroes = section.roles?.[role] || [];
-            if (heroes.length === 0) return;
-
-            const roleSection = document.createElement('div');
-            roleSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === role ? 'active' : ''}`;
-            roleSection.id = `role-${role}`;
-
-            roleSection.innerHTML = `
-                <h2 class="role-section-title">
-                    <span>${role}</span>
-                    <div class="section-actions">
-                        <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
-                        <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
-                    </div>
-                </h2>
-            `;
-            heroes.forEach(hero => {
-                const el = document.createElement('div');
-                el.innerHTML = renderHeroCard(hero);
-                const card = el.firstElementChild;
-                card.dataset.hero = hero.name.toLowerCase();
-                card.dataset.types = (hero.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
-                roleSection.appendChild(card);
-            });
-
-            fragment.appendChild(roleSection);
+            const heroes = (section.roles?.[role] || []).map(h => ({ ...h, role }));
+            if (heroes.length) fragment.appendChild(renderRoleSection(role, heroes));
         });
-
         if (section.generalItems?.length > 0) {
-            const generalSection = document.createElement('div');
-            generalSection.className = `role-section ${state.currentRole === 'Todos' || state.currentRole === '__general__' ? 'active' : ''}`;
-            generalSection.id = 'role-__general__';
-            generalSection.innerHTML = `
-                <h2 class="role-section-title">
-                    <span>Objetos Generales y Mapas</span>
-                    <div class="section-actions">
-                        <button class="action-btn expand-all-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo">➕</button>
-                        <button class="action-btn collapse-all-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo">➖</button>
-                    </div>
-                </h2>
-            `;
-
-            section.generalItems.forEach(item => {
-                const el = document.createElement('div');
-                el.innerHTML = renderHeroCard(item);
-                const card = el.firstElementChild;
-                card.dataset.hero = item.name.toLowerCase();
-                card.dataset.types = (item.changes || []).map(c => c.type === 'adjust' ? 'rework' : c.type).join(',');
-                generalSection.appendChild(card);
-            });
-
-            fragment.appendChild(generalSection);
+            fragment.appendChild(renderRoleSection('__general__', section.generalItems.map(item => ({ ...item, role: '__general__' }))));
         }
-
     } else {
         const flat = Array.isArray(section) ? section : [];
         if (flat.length === 0) {
             fragment.appendChild(createEmptySection('Próximamente', 'Esta sección se completará con el scraper.'));
         } else {
-            if (state.currentSection === 'bugFixes') {
-                const card = document.createElement('div');
-                card.className = 'hero-card';
-                card.style.padding = '2rem';
-                card.style.display = 'block';
-                card.style.cursor = 'default';
-                card.innerHTML = `
-                    <h2 class="role-section-title" style="margin-top:0;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem;border:none;padding:0">
-                        <span style="font-size:1.5rem">🐛</span> Corrección de Errores
-                    </h2>
-                    <ul class="bug-fixes-list" style="margin:0;padding-left:1.25rem;list-style-type:disc;color:var(--text-light)">
-                        ${flat.map(bug => `<li style="margin-bottom:0.75rem;line-height:1.6;font-size:0.95rem">${bug}</li>`).join('')}
-                    </ul>
-                `;
-                fragment.appendChild(card);
-            } else {
-                const gridContainer = document.createElement('div');
-                gridContainer.className = 'flat-grid-section';
-                flat.forEach(item => {
-                    const el = document.createElement('div');
-                    el.innerHTML = renderHeroCard(item);
-                    const card = el.firstElementChild;
-                    card.dataset.hero = item.name.toLowerCase();
-                    card.dataset.types = (item.changes || []).map(c => 'rework').join(',');
-                    gridContainer.appendChild(card);
-                });
-                fragment.appendChild(gridContainer);
-            }
+            const card = document.createElement('section');
+            card.className = 'bugfix-card cut';
+            card.innerHTML = `
+                <h2 class="role-section-title">
+                    <span class="role-plate cut">${icon('bugFixes', { size: 19 })}</span>
+                    <span class="role-name">Corrección de errores</span>
+                    <span class="role-line" aria-hidden="true"></span>
+                </h2>
+                <ul class="bug-fixes-list">${flat.map(bug => `<li>${escapeHtml(bug)}</li>`).join('')}</ul>
+            `;
+            fragment.appendChild(card);
         }
     }
 
     dom.content.appendChild(fragment);
+    renderToc(patchData);
     handleMobileLayout();
 }
 
-export function createEmptySection(title, desc) {
+// ─── Índice lateral ───────────────────────────────────────────────────────────
+
+export function renderToc(patchData) {
+    const toc = document.getElementById('toc');
+    if (!toc) return;
+    const secConfig = SECTIONS.find(s => s.id === state.currentSection);
+    const entries = secConfig?.hasRoles ? entriesOf(patchData?.sections?.[state.currentSection]) : [];
+
+    if (entries.length === 0) {
+        toc.innerHTML = '';
+        toc.classList.add('empty');
+        return;
+    }
+    toc.classList.remove('empty');
+    toc.innerHTML = `
+        <div class="toc-inner">
+            <div class="sidebar-label">En este parche</div>
+            <ul class="toc-list">
+                ${entries.map(e => {
+                    const meta = ROLE_META[e.role] || ROLE_META.__general__;
+                    const segs = TYPE_ORDER.flatMap(t => (e.changes || []).filter(c => normType(c.type) === t).map(() => `<i class="${t}"></i>`)).join('');
+                    return `<li><a href="#hero-${slugify(e.name)}" class="toc-link role-${meta.key}" data-role="${e.role}">${icon(meta.icon, { size: 14 })}<span>${escapeHtml(e.name)}</span><span class="segs" aria-hidden="true">${segs}</span></a></li>`;
+                }).join('')}
+            </ul>
+            <div class="toc-legend"><span class="buff">Mejora</span><span class="nerf">Nerf</span><span class="rework">Ajuste</span></div>
+        </div>
+    `;
+
+    toc.querySelectorAll('.toc-link').forEach(link => {
+        link.onclick = (e) => {
+            e.preventDefault();
+            // Si el héroe está oculto por el filtro de rol, volver a "Todos"
+            if (state.currentRole !== 'Todos' && state.currentRole !== link.dataset.role) switchRole('Todos');
+            const card = document.querySelector(link.getAttribute('href'));
+            if (!card) return;
+            if (!card.open) card.setAttribute('open', '');
+            card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            card.classList.remove('flash');
+            void card.offsetWidth;
+            card.classList.add('flash');
+        };
+    });
+}
+
+// ─── Estados vacíos ───────────────────────────────────────────────────────────
+
+export function createEmptySection(title, desc, iconName = 'hourglass') {
     const el = document.createElement('div');
-    el.className = 'empty-section';
+    el.className = 'empty-section cut';
     el.innerHTML = `
-        <div class="empty-section-icon">⏳</div>
-        <div class="empty-section-title">${title}</div>
-        <div class="empty-section-desc">${desc}</div>
+        <div class="empty-section-icon">${icon(iconName, { size: 34, stroke: 1.5 })}</div>
+        <div class="empty-section-title">${escapeHtml(title)}</div>
+        <div class="empty-section-desc">${escapeHtml(desc)}</div>
     `;
     return el;
 }
@@ -447,129 +485,84 @@ export function createEmptySection(title, desc) {
 export function renderContentNotDownloaded(patchMeta) {
     const [year, month] = patchMeta.id.split('-');
     const autoUrl = `https://overwatch.blizzard.com/en-us/news/patch-notes/live/${year}/${month}`;
-
     const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
 
-    let actionHtml = '';
-    if (isStaticMode) {
-        actionHtml = `
-            <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(249, 115, 22, 0.05); border: 1px solid rgba(249, 115, 22, 0.2); border-radius: var(--radius-sm); max-width: 550px; margin-left: auto; margin-right: auto;">
-                <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--text-2); line-height: 1.6;">
-                    Este parche aún no se encuentra disponible. Las actualizaciones se ejecutan de forma automática diariamente en el servidor, por lo que se publicará en las próximas horas.
-                </p>
-            </div>
-        `;
-    } else {
-        actionHtml = `
-            <div style="margin-top: 1rem; padding: 0 1rem;">
-                <p style="margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.85rem; word-break: break-all;">
-                    Se descargará y procesará automáticamente desde: <br>
-                    <a href="${autoUrl}" target="_blank" style="color: var(--blue); word-break: break-all; text-decoration: underline;">${autoUrl}</a>
-                </p>
-                <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
-                    <button id="scrape-custom-btn" class="role-btn active" style="flex-shrink: 0; padding: 0.75rem 1.5rem; width: 100%; max-width: 280px; justify-content: center;">
-                        <span class="role-dot" style="background:var(--blue)"></span>
-                        📥 Descargar y procesar
-                    </button>
-                </div>
-            </div>
-        `;
-    }
-
     clearContentSafely();
+    const toc = document.getElementById('toc');
+    if (toc) { toc.innerHTML = ''; toc.classList.add('empty'); }
+
     dom.content.innerHTML = `
-        <div class="patch-header-card">
-            <div class="patch-version-badge">
-                📥 No descargado localmente
-            </div>
-            <h1 class="patch-card-title">${patchMeta.title}</h1>
-            <p class="patch-card-desc">Este parche aún no ha sido descargado en el almacenamiento local.</p>
+        <div class="patch-header-card" id="patch-header-card">
+            <div class="kicker">${icon('download', { size: 15 })}<span>No descargado</span></div>
+            <h1 class="patch-card-title">${escapeHtml(patchMeta.title)}</h1>
+            <p class="patch-lede">Este parche todavía no está guardado en la aplicación.</p>
         </div>
-        
-        <div class="empty-section">
-            <div class="empty-section-icon">🌐</div>
-            <div class="empty-section-title">Descargar Notas de Parche</div>
-            <div class="empty-section-desc" style="max-width: 500px; margin: 0.5rem auto 1.5rem auto;">
+        <div class="empty-section cut">
+            <div class="empty-section-icon">${icon('globe', { size: 34, stroke: 1.5 })}</div>
+            <div class="empty-section-title">Descargar notas de parche</div>
+            <div class="empty-section-desc">
                 ${isStaticMode
-            ? 'La visualización de este parche requiere que haya sido descargado previamente en el repositorio.'
-            : 'Este parche se puede descargar automáticamente desde la URL oficial de Blizzard:'}
+                    ? 'Las actualizaciones se ejecutan automáticamente cada día en el servidor, así que este parche se publicará en las próximas horas.'
+                    : `Se descargará y traducirá desde la web oficial de Blizzard:<br><a href="${autoUrl}" target="_blank" rel="noopener">${autoUrl}</a>`}
             </div>
-            ${actionHtml}
+            ${isStaticMode ? '' : `<button id="scrape-custom-btn" class="primary-btn cut">${icon('download', { size: 17 })}<span>Descargar y procesar</span></button>`}
         </div>
     `;
+    dom.patchHeaderCard = document.getElementById('patch-header-card');
 
     const scrapeBtn = document.getElementById('scrape-custom-btn');
-
     if (scrapeBtn) {
         scrapeBtn.onclick = async () => {
-            const urlVal = autoUrl;
-            const queryParams = `?url=${encodeURIComponent(urlVal)}`;
-
+            const label = scrapeBtn.querySelector('span');
             scrapeBtn.disabled = true;
-            scrapeBtn.textContent = '⏳ Descargando...';
-            if (dom.refreshBtn) dom.refreshBtn.classList.add('spinning');
+            label.textContent = 'Descargando…';
+            dom.refreshBtn?.classList.add('spinning');
 
-            await startScrapeStream(queryParams, async () => {
+            await startScrapeStream(`?url=${encodeURIComponent(autoUrl)}`, async () => {
                 await init(true);
-                // Buscar si hay algún parche descargado para este mes en state.allPatches
                 const matchingPatches = state.allPatches.filter(p => p.id === patchMeta.id || p.id.startsWith(patchMeta.id + '-'));
                 const targetPatch = matchingPatches.find(p => p.isDownloaded) || matchingPatches[0] || patchMeta;
-
                 dom.patchSelect.value = targetPatch.id;
                 await loadPatch(targetPatch.id);
             });
 
             scrapeBtn.disabled = false;
-            scrapeBtn.textContent = '📥 Descargar y procesar';
-            if (dom.refreshBtn) dom.refreshBtn.classList.remove('spinning');
+            label.textContent = 'Descargar y procesar';
+            dom.refreshBtn?.classList.remove('spinning');
         };
     }
     handleMobileLayout();
 }
 
+// ─── Adaptación a móvil ───────────────────────────────────────────────────────
+
+/**
+ * En móvil (≤768px) el selector de parches pasa al cajón lateral y la búsqueda
+ * baja al contenido, bajo la cabecera del parche.
+ */
 export function handleMobileLayout() {
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    const filterWrap = dom.filterWrap;
     const searchWrap = document.querySelector('.search-wrap');
     const patchSelectorWrap = document.querySelector('.patch-selector-wrap');
     const sidebar = dom.sidebar;
     const header = document.querySelector('header');
-
     if (!sidebar || !header) return;
 
     if (isMobile) {
-        // Move to sidebar in order: Patch Selector -> Section Tabs -> Role Tabs -> Filters
         if (patchSelectorWrap && patchSelectorWrap.parentElement !== sidebar) {
             sidebar.insertBefore(patchSelectorWrap, sidebar.firstChild);
         }
-        // Move search to main content container, below the header card
-        if (searchWrap) {
-            const content = dom.content;
-            const headerCard = document.getElementById('patch-header-card');
-            if (content && searchWrap.parentElement !== content) {
-                if (headerCard && headerCard.parentElement === content) {
-                    content.insertBefore(searchWrap, headerCard.nextSibling);
-                } else {
-                    content.insertBefore(searchWrap, content.firstChild);
-                }
-            }
-        }
-        if (filterWrap && filterWrap.parentElement !== sidebar) {
-            sidebar.appendChild(filterWrap);
+        const headerCard = document.getElementById('patch-header-card');
+        if (searchWrap && headerCard && headerCard.parentElement === dom.content && searchWrap.previousElementSibling !== headerCard) {
+            dom.content.insertBefore(searchWrap, headerCard.nextSibling);
         }
     } else {
-        // Move back to header in original order
-        const themeToggleBtn = document.getElementById('theme-toggle-btn');
-        const mobileToggleBtn = document.getElementById('mobile-filter-toggle-btn');
-
+        const spacer = header.querySelector('.header-spacer');
         if (patchSelectorWrap && patchSelectorWrap.parentElement !== header) {
-            header.insertBefore(patchSelectorWrap, mobileToggleBtn);
+            header.insertBefore(patchSelectorWrap, spacer);
         }
         if (searchWrap && searchWrap.parentElement !== header) {
-            header.insertBefore(searchWrap, mobileToggleBtn);
-        }
-        if (filterWrap && filterWrap.parentElement !== header) {
-            header.insertBefore(filterWrap, themeToggleBtn);
+            header.insertBefore(searchWrap, document.getElementById('lang-toggle-btn'));
         }
     }
 }

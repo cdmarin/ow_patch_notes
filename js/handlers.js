@@ -64,6 +64,7 @@ export function applyFiltersAndSearch() {
         }
 
         const heroCards = section.getElementsByClassName('hero-card');
+        // Las tarjetas se muestran en columna; el título del rol ocupa la primera fila
         let visibleCount = 0;
 
         for (let j = 0; j < heroCards.length; j++) {
@@ -150,7 +151,9 @@ export function toggleFilter(filterType) {
     }
 
     dom.filterChips.forEach(chip => {
-        chip.classList.toggle('active', state.activeFilters.has(chip.dataset.filter));
+        const active = state.activeFilters.has(chip.dataset.filter);
+        chip.classList.toggle('active', active);
+        chip.setAttribute('aria-pressed', String(active));
     });
 
     applyFiltersAndSearch();

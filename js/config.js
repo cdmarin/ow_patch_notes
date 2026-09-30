@@ -63,13 +63,30 @@ export const HERO_PORTRAITS = {
 export const FALLBACK_PORTRAIT = 'logo.svg';
 
 export const SECTIONS = [
-    { id: 'gameBase', label: 'Juego Base', icon: '🎮', hasRoles: true },
-    { id: 'stadium', label: 'Stadium', icon: '🏟️', hasRoles: true },
-    { id: 'arcade', label: 'Arcade', icon: '🎨', hasRoles: true },
-    { id: 'bugFixes', label: 'Bug Fixes', icon: '🐛', hasRoles: false }
+    { id: 'gameBase', label: 'Juego base', icon: 'gameBase', hasRoles: true },
+    { id: 'stadium', label: 'Stadium', icon: 'stadium', hasRoles: true },
+    { id: 'arcade', label: 'Arcade', icon: 'arcade', hasRoles: true },
+    { id: 'bugFixes', label: 'Correcciones', icon: 'bugFixes', hasRoles: false }
 ];
 
 export const ROLES = ['Tanque', 'Daño', 'Apoyo'];
+
+// Icono y clase CSS de cada rol ('__general__' = objetos generales y mapas)
+export const ROLE_META = {
+    Tanque: { key: 'tank', icon: 'tank', label: 'Tanque' },
+    'Daño': { key: 'damage', icon: 'damage', label: 'Daño' },
+    Apoyo: { key: 'support', icon: 'support', label: 'Apoyo' },
+    __general__: { key: 'general', icon: 'maps', label: 'General y mapas' }
+};
+
+// Icono de cada tipo de cambio ('adjust' se muestra como rework)
+export const CHANGE_ICONS = {
+    buff: 'buff',
+    nerf: 'nerf',
+    new: 'new',
+    rework: 'rework',
+    adjust: 'rework'
+};
 
 export const CHANGE_LABELS = {
     buff: 'Buff',
