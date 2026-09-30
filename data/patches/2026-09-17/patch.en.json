@@ -24,8 +24,7 @@
     "gameBase": {
       "intro": "This is a hotfix update. Replay codes from the September 8, 2026 patch are still available.",
       "roles": {
-        "Tanque": [],
-        "Daño": [
+        "Tanque": [
           {
             "name": "D.Mon",
             "desc": "",
@@ -66,6 +65,7 @@
             ]
           }
         ],
+        "Daño": [],
         "Apoyo": []
       },
       "generalItems": [

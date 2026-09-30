@@ -24,8 +24,7 @@
     "gameBase": {
       "intro": "Esta es una actualización de revisión. Los códigos de repetición del parche del 11 de agosto todavía están disponibles.",
       "roles": {
-        "Tanque": [],
-        "Daño": [
+        "Tanque": [
           {
             "name": "D.Mon",
             "desc": "",
@@ -70,6 +69,7 @@
             ]
           }
         ],
+        "Daño": [],
         "Apoyo": [
           {
             "name": "Jetpack Cat",

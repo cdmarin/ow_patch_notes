@@ -24,8 +24,7 @@
     "gameBase": {
       "intro": "Esta es una actualización rápida. Los códigos de repetición del parche del 8 de septiembre de 2026 aún están disponibles.",
       "roles": {
-        "Tanque": [],
-        "Daño": [
+        "Tanque": [
           {
             "name": "D.Mon",
             "desc": "",
@@ -66,6 +65,7 @@
             ]
           }
         ],
+        "Daño": [],
         "Apoyo": []
       },
       "generalItems": [
