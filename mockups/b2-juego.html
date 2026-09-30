@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta B2 · Editorial de juego</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: la estructura de la B (línea temporal · lectura · índice) con lenguaje visual de HUD de juego */
+:root {
+    /* Oscuro por defecto: azul noche con rejilla y brillo naranja */
+    --bg: #080c14; --panel: #0f1520; --panel-2: #151d2b; --chip: #1b2433; --ink: #eaf0f8; --ink-2: #b6c2d4; --muted: #7485a0;
+    --line: #1e2939; --line-2: #2a3850; --grid: rgba(90, 140, 220, .05); --glow: rgba(249, 158, 26, .14);
+    --accent: #f99e1a; --accent-ink: #120b00;
+    --buff: #3fdc9a; --nerf: #ff5c75; --new: #b28cff; --rework: #ffcb45;
+    --tank: #5aa8ff; --damage: #ff6a57; --support: #3fe0c0; --on-role: #081018; --shadow: rgba(0,0,0,.5);
+    --font-display: 'Chakra Petch', 'Arial Narrow', sans-serif; --font-body: 'Barlow', system-ui, sans-serif;
+    --cut: 10px;
+    color-scheme: dark;
+}
+:root[data-theme="light"] {
+    --bg: #eef1f6; --panel: #ffffff; --panel-2: #f5f7fb; --chip: #e6ebf3; --ink: #121a27; --ink-2: #3c4a60; --muted: #6b7a91;
+    --line: #dbe1ea; --line-2: #c7d0de; --grid: rgba(40, 80, 160, .05); --glow: rgba(232, 113, 10, .10);
+    --accent: #e17100; --accent-ink: #ffffff;
+    --buff: #138a58; --nerf: #d42e4a; --new: #6d45d9; --rework: #a87400;
+    --tank: #2a6fd8; --damage: #d8402c; --support: #0e8f78; --on-role: #ffffff; --shadow: rgba(20,30,50,.10);
+    color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); font: 16px/1.6 var(--font-body);
+    background:
+        radial-gradient(900px 380px at 50% -120px, var(--glow), transparent 70%),
+        linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 32px 32px,
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 32px 32px,
+        var(--bg);
+    min-height: 100vh; }
+.ic { flex-shrink: 0; }
+.d { font-family: var(--font-display); }
+.cut { clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut)); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ── Cabecera ── */
+header { display: flex; align-items: center; gap: 14px; max-width: 1360px; margin: 0 auto; padding: 16px 32px; }
+.brand { display: flex; align-items: center; gap: 12px; font: 700 18px var(--font-display); text-transform: uppercase; letter-spacing: .06em; }
+.brand .mark { --cut: 7px; width: 36px; height: 36px; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); box-shadow: 0 0 18px var(--glow); }
+.brand small { color: var(--accent); }
+.spacer { flex: 1; }
+.search { --cut: 8px; display: flex; align-items: center; gap: 10px; width: 300px; padding: 9px 14px; background: var(--panel); border: 1px solid var(--line-2); color: var(--muted); font-size: 14px; }
+.btn { --cut: 8px; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--panel); border: 1px solid var(--line-2); color: var(--ink-2); cursor: pointer; font: inherit; }
+.btn:hover { color: var(--accent); }
+.btn:focus-visible, .seg:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { --cut: 8px; display: inline-flex; padding: 3px; background: var(--panel); border: 1px solid var(--line-2); font: 700 13px var(--font-display); letter-spacing: .08em; }
+.seg span { padding: 5px 10px; color: var(--muted); }
+.seg span.on { background: var(--accent); color: var(--accent-ink); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+
+/* ── Estructura ── */
+.layout { display: grid; grid-template-columns: 200px minmax(0, 740px) 240px; gap: 48px; justify-content: center; max-width: 1360px; margin: 0 auto; padding: 22px 32px 80px; }
+aside h6, .label { margin: 0 0 14px; font: 600 12px var(--font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* Línea temporal con nodos en rombo */
+.timeline { margin: 0; padding: 0 0 0 20px; list-style: none; border-left: 1px solid var(--line-2); }
+.timeline li { position: relative; padding: 6px 0 12px; font: 600 15px var(--font-display); color: var(--ink-2); }
+.timeline li::before { content: ''; position: absolute; left: -25px; top: 13px; width: 9px; height: 9px; transform: rotate(45deg); background: var(--bg); border: 1px solid var(--line-2); }
+.timeline li.on { color: var(--accent); }
+.timeline li.on::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.timeline small { display: block; font: 400 12px var(--font-body); color: var(--muted); text-transform: capitalize; }
+
+/* Portada del parche */
+.kicker { display: flex; align-items: center; gap: 8px; font: 700 13px var(--font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.kicker .ver { --cut: 5px; padding: 1px 8px; background: var(--chip); color: var(--ink-2); }
+h1 { margin: 10px 0 12px; font: 700 clamp(36px, 5vw, 54px)/1.02 var(--font-display); text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+h1 em { font-style: normal; color: var(--accent); }
+.lede { font-size: 19px; color: var(--ink-2); margin: 0 0 22px; max-width: 62ch; }
+.lede b { font-weight: 700; } .lede .b { color: var(--buff); } .lede .n { color: var(--nerf); }
+.meters { display: flex; gap: 10px; flex-wrap: wrap; }
+.meter { --cut: 8px; min-width: 120px; padding: 10px 14px 12px; background: var(--panel); border: 1px solid var(--line); }
+.meter b { display: block; font: 700 28px/1 var(--font-display); color: var(--c); }
+.meter span { font: 600 11px var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.meter i { display: block; height: 3px; margin-top: 10px; background: linear-gradient(90deg, var(--c) var(--p), var(--chip) var(--p)); }
+
+.tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--line-2); margin: 32px 0 16px; }
+.tab { display: flex; align-items: center; gap: 8px; padding: 10px 0; font: 600 16px var(--font-display); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tab.on { color: var(--ink); border-color: var(--accent); box-shadow: 0 8px 14px -12px var(--accent); }
+.tab.on .ic { color: var(--accent); }
+.tab em { font: 600 12px var(--font-body); font-style: normal; padding: 0 7px; background: var(--chip); color: var(--ink-2); }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+.pill { --cut: 6px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px; background: var(--panel); border: 1px solid var(--line-2); font: 600 13px var(--font-display); letter-spacing: .03em; text-transform: uppercase; color: var(--ink-2); }
+.pill .ic { color: var(--c, currentColor); }
+.pill.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.pill.on .ic { color: inherit; }
+.pills .sep { width: 1px; background: var(--line-2); margin: 0 2px; }
+
+/* Rol */
+.role-title { display: flex; align-items: center; gap: 12px; margin: 40px 0 14px; color: var(--rc); }
+.role-title .plate { --cut: 7px; width: 34px; height: 34px; display: grid; place-items: center; background: color-mix(in srgb, var(--rc) 16%, transparent); border: 1px solid color-mix(in srgb, var(--rc) 45%, transparent); }
+.role-title h3 { margin: 0; font: 700 22px var(--font-display); letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
+.role-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--rc), transparent); }
+
+/* Tarjeta de héroe */
+.hero { --cut: 14px; position: relative; margin-bottom: 14px; padding: 20px 22px 16px; border: 1px solid var(--line);
+    background: linear-gradient(100deg, color-mix(in srgb, var(--rc) 9%, transparent), transparent 45%), var(--panel); }
+.hero::before { content: ''; position: absolute; left: 0; top: 14px; bottom: 14px; width: 3px; background: var(--rc); box-shadow: 0 0 12px var(--rc); }
+.hero-head { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.avatar { width: 60px; height: 60px; object-fit: cover; background: var(--chip); border: 2px solid var(--rc);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+.avatar--fallback { display: grid; place-items: center; font: 700 20px var(--font-display); color: var(--on-role); background: var(--rc); }
+.hero h2 { margin: 0; font: 700 28px/1 var(--font-display); text-transform: uppercase; letter-spacing: .03em; }
+.hero .meta { display: flex; align-items: center; gap: 6px; margin-top: 5px; font: 600 12px var(--font-display); letter-spacing: .1em; text-transform: uppercase; color: var(--rc); }
+.tally { margin-left: auto; display: flex; gap: 5px; }
+.tally span { --cut: 5px; display: inline-flex; align-items: center; gap: 3px; padding: 3px 7px; font: 700 13px var(--font-display); color: var(--c); background: color-mix(in srgb, var(--c) 13%, transparent); }
+
+.intel { --cut: 8px; margin: 0 0 14px; padding: 12px 16px; background: var(--panel-2); border: 1px solid var(--line); }
+.intel .label { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; color: var(--accent); }
+.intel p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
+
+.change { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 12px 0; border-top: 1px solid var(--line); }
+.change:first-of-type { border-top: 0; }
+.abil { --cut: 7px; position: relative; width: 44px; height: 44px; display: grid; place-items: center; background: var(--chip); color: var(--c); }
+.abil img { width: 30px; height: 30px; object-fit: contain; }
+.abil .t { position: absolute; right: -5px; bottom: -5px; width: 18px; height: 18px; display: grid; place-items: center; background: var(--c); color: var(--on-role); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+.change h4 { margin: 0 0 4px; font: 700 17px var(--font-display); letter-spacing: .03em; text-transform: uppercase; }
+.change ul { margin: 0; padding: 0; list-style: none; }
+.change li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 2px 0; color: var(--ink-2); }
+.diff { --cut: 5px; flex-shrink: 0; display: inline-flex; align-items: center; gap: 6px; padding: 2px 9px; font: 700 14px var(--font-display); background: color-mix(in srgb, var(--c) 12%, transparent); color: var(--c); white-space: nowrap; }
+.diff s { color: var(--muted); font-weight: 500; }
+
+/* Índice lateral */
+.toc { position: sticky; top: 24px; }
+.toc a { display: flex; align-items: center; gap: 10px; padding: 5px 0; font: 600 15px var(--font-display); color: var(--ink-2); text-decoration: none; }
+.toc a:hover { color: var(--ink); }
+.toc a .ic { color: var(--rc); }
+.segs { margin-left: auto; display: flex; gap: 2px; }
+.segs i { display: block; width: 8px; height: 10px; background: var(--c); transform: skewX(-20deg); }
+.legend { display: flex; gap: 12px; margin-top: 14px; font: 600 11px var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.legend span::before { content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 5px; background: var(--c); transform: skewX(-20deg); }
+
+@media (max-width: 1100px) { .layout { grid-template-columns: minmax(0, 740px); } aside { display: none; } }
+@media (max-width: 700px) {
+    header { padding: 12px 16px; } .search, .hide-m, .brand small { display: none; }
+    .layout { padding: 8px 16px 60px; } .lede { font-size: 17px; }
+    .meters { display: grid; grid-template-columns: 1fr 1fr; } .meter { min-width: 0; }
+    .tabs { gap: 18px; overflow-x: auto; } .tab { white-space: nowrap; }
+    .pills .sep, .tally, .kicker .ver { display: none; }
+    .hero { padding: 16px 16px 12px; } .hero h2 { font-size: 24px; }
+    .change li { flex-direction: column; gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header>
+    <div class="brand"><span class="mark cut" id="logo"></span><span>Patch Notes <small>OW</small></span></div>
+    <div class="spacer"></div>
+    <div class="search cut" id="search"></div>
+    <span class="seg cut" title="Traducción / original"><span class="on">ES</span><span>EN</span></span>
+    <span class="btn cut hide-m" id="refresh"></span>
+    <button class="btn cut" id="theme" type="button"></button>
+</header>
+<div class="layout">
+    <aside><h6>Parches</h6><ul class="timeline" id="timeline"></ul></aside>
+    <main id="main"></main>
+    <aside><div class="toc" id="toc"></div></aside>
+</div>
+<script type="module">
+import { icon } from './icons.js';
+import { loadPatch, heroesOf, countTypes, avatar, extractDiff, escapeHtml, ROLE_META, TYPE_META, PATCH_ID } from './data.js';
+
+const TC = { buff: 'var(--buff)', nerf: 'var(--nerf)', new: 'var(--new)', rework: 'var(--rework)', adjust: 'var(--rework)' };
+const RC = { Tanque: 'var(--tank)', 'Daño': 'var(--damage)', Apoyo: 'var(--support)' };
+const $ = id => document.getElementById(id);
+const { patch, index } = await loadPatch();
+const section = patch.sections.gameBase;
+const heroes = heroesOf(section);
+const counts = countTypes(heroes);
+const adj = counts.adjust + counts.rework;
+const total = counts.buff + counts.nerf + adj + counts.new || 1;
+
+$('logo').innerHTML = icon('damage', { size: 20, stroke: 2.2 });
+$('search').innerHTML = `${icon('search', { size: 17 })} Buscar héroe o habilidad`;
+$('refresh').innerHTML = icon('refresh', { size: 17 });
+
+// Tema: oscuro por defecto, claro opcional (se recuerda la elección)
+const applyTheme = (light) => {
+    document.documentElement.dataset.theme = light ? 'light' : 'dark';
+    $('theme').innerHTML = icon(light ? 'moon' : 'sun', { size: 17 });
+    $('theme').title = light ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro';
+    $('theme').setAttribute('aria-label', $('theme').title);
+};
+let light = false;
+try { light = localStorage.getItem('mockupThemeB2') === 'light'; } catch (e) {}
+applyTheme(light);
+$('theme').addEventListener('click', () => {
+    light = !light;
+    applyTheme(light);
+    try { localStorage.setItem('mockupThemeB2', light ? 'light' : 'dark'); } catch (e) {}
+});
+
+const recent = index.filter(p => !p.id.endsWith('-01') || p.id === PATCH_ID).slice(0, 9);
+$('timeline').innerHTML = recent.map(p => `<li class="${p.id === PATCH_ID ? 'on' : ''}">${p.title.replace(/ \d{4}$/, '')}<small>${new Date(p.id + 'T12:00').toLocaleDateString('es-ES', { weekday: 'long' })}</small></li>`).join('');
+
+// Icono de habilidad de Blizzard si existe; si no carga, icono del tipo de cambio
+const abilityIcon = (c) => {
+    const typeIcon = icon(TYPE_META[c.type].icon, { size: 20, stroke: 2.2 });
+    const badge = `<span class="t">${icon(TYPE_META[c.type].icon, { size: 11, stroke: 3 })}</span>`;
+    if (!c.icon) return `<span class="abil" title="${TYPE_META[c.type].label}">${typeIcon}</span>`;
+    return `<span class="abil" title="${TYPE_META[c.type].label}"><img src="${c.icon}" alt="" data-fb='${typeIcon.replace(/'/g, '&#39;')}' onerror="this.parentNode.innerHTML=this.dataset.fb">${badge}</span>`;
+};
+
+const meter = (label, n, color) => `<div class="meter cut" style="--c:${color};--p:${Math.round(n / total * 100)}%"><b class="num">${n}</b><span>${label}</span><i></i></div>`;
+
+$('main').innerHTML = `
+  <div class="kicker">${icon('calendar', { size: 15 })} ${patch.title} <span class="ver cut">Parche de balance</span></div>
+  <h1>Ajustes para <em>${heroes.length} héroes</em></h1>
+  <p class="lede">Esta actualización trae <b class="b">${counts.buff} mejoras</b>, <b class="n">${counts.nerf} debilitaciones</b> y ${adj} ajustes, además de ${patch.sections.bugFixes.length} correcciones de errores.</p>
+  <div class="meters">
+    ${meter('Mejoras', counts.buff, 'var(--buff)')}
+    ${meter('Debilitaciones', counts.nerf, 'var(--nerf)')}
+    ${meter('Ajustes', adj, 'var(--rework)')}
+    <div class="meter cut" style="--c:var(--accent);--p:100%"><b class="num">${patch.sections.bugFixes.length}</b><span>Correcciones</span><i></i></div>
+  </div>
+  <div class="tabs">
+    <span class="tab on">${icon('gameBase', { size: 18 })} Juego base <em>${heroes.length}</em></span>
+    <span class="tab">${icon('stadium', { size: 18 })} Stadium <em>${heroesOf(patch.sections.stadium).length}</em></span>
+    <span class="tab">${icon('bugFixes', { size: 18 })} Correcciones <em>${patch.sections.bugFixes.length}</em></span>
+  </div>
+  <div class="pills">
+    <span class="pill cut on">${icon('allRoles', { size: 15 })} Todos</span>
+    ${Object.entries(ROLE_META).map(([r, m]) => `<span class="pill cut" style="--c:${RC[r]}">${icon(m.key, { size: 15 })} ${m.label}</span>`).join('')}
+    <span class="sep"></span>
+    ${['buff', 'nerf', 'new', 'rework'].map(t => `<span class="pill cut" style="--c:${TC[t]}">${icon(TYPE_META[t].icon, { size: 15, stroke: 2.4 })} ${TYPE_META[t].short}</span>`).join('')}
+  </div>
+  ${Object.entries(section.roles).filter(([, hs]) => hs.length).map(([role, hs]) => `
+    <div class="role-title" style="--rc:${RC[role]}"><span class="plate cut">${icon(ROLE_META[role].key, { size: 19 })}</span><h3>${role}</h3></div>
+    ${hs.map(h => { const t = countTypes([h]); return `
+      <article class="hero cut" style="--rc:${RC[role]}">
+        <div class="hero-head">${avatar({ ...h, role })}
+          <div><h2>${escapeHtml(h.name)}</h2><div class="meta">${icon(ROLE_META[role].key, { size: 13 })} ${role} · ${h.changes.length} cambios</div></div>
+          <div class="tally">${['buff', 'nerf', 'adjust', 'rework', 'new'].filter(k => t[k]).map(k => `<span class="cut" style="--c:${TC[k]}">${icon(TYPE_META[k].icon, { size: 12, stroke: 2.6 })}${t[k]}</span>`).join('')}</div>
+        </div>
+        ${h.desc ? `<div class="intel cut"><div class="label">${icon('info', { size: 14 })} Nota de los desarrolladores</div><p>${escapeHtml(h.desc.replace(/^Comentarios de los desarrolladores:\s*/, ''))}</p></div>` : ''}
+        ${h.changes.map(c => `
+          <div class="change" style="--c:${TC[c.type]}">
+            ${abilityIcon(c)}
+            <div><h4>${escapeHtml(c.title)}</h4>
+              <ul>${c.details.filter(d => d !== c.title).map(d => { const df = extractDiff(d); return `<li><span>${escapeHtml(d)}</span>${df ? `<span class="diff cut num"><s>${df.from}</s>→ ${df.to}</span>` : ''}</li>`; }).join('')}</ul>
+            </div>
+          </div>`).join('')}
+      </article>`; }).join('')}
+  `).join('')}`;
+
+$('toc').innerHTML = `<h6>En este parche</h6>
+  ${heroes.map(h => { const t = countTypes([h]);
+    return `<a href="#" style="--rc:${RC[h.role]}">${icon(ROLE_META[h.role].key, { size: 14 })}${escapeHtml(h.name)}<span class="segs">${['buff', 'adjust', 'rework', 'new', 'nerf'].flatMap(k => Array(t[k] || 0).fill(`<i style="--c:${TC[k]}"></i>`)).join('')}</span></a>`; }).join('')}
+  <div class="legend"><span style="--c:var(--buff)">Mejora</span><span style="--c:var(--nerf)">Nerf</span><span style="--c:var(--rework)">Ajuste</span></div>`;
+</script>
+</body>
+</html>
