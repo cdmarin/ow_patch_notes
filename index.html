@@ -71,13 +71,10 @@
 
         <!-- Patch Selector -->
         <div class="patch-selector-wrap">
-            <div class="patch-select-box cut">
-                <i data-icon="calendar" data-size="16"></i>
-                <select id="patch-select" aria-label="Seleccionar parche">
-                    <option>Cargando...</option>
-                </select>
-                <i data-icon="chevronDown" data-size="16" class="select-chevron"></i>
-            </div>
+            <!-- Selector oculto: guarda el parche abierto. Se cambia desde la línea temporal. -->
+            <select id="patch-select" aria-hidden="true" tabindex="-1" hidden>
+                <option>Cargando...</option>
+            </select>
             <button id="refresh-btn" class="icon-btn refresh-btn cut" title="Refrescar y forzar descarga completa del parche actual"
                 aria-label="Refrescar el parche actual"><i data-icon="refresh" data-size="17"></i></button>
             <button id="update-btn" class="icon-btn refresh-btn cut" title="Buscar nuevos parches (descarga y traduce solo lo nuevo)"

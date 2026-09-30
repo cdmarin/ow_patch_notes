@@ -8,7 +8,6 @@ import { switchSection, switchRole } from './handlers.js';
 import { init, loadPatch } from '../app.js';
 
 const TYPE_ORDER = ['buff', 'nerf', 'rework', 'new'];
-const MAX_TIMELINE_ITEMS = 12;
 
 /** 'adjust' se trata como 'rework' en filtros y colores */
 const normType = (type) => (type === 'adjust' || !type ? 'rework' : type);
@@ -45,8 +44,11 @@ export function renderPatchSelector(patches) {
     }).join('');
 }
 
+const MONTHS = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
 /**
- * Barra lateral: línea temporal con los parches descargados más recientes.
+ * Barra lateral: línea temporal con todos los parches, agrupados por mes.
+ * Es la única forma de cambiar de parche (el <select> queda oculto).
  */
 export function renderSidebar() {
     let timelineWrap = dom.sidebar.querySelector('.sidebar-timeline');
@@ -57,27 +59,36 @@ export function renderSidebar() {
     }
 
     const currentId = dom.patchSelect.value;
-    const downloaded = (state.allPatches || []).filter(p => p.isDownloaded);
-    let items = downloaded.slice(0, MAX_TIMELINE_ITEMS);
-    const current = downloaded.find(p => p.id === currentId);
-    if (current && !items.includes(current)) items = [...items.slice(0, MAX_TIMELINE_ITEMS - 1), current];
+    const groups = new Map(); // 'YYYY-MM' → parches de ese mes
+    (state.allPatches || []).forEach(p => {
+        const month = p.id.slice(0, 7);
+        if (!groups.has(month)) groups.set(month, []);
+        groups.get(month).push(p);
+    });
 
-    timelineWrap.innerHTML = `
-        <div class="sidebar-label">Parches</div>
-        <ol class="timeline">
-            ${items.map(p => {
-                const date = p.date || p.id;
-                const weekday = /^\d{4}-\d{2}-\d{2}$/.test(date)
-                    ? new Date(`${date}T12:00:00`).toLocaleDateString('es-ES', { weekday: 'long' })
-                    : '';
-                return `<li><button class="timeline-item ${p.id === currentId ? 'active' : ''}" data-patch-id="${p.id}" ${p.id === currentId ? 'aria-current="true"' : ''}>
-                    <span class="timeline-title">${escapeHtml(p.title.replace(/ \d{4}$/, ''))}</span>
-                    <span class="timeline-sub">${weekday}${p.isLatest ? ' · Último' : ''}</span>
-                </button></li>`;
-            }).join('')}
-        </ol>
-        <p class="sidebar-hint">Los parches anteriores están en el selector de arriba.</p>
-    `;
+    const item = (p) => {
+        const isCurrent = p.id === currentId;
+        if (p.isDownloaded === false) {
+            return `<li><button class="timeline-item pending ${isCurrent ? 'active' : ''}" data-patch-id="${p.id}" ${isCurrent ? 'aria-current="true"' : ''}>
+                <span class="timeline-title">Sin descargar</span>
+                <span class="timeline-sub">Pulsa para descargarlo</span>
+            </button></li>`;
+        }
+        const date = p.date || p.id;
+        const weekday = /^\d{4}-\d{2}-\d{2}$/.test(date)
+            ? new Date(`${date}T12:00:00`).toLocaleDateString('es-ES', { weekday: 'long' })
+            : '';
+        return `<li><button class="timeline-item ${isCurrent ? 'active' : ''}" data-patch-id="${p.id}" ${isCurrent ? 'aria-current="true"' : ''}>
+            <span class="timeline-title">${escapeHtml(p.title.replace(/ \d{4}$/, ''))}</span>
+            <span class="timeline-sub">${weekday}${p.isLatest ? ' · Último' : ''}</span>
+        </button></li>`;
+    };
+
+    timelineWrap.innerHTML = [...groups].map(([month, patches]) => {
+        const [y, m] = month.split('-');
+        return `<div class="timeline-month">${MONTHS[parseInt(m, 10) - 1]} ${y}</div>
+            <ol class="timeline">${patches.map(item).join('')}</ol>`;
+    }).join('');
 
     timelineWrap.querySelectorAll('.timeline-item').forEach(btn => {
         btn.onclick = () => {
@@ -88,6 +99,13 @@ export function renderSidebar() {
             loadPatch(id);
         };
     });
+
+    // Mantener visible el parche abierto dentro de la barra
+    const active = timelineWrap.querySelector('.timeline-item.active');
+    if (active && dom.sidebar.scrollHeight > dom.sidebar.clientHeight) {
+        const top = active.offsetTop - dom.sidebar.clientHeight / 3;
+        dom.sidebar.scrollTop = Math.max(0, top);
+    }
     handleMobileLayout();
 }
 
