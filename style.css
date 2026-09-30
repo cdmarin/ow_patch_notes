@@ -111,7 +111,7 @@ a { color: var(--accent); }
 
 .ic { flex-shrink: 0; display: block; }
 .cut {
-    clip-path: polygon(var(--cut) 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%, 0 var(--cut));
+    border-radius: var(--cut);
 }
 .sr-only {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -271,7 +271,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 .lang-opt.on {
     background: var(--accent);
     color: var(--accent-ink);
-    clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+    border-radius: 6px;
 }
 .lang-toggle-btn:not(:disabled):hover .lang-opt:not(.on) { color: var(--ink); }
 .lang-toggle-btn:disabled { opacity: 0.45; cursor: not-allowed; }
@@ -335,7 +335,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     top: 13px;
     width: 9px;
     height: 9px;
-    transform: rotate(45deg);
+    border-radius: 50%;
     background: var(--bg);
     border: 1px solid var(--line-2);
     transition: background 0.15s, border-color 0.15s;
@@ -528,14 +528,14 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     background: var(--panel);
     color: var(--muted);
     cursor: pointer;
-    clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+    border-radius: 6px;
 }
 .action-btn:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ─── Tarjeta de héroe ──────────────────────────────────────────────────── */
 
 .hero-card {
-    --cut: 14px;
+    --cut: 12px;
     position: relative;
     border: 1px solid var(--line);
     background:
@@ -578,7 +578,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     object-fit: cover;
     background: var(--chip);
     border: 2px solid var(--rc, var(--accent));
-    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    border-radius: 12px;
 }
 .hero-portrait--fallback {
     display: grid;
@@ -664,7 +664,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     height: 44px;
     background: var(--chip);
     color: var(--c);
-    clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+    border-radius: 9px;
 }
 .abil img { width: 32px; height: 32px; object-fit: contain; }
 .abil-type {
@@ -677,7 +677,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     height: 16px;
     background: var(--c);
     color: var(--on-role);
-    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    border-radius: 50%;
 }
 
 .change-body { min-width: 0; }
@@ -717,7 +717,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 /* ─── Corrección de errores ─────────────────────────────────────────────── */
 
 .bugfix-card {
-    --cut: 14px;
+    --cut: 12px;
     --rc: var(--accent);
     padding: 22px 24px;
     background: var(--panel);
@@ -739,7 +739,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     top: 19px;
     width: 8px;
     height: 8px;
-    transform: rotate(45deg);
+    border-radius: 50%;
     background: var(--accent);
 }
 
@@ -768,7 +768,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 .toc-link .ic { color: var(--rc); }
 .toc-link > span:not(.segs) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .segs { display: flex; gap: 2px; margin-left: auto; flex-shrink: 0; }
-.segs i { display: block; width: 7px; height: 10px; background: var(--c); transform: skewX(-20deg); }
+.segs i { display: block; width: 7px; height: 10px; background: var(--c); border-radius: 2px; }
 .toc-legend {
     display: flex;
     flex-wrap: wrap;
@@ -786,13 +786,13 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     height: 8px;
     margin-right: 5px;
     background: var(--c);
-    transform: skewX(-20deg);
+    border-radius: 2px;
 }
 
 /* ─── Estados vacíos y resultados ───────────────────────────────────────── */
 
 .empty-section {
-    --cut: 14px;
+    --cut: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -858,7 +858,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 @keyframes loading { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }
 
 .skeleton-card {
-    --cut: 14px;
+    --cut: 12px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -866,7 +866,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
     padding: 18px 22px;
     background: var(--panel);
     border: 1px solid var(--line);
-    clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+    border-radius: 12px;
 }
 .skeleton-circle { width: 60px; height: 60px; flex-shrink: 0; background: var(--chip); animation: shimmer 1.4s ease-in-out infinite; }
 .skeleton-lines { flex: 1; display: grid; gap: 10px; }
@@ -890,7 +890,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 #scrape-overlay.hidden { display: none; }
 
 .scrape-card {
-    --cut: 16px;
+    --cut: 14px;
     width: min(680px, 100%);
     max-height: calc(100vh - 32px);
     display: flex;
@@ -922,7 +922,7 @@ body.light-theme .theme-toggle-btn .theme-ic-moon { display: block; }
 }
 .console-line { display: flex; align-items: flex-start; gap: 8px; padding: 1px 0; overflow-wrap: anywhere; }
 .console-line .ic { margin-top: 3px; color: var(--muted); }
-.log-bullet { flex-shrink: 0; width: 5px; height: 5px; margin: 8px 4px 0 5px; background: var(--line-2); transform: rotate(45deg); }
+.log-bullet { flex-shrink: 0; width: 5px; height: 5px; margin: 8px 4px 0 5px; background: var(--line-2); border-radius: 50%; }
 .log-success, .log-success .ic { color: var(--buff); }
 .log-error, .log-error .ic { color: var(--nerf); }
 .log-warn, .log-warn .ic { color: var(--rework); }
