@@ -28,7 +28,8 @@ const path = require('path');
 const yargs = require('yargs');
 
 const { parseHTML } = require('./parser');
-const { translateSection, translateBatch, initTranslator, resetTranslationFailures, getTranslationFailures } = require('./translator');
+const { translateSection, translateBatch, initTranslator, resetTranslationFailures, getTranslationFailures, setPatchContext, clearPatchContext } = require('./translator');
+const { loadGlossary, saveGlossary, learnFromPatches } = require('./glossary');
 const { getOfficialSpanishUrl, buildOfficialSpanishPatches, applySpanishText } = require('./official');
 
 // ─── Configuración ────────────────────────────────────────────────────────────
@@ -179,6 +180,8 @@ async function main() {
             defaultPatchDate = extractLatestPatchDate($);
         }
 
+        await loadGlossary();
+
         const traces = [];
         const patches = parseHTML(html, defaultPatchDate, { traces });
         log(`Se detectaron ${patches.length} parches en el documento.`, 'success');
@@ -192,6 +195,14 @@ async function main() {
                     const esHtml = await fetchPatchPage(esUrl, { ...HEADERS, 'Accept-Language': 'es-ES,es;q=0.9' });
                     const official = buildOfficialSpanishPatches(esHtml, traces, patches, defaultPatchDate);
                     officialPatches = official.patches;
+                    // Aprender los nombres oficiales (antes de modificar los textos de los parches)
+                    for (const enPatch of patches) {
+                        const esPatch = officialPatches.get(enPatch.date);
+                        if (esPatch) learnFromPatches(enPatch, esPatch);
+                    }
+                    if (await saveGlossary()) {
+                        log('Glosario de nombres oficiales actualizado (data/glossary.json).', 'success');
+                    }
                     log(`Traducción oficial de Blizzard disponible para ${officialPatches.size}/${patches.length} parches.`, 'success');
                     for (const [date, reason] of official.reasons) {
                         log(`Sin traducción oficial para ${date}: ${reason}. Se usará traducción automática.`, 'warn');
@@ -306,6 +317,8 @@ async function main() {
                     log('Traduciendo al español...');
                     await initTranslator();
                     resetTranslationFailures();
+                    // Nombres de héroes/habilidades que no deben traducirse literalmente
+                    setPatchContext(patchData);
 
                     const startTime = Date.now();
 
@@ -366,6 +379,7 @@ async function main() {
                             log('Traduciendo corrección de errores (Bug Fixes)...');
                             patchData.sections.bugFixes = await translateBatch(patchData.sections.bugFixes, onProgress);
                         }
+                        clearPatchContext();
                         const failures = getTranslationFailures();
                         // Si algún texto se quedó en inglés, no marcar como traducido para reintentarlo en la próxima ejecución
                         patchData.translated = failures === 0;

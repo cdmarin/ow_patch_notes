@@ -37,6 +37,12 @@ node scraper.js --url="https://overwatch.blizzard.com/en-us/news/patch-notes/ove
    MyMemory / LibreTranslate (`"translationSource": "machine"`). En la siguiente ejecución en la
    que la versión oficial esté disponible, el parche se sustituye automáticamente.
 
+Como la versión oficial suele tardar unos días, la traducción automática usa un **glosario de
+nombres oficiales** (`data/glossary.json`) que se rellena solo cada vez que hay una versión
+oficial: los nombres de habilidades, ventajas, poderes y objetos conocidos se escriben con su
+nombre oficial (en el título y en el texto) y los desconocidos se dejan en inglés en lugar de
+traducirse literalmente. Para llenarlo desde el principio, reprocesa los meses anteriores.
+
 Si algún texto no se pudo traducir, el parche se guarda con `"translated": false` y se
 reintenta en la siguiente ejecución.
 

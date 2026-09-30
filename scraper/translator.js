@@ -3,6 +3,7 @@
  */
 
 const axios = require('axios');
+const glossary = require('./glossary');
 
 function getFormattedTimestamp() {
     const now = new Date();
@@ -30,6 +31,109 @@ function resetTranslationFailures() {
 
 function getTranslationFailures() {
     return translationFailures;
+}
+
+// ─── Términos protegidos ─────────────────────────────────────────────────────
+// Nombres propios (habilidades, ventajas, poderes, objetos, héroes) que no deben traducirse
+// literalmente. Mapa inglés → texto a usar (nombre oficial del glosario o el propio inglés).
+let protectedTerms = new Map();
+const MIN_TERM_LENGTH = 4;
+
+/**
+ * Prepara los términos protegidos para un parche: los del glosario más los nombres de
+ * héroes y habilidades que aparecen en el propio parche (estos, si no están en el glosario,
+ * se dejan en inglés en lugar de traducirse literalmente).
+ */
+function setPatchContext(patchData) {
+    const terms = glossary.getTerms();
+    const map = new Map();
+    const addSelf = (name) => {
+        name = (name || '').trim();
+        if (name.length >= MIN_TERM_LENGTH && !map.has(name)) map.set(name, terms[name] || name);
+    };
+    for (const [en, es] of Object.entries(terms)) {
+        if (en.length >= MIN_TERM_LENGTH) map.set(en, es);
+    }
+    const sections = (patchData && patchData.sections) || {};
+    for (const key of ['stadium', 'arcade', 'gameBase']) {
+        const section = sections[key];
+        if (!section) continue;
+        const entries = [...Object.values(section.roles || {}).flat(), ...(section.generalItems || [])];
+        for (const hero of entries) {
+            addSelf(hero.name);
+            for (const change of hero.changes || []) {
+                if (!glossary.isNameTitle(change)) continue;
+                const parts = glossary.splitTitle(change.title);
+                addSelf(parts ? parts[0] : change.title);
+            }
+        }
+    }
+    protectedTerms = map;
+}
+
+function clearPatchContext() {
+    protectedTerms = new Map();
+}
+
+function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function termRegExp(term) {
+    return new RegExp(`(?<![\\p{L}\\p{N}])${escapeRegExp(term)}(?![\\p{L}\\p{N}])`, 'gu');
+}
+
+/**
+ * Sustituye los términos protegidos por marcadores [[n]] que el traductor no toca.
+ */
+function maskTerms(text) {
+    const tokens = [];
+    if (protectedTerms.size === 0) return { masked: text, tokens };
+    let masked = text;
+    const candidates = [...protectedTerms.keys()]
+        .filter(term => text.includes(term))
+        .sort((a, b) => b.length - a.length);
+    for (const term of candidates) {
+        const re = termRegExp(term);
+        if (!re.test(masked)) continue;
+        const idx = tokens.length;
+        tokens.push({ en: term, es: protectedTerms.get(term) });
+        masked = masked.replace(termRegExp(term), `[[${idx}]]`);
+    }
+    return { masked, tokens };
+}
+
+/**
+ * Restaura los marcadores. Devuelve null si el traductor ha perdido o alterado alguno.
+ */
+function unmaskTerms(translated, tokens) {
+    const seen = new Set();
+    const restored = translated.replace(/\[\s*\[\s*(\d+)\s*\]\s*\]/g, (match, n) => {
+        const token = tokens[Number(n)];
+        if (!token) return match;
+        seen.add(Number(n));
+        return token.es;
+    });
+    if (seen.size !== tokens.length || /\[\s*\[|\]\s*\]/.test(restored)) return null;
+    return restored;
+}
+
+/**
+ * Tras una traducción sin marcadores: sustituye los nombres que el traductor dejó en inglés
+ * por su nombre oficial.
+ */
+function replaceKnownTerms(translated, tokens) {
+    let out = translated;
+    for (const { en, es } of tokens) {
+        if (en !== es) out = out.replace(termRegExp(en), es);
+    }
+    return out;
+}
+
+// Función que llama a los servicios de traducción (sustituible en tests)
+let rawTranslator = null;
+function _setRawTranslator(fn) {
+    rawTranslator = fn;
 }
 
 const MYMEMORY_MAX_CHARS = 450; // MyMemory rechaza consultas de más de 500 bytes
@@ -179,12 +283,40 @@ const TRANSLATION_OVERRIDES = {
 async function translateText(text) {
     if (!text || text.trim() === '') return text;
 
-    const translated = await translateTextRaw(text);
+    const translate = rawTranslator || translateTextRaw;
+    const { masked, tokens } = maskTerms(text);
+
+    if (tokens.length > 0) {
+        // Todo el texto es un nombre protegido: no hace falta traducir
+        if (/^(\s*\[\[\d+\]\]\s*)+$/.test(masked)) return unmaskTerms(masked, tokens);
+
+        const translatedMasked = await translate(masked);
+        if (translatedMasked !== null && translatedMasked !== undefined) {
+            const restored = unmaskTerms(translatedMasked, tokens);
+            if (restored !== null) return normalizeTranslation(text, restored);
+        }
+        // El traductor estropeó los marcadores: traducir sin ellos y corregir después
+    }
+
+    const translated = await translate(text);
     if (translated === null || translated === undefined) {
         translationFailures++;
         return text;
     }
-    return normalizeTranslation(text, translated);
+    return normalizeTranslation(text, replaceKnownTerms(translated, tokens));
+}
+
+/**
+ * Traduce el título de un cambio. Si es un nombre propio (habilidad con icono, o
+ * "Nombre – Ventaja menor", "Nombre - Power"...), usa el nombre oficial del glosario o lo deja
+ * en inglés, y solo traduce automáticamente el sufijo si no se conoce.
+ */
+async function translateChangeTitle(change) {
+    if (!glossary.isNameTitle(change)) return translateText(change.title);
+    const result = glossary.translateNameTitle(change.title);
+    if (!result.pending) return result.text;
+    const suffix = await translateText(result.pending);
+    return `${result.text}${result.sep}${suffix}`;
 }
 
 /**
@@ -274,6 +406,7 @@ async function translateHero(heroData) {
     try {
         const stringsToTranslate = [];
         const mapping = []; // Permite mapear los resultados de vuelta a su propiedad original
+        const nameTitles = new Map(); // changeIdx → título ya resuelto con el glosario
 
         if (heroData.desc) {
             stringsToTranslate.push(heroData.desc);
@@ -281,9 +414,14 @@ async function translateHero(heroData) {
         }
 
         if (heroData.changes) {
-            heroData.changes.forEach((change, changeIdx) => {
-                stringsToTranslate.push(change.title);
-                mapping.push({ type: 'change_title', changeIdx });
+            for (const [changeIdx, change] of heroData.changes.entries()) {
+                if (glossary.isNameTitle(change)) {
+                    // Los nombres propios se resuelven con el glosario, no con el traductor
+                    nameTitles.set(changeIdx, await translateChangeTitle(change));
+                } else {
+                    stringsToTranslate.push(change.title);
+                    mapping.push({ type: 'change_title', changeIdx });
+                }
 
                 if (change.details) {
                     change.details.forEach((detail, detailIdx) => {
@@ -291,15 +429,11 @@ async function translateHero(heroData) {
                         mapping.push({ type: 'change_detail', changeIdx, detailIdx });
                     });
                 }
-            });
-        }
-
-        if (stringsToTranslate.length === 0) {
-            return heroData;
+            }
         }
 
         // Traducir todo de una sola vez
-        const translatedStrings = await translateBatch(stringsToTranslate);
+        const translatedStrings = stringsToTranslate.length > 0 ? await translateBatch(stringsToTranslate) : [];
 
         // Reconstruir el objeto traducido clonando en profundidad
         const translated = { ...heroData };
@@ -308,6 +442,9 @@ async function translateHero(heroData) {
                 ...c,
                 details: c.details ? [...c.details] : []
             }));
+            for (const [changeIdx, title] of nameTitles) {
+                translated.changes[changeIdx].title = title;
+            }
         }
 
         mapping.forEach((mapInfo, index) => {
@@ -377,6 +514,9 @@ module.exports = {
     translateSection,
     initTranslator,
     normalizeTranslation,
+    setPatchContext,
+    clearPatchContext,
+    _setRawTranslator,
     resetTranslationFailures,
     getTranslationFailures
 };
