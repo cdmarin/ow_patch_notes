@@ -6,7 +6,7 @@ import { state } from './js/state.js';
 import { icon, hydrateIcons } from './js/icons.js';
 import { dom } from './js/dom.js';
 import { SECTIONS } from './js/config.js';
-import { generateAllMonths, isStaticSite } from './js/utils.js';
+import { isStaticSite } from './js/utils.js';
 import { startScrapeStream } from './js/stream.js';
 import { 
     renderPatchSelector, 
@@ -251,25 +251,9 @@ export async function init(skipLoadingPatch = false) {
         const indexData = await loadPatchesIndex();
         state.patches = indexData.patches || [];
 
-        // Generar la lista de todos los meses de retrocompatibilidad
-        const generatedMonths = generateAllMonths();
-
-        // Construir allPatches a partir de los parches descargados
-        const allPatches = [];
-
-        // Agregar los descargados
-        state.patches.forEach(p => {
-            allPatches.push({ ...p, isDownloaded: true });
-        });
-
-        // Para cada mes generado sin parches, agregar un marcador "Sin descargar" (solo en local, donde
-        // se puede lanzar la descarga; en la web pública no se sabe si ese mes hay parche y confundiría)
-        if (!isStaticMode) generatedMonths.forEach(gen => {
-            const hasDownloadedInMonth = state.patches.some(p => p.id.startsWith(gen.id));
-            if (!hasDownloadedInMonth) {
-                allPatches.push({ ...gen, isDownloaded: false });
-            }
-        });
+        // La línea temporal solo muestra parches descargados; los meses sin parche no aparecen.
+        // Para traer parches nuevos está el botón "Buscar nuevos parches".
+        const allPatches = state.patches.map(p => ({ ...p, isDownloaded: true }));
 
         // Ordenar todos los parches por fecha descendente
         allPatches.sort((a, b) => {
