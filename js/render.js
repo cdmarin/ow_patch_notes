@@ -188,12 +188,21 @@ export function renderPatchHeader(patchData, patchMeta) {
         }
     }
 
+    // El botón "Notas oficiales" de la cabecera lleva al mes del parche abierto
+    const officialUrl = officialPatchUrl(patchData.date || patchMeta?.id);
+    const officialLink = document.getElementById('official-link');
+    if (officialLink) {
+        officialLink.href = officialUrl;
+        const [y, m] = String(patchData.date || patchMeta?.id || '').split('-');
+        officialLink.title = m ? `Abrir las notas oficiales de ${MONTHS[parseInt(m, 10) - 1]} ${y} en la web de Blizzard` : 'Abrir las notas oficiales de Blizzard';
+    }
+
     dom.patchHeaderCard.innerHTML = `
         <div class="kicker">
             ${icon('calendar', { size: 15 })}
             <span>${escapeHtml(title)}</span>
             <span class="kicker-chip cut">${icon(secConfig?.icon || 'gameBase', { size: 13 })}${escapeHtml(secConfig?.label || '')}</span>
-            <a class="kicker-link" href="${officialPatchUrl(patchData.date || patchMeta?.id)}" target="_blank" rel="noopener"
+            <a class="kicker-link" href="${officialUrl}" target="_blank" rel="noopener"
                 title="Ver este parche en la web oficial de Blizzard">${icon('external', { size: 13 })}Ver en Blizzard</a>
         </div>
         <h1 class="patch-card-title">${heading}</h1>
