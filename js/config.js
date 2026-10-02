@@ -62,6 +62,15 @@ export const HERO_PORTRAITS = {
 
 export const FALLBACK_PORTRAIT = 'logo.svg';
 
+// Notas de parche oficiales de Blizzard (en español)
+export const OFFICIAL_PATCH_NOTES_URL = 'https://overwatch.blizzard.com/es-es/news/patch-notes/';
+
+/** Página oficial del mes de un parche ('2026-09-17' → .../live/2026/09) */
+export function officialPatchUrl(patchId) {
+    const [year, month] = String(patchId || '').split('-');
+    return year && month ? `${OFFICIAL_PATCH_NOTES_URL}live/${year}/${month}` : OFFICIAL_PATCH_NOTES_URL;
+}
+
 export const SECTIONS = [
     { id: 'gameBase', label: 'Juego base', icon: 'gameBase', hasRoles: true },
     { id: 'stadium', label: 'Stadium', icon: 'stadium', hasRoles: true },

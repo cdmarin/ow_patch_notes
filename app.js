@@ -6,7 +6,7 @@ import { state } from './js/state.js';
 import { icon, hydrateIcons } from './js/icons.js';
 import { dom } from './js/dom.js';
 import { SECTIONS } from './js/config.js';
-import { generateAllMonths } from './js/utils.js';
+import { generateAllMonths, isStaticSite } from './js/utils.js';
 import { startScrapeStream } from './js/stream.js';
 import { 
     renderPatchSelector, 
@@ -237,7 +237,7 @@ export async function init(skipLoadingPatch = false) {
     updateThemeUI(savedTheme === 'light');
     state.language = getSavedLanguage();
 
-    const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+    const isStaticMode = isStaticSite();
     if (isStaticMode) {
         if (dom.refreshBtn) dom.refreshBtn.style.display = 'none';
         if (dom.updateBtn) dom.updateBtn.style.display = 'none';
@@ -259,8 +259,9 @@ export async function init(skipLoadingPatch = false) {
             allPatches.push({ ...p, isDownloaded: true });
         });
 
-        // Para cada mes generado, si no hay ningún parche descargado en ese mes, agregar el placeholder no descargado
-        generatedMonths.forEach(gen => {
+        // Para cada mes generado sin parches, agregar un marcador "Sin descargar" (solo en local, donde
+        // se puede lanzar la descarga; en la web pública no se sabe si ese mes hay parche y confundiría)
+        if (!isStaticMode) generatedMonths.forEach(gen => {
             const hasDownloadedInMonth = state.patches.some(p => p.id.startsWith(gen.id));
             if (!hasDownloadedInMonth) {
                 allPatches.push({ ...gen, isDownloaded: false });

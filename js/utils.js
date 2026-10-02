@@ -8,6 +8,20 @@ export function getPortrait(name, portraitUrl) {
     return null;
 }
 
+/**
+ * ¿La app se está viendo como web estática (GitHub Pages, dominio propio, archivo local)?
+ * Solo el servidor local (server.js) puede descargar parches, así que se considera "local"
+ * únicamente localhost o una IP de la red de casa.
+ */
+export function isStaticSite() {
+    const { protocol, hostname } = window.location;
+    if (protocol === 'file:') return true;
+    const isLocal = hostname === 'localhost' || hostname === '::1' || hostname === '[::1]' ||
+        /^127\./.test(hostname) || /^192\.168\./.test(hostname) || /^10\./.test(hostname) ||
+        /^172\.(1[6-9]|2\d|3[01])\./.test(hostname) || hostname.endsWith('.local');
+    return !isLocal;
+}
+
 export function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }

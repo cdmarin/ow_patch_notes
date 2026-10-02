@@ -1,7 +1,7 @@
 import { dom } from './dom.js';
 import { state } from './state.js';
-import { SECTIONS, ROLES, ROLE_META, CHANGE_LABELS, CHANGE_ICONS } from './config.js';
-import { getPortrait, formatDate, escapeHtml, initials, slugify, extractDiff } from './utils.js';
+import { SECTIONS, ROLES, ROLE_META, CHANGE_LABELS, CHANGE_ICONS, officialPatchUrl } from './config.js';
+import { getPortrait, formatDate, escapeHtml, initials, slugify, extractDiff, isStaticSite } from './utils.js';
 import { icon } from './icons.js';
 import { startScrapeStream } from './stream.js';
 import { switchSection, switchRole } from './handlers.js';
@@ -193,6 +193,8 @@ export function renderPatchHeader(patchData, patchMeta) {
             ${icon('calendar', { size: 15 })}
             <span>${escapeHtml(title)}</span>
             <span class="kicker-chip cut">${icon(secConfig?.icon || 'gameBase', { size: 13 })}${escapeHtml(secConfig?.label || '')}</span>
+            <a class="kicker-link" href="${officialPatchUrl(patchData.date || patchMeta?.id)}" target="_blank" rel="noopener"
+                title="Ver este parche en la web oficial de Blizzard">${icon('external', { size: 13 })}Ver en Blizzard</a>
         </div>
         <h1 class="patch-card-title">${heading}</h1>
         ${lede ? `<p class="patch-lede">${lede}</p>` : ''}
@@ -498,7 +500,7 @@ export function createEmptySection(title, desc, iconName = 'hourglass') {
 export function renderContentNotDownloaded(patchMeta) {
     const [year, month] = patchMeta.id.split('-');
     const autoUrl = `https://overwatch.blizzard.com/en-us/news/patch-notes/live/${year}/${month}`;
-    const isStaticMode = window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:';
+    const isStaticMode = isStaticSite();
 
     clearContentSafely();
     const toc = document.getElementById('toc');
