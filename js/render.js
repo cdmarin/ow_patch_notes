@@ -126,10 +126,11 @@ window.togglePatchDesc = function (btn) {
     btn.dataset.expanded = String(expand);
 };
 
-function meter(label, value, share, cls) {
-    return `<div class="meter cut ${cls}" style="--p:${Math.round(share * 100)}%">
-        <b>${value}</b><span>${label}</span><i></i>
-    </div>`;
+/** Barra de reparto: un tramo por tipo de cambio, proporcional a su número */
+function mixBar(counts) {
+    const segs = TYPE_ORDER.filter(t => counts[t])
+        .map(t => `<i class="${t}" style="flex:${counts[t]}"></i>`).join('');
+    return segs ? `<div class="mix" aria-hidden="true">${segs}</div>` : '';
 }
 
 export function renderPatchHeader(patchData, patchMeta) {
@@ -141,13 +142,12 @@ export function renderPatchHeader(patchData, patchMeta) {
 
     let heading;
     let lede = '';
-    let meters = '';
+    let mix = '';
 
     if (secConfig?.hasRoles) {
         const entries = entriesOf(section);
         const heroes = entries.filter(e => e.role !== '__general__');
         const counts = countTypes(entries);
-        const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
 
         heading = heroes.length > 0
             ? `Cambios para <em>${heroes.length} ${heroes.length === 1 ? 'héroe' : 'héroes'}</em>`
@@ -156,20 +156,14 @@ export function renderPatchHeader(patchData, patchMeta) {
         const parts = [];
         if (counts.buff) parts.push(`<b class="t-buff">${counts.buff} ${counts.buff === 1 ? 'mejora' : 'mejoras'}</b>`);
         if (counts.nerf) parts.push(`<b class="t-nerf">${counts.nerf} ${counts.nerf === 1 ? 'debilitación' : 'debilitaciones'}</b>`);
-        if (counts.rework) parts.push(`${counts.rework} ${counts.rework === 1 ? 'ajuste' : 'ajustes'}`);
+        if (counts.rework) parts.push(`<b class="t-rework">${counts.rework} ${counts.rework === 1 ? 'ajuste' : 'ajustes'}</b>`);
         if (counts.new) parts.push(`<b class="t-new">${counts.new} ${counts.new === 1 ? 'novedad' : 'novedades'}</b>`);
         if (parts.length) {
             const list = parts.length > 1 ? `${parts.slice(0, -1).join(', ')} y ${parts[parts.length - 1]}` : parts[0];
             lede = `En ${secConfig.label.toLowerCase()}: ${list}${bugFixes.length ? `, además de ${bugFixes.length} ${bugFixes.length === 1 ? 'corrección' : 'correcciones'} de errores` : ''}.`;
         }
 
-        meters = [
-            meter('Mejoras', counts.buff, counts.buff / total, 't-buff'),
-            meter('Debilitaciones', counts.nerf, counts.nerf / total, 't-nerf'),
-            meter('Ajustes', counts.rework, counts.rework / total, 't-rework'),
-            counts.new ? meter('Novedades', counts.new, counts.new / total, 't-new') : '',
-            bugFixes.length ? meter('Correcciones', bugFixes.length, 1, 't-accent') : ''
-        ].join('');
+        mix = mixBar(counts);
     } else {
         const n = Array.isArray(section) ? section.length : 0;
         heading = `<em>${n}</em> ${n === 1 ? 'corrección de errores' : 'correcciones de errores'}`;
@@ -202,14 +196,11 @@ export function renderPatchHeader(patchData, patchMeta) {
         <div class="kicker">
             ${icon('calendar', { size: 15 })}
             <span>${escapeHtml(title)}</span>
-            <span class="kicker-chip cut">${icon(secConfig?.icon || 'gameBase', { size: 13 })}${escapeHtml(secConfig?.label || '')}</span>
-            <a class="kicker-link" href="${officialUrl}" target="_blank" rel="noopener"
-                title="Ver este parche en la web oficial de Blizzard">${icon('external', { size: 13 })}Ver en Blizzard</a>
         </div>
         <h1 class="patch-card-title">${heading}</h1>
         ${lede ? `<p class="patch-lede">${lede}</p>` : ''}
+        ${mix}
         ${introHtml}
-        ${meters ? `<div class="meters">${meters}</div>` : ''}
     `;
 }
 
@@ -272,7 +263,7 @@ export function renderHeroCard(hero, isOpen = true) {
             </summary>
             <div class="hero-content">
                 <div class="hero-content-inner">
-                    ${desc ? `<div class="hero-desc cut"><div class="hero-desc-label">${icon('info', { size: 14 })}Nota de los desarrolladores</div><p>${escapeHtml(desc)}</p></div>` : ''}
+                    ${desc ? `<div class="hero-desc"><div class="hero-desc-label">Nota de los desarrolladores</div><p>${escapeHtml(desc)}</p></div>` : ''}
                     <ul class="changes-list">${(hero.changes || []).map(renderChangeItem).join('')}</ul>
                 </div>
             </div>
@@ -385,9 +376,8 @@ function renderRoleSection(role, entries) {
     roleSection.id = `role-${role}`;
     roleSection.innerHTML = `
         <h2 class="role-section-title">
-            <span class="role-plate cut">${icon(meta.icon, { size: 19 })}</span>
+            ${icon(meta.icon, { size: 20 })}
             <span class="role-name">${role === '__general__' ? 'Objetos generales y mapas' : meta.label}</span>
-            <span class="role-line" aria-hidden="true"></span>
             <span class="section-actions">
                 <button class="action-btn" onclick="toggleSectionCards(this, true)" title="Expandir todo" aria-label="Expandir todas las tarjetas">${icon('expandAll', { size: 16 })}</button>
                 <button class="action-btn" onclick="toggleSectionCards(this, false)" title="Colapsar todo" aria-label="Colapsar todas las tarjetas">${icon('collapseAll', { size: 16 })}</button>
@@ -439,9 +429,8 @@ export function renderContent(patchData) {
             card.className = 'bugfix-card cut';
             card.innerHTML = `
                 <h2 class="role-section-title">
-                    <span class="role-plate cut">${icon('bugFixes', { size: 19 })}</span>
+                    ${icon('bugFixes', { size: 20 })}
                     <span class="role-name">Corrección de errores</span>
-                    <span class="role-line" aria-hidden="true"></span>
                 </h2>
                 <ul class="bug-fixes-list">${flat.map(bug => `<li>${escapeHtml(bug)}</li>`).join('')}</ul>
             `;
