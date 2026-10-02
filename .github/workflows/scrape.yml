@@ -27,6 +27,9 @@ jobs:
       - name: Install scraper dependencies
         run: npm run install-deps
 
+      - name: Snapshot patches index
+        run: cp data/patches_index.json "$RUNNER_TEMP/patches_index.before.json"
+
       - name: Run scraper
         run: node scraper/scraper.js
 
@@ -56,3 +59,8 @@ jobs:
           else
             echo "No se detectaron nuevos parches. Todo actualizado."
           fi
+
+      - name: Notify Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }} # Webhook del canal donde se avisa de los parches nuevos
+        run: node scraper/notify.js --before="$RUNNER_TEMP/patches_index.before.json"

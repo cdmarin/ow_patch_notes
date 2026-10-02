@@ -5,7 +5,7 @@ import { getPortrait, formatDate, escapeHtml, initials, slugify, extractDiff, is
 import { icon } from './icons.js';
 import { startScrapeStream } from './stream.js';
 import { switchSection, switchRole } from './handlers.js';
-import { init, loadPatch } from '../app.js';
+import { init, loadPatch, setPatchIdInUrl } from '../app.js';
 
 const TYPE_ORDER = ['buff', 'nerf', 'rework', 'new'];
 
@@ -96,6 +96,7 @@ export function renderSidebar() {
             if (id === dom.patchSelect.value) return;
             dom.patchSelect.value = id;
             closeDrawer();
+            setPatchIdInUrl(id);
             loadPatch(id);
         };
     });

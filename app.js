@@ -156,6 +156,19 @@ async function toggleLanguage() {
     rerenderCurrentPatch();
 }
 
+// ─── Enlace directo a un parche (?patch=<id>) ─────────────────────────────────
+function getPatchIdFromUrl() {
+    return new URLSearchParams(window.location.search).get('patch');
+}
+
+export function setPatchIdInUrl(patchId) {
+    try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('patch', patchId);
+        window.history.replaceState(null, '', url);
+    } catch (e) { /* history no disponible */ }
+}
+
 // ─── Patch Loading ────────────────────────────────────────────────────────────
 export async function loadPatch(patchId) {
     const patchMeta = state.allPatches.find(p => p.id === patchId);
@@ -285,8 +298,12 @@ export async function init(skipLoadingPatch = false) {
             return;
         }
 
-        // Buscar el último parche disponible descargado como predeterminado
-        let defaultPatch = state.allPatches.find(p => p.isLatest && p.isDownloaded);
+        // Enlace directo a un parche (?patch=2026-09-22); si no, el último disponible descargado
+        const requestedPatchId = getPatchIdFromUrl();
+        let defaultPatch = requestedPatchId && state.allPatches.find(p => p.id === requestedPatchId && p.isDownloaded);
+        if (!defaultPatch) {
+            defaultPatch = state.allPatches.find(p => p.isLatest && p.isDownloaded);
+        }
         if (!defaultPatch) {
             defaultPatch = state.allPatches.find(p => p.isDownloaded) || state.allPatches[0];
         }
@@ -331,6 +348,7 @@ function setupListeners() {
 
     // Patch selector
     dom.patchSelect.addEventListener('change', () => {
+        setPatchIdInUrl(dom.patchSelect.value);
         loadPatch(dom.patchSelect.value);
     });
 
