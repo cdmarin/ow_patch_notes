@@ -32,16 +32,6 @@ export function updateThemeUI(isLight) {
     }
 
     document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
-
-    // Swap logos (including header logo)
-    const logos = Array.from(document.querySelectorAll('img')).filter(img =>
-        img.classList.contains('loader-logo') ||
-        img.classList.contains('scrape-logo') ||
-        img.classList.contains('header-logo')
-    );
-    logos.forEach(logo => {
-        logo.src = isLight ? 'logo-light.svg' : 'logo.svg';
-    });
 }
 
 // ─── Data Loading ─────────────────────────────────────────────────────────────
