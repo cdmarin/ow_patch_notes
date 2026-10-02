@@ -2,7 +2,8 @@ name: Scrape Overwatch Patch Notes
 
 on:
   schedule:
-    - cron: '10 18 * * *' # Se ejecuta automáticamente todos los días a las 18:10 UTC (20:10 hora de España)
+    - cron: '5 18 * * *'  # Todos los días a las 18:05 UTC (20:05 hora de España en verano)
+    - cron: '15 18 * * *' # Todos los días a las 18:15 UTC (20:15 hora de España en verano)
   workflow_dispatch: # Permite que ejecutes el scraper manualmente desde el panel de GitHub en cualquier momento
     inputs:
       months:
