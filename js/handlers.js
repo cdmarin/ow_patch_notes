@@ -34,6 +34,7 @@ export function switchRole(role) {
     // Update sidebar buttons
     document.querySelectorAll('.role-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.role === role);
+        btn.setAttribute('aria-pressed', String(btn.dataset.role === role));
     });
 
     applyFiltersAndSearch();

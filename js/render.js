@@ -350,8 +350,9 @@ function renderSectionBar(patchData) {
     if (secConfig?.hasRoles) {
         const section = patchData?.sections?.[state.currentSection];
         const roleBtn = (role, label, iconName, n) =>
-            `<button class="pill role-btn cut ${state.currentRole === role ? 'active' : ''}" data-role="${role}">${icon(iconName, { size: 15 })}${label}<span class="hero-count">${n}</span></button>`;
-        const roles = [roleBtn('Todos', 'Todos', 'allRoles', entriesOf(section).length)];
+            `<button class="pill role-btn cut ${state.currentRole === role ? 'active' : ''}" data-role="${role}" aria-pressed="${state.currentRole === role}">${icon(iconName, { size: 15 })}${label}<span class="hero-count">${n}</span></button>`;
+        // Sin botón "Todos": se ven todos los roles cuando no hay ninguno marcado
+        const roles = [];
         ROLES.forEach(role => {
             const n = (section?.roles?.[role] || []).length;
             if (n) roles.push(roleBtn(role, ROLE_META[role].label, ROLE_META[role].icon, n));
@@ -369,7 +370,10 @@ function renderSectionBar(patchData) {
 
     bar.innerHTML = `${tabs ? `<div class="section-tabs" role="tablist">${tabs}</div>` : ''}${pills}`;
     bar.querySelectorAll('.section-tab').forEach(btn => { btn.onclick = () => switchSection(btn.dataset.section); });
-    bar.querySelectorAll('.role-btn').forEach(btn => { btn.onclick = () => switchRole(btn.dataset.role); });
+    // Pulsar el rol activo lo desmarca y vuelve a mostrar todos
+    bar.querySelectorAll('.role-btn').forEach(btn => {
+        btn.onclick = () => switchRole(state.currentRole === btn.dataset.role ? 'Todos' : btn.dataset.role);
+    });
     return bar;
 }
 
