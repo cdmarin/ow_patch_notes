@@ -6,6 +6,7 @@ import { icon } from './icons.js';
 import { startScrapeStream } from './stream.js';
 import { switchSection, switchRole } from './handlers.js';
 import { init, loadPatch, setPatchIdInUrl } from '../app.js';
+import { setCardOpen } from './motion.js';
 
 const TYPE_ORDER = ['buff', 'nerf', 'rework', 'new'];
 
@@ -276,43 +277,7 @@ window.toggleSectionCards = function (btn, shouldExpand) {
     const section = btn.closest('.role-section') || btn.closest('.content');
     if (!section) return;
 
-    section.querySelectorAll('.hero-card').forEach(card => {
-        const content = card.querySelector('.hero-content');
-        if (!content || content.style.transition) return;
-
-        if (shouldExpand && !card.open) {
-            card.setAttribute('open', '');
-            const height = content.scrollHeight;
-            content.style.height = '0';
-            content.style.opacity = '0';
-            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
-            content.offsetHeight; // Reflow
-            content.style.height = `${height}px`;
-            content.style.opacity = '1';
-            const onEnd = () => {
-                content.style.height = '';
-                content.style.opacity = '';
-                content.style.transition = '';
-                content.removeEventListener('transitionend', onEnd);
-            };
-            content.addEventListener('transitionend', onEnd);
-        } else if (!shouldExpand && card.open) {
-            const height = content.scrollHeight;
-            content.style.height = `${height}px`;
-            content.offsetHeight; // Reflow
-            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
-            content.style.height = '0';
-            content.style.opacity = '0';
-            const onEnd = () => {
-                card.removeAttribute('open');
-                content.style.height = '';
-                content.style.opacity = '';
-                content.style.transition = '';
-                content.removeEventListener('transitionend', onEnd);
-            };
-            content.addEventListener('transitionend', onEnd);
-        }
-    });
+    section.querySelectorAll('.hero-card').forEach(card => setCardOpen(card, shouldExpand));
 };
 
 // ─── Contenido ────────────────────────────────────────────────────────────────
@@ -478,6 +443,8 @@ export function renderToc(patchData) {
             if (state.currentRole !== 'Todos' && state.currentRole !== link.dataset.role) switchRole('Todos');
             const card = document.querySelector(link.getAttribute('href'));
             if (!card) return;
+            card.classList.remove('closing');
+            card.querySelector('.hero-content')?.getAnimations().forEach(a => a.cancel());
             if (!card.open) card.setAttribute('open', '');
             card.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
             card.classList.remove('flash');

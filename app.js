@@ -22,6 +22,7 @@ import {
     applyFiltersAndSearch,
     switchRole
 } from './js/handlers.js';
+import { toggleCard, playContentEnter } from './js/motion.js';
 
 // ─── Theme Management ─────────────────────────────────────────────────────────
 export function updateThemeUI(isLight) {
@@ -222,6 +223,7 @@ export async function loadPatch(patchId) {
     renderContent(patchData);
     renderPatchHeader(patchData, patchMeta);
     applyFiltersAndSearch();
+    playContentEnter(dom.content, document.getElementById('toc'));
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -445,7 +447,7 @@ function setupListeners() {
     window.addEventListener('resize', handleMobileLayout);
     handleMobileLayout();
 
-    // Delegated click listener for smooth details open/close transition
+    // Apertura y cierre animados de las tarjetas de héroe
     document.addEventListener('click', (e) => {
         const summary = e.target.closest('.hero-header');
         if (!summary) return;
@@ -454,53 +456,7 @@ function setupListeners() {
         if (!details || !details.classList.contains('hero-card')) return;
 
         e.preventDefault();
-
-        const content = details.querySelector('.hero-content');
-        if (!content) return;
-
-        // Prevent interrupting existing transition
-        if (content.style.transition) return;
-
-        if (details.open) {
-            // Closing animation
-            const height = content.scrollHeight;
-            content.style.height = `${height}px`;
-            content.offsetHeight; // Reflow
-
-            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease-out';
-            content.style.height = '0';
-            content.style.opacity = '0';
-
-            const onEnd = () => {
-                details.removeAttribute('open');
-                content.style.height = '';
-                content.style.opacity = '';
-                content.style.transition = '';
-                content.removeEventListener('transitionend', onEnd);
-            };
-            content.addEventListener('transitionend', onEnd);
-        } else {
-            // Opening animation
-            details.setAttribute('open', '');
-            const height = content.scrollHeight;
-
-            content.style.height = '0';
-            content.style.opacity = '0';
-            content.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out';
-
-            content.offsetHeight; // Reflow
-
-            content.style.height = `${height}px`;
-            content.style.opacity = '1';
-
-            const onEnd = () => {
-                content.style.height = '';
-                content.style.opacity = '';
-                content.style.transition = '';
-                content.removeEventListener('transitionend', onEnd);
-            };
-            content.addEventListener('transitionend', onEnd);
-        }
+        toggleCard(details);
     });
 }
 

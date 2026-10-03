@@ -1,6 +1,7 @@
 import { state } from './state.js';
 import { dom } from './dom.js';
 import { renderSidebar, renderContent, renderPatchHeader } from './render.js';
+import { playContentEnter } from './motion.js';
 
 export function switchSection(sectionId) {
     state.currentSection = sectionId;
@@ -13,6 +14,7 @@ export function switchSection(sectionId) {
     renderPatchHeader(state.currentPatch, patchMeta);
 
     applyFiltersAndSearch();
+    playContentEnter(dom.content, document.getElementById('toc'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     // Close mobile drawer on section change

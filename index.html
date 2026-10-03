@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 
 <body>
@@ -147,12 +147,25 @@
                 if (saved === 'light') applyTheme(true);
             } catch(e) {}
 
+            var isLightTheme = document.body.classList.contains('light-theme');
             var btn = document.getElementById('theme-toggle-btn');
             if (btn) {
                 btn.addEventListener('click', function() {
-                    var isLight = !document.body.classList.contains('light-theme');
+                    // Se guarda en una variable y no se lee del DOM: durante el fundido el DOM aún tiene el tema anterior
+                    isLightTheme = !isLightTheme;
+                    var isLight = isLightTheme;
                     try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e) {}
-                    applyTheme(isLight);
+                    // Fundido entre temas donde el navegador lo permite
+                    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                    if (document.startViewTransition && !reduce) {
+                        var transition = document.startViewTransition(function() { applyTheme(isLight); });
+                        // Un segundo clic rápido cancela el fundido anterior; no es un error
+                        transition.updateCallbackDone.catch(function() {});
+                        transition.ready.catch(function() {});
+                        transition.finished.catch(function() {});
+                    } else {
+                        applyTheme(isLight);
+                    }
                 });
             }
         })();
