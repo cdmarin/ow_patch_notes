@@ -1,0 +1,1661 @@
+{
+  "version": "unknown",
+  "date": "2026-10-06",
+  "title": "6 de Octubre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "El-Saka Suppressor - Arma épica General Artículo",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "General Changes",
+          "desc": "",
+          "changes": [
+            {
+              "title": "General Changes",
+              "type": "nerf",
+              "details": [
+                "El juego rápido ahora es cola abierta, pero con límites de rol de 1 tanque, 2 daños y 3 apoyos. Se requiere 1 tanque.",
+                "La salud pasiva de la moneda se ha reducido en un 50%."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Item Changes",
+          "desc": "El-Saka Suppressor - Arma épica General Artículo",
+          "changes": [
+            {
+              "title": "El-Saka Suppressor - Arma épica General Objeto",
+              "type": "adjust",
+              "details": [
+                "La reducción de curación ahora se aplica a todos los daños del arma.",
+                "Reducción de la cicatrización aumentada al 40% (desde el 35%).",
+                "Reducción de la duración de la cicatrización reducida a 2 s (abajo de 3 s)."
+              ]
+            },
+            {
+              "title": "Cybervenom - Habilidad épica General Elemento",
+              "type": "buff",
+              "details": [
+                "Reducción de la cicatrización aumentada al 40% (desde el 35%)."
+              ]
+            },
+            {
+              "title": "Ultimate E.M.P - Habilidad épica General Elemento",
+              "type": "adjust",
+              "details": [
+                "Nuevo",
+                "25 Salud",
+                "Velocidad de ataque",
+                "Reducción de enfriamiento",
+                "Después de gastar tu Carga Definitiva, durante 3 segundos tu daño aplica una Reducción de Sanación del 100% durante 5 segundos.",
+                "9000 Coste"
+              ]
+            },
+            {
+              "title": "Biolight Overflow - Artículo General de supervivencia poco común",
+              "type": "nerf",
+              "details": [
+                "Eliminado."
+              ]
+            },
+            {
+              "title": "Divine Intervention - Supervivencia épica General Artículo",
+              "type": "buff",
+              "details": [
+                "Los escudos aumentaron a 75 (en vez de 50)."
+              ]
+            },
+            {
+              "title": "Nebula Conduit - Supervivencia épica General Artículo",
+              "type": "buff",
+              "details": [
+                "La salud aumentó a 75 (en vez de 50)."
+              ]
+            },
+            {
+              "title": "Sundering Vial - Supervivencia épica General Artículo",
+              "type": "buff",
+              "details": [
+                "La reducción de la salud excesiva aumentó al 40% (en lugar del 35%)."
+              ]
+            },
+            {
+              "title": "Siphon Snippet - Gadget",
+              "type": "buff",
+              "details": [
+                "Reducción de la cicatrización aumentada al 40% (desde el 35%)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Nuevo mapa de acompañantes – Grímsvötn",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Roadhog",
+            "desc": "Comentarios del desarrollador: Teníamos dos objetivos principales con esta Roadhog revisión: reducir la frustración que surge de lo letal que Chain Hook termina siendo en la mayoría de los héroes, y darle a Roadhog una nueva herramienta para ayudarlo a ayudar a su equipo como lo haría un tanque más tradicional. Cambiar su fuego principal para disparar en una cadencia de 2 ráfagas junto con ligeros ajustes a Chain Hook debería preservar la fuerza de la habilidad como herramienta de desplazamiento mientras amortigua su letalidad. Mientras tanto, la nueva habilidad de Roadhog, Trash Compactor, aporta una nueva utilidad para él y su equipo que retroalimenta a Roadhog siendo una fuerza letal en el campo de batalla. Mientras Trash Compactor está activo, Roadhog aspira los proyectiles frente a él, convirtiéndolos en un proyectil explosivo para arrojarlos a los enemigos. Operando como una fuerte habilidad defensiva y ofensiva, Trash Compactor debería ayudar a Roadhog a hacer jugadas de balanceo de juego con más vectores que solo tratar de héroes de un solo disparo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Scrap Hook – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "La munición recargada aumentó de 2 a 4."
+                ]
+              },
+              {
+                "title": "Shrapnel Launcher – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Here, Piggy Piggy - Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Nueva ventaja menor.",
+                  "Durante Whole Hog, el tiempo de reutilización de Chain Hook se reduce en un 80%."
+                ]
+              },
+              {
+                "title": "Pulled Pork – Mayor beneficio",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Toxic Exhaust – Mayor beneficio",
+                "type": "adjust",
+                "details": [
+                  "Nueva ventaja principal.",
+                  "Los enemigos frente a Roadhog mientras Trash Compactor está activo se ralentizan en un 30% y reciben 20 daños por segundo."
+                ]
+              },
+              {
+                "title": "Scrap Gun – Incendio primario",
+                "type": "adjust",
+                "details": [
+                  "El Fuego Primario ahora dispara 2 ráfagas por descarga.",
+                  "La munición aumentó de 6 a 12.",
+                  "El daño total por descarga aumentó de 175 a 204.",
+                  "El multiplicador de daño crítico disminuyó de 2x a 1,5x.",
+                  "El recuento de perdigones de escopeta disminuyó de 25 a 16.",
+                  "El daño por perdigones de escopeta disminuyó de 7 a 4.25.",
+                  "Ahora dispara un proyectil más grande en el centro de cada disparo.",
+                  "El proyectil central inflige 34 de daño.",
+                  "La propagación disminuyó de 8 grados a 6 grados.",
+                  "El rango de caída disminuyó de 30-50 metros a 20-35 metros.",
+                  "La velocidad del proyectil aumentó de 80 metros por segundo a 100 metros por segundo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d48d0b264d765e3732abda784e986595f7a6c5ad0e56f1929c008ffc0492a39d.png"
+              },
+              {
+                "title": "Scrap Gun – Incendio secundario",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d48d0b264d765e3732abda784e986595f7a6c5ad0e56f1929c008ffc0492a39d.png"
+              },
+              {
+                "title": "Trash Compactor",
+                "type": "new",
+                "details": [
+                  "Nueva habilidad asignada al fuego secundario de forma predeterminada.",
+                  "Cuando esté activado, comience a absorber proyectiles delante de Roadhog durante 2 segundos.",
+                  "Después de la duración, dispare un proyectil explosivo cuyo daño se escala en función del daño absorbido, que oscila entre 75 y 200 daños.",
+                  "Radio interior de explosión de 2 metros, radio exterior de explosión de 6 metros con un escalar de caída del 30%.",
+                  "El daño por impacto es de 10.",
+                  "La tasa de conversión es el 30% del daño absorbido.",
+                  "Penalización por velocidad de movimiento del 15% mientras esté activo.",
+                  "El tiempo de enfriamiento es de 10 segundos en 5v5.",
+                  "El tiempo de enfriamiento es de 11 segundos en 6v6."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/23bd9bc7960a9958d04584375c5ea81c6615da668e9ad8c6cbb4920561f7c199.png"
+              },
+              {
+                "title": "Chain Hook",
+                "type": "adjust",
+                "details": [
+                  "La duración del aturdimiento del enemigo después de ser tirado disminuyó de 0,4 segundos a 0,3 segundos.",
+                  "La distancia final del objetivo de Roadhog después de ser tirado aumentó de 3 metros a 4,5 metros.",
+                  "El enfriamiento disminuyó de 7 segundos a 6 segundos en 5v5.",
+                  "El enfriamiento disminuyó de 8 segundos a 7 segundos en 6v6."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7edc1cdef13c2fd21e279043816aa1d2975dc784298502fd121b927729e1e86d.png"
+              },
+              {
+                "title": "Take a Breather",
+                "type": "adjust",
+                "details": [
+                  "La duración máxima disminuyó de 3 segundos a 2 segundos.",
+                  "La cicatrización a lo largo del tiempo aumentó de 150 por segundo a 200 por segundo.",
+                  "La reducción del daño disminuyó del 40% al 35%.",
+                  "El enfriamiento aumentó de 1,25 segundos a 2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/064bde1e9f9f65e2a1ca0898abe09432394dca3b0729da0dcccff41b5f5be69b.png"
+              }
+            ]
+          },
+          {
+            "name": "D.Va",
+            "desc": "Comentarios del desarrollador: El aumento de la velocidad de disparo de Micro Missiles reduce el tiempo necesario para disparar la descarga completa, aumentando el potencial de ráfaga sin aumentar su producción total de daños.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1f6a7dcd9f35dcd719cb4672fe714610cebb7c13037d1a77a27fb0b1b795ddaa.png",
+            "changes": [
+              {
+                "title": "Micro Missiles",
+                "type": "buff",
+                "details": [
+                  "La tasa de disparo aumentó de 11 a 14 disparos por segundo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/adcd1c898f2ab66779554711451303ee83ca15b70a0951e18964520f5f02566a.png"
+              }
+            ]
+          },
+          {
+            "name": "Domina",
+            "desc": "Comentarios del desarrollador: Domina tiene dificultades para sostenerse contra los oponentes que pueden presionar constantemente a través de su barrera. Reducir el tiempo de reutilización de Crystal Charge y aumentar el tiempo de recuperación de Reconstruction mejora su capacidad para recuperar la salud durante los enfrentamientos prolongados.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/63c3e4cb2c594cfdbc2298836162abc7c6c0da75c22032aeb58700fd6e0da40d.png",
+            "changes": [
+              {
+                "title": "Crystal Charge",
+                "type": "buff",
+                "details": [
+                  "Enfriamiento reducido de 8 a 7 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e2a15136441c63461f9c187e39d902fd64710aebc7e87d8430839cc083ca9b45.png"
+              },
+              {
+                "title": "Reconstruction (Passive)",
+                "type": "buff",
+                "details": [
+                  "Habilidad lifesteal aumentada del 75% al 100%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/93b7cdba5998023b178077c00af53bc21bd0aa020faaae3e199231ec50e98e93.png"
+              }
+            ]
+          },
+          {
+            "name": "Doomfist",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/36dc867dd65cff81b5154c34531a9c520059c6f8c907631a6f99e049a6777dbb.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 19,7 a 21.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 19,7 a 21."
+                ]
+              },
+              {
+                "title": "El volumen del golpe de cintura aumentó de 30 a 35.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe de cintura aumentó de 30 a 35."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la pierna aumentó de 21 a 26.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpe en la pierna aumentó de 21 a 26."
+                ]
+              },
+              {
+                "title": "Volumen de golpe de puño reducido de 24 a 20.",
+                "type": "nerf",
+                "details": [
+                  "Volumen de golpe de puño reducido de 24 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hazard",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f5f6c3e6378f59c991cc60d817ec0f8b73b6957c277ff1ce23e89895ed6c6628.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 18,5 a 20.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 18,5 a 20."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 21,9 a 24.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 21,9 a 24."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 17,8 a 19.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 17,8 a 19."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 26,2 a 28.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 26,2 a 28."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la cintura aumentó de 23,8 a 26.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpe en la cintura aumentó de 23,8 a 26."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la pierna aumentó de 19,2 a 22.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpe en la pierna aumentó de 19,2 a 22."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 22 a 23,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 22 a 23,5."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpes manuales se han reducido de 16 a 12.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpes manuales se han reducido de 16 a 12."
+                ]
+              },
+              {
+                "title": "Longitud de volumen de golpe de pierna reducida de 50 a 35.",
+                "type": "nerf",
+                "details": [
+                  "Longitud de volumen de golpe de pierna reducida de 50 a 35."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 40 a 42.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 40 a 42."
+                ]
+              },
+              {
+                "title": "El ancho del volumen del golpe en el torso aumentó de 30 a 40.",
+                "type": "buff",
+                "details": [
+                  "El ancho del volumen del golpe en el torso aumentó de 30 a 40."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reinhardt",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d7938a2e3629b8ba9982f32f0a6c2a9e4a342912d90cb1b93145d100d300458.png",
+            "changes": [
+              {
+                "title": "El volumen de golpe en el hombro se redujo de 40 a 35.",
+                "type": "nerf",
+                "details": [
+                  "El volumen de golpe en el hombro se redujo de 40 a 35."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpes manuales se han reducido de 25 a 20.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpes manuales se han reducido de 25 a 20."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpes de pie se han reducido de 40 a 30.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpes de pie se han reducido de 40 a 30."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wrecking Ball",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ba90526d1d04df32560cc663a5df5a61b601492922336b4cbbda10572c3a6900.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 22 a 25.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 22 a 25."
+                ]
+              },
+              {
+                "title": "El volumen de golpes en el torso aumentó de 83,5 a 87,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en el torso aumentó de 83,5 a 87,5."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Sombra",
+            "desc": "Comentarios del desarrollador: Sombra se está incorporando al rol de soporte con esta última revisión. En el pasado, su identidad como mente maestra disruptiva estaba en desacuerdo con el valor que se esperaba que trajera un héroe de Daño. Mover a Sombra al rol de Apoyo debería permitirnos apoyarnos completamente en su fantasía de héroe mientras mantenemos intactos los pilares importantes de su juego.\nUn cambio notable de la reelaboración es la eliminación de Hack como habilidad. Enfrentarse a Sombra a menudo significaba perder inesperadamente tus habilidades de vez en cuando. Si bien esto puede crear momentos divertidos de cancelación de habilidades clave para el jugador Sombra, la mayoría de los jugadores lo encontraron discordante, frustrante y difícil de tratar. Al eliminar a Hack de sus habilidades principales, trajimos una nueva desventaja que Sombra puede infligir a los enemigos: Debilidad, que reduce a la mitad el daño y la producción de curación de un enemigo. Un debilitamiento oportuno puede cambiar el rumbo de la batalla, al igual que Hack pudo hacerlo, sin bloquear por completo a un enemigo de sus propias habilidades.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Pasó de la función de daño a la de apoyo.",
+                "type": "buff",
+                "details": [
+                  "Pasó de la función de daño a la de apoyo.",
+                  "Se ha pasado del subrol Recon al subrol Táctico.",
+                  "La experiencia necesaria para obtener una ventaja menor aumentó en un 67%.",
+                  "La experiencia necesaria para obtener una ventaja importante aumentó en un 69,5%."
+                ]
+              },
+              {
+                "title": "Encrypted Upload – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Life Hack - Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Nueva ventaja menor.",
+                  "EMP aplica Hotfix a todos los aliados cercanos."
+                ]
+              },
+              {
+                "title": "High-Speed Bandwidth – Mayor beneficio",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Data Packet - Mayor beneficio",
+                "type": "adjust",
+                "details": [
+                  "Nueva ventaja principal.",
+                  "Hackear paquetes de salud con Hotfix reduce su tiempo de reutilización principal en 4 segundos."
+                ]
+              },
+              {
+                "title": "Viral Replication – Mayor beneficio",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Cybersecurity - Mayor beneficio",
+                "type": "adjust",
+                "details": [
+                  "Nueva ventaja principal.",
+                  "La curación de Cyberspace se duplica en aliados por debajo de la mitad de la salud."
+                ]
+              },
+              {
+                "title": "Machine Pistol",
+                "type": "adjust",
+                "details": [
+                  "El daño por proyectil disminuyó de 8 a 7.",
+                  "Distancia mínima de caída aumentada de 15 metros a 20 metros.",
+                  "La dispersión máxima disminuyó de 2,3 grados a 2 grados.",
+                  "Los disparos hasta la propagación máxima aumentaron de 6 a 10."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5750af901db77f479be41f01c55a5b3d5e644d2f99c179b77bd824eecf5fcbbc.png"
+              },
+              {
+                "title": "EMP",
+                "type": "adjust",
+                "details": [
+                  "El coste final aumentó un 67,5%.",
+                  "El daño disminuyó del 25% de la salud actual al 20% de la salud actual."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9ccf2688b89c3f17c3f6410c3142510ea413718f0d165f78e712184ec636b2e4.png"
+              },
+              {
+                "title": "Hack",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8ab2253eef852a5a038df53fe84ff1dfff0dfea2224bddf881797093695f2261.png"
+              },
+              {
+                "title": "Hotfix",
+                "type": "new",
+                "details": [
+                  "Nueva habilidad asignada al fuego secundario de forma predeterminada.",
+                  "Cura a un aliado con el tiempo para una cantidad fija de salud.",
+                  "Arreglar un aliado los cura para una salud instantánea de 65 y una salud por segundo de 25 durante su duración.",
+                  "Hotfix dura en un aliado hasta que se realiza una curación total de 175 o hasta que hayan pasado 12 segundos.",
+                  "Hotfix también puede apuntar a los paquetes de salud y a la mayoría de los desplegables enemigos para piratearlos, lo que no requiere ningún Hotfix cargo y desencadena un tiempo de reutilización de 6 segundos por separado.",
+                  "La duración del paquete de salud pirateado disminuyó de 45 segundos a 30 segundos.",
+                  "La piratería de paquetes de salud o desplegables puede interrumpirse al recibir daños, lo que cancelará la capacidad y activará el tiempo de reutilización de 6 segundos por separado.",
+                  "Hotfix se puede usar con sigilo, revelando temporalmente Sombra sin romper el sigilo.",
+                  "El tiempo de lanzamiento es de 0,5 segundos.",
+                  "El alcance es de 17 metros.",
+                  "Tiene 2 cargos.",
+                  "El tiempo de enfriamiento es de 8 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8646a0e19104f5185b6296c0123fd768c3333a18ffe4aa922e2724df9b2aa041.png"
+              },
+              {
+                "title": "Virus",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2e933c2c42fea37400c5e296cfc9ea1fc2958071b04bde8960c0fa7ca17f3251.png"
+              },
+              {
+                "title": "Cyberspace",
+                "type": "new",
+                "details": [
+                  "Nueva habilidad asignada a la habilidad 1 de forma predeterminada.",
+                  "Lanza un proyectil que explote al impactar, creando una zona que debilite a los enemigos y cure a los aliados.",
+                  "La explosión inicial inflige 40 de daño a los enemigos y 40 de curación a los aliados.",
+                  "La zona inflige 25 de daño por segundo a los enemigos y 30 de curación por segundo a los aliados.",
+                  "La duración de la zona es de 3 segundos.",
+                  "El radio de la zona es de 5 metros.",
+                  "Los enemigos dentro de la zona se debilitan, lo cual es un nuevo efecto de estado que reduce el daño propio del objetivo y la producción de curación en un 50%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/22bfcf655c54a065b149c3359ce2447f6c4c09835fd957ce72fa8a4e023ba7ef.png"
+              },
+              {
+                "title": "Translocator",
+                "type": "buff",
+                "details": [
+                  "La duración del sigilo aumentó de 5 segundos a 6,5 segundos.",
+                  "El tiempo para entrar en Stealth aumentó de 0,3 segundos a 0,75 segundos.",
+                  "Rango de proyectil reducido de 18 metros a 12,25 metros.",
+                  "La bonificación de velocidad de movimiento ahora está activa inmediatamente después de teletransportarse en lugar de después de entrar completamente en Stealth.",
+                  "El enfriamiento aumentó de 6 segundos a 7,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/13259eeec8db36c3158d1d4bd4fe99667067ee7bf678349eec5cbd0d32da3a7f.png"
+              },
+              {
+                "title": "Opportunist",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c100b2c19389762c3ac31574aea9e81f3aa98fa0f648d26b889b5dbb159a7f69.png"
+              },
+              {
+                "title": "Conspirator",
+                "type": "adjust",
+                "details": [
+                  "Nuevo pasivo.",
+                  "Se te revelan los últimos enemigos completamente cargados."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/40eb3ac6d83891d18bb11b000be8a970db6cad0157e34b3dbd27bcf5b95c1e86.png"
+              }
+            ]
+          },
+          {
+            "name": "Bastion",
+            "desc": "Comentarios del desarrollador: la reconfiguración de Bastion puede proporcionar presión sostenida durante largos períodos de tiempo. La reducción de su duración pone mayor énfasis en el tiempo al tiempo que preserva su impacto general.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/78a150dd7baf1d3dd87ad8b4bac9cb38b03bcb135e9b6fe70ad26092347739bb.png",
+            "changes": [
+              {
+                "title": "Reconfigure",
+                "type": "nerf",
+                "details": [
+                  "Duración reducida de 6 a 5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/eb87350ce8e74c06df5b7fb33cfc2904cbb918777d3740f9e0ee87ff5260265f.png"
+              }
+            ]
+          },
+          {
+            "name": "Cassidy",
+            "desc": "Comentarios del desarrollador: Línea de vida puede crear interacciones únicas con varios ultimates, pero su combinación con High Noon ha demostrado ser demasiado poderosa para reposicionar Cassidy y eliminar objetivos. El mediodía ahora evitará que Cassidy se conecte a Línea de vida. Continuaremos evaluando otras interacciones caso por caso.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Deadeye",
+                "type": "adjust",
+                "details": [
+                  "Ahora evita que se adjunte a Jetpack Cat's Línea de vida."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6b78a5cb96040a70e6b41e767a6ea59c2af4e773521b8b4e0bf2c6fd642a3824.png"
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "Comentarios del desarrollador: la producción de daño de Emre es alta, pero puede tener dificultades para asegurar las eliminaciones. Reducir el tiempo de reutilización de Cyber Frag aumenta su disponibilidad y le da más oportunidades de capitalizar su alto daño por estallido.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0d6d4d3713969eb9d56b1f99b7c031fd47e023efe5efa242ad849a8c94e79c9.png",
+            "changes": [
+              {
+                "title": "Cyber Frag",
+                "type": "buff",
+                "details": [
+                  "El enfriamiento se redujo de 10 a 9 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58eeb3950828ceadc16565163bfc03231a0cecdf3a0a6ce78de34bdff4bf09bf.png"
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "Comentarios del desarrollador: El daño de Swift Strike se está aumentando para fortalecer la capacidad de Genji para asegurar las eliminaciones a través de sus combos principales. Los cambios de Dragonblade están destinados a evitar los puntos de interrupción de aumento de daño creados por el aumento de Swift Strike al tiempo que mejoran su efectividad general.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Swift Strike",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó de 50 a 60."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76519481d06f1a23600eb1f3d3c163268ff6e55ecde410751b508de434a7426b.png"
+              },
+              {
+                "title": "Dragonblade",
+                "type": "adjust",
+                "details": [
+                  "Daño reducido de 110 a 100.",
+                  "La velocidad de oscilación ha aumentado un 15%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/12e6d44381805e22db2b69679028bdf5ee626586663d44e8deb20e96ae7657c2.png"
+              }
+            ]
+          },
+          {
+            "name": "Shion",
+            "desc": "Comentarios del desarrollador: Rapid Reload ha tenido un rendimiento inferior como beneficio menor y está siendo reemplazado por Survival Instinct, lo que proporciona una opción de supervivencia más confiable para estilos de juego agresivos al extender la duración de la salud excesiva de Evade.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Rapid Reload – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Survival Instinct – Beneficio menor",
+                "type": "buff",
+                "details": [
+                  "Nuevo.",
+                  "La duración de la sobre salud de Evade se incrementa en 1 segundo."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Anran",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 15,2 a 17.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 15,2 a 17."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 18 a 23.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 18 a 23."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la pierna aumentó de 14,7 a 19.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpe en la pierna aumentó de 14,7 a 19."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ashe",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f630fcc1445be2f01092115abd0f898ed7317ba25531dcfad2d9792a24def7d4.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 22,4 a 25.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 22,4 a 25."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 16,7 a 19.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 16,7 a 19."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Bastion",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/78a150dd7baf1d3dd87ad8b4bac9cb38b03bcb135e9b6fe70ad26092347739bb.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 20 a 21,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 20 a 21,5."
+                ]
+              },
+              {
+                "title": "Volumen de golpe de minigun de espalda reducido de 20 a 18.",
+                "type": "nerf",
+                "details": [
+                  "Volumen de golpe de minigun de espalda reducido de 20 a 18."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la parte inferior del brazo se redujo de 20 a 15.",
+                "type": "nerf",
+                "details": [
+                  "El volumen de golpe en la parte inferior del brazo se redujo de 20 a 15."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Cassidy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso se redujo de 37 a 33.",
+                "type": "nerf",
+                "details": [
+                  "El volumen del golpe en el torso se redujo de 37 a 33."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna se redujeron de 24 a 22.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpe de pierna se redujeron de 24 a 22."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 15,9 a 18.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 15,9 a 18."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 14,6 a 20.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 14,6 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0d6d4d3713969eb9d56b1f99b7c031fd47e023efe5efa242ad849a8c94e79c9.png",
+            "changes": [
+              {
+                "title": "Volumen de golpe en la cabeza aumentado de 16 a 18.",
+                "type": "buff",
+                "details": [
+                  "Volumen de golpe en la cabeza aumentado de 16 a 18."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 17,5 a 20.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 17,5 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hanzo",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/704527b17eaa3a0722cd151c7e2cddd878ae986e329a51059b5a0bc80b834746.png",
+            "changes": [
+              {
+                "title": "Volumen de golpe en la cabeza aumentado de 16 a 18.",
+                "type": "buff",
+                "details": [
+                  "Volumen de golpe en la cabeza aumentado de 16 a 18."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Junkrat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f807df911fec53e9c86107affc4d7a5c08612ae0de1baafe7c12352a048b9b52.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso se redujo de 32 a 29.",
+                "type": "nerf",
+                "details": [
+                  "El volumen del golpe en el torso se redujo de 32 a 29."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 17,3 a 20.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 17,3 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sierra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9df12aa85763497cd054257ccab04ef055a6c4c39334bbed0cd513ddff5cb395.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 20,7 a 23.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 20,7 a 23."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de piernas aumentaron de 16,7 a 19.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de piernas aumentaron de 16,7 a 19."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe en la parte inferior de la pierna aumentaron de 15 a 19.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe en la parte inferior de la pierna aumentaron de 15 a 19."
+                ]
+              },
+              {
+                "title": "La altura del volumen de golpe en la parte inferior de la pierna se redujo de 54,9 a 40.",
+                "type": "nerf",
+                "details": [
+                  "La altura del volumen de golpe en la parte inferior de la pierna se redujo de 54,9 a 40."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sojourn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 16.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,9 a 16."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 20,5 a 23,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 20,5 a 23,5."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 18,5.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 17 a 18,5."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Volumen de golpe en la cabeza aumentado de 14 a 16.",
+                "type": "buff",
+                "details": [
+                  "Volumen de golpe en la cabeza aumentado de 14 a 16."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso se redujo de 25 a 23.",
+                "type": "nerf",
+                "details": [
+                  "El volumen del golpe en el torso se redujo de 25 a 23."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 15 a 18.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 15 a 18."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Symmetra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a2c620d948703d0ac5e6ee3dc30fda346b0c1644aa5b318e4c78f9feebf89b68.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 22,4 a 24.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 22,4 a 24."
+                ]
+              },
+              {
+                "title": "El volumen de golpe en la pierna se redujo de 22,4 a 20.",
+                "type": "nerf",
+                "details": [
+                  "El volumen de golpe en la pierna se redujo de 22,4 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Torbjörn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b1b376c95ed7f017b9be712c9069305c7e5cb26b010aa988697805ffa1cc20a5.png",
+            "changes": [
+              {
+                "title": "El volumen de golpe en la cabeza se ha reducido de 23,3 a 20.",
+                "type": "nerf",
+                "details": [
+                  "El volumen de golpe en la cabeza se ha reducido de 23,3 a 20."
+                ]
+              },
+              {
+                "title": "El volumen de la mano de la garra se redujo de 15 a 11.",
+                "type": "nerf",
+                "details": [
+                  "El volumen de la mano de la garra se redujo de 15 a 11."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Tracer",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8128dd5e945b4b0e39f21636cde33f0af9f685d04babb8491a0c73a3c48b9179.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 22,4 a 24.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 22,4 a 24."
+                ]
+              },
+              {
+                "title": "Las piernas alcanzaron volúmenes reducidos de 22,4 a 20.",
+                "type": "nerf",
+                "details": [
+                  "Las piernas alcanzaron volúmenes reducidos de 22,4 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Venture",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7cab11e20f958ed3d369989e0ac96703fd2cda8c7abf237f75e12bf3549b066e.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 22,9 a 25.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 22,9 a 25."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 21.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 17 a 21."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "Comentarios del desarrollador: Si bien Groggy puede ser valioso en las situaciones adecuadas, en general ha tenido un rendimiento inferior en comparación con su opción alternativa. La anestesia local aumenta la utilidad de Sleep Dart al permitir que afecte a los enemigos cercanos, creando usos adicionales más allá de golpear a un solo objetivo.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Groggy – Beneficio menor",
+                "type": "nerf",
+                "details": [
+                  "Eliminado."
+                ]
+              },
+              {
+                "title": "Anestésico local",
+                "type": "adjust",
+                "details": [
+                  "Nuevo.",
+                  "El dardo dormido explota al impactar, ralentizando a los enemigos y causando 45 de daño en 3 segundos."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Doctrine",
+            "desc": "Comentarios del desarrollador: Doctrine fue generalmente bien recibido durante el fin de semana de prueba, pero tuvo un rendimiento superior en relación con otros soportes. Estos ajustes se dirigen a varias áreas de su kit mientras preserva su flujo de juego principal. Deliverance ahora aplicará sus efectos más rápidamente, pero por una duración más corta, reduciendo el tiempo total que tanto los aliados como los enemigos se ven afectados.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/534fea21e25537daa24a40b68384f2cd0c4d22bac5f4cd58cbb8b4aa38b16f3e.png",
+            "changes": [
+              {
+                "title": "El coste final ha aumentado un 8%.",
+                "type": "nerf",
+                "details": [
+                  "El coste final ha aumentado un 8%."
+                ]
+              },
+              {
+                "title": "Transfusion - Mayor beneficio",
+                "type": "nerf",
+                "details": [
+                  "La tasa de conversión de daños y cicatrización se redujo en un 50%."
+                ]
+              },
+              {
+                "title": "Invigorating Drones",
+                "type": "nerf",
+                "details": [
+                  "Velocidad de ataque reducida del 35% al 30%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a0db060f87598d0c57247dd03d2da4d13ea194e7c5c72d93cde7ed0c5393002c.png"
+              },
+              {
+                "title": "Shrouded Momentum",
+                "type": "adjust",
+                "details": [
+                  "El enfriamiento aumentó de 7 a 8 segundos.",
+                  "Reducción de daños del 50% al 40%.",
+                  "Ya no proporciona inmunidad a golpes críticos mientras está activo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c3d96fb3fe2df91421d82e134385f0fe23b8950af35ac73e50d91eb0371cd18d.png"
+              },
+              {
+                "title": "Deliverance",
+                "type": "adjust",
+                "details": [
+                  "La tasa de disparo de drones aumentó de 4 a 5.",
+                  "La duración de la sobre-salud y el deterioro se redujo de 8 a 6 segundos.",
+                  "La duración de la desintegración se redujo de 5 a 4 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8ebbedfc4f56c80106e83280513eaf433471ac96900f782ffef8fcf764faeebb.png"
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "Comentarios del desarrollador: los cambios anteriores en Sound Barrier redujeron su efectividad más de lo previsto. La duración de su deterioro por exceso de salud se está revirtiendo al tiempo que se mantiene la cantidad reducida de exceso de salud. Beat Drop también se está ajustando de forma independiente y se está reduciendo su duración en lugar de estar vinculada directamente a la duración general de Sound Barrier.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "Beat Drop – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Amp It Up ahora está activo durante 4 segundos después de la fundición Sound Barrier."
+                ]
+              },
+              {
+                "title": "Sound Barrier",
+                "type": "buff",
+                "details": [
+                  "Duración aumentada de 5 a 6 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f84b670bff38d0b97c44a084159bb41c140b5cf7e52348782ab9755d47cdbb0a.png"
+              }
+            ]
+          },
+          {
+            "name": "Ana",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 16,9 a 18.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 16,9 a 18."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Baptiste",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 15,1 a 16.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 15,1 a 16."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Illari",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/536202d2d6a31cb4bd95405f5869df3227e53059257b9ee7bd0e0b2590e96637.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 18.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,9 a 18."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 20 a 23,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 20 a 23,5."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 15,8 a 18,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 15,8 a 18,5."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 14,8 a 17.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 14,8 a 17."
+                ]
+              },
+              {
+                "title": "El volumen del golpe de cintura aumentó de 19,5 a 26.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe de cintura aumentó de 19,5 a 26."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 9,7 a 12.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 9,7 a 12."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Juno",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/342a43327798660f29039e6a7f3f0a922097b03419eded7434cb1edb2e444bbb.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso aumentó de 19 a 23.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 19 a 23."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpes manuales se han reducido de 8,5 a 5.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpes manuales se han reducido de 8,5 a 5."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe en el brazo se han reducido de 9 a 7.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpe en el brazo se han reducido de 9 a 7."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Kiriko",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 16.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,9 a 16."
+                ]
+              },
+              {
+                "title": "El volumen de golpes en el torso aumentó de 17,7 a 21.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en el torso aumentó de 17,7 a 21."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lifeweaver",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8984e0197035ae44d3eff1a6de3c1e331ee82fad061102c94843e739668f37f.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,8 a 17.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,8 a 17."
+                ]
+              },
+              {
+                "title": "El volumen de golpes en el torso aumentó de 19,7 a 25.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en el torso aumentó de 19,7 a 25."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 15,5 a 19.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 15,5 a 19."
+                ]
+              },
+              {
+                "title": "El volumen del golpe de cintura aumentó de 15,9 a 20.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe de cintura aumentó de 15,9 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Lúcio",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a804d4305621bbee0e1472ac79d977799a27b6ae8f44922790cd1393812d5fd.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 13,2 a 16.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 13,2 a 16."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mercy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/55e281170eb6d65b2bece475b1179ccf37810dfb46b957705227d566cb38be9e.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,4 a 17.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,4 a 17."
+                ]
+              },
+              {
+                "title": "El volumen de golpes en el torso aumentó de 22,4 a 24,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en el torso aumentó de 22,4 a 24,5."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna se redujeron de 22,4 a 20.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpe de pierna se redujeron de 22,4 a 20."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Mizuki",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/192ba53e30db9ceaea964dc67a30351db1c2431033d827f0b9af0ab537be2bad.png",
+            "changes": [
+              {
+                "title": "Altura del volumen de golpe en la cabeza reducida de 10 a 6.",
+                "type": "nerf",
+                "details": [
+                  "Altura del volumen de golpe en la cabeza reducida de 10 a 6."
+                ]
+              },
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 16 a 17,5.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 16 a 17,5."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 22 a 24.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 22 a 24."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 19.",
+                "type": "buff",
+                "details": [
+                  "Los volúmenes de golpe de pierna aumentaron de 17 a 19."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Moira",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/39b42cd8e183acb99ccac01cb8b43a4b7372350425a80f4444885800dd84ba28.png",
+            "changes": [
+              {
+                "title": "El volumen del golpe en el torso se redujo de 27 a 25.",
+                "type": "nerf",
+                "details": [
+                  "El volumen del golpe en el torso se redujo de 27 a 25."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Wuyang",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dede4dc963baf0a5dd136f4d66af8d8741010410eda17a15df430fee9a6afc85.png",
+            "changes": [
+              {
+                "title": "El volumen de golpes en la cabeza aumentó de 14,85 a 16.",
+                "type": "buff",
+                "details": [
+                  "El volumen de golpes en la cabeza aumentó de 14,85 a 16."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso aumentó de 20,2 a 23.",
+                "type": "buff",
+                "details": [
+                  "El volumen del golpe en el torso aumentó de 20,2 a 23."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Zenyatta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58a05fe509b6b5333a4e3bf761afab6493420bf58fa2fac834ca1d3f779961d2.png",
+            "changes": [
+              {
+                "title": "Volumen de golpe en la cabeza reducido de 20 a 17.",
+                "type": "nerf",
+                "details": [
+                  "Volumen de golpe en la cabeza reducido de 20 a 17."
+                ]
+              },
+              {
+                "title": "El volumen del golpe en el torso se redujo de 32 a 30.",
+                "type": "nerf",
+                "details": [
+                  "El volumen del golpe en el torso se redujo de 32 a 30."
+                ]
+              },
+              {
+                "title": "Los volúmenes de golpe de pierna se redujeron de 24 a 22.",
+                "type": "nerf",
+                "details": [
+                  "Los volúmenes de golpe de pierna se redujeron de 24 a 22."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "New Event - Mystery Mayhem: Graveyard Games",
+          "desc": "Un evento extrañamente divertido se levanta de la tumba: ¡Mystery Madness: Graveyard Games!\n\nDurante cuatro semanas malvadas, completa desafíos para ganar recompensas deslumbrantes y lanza Ofrendas para ayudar a determinar qué personajes sombríos son los primeros en ser convocados a un nuevo modo de tiempo limitado.\n\nDesafíos macabros\n\nCompleta desafíos para obtener recompensas. Cada desafío conquistado desentierra un botín espeluznante, así como Ofrendas que puedes usar para votar.\n\nOfrece tu devoción\n\nLas ofertas deciden qué personajes se arrastran al siguiente modo de Graveyard Games. Gana tantas Ofrendas como puedas y dirígelas a cualquiera de los héroes disponibles que desees; ¡puedes repartirlas o prometer tu lealtad a solo una!",
+          "changes": [
+            {
+              "title": "New Event - Mystery Mayhem: Graveyard Games",
+              "type": "adjust",
+              "details": [
+                "Un evento extrañamente divertido se levanta de la tumba: ¡Mystery Madness: Graveyard Games!",
+                "Durante cuatro semanas malvadas, completa desafíos para ganar recompensas deslumbrantes y lanza Ofrendas para ayudar a determinar qué personajes sombríos son los primeros en ser convocados a un nuevo modo de tiempo limitado.",
+                "Desafíos macabros",
+                "Completa desafíos para obtener recompensas. Cada desafío conquistado desentierra un botín espeluznante, así como Ofrendas que puedes usar para votar.",
+                "Ofrece tu devoción",
+                "Las ofertas deciden qué personajes se arrastran al siguiente modo de Graveyard Games. Gana tantas Ofrendas como puedas y dirígelas a cualquiera de los héroes disponibles que desees; ¡puedes repartirlas o prometer tu lealtad a solo una!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "New Arcade Gamemode - Mystery Madness: Graveyard Games",
+          "desc": "Mystery Madness es nuestro nuevo modo de evento de Halloween, que combina elementos de Mystery Heroes, Junkenstein's Lab y Stadium. Pero hay un giro adicional: ganas Poderes cuando mueres. Mystery Madness es 5v5 Open Queue pero con composición de roles 1-2-2 garantizada y tiene el formato de juego de control al mejor de 3.\n\nAl comienzo de una partida, se te asigna un rol aleatorio y se te dan 3 opciones de héroe dentro de ese rol. Si te gusta dejar tus posibilidades al destino, también hay un botón aleatorio que elegirá entre 3 héroes y te otorgará un pequeño impulso.\n\nUna vez que comience el partido, ganarás experiencia de forma pasiva y de eliminaciones y asistencias. Una vez que obtengas suficiente experiencia, obtendrás un nivel. Cuando mueras o en la transición de ronda, ganarás Power Choices, eligiendo entre 2 Powers, igual al número de niveles que acumulaste desde la última vez que moriste. Los Poderes son similares a las Ventajas o los Artículos / Poderes del Estadio, y pueden ser Comunes, Épicos o Legendarios. Los bienes comunes son comparables a las ventajas menores o a los elementos raros de Epic Stadium, y generalmente son efectos de apoyo. Las épicas son comparables a las ventajas principales o los poderes del estadio, y suelen ser la piedra angular de tu construcción. Las leyendas van aún más allá y pueden dar lugar a algunas combinaciones verdaderamente locas. Algunos poderes espeluznantes destacados son Jump Scare, que te convierte en un Prop mientras estás fuera de combate, permitiéndote flanquear y asustar a tus enemigos, o Zomnic Summoner, que te permite lanzar una granada que convoca a un Zomnic tras la detonación. Al morir, también obtendrás un 10% de carga máxima y reaparecerás con una salud superior equivalente al 40% de tu vida máxima y al 30% de velocidad de movimiento mientras estés fuera de combate.\n\n¡Nuestro nuevo apoyo espeluznante, Doctrine, también se podrá jugar en Mystery Madness: Graveyard Games!",
+          "changes": [
+            {
+              "title": "New Arcade Gamemode - Mystery Madness: Juegos de cementerio",
+              "type": "buff",
+              "details": [
+                "Mystery Madness es nuestro nuevo modo de evento de Halloween, que combina elementos de Mystery Heroes, Junkenstein's Lab y Stadium. Pero hay un giro adicional: ganas Poderes cuando mueres. Mystery Madness es 5v5 Open Queue pero con composición de roles 1-2-2 garantizada y tiene el formato de juego de control al mejor de 3.",
+                "Al comienzo de una partida, se te asigna un rol aleatorio y se te dan 3 opciones de héroe dentro de ese rol. Si te gusta dejar tus posibilidades al destino, también hay un botón aleatorio que elegirá entre 3 héroes y te otorgará un pequeño impulso.",
+                "Una vez que comience el partido, ganarás experiencia de forma pasiva y de eliminaciones y asistencias. Una vez que obtengas suficiente experiencia, obtendrás un nivel. Cuando mueras o en la transición de ronda, ganarás Power Choices, eligiendo entre 2 Powers, igual al número de niveles que acumulaste desde la última vez que moriste. Los Poderes son similares a las Ventajas o los Artículos / Poderes del Estadio, y pueden ser Comunes, Épicos o Legendarios. Los bienes comunes son comparables a las ventajas menores o a los elementos raros de Epic Stadium, y generalmente son efectos de apoyo. Las épicas son comparables a las ventajas principales o los poderes del estadio, y suelen ser la piedra angular de tu construcción. Las leyendas van aún más allá y pueden dar lugar a algunas combinaciones verdaderamente locas. Algunos poderes espeluznantes destacados son Jump Scare, que te convierte en un Prop mientras estás fuera de combate, permitiéndote flanquear y asustar a tus enemigos, o Zomnic Summoner, que te permite lanzar una granada que convoca a un Zomnic tras la detonación. Al morir, también obtendrás un 10% de carga máxima y reaparecerás con una salud superior equivalente al 40% de tu vida máxima y al 30% de velocidad de movimiento mientras estés fuera de combate.",
+                "¡Nuestro nuevo apoyo espeluznante, Doctrine, también se podrá jugar en Mystery Madness: Graveyard Games!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Custom Restricted Words",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Custom Restricted Words",
+              "type": "buff",
+              "details": [
+                "Se ha añadido una nueva opción (Custom Restricted Words) a Social -> Chat de texto.",
+                "Se ha añadido información sobre Custom Restricted Words al cuadro de diálogo de información y al cuadro de diálogo de informe de Text Profanity Filters.",
+                "Los mensajes de chat enviados por el jugador que contengan una (s) palabra(s) restringida (s) se ocultarán con una advertencia de \"Posible mensaje incorrecto (personalizado)\", con la opción de revelar el mensaje.",
+                "Mientras el modo Streamer esté habilitado, los jugadores deberán confirmar antes de poder ver y administrar su lista Custom Restricted Words."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unvaulted Battle Passes",
+          "desc": "¡Ahora puedes progresar Unvaulted Battle Passes de temporadas anteriores junto con el Pase de batalla de la temporada actual!",
+          "changes": [
+            {
+              "title": "¡Ahora puedes progresar Unvaulted Battle Passes de temporadas anteriores junto con el Pase de batalla de la temporada actual!",
+              "type": "nerf",
+              "details": [
+                "Desde la pantalla de inicio, vaya a Pases de batalla > Pase heredado para ver la lista completa de Pases disponibles.",
+                "Los pases de batalla comprados anteriormente se pueden activar y progresar. Cualquier progreso que se haya realizado cuando el Pase de Batalla se ejecutó inicialmente se transfiere cuando el Pase no se salta.\n\n2026: El pase de batalla de la temporada 4 no estará disponible para activarse en el lanzamiento y estará disponible a mitad de temporada.\nCiertas recompensas como Máscaras míticas, Prismas míticos, Monedas de Overwatch, Incrementos de XP y Títulos de jugador ya no se pueden obtener en pases no saltados.",
+                "2026: El pase de batalla de la temporada 4 no estará disponible para activarse en el lanzamiento y estará disponible a mitad de temporada.",
+                "Ciertas recompensas como Máscaras míticas, Prismas míticos, Monedas de Overwatch, Incrementos de XP y Títulos de jugador ya no se pueden obtener en pases no saltados.",
+                "Los pases de batalla de Legacy Seasons 1-15 están disponibles para comprar en la tienda bajo la nueva pestaña Unvaulted Battle Pass.\n\nLos pases Unvaulted bloqueados llegarán en temporadas posteriores.",
+                "Los pases Unvaulted bloqueados llegarán en temporadas posteriores.",
+                "Para ganar Battle Pass XP hacia un Unvaulted Pass, debes poseerlo y luego activarlo desde el Legacy Pass Menu.\n\nSolo se puede activar 1 pase Unvaulted a la vez para progresar junto con el pase de batalla de la temporada actual.",
+                "Solo se puede activar 1 pase Unvaulted a la vez para progresar junto con el pase de batalla de la temporada actual."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Top 500 Challenger System Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Top 500 Challenger System Updates",
+              "type": "rework",
+              "details": [
+                "La clasificación predeterminada de la tabla de clasificación de los 500 mejores Challenger cambió a Rango (de Puntuación de Challenger).",
+                "Las recompensas del título de fin de temporada ahora hacen referencia al Rango en lugar de a la Puntuación Challenger.",
+                "Bonificación de calor eliminada."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "General",
+          "desc": "",
+          "changes": [
+            {
+              "title": "General",
+              "type": "nerf",
+              "details": [
+                "El tamaño global del proyectil hitscan \"grande\" se redujo de 0,07 a 0,04 metros.",
+                "El tamaño global del proyectil “small” hitscan se ha reducido de 0,04 a 0,02 metros."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Advanced Info Panel Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Advanced Info Panel Updates",
+              "type": "buff",
+              "details": [
+                "La velocidad y el tamaño del proyectil se han añadido a todas las armas y habilidades relevantes.",
+                "La palabra clave Precise se ha añadido para describir los ataques que tienen un \"tamaño\" de 0.",
+                "Se han añadido varias palabras clave y elementos de línea nuevos para describir con más detalle las mecánicas de habilidades de héroe más complejas.",
+                "Se han realizado muchas correcciones y modificaciones de errores pequeños en función de los comentarios de la comunidad."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Protects",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Protects",
+              "type": "adjust",
+              "details": [
+                "Los tanques con habilidades de reducción de daños y salud excesiva ahora tienen más probabilidades de obtener Protects cuando usan estas habilidades y son atacados en lugar de los aliados cercanos.",
+                "Aumentó el tiempo de reutilización y redujo el umbral de mitigación de daños para Protects con la intención de dar a una variedad más amplia de tanques la oportunidad de ganar Protects más a menudo."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ping System",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Ping System",
+              "type": "adjust",
+              "details": [
+                "Se eliminó el texto en el cuadro de chat que se añadió en la temporada 4 al hacer ping a los héroes enemigos, ya que esto a menudo llenaba el cuadro de chat muy rápidamente."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Mystery Heroes",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Mystery Heroes",
+              "type": "adjust",
+              "details": [
+                "Se ha restablecido el máximo de 3 tanques."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Map Voting",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Map Voting",
+              "type": "adjust",
+              "details": [
+                "Ahora será imposible que te ofrezcan tus últimos 2 mapas jugados en un periodo de 2 horas.",
+                "Escolta e Híbrido ahora se tratarán como el mismo modo a los efectos de ofrecer al menos dos modos de juego diferentes en Map Voting. Esto significa que si dos de los tres mapas visibles son Escort e Híbrido, el tercero debe ser de otro modo. El mapa aleatorio no sigue estas nuevas reglas y aún puede estar en cualquier modo."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Map Updates",
+          "desc": "Nuevo mapa de acompañantes – Grímsvötn\n\nRompe la temporada con el nuevo mapa de carga útil Grímsvötn, prisión para los criminales más peligrosos del mundo.\n\nMapas de Halloween\n\nLas versiones temáticas de Halloween de Hollywood, Lijang Tower y Château Guillard están disponibles desde ahora hasta el 3 de noviembre en todas las colas.",
+          "changes": [
+            {
+              "title": "Map Updates",
+              "type": "adjust",
+              "details": [
+                "Nuevo mapa de acompañantes – Grímsvötn",
+                "Rompe la temporada con el nuevo mapa de carga útil Grímsvötn, prisión para los criminales más peligrosos del mundo.",
+                "Mapas de Halloween",
+                "Las versiones temáticas de Halloween de Hollywood, Lijang Tower y Château Guillard están disponibles desde ahora hasta el 3 de noviembre en todas las colas."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Varias correcciones de errores menores más en el sistema de ping desde el refactor en la temporada 4. ¡Avísanos si ves algún error después de este parche!",
+      "Se ha corregido un error en el que el skin de Moira Made My Night decía hola con mucho entusiasmo.",
+      "Se ha corregido un error por el que a veces podías terminar con tres tanques en Mystery Heroes.",
+      "Se ha corregido un error en el que a veces faltaba el icono de la muerte ambiental.",
+      "Se ha corregido un problema que provocaba que Llama danzante no activara algunos desafíos relacionados con la curación.",
+      "Reducciones de velocidad de recarga fijas que se apilan dos veces en el rifle Burse sintético.",
+      "Las reducciones fijas de la velocidad de recarga no se aplican a Ballesta rapaz.",
+      "Se ha corregido un problema que hacía que Dragonstrike se contara como daño por arma a los efectos de los desafíos.",
+      "Se ha corregido un problema que causaba que Storm Arrows no rastreara su daño tratado correctamente a los efectos de los desafíos.",
+      "Reducciones de velocidad de recarga fijas que se apilan dos veces en Frag Launcher.",
+      "Reducciones fijas de la velocidad de recarga que no se aplican al acelerador de vacío.",
+      "Reducciones de velocidad de recarga fijas que se apilan dos veces el Scrap Gun.",
+      "Reducciones de velocidad de recarga fijas que se apilan dos veces en las pistolas Kira.",
+      "Se ha corregido un problema que hacía que Soaring Slice no rastreara correctamente el daño infligido a los efectos de los desafíos.",
+      "Reducciones fijas de la velocidad de recarga que no se aplican al beso de la viuda.",
+      "Reducciones de velocidad de recarga fijas que no se aplican al cañón de partículas.",
+      "Se ha corregido un error por el que las tablas de clasificación combinadas del estadio no mostraban ninguna ubicación.",
+      "Se ha corregido un error por el que los juegos de Stadium Quick Play no otorgaban la cantidad adecuada de XP de partido."
+    ]
+  },
+  "translated": true,
+  "translationSource": "machine"
+}
