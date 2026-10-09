@@ -12,17 +12,31 @@ const cheerio = require('cheerio');
 
 // Palabras clave para clasificar el tipo de cambio automáticamente
 const CHANGE_TYPE_KEYWORDS = {
-    nerf: ['decreased', 'reduced', 'removed', 'no longer', 'lowered', 'nerfed', 'eliminated', 'deleted'],
-    buff: ['increased', 'improved', 'added', 'bonus', 'enhanced', 'boosted', 'buffed', 'now grants'],
-    new: ['new:', 'new ability', 'new power', 'new item', 'now:', 'introducing'],
-    rework: ['reworked', 'redesigned', 'overhauled', 'changed to', 'now functions', 'reformado', 'now:']
+    nerf: [
+        'decreased', 'reduced', 'removed', 'no longer', 'lowered', 'nerfed', 'eliminated', 'deleted',
+        'reducido', 'reducida', 'redujo', 'redujeron', 'disminuyó', 'disminuyeron', 'eliminado', 'eliminada'
+    ],
+    buff: [
+        'increased', 'improved', 'added', 'bonus', 'enhanced', 'boosted', 'buffed', 'now grants',
+        'aumentó', 'aumentaron', 'aumentado', 'aumentada', 'incrementó', 'incrementaron', 'incrementado', 'mejorado', 'mejorada'
+    ],
+    new: ['new:', 'new ability', 'new power', 'new item', 'now:', 'introducing', 'nuevo:', 'nueva habilidad', 'nuevo poder', 'nuevo objeto'],
+    rework: ['reworked', 'redesigned', 'overhauled', 'changed to', 'now functions', 'reformado', 'rediseñado', 'now:']
 };
 
 // Palabras clave de contexto que invierten la lógica buff/nerf
 const NEGATIVE_CONTEXT_KEYWORDS = [
     'cooldown', 'cost', 'delay', 'degeneration', 'spread', 'recoil',
     'penalty', 'charge required', 'reload time', 'recovery', 'cast time',
-    'lock-on time'
+    'lock-on time', 'hit volume', 'hit volumes', 'hurtbox',
+    'head hitbox', 'torso hitbox', 'body hitbox',
+    // Español
+    'tiempo de reutilización', 'enfriamiento', 'coste', 'costo', 'retraso',
+    'degeneración', 'dispersión', 'retroceso', 'penalización', 'tiempo de recarga',
+    'recuperación', 'tiempo de lanzamiento', 'volumen del golpe', 'volumen de golpe',
+    'volúmenes de golpe', 'volumen de golpes', 'volúmenes de golpes',
+    'volúmenes manuales', 'volúmenes de golpes manuales', 'volúmenes de golpes de pie',
+    'volumen de la mano', 'alcanzaron volúmenes', 'volúmenes alcanzados'
 ];
 
 /**
@@ -43,7 +57,7 @@ function detectChangeType(text) {
 
     // Si contiene "bonus" pero también un verbo de nerf claro, predomina el nerf
     if (isBuff && isNerf && lower.includes('bonus')) {
-        const hasClearNerfVerb = ['reduced', 'decreased', 'lowered', 'removed'].some(v => lower.includes(v));
+        const hasClearNerfVerb = ['reduced', 'decreased', 'lowered', 'removed', 'reducido', 'reducida', 'redujo'].some(v => lower.includes(v));
         if (hasClearNerfVerb) {
             isBuff = false;
         }

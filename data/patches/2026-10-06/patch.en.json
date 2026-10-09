@@ -262,28 +262,28 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 19.7 to 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 19.7 to 21."
                 ]
               },
               {
                 "title": "Waist hit volume increased from 30 to 35.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Waist hit volume increased from 30 to 35."
                 ]
               },
               {
                 "title": "Leg hit volume increased from 21 to 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volume increased from 21 to 26."
                 ]
               },
               {
                 "title": "Fist hit volume reduced from 24 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Fist hit volume reduced from 24 to 20."
                 ]
@@ -297,14 +297,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 18.5 to 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 18.5 to 20."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 21.9 to 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 21.9 to 24."
                 ]
@@ -318,28 +318,28 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 17.8 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 17.8 to 19."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 26.2 to 28.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 26.2 to 28."
                 ]
               },
               {
                 "title": "Waist hit volume increased from 23.8 to 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Waist hit volume increased from 23.8 to 26."
                 ]
               },
               {
                 "title": "Leg hit volume increased from 19.2 to 22.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volume increased from 19.2 to 22."
                 ]
@@ -353,35 +353,35 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 22 to 23.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 22 to 23.5."
                 ]
               },
               {
                 "title": "Hand hit volumes reduced from 16 to 12.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Hand hit volumes reduced from 16 to 12."
                 ]
               },
               {
                 "title": "Leg hit volume length reduced from 50 to 35.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Leg hit volume length reduced from 50 to 35."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 40 to 42.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 40 to 42."
                 ]
               },
               {
                 "title": "Torso hit volume width increased from 30 to 40.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume width increased from 30 to 40."
                 ]
@@ -395,21 +395,21 @@
             "changes": [
               {
                 "title": "Shoulder hit volume reduced from 40 to 35.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Shoulder hit volume reduced from 40 to 35."
                 ]
               },
               {
                 "title": "Hand hit volumes reduced from 25 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Hand hit volumes reduced from 25 to 20."
                 ]
               },
               {
                 "title": "Foot hit volumes reduced from 40 to 30.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Foot hit volumes reduced from 40 to 30."
                 ]
@@ -423,14 +423,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 22 to 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 22 to 25."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 83.5 to 87.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 83.5 to 87.5."
                 ]
@@ -697,21 +697,21 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 15.2 to 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 15.2 to 17."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 18 to 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 18 to 23."
                 ]
               },
               {
                 "title": "Leg hit volume increased from 14.7 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volume increased from 14.7 to 19."
                 ]
@@ -725,14 +725,14 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 22.4 to 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22.4 to 25."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 16.7 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 16.7 to 19."
                 ]
@@ -746,21 +746,21 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 20 to 21.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 20 to 21.5."
                 ]
               },
               {
                 "title": "Back minigun hit volume reduced from 20 to 18.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Back minigun hit volume reduced from 20 to 18."
                 ]
               },
               {
                 "title": "Lower arm hit volume reduced from 20 to 15.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Lower arm hit volume reduced from 20 to 15."
                 ]
@@ -774,14 +774,14 @@
             "changes": [
               {
                 "title": "Torso hit volume reduced from 37 to 33.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Torso hit volume reduced from 37 to 33."
                 ]
               },
               {
                 "title": "Leg hit volumes reduced from 24 to 22.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Leg hit volumes reduced from 24 to 22."
                 ]
@@ -795,14 +795,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 15.9 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 15.9 to 18."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 14.6 to 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 14.6 to 20."
                 ]
@@ -816,14 +816,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 16 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 16 to 18."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 17.5 to 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 17.5 to 20."
                 ]
@@ -837,7 +837,7 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 16 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 16 to 18."
                 ]
@@ -851,14 +851,14 @@
             "changes": [
               {
                 "title": "Torso hit volume reduced from 32 to 29.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Torso hit volume reduced from 32 to 29."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 17.3 to 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 17.3 to 20."
                 ]
@@ -872,28 +872,28 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 20.7 to 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 20.7 to 23."
                 ]
               },
               {
                 "title": "Legs hit volumes increased from 16.7 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Legs hit volumes increased from 16.7 to 19."
                 ]
               },
               {
                 "title": "Lower leg hit volumes increased from 15 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Lower leg hit volumes increased from 15 to 19."
                 ]
               },
               {
                 "title": "Lower leg hit volume height reduced from 54.9 to 40.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Lower leg hit volume height reduced from 54.9 to 40."
                 ]
@@ -907,21 +907,21 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.9 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.9 to 16."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 20.5 to 23.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 20.5 to 23.5."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 17 to 18.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 17 to 18.5."
                 ]
@@ -935,21 +935,21 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14 to 16."
                 ]
               },
               {
                 "title": "Torso hit volume reduced from 25 to 23.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Torso hit volume reduced from 25 to 23."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 15 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 15 to 18."
                 ]
@@ -963,14 +963,14 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 22.4 to 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22.4 to 24."
                 ]
               },
               {
                 "title": "Leg hit volume reduced from 22.4 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Leg hit volume reduced from 22.4 to 20."
                 ]
@@ -984,14 +984,14 @@
             "changes": [
               {
                 "title": "Head hit volume reduced from 23.3 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Head hit volume reduced from 23.3 to 20."
                 ]
               },
               {
                 "title": "Claw hand hit volume reduced from 15 to 11.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Claw hand hit volume reduced from 15 to 11."
                 ]
@@ -1005,14 +1005,14 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 22.4 to 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22.4 to 24."
                 ]
               },
               {
                 "title": "Legs hit volumes reduced from 22.4 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Legs hit volumes reduced from 22.4 to 20."
                 ]
@@ -1026,14 +1026,14 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 22.9 to 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22.9 to 25."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 17 to 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 17 to 21."
                 ]
@@ -1142,7 +1142,7 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 16.9 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 16.9 to 18."
                 ]
@@ -1156,7 +1156,7 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 15.1 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 15.1 to 16."
                 ]
@@ -1170,14 +1170,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.9 to 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.9 to 18."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 20 to 23.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 20 to 23.5."
                 ]
@@ -1191,28 +1191,28 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 15.8 to 18.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 15.8 to 18.5."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 14.8 to 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 14.8 to 17."
                 ]
               },
               {
                 "title": "Waist hit volume increased from 19.5 to 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Waist hit volume increased from 19.5 to 26."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 9.7 to 12.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 9.7 to 12."
                 ]
@@ -1226,21 +1226,21 @@
             "changes": [
               {
                 "title": "Torso hit volume increased from 19 to 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 19 to 23."
                 ]
               },
               {
                 "title": "Hand hit volumes reduced from 8.5 to 5.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Hand hit volumes reduced from 8.5 to 5."
                 ]
               },
               {
                 "title": "Arm hit volumes reduced from 9 to 7.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Arm hit volumes reduced from 9 to 7."
                 ]
@@ -1254,14 +1254,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.9 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.9 to 16."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 17.7 to 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 17.7 to 21."
                 ]
@@ -1275,28 +1275,28 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.8 to 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.8 to 17."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 19.7 to 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 19.7 to 25."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 15.5 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 15.5 to 19."
                 ]
               },
               {
                 "title": "Waist hit volume increased from 15.9 to 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Waist hit volume increased from 15.9 to 20."
                 ]
@@ -1310,7 +1310,7 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 13.2 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 13.2 to 16."
                 ]
@@ -1324,21 +1324,21 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.4 to 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.4 to 17."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 22.4 to 24.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22.4 to 24.5."
                 ]
               },
               {
                 "title": "Leg hit volumes reduced from 22.4 to 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Leg hit volumes reduced from 22.4 to 20."
                 ]
@@ -1352,28 +1352,28 @@
             "changes": [
               {
                 "title": "Head hit volume height reduced from 10 to 6.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Head hit volume height reduced from 10 to 6."
                 ]
               },
               {
                 "title": "Head hit volume increased from 16 to 17.5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 16 to 17.5."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 22 to 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 22 to 24."
                 ]
               },
               {
                 "title": "Leg hit volumes increased from 17 to 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Leg hit volumes increased from 17 to 19."
                 ]
@@ -1387,7 +1387,7 @@
             "changes": [
               {
                 "title": "Torso hit volume reduced from 27 to 25.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Torso hit volume reduced from 27 to 25."
                 ]
@@ -1401,14 +1401,14 @@
             "changes": [
               {
                 "title": "Head hit volume increased from 14.85 to 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Head hit volume increased from 14.85 to 16."
                 ]
               },
               {
                 "title": "Torso hit volume increased from 20.2 to 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Torso hit volume increased from 20.2 to 23."
                 ]
@@ -1422,21 +1422,21 @@
             "changes": [
               {
                 "title": "Head hit volume reduced from 20 to 17.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Head hit volume reduced from 20 to 17."
                 ]
               },
               {
                 "title": "Torso hit volume reduced from 32 to 30.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Torso hit volume reduced from 32 to 30."
                 ]
               },
               {
                 "title": "Leg hit volumes reduced from 24 to 22.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Leg hit volumes reduced from 24 to 22."
                 ]

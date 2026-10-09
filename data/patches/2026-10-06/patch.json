@@ -262,28 +262,28 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 19,7 a 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 19,7 a 21."
                 ]
               },
               {
                 "title": "El volumen del golpe de cintura aumentó de 30 a 35.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe de cintura aumentó de 30 a 35."
                 ]
               },
               {
                 "title": "El volumen de golpe en la pierna aumentó de 21 a 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpe en la pierna aumentó de 21 a 26."
                 ]
               },
               {
                 "title": "Volumen de golpe de puño reducido de 24 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Volumen de golpe de puño reducido de 24 a 20."
                 ]
@@ -297,14 +297,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 18,5 a 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 18,5 a 20."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 21,9 a 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 21,9 a 24."
                 ]
@@ -318,28 +318,28 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 17,8 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 17,8 a 19."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 26,2 a 28.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 26,2 a 28."
                 ]
               },
               {
                 "title": "El volumen de golpe en la cintura aumentó de 23,8 a 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpe en la cintura aumentó de 23,8 a 26."
                 ]
               },
               {
                 "title": "El volumen de golpe en la pierna aumentó de 19,2 a 22.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpe en la pierna aumentó de 19,2 a 22."
                 ]
@@ -353,35 +353,35 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 22 a 23,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 22 a 23,5."
                 ]
               },
               {
                 "title": "Los volúmenes de golpes manuales se han reducido de 16 a 12.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpes manuales se han reducido de 16 a 12."
                 ]
               },
               {
                 "title": "Longitud de volumen de golpe de pierna reducida de 50 a 35.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Longitud de volumen de golpe de pierna reducida de 50 a 35."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 40 a 42.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 40 a 42."
                 ]
               },
               {
                 "title": "El ancho del volumen del golpe en el torso aumentó de 30 a 40.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El ancho del volumen del golpe en el torso aumentó de 30 a 40."
                 ]
@@ -395,21 +395,21 @@
             "changes": [
               {
                 "title": "El volumen de golpe en el hombro se redujo de 40 a 35.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen de golpe en el hombro se redujo de 40 a 35."
                 ]
               },
               {
                 "title": "Los volúmenes de golpes manuales se han reducido de 25 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpes manuales se han reducido de 25 a 20."
                 ]
               },
               {
                 "title": "Los volúmenes de golpes de pie se han reducido de 40 a 30.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpes de pie se han reducido de 40 a 30."
                 ]
@@ -423,14 +423,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 22 a 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 22 a 25."
                 ]
               },
               {
                 "title": "El volumen de golpes en el torso aumentó de 83,5 a 87,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en el torso aumentó de 83,5 a 87,5."
                 ]
@@ -697,21 +697,21 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 15,2 a 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 15,2 a 17."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 18 a 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 18 a 23."
                 ]
               },
               {
                 "title": "El volumen de golpe en la pierna aumentó de 14,7 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpe en la pierna aumentó de 14,7 a 19."
                 ]
@@ -725,14 +725,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 22,4 a 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 22,4 a 25."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 16,7 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 16,7 a 19."
                 ]
@@ -746,21 +746,21 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 20 a 21,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 20 a 21,5."
                 ]
               },
               {
                 "title": "Volumen de golpe de minigun de espalda reducido de 20 a 18.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Volumen de golpe de minigun de espalda reducido de 20 a 18."
                 ]
               },
               {
                 "title": "El volumen de golpe en la parte inferior del brazo se redujo de 20 a 15.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen de golpe en la parte inferior del brazo se redujo de 20 a 15."
                 ]
@@ -774,14 +774,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso se redujo de 37 a 33.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen del golpe en el torso se redujo de 37 a 33."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna se redujeron de 24 a 22.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpe de pierna se redujeron de 24 a 22."
                 ]
@@ -795,14 +795,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 15,9 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 15,9 a 18."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 14,6 a 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 14,6 a 20."
                 ]
@@ -816,14 +816,14 @@
             "changes": [
               {
                 "title": "Volumen de golpe en la cabeza aumentado de 16 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Volumen de golpe en la cabeza aumentado de 16 a 18."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 17,5 a 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 17,5 a 20."
                 ]
@@ -837,7 +837,7 @@
             "changes": [
               {
                 "title": "Volumen de golpe en la cabeza aumentado de 16 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Volumen de golpe en la cabeza aumentado de 16 a 18."
                 ]
@@ -851,14 +851,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso se redujo de 32 a 29.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen del golpe en el torso se redujo de 32 a 29."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 17,3 a 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 17,3 a 20."
                 ]
@@ -872,28 +872,28 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 20,7 a 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 20,7 a 23."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de piernas aumentaron de 16,7 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de piernas aumentaron de 16,7 a 19."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe en la parte inferior de la pierna aumentaron de 15 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe en la parte inferior de la pierna aumentaron de 15 a 19."
                 ]
               },
               {
                 "title": "La altura del volumen de golpe en la parte inferior de la pierna se redujo de 54,9 a 40.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "La altura del volumen de golpe en la parte inferior de la pierna se redujo de 54,9 a 40."
                 ]
@@ -907,21 +907,21 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,9 a 16."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 20,5 a 23,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 20,5 a 23,5."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 18,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 17 a 18,5."
                 ]
@@ -935,21 +935,21 @@
             "changes": [
               {
                 "title": "Volumen de golpe en la cabeza aumentado de 14 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Volumen de golpe en la cabeza aumentado de 14 a 16."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso se redujo de 25 a 23.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen del golpe en el torso se redujo de 25 a 23."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 15 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 15 a 18."
                 ]
@@ -963,14 +963,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 22,4 a 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 22,4 a 24."
                 ]
               },
               {
                 "title": "El volumen de golpe en la pierna se redujo de 22,4 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen de golpe en la pierna se redujo de 22,4 a 20."
                 ]
@@ -984,14 +984,14 @@
             "changes": [
               {
                 "title": "El volumen de golpe en la cabeza se ha reducido de 23,3 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen de golpe en la cabeza se ha reducido de 23,3 a 20."
                 ]
               },
               {
                 "title": "El volumen de la mano de la garra se redujo de 15 a 11.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen de la mano de la garra se redujo de 15 a 11."
                 ]
@@ -1005,14 +1005,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 22,4 a 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 22,4 a 24."
                 ]
               },
               {
                 "title": "Las piernas alcanzaron volúmenes reducidos de 22,4 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Las piernas alcanzaron volúmenes reducidos de 22,4 a 20."
                 ]
@@ -1026,14 +1026,14 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 22,9 a 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 22,9 a 25."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 17 a 21."
                 ]
@@ -1142,7 +1142,7 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 16,9 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 16,9 a 18."
                 ]
@@ -1156,7 +1156,7 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 15,1 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 15,1 a 16."
                 ]
@@ -1170,14 +1170,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 18.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,9 a 18."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 20 a 23,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 20 a 23,5."
                 ]
@@ -1191,28 +1191,28 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 15,8 a 18,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 15,8 a 18,5."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 14,8 a 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 14,8 a 17."
                 ]
               },
               {
                 "title": "El volumen del golpe de cintura aumentó de 19,5 a 26.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe de cintura aumentó de 19,5 a 26."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 9,7 a 12.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 9,7 a 12."
                 ]
@@ -1226,21 +1226,21 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso aumentó de 19 a 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 19 a 23."
                 ]
               },
               {
                 "title": "Los volúmenes de golpes manuales se han reducido de 8,5 a 5.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpes manuales se han reducido de 8,5 a 5."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe en el brazo se han reducido de 9 a 7.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpe en el brazo se han reducido de 9 a 7."
                 ]
@@ -1254,14 +1254,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,9 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,9 a 16."
                 ]
               },
               {
                 "title": "El volumen de golpes en el torso aumentó de 17,7 a 21.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en el torso aumentó de 17,7 a 21."
                 ]
@@ -1275,28 +1275,28 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,8 a 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,8 a 17."
                 ]
               },
               {
                 "title": "El volumen de golpes en el torso aumentó de 19,7 a 25.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en el torso aumentó de 19,7 a 25."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 15,5 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 15,5 a 19."
                 ]
               },
               {
                 "title": "El volumen del golpe de cintura aumentó de 15,9 a 20.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe de cintura aumentó de 15,9 a 20."
                 ]
@@ -1310,7 +1310,7 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 13,2 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 13,2 a 16."
                 ]
@@ -1324,21 +1324,21 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,4 a 17.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,4 a 17."
                 ]
               },
               {
                 "title": "El volumen de golpes en el torso aumentó de 22,4 a 24,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en el torso aumentó de 22,4 a 24,5."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna se redujeron de 22,4 a 20.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpe de pierna se redujeron de 22,4 a 20."
                 ]
@@ -1352,28 +1352,28 @@
             "changes": [
               {
                 "title": "Altura del volumen de golpe en la cabeza reducida de 10 a 6.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Altura del volumen de golpe en la cabeza reducida de 10 a 6."
                 ]
               },
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 16 a 17,5.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 16 a 17,5."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 22 a 24.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 22 a 24."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna aumentaron de 17 a 19.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "Los volúmenes de golpe de pierna aumentaron de 17 a 19."
                 ]
@@ -1387,7 +1387,7 @@
             "changes": [
               {
                 "title": "El volumen del golpe en el torso se redujo de 27 a 25.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen del golpe en el torso se redujo de 27 a 25."
                 ]
@@ -1401,14 +1401,14 @@
             "changes": [
               {
                 "title": "El volumen de golpes en la cabeza aumentó de 14,85 a 16.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen de golpes en la cabeza aumentó de 14,85 a 16."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso aumentó de 20,2 a 23.",
-                "type": "buff",
+                "type": "nerf",
                 "details": [
                   "El volumen del golpe en el torso aumentó de 20,2 a 23."
                 ]
@@ -1422,21 +1422,21 @@
             "changes": [
               {
                 "title": "Volumen de golpe en la cabeza reducido de 20 a 17.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Volumen de golpe en la cabeza reducido de 20 a 17."
                 ]
               },
               {
                 "title": "El volumen del golpe en el torso se redujo de 32 a 30.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "El volumen del golpe en el torso se redujo de 32 a 30."
                 ]
               },
               {
                 "title": "Los volúmenes de golpe de pierna se redujeron de 24 a 22.",
-                "type": "nerf",
+                "type": "buff",
                 "details": [
                   "Los volúmenes de golpe de pierna se redujeron de 24 a 22."
                 ]
