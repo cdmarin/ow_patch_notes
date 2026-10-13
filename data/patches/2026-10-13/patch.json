@@ -1,0 +1,156 @@
+{
+  "version": "unknown",
+  "date": "2026-10-13",
+  "title": "13 de Octubre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "This is a hotfix update. Replay codes from the October 6 patch are still available.",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Roadhog",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b8afaed1ce60cbddfc555d778839d4670868537a4319814da4ba13cdd1159887.png",
+            "changes": [
+              {
+                "title": "Scrap Gun",
+                "type": "buff",
+                "details": [
+                  "Center projectile damage increased from 34 to 40."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d48d0b264d765e3732abda784e986595f7a6c5ad0e56f1929c008ffc0492a39d.png"
+              },
+              {
+                "title": "Take a Breather",
+                "type": "adjust",
+                "details": [
+                  "Cooldown reduced from 2 to 1.25 seconds.",
+                  "Damage reduction increased from 35% to 40%.",
+                  "Max duration increased from 2 to 2.5 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/064bde1e9f9f65e2a1ca0898abe09432394dca3b0729da0dcccff41b5f5be69b.png"
+              }
+            ]
+          },
+          {
+            "name": "D.Mon",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Base armor reduced from 275 to 250.",
+                "type": "nerf",
+                "details": [
+                  "Base armor reduced from 275 to 250."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Doctrine",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/534fea21e25537daa24a40b68384f2cd0c4d22bac5f4cd58cbb8b4aa38b16f3e.png",
+            "changes": [
+              {
+                "title": "Eternal Scepter",
+                "type": "nerf",
+                "details": [
+                  "Damage and healing reduced from 60 to 55."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3ffab68d983c0108cb80c8c55e9980ae855342f5d31c94e3a3f9e7bcf8ac7b6d.png"
+              },
+              {
+                "title": "Invigorating Drones",
+                "type": "nerf",
+                "details": [
+                  "Duration reduced from 6 to 5 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a0db060f87598d0c57247dd03d2da4d13ea194e7c5c72d93cde7ed0c5393002c.png"
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Machine Pistol",
+                "type": "nerf",
+                "details": [
+                  "Damage reduced from 7 to 6.5."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5750af901db77f479be41f01c55a5b3d5e644d2f99c179b77bd824eecf5fcbbc.png"
+              },
+              {
+                "title": "Cyberspace",
+                "type": "adjust",
+                "details": [
+                  "Explosion damage reduced from 40 to 20.",
+                  "Cooldown increased from 12 to 13 seconds."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/22bfcf655c54a065b149c3359ce2447f6c4c09835fd957ce72fa8a4e023ba7ef.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Kiriko",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ee8089aae48680d912947d907295c03fce960dc500d806a400c36f59b6ef98d7.png",
+            "changes": [
+              {
+                "title": "Base health increased from 225 to 250.",
+                "type": "buff",
+                "details": [
+                  "Base health increased from 225 to 250."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the October 6 patch are still available.",
+          "changes": [
+            {
+              "title": "Hotfix Update",
+              "type": "adjust",
+              "details": [
+                "This is a hotfix update. Replay codes from the October 6 patch are still available."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true,
+  "translationSource": "official"
+}
