@@ -1,0 +1,42 @@
+{
+  "version": "unknown",
+  "date": "2026-10-20",
+  "title": "20 de Octubre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se ha corregido un error que impedía completar el desafío «Gracias por siempre» al dar las gracias a Sombra.",
+      "Se ha corregido un error que impedía que los mandos con DualSense funcionasen correctamente en PC."
+    ]
+  },
+  "translated": true,
+  "translationSource": "official"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "unknown",
+  "date": "2026-10-20",
+  "title": "20 de Octubre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Fixed an issue preventing the challenge \"Not so Thankless\" from being completed by thanking Sombra.",
+      "Fixed a bug where DualSense controllers were not working properly on PC."
+    ]
+  },
+  "translated": false,
+  "language": "en"
+}
