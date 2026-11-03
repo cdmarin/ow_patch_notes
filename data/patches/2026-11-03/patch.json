@@ -1,0 +1,663 @@
+{
+  "version": "unknown",
+  "date": "2026-11-03",
+  "title": "3 de Noviembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "Winston",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "Tesla Field – Fuerza",
+                "type": "nerf",
+                "details": [
+                  "Tesla Field daño reducido a 30 cada 1 s (en lugar de 40)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Cassidy",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a0a0840565c5810d9a638d391b0403ba743459d52aa9f1c443a9fc87e41f06f.png",
+            "changes": [
+              {
+                "title": "Barrage Blastin' – Fuerza",
+                "type": "adjust",
+                "details": [
+                  "El daño aumentó a un 50% de daño reducido (en lugar de un 60% reducido)."
+                ]
+              },
+              {
+                "title": "Silver Bullet – Fuerza",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó a 60 (en lugar de 50)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Wyrm's Maw – Fuerza",
+                "type": "buff",
+                "details": [
+                  "El daño de golpe veloz por acumulación aumentó a 15 % (en lugar de 10 %)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sojourn",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/969fa59c9d05d6ef0d131b623fd7ae5b506558ca1745ab3ec1399bae8687d430.png",
+            "changes": [
+              {
+                "title": "Hard Stuck – Fuerza",
+                "type": "adjust",
+                "details": [
+                  "El daño aumentó a un 10 % de daño reducido (en lugar de un 25 % de reducción)."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Apex Bloodlust – Fuerza",
+                "type": "nerf",
+                "details": [
+                  "Robo de vida reducido al 3% (en lugar del 4%)."
+                ]
+              },
+              {
+                "title": "Rampant Onslaught – Fuerza",
+                "type": "buff",
+                "details": [
+                  "Las eliminaciones por acumulación aumentada de Embestida aumentaron a 3 (en lugar de 2)."
+                ]
+              }
+            ]
+          }
+        ],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "",
+      "roles": {
+        "Tanque": [
+          {
+            "name": "D.Mon",
+            "desc": "Comentarios de los desarrolladores: Los cambios de Barrera de energía tienen como objetivo hacer que desplegar la barrera sea un mayor compromiso y mejorar su legibilidad para los enemigos. Propulsores conservará su retroceso pero ya no causará daño por impacto, lo que reducirá el potencial de explosión de Dmon. El robo de vida de Overstrike también se está reduciendo para limitar la salud total que puede proporcionar.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d32268bf455685710310a79f655f13848355d9de86cf19f7293dfc201e8cd8f.png",
+            "changes": [
+              {
+                "title": "Overstrike - Beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Robo de vida reducido del 150% al 125%."
+                ]
+              },
+              {
+                "title": "Barrera de energía",
+                "type": "nerf",
+                "details": [
+                  "La recuperación aumentó de 0,2 a 0,3 segundos.",
+                  "Ahora tiene una duración mínima de implementación de 0,25 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc4fc3dc561102b6469a81771190f915f07ac7186b1c9597451018f885c6b99c.png"
+              },
+              {
+                "title": "Propulsores",
+                "type": "nerf",
+                "details": [
+                  "Daño de impacto reducido de 15 a 0."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ea768e2c364167941c4b0a3bc8bc65d959274e1c0439ab5f6073611aff8c4e37.png"
+              }
+            ]
+          },
+          {
+            "name": "Junker Queen",
+            "desc": "Comentarios de los desarrolladores: La reserva de salud más baja de Junker Queen puede limitar su capacidad de atacar cuando no puede aplicar heridas y beneficiarse de su curación. Aumentar su salud base mejora su capacidad de supervivencia, mientras que reducir el tiempo de reutilización de Carnage brinda más oportunidades para usarlo cuando los enemigos están dentro del alcance.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a362b9dba4f5f4f704076945f3c72d7d442d536ffcc2fc5735062f4a1cee8031.png",
+            "changes": [
+              {
+                "title": "La salud base aumentó de 375 a 425.",
+                "type": "buff",
+                "details": [
+                  "La salud base aumentó de 375 a 425."
+                ]
+              },
+              {
+                "title": "La salud base aumentó de 450 a 500. (6v6)",
+                "type": "buff",
+                "details": [
+                  "La salud base aumentó de 450 a 500. (6v6)"
+                ]
+              },
+              {
+                "title": "Commanding Shout",
+                "type": "buff",
+                "details": [
+                  "Se agregó un nuevo elemento de interfaz de usuario que rastrea a los aliados dentro del alcance y a los aliados.\nactualmente afectado por Commanding Shout."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ef3c2fb9bdb4c913d2b048ef4363fce335553c8f4ee74524f2af86af961ba648.png"
+              },
+              {
+                "title": "Carnage",
+                "type": "buff",
+                "details": [
+                  "El tiempo de reutilización se redujo de 9 a 7 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/85c3796fdb062e1038fb130450f1586ce1f3c047886b0baf13f937d93a4e05d4.png"
+              }
+            ]
+          },
+          {
+            "name": "Mauga",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes en Mauga han reducido su efectividad general y su tasa de victorias ha caído por debajo de los límites aceptables. Restaurar parte de su armadura base mejora su capacidad de supervivencia, mientras que el aumento de su daño por quemaduras recompensa al encender a los enemigos sin poner énfasis adicional en los tanques enemigos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/937cbae13f50502b4191c09b7c178ef60d2eadddcdda5bc4268c1541216b8722.png",
+            "changes": [
+              {
+                "title": "La armadura base aumentó de 125 a 150.",
+                "type": "buff",
+                "details": [
+                  "La armadura base aumentó de 125 a 150."
+                ]
+              },
+              {
+                "title": "Incendiary Chainguns",
+                "type": "buff",
+                "details": [
+                  "El daño por quemaduras a lo largo del tiempo aumentó de 15 a 20."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/394d59489428fba7664bdf61e3bec0798b12c2957f2a733fb54a213848db4282.png"
+              }
+            ]
+          },
+          {
+            "name": "Ramattra",
+            "desc": "Comentarios de los desarrolladores: Aumentar la munición de Void Accelerator mejora la capacidad de Ramattra para aplicar presión sostenida a distancia mientras está fuera de Forma Némesis.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f54a877264e161c2aa4d5755ef4411eb7fd7e4eb910075936e91ddb043b8a58e.png",
+            "changes": [
+              {
+                "title": "Void Accelerator",
+                "type": "buff",
+                "details": [
+                  "La munición aumentó de 100 a 125."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b860a9ba344656b591451cf17d419633e75c0c1abf2737e0c3c470fe94b70768.png"
+              }
+            ]
+          },
+          {
+            "name": "Winston",
+            "desc": "Comentarios de los desarrolladores: Dado que se redujo el tiempo de reutilización de Campo de fuerza, Revitalizing Barrier se ha vuelto más efectivo debido a su mayor tiempo de actividad. Estamos reduciendo ligeramente su producción de curación para compensar.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/75aca7ce9cfb1427afae44f2d1b02dd347fdcb4355c6d030da55e40b0230bf92.png",
+            "changes": [
+              {
+                "title": "Revitalizing Barrier – Beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "La curación por segundo se redujo de 35 a 30."
+                ]
+              }
+            ]
+          }
+        ],
+        "Daño": [
+          {
+            "name": "Anran",
+            "desc": "Comentarios de los desarrolladores: Eliminar el retroceso de Inferno Rush y su capacidad de golpear al mismo objetivo varias veces limita sus efectos durante un solo uso. Aumentar el daño de Zhuque Fans mejora la efectividad de Anran a distancias más largas y brinda más oportunidades para iniciar igniciones con su disparo principal. El tiempo de lanzamiento de Vermillion Ascent también se reducirá para permitir su uso más reactivo durante las escaramuzas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/feb9354bbc89836febf20182fb1b160d4c63588c9e86f476fea11e5cf9f65d4a.png",
+            "changes": [
+              {
+                "title": "Zhuque Fans",
+                "type": "buff",
+                "details": [
+                  "El daño aumentó de 22 a 24."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b575eb7daebdb64b81b0942c466b00117b31925678d10ab8739781e0ccf1bd69.png"
+              },
+              {
+                "title": "Inferno Rush",
+                "type": "nerf",
+                "details": [
+                  "Se eliminó el retroceso.",
+                  "Ya no se puede alcanzar el mismo objetivo varias veces por uso."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92cd63b84d95581dfbe8c3974be31c9f303db4d25bfd117474f93ab5bc9cca4b.png"
+              },
+              {
+                "title": "Vermillion Ascent",
+                "type": "buff",
+                "details": [
+                  "El tiempo de lanzamiento se redujo de 1,2 a 1 segundo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a7f971f4e0c7c898e634d0787f4a0da48ae78b7adbdc7b71149efa0352319c76.png"
+              }
+            ]
+          },
+          {
+            "name": "Echo",
+            "desc": "Comentarios de los desarrolladores: Aerial Munitions ahora también recargará munición, aumentando su valor y reduciendo la necesidad de recargar inmediatamente después de su uso.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2669c8f82536840bf8ce59308796cc45fac4fe5d5220b93b4125ead80cc99787.png",
+            "changes": [
+              {
+                "title": "Aerial Munitions – Beneficio menor",
+                "type": "adjust",
+                "details": [
+                  "Ahora además recarga munición cuando se usa."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Emre",
+            "desc": "Comentarios de los desarrolladores: Reducir el tiempo de detonación de Cyber Frag mejora su capacidad de respuesta y lo convierte en una herramienta más confiable para acabar con objetivos.\nAdemás, agregamos algunos pequeños cambios en la calidad de vida de la configuración de la retícula de Emre para su retícula predeterminada (personalizada), además de corregir algunas inconsistencias visuales menores con la forma en que se aplicaron estas configuraciones a la retícula predeterminada de Emre. Nada ha cambiado sobre la retícula en el juego de Emre, todos estos cambios están relacionados con la configuración de personalización de su retícula predeterminada.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0d6d4d3713969eb9d56b1f99b7c031fd47e023efe5efa242ad849a8c94e79c9.png",
+            "changes": [
+              {
+                "title": "Se agregó la configuración de retícula de rotación para la retícula predeterminada.",
+                "type": "buff",
+                "details": [
+                  "Se agregó la configuración de retícula de rotación para la retícula predeterminada."
+                ]
+              },
+              {
+                "title": "Se eliminó la configuración de retícula de espesor para la retícula predeterminada.",
+                "type": "nerf",
+                "details": [
+                  "Se eliminó la configuración de retícula de espesor para la retícula predeterminada."
+                ]
+              },
+              {
+                "title": "Se corrigió la inconsistencia visual relacionada con la mira predeterminada de la retícula que no usaba los valores de Grosor del contorno y Desplazamiento del contorno.",
+                "type": "adjust",
+                "details": [
+                  "Se corrigió la inconsistencia visual relacionada con la mira predeterminada de la retícula que no usaba los valores de Grosor del contorno y Desplazamiento del contorno."
+                ]
+              },
+              {
+                "title": "Se actualizó la vista previa predeterminada de la retícula en Opciones para reflejar más fielmente la retícula del juego.",
+                "type": "adjust",
+                "details": [
+                  "Se actualizó la vista previa predeterminada de la retícula en Opciones para reflejar más fielmente la retícula del juego."
+                ]
+              },
+              {
+                "title": "Cyber Frag",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de detonación se redujo de 0,6 a 0,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/58eeb3950828ceadc16565163bfc03231a0cecdf3a0a6ce78de34bdff4bf09bf.png"
+              }
+            ]
+          },
+          {
+            "name": "Genji",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes en Genji mejoraron su capacidad para asegurar eliminaciones y permitieron un estilo de juego más agresivo. Reducir la duración de Deflect pone mayor énfasis en el tiempo y limita su tiempo de actividad defensiva.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9bff8d12c9ffa4de593c1d2e6a09f674fa42493b1ae636c9685d790100f96d20.png",
+            "changes": [
+              {
+                "title": "Deflect",
+                "type": "nerf",
+                "details": [
+                  "Duración reducida de 2 a 1,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6947d8eeddce8d295ed96525cdabfe36c94b3b67b50baf87aabb8ae61d32495a.png"
+              }
+            ]
+          },
+          {
+            "name": "Hanzo",
+            "desc": "Comentarios de los desarrolladores: Sonic Disruption ya no anulará los paquetes de salud pirateados de Sombra, lo que impedirá que cualquiera de los héroes anule un paquete de salud que ya esté controlado por el otro.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/704527b17eaa3a0722cd151c7e2cddd878ae986e329a51059b5a0bc80b834746.png",
+            "changes": [
+              {
+                "title": "Sonic Disruption – Beneficio mayor",
+                "type": "nerf",
+                "details": [
+                  "Ya no anula los paquetes de salud pirateados de Sombra."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reaper",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes en las zonas de impacto y los tamaños de los proyectiles han reducido la efectividad general de Reaper. Aumentar su salud base mejora su capacidad de supervivencia y ayuda a compensar estos cambios.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d6d7be4b019c088741f1a27bf643bc3718f06f571fe185441026aaef03115843.png",
+            "changes": [
+              {
+                "title": "La salud base aumentó de 275 a 300.",
+                "type": "buff",
+                "details": [
+                  "La salud base aumentó de 275 a 300."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shion",
+            "desc": "Comentarios de los desarrolladores: Reducir la dispersión inicial de Execution lo hace más confiable a corta distancia sin necesidad de una carga completa. El tiempo de Satsuriku Spree entre el movimiento y el disparo también se está reduciendo, lo que permite a Shion reposicionarse más rápidamente y reducir el retraso entre voleas.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ad0931805f9f28f03e8d55fead38ed85ee52f5c75f89aa3deec8a27fdc4fd6b3.png",
+            "changes": [
+              {
+                "title": "Execution",
+                "type": "buff",
+                "details": [
+                  "La extensión inicial se redujo de 8,5 a 5,7 grados."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbd96d63564e1d99cfa5593f86796c9e5ab360214eb0e50c18d6a9503093c7c5.png"
+              },
+              {
+                "title": "Satsuriku Spree",
+                "type": "buff",
+                "details": [
+                  "El tiempo de lanzamiento/movimiento por volea se redujo de 0,6 a 0,5 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/758c015bd3da645e207d99d8a70275e114728101e6a5b7bc15dc24dba6c8962d.png"
+              }
+            ]
+          },
+          {
+            "name": "Vendetta",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes han aumentado la letalidad general de Vendetta. Aumentar el retraso del movimiento inicial de Colmillo palatino ralentiza sus combinaciones de ataques, mientras que reducir la velocidad de salto por encima de la cabeza hace que su movimiento sea más fácil de seguir. El retroceso de Espiral de tajos también se reduce con Raging Storm equipado para limitar el desplazamiento repetido de múltiples golpes.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/723acfb2d8745f5346e1bb64124d74f5267dfbfeb2008240867925eddf9283b6.png",
+            "changes": [
+              {
+                "title": "Colmillo palatino",
+                "type": "adjust",
+                "details": [
+                  "La velocidad de salto por encima de la cabeza se redujo de 11 a 9,5.",
+                  "El retraso del giro inicial aumentó de 0,15 a 0,2 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9754a770516c07712b3cbababb825972eec78c08b3fbc141dbcee31d9c58c137.png"
+              },
+              {
+                "title": "Espiral de tajos",
+                "type": "nerf",
+                "details": [
+                  "El retroceso horizontal del beneficio Tormenta furiosa se redujo de 8 a 4."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/646af7a4d6b6b65adee6543ec70b33c9ffd36989c8dd4e8b22079c6b9e074c79.png"
+              }
+            ]
+          },
+          {
+            "name": "Sombra",
+            "desc": "Comentarios de los desarrolladores: La duración de Hotfix proporcionó suficiente tiempo de actividad para que elegir cuándo y con quién usarlo tuviera menos peso. Reducir su duración pone mayor énfasis en esas decisiones y al mismo tiempo conserva su efectividad cuando se usa bien. El efecto de debilitamiento de Ciberespacio también se reduce para brindar a los enemigos afectados más oportunidades de responder. Con los cambios recientes en las interacciones de los paquetes de salud entre el Hack de Sombra y el Sonic Disruption de Hanzo, EMP ahora anulará todos los efectos enemigos en los paquetes de salud para preservar su efectividad como Ultimate.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4fa20d93cb1de8fcee163484d5dbd5ec1dd04d234019eaf4b7c159d3a62be64a.png",
+            "changes": [
+              {
+                "title": "Hotfix",
+                "type": "nerf",
+                "details": [
+                  "Duración reducida de 12 a 10 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8646a0e19104f5185b6296c0123fd768c3333a18ffe4aa922e2724df9b2aa041.png"
+              },
+              {
+                "title": "Ciberespacio",
+                "type": "nerf",
+                "details": [
+                  "El efecto de debilitamiento se redujo del 50% al 40%."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/22bfcf655c54a065b149c3359ce2447f6c4c09835fd957ce72fa8a4e023ba7ef.png"
+              },
+              {
+                "title": "EMP",
+                "type": "adjust",
+                "details": [
+                  "Ahora anula los efectos del hackeo enemigo en los paquetes de salud."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9ccf2688b89c3f17c3f6410c3142510ea413718f0d165f78e712184ec636b2e4.png"
+              }
+            ]
+          }
+        ],
+        "Apoyo": [
+          {
+            "name": "Ana",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes que aumentaron la autocuración de Biotic Grenade también aumentaron su daño explosivo contra los enemigos. Estamos separando sus valores de daño y curación para reducir su poder ofensivo y al mismo tiempo preservar el aumento de la autocuración.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3c87d470067d61c432815a4bc0c70b11f1b5379006da29625839da356b7c4ca1.png",
+            "changes": [
+              {
+                "title": "Biotic Grenade",
+                "type": "nerf",
+                "details": [
+                  "Daño de explosión reducido de 90 a 60."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/886454bdb7df9ad8a47c4a3a8fa5dd488f5b2996e311f16d42a5f022942c4d18.png"
+              }
+            ]
+          },
+          {
+            "name": "Baptiste",
+            "desc": "",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e172616c22eb48adc116ccae7520270da9b59252f2d35d00ca6ac74af481248.png",
+            "changes": [
+              {
+                "title": "Regenerative Burst",
+                "type": "buff",
+                "details": [
+                  "Se agregó un nuevo elemento de interfaz de usuario que rastrea a los aliados dentro del alcance y a los aliados.\nactualmente afectado por Regenerative Burst."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/995d4c830cd4d6d458333a645561fefb75aab4f5228fe6b7923ea55b29f0496d.png"
+              }
+            ]
+          },
+          {
+            "name": "Brigitte",
+            "desc": "Comentarios de los desarrolladores: La adición de curación instantánea a Inspire ha mejorado la capacidad de curación de Brigitte, pero ha tenido un impacto limitado en su capacidad para mantenerse a sí misma y a sus aliados durante las peleas. Aumentar su curación instantánea y reducir su tiempo de reutilización interno proporciona una curación más frecuente durante enfrentamientos sostenidos.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbc7d49f32020fed1033cb4bb99b55f7938d1a71108fe76edc589e42c8cd0977.png",
+            "changes": [
+              {
+                "title": "Inspire",
+                "type": "adjust",
+                "details": [
+                  "El tiempo de reutilización interno se redujo de 1,25 a 1 segundo.",
+                  "La curación instantánea aumentó de 12 a 15."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2d239f8ca1265f4c5f7be415edc5568481ca347e70a6e2dbf5790551fe63ea9b.png"
+              }
+            ]
+          },
+          {
+            "name": "Doctrine",
+            "desc": "Comentarios de los desarrolladores: La capacidad de curación de Doctrine se ha mantenido alta en relación con la utilidad adicional que proporciona. Aumentar el tiempo de recuperación del Fuego primario de Eternal Sceptre reduce su producción general, mientras que los valores reducidos de Infused reducen su potencial de explosión. Aumentar los tiempos de reutilización de Shrouded Momentum y Infuse pone mayor énfasis en el uso cuidadoso de ambas habilidades durante los enfrentamientos mientras se mantiene su poder individual.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/534fea21e25537daa24a40b68384f2cd0c4d22bac5f4cd58cbb8b4aa38b16f3e.png",
+            "changes": [
+              {
+                "title": "Cetro eterno",
+                "type": "adjust",
+                "details": [
+                  "El tiempo de recuperación del incendio primario aumentó de 0,6 a 0,65.",
+                  "Daño infundido reducido de 90 a 80.",
+                  "La curación infundida se redujo de 120 a 110."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3ffab68d983c0108cb80c8c55e9980ae855342f5d31c94e3a3f9e7bcf8ac7b6d.png"
+              },
+              {
+                "title": "Shrouded Momentum",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 8 a 10 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c3d96fb3fe2df91421d82e134385f0fe23b8950af35ac73e50d91eb0371cd18d.png"
+              },
+              {
+                "title": "Infuse",
+                "type": "nerf",
+                "details": [
+                  "El tiempo de reutilización aumentó de 8 a 9 segundos."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/13178efb1b3fceb275829ff4caa894fd883011d49d2ab33b9130ccf5d777597c.png"
+              }
+            ]
+          },
+          {
+            "name": "Illari",
+            "desc": "Comentarios de los desarrolladores: Los cambios recientes en el tamaño de los proyectiles han reducido la efectividad ofensiva general de Illari. Reducir el tiempo de carga de fuego primario de Solar Rifle pone menos énfasis en los disparos individuales y al mismo tiempo aumenta su producción de daño general, reforzando su fuerza como apoyo de alto daño. La producción de Healing Pylon también se está incrementando para fortalecer las configuraciones defensivas de Illari cuando se posiciona de manera efectiva.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/536202d2d6a31cb4bd95405f5869df3227e53059257b9ee7bd0e0b2590e96637.png",
+            "changes": [
+              {
+                "title": "Solar Rifle",
+                "type": "nerf",
+                "details": [
+                  "El tiempo hasta la carga máxima se redujo de 0,65 a 0,575."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b5bbee12c4a45526f3ab0c73b0027eae88f4da57192e68e9b30bbc9da3e032a6.png"
+              },
+              {
+                "title": "Healing Pylon",
+                "type": "buff",
+                "details": [
+                  "La curación por proyectil aumentó de 40 a 50."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/97656e46d5815627032b7e9783381a09b1dee4c553c802afc3c57767768bd281.png"
+              }
+            ]
+          },
+          {
+            "name": "Jetpack Cat",
+            "desc": "Comentarios de los desarrolladores: La capacidad de supervivencia de Jetpack Cat se ha mantenido fuerte junto con su alta movilidad aérea. Reducir su salud base limita la capacidad de supervivencia y la agresión permitidas por esa movilidad y al mismo tiempo la preserva como una fortaleza central. La aceleración del Frenetic Flight también aumenta para permitir un reposicionamiento más rápido, mientras que su regeneración de combustible reducida limita la frecuencia con la que se puede utilizar.",
+            "portrait": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/29ecdde051b3437c4dea68597139ceba39566e4a295da4c444b979aa870a1523.png",
+            "changes": [
+              {
+                "title": "La salud base se redujo de 225 a 200.",
+                "type": "nerf",
+                "details": [
+                  "La salud base se redujo de 225 a 200."
+                ]
+              },
+              {
+                "title": "Frenetic Flight",
+                "type": "adjust",
+                "details": [
+                  "La aceleración aumentó de 25 a 28 metros por segundo.",
+                  "La tasa de regeneración de combustible se redujo del 25% al 20% por segundo."
+                ],
+                "icon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f957b6f5803bd08a99eec642365c30f22e817ad33afb4b95d8e1856c87cba1b2.png"
+              }
+            ]
+          }
+        ]
+      },
+      "generalItems": [
+        {
+          "name": "Taking Reign",
+          "desc": "Taking Reign estará disponible del 3/11 al 7/12. Juega y completa desafíos para ganar recompensas de eventos exclusivas o actualiza para ganar recompensas premium, como un aspecto legendario de Doomfist y un arma mítica Vendetta.",
+          "changes": [
+            {
+              "title": "Taking Reign",
+              "type": "adjust",
+              "details": [
+                "Taking Reign estará disponible del 3/11 al 7/12. Juega y completa desafíos para ganar recompensas de eventos exclusivas o actualiza para ganar recompensas premium, como un aspecto legendario de Doomfist y un arma mítica Vendetta."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OWCS World Finals Cheer Rally",
+          "desc": "¡Completa desafíos y recoge alegría!",
+          "changes": [
+            {
+              "title": "¡Completa desafíos y recoge alegría!",
+              "type": "adjust",
+              "details": [
+                "Juega partidos y completa desafíos para ganar Cheers del 24 de noviembre al 7 de diciembre.",
+                "Se pueden obtener Cheers adicionales viendo las transmisiones de las Finales Mundiales de la OWCS en los canales oficiales del 2 al 6 de diciembre.",
+                "Consulta la página del evento OWCS World Finals Cheer Rally donde puedes animar a la competencia. Gana recompensas como agradecimiento por apoyar el evento: cajas de botín, XP del Pase de batalla y cosméticos increíbles."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Junkrat's Loot Hunt + Double XP Weekend",
+          "desc": "Caza del botín de Junkrat regresa del 19/11 al 23/11 para disfrutar de un fin de semana lleno de recompensas, ¡esta vez con la ventaja adicional de doble XP! Cada partida que juegas te acerca a las cajas de botín, con desafíos flexibles que te permiten ir con todo o controlar tu propio ritmo. Además, el progreso no se reiniciará, no hay presión diaria ni tonterías... ¡solo explosiones y montones de botín para desempaquetar!",
+          "changes": [
+            {
+              "title": "Junkrat's Loot Hunt + Double XP Weekend",
+              "type": "buff",
+              "details": [
+                "Caza del botín de Junkrat regresa del 19/11 al 23/11 para disfrutar de un fin de semana lleno de recompensas, ¡esta vez con la ventaja adicional de doble XP! Cada partida que juegas te acerca a las cajas de botín, con desafíos flexibles que te permiten ir con todo o controlar tu propio ritmo. Además, el progreso no se reiniciará, no hay presión diaria ni tonterías... ¡solo explosiones y montones de botín para desempaquetar!"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Excavation Initiative",
+          "desc": "¡El Excavation Initiative regresó del 3/11 al 7/12 con algunos cambios! Obtendrás cajas de botín al iniciar sesión y ganar un juego. Haga esto varias semanas para ganar recompensas: las cajas de botín básica, épica y legendaria esperan a quienes completen los desafíos.",
+          "changes": [
+            {
+              "title": "Excavation Initiative",
+              "type": "adjust",
+              "details": [
+                "¡El Excavation Initiative regresó del 3/11 al 7/12 con algunos cambios! Obtendrás cajas de botín al iniciar sesión y ganar un juego. Haga esto varias semanas para ganar recompensas: las cajas de botín básica, épica y legendaria esperan a quienes completen los desafíos."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Gameplay Sabotage Detection",
+          "desc": "Estamos mejorando nuestras herramientas para combatir el sabotaje del juego en Overwatch. Hemos realizado mejoras en nuestras herramientas de detección actuales que nos permiten detectar con mayor precisión a los jugadores que participan en comportamientos disruptivos y ya hemos tomado medidas contra muchos jugadores detectados por estos sistemas. Ejemplos de sabotaje del juego incluyen no contribuir de manera consistente e intencional a las peleas en equipo, saltar repetidamente del mapa y bloquear intencionalmente el progreso del equipo. También continuaremos repitiendo estos métodos de detección para que podamos detectar aún más jugadores que intencionalmente empeoran las experiencias de otros jugadores.\n\nComo parte de esta actualización, también implementamos mensajes de \"agradecimiento\" por denunciar a un jugador por comportamientos disruptivos. Verás que aparecen en el centro de notificaciones del juego si denuncias a un jugador por comportamientos disruptivos y se han tomado las medidas adecuadas contra él.",
+          "changes": [
+            {
+              "title": "Gameplay Sabotage Detection",
+              "type": "adjust",
+              "details": [
+                "Estamos mejorando nuestras herramientas para combatir el sabotaje del juego en Overwatch. Hemos realizado mejoras en nuestras herramientas de detección actuales que nos permiten detectar con mayor precisión a los jugadores que participan en comportamientos disruptivos y ya hemos tomado medidas contra muchos jugadores detectados por estos sistemas. Ejemplos de sabotaje del juego incluyen no contribuir de manera consistente e intencional a las peleas en equipo, saltar repetidamente del mapa y bloquear intencionalmente el progreso del equipo. También continuaremos repitiendo estos métodos de detección para que podamos detectar aún más jugadores que intencionalmente empeoran las experiencias de otros jugadores.",
+                "Como parte de esta actualización, también implementamos mensajes de \"agradecimiento\" por denunciar a un jugador por comportamientos disruptivos. Verás que aparecen en el centro de notificaciones del juego si denuncias a un jugador por comportamientos disruptivos y se han tomado las medidas adecuadas contra él."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": [
+      "Se solucionó un problema con el audio del arma al usar el aspecto Made My Night de Sierra.",
+      "Se corrigió un error con las máscaras Pureflow y Fearless de Juno.",
+      "Se solucionó un problema por el cual el Propulsores de D.Mon podía lanzarla mucho más rápido cuando se usaba en el aire en comparación con cuando se usaba Propulsores en tierra.",
+      "Se corrigió un error por el cual Mizuki podía quedarse atascada en la carga útil en Circuit Royale.",
+      "Se corrigió un error cuando las barras de salud aliadas estaban configuradas en \"Contextual\".",
+      "Se solucionó un problema por el cual los controles de retracción de Grappling Claw de Wrecking Ball podían aumentar en gran medida su velocidad de movimiento rodante.",
+      "Nos aseguramos de que la molesta línea de visión de Eichenwalde nunca regrese. ¡Lo siento, Torb!",
+      "Se corrigió un lugar donde algunos héroes podían quedarse atrapados en Watchpoint: Gibraltar.",
+      "En una actualización anterior, se eliminaron las restricciones de agrupación para las clasificaciones por estadio después de que se volvieron a habilitar involuntariamente.",
+      "Se solucionó un problema por el cual el acero escalado de Vendetta otorgaba a Colmillo palatino más rango de giro del previsto.",
+      "El'Saka Suppressor ahora debería funcionar correctamente en D.Va."
+    ]
+  },
+  "translated": true,
+  "translationSource": "machine"
+}
