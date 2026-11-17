@@ -1,0 +1,66 @@
+{
+  "version": "unknown",
+  "date": "2026-11-16",
+  "title": "16 de Noviembre 2026",
+  "sections": {
+    "stadium": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "arcade": {
+      "intro": "",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": []
+    },
+    "gameBase": {
+      "intro": "Reduced the maximum width of groups including Champion rank players from 4 to 3 in 6v6 Open Queue. This matches the maximum permitted width of Narrow groups containing Champion players in 5v5 Role Queue.",
+      "roles": {
+        "Tanque": [],
+        "Daño": [],
+        "Apoyo": []
+      },
+      "generalItems": [
+        {
+          "name": "Hotfix Update",
+          "desc": "This is a hotfix update. Replay codes from the November 3 patch are still available.",
+          "changes": [
+            {
+              "title": "Hotfix Update",
+              "type": "adjust",
+              "details": [
+                "This is a hotfix update. Replay codes from the November 3 patch are still available."
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Competitive Play Updates",
+          "desc": "",
+          "changes": [
+            {
+              "title": "Competitive Play Updates",
+              "type": "nerf",
+              "details": [
+                "Reduced the maximum width of groups including Champion rank players from 4 to 3 in 6v6 Open Queue. This matches the maximum permitted width of Narrow groups containing Champion players in 5v5 Role Queue."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "maps": [],
+    "system": [],
+    "bugFixes": []
+  },
+  "translated": true,
+  "translationSource": "official"
+}
